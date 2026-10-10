@@ -1,0 +1,155 @@
+{
+  "gate": "GATE_48B1_BEFORE_AFTER_SEMANTIC_HASHES",
+  "generatedAt": "2026-09-10T11:03:33.928Z",
+  "algorithm": "SHA-256",
+  "totalDocumentsAudited": 10,
+  "hashes": [
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "beforeHash": "fd680f4b81eff479b1df92494f803748f09971e8450c5d00ab14281f408b3747",
+      "afterHash": "ca850100bb69f92f3bf6f6bcda601f5425b4eb3bef972bc36eba8025b855a27a",
+      "changed": true,
+      "fieldsModified": [
+        "state",
+        "examCategory",
+        "exam_category",
+        "missionType",
+        "authorityScope",
+        "jurisdictionLevel",
+        "authorityGroupKey",
+        "authorityDisplayName",
+        "conductingBody"
+      ]
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "beforeHash": "968a369bfdd73a03f1ca50e4b89ef327ae74e5923ac01335126ea82800a730a9",
+      "afterHash": "81caed3f3007a29730edc2ff4423354852c1bebee7f542d3a3aec049edafcac3",
+      "changed": true,
+      "fieldsModified": [
+        "state",
+        "examCategory",
+        "jurisdictionLevel",
+        "org",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ]
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "beforeHash": "00161ee61767903f59ed578dfee25f342102985a4e38c7d17d91c9cf1620138e",
+      "afterHash": "d034e3f53941a7e8f8caeda245a9f302b1927f56422df8b0442aede1aad55846",
+      "changed": true,
+      "fieldsModified": [
+        "exam_category",
+        "organization",
+        "jurisdictionLevel",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ]
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "beforeHash": "da59e260d9cf1651726b8169d47897b2b76adefa9e878746cecefe90d9947872",
+      "afterHash": "83b4cff461acfa544945d3f3be540c2efe42674ab5439376e632d051c2a00d58",
+      "changed": true,
+      "fieldsModified": [
+        "state",
+        "stateCode",
+        "stateName",
+        "authorityScope",
+        "jurisdictionLevel",
+        "examCategory",
+        "examSubCategory",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ]
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "beforeHash": "6948c5baa2188b82df5635e454c2f99db2f98baf5b46e75023a06f9e14911eb3",
+      "afterHash": "b0cbfe65d0d1dce1f3df374f61a89e8f42f5790b9b06942b1417c1c530259b40",
+      "changed": true,
+      "fieldsModified": [
+        "state",
+        "stateCode",
+        "stateName",
+        "jurisdictionLevel",
+        "examCategory",
+        "examSubCategory",
+        "org",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ]
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "mission_realms",
+      "beforeHash": "98a135e762526b889cc00b52a3c4a3aee902e917a9de5570b1461fe3391b6448",
+      "afterHash": "7fb02cb8d30c353fe7390d07015efc0cc6099fe551277752e29b0b5ea553e1aa",
+      "changed": true,
+      "fieldsModified": [
+        "state",
+        "stateCode",
+        "stateName",
+        "jurisdictionLevel",
+        "exam_category",
+        "exam_sub_category",
+        "organization",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ]
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "beforeHash": "6024f85cb1f9c417c7521de83b9a2b430320f6c1a6787143467fd6d0fb86a8bb",
+      "afterHash": "cb4b22f38c3130fec6138bbee7a8e8a4fd52f8ec1237bdf6b74bcb1c0fe31968",
+      "changed": true,
+      "fieldsModified": [
+        "visibility.smartEntryEnabled",
+        "visibility.quickEntryEnabled",
+        "governedVariantsCount",
+        "variablesCount"
+      ]
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "recruitments",
+      "beforeHash": "1a714d92ad2c090e6dd5c7608f597bc3ee40c182a031db513108b103ae9984fa",
+      "afterHash": "7f94174ee930e524b38336afaa8d2f58992aaa5454dcb0a30a7a0ca85f1375db",
+      "changed": true,
+      "fieldsModified": [
+        "smartEntryEnabled",
+        "quickEntryEnabled"
+      ]
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "beforeHash": "b5164dc0d72fb91d7d277a213d7db6a461693808d64a9a1f8926e8622be9ec58",
+      "afterHash": "631d385a29a9d4184d1565f54ebf4e45ca73f915a37ce6f33cc331e3ebed6595",
+      "changed": true,
+      "fieldsModified": [
+        "smartEntryEnabled",
+        "quickEntryEnabled"
+      ]
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "beforeHash": "e3c542b8885172643f68bd3419cf7a680189ad97ff76a0aa55e5908976341e1c",
+      "afterHash": "e3c542b8885172643f68bd3419cf7a680189ad97ff76a0aa55e5908976341e1c",
+      "changed": false,
+      "fieldsModified": [
+        "visibility.smartEntryEnabled",
+        "visibility.quickEntryEnabled"
+      ]
+    }
+  ]
+}

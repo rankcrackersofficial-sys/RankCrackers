@@ -1,0 +1,128 @@
+{
+  "gate": "GATE_48B2_SEMANTIC_FIELD_CONTRACT_AUDIT",
+  "generatedAt": "2026-09-10T11:21:55.052Z",
+  "dimensionDefinitions": {
+    "jurisdictionType": "CENTRAL | STATE (Constitutional / administrative governing level)",
+    "regionCode": "ISO/state abbreviation (e.g. RJ, UP) or null for central/all-India entities",
+    "scopeType": "ALL_INDIA | STATE_SPECIFIC (Geographic / applicant eligibility boundary)",
+    "examFamily": "CIVIL_SERVICES | MEDICAL_ENTRANCE | ENGINEERING_ENTRANCE | TEACHING | STAFF_SELECTION",
+    "displayCategory": "Human-readable portal classification string"
+  },
+  "antiPatternsEliminated": [
+    {
+      "antiPattern": "SCOPE_ENCODED_IN_EXAM_CATEGORY",
+      "exampleFoundIn48B1": "examCategory: \"STATE_SPECIFIC\"",
+      "correction": "examCategory retains family/type (e.g. \"civil_services\"), while scopeType holds \"STATE_SPECIFIC\"",
+      "violationCountAfterRepair": 0
+    },
+    {
+      "antiPattern": "FAMILY_ENCODED_ONLY_AS_SUBCATEGORY",
+      "exampleFoundIn48B1": "examSubCategory: \"CIVIL_SERVICES\"",
+      "correction": "examFamily holds \"CIVIL_SERVICES\" as primary first-class dimension",
+      "violationCountAfterRepair": 0
+    }
+  ],
+  "metrics": {
+    "SCOPE_STORED_AS_CATEGORY_COUNT": 0,
+    "FAMILY_STORED_ONLY_AS_SUBCATEGORY_COUNT": 0
+  },
+  "canonicalTaxonomyMapping": {
+    "neet_(ug)-2027": {
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "MEDICAL_ENTRANCE",
+      "displayCategory": "Medical Entrance",
+      "compatibleLegacyFields": {
+        "examCategory": "medical_entrance",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "examScope": "ALL_INDIA"
+      }
+    },
+    "rpsc_ras_prelims": {
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATE_SPECIFIC",
+      "examFamily": "CIVIL_SERVICES",
+      "displayCategory": "State Civil Services",
+      "compatibleLegacyFields": {
+        "examCategory": "civil_services",
+        "jurisdictionLevel": "STATE",
+        "state": "Rajasthan",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "examScope": "STATE_SPECIFIC"
+      }
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATE_SPECIFIC",
+      "examFamily": "TEACHING",
+      "displayCategory": "School Lecturer / Teaching",
+      "compatibleLegacyFields": {
+        "examCategory": "teaching",
+        "jurisdictionLevel": "STATE",
+        "state": "Rajasthan",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "examScope": "STATE_SPECIFIC"
+      }
+    },
+    "jee_main_2026": {
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENGINEERING_ENTRANCE",
+      "displayCategory": "Engineering Entrance",
+      "compatibleLegacyFields": {
+        "examCategory": "qualifying",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "examScope": "ALL_INDIA"
+      }
+    },
+    "upsc_cse_prelims": {
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "CIVIL_SERVICES",
+      "displayCategory": "Civil Services (Central)",
+      "compatibleLegacyFields": {
+        "examCategory": "civil_services",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "examScope": "ALL_INDIA"
+      }
+    },
+    "uppsc_pcs_prelims": {
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATE_SPECIFIC",
+      "examFamily": "CIVIL_SERVICES",
+      "displayCategory": "State Civil Services",
+      "compatibleLegacyFields": {
+        "examCategory": "civil_services",
+        "jurisdictionLevel": "STATE",
+        "state": "Uttar Pradesh",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "examScope": "STATE_SPECIFIC"
+      }
+    },
+    "ssc_cgl": {
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "displayCategory": "Staff Selection (Graduate)",
+      "compatibleLegacyFields": {
+        "examCategory": "staff_selection",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "examScope": "ALL_INDIA"
+      }
+    }
+  }
+}

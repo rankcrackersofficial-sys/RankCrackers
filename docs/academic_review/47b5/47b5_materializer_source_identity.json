@@ -1,0 +1,22 @@
+{
+  "identityCode": "RC_47B5_MATERIALIZER_SOURCE_IDENTITY",
+  "executedAt": "2026-09-10T06:57:27.445Z",
+  "materializerSourceFile": "functions/services/generic_mission_materializer.js",
+  "byteLength": 43952,
+  "sha256": "c770fb6ac33835c7841506eef6bf9a5d54222cdae3db3a9b6ab6bb7a32d61690",
+  "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "gitStatus": "DIRTY",
+  "exportedFunctions": [
+    "validateAuthorityRegistry",
+    "isUrlDomainApproved",
+    "canonicalJsonStringify",
+    "computeSemanticHash",
+    "buildHierarchyPath",
+    "normalizeMissionCandidate",
+    "validateManifest",
+    "buildMissionProjections",
+    "runGenericMissionMaterializer",
+    "applyToSimulatorState"
+  ],
+  "testHarnessPath": "functions/test_47b4_generic_materializer.js"
+}

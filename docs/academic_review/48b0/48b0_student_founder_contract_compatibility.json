@@ -1,0 +1,48 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "STUDENT_FOUNDER_CONTRACT_COMPATIBILITY",
+  "evaluatedAt": "2026-09-10T10:39:12.897Z",
+  "consumersAudited": {
+    "studentMissionRealm": {
+      "providerPath": "lib/features/auth/presentation/providers/mission_realm_provider.dart",
+      "repositoryPath": "lib/core/backend/recruitment_repository.dart",
+      "servicePath": "lib/core/firebase/firestore_service.dart",
+      "requiredCatalogFields": [
+        "id",
+        "cardVisible",
+        "userPanelVisible",
+        "archived",
+        "title",
+        "state",
+        "examCategory",
+        "jurisdictionLevel",
+        "stateCode",
+        "stateName",
+        "authorityGroupKey",
+        "authorityDisplayName"
+      ],
+      "compatibilityStatus": "PASS",
+      "details": "All required fields exist and retain authentic types. Repairing NEET examCategory from category_pending to medical_entrance improves category filter matching in mission_realm_provider.dart."
+    },
+    "founderMissionControl": {
+      "inventoryPath": "lib/web/founder/mission_control/founder_mission_inventory.dart",
+      "variableAuthorityPath": "lib/web/founder/mission_control/mission_variable_authority_panel.dart",
+      "publishReadinessPath": "lib/web/founder/mission_control/mission_publish_readiness_panel.dart",
+      "requiredCatalogAndRealmFields": [
+        "missionId",
+        "displayName",
+        "status",
+        "variants",
+        "variables",
+        "contentReadiness",
+        "visibilityGate",
+        "authorityGroupKey"
+      ],
+      "compatibilityStatus": "PASS",
+      "details": "Founder panels seamlessly consume updated metadata and canonical variant arrays."
+    }
+  },
+  "uiMutationAllowed": false,
+  "uiCodeModified": false,
+  "contractCompatibilityVerdict": "100% COMPATIBLE"
+}

@@ -1,0 +1,70 @@
+{
+  "gate": "GATE_48A1_CS1",
+  "lane": "CAREER_SIGNAL_CONTROL_LANE",
+  "auditedAt": "2026-09-10T12:00:00.000Z",
+  "objects": [
+    {
+      "objectName": "notification_candidates",
+      "objectType": "FIRESTORE_COLLECTION",
+      "location": "Firestore / notification_candidates",
+      "currentSemantics": "Raw discovery candidates captured by crawlers and notification monitors prior to formal validation.",
+      "classification": "SOURCE_DISCOVERY_CANDIDATE"
+    },
+    {
+      "objectName": "NotificationCandidate",
+      "objectType": "DART_MODEL",
+      "location": "lib/core/models/notification_candidate.dart",
+      "currentSemantics": "Data class representing a potential alert derived from system intelligence or opportunity matching.",
+      "classification": "SOURCE_DISCOVERY_CANDIDATE"
+    },
+    {
+      "objectName": "NotificationEvent",
+      "objectType": "DART_MODEL",
+      "location": "lib/core/models/notification_event.dart",
+      "currentSemantics": "Tactical alert or system message directed to an individual user device.",
+      "classification": "USER_NOTIFICATION_DELIVERY"
+    },
+    {
+      "objectName": "sentinel_drafts",
+      "objectType": "FIRESTORE_COLLECTION",
+      "location": "Firestore / sentinel_drafts",
+      "currentSemantics": "Draft extracted notifications staged for admin review.",
+      "classification": "SOURCE_DISCOVERY_CANDIDATE"
+    },
+    {
+      "objectName": "recruitments",
+      "objectType": "FIRESTORE_COLLECTION_AND_DART_MODEL",
+      "location": "Firestore / recruitments & lib/core/models/recruitment.dart",
+      "currentSemantics": "Legacy backend collection blending permanent mission metadata with recruitment year/status attributes.",
+      "classification": "MISSION_PROJECTION"
+    },
+    {
+      "objectName": "mission_realms",
+      "objectType": "FIRESTORE_COLLECTION",
+      "location": "Firestore / mission_realms",
+      "currentSemantics": "Canonical student preparation realm projection.",
+      "classification": "MISSION_PROJECTION"
+    },
+    {
+      "objectName": "student_mission_catalog",
+      "objectType": "FIRESTORE_COLLECTION",
+      "location": "Firestore / student_mission_catalog",
+      "currentSemantics": "Student discovery card catalog projection.",
+      "classification": "MISSION_PROJECTION"
+    },
+    {
+      "objectName": "CareerSignal",
+      "objectType": "DART_MODEL",
+      "location": "lib/features/opportunities/models/career_signal.dart",
+      "currentSemantics": "UI view model holding career opportunity matches for student deep profiles.",
+      "classification": "CAREER_SIGNAL_CANDIDATE"
+    },
+    {
+      "objectName": "CareerSignalEngine",
+      "objectType": "DART_SERVICE",
+      "location": "lib/features/opportunities/services/career_signal_engine.dart",
+      "currentSemantics": "Matching engine computing career signals for a profile against opportunity instances.",
+      "classification": "CAREER_SIGNAL_CANDIDATE"
+    }
+  ]
+}

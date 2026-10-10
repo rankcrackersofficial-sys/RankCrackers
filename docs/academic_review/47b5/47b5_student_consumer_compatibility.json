@@ -1,0 +1,26 @@
+{
+  "compatibilityCode": "RC_47B5_STUDENT_CONSUMER_COMPATIBILITY",
+  "executedAt": "2026-09-10T06:57:27.977Z",
+  "studentDiscoveryPath": "lib/services/firestore_service.dart (streamStudentMissionCatalogRecruitments)",
+  "requiredStudentFields": [
+    "id",
+    "missionId",
+    "title",
+    "catalogStatus",
+    "studentMessage",
+    "visibility"
+  ],
+  "materializerProvidedFields": [
+    "id",
+    "missionId",
+    "title",
+    "catalogStatus",
+    "studentMessage",
+    "visibility"
+  ],
+  "missingFields": [],
+  "metrics": {
+    "STUDENT_CONSUMER_SCHEMA_BLOCKER_COUNT": 0
+  },
+  "compatibilityPass": true
+}

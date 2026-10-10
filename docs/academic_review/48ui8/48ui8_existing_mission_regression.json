@@ -1,0 +1,35 @@
+{
+  "testedMissions": [
+    {
+      "id": "jee_main_2026",
+      "title": "JEE Main 2026",
+      "quickStartWorking": true,
+      "smartStartBlocked": true
+    },
+    {
+      "id": "neet_(ug)-2027",
+      "title": "NEET UG 2027",
+      "quickStartWorking": true,
+      "smartStartBlocked": true
+    },
+    {
+      "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "title": "RPSC First Grade 2026",
+      "quickStartWorking": true,
+      "smartStartBlocked": true
+    },
+    {
+      "id": "ssc_cgl",
+      "title": "SSC CGL",
+      "quickStartWorking": true,
+      "smartStartBlocked": true
+    },
+    {
+      "id": "upsc_cse_prelims",
+      "title": "UPSC CSE Prelims",
+      "quickStartWorking": true,
+      "smartStartBlocked": true
+    }
+  ],
+  "regressionStatus": "ALL_PRESERVED_100_PERCENT_PASS"
+}

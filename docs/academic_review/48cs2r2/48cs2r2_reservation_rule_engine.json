@@ -1,0 +1,27 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Rule-Driven Reservation Safety & Deduplication Engine Contract",
+  "verticalIsolationRules": {
+    "UR": "Open merit pool; open to all candidates unless state/recruitment open-merit rule specifies restrictions.",
+    "SC": "Eligible for UR and SC vacancies only. Isolated from ST, OBC_NCL, EWS.",
+    "ST": "Eligible for UR and ST vacancies only. Isolated from SC, OBC_NCL, EWS.",
+    "OBC_NCL": "Eligible for UR and OBC_NCL vacancies only. Isolated from SC, ST, EWS.",
+    "OBC_CL": "Creamy layer candidate; by law, ineligible for OBC_NCL reserved quota. Matches UR only.",
+    "EWS": "Eligible for UR and EWS vacancies only. Isolated from SC, ST, OBC_NCL."
+  },
+  "horizontalQuotaRules": {
+    "WOMEN": "Applicable only to FEMALE candidates. Male candidates strictly rejected.",
+    "PWBD": "Applicable only to candidates with explicit isPwBD === true. Null or false candidates rejected.",
+    "EX_SERVICEMAN": "Applicable only to candidates with explicit isExServiceman === true. Null or false candidates rejected."
+  },
+  "vacancyDeduplication": {
+    "mechanism": "Tracks seenRowKeys (rowId or composite of vertical + horizontal + post). Deduplicates identical rows before summing.",
+    "countReconciliation": "totalApplicableVacancies computed strictly from deduplicated unique applicable rows."
+  },
+  "verificationMetrics": {
+    "CROSS_VERTICAL_FALSE_MATCH_COUNT": 0,
+    "UNSUPPORTED_OBC_CL_RESERVED_MATCH_COUNT": 0,
+    "HORIZONTAL_CATEGORY_IGNORED_COUNT": 0,
+    "VACANCY_DOUBLE_COUNT_COUNT": 0
+  }
+}

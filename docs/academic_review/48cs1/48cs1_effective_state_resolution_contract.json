@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-48cs1",
+  "formula": "BASE NOTIFICATION + APPLICABLE AMENDMENTS + LATEST OFFICIAL PROCESS EVENTS = CURRENT EFFECTIVE RECRUITMENT CYCLE STATE",
+  "laws": [
+    "Never destructively overwrite event history.",
+    "Each official document creates an immutable CareerSignalEvent in the cycle history.",
+    "Current effective state is resolved by replaying events in chronological order of official issue date.",
+    "Corrigenda modify or override base attributes (e.g. extended application deadline, revised vacancies)."
+  ]
+}

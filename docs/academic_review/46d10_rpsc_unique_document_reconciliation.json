@@ -1,0 +1,79 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.717Z",
+  "governingDistinction": "28 SELECTABLE VARIANTS != 28 PAPER-II DOCUMENTS (28 Variants = 26 Unique Syllabus Documents)",
+  "summary": {
+    "RPSC_SELECTABLE_VARIANT_COUNT": 28,
+    "RPSC_UNIQUE_SYLLABUS_DOCUMENT_COUNT": 26,
+    "RPSC_PAPER1_UNIQUE_DOCUMENT_COUNT": 3,
+    "RPSC_PAPER2_UNIQUE_DOCUMENT_COUNT": 23,
+    "TOTAL_OFFICIAL_DOCUMENTS_COUNT": 29
+  },
+  "paper1Families": [
+    {
+      "key": "doc_syllabus_p1_academic",
+      "title": "Paper-I: General Awareness and General Studies (Academic Lecturer Family)",
+      "sharedVariantsCount": 21
+    },
+    {
+      "key": "doc_syllabus_p1_physical_education",
+      "title": "Paper-I: General Studies & Physical Education Basics (Physical Education Family)",
+      "sharedVariantsCount": 1
+    },
+    {
+      "key": "doc_syllabus_p1_coach",
+      "title": "Paper-I: General Studies & Sports Sciences (Coach Family)",
+      "sharedVariantsCount": 6
+    }
+  ],
+  "paper2Families": [
+    {
+      "family": "ACADEMIC_LECTURER_FAMILY",
+      "uniqueDocumentsCount": 21,
+      "subjects": [
+        "Hindi",
+        "English",
+        "Sanskrit",
+        "Rajasthani",
+        "Punjabi",
+        "Urdu",
+        "History",
+        "Geography",
+        "Political Science",
+        "Economics",
+        "Sociology",
+        "Public Administration",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Mathematics",
+        "Commerce",
+        "Music",
+        "Drawing",
+        "Home Science",
+        "Agriculture"
+      ]
+    },
+    {
+      "family": "PHYSICAL_EDUCATION_FAMILY",
+      "uniqueDocumentsCount": 1,
+      "subjects": [
+        "Physical Education"
+      ]
+    },
+    {
+      "family": "COACH_FAMILY",
+      "uniqueDocumentsCount": 1,
+      "sharedDocument": "Shared Coach Paper-II (Sports Sciences & Training Methodology)",
+      "sportsVariantsCount": 6,
+      "sports": [
+        "Athletics",
+        "Basketball",
+        "Handball",
+        "Kabaddi",
+        "Table Tennis",
+        "Volleyball"
+      ]
+    }
+  ]
+}

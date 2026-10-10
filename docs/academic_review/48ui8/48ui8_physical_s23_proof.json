@@ -1,0 +1,31 @@
+{
+  "targetDeviceSerial": "RZCW12FBFXZ",
+  "deviceType": "Samsung Galaxy S23 Physical Device",
+  "verificationFlows": [
+    {
+      "flow": "Mission Realm Query & Rendering",
+      "status": "VERIFIED"
+    },
+    {
+      "flow": "Internal Draft Non-Leak Barrier",
+      "status": "VERIFIED"
+    },
+    {
+      "flow": "JEE Main Quick Start & Dashboard Access",
+      "status": "VERIFIED"
+    },
+    {
+      "flow": "Home, Syllabus, DigiBook & Crucible Navigation",
+      "status": "VERIFIED"
+    },
+    {
+      "flow": "Dynamic Net-New AFCAT Quick Start",
+      "status": "VERIFIED"
+    },
+    {
+      "flow": "Logout and Same-UID Re-login State Hydration",
+      "status": "VERIFIED"
+    }
+  ],
+  "noHotRestartRequired": true
+}

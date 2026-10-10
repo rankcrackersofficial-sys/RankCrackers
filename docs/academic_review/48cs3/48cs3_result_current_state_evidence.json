@@ -1,0 +1,83 @@
+{
+  "retrievedOn": "2026-09-10",
+  "states": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycle": "School Lecturer 2025",
+      "currentCycleStatus": "APPLICATION_CLOSED_LATER_STAGE_UNRESOLVED",
+      "latestOfficialEvent": "Corrigendum 08/2025-26, 13 Aug 2025",
+      "HAS_EXAM_OCCURRED": "UNRESOLVED",
+      "HAS_RESULT_OCCURRED": "UNRESOLVED",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "UNRESOLVED",
+      "fullCurrentStateResolved": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycle": "RAS 2024",
+      "currentCycleStatus": "MAINS_OCCURRED_LATER_STAGE_UNRESOLVED",
+      "latestOfficialEvent": "Mains papers published 19 Jun 2025",
+      "HAS_EXAM_OCCURRED": "YES",
+      "HAS_RESULT_OCCURRED": "YES",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "UNRESOLVED",
+      "fullCurrentStateResolved": false
+    },
+    {
+      "missionId": "jee_main_2026",
+      "cycle": "JEE Main 2026",
+      "currentCycleStatus": "RESULT_DECLARED_CYCLE_CONCLUDED",
+      "latestOfficialEvent": "Paper 2 final scores published",
+      "HAS_EXAM_OCCURRED": "YES",
+      "HAS_RESULT_OCCURRED": "YES",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "NO",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "NO",
+      "fullCurrentStateResolved": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "cycle": "NEET UG 2026",
+      "currentCycleStatus": "RESULT_AND_REEXAM_FINAL_KEY_PUBLISHED",
+      "latestOfficialEvent": "Re-examination final keys, 16 Jul 2026",
+      "HAS_EXAM_OCCURRED": "YES",
+      "HAS_RESULT_OCCURRED": "YES",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "NO",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "NO",
+      "fullCurrentStateResolved": true
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycle": "Civil Services Examination 2026",
+      "currentCycleStatus": "MAINS_STAGE_ACTIVE",
+      "latestOfficialEvent": "Main exam press note, 19 Aug 2026",
+      "HAS_EXAM_OCCURRED": "YES",
+      "HAS_RESULT_OCCURRED": "YES",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "YES",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "YES",
+      "fullCurrentStateResolved": true
+    },
+    {
+      "missionId": "ssc_cgl",
+      "cycle": "CGL 2026",
+      "currentCycleStatus": "APPLICATION_CLOSED_EXAM_RESULT_UNRESOLVED",
+      "latestOfficialEvent": "Application reopening notice, 23 Jun 2026",
+      "HAS_EXAM_OCCURRED": "UNRESOLVED",
+      "HAS_RESULT_OCCURRED": "UNRESOLVED",
+      "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+      "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "UNRESOLVED",
+      "fullCurrentStateResolved": false
+    }
+  ]
+}

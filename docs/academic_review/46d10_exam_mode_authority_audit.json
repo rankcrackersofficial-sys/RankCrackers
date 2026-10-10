@@ -1,0 +1,163 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.720Z",
+  "summary": {
+    "TOTAL_MISSIONS": 15,
+    "UNSUPPORTED_GENERIC_CBT_MODE_COUNT_AFTER": 0,
+    "OMR_PEN_PAPER_PAPERS_COUNT": 7,
+    "CBT_PAPERS_COUNT": 17,
+    "PEN_PAPER_DESCRIPTIVE_PAPERS_COUNT": 1
+  },
+  "auditedExamModes": {
+    "jee_main_2026": [
+      {
+        "code": "PAPER_1",
+        "mode": "CBT",
+        "name": "B.E./B.Tech Examination"
+      }
+    ],
+    "neet_(ug)-2027": [
+      {
+        "code": "PAPER_1",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Undergraduate Medical Entrance Examination"
+      }
+    ],
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": [
+      {
+        "code": "PAPER_1",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-I: General Awareness and General Studies"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-II: Subject Paper"
+      }
+    ],
+    "upsc_cse_prelims": [
+      {
+        "code": "PAPER_1",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-I: General Studies Paper-I"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-II: General Studies Paper-II (CSAT)"
+      }
+    ],
+    "ssc_cgl": [
+      {
+        "code": "TIER_1",
+        "mode": "CBT",
+        "name": "Tier-I: Computer Based Examination"
+      },
+      {
+        "code": "TIER_2_P1",
+        "mode": "CBT",
+        "name": "Tier-II Paper-I: Compulsory for All Posts"
+      },
+      {
+        "code": "TIER_2_P2",
+        "mode": "CBT",
+        "name": "Tier-II Paper-II: Statistics (JSO)"
+      }
+    ],
+    "ssc_je": [
+      {
+        "code": "PAPER_1",
+        "mode": "CBT",
+        "name": "Paper-I: Computer Based Examination"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "CBT",
+        "name": "Paper-II: Computer Based Technical Examination"
+      }
+    ],
+    "ssc_selection_post": [
+      {
+        "code": "CBE_PAPER",
+        "mode": "CBT",
+        "name": "Computer Based Examination (Level-Specific)"
+      }
+    ],
+    "ssc_chsl": [
+      {
+        "code": "TIER_1",
+        "mode": "CBT",
+        "name": "Tier-I: Computer Based Examination"
+      },
+      {
+        "code": "TIER_2",
+        "mode": "CBT",
+        "name": "Tier-II: Computer Based Examination"
+      }
+    ],
+    "ssc_stenographer": [
+      {
+        "code": "CBE_PAPER",
+        "mode": "CBT",
+        "name": "Computer Based Examination"
+      }
+    ],
+    "ssc_hindi_translators": [
+      {
+        "code": "PAPER_1",
+        "mode": "CBT",
+        "name": "Paper-I: Computer Based Examination"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "PEN_PAPER_DESCRIPTIVE",
+        "name": "Paper-II: Translation & Essay"
+      }
+    ],
+    "ssc_mts_havaldar": [
+      {
+        "code": "CBE_PAPER",
+        "mode": "CBT",
+        "name": "Computer Based Examination (Session-I & Session-II)"
+      }
+    ],
+    "ssc_cpo": [
+      {
+        "code": "PAPER_1",
+        "mode": "CBT",
+        "name": "Paper-I: Computer Based Examination"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "CBT",
+        "name": "Paper-II: English Language & Comprehension"
+      }
+    ],
+    "ssc_gd": [
+      {
+        "code": "CBE_PAPER",
+        "mode": "CBT",
+        "name": "Computer Based Examination"
+      }
+    ],
+    "uppsc_pcs_prelims": [
+      {
+        "code": "PAPER_1",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-I: General Studies-I"
+      },
+      {
+        "code": "PAPER_2",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-II: General Studies-II (CSAT)"
+      }
+    ],
+    "rpsc_ras_prelims": [
+      {
+        "code": "PAPER_1",
+        "mode": "OMR_PEN_PAPER",
+        "name": "Paper-I: General Knowledge and General Science"
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "article315": {
+    "supportedCount": 13,
+    "unresolvedCount": 11,
+    "supportedIds": [
+      "chandigarh_police_constable",
+      "csbc_bihar_police_constable",
+      "haryana_police_constable",
+      "hppsc_police_constable",
+      "jk_police_constable",
+      "kpsc_kl_police_constable",
+      "ladakh_police_constable",
+      "mizoram_police_constable",
+      "mpesb_police_constable",
+      "nagaland_police_constable",
+      "uk_police_constable",
+      "wbprb_police_constable",
+      "wbpsc_clerkship"
+    ],
+    "unresolvedIds": [
+      "cg_police_constable",
+      "delhi_police_constable",
+      "jssc_police_constable",
+      "mh_police_constable",
+      "odisha_police_constable",
+      "psssb_patwari",
+      "punjab_police_constable",
+      "rj_police_constable",
+      "sikkim_police_constable",
+      "tripura_police_constable",
+      "upsssc_vdo"
+    ]
+  },
+  "judicial": {
+    "confirmedCount": 4,
+    "unresolvedCount": 4,
+    "confirmedIds": [
+      "delhi_judicial_service_prelims",
+      "gauhc_ajs_grade3_prelims",
+      "mphc_civil_judge_prelims",
+      "rhc_civil_judge_prelims"
+    ],
+    "unresolvedIds": [
+      "bpsc_judicial_service_prelims",
+      "hpsc_hcs_j_prelims",
+      "ppsc_pcs_j_prelims",
+      "uppsc_pcs_j_prelims"
+    ]
+  },
+  "tripura": {
+    "observedMissionIds": [
+      "jrbt_tripura_group_cd",
+      "tpsc_tripura_tcs_tps",
+      "trbt_tripura_stgt_stpgt",
+      "trbt_tripura_ttet",
+      "tripura_police_constable",
+      "tripura_tet"
+    ]
+  },
+  "deltaNote": "48C residual inputs recomputed directly from physical ledgers. Article 315 accounts for 13 supported and 11 unresolved rows; Judicial accounts for 4 standalone confirmed and 4 unresolved rows."
+}

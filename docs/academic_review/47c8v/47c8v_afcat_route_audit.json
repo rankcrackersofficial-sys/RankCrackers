@@ -1,0 +1,10 @@
+{
+  "auditCode": "RC_47C8V_AFCAT_ROUTE_AUDIT",
+  "executedAt": "2026-09-10T08:22:06.071Z",
+  "metrics": {
+    "AFCAT_ROUTE_COUNT": 5,
+    "AFCAT_ROUTE_WITHOUT_SOURCE_EVIDENCE_COUNT": 0,
+    "AFCAT_NON_ACADEMIC_BRANCH_AS_VARIANT_COUNT": 0
+  },
+  "auditPass": true
+}

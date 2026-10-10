@@ -1,0 +1,143 @@
+{
+  "inventorySchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_SSC_MISSION_INVENTORY_46D7",
+  "authority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "headquarters": "Block No. 12, CGO Complex, Lodhi Road, New Delhi",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "calendarSource": {
+    "title": "SSC Tentative Calendar of Examinations for the Year 2026-2027",
+    "officialListingPageUrl": "https://ssc.gov.in/candidate-corner/tentative-calendar-of-examinations",
+    "evidenceStatus": "PORTAL_TEXT_VERIFIED"
+  },
+  "summary": {
+    "SSC_OFFICIAL_CALENDAR_ENTRY_COUNT": 13,
+    "SSC_PUBLIC_MISSION_COUNT": 9,
+    "SSC_DEPARTMENTAL_RESTRICTED_COUNT": 4,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "publicOpenRecruitments": [
+    {
+      "missionFamilyId": "ssc_cgl",
+      "canonicalDisplayName": "SSC CGL",
+      "officialExamTitle": "Combined Graduate Level Examination",
+      "educationalQualificationLevel": "GRADUATION_DEGREE",
+      "examStages": "Tier-I (CBE) + Tier-II (CBE & DEST)",
+      "supportedStage": "TIER_I_AND_TIER_II_CBE_MCQ",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_cgl_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_je",
+      "canonicalDisplayName": "SSC Junior Engineer",
+      "officialExamTitle": "Junior Engineer (Civil, Mechanical & Electrical) Examination",
+      "educationalQualificationLevel": "DIPLOMA_OR_DEGREE_ENGINEERING",
+      "examStages": "Paper-I (CBE) + Paper-II (CBE)",
+      "supportedStage": "PAPER_I_AND_PAPER_II_CBE_MCQ",
+      "disciplineVariants": ["Civil Engineering", "Electrical Engineering", "Mechanical Engineering"],
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_je_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_selection_post",
+      "canonicalDisplayName": "SSC Selection Post",
+      "officialExamTitle": "Selection Posts Examination",
+      "educationalQualificationLevel": "MULTI_TIER_QUALIFICATION",
+      "examStages": "Single Stage CBE (Separated by Educational Level)",
+      "supportedStage": "CBE_MCQ_ALL_LEVELS",
+      "qualificationLevelVariants": ["Matriculation Level", "Higher Secondary (10+2) Level", "Graduation and Above Level"],
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_selection_post_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_chsl",
+      "canonicalDisplayName": "SSC CHSL",
+      "officialExamTitle": "Combined Higher Secondary (10+2) Level Examination",
+      "educationalQualificationLevel": "HIGHER_SECONDARY_12TH",
+      "examStages": "Tier-I (CBE) + Tier-II (CBE & Skill/Typing)",
+      "supportedStage": "TIER_I_AND_TIER_II_CBE_MCQ",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_chsl_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_stenographer",
+      "canonicalDisplayName": "SSC Stenographer Grade C & D",
+      "officialExamTitle": "Stenographer Grade 'C' & 'D' Examination",
+      "educationalQualificationLevel": "HIGHER_SECONDARY_12TH",
+      "examStages": "CBE + Skill Test in Stenography",
+      "supportedStage": "CBE_MCQ_ONLY",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_stenographer_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_hindi_translators",
+      "canonicalDisplayName": "SSC Combined Hindi Translators",
+      "officialExamTitle": "Junior Hindi Translator, Junior Translator and Senior Hindi Translator Examination",
+      "educationalQualificationLevel": "POST_GRADUATE_DEGREE_HINDI_ENGLISH",
+      "examStages": "Paper-I (CBE) + Paper-II (Descriptive Translation & Essay)",
+      "supportedStage": "PAPER_I_CBE_MCQ_ONLY",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_hindi_translators_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_mts_havaldar",
+      "canonicalDisplayName": "SSC MTS & Havaldar",
+      "officialExamTitle": "Multi Tasking (Non-Technical) Staff, and Havaldar (CBIC & CBN) Examination",
+      "educationalQualificationLevel": "MATRICULATION_10TH",
+      "examStages": "CBE (Session-I & Session-II) + PET/PST (Havaldar Only)",
+      "supportedStage": "CBE_SESSION_I_AND_II_MCQ",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_mts_havaldar_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_cpo",
+      "canonicalDisplayName": "SSC CPO",
+      "officialExamTitle": "Sub-Inspector in Delhi Police and Central Armed Police Forces Examination",
+      "educationalQualificationLevel": "GRADUATION_DEGREE",
+      "examStages": "Paper-I (CBE) + PET/PST + Paper-II (CBE) + Medical",
+      "supportedStage": "PAPER_I_AND_PAPER_II_CBE_MCQ",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_cpo_profile.json"
+    },
+    {
+      "missionFamilyId": "ssc_gd",
+      "canonicalDisplayName": "SSC GD Constable",
+      "officialExamTitle": "Constables (GD) in Central Armed Police Forces (CAPFs), SSF, Rifleman (GD) in Assam Rifles Examination",
+      "educationalQualificationLevel": "MATRICULATION_10TH",
+      "examStages": "CBE + PET/PST + Medical",
+      "supportedStage": "CBE_MCQ_ONLY",
+      "profileFilename": "docs/academic_review/46d7_ssc_profiles/46d7_ssc_gd_profile.json"
+    }
+  ],
+  "departmentalRestrictedExams": [
+    {
+      "entryIndex": 1,
+      "examTitle": "Grade 'C' Stenographer Limited Departmental Competitive Examination",
+      "classification": "DEPARTMENTAL_RESTRICTED",
+      "eligibility": "In-service Stenographers Grade 'D' with prescribed regular service",
+      "isStudentMissionCandidate": false,
+      "exclusionReason": "Internal departmental promotion exam for serving central government employees; not a general open public student recruitment."
+    },
+    {
+      "entryIndex": 2,
+      "examTitle": "JSA / LDC Grade Limited Departmental Competitive Examination",
+      "classification": "DEPARTMENTAL_RESTRICTED",
+      "eligibility": "In-service Group 'C' staff (MTS, etc.) with prescribed regular service",
+      "isStudentMissionCandidate": false,
+      "exclusionReason": "Internal departmental promotion exam; not open to general students."
+    },
+    {
+      "entryIndex": 3,
+      "examTitle": "SSA / UDC Grade Limited Departmental Competitive Examination",
+      "classification": "DEPARTMENTAL_RESTRICTED",
+      "eligibility": "In-service Junior Secretariat Assistants (JSAs) / LDCs with prescribed regular service",
+      "isStudentMissionCandidate": false,
+      "exclusionReason": "Internal departmental promotion exam; not open to general students."
+    },
+    {
+      "entryIndex": 4,
+      "examTitle": "Assistant Section Officer (ASO) Limited Departmental Competitive Examination",
+      "classification": "DEPARTMENTAL_RESTRICTED",
+      "eligibility": "In-service Senior Secretariat Assistants (SSAs) / UDCs with prescribed regular service",
+      "isStudentMissionCandidate": false,
+      "exclusionReason": "Internal departmental promotion exam; not open to general students."
+    }
+  ]
+}

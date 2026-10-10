@@ -1,0 +1,78 @@
+{
+  "retrievedOn": "2026-09-10",
+  "CAREER_SIGNAL_PILOT_COUNT": 6,
+  "rows": [
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycle": "School Lecturer (School Education) 2025, Advt. 06/2025-26",
+      "listing": "https://rpsc.rajasthan.gov.in/",
+      "notification": "https://rpsc.rajasthan.gov.in/",
+      "application": "https://sso.rajasthan.gov.in/",
+      "schedule": "https://rpsc.rajasthan.gov.in/",
+      "admitCard": "https://rpsc.rajasthan.gov.in/",
+      "answerKey": "https://rpsc.rajasthan.gov.in/answerkeys.aspx",
+      "result": "https://rpsc.rajasthan.gov.in/Result.aspx"
+    },
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "rpsc_ras_prelims",
+      "cycle": "Rajasthan State and Subordinate Services Combined Competitive Examination 2024",
+      "listing": "https://rpsc.rajasthan.gov.in/",
+      "notification": "https://rpsc.rajasthan.gov.in/",
+      "application": "https://sso.rajasthan.gov.in/",
+      "schedule": "https://rpsc.rajasthan.gov.in/",
+      "admitCard": "https://rpsc.rajasthan.gov.in/",
+      "answerKey": "https://rpsc.rajasthan.gov.in/answerkeys.aspx",
+      "result": "https://rpsc.rajasthan.gov.in/Result.aspx"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "jee_main_2026",
+      "cycle": "JEE (Main) 2026 Sessions 1 and 2",
+      "listing": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "notification": "https://jeemain.nta.nic.in/",
+      "application": "https://jeemain.nta.nic.in/",
+      "schedule": "https://jeemain.nta.nic.in/",
+      "admitCard": "https://jeemain.nta.nic.in/",
+      "answerKey": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "result": "https://jeemain.nta.nic.in/2026/"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "neet_(ug)-2027",
+      "cycle": "NEET (UG) 2026",
+      "listing": "https://neet.nta.nic.in/public-notices/",
+      "notification": "https://neet.nta.nic.in/",
+      "application": "https://neet.nta.nic.in/",
+      "schedule": "https://neet.nta.nic.in/",
+      "admitCard": "https://neet.nta.nic.in/",
+      "answerKey": "https://neet.nta.nic.in/public-notices/",
+      "result": "https://neet.nta.nic.in/public-notices/"
+    },
+    {
+      "authorityId": "auth_in_upsc",
+      "missionId": "upsc_cse_prelims",
+      "cycle": "Civil Services Examination 2026",
+      "listing": "https://www.upsc.gov.in/examinations/active-exams",
+      "notification": "https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026",
+      "application": "https://upsconline.nic.in/",
+      "schedule": "https://www.upsc.gov.in/examinations/Civil%20Services%20%28Main%29%20Examination%2C%202026",
+      "admitCard": "https://www.upsc.gov.in/examinations/Civil%20Services%20%28Main%29%20Examination%2C%202026",
+      "answerKey": "UNAVAILABLE_DURING_ACTIVE_CYCLE",
+      "result": "https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
+    },
+    {
+      "authorityId": "auth_in_ssc",
+      "missionId": "ssc_cgl",
+      "cycle": "Combined Graduate Level Examination 2026",
+      "listing": "https://ssc.gov.in/",
+      "notification": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2025.pdf",
+      "application": "https://ssc.gov.in/",
+      "schedule": "https://ssc.gov.in/api/attachment/uploads/masterData/ExamCalendar/Tentative_Calendar2026_27_08012026.pdf",
+      "admitCard": "https://ssc.gov.in/",
+      "answerKey": "https://ssc.gov.in/",
+      "result": "https://ssc.gov.in/"
+    }
+  ]
+}

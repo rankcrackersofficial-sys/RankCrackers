@@ -1,0 +1,107 @@
+{
+  "manifestSchemaVersion": "4.0.0",
+  "draftStatus": "REAL_SOURCE_MANIFEST_46D6R4",
+  "agent": "AGENT-3 — FINAL SOURCE ARTIFACT INTEGRITY GATE",
+  "generatedAt": "2026-09-09T19:08:00.000Z",
+  "governanceRules": {
+    "ZERO_SYNTHETIC_HASHES": true,
+    "ZERO_GUESSED_URLS": true,
+    "SEPARATE_LISTING_PAGE_FROM_DOWNLOAD_HREF": true,
+    "ZERO_PRODUCTION_WRITES": true,
+    "PRESERVE_46D5_GATE": true
+  },
+  "sourceRegistries": [
+    {
+      "missionId": "jee_main_2026",
+      "canonicalExamName": "JEE Main",
+      "canonicalDisplayName": "JEE Main 2027",
+      "missionTargetYear": 2027,
+      "sourceBaselineYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA)",
+      "officialListingPageUrl": "https://jeemain.nta.ac.in",
+      "documentTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin",
+      "officialDocumentLocator": "Chapter 3 (Table 3.1 & Section 3.2)",
+      "patternSummary": "75 Questions / 300 Marks / 180 Minutes (20 MCQ + 5 Numerical per subject, all compulsory)",
+      "localEvidenceBinding": {
+        "localFileRef": "docs/academic_review/hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+        "verifiedPageCount": 140,
+        "verifiedAtomsCount": 211
+      },
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "canonicalExamName": "NEET (UG)",
+      "canonicalDisplayName": "NEET (UG)-2027",
+      "missionTargetYear": 2027,
+      "sourceBaselineYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA) & National Medical Commission (NMC)",
+      "officialListingPageUrl": "https://exams.nta.ac.in/NEET",
+      "documentTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin",
+      "officialDocumentLocator": "Chapter 3 (Section 3.1 & Table 1)",
+      "patternSummary": "180 Compulsory Questions / 720 Marks / 180 Minutes (Physics 45, Chemistry 45, Biology 90)",
+      "primaryExpectedSubjects": ["Physics", "Chemistry", "Biology"],
+      "systemDerivedTaxonomy": ["Botany", "Zoology"],
+      "localEvidenceBinding": {
+        "localFileRef": "docs/academic_review/hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+        "verifiedPagesRange": "67-80"
+      },
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "canonicalExamName": "RPSC School Lecturer (School Education)",
+      "canonicalDisplayName": "RPSC 1st Grade",
+      "missionTargetYear": 2026,
+      "sourceRecruitmentCycle": 2025,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+      "officialListingPageUrls": {
+        "advertisements": "https://rpsc.rajasthan.gov.in/advertisements",
+        "corrigendums": "https://rpsc.rajasthan.gov.in/corrigendums",
+        "syllabus": "https://rpsc.rajasthan.gov.in/syllabus"
+      },
+      "primaryAdvertisements": [
+        {
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "publicationDate": "2025-07-25",
+          "officialListingUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "officialServedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "officialDocumentTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025",
+          "classification": "PRIMARY_RECRUITMENT_ADVERTISEMENT",
+          "exactLocator": "Advt. No. 06/2025-26 Section 1 (Post & Vacancy Table) & Section 8 (Scheme & Syllabus)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "advertisementNumber": "Advt. No. 09/2025-26",
+          "publicationDate": "2025-08-28",
+          "officialListingUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "officialServedFilename": "DYNAMIC_PORTAL_RECORD_ADVT_09",
+          "officialDocumentTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture)",
+          "classification": "ADDITIONAL_SAME_FAMILY_ADVERTISEMENT",
+          "exactLocator": "Advt. No. 09/2025-26 Preamble & Post Matrix",
+          "authorityStatus": "SOURCE_VERIFIED"
+        }
+      ],
+      "confirmedCorrigenda": [
+        {
+          "corrigendumNumber": "Corrigendum No. 08/2025-26",
+          "publicationDate": "2025-08-13",
+          "officialListingUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+          "officialDocumentTitle": "Corrigendum No. 08/2025-26 for School Lecturer (School Education) - 2025",
+          "exactLocator": "Notice dated 13-08-2025 (Category Reservation & Post Adjustments)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        }
+      ],
+      "paperFamilies": [
+        "ACADEMIC_LECTURER_FAMILY",
+        "PHYSICAL_EDUCATION_FAMILY",
+        "COACH_FAMILY"
+      ],
+      "selectableVariantsCount": 28,
+      "parentEntitiesCount": 23
+    }
+  ]
+}

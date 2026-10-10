@@ -1,0 +1,26 @@
+{
+  "chains": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "baseNotification": "Advt. 06/2025-26 dated 17 Jul 2025",
+      "amendments": [
+        "Corrigendum 08/2025-26 dated 13 Aug 2025"
+      ],
+      "effectiveValues": {
+        "posts": 3225,
+        "applicationClose": "2025-09-12",
+        "applicationOpen": "2025-08-14"
+      }
+    },
+    {
+      "missionId": "ssc_cgl",
+      "baseNotification": "Notice dated 21 May 2026",
+      "amendments": [
+        "Application reopening notice dated 23 Jun 2026"
+      ],
+      "effectiveValues": {
+        "applicationCurrentlyActive": false
+      }
+    }
+  ]
+}

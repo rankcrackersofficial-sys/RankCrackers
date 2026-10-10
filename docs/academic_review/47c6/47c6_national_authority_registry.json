@@ -1,0 +1,170 @@
+{
+  "authorities": [
+    {
+      "authorityId": "auth_in_upsc",
+      "authorityOfficialName": "Union Public Service Commission",
+      "authorityShortName": "UPSC",
+      "authorityGroupKey": "upsc",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://upsc.gov.in",
+      "officialDomains": [
+        "upsc.gov.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_ssc",
+      "authorityOfficialName": "Staff Selection Commission",
+      "authorityShortName": "SSC",
+      "authorityGroupKey": "ssc",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://ssc.gov.in",
+      "officialDomains": [
+        "ssc.gov.in",
+        "ssc.nic.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_cbse",
+      "authorityOfficialName": "Central Board of Secondary Education",
+      "authorityShortName": "CBSE",
+      "authorityGroupKey": "cbse",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://cbse.gov.in",
+      "officialDomains": [
+        "cbse.gov.in",
+        "cbse.nic.in",
+        "ctet.nic.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "authorityOfficialName": "National Testing Agency",
+      "authorityShortName": "NTA",
+      "authorityGroupKey": "nta",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://nta.ac.in",
+      "officialDomains": [
+        "nta.ac.in",
+        "jeemain.nta.nic.in",
+        "neet.nta.nic.in",
+        "cdnbbsr.s3waas.gov.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_rrb",
+      "authorityOfficialName": "Railway Recruitment Boards",
+      "authorityShortName": "RRB",
+      "authorityGroupKey": "rrb",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://rrbcdg.gov.in",
+      "officialDomains": [
+        "rrbcdg.gov.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_rpf",
+      "authorityOfficialName": "Railway Protection Force",
+      "authorityShortName": "RPF",
+      "authorityGroupKey": "rpf",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://rpf.indianrailways.gov.in",
+      "officialDomains": [
+        "rpf.indianrailways.gov.in",
+        "indianrailways.gov.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_ibps",
+      "authorityOfficialName": "Institute of Banking Personnel Selection",
+      "authorityShortName": "IBPS",
+      "authorityGroupKey": "ibps",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://ibps.in",
+      "officialDomains": [
+        "ibps.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_sbi",
+      "authorityOfficialName": "State Bank of India",
+      "authorityShortName": "SBI",
+      "authorityGroupKey": "sbi",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://sbi.co.in",
+      "officialDomains": [
+        "sbi.co.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_rbi",
+      "authorityOfficialName": "Reserve Bank of India",
+      "authorityShortName": "RBI",
+      "authorityGroupKey": "rbi",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://rbi.org.in",
+      "officialDomains": [
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_nabard",
+      "authorityOfficialName": "National Bank for Agriculture and Rural Development",
+      "authorityShortName": "NABARD",
+      "authorityGroupKey": "nabard",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://nabard.org",
+      "officialDomains": [
+        "nabard.org"
+      ]
+    },
+    {
+      "authorityId": "auth_in_indian_army",
+      "authorityOfficialName": "Indian Army",
+      "authorityShortName": "INDIAN_ARMY",
+      "authorityGroupKey": "indian_army",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://joinindianarmy.nic.in",
+      "officialDomains": [
+        "joinindianarmy.nic.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_indian_navy",
+      "authorityOfficialName": "Indian Navy",
+      "authorityShortName": "INDIAN_NAVY",
+      "authorityGroupKey": "indian_navy",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://joinindiannavy.gov.in",
+      "officialDomains": [
+        "joinindiannavy.gov.in"
+      ]
+    },
+    {
+      "authorityId": "auth_in_indian_air_force",
+      "authorityOfficialName": "Indian Air Force",
+      "authorityShortName": "IAF",
+      "authorityGroupKey": "indian_air_force",
+      "jurisdictionType": "CENTRAL",
+      "isCentralAuthority": true,
+      "officialPrimaryDomain": "https://careerairforce.gov.in",
+      "officialDomains": [
+        "careerairforce.gov.in",
+        "iafrecruitment.edcil.co.in",
+        "afcat.cdac.in"
+      ]
+    }
+  ]
+}

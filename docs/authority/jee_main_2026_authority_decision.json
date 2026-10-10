@@ -1,0 +1,19 @@
+{
+  "source_sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+  "decision": "OPTION_A",
+  "studentPublicationAuthorized": false,
+  "papers": {
+    "PAPER_1": {
+      "allowedSubjects": ["Mathematics", "Physics", "Chemistry", "MATHEMATICS", "PHYSICS", "CHEMISTRY"],
+      "allowedPageRanges": [{"start": 1, "end": 11}]
+    },
+    "PAPER_2A": {
+      "allowedSubjects": ["Mathematics", "Aptitude Test", "Drawing Test", "MATHEMATICS", "Aptitude", "Drawing", "APTITUDE TEST", "DRAWING TEST"],
+      "allowedPageRanges": [{"start": 12, "end": 14}]
+    },
+    "PAPER_2B": {
+      "allowedSubjects": ["Mathematics", "Aptitude Test", "Planning", "MATHEMATICS", "Aptitude", "Planning", "APTITUDE TEST", "PLANNING"],
+      "allowedPageRanges": [{"start": 15, "end": 17}]
+    }
+  }
+}

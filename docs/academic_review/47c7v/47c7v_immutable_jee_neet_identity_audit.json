@@ -1,0 +1,25 @@
+{
+  "auditCode": "RC_47C7V_IMMUTABLE_JEE_NEET_IDENTITY_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.790Z",
+  "metrics": {
+    "JEE_DUPLICATE_CANONICAL_MISSION_COUNT": 0,
+    "NEET_DUPLICATE_CANONICAL_MISSION_COUNT": 0,
+    "JEE_MAIN_IMMUTABLE_ID_EXACT_MATCH": "YES",
+    "NEET_UG_IMMUTABLE_ID_EXACT_MATCH": "YES"
+  },
+  "verifiedRecords": [
+    {
+      "expectedImmutableId": "jee_main_2026",
+      "actualManifestId": "jee_main_2026",
+      "title": "Joint Entrance Examination Main",
+      "status": "IMMUTABLE_PILOT_VERIFIED"
+    },
+    {
+      "expectedImmutableId": "neet_(ug)-2027",
+      "actualManifestId": "neet_(ug)-2027",
+      "title": "NEET UG",
+      "status": "IMMUTABLE_PILOT_VERIFIED"
+    }
+  ],
+  "reconciliationRule": "No active mission may exist as nta_jee_main or nta_neet_ug. Exact production immutable IDs jee_main_2026 and neet_(ug)-2027 must be preserved without case, punctuation, or naming alterations."
+}

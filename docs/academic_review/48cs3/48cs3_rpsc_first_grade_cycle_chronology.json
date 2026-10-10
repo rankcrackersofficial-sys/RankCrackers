@@ -1,0 +1,57 @@
+{
+  "state": {
+    "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+    "cycle": "School Lecturer 2025",
+    "currentCycleStatus": "APPLICATION_CLOSED_LATER_STAGE_UNRESOLVED",
+    "latestOfficialEvent": "Corrigendum 08/2025-26, 13 Aug 2025",
+    "HAS_EXAM_OCCURRED": "UNRESOLVED",
+    "HAS_RESULT_OCCURRED": "UNRESOLVED",
+    "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+    "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+    "opportunitySignalActive": "NO",
+    "processUpdateSignalActive": "UNRESOLVED",
+    "fullCurrentStateResolved": false
+  },
+  "events": [
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "officialCycleIdentity": "School Lecturer 2025 Advt. 06/2025-26",
+      "eventType": "NOTIFICATION",
+      "officialTitle": "Advt. 06/2025-26 for School Lecturer (School Education) 2025",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/",
+      "publicationDate": "2025-07-17",
+      "effectiveDate": "2025-07-17",
+      "pageOrSection": "RPSC recruitment advertisements listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    },
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "officialCycleIdentity": "School Lecturer 2025 Advt. 06/2025-26",
+      "eventType": "AMENDMENT",
+      "officialTitle": "Corrigendum No. 08/2025-26 and press note",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/Static/PressNotes/2BEE99F8-B437-4964-9A51-F8B029223DC6.pdf",
+      "publicationDate": "2025-08-13",
+      "effectiveDate": "2025-08-13",
+      "pageOrSection": "3,225 posts; applications 14 Aug-12 Sep 2025; qualification amendment",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    }
+  ]
+}

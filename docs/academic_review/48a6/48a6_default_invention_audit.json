@@ -1,0 +1,1390 @@
+{
+  "DEFAULTED_FIELD_CAUSED_READY_COUNT": 0,
+  "UNRESOLVED_AUTHORITY_READY_COUNT": 0,
+  "auditRows": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "rawDisplayName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "rawAuthorityId": "auth_in_rj_rpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "rawDisplayName": "Air Force Common Admission Test",
+      "rawAuthorityId": "auth_in_indian_air_force",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "rawDisplayName": "Indian Air Force Agniveervayu Selection Test",
+      "rawAuthorityId": "auth_in_indian_air_force",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "rawDisplayName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_ar_appsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "rawDisplayName": "APPSC Group-I Services Examination",
+      "rawAuthorityId": "auth_in_ap_appsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "rawDisplayName": "APPSC Group-II Services Examination",
+      "rawAuthorityId": "auth_in_ap_appsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "rawDisplayName": "Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_as_apsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "rawDisplayName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "rawAuthorityId": "auth_in_ap_apslprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "rawDisplayName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "rawAuthorityId": "auth_in_ap_apslprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "rawDisplayName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "rawAuthorityId": "auth_in_ar_apssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "rawDisplayName": "Indian Army Agniveer Online CEE",
+      "rawAuthorityId": "auth_in_indian_army",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "rawDisplayName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "rawAuthorityId": "auth_in_ar_police",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "rawDisplayName": "BPSC Combined Competitive Examination (Prelims)",
+      "rawAuthorityId": "auth_in_br_bpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "rawDisplayName": "BPSC School Teacher Recruitment Examination",
+      "rawAuthorityId": "auth_in_br_bpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "rawDisplayName": "Bihar Police Police Sub-Inspector Examination",
+      "rawAuthorityId": "auth_in_br_bpssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "rawDisplayName": "Odisha Teacher Eligibility Test",
+      "rawAuthorityId": "auth_in_od_bse",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "rawDisplayName": "Bihar Secondary Teacher Eligibility Test",
+      "rawAuthorityId": "auth_in_br_bseb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "rawDisplayName": "BSSC Graduate Level Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_br_bssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "rawDisplayName": "BSSC Inter Level Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_br_bssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "rawDisplayName": "Central Teacher Eligibility Test",
+      "rawAuthorityId": "auth_in_cbse",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "rawDisplayName": "Chhattisgarh State Service Examination",
+      "rawAuthorityId": "auth_in_cg_cgpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "rawDisplayName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "rawAuthorityId": "auth_in_cg_cgvyapam",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "rawDisplayName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "rawAuthorityId": "auth_in_ch_admin",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "rawDisplayName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "rawAuthorityId": "auth_in_ch_police",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "rawDisplayName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "rawAuthorityId": "auth_in_ch_police",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "rawDisplayName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "rawAuthorityId": "auth_in_ch_admin",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "rawDisplayName": "Bihar Police Constable Recruitment Examination",
+      "rawAuthorityId": "auth_in_br_csbc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "rawDisplayName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "rawAuthorityId": "auth_in_dn_ssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "rawDisplayName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "rawAuthorityId": "auth_in_dl_dsssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "rawDisplayName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "rawAuthorityId": "auth_in_dl_dsssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "rawDisplayName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "rawAuthorityId": "auth_in_dl_dsssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "rawDisplayName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "rawAuthorityId": "auth_in_dl_dsssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "rawDisplayName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "rawAuthorityId": "auth_in_ga_police",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "rawDisplayName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "rawAuthorityId": "auth_in_gj_gprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "rawDisplayName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "rawAuthorityId": "auth_in_gj_gpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "rawDisplayName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "rawAuthorityId": "auth_in_ga_gpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "rawDisplayName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "rawAuthorityId": "auth_in_gj_gpssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "rawDisplayName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "rawAuthorityId": "auth_in_ga_gssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "rawDisplayName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "rawAuthorityId": "auth_in_gj_gsssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "rawDisplayName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "rawAuthorityId": "auth_in_hr_bseh",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "rawDisplayName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "rawAuthorityId": "auth_in_hr_hssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "rawDisplayName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "rawAuthorityId": "auth_in_hr_hssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "rawDisplayName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "rawAuthorityId": "auth_in_hp_hpbose",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "rawDisplayName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_hp_hppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "rawDisplayName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "rawAuthorityId": "auth_in_hp_hppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "rawDisplayName": "Group C Common Computer Based Test / Screening Examination",
+      "rawAuthorityId": "auth_in_hp_hprca",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "rawDisplayName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_hr_hpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "rawDisplayName": "Common Eligibility Test (CET) Haryana - Group C",
+      "rawAuthorityId": "auth_in_hr_hssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "rawDisplayName": "Common Eligibility Test (CET) Haryana - Group D",
+      "rawAuthorityId": "auth_in_hr_hssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "rawDisplayName": "IBPS RRB Office Assistant",
+      "rawAuthorityId": "auth_in_ibps",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "rawDisplayName": "IBPS RRB Officer Scale I/II/III",
+      "rawAuthorityId": "auth_in_ibps",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "rawDisplayName": "IBPS CRP Customer Service Associate",
+      "rawAuthorityId": "auth_in_ibps",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "rawDisplayName": "IBPS CRP PO/MT",
+      "rawAuthorityId": "auth_in_ibps",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "rawDisplayName": "IBPS CRP Specialist Officer",
+      "rawAuthorityId": "auth_in_ibps",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "rawDisplayName": "Jharkhand Teacher Eligibility Test",
+      "rawAuthorityId": "auth_in_jh_jac",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "rawDisplayName": "Joint Entrance Examination Main",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "rawDisplayName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "rawAuthorityId": "auth_in_jk_jkssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "rawDisplayName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "rawAuthorityId": "auth_in_jk_jkssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "rawDisplayName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_jk_jkpsc",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "rawDisplayName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "rawAuthorityId": "auth_in_jk_jkssb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "rawDisplayName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "rawAuthorityId": "auth_in_jh_jpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "rawDisplayName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "rawAuthorityId": "auth_in_tr_jrbt",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "rawDisplayName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_jh_jssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "rawDisplayName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "rawAuthorityId": "auth_in_ka_kea",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "rawDisplayName": "KPSC Gazetted Probationers Examination (KAS)",
+      "rawAuthorityId": "auth_in_ka_kpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "rawDisplayName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "rawAuthorityId": "auth_in_kl_kpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "rawDisplayName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "rawAuthorityId": "auth_in_kl_kpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "rawDisplayName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "rawAuthorityId": "auth_in_kl_kpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "rawDisplayName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "rawAuthorityId": "auth_in_kl_kpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "rawDisplayName": "KSP Civil Police Constable (CPC)",
+      "rawAuthorityId": "auth_in_ka_ksp",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "rawDisplayName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "rawAuthorityId": "auth_in_ka_ksp",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "rawDisplayName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "rawAuthorityId": "auth_in_la_police",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "rawDisplayName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "rawAuthorityId": "auth_in_la_dssrb",
+      "rawJurisdiction": "UT",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "rawDisplayName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "rawAuthorityId": "auth_in_ml_crb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "rawDisplayName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "rawAuthorityId": "auth_in_mz_police",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "rawDisplayName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "rawAuthorityId": "auth_in_mp_mpesb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "rawDisplayName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "rawAuthorityId": "auth_in_mp_mpesb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "rawDisplayName": "Madhya Pradesh Police Constable Recruitment Test",
+      "rawAuthorityId": "auth_in_mp_mpesb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "rawDisplayName": "Madhya Pradesh State Service Examination",
+      "rawAuthorityId": "auth_in_mp_mppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "rawDisplayName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "rawAuthorityId": "auth_in_mh_mpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "rawDisplayName": "Manipur Combined Competitive Examination (MCSCC)",
+      "rawAuthorityId": "auth_in_mn_mpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "rawDisplayName": "Meghalaya Civil Services Combined Examination",
+      "rawAuthorityId": "auth_in_ml_mpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "rawDisplayName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "rawAuthorityId": "auth_in_mz_mpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "rawDisplayName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "rawAuthorityId": "auth_in_mh_mpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "rawDisplayName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "rawAuthorityId": "auth_in_mh_mscepune",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "rawDisplayName": "NABARD Grade A Assistant Manager",
+      "rawAuthorityId": "auth_in_nabard",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "rawDisplayName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "rawAuthorityId": "auth_in_nl_police",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "rawDisplayName": "Indian Navy Agniveer MR / INET",
+      "rawAuthorityId": "auth_in_indian_navy",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "rawDisplayName": "Indian Navy Agniveer SSR / INET",
+      "rawAuthorityId": "auth_in_indian_navy",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "rawDisplayName": "NEET UG",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "rawDisplayName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "rawAuthorityId": "auth_in_nl_npsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "rawDisplayName": "Combined Staff Recruitment Examination (CSRE)",
+      "rawAuthorityId": "auth_in_nl_nssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "rawDisplayName": "Joint CSIR UGC NET",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "rawDisplayName": "CUET PG",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "rawDisplayName": "CUET UG",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "rawDisplayName": "UGC NET",
+      "rawAuthorityId": "auth_in_nta",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "rawDisplayName": "Odisha Civil Services Examination (Prelims)",
+      "rawAuthorityId": "auth_in_od_opsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "rawDisplayName": "OSSC Combined Graduate Level Recruitment Examination",
+      "rawAuthorityId": "auth_in_od_ossc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "rawDisplayName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "rawAuthorityId": "auth_in_od_osssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "rawDisplayName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_pb_ppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "rawDisplayName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "rawAuthorityId": "auth_in_pb_psssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "rawDisplayName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "rawAuthorityId": "auth_in_pb_police",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "rawDisplayName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "rawAuthorityId": "auth_in_pb_pseb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "rawDisplayName": "RBI Assistant",
+      "rawAuthorityId": "auth_in_rbi",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "rawDisplayName": "RBI Grade B",
+      "rawAuthorityId": "auth_in_rbi",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "rawDisplayName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "rawAuthorityId": "auth_in_rj_rbse",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "rawDisplayName": "RPF Constable",
+      "rawAuthorityId": "auth_in_rpf",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "rawDisplayName": "RPF Sub-Inspector",
+      "rawAuthorityId": "auth_in_rpf",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "rawDisplayName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_rj_rpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "rawDisplayName": "RRB Assistant Loco Pilot",
+      "rawAuthorityId": "auth_in_rrb",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "rawDisplayName": "RRB Junior Engineer",
+      "rawAuthorityId": "auth_in_rrb",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "rawDisplayName": "RRB Level 1",
+      "rawAuthorityId": "auth_in_rrb",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "rawDisplayName": "RRB NTPC",
+      "rawAuthorityId": "auth_in_rrb",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "rawDisplayName": "RRB Technician",
+      "rawAuthorityId": "auth_in_rrb",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "rawDisplayName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "rawAuthorityId": "auth_in_rj_rssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "rawDisplayName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "rawAuthorityId": "auth_in_rj_rssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "rawDisplayName": "SBI Junior Associate",
+      "rawAuthorityId": "auth_in_sbi",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "rawDisplayName": "SBI Probationary Officer",
+      "rawAuthorityId": "auth_in_sbi",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "rawDisplayName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "rawAuthorityId": "auth_in_gj_seb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "rawDisplayName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "rawAuthorityId": "auth_in_as_slprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "rawDisplayName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "rawAuthorityId": "auth_in_as_slrc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "rawDisplayName": "Sikkim State Civil Services Combined Competitive Examination",
+      "rawAuthorityId": "auth_in_sk_spsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "rawDisplayName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "rawAuthorityId": "auth_in_sk_spsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "rawDisplayName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "rawAuthorityId": "auth_in_od_ssb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "rawDisplayName": "SSC Combined Graduate Level Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "rawDisplayName": "SSC Combined Higher Secondary Level Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "rawDisplayName": "SSC Sub-Inspector CPO Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "rawDisplayName": "SSC Constable GD Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "rawDisplayName": "SSC Combined Hindi Translators Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "rawDisplayName": "SSC Junior Engineer Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "rawDisplayName": "SSC MTS / Havaldar Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "rawDisplayName": "SSC Selection Post Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "rawDisplayName": "SSC Stenographer Grade C and D Examination",
+      "rawAuthorityId": "auth_in_ssc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "rawDisplayName": "TGPSC Group-I Services Examination",
+      "rawAuthorityId": "auth_in_tg_tgpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "rawDisplayName": "TGPSC Group-II Services Examination",
+      "rawAuthorityId": "auth_in_tg_tgpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "rawDisplayName": "TGPSC Group-III Services Examination",
+      "rawAuthorityId": "auth_in_tg_tgpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "rawDisplayName": "TGPSC Group-IV Services Examination",
+      "rawAuthorityId": "auth_in_tg_tgpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "rawDisplayName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "rawAuthorityId": "auth_in_tg_tgslprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "rawDisplayName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "rawAuthorityId": "auth_in_tg_tgslprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "rawDisplayName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "rawAuthorityId": "auth_in_tn_tnpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "rawDisplayName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "rawAuthorityId": "auth_in_tn_tnpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "rawDisplayName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "rawAuthorityId": "auth_in_tn_tnpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "rawDisplayName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "rawAuthorityId": "auth_in_tn_tntrb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "rawDisplayName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "rawAuthorityId": "auth_in_tn_tnusrb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "rawDisplayName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "rawAuthorityId": "auth_in_tn_tnusrb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "rawDisplayName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "rawAuthorityId": "auth_in_tr_tpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "rawDisplayName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "rawAuthorityId": "auth_in_tr_trbt",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "rawDisplayName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "rawAuthorityId": "auth_in_tg_treirb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "rawDisplayName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "rawAuthorityId": "auth_in_uk_uksssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "rawDisplayName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "rawAuthorityId": "auth_in_uk_ukpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "rawDisplayName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "rawAuthorityId": "auth_in_uk_ubse",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "rawDisplayName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "rawAuthorityId": "auth_in_uk_ukpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "rawDisplayName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_uk_ukpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "rawDisplayName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "rawAuthorityId": "auth_in_uk_uksssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "rawDisplayName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "rawAuthorityId": "auth_in_up_pnp",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "rawDisplayName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "rawAuthorityId": "auth_in_up_upprpb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "rawDisplayName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "rawAuthorityId": "auth_in_up_upprpb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "rawDisplayName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_up_uppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "rawDisplayName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "rawAuthorityId": "auth_in_up_uppsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "rawDisplayName": "Central Armed Police Forces (ACs) Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "rawDisplayName": "Combined Defence Services Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "rawDisplayName": "Combined Medical Services Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "rawDisplayName": "Civil Services Preliminary Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "rawDisplayName": "Engineering Services Preliminary Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "rawDisplayName": "Combined Geo-Scientist Preliminary Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "rawDisplayName": "National Defence Academy and Naval Academy Examination",
+      "rawAuthorityId": "auth_in_upsc",
+      "rawJurisdiction": "CENTRAL",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "rawDisplayName": "Preliminary Eligibility Test (PET)",
+      "rawAuthorityId": "auth_in_up_upsssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "rawDisplayName": "West Bengal Primary Teacher Eligibility Test",
+      "rawAuthorityId": "auth_in_wb_wbbpe",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "rawDisplayName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "rawAuthorityId": "auth_in_wb_wbcssc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "rawDisplayName": "West Bengal Police Constable Recruitment Examination",
+      "rawAuthorityId": "auth_in_wb_wbprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "rawDisplayName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "rawAuthorityId": "auth_in_wb_wbprb",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "rawDisplayName": "WBPSC Clerkship Examination",
+      "rawAuthorityId": "auth_in_wb_wbpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "rawDisplayName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "rawAuthorityId": "auth_in_wb_wbpsc",
+      "rawJurisdiction": "STATE",
+      "hasRawFields": true,
+      "defaultInventionDetected": false
+    }
+  ]
+}

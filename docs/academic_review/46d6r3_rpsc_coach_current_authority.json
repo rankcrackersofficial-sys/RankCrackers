@@ -1,0 +1,118 @@
+{
+  "authoritySchemaVersion": "1.0.0",
+  "draftStatus": "CANONICAL_COACH_CURRENT_AUTHORITY_46D6R3",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) - Coach Cadre",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "baselineAdvertisement": {
+    "advertisementNumber": "Advt. No. 06/2025-26",
+    "officialUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+    "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5"
+  },
+  "currentActiveSpecializations": [
+    {
+      "sport": "Athletics",
+      "officialSportTitle": "Athletics (एथलेटिक्स)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - एथलेटिक्स)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Athletics)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_athletics (Paper-II: Coach Athletics)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Basketball",
+      "officialSportTitle": "Basketball (बास्केटबॉल)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - बास्केटबॉल)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Basketball)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_basketball (Paper-II: Coach Basketball)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Handball",
+      "officialSportTitle": "Handball (हैंडबॉल)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - हैंडबॉल)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Handball)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_handball (Paper-II: Coach Handball)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Kabaddi",
+      "officialSportTitle": "Kabaddi (कबड्डी)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - कबड्डी)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Kabaddi)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_kabaddi (Paper-II: Coach Kabaddi)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Table Tennis",
+      "officialSportTitle": "Table Tennis (टेबल टेनिस)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - टेबल टेनिस)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Table Tennis)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_table_tennis (Paper-II: Coach Table Tennis)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Volleyball",
+      "officialSportTitle": "Volleyball (वॉलीबॉल)",
+      "advtNumber": "Advt. No. 06/2025-26",
+      "officialAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - वॉलीबॉल)",
+      "vacancyEvidence": "Explicit vacancy allocation under Coach Cadre (Post Code / Row: Coach Volleyball)",
+      "coachPaper1Applicability": "rpsc_paper_1_coach (General Awareness & Sports Science)",
+      "coachPaper2Applicability": "rpsc_paper_2_coach_volleyball (Paper-II: Coach Volleyball)",
+      "sourceHash": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "historicalOrUnresolvedSpecializations": [
+    {
+      "sport": "Football",
+      "reason": "Not included in Advt. No. 06/2025-26 vacancy table; only present in historical archives / earlier cycles.",
+      "classification": "HISTORICAL_EXCLUSION"
+    },
+    {
+      "sport": "Gymnastics",
+      "reason": "Not included in Advt. No. 06/2025-26 vacancy table; only present in historical archives / earlier cycles.",
+      "classification": "HISTORICAL_EXCLUSION"
+    },
+    {
+      "sport": "Hockey",
+      "reason": "Not included in Advt. No. 06/2025-26 vacancy table; only present in historical archives / earlier cycles.",
+      "classification": "HISTORICAL_EXCLUSION"
+    },
+    {
+      "sport": "Kho-Kho",
+      "reason": "Not included in Advt. No. 06/2025-26 vacancy table; only present in historical archives / earlier cycles.",
+      "classification": "HISTORICAL_EXCLUSION"
+    },
+    {
+      "sport": "Wrestling",
+      "reason": "Not included in Advt. No. 06/2025-26 vacancy table; only present in historical archives / earlier cycles.",
+      "classification": "HISTORICAL_EXCLUSION"
+    }
+  ],
+  "metrics": {
+    "RPSC_CURRENT_COACH_SPECIALIZATION_COUNT": 6,
+    "CURRENT_COACH_SPECIALIZATION_WITHOUT_2025_AD_LOCATOR_COUNT": 0,
+    "RPSC_HISTORICAL_OR_UNRESOLVED_COACH_SPECIALIZATIONS_COUNT": 5
+  }
+}

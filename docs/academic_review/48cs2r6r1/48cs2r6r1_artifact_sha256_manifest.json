@@ -1,0 +1,45 @@
+{
+  "gate": "48CS2R6R1",
+  "manifestTitle": "Gate 48CS2R6R1 Real Adapter Trust Closure Cryptographic Artifact Manifest",
+  "sealedAt": "2026-09-10T13:36:13.317Z",
+  "sealedBy": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "targetVerdict": "48CS2R6R1_REAL_SOURCE_TRUST_CLOSURE_VERIFIED",
+  "artifactCount": 7,
+  "artifacts": [
+    {
+      "artifactName": "48cs2r6r1_adapter_semantic_audit.json",
+      "byteLength": 1703,
+      "sha256": "75bc6616742b3067e03738a3db7eb7e358c35d7b1f0e7e696e16613bfdd2909e"
+    },
+    {
+      "artifactName": "48cs2r6r1_hardcoded_fact_audit.json",
+      "byteLength": 1978,
+      "sha256": "9260cdd482e779ff49f3fdbc93da601171ec4bd68b2ba2c6f8df701015ef18c2"
+    },
+    {
+      "artifactName": "48cs2r6r1_text_binding_barrier.json",
+      "byteLength": 2282,
+      "sha256": "871cda1afb4ce01e954639e7f4a67dd2a801a8986d4272db486c4ae738f73a79"
+    },
+    {
+      "artifactName": "48cs2r6r1_rule_evidence_integrity.json",
+      "byteLength": 2545,
+      "sha256": "a541ab213c3a313f8f7d5ca63ff269528c3ff8c907fa5685cc6a341db405ad6e"
+    },
+    {
+      "artifactName": "48cs2r6r1_adversarial_tests.json",
+      "byteLength": 1757,
+      "sha256": "db310721e45a55090e64d11461dee05e31bf40eecb83b42c111d4855785bdaac"
+    },
+    {
+      "artifactName": "48cs2r6r1_regression_results.json",
+      "byteLength": 1354,
+      "sha256": "15f5b0f36877a1b89b1fe0ce0f27eafde6371ba0807dbcf4d7285581d16ff1ae"
+    },
+    {
+      "artifactName": "48cs2r6r1_final_report.md",
+      "byteLength": 11092,
+      "sha256": "2b5c2fdc3b67eefe920211e59064e74f6e4f3686a14ecc83a1a38393d5a0496e"
+    }
+  ]
+}

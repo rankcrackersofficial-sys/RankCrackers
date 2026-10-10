@@ -1,0 +1,107 @@
+{
+  "missionId": "afcat",
+  "authorityKey": "auth_in_indian_air_force",
+  "sourceReady": true,
+  "currentCycle": "02/2026",
+  "publicationDate": "2026-05-19",
+  "applicationDates": {
+    "open": "2026-05-20",
+    "close": "2026-06-19"
+  },
+  "examDate": "2026-08-08",
+  "schemeReady": true,
+  "syllabusReady": true,
+  "objectiveOnlineExam": true,
+  "variants": {
+    "branchChoices": [
+      "Flying",
+      "Ground Duty Technical",
+      "Ground Duty Non-Technical"
+    ],
+    "entryMechanisms": [
+      "NCC Special Entry",
+      "GATE Score Entry"
+    ],
+    "decision": "NCC/GATE are entry mechanisms, not year-wise missions"
+  },
+  "pyqSourceState": "OFFICIAL_PYQ_NOT_FOUND_AFTER_EXHAUSTIVE_SEARCH",
+  "answerKeyState": "PYQ_SOURCE_UNRESOLVED",
+  "sources": [
+    {
+      "url": "https://careerairforce.gov.in/notification",
+      "title": "Indian Air Force notifications",
+      "role": "OFFICIAL_LISTING",
+      "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": false,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://careerairforce.gov.in/node/386",
+      "title": "AFCAT 02/2026 notice node",
+      "role": "NOTIFICATION_PAGE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "title": "AFCAT Cycle 02/2026 Notification",
+      "role": "NOTIFICATION_AND_SYLLABUS",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    }
+  ],
+  "attemptLedger": [
+    {
+      "missionId": "afcat",
+      "method": "METHOD_01",
+      "queryOrUrl": "https://careerairforce.gov.in/",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Official IAF Career site verified",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://careerairforce.gov.in/notification"
+      ],
+      "nextAction": "Open notifications"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_02",
+      "queryOrUrl": "https://careerairforce.gov.in/node/386",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Official AFCAT 02/2026 node identified",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf"
+      ],
+      "nextAction": "Follow exact PDF"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_04",
+      "queryOrUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact PDF indexed and content verified; direct local fetch timed out",
+      "httpState": "TIMEOUT",
+      "linksDiscovered": [],
+      "nextAction": "Retain URL evidence and retry with monitored HTTP adapter"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_10",
+      "queryOrUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Direct PowerShell fetch timed out at official host",
+      "httpState": "TLS_CONNECT_TIMEOUT",
+      "linksDiscovered": [],
+      "nextAction": "Do not claim bytes"
+    }
+  ]
+}

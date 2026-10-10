@@ -1,0 +1,257 @@
+{
+  "canaryVersion": "1.0.0-48a6r2",
+  "target": "FIRST_NET_NEW_CANARY_BATCH_DRY_RUN",
+  "executeNow": false,
+  "canaryMissionCount": 5,
+  "canaryMissionIds": [
+    "afcat",
+    "agniveervayu",
+    "army_agniveer_cee",
+    "cbse_ctet",
+    "ibps_crp_rrb_office_assistant"
+  ],
+  "dryRunPayloads": [
+    {
+      "canonicalMissionId": "afcat",
+      "missionRealmsPayload": {
+        "id": "afcat",
+        "displayName": "Air Force Common Admission Test",
+        "authorityId": "auth_in_indian_air_force",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "stateCode": null,
+        "scopeType": "ALL_INDIA",
+        "examFamily": "DEFENCE",
+        "active": true,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "recruitmentsPayload": {
+        "id": "afcat",
+        "title": "Air Force Common Admission Test",
+        "canonicalAuthorityKey": "auth_in_indian_air_force",
+        "region": "IN",
+        "stateCode": null,
+        "jurisdictionLevel": "CENTRAL",
+        "sector": "DEFENCE",
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "studentCatalogPayload": {
+        "id": "afcat",
+        "displayName": "Air Force Common Admission Test",
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "archived": false,
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      }
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "missionRealmsPayload": {
+        "id": "agniveervayu",
+        "displayName": "Indian Air Force Agniveervayu Selection Test",
+        "authorityId": "auth_in_indian_air_force",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "stateCode": null,
+        "scopeType": "ALL_INDIA",
+        "examFamily": "DEFENCE",
+        "active": true,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "recruitmentsPayload": {
+        "id": "agniveervayu",
+        "title": "Indian Air Force Agniveervayu Selection Test",
+        "canonicalAuthorityKey": "auth_in_indian_air_force",
+        "region": "IN",
+        "stateCode": null,
+        "jurisdictionLevel": "CENTRAL",
+        "sector": "DEFENCE",
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "studentCatalogPayload": {
+        "id": "agniveervayu",
+        "displayName": "Indian Air Force Agniveervayu Selection Test",
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "archived": false,
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      }
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "missionRealmsPayload": {
+        "id": "army_agniveer_cee",
+        "displayName": "Indian Army Agniveer Online CEE",
+        "authorityId": "auth_in_indian_army",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "stateCode": null,
+        "scopeType": "ALL_INDIA",
+        "examFamily": "DEFENCE",
+        "active": true,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "recruitmentsPayload": {
+        "id": "army_agniveer_cee",
+        "title": "Indian Army Agniveer Online CEE",
+        "canonicalAuthorityKey": "auth_in_indian_army",
+        "region": "IN",
+        "stateCode": null,
+        "jurisdictionLevel": "CENTRAL",
+        "sector": "DEFENCE",
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "studentCatalogPayload": {
+        "id": "army_agniveer_cee",
+        "displayName": "Indian Army Agniveer Online CEE",
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "archived": false,
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      }
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "missionRealmsPayload": {
+        "id": "cbse_ctet",
+        "displayName": "Central Teacher Eligibility Test",
+        "authorityId": "auth_in_cbse",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "stateCode": null,
+        "scopeType": "ALL_INDIA",
+        "examFamily": "TEACHING_AND_EDUCATION",
+        "active": true,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "recruitmentsPayload": {
+        "id": "cbse_ctet",
+        "title": "Central Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_cbse",
+        "region": "IN",
+        "stateCode": null,
+        "jurisdictionLevel": "CENTRAL",
+        "sector": "TEACHING_AND_EDUCATION",
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "studentCatalogPayload": {
+        "id": "cbse_ctet",
+        "displayName": "Central Teacher Eligibility Test",
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "archived": false,
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      }
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "missionRealmsPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "displayName": "IBPS RRB Office Assistant",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "stateCode": null,
+        "scopeType": "ALL_INDIA",
+        "examFamily": "BANKING_FINANCE",
+        "active": true,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "title": "IBPS RRB Office Assistant",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN",
+        "stateCode": null,
+        "jurisdictionLevel": "CENTRAL",
+        "sector": "BANKING_FINANCE",
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "displayName": "IBPS RRB Office Assistant",
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "archived": false,
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false,
+        "createdAt": "2026-09-10T13:07:44.096Z"
+      }
+    }
+  ],
+  "expectedPostWriteQueries": [
+    {
+      "canonicalMissionId": "afcat",
+      "queryCollection": "mission_realms",
+      "expectedDocId": "afcat",
+      "expectedActive": true,
+      "queryCatalogCollection": "student_mission_catalog",
+      "expectedDiscoverable": false,
+      "expectedPublicationState": "INTERNAL_DRAFT"
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "queryCollection": "mission_realms",
+      "expectedDocId": "agniveervayu",
+      "expectedActive": true,
+      "queryCatalogCollection": "student_mission_catalog",
+      "expectedDiscoverable": false,
+      "expectedPublicationState": "INTERNAL_DRAFT"
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "queryCollection": "mission_realms",
+      "expectedDocId": "army_agniveer_cee",
+      "expectedActive": true,
+      "queryCatalogCollection": "student_mission_catalog",
+      "expectedDiscoverable": false,
+      "expectedPublicationState": "INTERNAL_DRAFT"
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "queryCollection": "mission_realms",
+      "expectedDocId": "cbse_ctet",
+      "expectedActive": true,
+      "queryCatalogCollection": "student_mission_catalog",
+      "expectedDiscoverable": false,
+      "expectedPublicationState": "INTERNAL_DRAFT"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "queryCollection": "mission_realms",
+      "expectedDocId": "ibps_crp_rrb_office_assistant",
+      "expectedActive": true,
+      "queryCatalogCollection": "student_mission_catalog",
+      "expectedDiscoverable": false,
+      "expectedPublicationState": "INTERNAL_DRAFT"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "gate": "47UI5",
+  "ui_states": {
+    "LOADING": {
+      "visual": "CircularProgressIndicator(color: AppColors.gold)",
+      "count_badge": "--",
+      "description": "Never displays 0 during hydration"
+    },
+    "READY_WITH_DATA": {
+      "visual": "Exam lists categorized by authority",
+      "count_badge": "Exact integer count (e.g. 12, 2)",
+      "description": "Full interactive mission cards"
+    },
+    "READY_EMPTY": {
+      "visual": "_buildEmptyState() with search_off icon",
+      "count_badge": "0",
+      "description": "Rendered only when backend query completed with 0 results"
+    },
+    "ERROR_RETRYABLE": {
+      "visual": "_buildErrorState() with cloud_off icon and Retry button",
+      "count_badge": "!",
+      "description": "Allows live reconnect without app restart"
+    }
+  },
+  "metrics": {
+    "LOADING_RENDERED_AS_ZERO_MISSIONS_COUNT": 0,
+    "QUERY_ERROR_RENDERED_AS_ZERO_MISSIONS_COUNT": 0,
+    "MISSION_CATALOG_RECOVERY_REQUIRES_PROCESS_RESTART_COUNT": 0
+  },
+  "status": "PASSED"
+}

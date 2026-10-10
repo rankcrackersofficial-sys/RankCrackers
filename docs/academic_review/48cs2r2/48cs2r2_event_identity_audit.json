@@ -1,0 +1,37 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Deterministic Event and User View Identity Audit",
+  "eventIdentityAlgorithm": {
+    "formula": "evt_${sha16(cycleId + \":\" + documentSha256 + \":\" + eventType + \":\" + semanticEventKey)}",
+    "boundDimensions": [
+      "cycleId (Recruitment cycle identifier)",
+      "documentSha256 (Cryptographic SHA-256 of verified source document)",
+      "eventType (Canonical event type from 18-member taxonomy)",
+      "semanticEventKey (Discriminator for multiple events within one document, e.g. \"advt_body\", \"vacancy_matrix\", \"corrigendum_dates\")"
+    ]
+  },
+  "userViewIdentityAlgorithm": {
+    "formula": "${userId}_${eventId}",
+    "guarantee": "CareerSignalView receives canonical eventId from CareerSignalEvent. It never synthesizes fake IDs using cycleId + Date.now()."
+  },
+  "collisionResistanceProof": {
+    "documentSha": "11223344556677889900aabbccddeeff11223344556677889900aabbccddeeff",
+    "eventA": {
+      "type": "NEW_NOTIFICATION",
+      "key": "notification_body",
+      "eventId": "evt_bfcf950c4aa320ca"
+    },
+    "eventB": {
+      "type": "VACANCY_ANNOUNCED",
+      "key": "revised_vacancy_breakup",
+      "eventId": "evt_6118aa31fb2d87e0"
+    },
+    "collisionDetected": false,
+    "distinctEventIds": true,
+    "reproducibilityDiffCount": 0
+  },
+  "verificationMetrics": {
+    "USER_VIEW_WITH_SYNTHETIC_EVENT_ID_COUNT": 0,
+    "MULTI_EVENT_SAME_DOCUMENT_COLLISION_COUNT": 0
+  }
+}

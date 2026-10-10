@@ -1,0 +1,94 @@
+{
+  "inventory": [
+    {
+      "relativePath": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "byteLength": 12096,
+      "sha256": "4c9c776db9adcea42025f5a2c877d7797bc5d4a0b443ff6e3ec1ce15a30c1748",
+      "extractedRowCount": 53
+    },
+    {
+      "relativePath": "docs/academic_review/47c8/47c8_national_mission_manifest.json",
+      "byteLength": 103673,
+      "sha256": "b1c5a8502472e853542193e6411728179bf459fa5039afb960e4370dabcd4989",
+      "extractedRowCount": 49
+    },
+    {
+      "relativePath": "docs/academic_review/47c8/47c8_national_materialization_readiness.json",
+      "byteLength": 24428,
+      "sha256": "b655d6115924dbe215ea85eef06ac71c764b6bfe549d4ae9de88f35c8955e71d",
+      "extractedRowCount": 49
+    },
+    {
+      "relativePath": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "byteLength": 184069,
+      "sha256": "1ba16f0f2f9e91434e11612025c5842d0bbe81d66f1c771d5b86b88420a91ff8",
+      "extractedRowCount": 153
+    },
+    {
+      "relativePath": "docs/academic_review/47a3r1/47a3r1_materializer_candidate_manifest.json",
+      "byteLength": 193085,
+      "sha256": "f005911a660392ecb884e9fac44e782eb2afcecc9cbdcd954188a98f63046d96",
+      "extractedRowCount": 153
+    },
+    {
+      "relativePath": "docs/academic_review/47a3r1/47a3r1_materialization_readiness.json",
+      "byteLength": 83719,
+      "sha256": "42dfaa81865f28353aed312525919d75f09a3ddc18329232c725f212ee1bd769",
+      "extractedRowCount": 0
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r3/47a4r3_article315_row_specific_evidence_audit.json",
+      "byteLength": 33038,
+      "sha256": "ef9a920b4c112a3b8654ec1326658070e55754ff36760b10825bc6ed06e6a393",
+      "extractedRowCount": 25
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r3/47a4r3_judicial_candidate_reconciliation.json",
+      "byteLength": 6746,
+      "sha256": "658d0a0eccca40e42a6852ac5b469b07f1c26c961640796992f026005f65b532",
+      "extractedRowCount": 8
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r3/47a4r3_tripura_tet_exact_pattern_audit.json",
+      "byteLength": 4461,
+      "sha256": "d2104c4bf8e7d1581d1b632d19037c7f68379b3428b536a8cb7a544bc628f71f",
+      "extractedRowCount": 0
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "byteLength": 2586,
+      "sha256": "a29e4f4c66e7ab0c1b7e97e8b6214293246a4f45d9194424a8d5e3bf5c9e1b7e",
+      "extractedRowCount": 24
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_article315_row_specific_evidence_ledger.json",
+      "byteLength": 20221,
+      "sha256": "f5bda9d0bdf53d1a0ee2257ebd999763b3e9fbfc69d1286a8f5cbf481bdf84e7",
+      "extractedRowCount": 24
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "byteLength": 7459,
+      "sha256": "2c376a9436f2af715547c0d1e2c41569a61bddd3643fa834eb44901baba6cb5c",
+      "extractedRowCount": 8
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_source_provenance_registry.json",
+      "byteLength": 12057,
+      "sha256": "7850ff21054deb2f86b585b0a8c3e315c761fb4884b97cdfe6f80fc8ae60a2e0",
+      "extractedRowCount": 17
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_tripura_tet_pattern_field_audit.json",
+      "byteLength": 3344,
+      "sha256": "f3c17cb75abfbf9056b65c11d6b9ef2e282bc836bff3fb78f6d1c264977f77e1",
+      "extractedRowCount": 0
+    },
+    {
+      "relativePath": "docs/academic_review/48c/48c_tripura_tet_source_recovery.json",
+      "byteLength": 372,
+      "sha256": "5d67099012ab0570c13cc9a7de2e45c1117d043da7aa92e04011b0194b8e2d15",
+      "extractedRowCount": 0
+    }
+  ]
+}

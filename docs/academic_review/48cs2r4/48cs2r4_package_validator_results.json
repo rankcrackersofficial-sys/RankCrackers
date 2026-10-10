@@ -1,0 +1,37 @@
+{
+  "gate": "GATE 48CS2R4",
+  "validator": "validateCareerRulebookPackage",
+  "evaluatedFixtures": [
+    {
+      "fixtureName": "Complete Official Rulebook Package",
+      "validationResult": "ACCEPTED_FOR_MATCHING",
+      "isComplete": true,
+      "amendmentStatus": "CURRENT_CHAIN_VERIFIED",
+      "vacancyCompleteness": "VACANCY_MATRIX_COMPLETE",
+      "semanticHash": "bac8f59cc39c3b421272f1df900b70c50d2f9e89722212784635e548b890229d",
+      "genericFactsExtracted": true
+    },
+    {
+      "fixtureName": "Partial Rulebook Package (Missing Rule Families)",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CURRENT_CHAIN_VERIFIED",
+      "vacancyCompleteness": "VACANCY_MATRIX_COMPLETE",
+      "semanticHash": "4bb445cd8ddbedfd09aed30c5d5db7b901028c2f8eea1fbc4e186215812834d5",
+      "genericFactsExtracted": true
+    },
+    {
+      "fixtureName": "Rejected Rulebook Package (Base notice not SHA_VERIFIED)",
+      "validationResult": "REJECTED_SOURCE_PACKAGE",
+      "isValid": false,
+      "errors": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification must have sourceState SHA_VERIFIED and valid SHA256 (got: URL_FOUND)."
+      ],
+      "genericFactsExtracted": false
+    }
+  ]
+}

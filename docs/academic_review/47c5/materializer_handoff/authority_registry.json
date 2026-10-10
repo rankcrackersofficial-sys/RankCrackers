@@ -1,0 +1,150 @@
+{
+  "authorities": [
+    {
+      "authorityKey": "auth_in_upsc",
+      "authorityName": "Union Public Service Commission",
+      "officialDomains": [
+        "upsc.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_upsc"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ssc",
+      "authorityName": "Staff Selection Commission",
+      "officialDomains": [
+        "ssc.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_ssc"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_cbse",
+      "authorityName": "Central Board of Secondary Education",
+      "officialDomains": [
+        "cbse.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_cbse"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nta",
+      "authorityName": "National Testing Agency",
+      "officialDomains": [
+        "nta.ac.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_nta"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rrb",
+      "authorityName": "Railway Recruitment Boards",
+      "officialDomains": [
+        "rrbcdg.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_rrb"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rpf",
+      "authorityName": "Railway Protection Force",
+      "officialDomains": [
+        "rpf.indianrailways.gov.in",
+        "indianrailways.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_rpf"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ibps",
+      "authorityName": "Institute of Banking Personnel Selection",
+      "officialDomains": [
+        "ibps.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_ibps"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_sbi",
+      "authorityName": "State Bank of India",
+      "officialDomains": [
+        "sbi.co.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_sbi"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rbi",
+      "authorityName": "Reserve Bank of India",
+      "officialDomains": [
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_rbi"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nabard",
+      "authorityName": "NABARD",
+      "officialDomains": [
+        "nabard.org"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_nabard"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_army",
+      "authorityName": "Indian Army",
+      "officialDomains": [
+        "joinindianarmy.nic.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_indian_army"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_navy",
+      "authorityName": "Indian Navy",
+      "officialDomains": [
+        "joinindiannavy.gov.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_indian_navy"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_air_force",
+      "authorityName": "Indian Air Force",
+      "officialDomains": [
+        "careerairforce.gov.in",
+        "iafrecruitment.edcil.co.in"
+      ],
+      "status": "CANONICAL",
+      "aliasesRejected": [
+        "auth_central_indian_air_force"
+      ]
+    }
+  ]
+}

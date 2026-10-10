@@ -1,0 +1,79 @@
+{
+  "bindings": [
+    {
+      "liveMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "upstreamMissionId": "rpsc_school_lecturer",
+      "bindingStatus": "VERIFIED_ALIAS"
+    },
+    {
+      "liveMissionId": "jee_main_2026",
+      "upstreamMissionId": "jee_main_2026",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "neet_(ug)-2027",
+      "upstreamMissionId": "neet_(ug)-2027",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "rpsc_ras_prelims",
+      "upstreamMissionId": "rpsc_ras_prelims",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_cgl",
+      "upstreamMissionId": "ssc_cgl",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_chsl",
+      "upstreamMissionId": "ssc_chsl",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_cpo",
+      "upstreamMissionId": "ssc_cpo",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_gd",
+      "upstreamMissionId": "ssc_gd",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_hindi_translators",
+      "upstreamMissionId": "ssc_hindi_translators",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_je",
+      "upstreamMissionId": "ssc_je",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_mts_havaldar",
+      "upstreamMissionId": "ssc_mts_havaldar",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_selection_post",
+      "upstreamMissionId": "ssc_selection_post",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "ssc_stenographer",
+      "upstreamMissionId": "ssc_stenographer",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "uppsc_pcs_prelims",
+      "upstreamMissionId": "uppsc_pcs_prelims",
+      "bindingStatus": "EXACT_MATCH"
+    },
+    {
+      "liveMissionId": "upsc_cse_prelims",
+      "upstreamMissionId": "upsc_cse_prelims",
+      "bindingStatus": "EXACT_MATCH"
+    }
+  ]
+}

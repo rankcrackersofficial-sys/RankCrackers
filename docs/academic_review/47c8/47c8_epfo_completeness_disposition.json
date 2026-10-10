@@ -1,0 +1,39 @@
+{
+  "family": "EPFO recruitment-test family",
+  "candidates": [
+    {
+      "candidateId": "epfo_enforcement_officer_accounts_officer",
+      "displayName": "EPFO Enforcement Officer / Accounts Officer",
+      "clientAuthority": "Employees Provident Fund Organisation",
+      "canonicalMissionOwner": "EPFO recruitment family",
+      "conductingAuthority": "Union Public Service Commission",
+      "sourceOwner": "Union Public Service Commission",
+      "recurrenceEvidence": [
+        "UPSC EO/AO recruitment-test history",
+        "UPSC Special Advertisement 52/2025 recruitment test scheduled 2026"
+      ],
+      "objectiveExamStructure": "UPSC recruitment test; exact current scheme document requires final binding",
+      "currentOfficialSource": "https://www.upsc.gov.in/recruitment/recruitment-test/notices",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "crossAgency": true
+    },
+    {
+      "candidateId": "epfo_assistant_provident_fund_commissioner",
+      "displayName": "EPFO Assistant Provident Fund Commissioner",
+      "clientAuthority": "Employees Provident Fund Organisation",
+      "canonicalMissionOwner": "EPFO recruitment family",
+      "conductingAuthority": "Union Public Service Commission",
+      "sourceOwner": "Union Public Service Commission",
+      "recurrenceEvidence": [
+        "UPSC APFC recruitment test history",
+        "UPSC Special Advertisement 52/2025 recruitment test scheduled 2026"
+      ],
+      "objectiveExamStructure": "UPSC recruitment test; exact current scheme document requires final binding",
+      "currentOfficialSource": "https://www.upsc.gov.in/recruitment/recruitment-test/notices",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "crossAgency": true
+    }
+  ]
+}

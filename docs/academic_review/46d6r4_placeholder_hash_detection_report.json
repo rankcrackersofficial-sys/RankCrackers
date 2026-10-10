@@ -1,0 +1,26 @@
+{
+  "reportSchemaVersion": "1.0.0",
+  "reportTitle": "AUTOMATED_PLACEHOLDER_AND_SYNTHETIC_HASH_DETECTION_REPORT_46D6R4",
+  "generatedAt": "2026-09-09T19:08:45.000Z",
+  "scannerScript": "tools/academic_factory/detect_placeholder_hashes.js",
+  "detectionRules": [
+    "Rejection of sequential hex sequences (1a2b3c4d, 2b3c4d5e, etc.)",
+    "Rejection of reversed hex sequences (fedcba98, f5e4d3c2, etc.)",
+    "Rejection of stepped arithmetic nibble templates (e8b7c6a5d4f3e2d1)",
+    "Rejection of low-entropy artificial hex patterns (< 10 unique hex chars)",
+    "Rejection of manufactured hash_* prefixes without underlying physical bytes"
+  ],
+  "detectionMetrics": {
+    "46D6R3_FIXTURE_FINDINGS_COUNT": 31,
+    "46D6R4_NEW_ARTIFACTS_FINDINGS_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT_AFTER": 0,
+    "GUESSED_URL_COUNT_AFTER": 0
+  },
+  "artifactAuditStatus": {
+    "46d6r4_real_source_manifest.json": "CLEAN_PASSED",
+    "46d6r4_download_and_hash_evidence.json": "CLEAN_PASSED",
+    "46d6r4_rpsc_variant_source_matrix.json": "CLEAN_PASSED",
+    "46d6r4_corrigendum_real_text_verification.json": "CLEAN_PASSED",
+    "46d6r4_coach_real_source_binding.json": "CLEAN_PASSED"
+  }
+}

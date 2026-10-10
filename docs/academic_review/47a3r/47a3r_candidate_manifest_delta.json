@@ -1,0 +1,817 @@
+{
+  "registryCode": "RC_47A3R_CANDIDATE_MANIFEST_DELTA",
+  "generatedAt": "2026-09-10T06:27:19.500Z",
+  "baseManifestVersion": "47A3",
+  "targetManifestVersion": "47A3R",
+  "metrics": {
+    "CANDIDATE_MISSION_COUNT": 153,
+    "MISSIONS_WITH_APPLIED_DELTAS_COUNT": 54,
+    "CENTRAL_AUTHORITY_NORMALIZATIONS_COUNT": 4,
+    "DUPLICATE_OWNERSHIP_REBUILT_ROWS": 11,
+    "DELHI_POLICE_SI_ACTION": "RESOLVED_TO_CENTRAL_MISSION_SSC_CPO",
+    "DELHI_POLICE_CONSTABLE_ACTION": "NORMALIZED_CONDUCTING_AGENCY_AUTH_IN_SSC",
+    "LADAKH_SELECTION_POST_ACTION": "OWNERSHIP_SEPARATION_SSC_OWNER_LADAKH_CLIENT"
+  },
+  "manifestDeltas": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "regionCode": "UP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "regionCode": "UP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "regionCode": "UP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "1 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "regionCode": "UP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "regionCode": "UP",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "1 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        },
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "regionCode": "UK",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "regionCode": "UK",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "regionCode": "HP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "regionCode": "PB",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "regionCode": "PB",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "regionCode": "PB",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "regionCode": "HR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "regionCode": "HR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "regionCode": "HR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "regionCode": "HR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "regionCode": "LA",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "conductingCentralAgency",
+          "before": "auth_central_ssc",
+          "after": "auth_in_ssc",
+          "reason": "Normalized central authority ID to canonical auth_in_* standard."
+        },
+        {
+          "field": "authorityOwnershipSeparation",
+          "before": "canonicalAuthorityKey = auth_in_la_admin, conductingCentralAgency = auth_central_ssc",
+          "after": "canonicalExamOwner = auth_in_ssc, clientAuthorityKey = auth_in_la_admin, regionalDiscovery = LA",
+          "reason": "Staff Selection Commission (NWR) is canonical exam owner and conducting authority; UT of Ladakh Administration is client/beneficiary authority."
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "regionCode": "CH",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "regionCode": "DL",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "regionCode": "DL",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "regionCode": "DL",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "conductingCentralAgency",
+          "before": "auth_central_ssc",
+          "after": "auth_in_ssc",
+          "reason": "Normalized central authority ID to canonical auth_in_* standard."
+        },
+        {
+          "field": "authorityOwnershipResolution",
+          "before": "conductingCentralAgency = auth_central_ssc, canonicalAuthorityKey = auth_in_dl_delpol",
+          "after": "conductingAuthorityKey = auth_in_ssc, clientAuthorityKey = auth_in_dl_delpol",
+          "materializeDuplicateMission": true,
+          "reason": "Constable (Executive) Male and Female in Delhi Police is a dedicated examination conducted pan-India by Staff Selection Commission on behalf of Delhi Police."
+        }
+      ]
+    },
+    {
+      "missionId": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "regionCode": "DL",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "conductingCentralAgency",
+          "before": "auth_central_ssc",
+          "after": "auth_in_ssc",
+          "reason": "Normalized central authority ID to canonical auth_in_* standard."
+        },
+        {
+          "field": "canonicalMissionResolution",
+          "before": "delhi_police_si (independent candidate mission under auth_in_dl_delpol)",
+          "after": "ssc_cpo (canonical mission under auth_in_ssc; regional discovery pointer for DL)",
+          "materializeDuplicateMission": false,
+          "reason": "Sub-Inspector in Delhi Police is conducted centrally by SSC under SSC CPO examination. Delhi Police SI is resolved to canonicalMissionId 'ssc_cpo' to prevent duplicate mission materialization in Mission Realm."
+        }
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "regionCode": "RJ",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "regionCode": "RJ",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "regionCode": "RJ",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "1 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "regionCode": "RJ",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        },
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "regionCode": "RJ",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "regionCode": "MP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "regionCode": "MP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "regionCode": "CG",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "regionCode": "GJ",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "regionCode": "MH",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "regionCode": "MH",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "regionCode": "MH",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "regionCode": "BR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "regionCode": "BR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "regionCode": "BR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "regionCode": "BR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "regionCode": "BR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "regionCode": "BR",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "1 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        },
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "regionCode": "JH",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "regionCode": "OD",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "regionCode": "OD",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "regionCode": "WB",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "regionCode": "WB",
+      "deltaCount": 2,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "1 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        },
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_EVIDENCE_READY",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "regionCode": "WB",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "regionCode": "AP",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "regionCode": "TG",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "regionCode": "TG",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "regionCode": "KA",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "regionCode": "TN",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "regionCode": "TN",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "regionCode": "TN",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    },
+    {
+      "missionId": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "regionCode": "AS",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "numericQualificationEvidence",
+          "before": "2 numerical claims pointing to authority root portal",
+          "after": "Numerical certification withdrawn (countValue = null, OFFICIAL_LISTING_ONLY_COUNT_UNVERIFIED). Major status preserved via statutory/cadre qualitative evidence.",
+          "reason": "Zero-fabrication compliance: Exact physical notification or gazette containing verified headcount not isolated on sovereign domain."
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "regionCode": "TR",
+      "deltaCount": 1,
+      "deltas": [
+        {
+          "field": "variantStatus",
+          "before": "VARIANT_REVIEW_REQUIRED",
+          "after": "VARIANT_REVIEW_REQUIRED",
+          "reason": "Generic copied variant template removed; mission-specific multi-stream taxonomy pending founder review."
+        }
+      ]
+    }
+  ]
+}

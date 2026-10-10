@@ -1,0 +1,17 @@
+{
+  "hardcoded_runtime_mission_authority_count": 0,
+  "mission_self_authorization_count": 0,
+  "mission_id_case_or_punctuation_mutation_count": 0,
+  "snapshot_failure_to_dashboard_count": 0,
+  "snapshot_structure": "MissionAccessSnapshot",
+  "snapshot_fields": [
+    "snapshotReady",
+    "missionIdsExact",
+    "missionById",
+    "capturedAt",
+    "sourceState",
+    "errorState"
+  ],
+  "fail_closed_route_destination": "/mission-realm",
+  "audit_status": "PASS"
+}

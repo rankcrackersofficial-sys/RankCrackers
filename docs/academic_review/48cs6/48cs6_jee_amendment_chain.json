@@ -1,0 +1,32 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "productionWrites": 0,
+  "scope": [
+    "jee_main_2026",
+    "ssc_cgl"
+  ],
+  "cycleId": "JEE-MAIN-2026",
+  "officialSurface": "https://jeemain.nta.nic.in/documents/",
+  "auditedThrough": "2026-09-10",
+  "documentsReviewed": [
+    "JEE_IB_2026",
+    "JEE_S1_APPLICATION",
+    "JEE_S1_CORRECTION",
+    "JEE_S2_APPLICATION",
+    "JEE_S2_CORRECTION",
+    "JEE_S2_FINAL_ANSWER_KEY",
+    "JEE_S2_REOPENING",
+    "JEE_S2_RESULT_NOTICE"
+  ],
+  "amendmentSearchStatus": "CHAIN_PARTIAL",
+  "reason": "Five recovered notice/result PDFs are image-only and are byte/SHA authenticated but not locally text-extracted and hash/page-bound. CURRENT_CHAIN_VERIFIED is withheld.",
+  "imageOnlyTextBindingGaps": [
+    "JEE_S1_APPLICATION",
+    "JEE_S1_CORRECTION",
+    "JEE_S2_APPLICATION",
+    "JEE_S2_CORRECTION",
+    "JEE_S2_REOPENING",
+    "JEE_S2_RESULT_NOTICE"
+  ]
+}

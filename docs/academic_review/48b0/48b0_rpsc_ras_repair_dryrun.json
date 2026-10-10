@@ -1,0 +1,97 @@
+{
+  "missionId": "rpsc_ras_prelims",
+  "action": "UPDATE_METADATA",
+  "targetProjections": {
+    "student_mission_catalog": {
+      "path": "student_mission_catalog/rpsc_ras_prelims",
+      "before": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "examScope": "STATE_ELIGIBLE",
+        "examFamily": null,
+        "examCategory": "civil_services"
+      },
+      "after": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "state": "Rajasthan",
+        "examScope": "STATE_SPECIFIC",
+        "examFamily": "CIVIL_SERVICES",
+        "examCategory": "civil_services",
+        "missionType": "civil_services",
+        "canonicalAuthorityKey": "auth_in_rj_rpsc",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission"
+      },
+      "fieldsModified": [
+        "examScope",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "missionType"
+      ]
+    },
+    "mission_realms": {
+      "path": "mission_realms/rpsc_ras_prelims",
+      "before": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "examCategory": "civil_services",
+        "examScope": null,
+        "examFamily": null
+      },
+      "after": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "examScope": "STATE_SPECIFIC",
+        "examFamily": "CIVIL_SERVICES",
+        "examCategory": "civil_services",
+        "canonicalAuthorityKey": "auth_in_rj_rpsc",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "studentHierarchyPath": "STATE/RJ/RPSC/rpsc_ras_prelims"
+      },
+      "fieldsModified": [
+        "examScope",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "studentHierarchyPath"
+      ]
+    },
+    "recruitments": {
+      "path": "recruitments/rpsc_ras_prelims",
+      "before": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "examScope": "STATE_ELIGIBLE",
+        "examFamily": null,
+        "examCategory": "civil_services"
+      },
+      "after": {
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "examScope": "STATE_SPECIFIC",
+        "examFamily": "CIVIL_SERVICES",
+        "examCategory": "civil_services",
+        "canonicalAuthorityKey": "auth_in_rj_rpsc",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "studentHierarchyPath": "STATE/RJ/RPSC/rpsc_ras_prelims"
+      },
+      "fieldsModified": [
+        "examScope",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "studentHierarchyPath"
+      ]
+    }
+  },
+  "complianceVerification": {
+    "jurisdictionType": "STATE",
+    "regionCode": "RJ",
+    "scopeType": "STATE_SPECIFIC",
+    "examFamily": "CIVIL_SERVICES"
+  }
+}

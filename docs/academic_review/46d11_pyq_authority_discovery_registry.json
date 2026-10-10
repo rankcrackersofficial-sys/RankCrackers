@@ -1,0 +1,209 @@
+{
+  "gate": "RC_46D10_SOURCE_TRUTH_AND_PRODUCTION_CERTIFICATION_REPAIR_46D11",
+  "generatedAt": "2026-09-09T15:27:05.106Z",
+  "summary": {
+    "OFFICIAL_PYQ_FOUND_COUNT": 15,
+    "OFFICIAL_PYQ_ACQUIRED_COUNT": 0,
+    "OFFICIAL_ANSWER_KEY_FOUND_COUNT": 15,
+    "TOTAL_MISSIONS_AUDITED": 15
+  },
+  "discoveryRegistry": [
+    {
+      "missionId": "jee_main_2026",
+      "authority": "NTA",
+      "officialPortalUrl": "https://jeemain.nta.nic.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "paperDetails": "B.E./B.Tech Session 1 & 2 Question Papers with Final Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authority": "NTA",
+      "officialPortalUrl": "https://neet.nta.nic.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2024",
+        "2025"
+      ],
+      "paperDetails": "NEET UG Question Paper Booklets (Codes Q, R, S, T) & Final Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authority": "RPSC",
+      "officialPortalUrl": "https://rpsc.rajasthan.gov.in/previous-question-papers",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2022",
+        "2024"
+      ],
+      "paperDetails": "School Lecturer Paper-I (General Studies) & Paper-II Subject Papers with Model Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "authority": "RPSC",
+      "officialPortalUrl": "https://rpsc.rajasthan.gov.in/previous-question-papers",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "RAS/RTS Comb. Comp. Prelims GK & GS Question Paper & Final Answer Key",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "authority": "UPSC",
+      "officialPortalUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "paperDetails": "Civil Services Prelims General Studies Paper-I & Paper-II (CSAT) with Official Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "authority": "UPPSC",
+      "officialPortalUrl": "https://uppsc.up.nic.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Combined State/Upper Subordinate Prelims Paper-I & Paper-II with Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Combined Graduate Level Tier-I & Tier-II Master Question Papers & Response Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_je",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Junior Engineer Paper-I & Paper-II Technical Question Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Selection Post Phase-XI / Phase-XII Level-wise Question Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "CHSL Tier-I & Tier-II Master Question Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Stenographer Grade C & D CBE Master Question Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "JHT Paper-I CBE & Paper-II Descriptive Papers with Answer Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Multi Tasking Staff & Havaldar Session I & II Question Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Sub-Inspector in Delhi Police & CAPFs Paper-I & Paper-II Papers & Keys",
+      "acquiredInLocalRepo": false
+    },
+    {
+      "missionId": "ssc_gd",
+      "authority": "SSC",
+      "officialPortalUrl": "https://ssc.gov.in",
+      "pyqStatus": "OFFICIAL_PYQ_FOUND",
+      "answerKeyStatus": "OFFICIAL_ANSWER_KEY_FOUND",
+      "discoveredYears": [
+        "2023",
+        "2024"
+      ],
+      "paperDetails": "Constable (GD) CBE Master Question Papers with Answer Keys",
+      "acquiredInLocalRepo": false
+    }
+  ]
+}

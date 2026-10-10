@@ -1,0 +1,71 @@
+{
+  "unverifiedRuleFactCount": 0,
+  "rows": [
+    {
+      "eventId": "SSC-CGL26-NOTICE",
+      "missionId": "ssc_cgl",
+      "eventType": "NEW_NOTIFICATION",
+      "eventDate": "2026-05-21",
+      "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf"
+    },
+    {
+      "eventId": "SSC-CGL26-OPEN",
+      "missionId": "ssc_cgl",
+      "eventType": "APPLICATION_OPEN",
+      "eventDate": "2026-05-21",
+      "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf"
+    },
+    {
+      "eventId": "SSC-CGL26-DEADLINE-CHANGED",
+      "missionId": "ssc_cgl",
+      "eventType": "APPLICATION_DEADLINE_CHANGED",
+      "eventDate": "2026-06-23",
+      "newDeadline": "2026-06-25 23:00",
+      "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/CGLE_Reopen_23062026.pdf"
+    },
+    {
+      "eventId": "SSC-CGL26-EXAM",
+      "missionId": "ssc_cgl",
+      "eventType": "EXAM_DATE_ANNOUNCED",
+      "eventDate": "2026-05-21",
+      "value": "Tier I August-September 2026; Tier II December 2026 (tentative)",
+      "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf"
+    },
+    {
+      "eventId": "JEE26-NOTICE",
+      "missionId": "jee_main_2026",
+      "eventType": "NEW_NOTIFICATION",
+      "eventDate": "2025-11-01",
+      "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf"
+    },
+    {
+      "eventId": "JEE26-S1-OPEN",
+      "missionId": "jee_main_2026",
+      "eventType": "APPLICATION_OPEN",
+      "eventDate": "2025-10-31",
+      "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf"
+    },
+    {
+      "eventId": "JEE26-EXAM-DATES",
+      "missionId": "jee_main_2026",
+      "eventType": "EXAM_DATE_ANNOUNCED",
+      "eventDate": "2025-11-01",
+      "value": "21-30 Jan and 02-09 Apr 2026",
+      "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf"
+    },
+    {
+      "eventId": "JEE26-S2-ANSWER-KEY",
+      "missionId": "jee_main_2026",
+      "eventType": "ANSWER_KEY_RELEASED",
+      "eventDate": null,
+      "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf"
+    },
+    {
+      "eventId": "JEE26-S2-RESULT",
+      "missionId": "jee_main_2026",
+      "eventType": "RESULT_DECLARED",
+      "eventDate": null,
+      "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420809492136.pdf"
+    }
+  ]
+}

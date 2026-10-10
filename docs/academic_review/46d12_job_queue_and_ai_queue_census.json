@@ -1,0 +1,110 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.699Z",
+  "summary": {
+    "TOTAL_EXISTING_QUEUE_DOCUMENTS": 575,
+    "AI_QUEUE_DOCUMENT_COUNT": 575,
+    "ACTIVE_ACADEMIC_JOB_COUNT": 0,
+    "QUEUE_QUERY_FAILURE_COUNT": 0,
+    "S2_JOB_ENQUEUE_COUNT_THIS_GATE": 0
+  },
+  "queues": {
+    "ai_queue": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 575,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {
+        "reviewing": 166,
+        "approved": 56,
+        "leased": 1,
+        "waitingDependency": 180,
+        "queued": 3,
+        "failed": 109,
+        "completed": 57,
+        "processing": 3
+      }
+    },
+    "s2_jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "academic_jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "extraction_jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "academic_factory_jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "factory_jobs": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    },
+    "academic_batches": {
+      "exists": true,
+      "queryStatus": "SUCCESS",
+      "total": 0,
+      "active": 0,
+      "queued": 0,
+      "leased": 0,
+      "failed": 0,
+      "completed": 0,
+      "statusCounts": {}
+    }
+  }
+}

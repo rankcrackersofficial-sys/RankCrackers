@@ -1,0 +1,18 @@
+{
+  "missionId": "ssc_cgl",
+  "cycleId": "SSC-CGL-2026",
+  "baseNoticeFinding": {
+    "verifiedApproximateTotal": 12256,
+    "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+    "page": 5,
+    "section": "3.1",
+    "textMeaning": "Commission was still collecting vacancies and promised a later post-wise/category-wise publication."
+  },
+  "officialVacancySurface": "https://ssc.gov.in/for-candidates/cgl-exam/s40d16nackd16h0",
+  "tentativeVacancyTableFound": false,
+  "finalVacancyTableFound": false,
+  "postWiseCategoryWiseMatrixFound": false,
+  "vacancyMatrixStatus": "UNRESOLVED",
+  "verifiedAbsenceClaimed": false,
+  "unverifiedVacancyCount": 0
+}

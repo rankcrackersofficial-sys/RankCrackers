@@ -1,0 +1,36 @@
+{
+  "auditCode": "RC_47A3_ZERO_FABRICATION_MEASURED_AUDIT",
+  "scannedAt": "2026-09-10T05:53:04.845Z",
+  "filesScannedCount": 14,
+  "filesScannedList": [
+    "47a3_authority_registry.json",
+    "47a3_authority_count_reconciliation.json",
+    "47a3_authority_reference_registry.json",
+    "47a3_exact_source_document_registry.json",
+    "47a3_latest_effective_source_registry.json",
+    "47a3_major_exam_qualification_evidence_registry.json",
+    "47a3_major_exam_qualification_ledger.json",
+    "47a3_pyq_mission_level_registry.json",
+    "47a3_pyq_exact_child_evidence_registry.json",
+    "47a3_duplicate_ownership_registry.json",
+    "47a3_variant_registry.json",
+    "47a3_readiness_dependency_ledger.json",
+    "47a3_candidate_manifest.json",
+    "47a3_47b_contract_handoff.json"
+  ],
+  "measuredViolations": {
+    "SYNTHETIC_PAPER_URL_COUNT": 0,
+    "SYNTHETIC_KEY_URL_COUNT": 0,
+    "FALLBACK_PYQ_YEAR_COUNT": 0,
+    "GENERIC_DUPLICATE_CANDIDATE_ID_COUNT": 0,
+    "GENERIC_OVERLAP_TITLE_COUNT": 0,
+    "OBJECT_OBJECT_STRING_COUNT": 0,
+    "GENERIC_GOV_IN_PLACEHOLDER_COUNT": 0,
+    "SYNTHETIC_PAPER_AS_VARIANT_COUNT": 0,
+    "HARDCODED_ACADEMIC_START_COUNT": 0,
+    "FAKE_BYTE_CLAIM_COUNT": 0,
+    "MEASURED_ZERO_FABRICATION_VIOLATION_COUNT": 0
+  },
+  "auditPass": true,
+  "auditVerdict": "PASSED_STRICT_ZERO_FABRICATION"
+}

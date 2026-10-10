@@ -1,0 +1,31 @@
+{
+  "manifestSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_SOURCE_MANIFEST_46D7",
+  "missionFamilyId": "uppsc_pcs_prelims",
+  "authority": "Uttar Pradesh Public Service Commission (UPPSC), Prayagraj",
+  "generatedAt": "2026-09-09T19:54:00.000Z",
+  "summary": {
+    "TOTAL_OFFICIAL_DOCUMENTS": 1,
+    "BYTE_VERIFIED_COUNT": 0,
+    "PORTAL_TEXT_VERIFIED_COUNT": 1,
+    "PORTAL_REGISTRY_VERIFIED_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "sources": [
+    {
+      "documentAuthorityKey": "doc_uppsc_pcs_2026_notification",
+      "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+      "title": "Combined State / Upper Subordinate Services (PCS) Examination, 2026 Detailed Advertisement (Advt. No. A-1/E-1/2026)",
+      "officialListingPageUrl": "https://uppsc.up.nic.in/AllNotifications.aspx",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "publicationDate": "2026-01-01",
+      "contentLocator": "Appendix-4 (Plan of Examination) & Appendix-5 (Syllabus for Preliminary Examination: Paper-I & Paper-II)",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_uppsc_pcs_2026_prelims_syllabus_authority"
+    }
+  ]
+}

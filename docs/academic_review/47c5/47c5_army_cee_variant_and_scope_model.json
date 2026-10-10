@@ -1,0 +1,60 @@
+{
+  "missionId": "army_agniveer_cee",
+  "variants": [
+    {
+      "variantId": "general_duty",
+      "displayName": "Agniveer General Duty",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+    },
+    {
+      "variantId": "technical",
+      "displayName": "Agniveer Technical",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+    },
+    {
+      "variantId": "office_assistant_skt",
+      "displayName": "Agniveer Office Assistant / Store Keeper Technical",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+    },
+    {
+      "variantId": "tradesman",
+      "displayName": "Agniveer Tradesman",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+    },
+    {
+      "variantId": "women_military_police",
+      "displayName": "Agniveer Women Military Police",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+    }
+  ],
+  "variantModelReady": false,
+  "reason": "Current PIB evidence proves category names but does not distinguish Tradesman 8th versus 10th; exact Army governing document remains required.",
+  "regularCadreDecision": "REVIEW_SEPARATELY; do not place regular cadre under Agniveer mission without exact mission qualification.",
+  "sourceReadiness": {
+    "officialRecruitmentSurfaceReady": true,
+    "currentCeeEventReady": true,
+    "exactNotificationDocumentReady": false,
+    "exactSyllabusReady": false,
+    "examSchemeReady": true
+  },
+  "sources": [
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "title": "Indian Army Online CEE registration 2026-27",
+      "verification": "OFFICIAL_MOD_PIB_EVENT_VERIFIED"
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48",
+      "title": "Army Online CEE June 2026 schedule"
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48",
+      "title": "Army CEE categories and results"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "manifestCode": "RC_47B5_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T06:57:28.296Z",
+  "totalArtifactsTracked": 21,
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_input_handoff_hash_verification.json",
+      "byteLength": 7404,
+      "sha256": "8365c942889fde9e1fe2a002ccfb308c73b84eb38825781ec9be03ad98454b0a"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_materializer_source_identity.json",
+      "byteLength": 764,
+      "sha256": "c3b3fe0662e5ff05d8c38596cc58b0c41491d2e094075ce0097bd8abde2d0903"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_47b4_regression_test.json",
+      "byteLength": 353,
+      "sha256": "eb65dfed5e1b3ad7295f9075a0b2c2bb5e54c802b0e6aceadcfa48120748f426"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_production_readonly_snapshot.json",
+      "byteLength": 2989,
+      "sha256": "ea964494b044e8eb0e0deefcbde0a12f05ef660bfa15725352d9d3d18cd52ea6"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_existing_mission_union_census.json",
+      "byteLength": 898,
+      "sha256": "ca08727b77ac2bc1c85064c23af2cdc18a83f677e6200682d844437dcac8cf6a"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_candidate_existing_identity_diff.json",
+      "byteLength": 27845,
+      "sha256": "3aed60a5acea4d4bc104f72097cf8cf0c72ed8154526c8a3f2b087a36e980529"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_canonical_collision_audit.json",
+      "byteLength": 778,
+      "sha256": "03965a32906c5a664a81c553d88f0b6717b3e0bea79705e2a0e39a43c161a0c7"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_full_authority_registry_validation.json",
+      "byteLength": 285,
+      "sha256": "c77f5611c1d3498d892196a94d16ced572d0f24e397b00f0bedc51b798637c35"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_region_jurisdiction_validation.json",
+      "byteLength": 389,
+      "sha256": "bd036a29c00011a3b4d3528ee3f6510cdefa7749ed0409e34e298da0149677ca"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_candidate_manifest_validate_only.json",
+      "byteLength": 28827,
+      "sha256": "57edbace34ba762636c014e7df3cdb7ea4832763c4ca9ab3206e7393b248ff16"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_shell_selection_readiness_ledger.json",
+      "byteLength": 29763,
+      "sha256": "8394d835c0bdac9041a83469895291c7574d266ffca1f23df2940702be838daf"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_real_snapshot_three_projection_dryrun.json",
+      "byteLength": 77575,
+      "sha256": "cd79eee03052f36fd3a40a69175f7ca19456345bcddb080603ea585329cdda36"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_governance_field_safety.json",
+      "byteLength": 187,
+      "sha256": "8c1219b661fbd044a92e28681aee30a670469559011f61a5fd96ae5f7615c8af"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_immutable_pilot_safety.json",
+      "byteLength": 300,
+      "sha256": "3691464f5fd05423e70bdac7f83cf868555dc1e520ccc1a3ed6053e079e19963"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_student_consumer_compatibility.json",
+      "byteLength": 610,
+      "sha256": "f5c5ca1e7d6f241e1dc06efdf0d7583951560b10a5eb85838ddc56ab421545b5"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_founder_consumer_compatibility.json",
+      "byteLength": 557,
+      "sha256": "40974a30a9bae1f5186ba3081b0a36cffd1f13f5b77c23196a46a9e21a204ca1"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_source_monitor_interface_compatibility.json",
+      "byteLength": 332,
+      "sha256": "456d908a53412e1bfdb26c5c836e2c762086fb57cfc9d93df537ff6a9470cc4b"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_real_snapshot_idempotency.json",
+      "byteLength": 669,
+      "sha256": "0acb97787e574ab490e9aa0537f9529750d9f2ed5bacc68c011550ff1bc57aee"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_apply_rejection_test.json",
+      "byteLength": 309,
+      "sha256": "cb10b12a93533544ccde33004160238073596dc3445b7efb3b34a4478ae4919d"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_artifact_sha256_manifest.json",
+      "byteLength": 0,
+      "sha256": "PENDING_GENERATION"
+    },
+    {
+      "relativePath": "docs/academic_review/47b5/47b5_final_report.md",
+      "byteLength": 0,
+      "sha256": "PENDING_GENERATION"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "auditCode": "RC_47C8V_AFCAT_CURRENT_PORTAL_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.297Z",
+  "officialNotificationEvidence": {
+    "notificationTitle": "Indian Air Force AFCAT 02/2026 Official Notification",
+    "notificationClause": "Applications are to be filled online ONLY at https://afcat.edcil.co.in",
+    "officialApplicationPortalUrl": "https://afcat.edcil.co.in"
+  },
+  "metrics": {
+    "AFCAT_CURRENT_APPLICATION_PORTAL": "https://afcat.edcil.co.in",
+    "AFCAT_REGISTRY_CURRENT_PORTAL_MATCH": "YES",
+    "AFCAT_CURRENT_PORTAL_REGISTERED_COUNT": 1,
+    "SUPERSEDED_PORTAL_RETAINED_COUNT": 0
+  },
+  "portalClassifications": [
+    {
+      "domain": "careerairforce.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "role": "Primary sovereign Indian Air Force portal and notification publisher",
+      "inRegistry": true
+    },
+    {
+      "domain": "afcat.edcil.co.in",
+      "classification": "CURRENT_OFFICIAL_PORTAL",
+      "role": "Active live online registration portal designated in current 02/2026 cycle",
+      "inRegistry": true
+    },
+    {
+      "domain": "iafrecruitment.edcil.co.in",
+      "classification": "AUTHORIZED_RECRUITMENT_PLATFORM",
+      "role": "EdCIL IAF recruitment landing and document hosting engine",
+      "inRegistry": true
+    },
+    {
+      "domain": "afcat.cdac.in",
+      "classification": "HISTORICAL_OFFICIAL_PORTAL",
+      "role": "Legacy C-DAC recruitment portal; superseded for application processing in current 02/2026 cycle",
+      "inRegistry": false
+    }
+  ],
+  "reconciliationStatus": "RECONCILED_CLEAN",
+  "verdict": "PASS"
+}

@@ -1,0 +1,26 @@
+{
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+  "verifiedFacts": [
+    "Advertisement listing date 17 Jul 2025",
+    "Amendment press note date 13 Aug 2025",
+    "Press note states 3,225 posts",
+    "Application window 14 Aug–12 Sep 2025"
+  ],
+  "identityContradiction": {
+    "url": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+    "priorLabel": "Advt 06/2025-26",
+    "observedDocumentDate": "2022-04-28",
+    "observedAgeReferenceDate": "2023-01-01",
+    "decision": "REJECTED_AS_CURRENT_CYCLE_EVIDENCE"
+  },
+  "vacancyMatrix": "UNKNOWN",
+  "eligibilityRules": "UNKNOWN",
+  "reservationRules": "UNKNOWN",
+  "exactCurrentAdvertisementUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/9C26ACB4C6014924AF100B4D7FE67C27.pdf",
+  "exactDocumentResolved": true,
+  "bytesAcquired": true,
+  "byteLength": 8257902,
+  "sha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+  "extractionState": "SCAN_ONLY_TEXT_UNRESOLVED"
+}

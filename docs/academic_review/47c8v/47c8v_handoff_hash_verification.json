@@ -1,0 +1,70 @@
+{
+  "verificationCode": "RC_47C8V_HANDOFF_HASH_VERIFICATION",
+  "executedAt": "2026-09-10T08:12:42.284Z",
+  "verifierAgent": "AGENT-2 — INDEPENDENT NATIONAL FORENSIC VERIFICATION LANE",
+  "handoffManifestPath": "docs/academic_review/47c8/47c8_materializer_handoff_sha256_manifest.json",
+  "metrics": {
+    "HANDOFF_FILE_COUNT": 6,
+    "HANDOFF_HASH_VERIFIED_COUNT": 6,
+    "HANDOFF_HASH_MISMATCH_COUNT": 0,
+    "HANDOFF_MISSING_FILE_COUNT": 0,
+    "PENDING_GENERATION_HASH_COUNT": 0
+  },
+  "files": [
+    {
+      "relativePath": "materializer_handoff/authority_registry.json",
+      "byteLengthReported": 7114,
+      "byteLengthActual": 7114,
+      "sha256Reported": "4adbded1044043133c210c8885ce938d78e5e6f07729050b8eaad5dec3dc49fd",
+      "sha256Actual": "4adbded1044043133c210c8885ce938d78e5e6f07729050b8eaad5dec3dc49fd",
+      "match": true,
+      "status": "VERIFIED"
+    },
+    {
+      "relativePath": "materializer_handoff/national_materialization_readiness.json",
+      "byteLengthReported": 24428,
+      "byteLengthActual": 24428,
+      "sha256Reported": "b655d6115924dbe215ea85eef06ac71c764b6bfe549d4ae9de88f35c8955e71d",
+      "sha256Actual": "b655d6115924dbe215ea85eef06ac71c764b6bfe549d4ae9de88f35c8955e71d",
+      "match": true,
+      "status": "VERIFIED"
+    },
+    {
+      "relativePath": "materializer_handoff/national_mission_manifest.json",
+      "byteLengthReported": 103673,
+      "byteLengthActual": 103673,
+      "sha256Reported": "b1c5a8502472e853542193e6411728179bf459fa5039afb960e4370dabcd4989",
+      "sha256Actual": "b1c5a8502472e853542193e6411728179bf459fa5039afb960e4370dabcd4989",
+      "match": true,
+      "status": "VERIFIED"
+    },
+    {
+      "relativePath": "materializer_handoff/nta_document_bindings.json",
+      "byteLengthReported": 1367,
+      "byteLengthActual": 1367,
+      "sha256Reported": "1b14b0f02eda5526d5c6ec691c327e1bf7aa8f6e00132f1d5c91930fcc84f0b6",
+      "sha256Actual": "1b14b0f02eda5526d5c6ec691c327e1bf7aa8f6e00132f1d5c91930fcc84f0b6",
+      "match": true,
+      "status": "VERIFIED"
+    },
+    {
+      "relativePath": "materializer_handoff/source_platform_classification_registry.json",
+      "byteLengthReported": 1682,
+      "byteLengthActual": 1682,
+      "sha256Reported": "35d0ac134306782098fe55a17c645fc0f56fd706e39c4458b00ab2a797664298",
+      "sha256Actual": "35d0ac134306782098fe55a17c645fc0f56fd706e39c4458b00ab2a797664298",
+      "match": true,
+      "status": "VERIFIED"
+    },
+    {
+      "relativePath": "materializer_handoff/state_national_overlap_reconciliation.json",
+      "byteLengthReported": 1324,
+      "byteLengthActual": 1324,
+      "sha256Reported": "d865d456b1879b04f74816c01398cec134e409ee2ebe000d283a28b8abd217d4",
+      "sha256Actual": "d865d456b1879b04f74816c01398cec134e409ee2ebe000d283a28b8abd217d4",
+      "match": true,
+      "status": "VERIFIED"
+    }
+  ],
+  "verdict": "PASS"
+}

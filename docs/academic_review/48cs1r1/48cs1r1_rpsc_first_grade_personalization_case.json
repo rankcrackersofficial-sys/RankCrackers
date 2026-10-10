@@ -1,0 +1,19 @@
+{
+  "exampleMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "realVacancyNumbersUsed": false,
+  "syntheticProfiles": {
+    "shapeA": {
+      "description": "Clearly eligible synthetic candidate",
+      "expectedResult": "ELIGIBLE"
+    },
+    "shapeB": {
+      "description": "Clearly not eligible synthetic candidate (age/degree mismatch)",
+      "expectedResult": "NOT_ELIGIBLE"
+    },
+    "shapeC": {
+      "description": "Incomplete profile synthetic candidate (missing subject specialization)",
+      "expectedResult": "MORE_INFORMATION_NEEDED"
+    }
+  },
+  "REAL_USER_DATA_USED_IN_TEST_CASE_COUNT": 0
+}

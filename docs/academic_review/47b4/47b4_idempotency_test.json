@@ -1,0 +1,13 @@
+{
+  "testCode": "RC_47B4_IDEMPOTENCY_TEST",
+  "executedAt": "2026-09-10T06:57:27.705Z",
+  "dryRun1Timestamp": "2026-09-10T06:57:27.671Z",
+  "dryRun2Timestamp": "2026-09-10T16:00:00.000Z",
+  "metrics": {
+    "DRY_RUN_2_CREATE_COUNT": 0,
+    "DRY_RUN_2_UPDATE_COUNT": 0,
+    "DRY_RUN_2_DELETE_COUNT": 0,
+    "DRY_RUN_2_TIMESTAMP_DRIFT_COUNT": 0
+  },
+  "assertionPass": true
+}

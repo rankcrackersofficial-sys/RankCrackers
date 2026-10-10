@@ -1,0 +1,19 @@
+{
+  "gate": "47UI5",
+  "forensic_trace": {
+    "target_value": "4% readiness",
+    "source_file": "lib/core/engines/readiness_engine.dart",
+    "source_function": "ReadinessEngine.calculate()",
+    "legacy_formula": "final pBase = ((100 - rsk) * 0.10);",
+    "calculation_with_default_risk": "(100 - 60) * 0.10 = 4.0%",
+    "classification": "LOCAL_DEFAULT_FORMULA_DEFECT"
+  },
+  "repair": {
+    "solution": "Gated formula with hasEvidence check. If totalQuestions == 0 && itemsMastered == 0, returns score 0.0 and label 'Pending Evidence'.",
+    "verified_result": "Fresh / unstudied mission displays 'Pending Evidence' with 0 synthetic percentage."
+  },
+  "metrics": {
+    "UNVERIFIED_READINESS_PERCENTAGE_COUNT": 0
+  },
+  "status": "PASSED"
+}

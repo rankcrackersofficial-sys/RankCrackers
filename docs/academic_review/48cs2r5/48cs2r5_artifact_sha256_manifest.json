@@ -1,0 +1,60 @@
+{
+  "gate": "GATE 48CS2R5",
+  "package": "REAL SOURCE PACKAGE VALIDATION PILOT",
+  "lane": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "canonicalRoot": "C:/RankCrackers/RankCrackers-55",
+  "sealedAt": "2026-09-10T12:32:29.903Z",
+  "totalArtifactsHashed": 10,
+  "manifestEntries": [
+    {
+      "artifact": "48cs2r5_real_source_adapter.json",
+      "byteSize": 1555,
+      "sha256": "197e40c0f97414bc1e903037630cbf772573923926d75dd460ba713a8b8f9d97"
+    },
+    {
+      "artifact": "48cs2r5_six_package_validation_results.json",
+      "byteSize": 7666,
+      "sha256": "b7b2643079519d533c03553611580c6bf606bfc02280e5cbb2adff50dc483ab9"
+    },
+    {
+      "artifact": "48cs2r5_neet_year_binding_audit.json",
+      "byteSize": 1037,
+      "sha256": "ca76f598f4c7f5173915bdc6c91a3fc2eae7e78dbebbe0af066907c414fca70b"
+    },
+    {
+      "artifact": "48cs2r5_rpsc_first_grade_current_source_audit.json",
+      "byteSize": 1504,
+      "sha256": "ce546a5a969ce3d8baae252a57b91d44b0646ea0f399e5c157e48458b82096d6"
+    },
+    {
+      "artifact": "48cs2r5_generic_fact_survival.json",
+      "byteSize": 4677,
+      "sha256": "75ac89c21093360276f4b8f2e9b0267c26aa2fdb7719c02703a27104658f7541"
+    },
+    {
+      "artifact": "48cs2r5_real_package_personalization_dryrun.json",
+      "byteSize": 7000,
+      "sha256": "3fe1a46aa42b694a463a38d286af852caad7a6bf66a67979d0106765e3165fa1"
+    },
+    {
+      "artifact": "48cs2r5_opportunity_kind_audit.json",
+      "byteSize": 2037,
+      "sha256": "acf92302b0969e91b4e397c7f176c8d77f970e92afb22b232e95cea964442d71"
+    },
+    {
+      "artifact": "48cs2r5_real_data_schema_contradictions.json",
+      "byteSize": 2693,
+      "sha256": "0edff63d3db097437b85c47dbbcd6e0425ea80c58e2773858bed441c11abb4e2"
+    },
+    {
+      "artifact": "48cs2r5_no_production_mutation_proof.json",
+      "byteSize": 1017,
+      "sha256": "6200a100a039368c091300839dd125c991e1f03e0ad366f58073c53072bd2d2f"
+    },
+    {
+      "artifact": "48cs2r5_final_report.md",
+      "byteSize": 10711,
+      "sha256": "1a9826321db0d7a17a6e973bc544945045cfaa37baa237abe4510cb7d868e9da"
+    }
+  ]
+}

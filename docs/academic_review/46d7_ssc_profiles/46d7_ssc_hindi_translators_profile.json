@@ -1,0 +1,48 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_hindi_translators",
+  "canonicalDisplayName": "SSC Combined Hindi Translators",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["PAPER_I_CBE_MCQ"],
+    "unsupportedStages": [
+      { "stageName": "Paper-II: Translation and Essay", "reason": "Subjective/Descriptive Written Exam" }
+    ]
+  },
+  "examinationStructure": {
+    "papers": [
+      {
+        "paperId": "jht_paper_1",
+        "paperName": "Paper-I: Computer Based Examination",
+        "totalQuestions": 200,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "negativeMarkingPerQuestion": 0.25,
+        "sections": [
+          { "sectionId": "general_hindi", "sectionName": "General Hindi", "questions": 100, "marks": 100 },
+          { "sectionId": "general_english", "sectionName": "General English", "questions": 100, "marks": 100 }
+        ]
+      }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "SINGLE_ACADEMIC_TRACK",
+    "variants": [
+      { "variantKey": "jht_all_posts", "variantName": "Junior Hindi Translator / Junior Translation Officer / Senior Hindi Translator" }
+    ]
+  }
+}

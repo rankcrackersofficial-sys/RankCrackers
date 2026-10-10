@@ -1,0 +1,72 @@
+{
+  "classification": "MAJOR_MISSION_ACCEPTED",
+  "mission": {
+    "missionId": "cbse_ctet",
+    "permanentExamKey": "ctet",
+    "title": "Central Teacher Eligibility Test",
+    "canonicalAuthorityKey": "auth_in_cbse",
+    "authorityGroupKey": "cbse",
+    "jurisdictionLevel": "CENTRAL",
+    "region": "NATIONAL",
+    "stateCode": null,
+    "stateName": null,
+    "sector": "TEACHING_AND_EDUCATION",
+    "examCategory": "eligibility_gateway",
+    "examScope": "NATIONAL_OBJECTIVE_EXAM",
+    "examPurpose": "TEACHER_ELIGIBILITY",
+    "variantRequired": true,
+    "variants": [
+      {
+        "variantId": "primary",
+        "displayName": "Paper I — Primary Stage (Classes I–V)",
+        "variantDimension": "LEVEL",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      },
+      {
+        "variantId": "upper_primary",
+        "displayName": "Paper II — Upper Primary Stage (Classes VI–VIII)",
+        "variantDimension": "LEVEL",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      }
+    ],
+    "officialSourceLocator": {
+      "authorityKey": "auth_in_cbse",
+      "officialDomain": "ctet.nic.in",
+      "officialListingPageUrl": "https://ctet.nic.in/documents/",
+      "exactDocumentUrl": null,
+      "documentType": "CURRENT_INFORMATION_BULLETIN_LISTING",
+      "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+      "effectiveStatus": "LATEST_EFFECTIVE"
+    },
+    "latestEffectiveSource": {
+      "url": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/",
+      "title": "CTET September 2026 Information Bulletin"
+    },
+    "sourceSurfaceRefs": [
+      "https://ctet.nic.in/documents/",
+      "https://ctet.nic.in/archive/"
+    ],
+    "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+    "regionalDiscovery": {
+      "stateAndUtPointersAllowed": true,
+      "createsMissionClone": false
+    },
+    "readiness": {
+      "missionIdentityReady": true,
+      "authorityOwnerReady": true,
+      "sourceSurfaceResolved": true,
+      "latestNotificationReady": true,
+      "exactNotificationDocumentReady": false,
+      "syllabusOrSchemeReady": true,
+      "variantModelReady": true,
+      "pyqStateResolved": true,
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    "materializationState": "SHELL_READY_PREPARING"
+  },
+  "authorityEvidence": "https://ctet.nic.in/",
+  "archive": "https://ctet.nic.in/archive/"
+}

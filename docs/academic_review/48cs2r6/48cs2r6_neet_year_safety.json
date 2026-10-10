@@ -1,0 +1,18 @@
+{
+  "gate": "48CS2R6",
+  "contractName": "NEET_UG_CYCLE_ISOLATION_AND_PRIOR_YEAR_SAFETY_AUDIT",
+  "currentCycleId": "neet_(ug)-2027",
+  "priorCycleReference": "NEET-UG-2026-EVIDENCE-BASE",
+  "authority": "NTA",
+  "opportunityKind": "ADMISSION_ENTRANCE",
+  "safetyPrinciples": [
+    "1. CYCLE MISMATCH BARRIER: 2026 Information Bulletin cannot be promoted as current rulebook authority for 2027 cycle.",
+    "2. PRIOR CYCLE REFERENCE CONFINEMENT: NEET-UG-2026 evidence is preserved as PRIOR_CYCLE_REFERENCE ONLY for syllabus patterns and historical exam structure.",
+    "3. ADVERSARIAL REJECTION: Any attempt to pass promotedPriorCycleAsCurrent: true triggers an immediate CYCLE_MISMATCH error and returns PACKAGE_VALIDATION_RESULT.REJECTED_SOURCE_PACKAGE.",
+    "4. VACANCY MATRIX ISOLATION: As an ADMISSION_ENTRANCE exam, NEET UG is isolated from job vacancy tables (seat allocation is managed under MCC / State counseling quotas, not recruitment vacancies)."
+  ],
+  "adapterBehavior": {
+    "lawfulAdapter": "Sets isPriorCycleReference: true, package validates as PARTIAL_SOURCE_PACKAGE, personalization returns NOT_EVALUATED.",
+    "adversarialPromotion": "Triggers CYCLE_MISMATCH validation error and rejects source package."
+  }
+}

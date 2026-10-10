@@ -1,0 +1,15 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Amendment Chain Completeness & Corrigenda Tracking Contract",
+  "trackedDimensions": {
+    "baseNotificationDocId": "Primary advertisement / gazette document identifier",
+    "latestKnownOfficialNoticeDocId": "Most recent verified official corrigendum or notice",
+    "applicableCorrigenda": "List of verified corrigenda documents modifying base notice",
+    "amendmentSearchStatus": {
+      "CURRENT_CHAIN_VERIFIED": "Official amendment portal audited up to current date; all known corrigenda integrated.",
+      "CHAIN_PARTIAL": "Some known corrigenda are pending retrieval or parsing.",
+      "CHAIN_UNRESOLVED": "Amendment registry has not been audited."
+    }
+  },
+  "verdictBarrier": "If amendmentSearchStatus is CHAIN_PARTIAL or CHAIN_UNRESOLVED, effective rule truth cannot be guaranteed and final ELIGIBLE status is withheld."
+}

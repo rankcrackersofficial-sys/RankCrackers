@@ -1,0 +1,77 @@
+{
+  "algorithm": "SHA-256",
+  "generatedLast": true,
+  "fileCount": 14,
+  "rows": [
+    {
+      "file": "48cs4_amendment_chain_registry.json",
+      "byteLength": 1588,
+      "sha256": "7533c55dfc1ec5d59133c1be5d834b4bc798a31b66c51d569538ef43847e65de"
+    },
+    {
+      "file": "48cs4_career_signal_event_evidence.json",
+      "byteLength": 1054,
+      "sha256": "0b2954684c7fd10e420d522f569827fb9e9332552e8ef2b6037eedbe3cb0a8d1"
+    },
+    {
+      "file": "48cs4_cycle_identity_registry.json",
+      "byteLength": 1202,
+      "sha256": "40c19a36ee0c5b893afc2d536c9a86ba82416d32ae1a776d1009cbe4d6be3ac8"
+    },
+    {
+      "file": "48cs4_cycle_lifecycle_ledger.json",
+      "byteLength": 1422,
+      "sha256": "ab53b4d455856ebdd921c05579d5caccdfc6c279846ec405bca62f0541629d0f"
+    },
+    {
+      "file": "48cs4_eligibility_rule_registry.json",
+      "byteLength": 7391,
+      "sha256": "5e46336e1fab0f76e2b4c48849da3a2b72f50cc0710271ebfec844cdc40cf90d"
+    },
+    {
+      "file": "48cs4_final_report.md",
+      "byteLength": 1134,
+      "sha256": "56a07c2e9703c206925d7f324a09b38acbb0e8c1f2590d7d17cbd496e53a34f9"
+    },
+    {
+      "file": "48cs4_notification_rulebook_registry.json",
+      "byteLength": 4941,
+      "sha256": "c43a0a51dc5e52125f028daeb4c1faf12b56a2e6b2cde3713356aba1bf1b5c14"
+    },
+    {
+      "file": "48cs4_opportunity_process_active_state.json",
+      "byteLength": 1197,
+      "sha256": "604259c6693a8d70def9282adff2bca283b031d1d8dab8a3d14c4426aa071cd5"
+    },
+    {
+      "file": "48cs4_reservation_rule_registry.json",
+      "byteLength": 6929,
+      "sha256": "978ab4fbb4cd292515ff393518ab65622e9a4be98e923c51918804784ed26536"
+    },
+    {
+      "file": "48cs4_result_surface_vs_current_result_audit.json",
+      "byteLength": 1297,
+      "sha256": "509588d9860c7400aca2b3544855356638c48ec50bfa93610cfec4593ec1740a"
+    },
+    {
+      "file": "48cs4_rpsc_first_grade_deep_case.json",
+      "byteLength": 1111,
+      "sha256": "d3eacd57894fbdd58562444bc8f79e0a2eace41d5a7b1b4bfe137dcfedc43f04"
+    },
+    {
+      "file": "48cs4_source_provenance_registry.json",
+      "byteLength": 2740,
+      "sha256": "fc5b9bbedbf219b1127d8e3631904a1588e43d0d8578b761fe113119d62bc24c"
+    },
+    {
+      "file": "48cs4_unresolved_fact_registry.json",
+      "byteLength": 3921,
+      "sha256": "03fe5f8b6541aae2333f5a67fb26508a76022c4af0bc6126995c277173fb89cc"
+    },
+    {
+      "file": "48cs4_vacancy_matrix_registry.json",
+      "byteLength": 3970,
+      "sha256": "2d7eadc9a586d839a456739c6ee39be245f81149ffe7959e5d5f80e5afe6bd17"
+    }
+  ]
+}

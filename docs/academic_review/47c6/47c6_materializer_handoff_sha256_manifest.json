@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "relativePath": "materializer_handoff/authority_registry.json",
+      "byteLength": 5168,
+      "sha256": "51bc7a620138ed9742732a3a5cc8940fe780056b5cc31548cc6050fbd23c7101"
+    },
+    {
+      "relativePath": "materializer_handoff/cross_agency_registry.json",
+      "byteLength": 1183,
+      "sha256": "1501b7caab78f383a92f4b292e3f1fdce7bb54c9843ba2e7d1601bbfbe219c44"
+    },
+    {
+      "relativePath": "materializer_handoff/immutable_id_reconciliation.json",
+      "byteLength": 4349,
+      "sha256": "87911911ff3c8f2dcea0cc75c009c9286c8eb00ce69848b0db6652006661ac12"
+    },
+    {
+      "relativePath": "materializer_handoff/national_mission_manifest.json",
+      "byteLength": 101096,
+      "sha256": "a6bde551e2cc0a47dbc7de4c6a1e746adad8d266bad47d13ee152f52923d49b4"
+    },
+    {
+      "relativePath": "materializer_handoff/overlap_reconciliation.json",
+      "byteLength": 1402,
+      "sha256": "62377ce906a6ddec07c5fbd6df5ed5f403156ee364e5d5277f2798f797300608"
+    },
+    {
+      "relativePath": "materializer_handoff/readiness.json",
+      "byteLength": 24231,
+      "sha256": "00989a03863eff6cdac3698ddf35811d3077283d2428981f8720965366a27943"
+    }
+  ],
+  "pendingGenerationHashCount": 0,
+  "handoffHashMismatchCount": 0
+}

@@ -1,0 +1,33 @@
+{
+  "gate": "47UI5",
+  "audit": "Dashboard Metric Card Visual Priority",
+  "hierarchy_rules": {
+    "metric_titles": {
+      "elements": [
+        "READINESS",
+        "COVERAGE",
+        "STREAK",
+        "RISK"
+      ],
+      "color": "AppColors.gold (#C5A880 / #E5C396)",
+      "font_weight": "FontWeight.w700",
+      "letter_spacing": 0.8,
+      "visual_priority": "PRIMARY_HIGH"
+    },
+    "status_badges": {
+      "elements": [
+        "Pending Evidence",
+        "Preparing",
+        "0 Days",
+        "Calculating"
+      ],
+      "color": "Colors.white38 / Colors.white54",
+      "font_weight": "FontWeight.w500",
+      "visual_priority": "SECONDARY_MUTED"
+    }
+  },
+  "metrics": {
+    "DASHBOARD_CARD_TITLE_VISUAL_PRIORITY": "GREATER_THAN_SECONDARY_STATUS"
+  },
+  "status": "PASSED"
+}

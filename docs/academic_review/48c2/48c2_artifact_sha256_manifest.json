@@ -1,0 +1,42 @@
+{
+  "algorithm": "SHA-256",
+  "generatedLast": true,
+  "fileCount": 7,
+  "rows": [
+    {
+      "file": "48c2_additional_clean_source_expansion.json",
+      "byteLength": 195,
+      "sha256": "590d27290a2c6231091d7cc19d8e2cff018be60a0c2543ec12659ca49661064d"
+    },
+    {
+      "file": "48c2_current_live_source_pack_readiness.json",
+      "byteLength": 6,
+      "sha256": "abdfbffecbe18ed94df9829819e596ee285b52a94aa108514452a9121721c789"
+    },
+    {
+      "file": "48c2_current_live_source_surface_registry.json",
+      "byteLength": 540,
+      "sha256": "bbc10429bd3bf61c688cd3ce580f48d88603073b2a5a8c2dc12fda56da759120"
+    },
+    {
+      "file": "48c2_final_report.md",
+      "byteLength": 460,
+      "sha256": "88b3d4e20bc803d8f28b9f827d7b8d467e3c6d01b819f76e95d787b047ca4a33"
+    },
+    {
+      "file": "48c2_no_production_mutation_proof.json",
+      "byteLength": 264,
+      "sha256": "2dd23af527102a3f4fa676b16ab15dcfab37db9021a1c44613d682d0ac3da6bd"
+    },
+    {
+      "file": "48c2_parked_residual_backlog.json",
+      "byteLength": 8330,
+      "sha256": "13b4ccbe159c3d861ec9db601edc94e3efc9a7f0f358e977bcfd2c3c62bf1c37"
+    },
+    {
+      "file": "48c2_source_multi_impact_registry.json",
+      "byteLength": 834,
+      "sha256": "3a409ffe0af4333c02415c8a1bfbd69df0dc1f896cdb2cd7e1e06b1c4755f9da"
+    }
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "gate": "RC_46D12_REJECTION_AND_NON_CIRCULAR_SOURCE_RECERTIFICATION_46D13",
+  "generatedAt": "2026-09-09T16:00:18.169Z",
+  "jeeMain2026": {
+    "missionTargetYear": 2027,
+    "sourceBaselineYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "cycleContext": {
+      "preparationTargetCycle": 2027,
+      "officialCycle": 2026,
+      "sourceBaselineCycle": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+    },
+    "paperModel": {
+      "paperCount": 1,
+      "papers": [
+        {
+          "paperId": "paper_1",
+          "paperCode": "PAPER_1",
+          "code": "PAPER_1",
+          "paperName": "B.E./B.Tech Examination (Paper 1)",
+          "name": "B.E./B.Tech Examination (Paper 1)",
+          "mode": "CBT",
+          "durationMinutes": 180,
+          "totalQuestions": 75,
+          "totalMarks": 300,
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "isCommonPaper": true,
+          "isVariantSpecific": false,
+          "appliesToAllVariables": true,
+          "variantDimension": null,
+          "subjectStructure": [
+            {
+              "subject": "Mathematics",
+              "mcqQuestions": 20,
+              "numericalQuestions": 5,
+              "totalQuestions": 25,
+              "marks": 100
+            },
+            {
+              "subject": "Physics",
+              "mcqQuestions": 20,
+              "numericalQuestions": 5,
+              "totalQuestions": 25,
+              "marks": 100
+            },
+            {
+              "subject": "Chemistry",
+              "mcqQuestions": 20,
+              "numericalQuestions": 5,
+              "totalQuestions": 25,
+              "marks": 100
+            }
+          ],
+          "markingScheme": "+4 for correct response, -1 for incorrect response (applicable to both MCQs and Numerical Value Questions), 0 for unattempted"
+        }
+      ]
+    }
+  },
+  "neetUg2026": {
+    "missionTargetYear": 2027,
+    "sourceBaselineYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "cycleContext": {
+      "preparationTargetCycle": 2027,
+      "officialCycle": 2026,
+      "sourceBaselineCycle": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+    },
+    "paperModel": {
+      "paperCount": 1,
+      "papers": [
+        {
+          "paperId": "paper_1",
+          "paperCode": "PAPER_1",
+          "code": "PAPER_1",
+          "paperName": "National Eligibility Cum Entrance Test (UG)",
+          "name": "National Eligibility Cum Entrance Test (UG)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 180,
+          "totalMarks": 720,
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "isCommonPaper": true,
+          "isVariantSpecific": false,
+          "appliesToAllVariables": true,
+          "variantDimension": null,
+          "subjectStructure": [
+            {
+              "subject": "Physics",
+              "totalQuestions": 45,
+              "marks": 180
+            },
+            {
+              "subject": "Chemistry",
+              "totalQuestions": 45,
+              "marks": 180
+            },
+            {
+              "subject": "Biology",
+              "subDisciplines": [
+                "Botany",
+                "Zoology"
+              ],
+              "totalQuestions": 90,
+              "marks": 360
+            }
+          ],
+          "markingScheme": "+4 for correct response, -1 for incorrect response, 0 for unattempted"
+        }
+      ]
+    }
+  },
+  "rpscSchoolLecturer": {
+    "missionTargetYear": 2026,
+    "sourceBaselineYear": 2025,
+    "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+    "cycleContext": {
+      "preparationTargetCycle": 2026,
+      "officialCycle": 2026,
+      "sourceBaselineCycle": 2025,
+      "cycleRelation": "CURRENT_OFFICIAL_CYCLE"
+    },
+    "paperFamilies": [
+      {
+        "familyId": "ACADEMIC_LECTURER_FAMILY",
+        "familyName": "Academic School Lecturer Family (प्राध्यापक - सामान्य विषय)",
+        "variantCount": 21,
+        "paper1": {
+          "paperId": "rpsc_paper_1_gk_gs_academic",
+          "paperCode": "PAPER_1_ACADEMIC",
+          "paperName": "Paper-I: General Awareness and General Studies (Academic Family)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 90,
+          "totalQuestions": 75,
+          "totalMarks": 150,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        },
+        "paper2": {
+          "paperId": "rpsc_paper_2_academic",
+          "paperCode": "PAPER_2_ACADEMIC",
+          "paperName": "Paper-II: Subject Concerned (Academic Disciplines)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        }
+      },
+      {
+        "familyId": "PHYSICAL_EDUCATION_FAMILY",
+        "familyName": "Physical Education Lecturer Family (प्राध्यापक - शारीरिक शिक्षा)",
+        "variantCount": 1,
+        "paper1": {
+          "paperId": "rpsc_paper_1_physical_education",
+          "paperCode": "PAPER_1_PHY_EDU",
+          "paperName": "Paper-I: General Awareness & Physical Education GS",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 120,
+          "totalQuestions": 100,
+          "totalMarks": 200,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        },
+        "paper2": {
+          "paperId": "rpsc_paper_2_phy_edu",
+          "paperCode": "PAPER_2_PHY_EDU",
+          "paperName": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        }
+      },
+      {
+        "familyId": "COACH_FAMILY",
+        "familyName": "Sports Coach Family (प्रशिक्षक - विभिन्न खेल)",
+        "variantCount": 6,
+        "paper1": {
+          "paperId": "rpsc_paper_1_coach",
+          "paperCode": "PAPER_1_COACH",
+          "paperName": "Paper-I: General Studies of Physical Education & Sports",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 120,
+          "totalQuestions": 100,
+          "totalMarks": 200,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        },
+        "paper2": {
+          "paperId": "rpsc_paper_2_coach",
+          "paperCode": "PAPER_2_COACH",
+          "paperName": "Paper-II: Coach Specialization Discipline",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        }
+      }
+    ],
+    "paperModel": {
+      "paperCount": 6,
+      "papers": [
+        {
+          "paperId": "rpsc_paper_1_gk_gs_academic",
+          "paperCode": "PAPER_1_ACADEMIC",
+          "code": "PAPER_1_ACADEMIC",
+          "paperName": "Paper-I: General Awareness and General Studies (Academic Family)",
+          "name": "Paper-I: General Awareness and General Studies (Academic Family)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 90,
+          "totalQuestions": 75,
+          "totalMarks": 150,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "ACADEMIC_LECTURER_FAMILY"
+        },
+        {
+          "paperId": "rpsc_paper_2_academic",
+          "paperCode": "PAPER_2_ACADEMIC",
+          "code": "PAPER_2_ACADEMIC",
+          "paperName": "Paper-II: Subject Concerned (Academic Disciplines)",
+          "name": "Paper-II: Subject Concerned (Academic Disciplines)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "ACADEMIC_LECTURER_FAMILY"
+        },
+        {
+          "paperId": "rpsc_paper_1_physical_education",
+          "paperCode": "PAPER_1_PHY_EDU",
+          "code": "PAPER_1_PHY_EDU",
+          "paperName": "Paper-I: General Awareness & Physical Education GS",
+          "name": "Paper-I: General Awareness & Physical Education GS",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 120,
+          "totalQuestions": 100,
+          "totalMarks": 200,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "PHYSICAL_EDUCATION_FAMILY"
+        },
+        {
+          "paperId": "rpsc_paper_2_phy_edu",
+          "paperCode": "PAPER_2_PHY_EDU",
+          "code": "PAPER_2_PHY_EDU",
+          "paperName": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+          "name": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "PHYSICAL_EDUCATION_FAMILY"
+        },
+        {
+          "paperId": "rpsc_paper_1_coach",
+          "paperCode": "PAPER_1_COACH",
+          "code": "PAPER_1_COACH",
+          "paperName": "Paper-I: General Studies of Physical Education & Sports",
+          "name": "Paper-I: General Studies of Physical Education & Sports",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 120,
+          "totalQuestions": 100,
+          "totalMarks": 200,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "COACH_FAMILY"
+        },
+        {
+          "paperId": "rpsc_paper_2_coach",
+          "paperCode": "PAPER_2_COACH",
+          "code": "PAPER_2_COACH",
+          "paperName": "Paper-II: Coach Specialization Discipline",
+          "name": "Paper-II: Coach Specialization Discipline",
+          "mode": "OMR_PEN_PAPER",
+          "durationMinutes": 180,
+          "totalQuestions": 150,
+          "totalMarks": 300,
+          "scope": "VARIABLE_SPECIFIC",
+          "isCommonPaper": false,
+          "isVariantSpecific": true,
+          "appliesToAllVariables": false,
+          "variantDimension": "SUBJECT_VARIANT",
+          "familyId": "COACH_FAMILY"
+        }
+      ]
+    }
+  }
+}

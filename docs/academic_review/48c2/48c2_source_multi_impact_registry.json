@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "sourceId": "SSC_CALENDAR_2026_27",
+      "url": "https://ssc.gov.in/api/attachment/uploads/masterData/ExamCalendar/Tentative_Calendar2026_27_08012026.pdf",
+      "missionsImpacted": 9,
+      "impact": "Shared cycle-planning surface"
+    },
+    {
+      "sourceId": "SSC_NOTICEBOARD",
+      "url": "https://ssc.gov.in/home/noticeboard",
+      "missionsImpacted": 9,
+      "impact": "Shared notification/amendment surface"
+    },
+    {
+      "sourceId": "RPSC_RESULTS",
+      "url": "https://rpsc.rajasthan.gov.in/Result.aspx",
+      "missionsImpacted": 2,
+      "impact": "Shared result surface"
+    },
+    {
+      "sourceId": "NTA_EXAM_PORTALS",
+      "url": "https://exams.nta.ac.in/",
+      "missionsImpacted": 2,
+      "impact": "Authority-level discovery surface"
+    }
+  ]
+}

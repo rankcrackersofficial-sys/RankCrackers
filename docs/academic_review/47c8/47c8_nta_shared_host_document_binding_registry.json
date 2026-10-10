@@ -1,0 +1,29 @@
+{
+  "bindingPolicy": "EXACT_DOCUMENT_ONLY_NO_HOST_WILDCARD",
+  "documents": [
+    {
+      "missionId": "jee_main_2026",
+      "officialNtaListingPageUrl": "https://jeemain.nta.nic.in/information-bulletin/",
+      "exactDocumentUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "documentTitle": "JEE (Main) 2026 Information Bulletin",
+      "documentType": "INFORMATION_BULLETIN",
+      "documentHost": "cdnbbsr.s3waas.gov.in",
+      "hostClassification": "SHARED_GOVERNMENT_DOCUMENT_HOST",
+      "authorityBinding": "NTA_DOCUMENT_BINDING_VERIFIED",
+      "bindingEvidenceRef": "https://jeemain.nta.nic.in/information-bulletin/",
+      "verificationDate": "2026-09-10"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "officialNtaListingPageUrl": "https://neet.nta.nic.in/",
+      "exactDocumentUrl": "https://cdnbbsr.s3waas.gov.in/s37bc1ec1d9c3426357e69acd5bf320061/uploads/2026/02/202602231394640855.pdf",
+      "documentTitle": "NEET (UG) 2026 Information Bulletin",
+      "documentType": "INFORMATION_BULLETIN",
+      "documentHost": "cdnbbsr.s3waas.gov.in",
+      "hostClassification": "SHARED_GOVERNMENT_DOCUMENT_HOST",
+      "authorityBinding": "NTA_DOCUMENT_BINDING_VERIFIED",
+      "bindingEvidenceRef": "https://neet.nta.nic.in/",
+      "verificationDate": "2026-09-10"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "gate": "RC_46D10_SOURCE_TRUTH_AND_PRODUCTION_CERTIFICATION_REPAIR_46D11",
+  "generatedAt": "2026-09-09T15:27:05.106Z",
+  "summary": {
+    "TOTAL_PAPER_COUNT": 24,
+    "OMR_PAPER_COUNT": 8,
+    "CBT_PAPER_COUNT": 15,
+    "DESCRIPTIVE_PAPER_COUNT": 1,
+    "SSC_JE_PAPER2_SCOPE": "VARIABLE_SPECIFIC",
+    "SSC_SELECTION_POST_SCOPE": "VARIABLE_SPECIFIC",
+    "SSC_CGL_TIER2_PAPER2_SCOPE": "VARIABLE_SPECIFIC",
+    "RPSC_LECTURER_PAPER2_SCOPE": "VARIABLE_SPECIFIC"
+  },
+  "paperModelsByMission": {
+    "jee_main_2026": [
+      {
+        "code": "PAPER_1",
+        "name": "B.E./B.Tech Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "neet_(ug)-2027": [
+      {
+        "code": "PAPER_1",
+        "name": "Undergraduate Medical Entrance Examination",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: General Awareness and General Studies",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: Subject Concerned / Discipline",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "appliesToAllVariables": false,
+        "scope": "VARIABLE_SPECIFIC",
+        "variantDimension": "SUBJECT_VARIANT"
+      }
+    ],
+    "upsc_cse_prelims": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: General Studies-I",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: General Studies-II (CSAT)",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_cgl": [
+      {
+        "code": "TIER_1",
+        "name": "Tier-I: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "TIER_2_P1",
+        "name": "Tier-II Paper-I: Compulsory for All Posts",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "TIER_2_P2",
+        "name": "Tier-II Paper-II: Statistics (JSO Track)",
+        "mode": "CBT",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "appliesToAllVariables": false,
+        "scope": "VARIABLE_SPECIFIC",
+        "variantDimension": "POST_TRACK"
+      }
+    ],
+    "ssc_je": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: Technical Engineering Discipline",
+        "mode": "CBT",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "appliesToAllVariables": false,
+        "scope": "VARIABLE_SPECIFIC",
+        "variantDimension": "ENGINEERING_DISCIPLINE"
+      }
+    ],
+    "ssc_selection_post": [
+      {
+        "code": "CBE_PAPER",
+        "name": "Computer Based Examination (Level-Specific)",
+        "mode": "CBT",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "appliesToAllVariables": false,
+        "scope": "VARIABLE_SPECIFIC",
+        "variantDimension": "EDUCATIONAL_LEVEL"
+      }
+    ],
+    "ssc_chsl": [
+      {
+        "code": "TIER_1",
+        "name": "Tier-I: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "TIER_2",
+        "name": "Tier-II: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_stenographer": [
+      {
+        "code": "CBE_PAPER",
+        "name": "Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_hindi_translators": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: Translation & Essay",
+        "mode": "PEN_PAPER_DESCRIPTIVE",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_mts_havaldar": [
+      {
+        "code": "CBE_PAPER",
+        "name": "Computer Based Examination (Session-I & Session-II)",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_cpo": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: English Language & Comprehension",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "ssc_gd": [
+      {
+        "code": "CBE_PAPER",
+        "name": "Computer Based Examination",
+        "mode": "CBT",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "uppsc_pcs_prelims": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: General Studies-I",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      },
+      {
+        "code": "PAPER_2",
+        "name": "Paper-II: General Studies-II (CSAT)",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ],
+    "rpsc_ras_prelims": [
+      {
+        "code": "PAPER_1",
+        "name": "Paper-I: General Knowledge and General Science",
+        "mode": "OMR_PEN_PAPER",
+        "isCommonPaper": true,
+        "isVariantSpecific": false,
+        "appliesToAllVariables": true,
+        "scope": "COMMON",
+        "variantDimension": null
+      }
+    ]
+  }
+}

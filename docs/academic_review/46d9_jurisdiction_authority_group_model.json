@@ -1,0 +1,70 @@
+{
+  "modelSchemaVersion": "9.0.0",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "generatedAt": "2026-09-09T14:57:58.800Z",
+  "summary": {
+    "TOTAL_MISSIONS": 15,
+    "CENTRAL_MISSION_COUNT": 12,
+    "STATE_MISSION_COUNT": 3,
+    "SSC_CANONICAL_MISSION_COUNT": 9,
+    "SSC_AUTHORITY_GROUP_COUNT": 1,
+    "MISSION_MERGED_INTO_GENERIC_SSC_COUNT": 0,
+    "AUTHORITY_GROUPS_COUNT": 5
+  },
+  "authorityGroups": [
+    {
+      "authorityGroupKey": "nta",
+      "authorityDisplayName": "National Testing Agency",
+      "jurisdictionLevel": "CENTRAL",
+      "missions": [
+        "jee_main_2026",
+        "neet_(ug)-2027"
+      ]
+    },
+    {
+      "authorityGroupKey": "upsc",
+      "authorityDisplayName": "Union Public Service Commission",
+      "jurisdictionLevel": "CENTRAL",
+      "missions": [
+        "upsc_cse_prelims"
+      ]
+    },
+    {
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission",
+      "jurisdictionLevel": "CENTRAL",
+      "missions": [
+        "ssc_cgl",
+        "ssc_je",
+        "ssc_selection_post",
+        "ssc_chsl",
+        "ssc_stenographer",
+        "ssc_hindi_translators",
+        "ssc_mts_havaldar",
+        "ssc_cpo",
+        "ssc_gd"
+      ]
+    },
+    {
+      "authorityGroupKey": "uppsc",
+      "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "stateName": "Uttar Pradesh",
+      "missions": [
+        "uppsc_pcs_prelims"
+      ]
+    },
+    {
+      "authorityGroupKey": "rpsc",
+      "authorityDisplayName": "Rajasthan Public Service Commission",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "missions": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "rpsc_ras_prelims"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "gate": "GATE_48CS2R1_OPPORTUNITY_KIND_CONTRACT",
+  "generatedAt": "2026-09-10T11:26:52.330Z",
+  "governedKinds": [
+    "JOB_RECRUITMENT",
+    "ADMISSION_ENTRANCE",
+    "OTHER_OFFICIAL_OPPORTUNITY"
+  ],
+  "typingRules": [
+    {
+      "targetMissions": [
+        "jee_main_2026",
+        "neet_(ug)-2027"
+      ],
+      "opportunityKind": "ADMISSION_ENTRANCE",
+      "prohibitedSemantics": "Job vacancy, posts, pay scale, appointment orders"
+    },
+    {
+      "targetMissions": [
+        "upsc_cse_prelims",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "RPSC_FIRST_GRADE2026_2026_1782713222215"
+      ],
+      "opportunityKind": "JOB_RECRUITMENT",
+      "allowedSemantics": "Vacancies, cadre, reservation quotas, service posts"
+    }
+  ]
+}

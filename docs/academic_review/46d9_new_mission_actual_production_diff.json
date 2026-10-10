@@ -1,0 +1,4420 @@
+{
+  "executedAt": "2026-09-09T14:56:06.304Z",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "totalWritesAttempted": 57,
+  "unauthorizedWrites": 0,
+  "writesLog": [
+    {
+      "target": "mission_realms/jee_main_2026",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "recruitments/jee_main_2026",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "student_mission_catalog/jee_main_2026",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "mission_realms/neet_(ug)-2027",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "recruitments/neet_(ug)-2027",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "student_mission_catalog/neet_(ug)-2027",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "UPDATE"
+    },
+    {
+      "target": "mission_realms/upsc_cse_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/upsc_cse_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/upsc_cse_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/upsc_cse_prelims/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_cgl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_cgl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_cgl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_cgl/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_je",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_je",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_je",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_je/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_selection_post",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_selection_post",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_selection_post",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_selection_post/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_chsl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_chsl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_chsl",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_chsl/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_stenographer",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_stenographer",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_stenographer",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_stenographer/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_hindi_translators",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_hindi_translators",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_hindi_translators",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_hindi_translators/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_mts_havaldar",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_mts_havaldar",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_mts_havaldar",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_mts_havaldar/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_cpo",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_cpo",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_cpo",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_cpo/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_gd",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/ssc_gd",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/ssc_gd",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/ssc_gd/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/uppsc_pcs_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/uppsc_pcs_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/uppsc_pcs_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/uppsc_pcs_prelims/canonical_profile/current",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/rpsc_ras_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "recruitments/rpsc_ras_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "student_mission_catalog/rpsc_ras_prelims",
+      "operation": "CREATE"
+    },
+    {
+      "target": "mission_realms/rpsc_ras_prelims/canonical_profile/current",
+      "operation": "CREATE"
+    }
+  ],
+  "beforeSnapshots": {
+    "jee_main_2026": {
+      "realm": {
+        "id": "jee_main_2026",
+        "realm_id": "jee_main_2026",
+        "exam_name": "JEE Main 2027",
+        "recruitment_name": "JEE Main 2027",
+        "exam_category": "qualifying",
+        "organization": "INDIA",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "updated_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        }
+      },
+      "recruitment": {
+        "examCategory": "qualifying",
+        "nature": "ACTIVE_MISSION",
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 649000000
+        },
+        "variantCode": "universal",
+        "examId": "jee_main_2026",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "status": "draft",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "year": 2027,
+        "missionRealmId": "jee_main_2026",
+        "title": "JEE Main 2027",
+        "org": "INDIA",
+        "state": null,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "updatedAt": {
+          "_seconds": 1784474664,
+          "_nanoseconds": 75000000
+        }
+      },
+      "studentCatalog": {
+        "code": "JEE Main 2027",
+        "year": 2027,
+        "mission_id": "jee_main_2026",
+        "created_at": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "recruitmentGroupId": "jee_main_2026",
+        "title": "JEE Main 2027",
+        "recruitment_id": "jee_main_2026",
+        "exam_category": "qualifying",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "exam_year": 2027,
+        "variables": [],
+        "examCategory": "qualifying",
+        "target_year": 2027,
+        "catalogStatus": "PREPARING",
+        "userPanelVisible": true,
+        "name": "JEE Main 2027",
+        "cardVisible": true,
+        "status": "PREPARING",
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "country": "INDIA",
+        "publishedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "artifactType": "mission",
+        "missionId": "jee_main_2026",
+        "examCode": "jee_main_2026",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "publishedAt": {
+          "_seconds": 1783927453,
+          "_nanoseconds": 154000000
+        },
+        "displayName": "JEE Main 2027",
+        "counts": {
+          "digibookUnits": 0,
+          "downloads": 0,
+          "topicNodes": 0,
+          "questionPool": 0,
+          "examRules": 0,
+          "crucibleBlocks": 0
+        },
+        "examName": "JEE Main 2027",
+        "contentReadiness": {
+          "notification": "not_ready",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "deliveryPaths": {
+          "digibookUnits": "student_mission_catalog/jee_main_2026/digibook_units",
+          "mission": "student_mission_catalog/jee_main_2026",
+          "downloads": "student_mission_catalog/jee_main_2026/downloads",
+          "topicNodes": "student_mission_catalog/jee_main_2026/topic_nodes",
+          "questionPool": "student_mission_catalog/jee_main_2026/question_pool",
+          "crucibleSchedule": "student_mission_catalog/jee_main_2026/crucible_schedule",
+          "examRules": "student_mission_catalog/jee_main_2026/exam_rules"
+        },
+        "version": "1.0.0",
+        "provenance": {
+          "sourceWorkbenchPath": "mission_realms/jee_main_2026",
+          "promotedAt": "2026-07-13T07:24:12.971Z",
+          "promotedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+          "sourceDocumentId": "jee_main_2026"
+        },
+        "isUserVisible": true,
+        "missionName": "JEE Main 2027",
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "publishStatus": "published",
+        "deliveryStatus": "published",
+        "updated_at": {
+          "_seconds": 1784474664,
+          "_nanoseconds": 677000000
+        },
+        "realmId": "jee_main_2026",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/jee_main_2026",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "priority": 5,
+        "examYear": 2027,
+        "archived": false,
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "displayTitle": "JEE Main 2027",
+        "sourceMissionVersion": "1",
+        "missionType": "qualifying",
+        "sourceMissionId": "jee_main_2026",
+        "organizationCode": "",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "subtitle": "JEE Main 2027",
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "boardId": "",
+        "studentPublicationState": "PREPARING",
+        "sourcePath": "mission_realms/jee_main_2026",
+        "missionVariables": {
+          "supportedMediums": [
+            "ENGLISH"
+          ],
+          "defaultMedium": "ENGLISH",
+          "mediumPolicy": "ENGLISH_ONLY"
+        },
+        "state": "Central",
+        "updatedAt": "2026-08-19T11:28:36.405Z",
+        "examId": "jee_main_2026",
+        "exam_id": "jee_main_2026"
+      },
+      "canonicalProfile": null
+    },
+    "neet_(ug)-2027": {
+      "realm": {
+        "id": "neet_(ug)-2027",
+        "realm_id": "neet_(ug)-2027",
+        "exam_name": "NEET (UG)-2027",
+        "recruitment_name": "NEET (UG)-2027",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "updated_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        }
+      },
+      "recruitment": {
+        "examCategory": "competitive",
+        "nature": "ACTIVE_MISSION",
+        "year": 2026,
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "title": "NEET (UG)-2027",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783351586,
+          "_nanoseconds": 781000000
+        },
+        "variantCode": "universal",
+        "examId": "neet_(ug)-2027",
+        "titleHindi": "",
+        "id": "neet_(ug)-2027",
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "VARIABLE_BASED",
+        "status": "draft",
+        "org": "Rajasthan",
+        "sortOrder": 0,
+        "displayOrder": 0,
+        "state": "Rajasthan",
+        "priority": 0
+      },
+      "studentCatalog": {
+        "id": "neet_(ug)-2027",
+        "boardId": "NTA",
+        "examId": "neet_(ug)-2027",
+        "examBlueprintId": "neet_(ug)-2027_blueprint",
+        "title": "NEET (UG)-2027",
+        "titleHindi": "NEET (UG)-2027",
+        "year": 2027,
+        "state": "Central",
+        "examCategory": "category_pending",
+        "status": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE",
+        "examDifficulty": 0.6,
+        "variantCode": "neet_(ug)-2027",
+        "version": "ONE_TIME_PRODUCTION_EXPORT_DERIVED_EMULATOR_ONLY",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "recruitmentGroupId": "neet_(ug)-2027"
+      },
+      "canonicalProfile": null
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "realm": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realm_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_name": "RPSC 1st Grade",
+        "recruitment_name": "RPSC 1st Grade",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2026,
+        "status": "STAGED",
+        "updated_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        }
+      },
+      "recruitment": {
+        "examCategory": "competitive",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "nature": "ACTIVE_MISSION",
+        "org": "Rajasthan",
+        "year": 2026,
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper / Common Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Subject Paper",
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "title": "RPSC 1st Grade",
+        "titleHindi": "",
+        "missionRealmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "status": "draft",
+        "updatedAt": {
+          "_seconds": 1783152955,
+          "_nanoseconds": 154000000
+        }
+      },
+      "studentCatalog": {
+        "code": "RPSC_FIRST_GRADE_2026",
+        "year": 2026,
+        "mission_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "created_at": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "contentReadiness": {
+          "notification": "uploaded",
+          "syllabus": "not_ready",
+          "tests": "not_ready",
+          "crucible": "not_ready",
+          "digibook": "not_ready"
+        },
+        "recruitmentGroupId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC 1st Grade",
+        "createdAt": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "recruitment_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_category": "competitive",
+        "titleHindi": "",
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "exam_id": "RPSC_FIRST_GRADE_2026",
+        "exam_year": 2026,
+        "variables": [
+          {
+            "id": "var_ENGLISH_2026_1782736222410",
+            "name": "ENGLISH 1st Grade 2026",
+            "code": "ENGLISH_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2"
+          },
+          {
+            "id": "var_HINDI_1782713551600",
+            "name": "HINDI 1 st Grade 2026",
+            "code": "HINDI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2"
+          }
+        ],
+        "examCategory": "competitive",
+        "target_year": 2026,
+        "userPanelVisible": true,
+        "organizationCode": "RPSC",
+        "name": "RPSC 1st Grade",
+        "boardId": "RPSC",
+        "cardVisible": true,
+        "updated_at": "2026-07-10T11:52:26.218Z",
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "source": {
+          "missionRealmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "examYear": 2026,
+        "archived": false,
+        "displayTitle": "RPSC 1st Grade",
+        "missionType": "competitive",
+        "sourceMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "studentPublicationState": "PREPARING",
+        "missionStructureType": "SINGLE_TRACK",
+        "sourcePath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "examName": "RPSC 1st Grade",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "priority": 5,
+        "catalogStatus": "PREPARING",
+        "sourceMissionVersion": "1",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "subtitle": "RPSC 1st Grade",
+        "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+        "missionVariables": {},
+        "status": "PREPARING",
+        "updatedAt": "2026-08-19T11:28:36.405Z"
+      },
+      "canonicalProfile": null
+    },
+    "upsc_cse_prelims": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_cgl": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_je": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_selection_post": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_chsl": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_stenographer": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_hindi_translators": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_mts_havaldar": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_cpo": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "ssc_gd": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "uppsc_pcs_prelims": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    },
+    "rpsc_ras_prelims": {
+      "realm": null,
+      "recruitment": null,
+      "studentCatalog": null,
+      "canonicalProfile": null
+    }
+  },
+  "afterSnapshots": {
+    "jee_main_2026": {
+      "realm": {
+        "id": "jee_main_2026",
+        "realm_id": "jee_main_2026",
+        "exam_category": "qualifying",
+        "organization": "INDIA",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "CENTRAL",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 357000000
+        },
+        "stateName": null,
+        "stateCode": null,
+        "exam_name": "JEE Main",
+        "authorityGroupKey": "nta",
+        "recruitment_name": "JEE Main",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "recruitment": {
+        "examCategory": "qualifying",
+        "nature": "ACTIVE_MISSION",
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 649000000
+        },
+        "variantCode": "universal",
+        "examId": "jee_main_2026",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "status": "draft",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "year": 2027,
+        "missionRealmId": "jee_main_2026",
+        "org": "INDIA",
+        "state": null,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "JEE Main",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "updatedAt": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 357000000
+        }
+      },
+      "studentCatalog": {
+        "year": 2027,
+        "mission_id": "jee_main_2026",
+        "created_at": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "recruitmentGroupId": "jee_main_2026",
+        "recruitment_id": "jee_main_2026",
+        "exam_category": "qualifying",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "exam_year": 2027,
+        "variables": [],
+        "examCategory": "qualifying",
+        "target_year": 2027,
+        "catalogStatus": "PREPARING",
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "status": "PREPARING",
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "country": "INDIA",
+        "publishedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "artifactType": "mission",
+        "missionId": "jee_main_2026",
+        "examCode": "jee_main_2026",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "publishedAt": {
+          "_seconds": 1783927453,
+          "_nanoseconds": 154000000
+        },
+        "counts": {
+          "digibookUnits": 0,
+          "downloads": 0,
+          "topicNodes": 0,
+          "questionPool": 0,
+          "examRules": 0,
+          "crucibleBlocks": 0
+        },
+        "contentReadiness": {
+          "notification": "not_ready",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "deliveryPaths": {
+          "digibookUnits": "student_mission_catalog/jee_main_2026/digibook_units",
+          "mission": "student_mission_catalog/jee_main_2026",
+          "downloads": "student_mission_catalog/jee_main_2026/downloads",
+          "topicNodes": "student_mission_catalog/jee_main_2026/topic_nodes",
+          "questionPool": "student_mission_catalog/jee_main_2026/question_pool",
+          "crucibleSchedule": "student_mission_catalog/jee_main_2026/crucible_schedule",
+          "examRules": "student_mission_catalog/jee_main_2026/exam_rules"
+        },
+        "version": "1.0.0",
+        "provenance": {
+          "sourceWorkbenchPath": "mission_realms/jee_main_2026",
+          "promotedAt": "2026-07-13T07:24:12.971Z",
+          "promotedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+          "sourceDocumentId": "jee_main_2026"
+        },
+        "isUserVisible": true,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "publishStatus": "published",
+        "deliveryStatus": "published",
+        "realmId": "jee_main_2026",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/jee_main_2026",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "priority": 5,
+        "examYear": 2027,
+        "archived": false,
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "sourceMissionVersion": "1",
+        "missionType": "qualifying",
+        "sourceMissionId": "jee_main_2026",
+        "organizationCode": "",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "boardId": "",
+        "studentPublicationState": "PREPARING",
+        "sourcePath": "mission_realms/jee_main_2026",
+        "missionVariables": {
+          "supportedMediums": [
+            "ENGLISH"
+          ],
+          "defaultMedium": "ENGLISH",
+          "mediumPolicy": "ENGLISH_ONLY"
+        },
+        "state": "Central",
+        "updatedAt": "2026-08-19T11:28:36.405Z",
+        "examId": "jee_main_2026",
+        "exam_id": "jee_main_2026",
+        "code": "JEE Main",
+        "jurisdictionLevel": "CENTRAL",
+        "displayName": "JEE Main",
+        "examName": "JEE Main",
+        "title": "JEE Main",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "displayTitle": "JEE Main",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 357000000
+        },
+        "stateName": null,
+        "subtitle": "JEE Main",
+        "missionName": "JEE Main",
+        "name": "JEE Main",
+        "stateCode": null
+      },
+      "canonicalProfile": null
+    },
+    "neet_(ug)-2027": {
+      "realm": {
+        "id": "neet_(ug)-2027",
+        "realm_id": "neet_(ug)-2027",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "CENTRAL",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 721000000
+        },
+        "stateName": null,
+        "stateCode": null,
+        "exam_name": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "recruitment_name": "NEET (UG)",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "recruitment": {
+        "examCategory": "competitive",
+        "nature": "ACTIVE_MISSION",
+        "year": 2026,
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783351586,
+          "_nanoseconds": 781000000
+        },
+        "variantCode": "universal",
+        "examId": "neet_(ug)-2027",
+        "titleHindi": "",
+        "id": "neet_(ug)-2027",
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "VARIABLE_BASED",
+        "status": "draft",
+        "org": "Rajasthan",
+        "sortOrder": 0,
+        "displayOrder": 0,
+        "state": "Rajasthan",
+        "priority": 0,
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "studentCatalog": {
+        "id": "neet_(ug)-2027",
+        "boardId": "NTA",
+        "examId": "neet_(ug)-2027",
+        "examBlueprintId": "neet_(ug)-2027_blueprint",
+        "year": 2027,
+        "state": "Central",
+        "examCategory": "category_pending",
+        "status": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE",
+        "examDifficulty": 0.6,
+        "variantCode": "neet_(ug)-2027",
+        "version": "ONE_TIME_PRODUCTION_EXPORT_DERIVED_EMULATOR_ONLY",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "recruitmentGroupId": "neet_(ug)-2027",
+        "displayTitle": "NEET (UG)",
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "displayName": "NEET (UG)",
+        "examName": "NEET (UG)",
+        "name": "NEET (UG)",
+        "titleHindi": "NEET (UG)",
+        "stateCode": null,
+        "title": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "canonicalProfile": null
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "realm": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realm_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_name": "RPSC 1st Grade",
+        "recruitment_name": "RPSC 1st Grade",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2026,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "STATE",
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 77000000
+        },
+        "stateName": "Rajasthan",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission"
+      },
+      "recruitment": {
+        "examCategory": "competitive",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "nature": "ACTIVE_MISSION",
+        "org": "Rajasthan",
+        "year": 2026,
+        "missionPlan": {
+          "macroTestRule": {
+            "frequencyDays": 15,
+            "enabled": true
+          },
+          "totalDays": 100,
+          "microTestRule": {
+            "frequencyDays": 2,
+            "startsFromDay": 2,
+            "enabled": true
+          },
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "crucibleEnabled": true,
+          "revisionDaysEnabled": true,
+          "majorTestRule": {
+            "finalPhase": true,
+            "enabled": true
+          },
+          "bufferDaysEnabled": true,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS"
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Paper / Common Paper",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Subject Paper",
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "title": "RPSC 1st Grade",
+        "titleHindi": "",
+        "missionRealmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "status": "draft",
+        "updatedAt": {
+          "_seconds": 1783152955,
+          "_nanoseconds": 154000000
+        },
+        "jurisdictionLevel": "STATE",
+        "stateName": "Rajasthan",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission"
+      },
+      "studentCatalog": {
+        "code": "RPSC_FIRST_GRADE_2026",
+        "year": 2026,
+        "mission_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "created_at": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "contentReadiness": {
+          "notification": "uploaded",
+          "syllabus": "not_ready",
+          "tests": "not_ready",
+          "crucible": "not_ready",
+          "digibook": "not_ready"
+        },
+        "recruitmentGroupId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC 1st Grade",
+        "createdAt": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "recruitment_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_category": "competitive",
+        "titleHindi": "",
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "exam_id": "RPSC_FIRST_GRADE_2026",
+        "exam_year": 2026,
+        "variables": [
+          {
+            "id": "var_ENGLISH_2026_1782736222410",
+            "name": "ENGLISH 1st Grade 2026",
+            "code": "ENGLISH_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2"
+          },
+          {
+            "id": "var_HINDI_1782713551600",
+            "name": "HINDI 1 st Grade 2026",
+            "code": "HINDI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2"
+          }
+        ],
+        "examCategory": "competitive",
+        "target_year": 2026,
+        "userPanelVisible": true,
+        "organizationCode": "RPSC",
+        "name": "RPSC 1st Grade",
+        "boardId": "RPSC",
+        "cardVisible": true,
+        "updated_at": "2026-07-10T11:52:26.218Z",
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "source": {
+          "missionRealmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "examYear": 2026,
+        "archived": false,
+        "displayTitle": "RPSC 1st Grade",
+        "missionType": "competitive",
+        "sourceMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "studentPublicationState": "PREPARING",
+        "missionStructureType": "SINGLE_TRACK",
+        "sourcePath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "examName": "RPSC 1st Grade",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "priority": 5,
+        "catalogStatus": "PREPARING",
+        "sourceMissionVersion": "1",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "subtitle": "RPSC 1st Grade",
+        "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+        "missionVariables": {},
+        "status": "PREPARING",
+        "updatedAt": "2026-08-19T11:28:36.405Z",
+        "jurisdictionLevel": "STATE",
+        "stateName": "Rajasthan",
+        "displayName": "RPSC 1st Grade",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission"
+      },
+      "canonicalProfile": null
+    },
+    "upsc_cse_prelims": {
+      "realm": {
+        "id": "upsc_cse_prelims",
+        "realm_id": "upsc_cse_prelims",
+        "exam_name": "UPSC Civil Services – Prelims",
+        "recruitment_name": "UPSC Civil Services – Prelims",
+        "exam_category": "civil_services",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "created_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      },
+      "recruitment": {
+        "id": "upsc_cse_prelims",
+        "examId": "upsc_cse_prelims",
+        "missionRealmId": "upsc_cse_prelims",
+        "title": "UPSC Civil Services – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "General Studies Paper-I",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "General Studies Paper-II (CSAT)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      },
+      "studentCatalog": {
+        "id": "upsc_cse_prelims",
+        "missionId": "upsc_cse_prelims",
+        "realmId": "upsc_cse_prelims",
+        "recruitment_id": "upsc_cse_prelims",
+        "recruitmentGroupId": "upsc_cse_prelims",
+        "title": "UPSC Civil Services – Prelims",
+        "displayName": "UPSC Civil Services – Prelims",
+        "displayTitle": "UPSC Civil Services – Prelims",
+        "name": "UPSC Civil Services – Prelims",
+        "examName": "UPSC Civil Services – Prelims",
+        "code": "UPSC Civil Services – Prelims",
+        "subtitle": "UPSC Civil Services – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/upsc_cse_prelims",
+          "topicNodes": "student_mission_catalog/upsc_cse_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/upsc_cse_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/upsc_cse_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/upsc_cse_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/upsc_cse_prelims/downloads",
+          "examRules": "student_mission_catalog/upsc_cse_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/upsc_cse_prelims",
+          "sourceDocumentId": "upsc_cse_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "created_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "upsc_cse_prelims",
+          "canonicalExamName": "UPSC Civil Services – Prelims",
+          "canonicalDisplayName": "UPSC Civil Services – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "upsc",
+          "authorityDisplayName": "Union Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Union Public Service Commission",
+          "authorityKey": "upsc",
+          "officialPortals": [
+            "Union Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "General Studies Paper-I",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "General Studies Paper-II (CSAT)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      }
+    },
+    "ssc_cgl": {
+      "realm": {
+        "id": "ssc_cgl",
+        "realm_id": "ssc_cgl",
+        "exam_name": "SSC CGL",
+        "recruitment_name": "SSC CGL",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "created_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_cgl",
+        "examId": "ssc_cgl",
+        "missionRealmId": "ssc_cgl",
+        "title": "SSC CGL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 3,
+          "papers": [
+            {
+              "paperCode": "TIER_1",
+              "paperName": "Tier-I: Computer Based Examination",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2_P1",
+              "paperName": "Tier-II Paper-I: Compulsory for All Posts",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2_P2",
+              "paperName": "Tier-II Paper-II: Statistics (JSO)",
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "order": 3,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_cgl",
+        "missionId": "ssc_cgl",
+        "realmId": "ssc_cgl",
+        "recruitment_id": "ssc_cgl",
+        "recruitmentGroupId": "ssc_cgl",
+        "title": "SSC CGL",
+        "displayName": "SSC CGL",
+        "displayTitle": "SSC CGL",
+        "name": "SSC CGL",
+        "examName": "SSC CGL",
+        "code": "SSC CGL",
+        "subtitle": "SSC CGL",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "cgl_all_posts",
+            "name": "All Posts (General Track)",
+            "code": "cgl_all_posts",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "cgl_jso",
+            "name": "Junior Statistical Officer (JSO)",
+            "code": "cgl_jso",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_cgl",
+          "topicNodes": "student_mission_catalog/ssc_cgl/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_cgl/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_cgl/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_cgl/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_cgl/downloads",
+          "examRules": "student_mission_catalog/ssc_cgl/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_cgl",
+          "sourceDocumentId": "ssc_cgl",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "updated_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "created_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_cgl",
+          "canonicalExamName": "SSC CGL",
+          "canonicalDisplayName": "SSC CGL"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 3,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperNumber": 1,
+              "paperName": "Tier-I: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "tier_2_p1",
+              "paperNumber": 2,
+              "paperName": "Tier-II Paper-I: Compulsory for All Posts",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "tier_2_p2",
+              "paperNumber": 3,
+              "paperName": "Tier-II Paper-II: Statistics (JSO)",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "cgl_all_posts",
+              "variantName": "All Posts (General Track)",
+              "variantCode": "cgl_all_posts"
+            },
+            {
+              "variantId": "cgl_jso",
+              "variantName": "Junior Statistical Officer (JSO)",
+              "variantCode": "cgl_jso"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      }
+    },
+    "ssc_je": {
+      "realm": {
+        "id": "ssc_je",
+        "realm_id": "ssc_je",
+        "exam_name": "SSC JE",
+        "recruitment_name": "SSC JE",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "created_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_je",
+        "examId": "ssc_je",
+        "missionRealmId": "ssc_je",
+        "title": "SSC JE",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: Computer Based Technical Examination",
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_je",
+        "missionId": "ssc_je",
+        "realmId": "ssc_je",
+        "recruitment_id": "ssc_je",
+        "recruitmentGroupId": "ssc_je",
+        "title": "SSC JE",
+        "displayName": "SSC JE",
+        "displayTitle": "SSC JE",
+        "name": "SSC JE",
+        "examName": "SSC JE",
+        "code": "SSC JE",
+        "subtitle": "SSC JE",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "je_civil",
+            "name": "Civil Engineering",
+            "code": "je_civil",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "je_electrical",
+            "name": "Electrical Engineering",
+            "code": "je_electrical",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "je_mechanical",
+            "name": "Mechanical Engineering",
+            "code": "je_mechanical",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_je",
+          "topicNodes": "student_mission_catalog/ssc_je/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_je/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_je/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_je/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_je/downloads",
+          "examRules": "student_mission_catalog/ssc_je/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_je",
+          "sourceDocumentId": "ssc_je",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "updated_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "created_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_je",
+          "canonicalExamName": "SSC JE",
+          "canonicalDisplayName": "SSC JE"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: Computer Based Technical Examination",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "je_civil",
+              "variantName": "Civil Engineering",
+              "variantCode": "je_civil"
+            },
+            {
+              "variantId": "je_electrical",
+              "variantName": "Electrical Engineering",
+              "variantCode": "je_electrical"
+            },
+            {
+              "variantId": "je_mechanical",
+              "variantName": "Mechanical Engineering",
+              "variantCode": "je_mechanical"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      }
+    },
+    "ssc_selection_post": {
+      "realm": {
+        "id": "ssc_selection_post",
+        "realm_id": "ssc_selection_post",
+        "exam_name": "SSC Selection Post",
+        "recruitment_name": "SSC Selection Post",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_selection_post",
+        "examId": "ssc_selection_post",
+        "missionRealmId": "ssc_selection_post",
+        "title": "SSC Selection Post",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (Level-Specific)",
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_selection_post",
+        "missionId": "ssc_selection_post",
+        "realmId": "ssc_selection_post",
+        "recruitment_id": "ssc_selection_post",
+        "recruitmentGroupId": "ssc_selection_post",
+        "title": "SSC Selection Post",
+        "displayName": "SSC Selection Post",
+        "displayTitle": "SSC Selection Post",
+        "name": "SSC Selection Post",
+        "examName": "SSC Selection Post",
+        "code": "SSC Selection Post",
+        "subtitle": "SSC Selection Post",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "selpost_matric",
+            "name": "Matriculation Level",
+            "code": "selpost_matric",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "selpost_higher_sec",
+            "name": "Higher Secondary (10+2) Level",
+            "code": "selpost_higher_sec",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "selpost_grad",
+            "name": "Graduation & Above Level",
+            "code": "selpost_grad",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_selection_post",
+          "topicNodes": "student_mission_catalog/ssc_selection_post/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_selection_post/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_selection_post/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_selection_post/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_selection_post/downloads",
+          "examRules": "student_mission_catalog/ssc_selection_post/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_selection_post",
+          "sourceDocumentId": "ssc_selection_post",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_selection_post",
+          "canonicalExamName": "SSC Selection Post",
+          "canonicalDisplayName": "SSC Selection Post"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (Level-Specific)",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "selpost_matric",
+              "variantName": "Matriculation Level",
+              "variantCode": "selpost_matric"
+            },
+            {
+              "variantId": "selpost_higher_sec",
+              "variantName": "Higher Secondary (10+2) Level",
+              "variantCode": "selpost_higher_sec"
+            },
+            {
+              "variantId": "selpost_grad",
+              "variantName": "Graduation & Above Level",
+              "variantCode": "selpost_grad"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      }
+    },
+    "ssc_chsl": {
+      "realm": {
+        "id": "ssc_chsl",
+        "realm_id": "ssc_chsl",
+        "exam_name": "SSC CHSL",
+        "recruitment_name": "SSC CHSL",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_chsl",
+        "examId": "ssc_chsl",
+        "missionRealmId": "ssc_chsl",
+        "title": "SSC CHSL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "TIER_1",
+              "paperName": "Tier-I: Computer Based Examination",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2",
+              "paperName": "Tier-II: Computer Based Examination",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_chsl",
+        "missionId": "ssc_chsl",
+        "realmId": "ssc_chsl",
+        "recruitment_id": "ssc_chsl",
+        "recruitmentGroupId": "ssc_chsl",
+        "title": "SSC CHSL",
+        "displayName": "SSC CHSL",
+        "displayTitle": "SSC CHSL",
+        "name": "SSC CHSL",
+        "examName": "SSC CHSL",
+        "code": "SSC CHSL",
+        "subtitle": "SSC CHSL",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_chsl",
+          "topicNodes": "student_mission_catalog/ssc_chsl/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_chsl/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_chsl/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_chsl/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_chsl/downloads",
+          "examRules": "student_mission_catalog/ssc_chsl/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_chsl",
+          "sourceDocumentId": "ssc_chsl",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_chsl",
+          "canonicalExamName": "SSC CHSL",
+          "canonicalDisplayName": "SSC CHSL"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperNumber": 1,
+              "paperName": "Tier-I: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "tier_2",
+              "paperNumber": 2,
+              "paperName": "Tier-II: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      }
+    },
+    "ssc_stenographer": {
+      "realm": {
+        "id": "ssc_stenographer",
+        "realm_id": "ssc_stenographer",
+        "exam_name": "SSC Stenographer",
+        "recruitment_name": "SSC Stenographer",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_stenographer",
+        "examId": "ssc_stenographer",
+        "missionRealmId": "ssc_stenographer",
+        "title": "SSC Stenographer",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (General Intelligence, Reasoning, GA, English)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_stenographer",
+        "missionId": "ssc_stenographer",
+        "realmId": "ssc_stenographer",
+        "recruitment_id": "ssc_stenographer",
+        "recruitmentGroupId": "ssc_stenographer",
+        "title": "SSC Stenographer",
+        "displayName": "SSC Stenographer",
+        "displayTitle": "SSC Stenographer",
+        "name": "SSC Stenographer",
+        "examName": "SSC Stenographer",
+        "code": "SSC Stenographer",
+        "subtitle": "SSC Stenographer",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "steno_c",
+            "name": "Stenographer Grade C",
+            "code": "steno_c",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "steno_d",
+            "name": "Stenographer Grade D",
+            "code": "steno_d",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_stenographer",
+          "topicNodes": "student_mission_catalog/ssc_stenographer/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_stenographer/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_stenographer/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_stenographer/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_stenographer/downloads",
+          "examRules": "student_mission_catalog/ssc_stenographer/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_stenographer",
+          "sourceDocumentId": "ssc_stenographer",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_stenographer",
+          "canonicalExamName": "SSC Stenographer",
+          "canonicalDisplayName": "SSC Stenographer"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (General Intelligence, Reasoning, GA, English)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "steno_c",
+              "variantName": "Stenographer Grade C",
+              "variantCode": "steno_c"
+            },
+            {
+              "variantId": "steno_d",
+              "variantName": "Stenographer Grade D",
+              "variantCode": "steno_d"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      }
+    },
+    "ssc_hindi_translators": {
+      "realm": {
+        "id": "ssc_hindi_translators",
+        "realm_id": "ssc_hindi_translators",
+        "exam_name": "SSC Combined Hindi Translators",
+        "recruitment_name": "SSC Combined Hindi Translators",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_hindi_translators",
+        "examId": "ssc_hindi_translators",
+        "missionRealmId": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination (General Hindi & General English)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: Translation & Essay",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_hindi_translators",
+        "missionId": "ssc_hindi_translators",
+        "realmId": "ssc_hindi_translators",
+        "recruitment_id": "ssc_hindi_translators",
+        "recruitmentGroupId": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators",
+        "displayName": "SSC Combined Hindi Translators",
+        "displayTitle": "SSC Combined Hindi Translators",
+        "name": "SSC Combined Hindi Translators",
+        "examName": "SSC Combined Hindi Translators",
+        "code": "SSC Combined Hindi Translators",
+        "subtitle": "SSC Combined Hindi Translators",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_hindi_translators",
+          "topicNodes": "student_mission_catalog/ssc_hindi_translators/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_hindi_translators/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_hindi_translators/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_hindi_translators/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_hindi_translators/downloads",
+          "examRules": "student_mission_catalog/ssc_hindi_translators/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_hindi_translators",
+          "sourceDocumentId": "ssc_hindi_translators",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_hindi_translators",
+          "canonicalExamName": "SSC Combined Hindi Translators",
+          "canonicalDisplayName": "SSC Combined Hindi Translators"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination (General Hindi & General English)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: Translation & Essay",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      }
+    },
+    "ssc_mts_havaldar": {
+      "realm": {
+        "id": "ssc_mts_havaldar",
+        "realm_id": "ssc_mts_havaldar",
+        "exam_name": "SSC MTS & Havaldar",
+        "recruitment_name": "SSC MTS & Havaldar",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_mts_havaldar",
+        "examId": "ssc_mts_havaldar",
+        "missionRealmId": "ssc_mts_havaldar",
+        "title": "SSC MTS & Havaldar",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (Session-I & Session-II)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_mts_havaldar",
+        "missionId": "ssc_mts_havaldar",
+        "realmId": "ssc_mts_havaldar",
+        "recruitment_id": "ssc_mts_havaldar",
+        "recruitmentGroupId": "ssc_mts_havaldar",
+        "title": "SSC MTS & Havaldar",
+        "displayName": "SSC MTS & Havaldar",
+        "displayTitle": "SSC MTS & Havaldar",
+        "name": "SSC MTS & Havaldar",
+        "examName": "SSC MTS & Havaldar",
+        "code": "SSC MTS & Havaldar",
+        "subtitle": "SSC MTS & Havaldar",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_mts_havaldar",
+          "topicNodes": "student_mission_catalog/ssc_mts_havaldar/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_mts_havaldar/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_mts_havaldar/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_mts_havaldar/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_mts_havaldar/downloads",
+          "examRules": "student_mission_catalog/ssc_mts_havaldar/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_mts_havaldar",
+          "sourceDocumentId": "ssc_mts_havaldar",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "updated_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_mts_havaldar",
+          "canonicalExamName": "SSC MTS & Havaldar",
+          "canonicalDisplayName": "SSC MTS & Havaldar"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (Session-I & Session-II)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      }
+    },
+    "ssc_cpo": {
+      "realm": {
+        "id": "ssc_cpo",
+        "realm_id": "ssc_cpo",
+        "exam_name": "SSC CPO",
+        "recruitment_name": "SSC CPO",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "created_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_cpo",
+        "examId": "ssc_cpo",
+        "missionRealmId": "ssc_cpo",
+        "title": "SSC CPO",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: English Language & Comprehension",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_cpo",
+        "missionId": "ssc_cpo",
+        "realmId": "ssc_cpo",
+        "recruitment_id": "ssc_cpo",
+        "recruitmentGroupId": "ssc_cpo",
+        "title": "SSC CPO",
+        "displayName": "SSC CPO",
+        "displayTitle": "SSC CPO",
+        "name": "SSC CPO",
+        "examName": "SSC CPO",
+        "code": "SSC CPO",
+        "subtitle": "SSC CPO",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_cpo",
+          "topicNodes": "student_mission_catalog/ssc_cpo/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_cpo/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_cpo/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_cpo/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_cpo/downloads",
+          "examRules": "student_mission_catalog/ssc_cpo/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_cpo",
+          "sourceDocumentId": "ssc_cpo",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "updated_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "created_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_cpo",
+          "canonicalExamName": "SSC CPO",
+          "canonicalDisplayName": "SSC CPO"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: English Language & Comprehension",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      }
+    },
+    "ssc_gd": {
+      "realm": {
+        "id": "ssc_gd",
+        "realm_id": "ssc_gd",
+        "exam_name": "SSC GD",
+        "recruitment_name": "SSC GD",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "created_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      },
+      "recruitment": {
+        "id": "ssc_gd",
+        "examId": "ssc_gd",
+        "missionRealmId": "ssc_gd",
+        "title": "SSC GD",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (General Intelligence, GA, Math, English/Hindi)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      },
+      "studentCatalog": {
+        "id": "ssc_gd",
+        "missionId": "ssc_gd",
+        "realmId": "ssc_gd",
+        "recruitment_id": "ssc_gd",
+        "recruitmentGroupId": "ssc_gd",
+        "title": "SSC GD",
+        "displayName": "SSC GD",
+        "displayTitle": "SSC GD",
+        "name": "SSC GD",
+        "examName": "SSC GD",
+        "code": "SSC GD",
+        "subtitle": "SSC GD",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_gd",
+          "topicNodes": "student_mission_catalog/ssc_gd/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_gd/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_gd/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_gd/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_gd/downloads",
+          "examRules": "student_mission_catalog/ssc_gd/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_gd",
+          "sourceDocumentId": "ssc_gd",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "updated_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "created_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_gd",
+          "canonicalExamName": "SSC GD",
+          "canonicalDisplayName": "SSC GD"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (General Intelligence, GA, Math, English/Hindi)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      }
+    },
+    "uppsc_pcs_prelims": {
+      "realm": {
+        "id": "uppsc_pcs_prelims",
+        "realm_id": "uppsc_pcs_prelims",
+        "exam_name": "UPPSC PCS – Prelims",
+        "recruitment_name": "UPPSC PCS – Prelims",
+        "exam_category": "civil_services",
+        "organization": "Uttar Pradesh",
+        "status": "STAGED",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "created_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      },
+      "recruitment": {
+        "id": "uppsc_pcs_prelims",
+        "examId": "uppsc_pcs_prelims",
+        "missionRealmId": "uppsc_pcs_prelims",
+        "title": "UPPSC PCS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Studies-I",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 2,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      },
+      "studentCatalog": {
+        "id": "uppsc_pcs_prelims",
+        "missionId": "uppsc_pcs_prelims",
+        "realmId": "uppsc_pcs_prelims",
+        "recruitment_id": "uppsc_pcs_prelims",
+        "recruitmentGroupId": "uppsc_pcs_prelims",
+        "title": "UPPSC PCS – Prelims",
+        "displayName": "UPPSC PCS – Prelims",
+        "displayTitle": "UPPSC PCS – Prelims",
+        "name": "UPPSC PCS – Prelims",
+        "examName": "UPPSC PCS – Prelims",
+        "code": "UPPSC PCS – Prelims",
+        "subtitle": "UPPSC PCS – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/uppsc_pcs_prelims",
+          "topicNodes": "student_mission_catalog/uppsc_pcs_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/uppsc_pcs_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/uppsc_pcs_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/uppsc_pcs_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/uppsc_pcs_prelims/downloads",
+          "examRules": "student_mission_catalog/uppsc_pcs_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/uppsc_pcs_prelims",
+          "sourceDocumentId": "uppsc_pcs_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "updated_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "created_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "uppsc_pcs_prelims",
+          "canonicalExamName": "UPPSC PCS – Prelims",
+          "canonicalDisplayName": "UPPSC PCS – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "STATE",
+          "stateCode": "UP",
+          "stateName": "Uttar Pradesh",
+          "authorityGroupKey": "uppsc",
+          "authorityDisplayName": "Uttar Pradesh Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Uttar Pradesh Public Service Commission",
+          "authorityKey": "uppsc",
+          "officialPortals": [
+            "Uttar Pradesh Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Studies-I",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      }
+    },
+    "rpsc_ras_prelims": {
+      "realm": {
+        "id": "rpsc_ras_prelims",
+        "realm_id": "rpsc_ras_prelims",
+        "exam_name": "RPSC RAS – Prelims",
+        "recruitment_name": "RPSC RAS – Prelims",
+        "exam_category": "civil_services",
+        "organization": "Rajasthan",
+        "status": "STAGED",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "created_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      },
+      "recruitment": {
+        "id": "rpsc_ras_prelims",
+        "examId": "rpsc_ras_prelims",
+        "missionRealmId": "rpsc_ras_prelims",
+        "title": "RPSC RAS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Rajasthan",
+        "state": "Rajasthan",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Knowledge and General Science",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "order": 1,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 100,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 15
+          },
+          "majorTestRule": {
+            "enabled": true,
+            "finalPhase": true
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      },
+      "studentCatalog": {
+        "id": "rpsc_ras_prelims",
+        "missionId": "rpsc_ras_prelims",
+        "realmId": "rpsc_ras_prelims",
+        "recruitment_id": "rpsc_ras_prelims",
+        "recruitmentGroupId": "rpsc_ras_prelims",
+        "title": "RPSC RAS – Prelims",
+        "displayName": "RPSC RAS – Prelims",
+        "displayTitle": "RPSC RAS – Prelims",
+        "name": "RPSC RAS – Prelims",
+        "examName": "RPSC RAS – Prelims",
+        "code": "RPSC RAS – Prelims",
+        "subtitle": "RPSC RAS – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/rpsc_ras_prelims",
+          "topicNodes": "student_mission_catalog/rpsc_ras_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/rpsc_ras_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/rpsc_ras_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/rpsc_ras_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/rpsc_ras_prelims/downloads",
+          "examRules": "student_mission_catalog/rpsc_ras_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/rpsc_ras_prelims",
+          "sourceDocumentId": "rpsc_ras_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "updated_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "created_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      },
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "rpsc_ras_prelims",
+          "canonicalExamName": "RPSC RAS – Prelims",
+          "canonicalDisplayName": "RPSC RAS – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Rajasthan Public Service Commission",
+          "authorityKey": "rpsc",
+          "officialPortals": [
+            "Rajasthan Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Knowledge and General Science",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "updatedAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      }
+    }
+  }
+}

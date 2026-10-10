@@ -1,0 +1,12 @@
+{
+  "testCode": "RC_47B4_VARIANT_EVIDENCE_CONTRACT_TEST",
+  "executedAt": "2026-09-10T06:57:27.652Z",
+  "variantWithoutEvidenceRejected": true,
+  "unknownVariantDimensionRejected": true,
+  "metrics": {
+    "VARIANT_WITHOUT_EVIDENCE_ACCEPTED_COUNT": 0,
+    "UNKNOWN_VARIANT_DIMENSION_ACCEPTED_COUNT": 0,
+    "COMPULSORY_PAPER_AS_VARIANT_ACCEPTED_COUNT": 0
+  },
+  "assertionPass": true
+}

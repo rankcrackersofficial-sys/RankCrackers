@@ -1,0 +1,106 @@
+{
+  "ARTICLE315_TARGET_COUNT": 24,
+  "ARTICLE315_SUPPORTED_MAJOR_COUNT": 13,
+  "ARTICLE315_REVIEW_REQUIRED_COUNT": 0,
+  "ARTICLE315_NOT_MAJOR_COUNT": 0,
+  "ARTICLE315_SOURCE_UNRESOLVED_COUNT": 11,
+  "UNSUPPORTED_MAJOR_WITHOUT_EXACT_EVIDENCE_COUNT": 0,
+  "rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "result": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "result": "SOURCE_UNRESOLVED"
+    }
+  ]
+}

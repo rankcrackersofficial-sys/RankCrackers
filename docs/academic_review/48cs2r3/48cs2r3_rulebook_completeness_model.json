@@ -1,0 +1,30 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Rulebook Completeness Domain Model Specification",
+  "trackedFamilies": [
+    "AGE",
+    "EDUCATION",
+    "DISCIPLINE",
+    "DOMICILE",
+    "EXPERIENCE",
+    "REGISTRATION",
+    "PHYSICAL_STANDARD",
+    "CATEGORY_OR_RESERVATION",
+    "SPECIAL_CERTIFICATE",
+    "OTHER_OFFICIAL_CONDITION"
+  ],
+  "familyStatusVocabulary": {
+    "VERIFIED_COMPLETE": "Every statutory clause for this family was audited and extracted from verified official documents.",
+    "NOT_APPLICABLE_VERIFIED": "Official document explicitly confirms this family does not apply to this post track (e.g. \"Experience: Nil\").",
+    "UNRESOLVED": "Family has not been verified or audited against the official gazette/advertisement."
+  },
+  "schema": {
+    "requiredFamilies": "Array<RULE_FAMILY>",
+    "familyStatuses": "Record<RULE_FAMILY, RULE_FAMILY_STATUS>",
+    "isComplete": "Boolean (true iff all required families are VERIFIED_COMPLETE or NOT_APPLICABLE_VERIFIED)",
+    "unresolvedFamilies": "Array<RULE_FAMILY>",
+    "auditedAt": "ISO8601 Timestamp",
+    "auditedByDocRef": "Document identity / SHA reference"
+  },
+  "engineIntegration": "evaluateCareerSignalPersonalization mandates rulebookCompleteness to produce final ELIGIBLE status."
+}

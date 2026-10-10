@@ -1,0 +1,12 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Reservation Rule Completeness & Verification Contract",
+  "mandatoryElements": [
+    "Vertical category quota mapping (UR, SC, ST, OBC_NCL, EWS)",
+    "Open-merit policy contract (verifying whether UR seats are open to all or restricted)",
+    "OBC Creamy Layer (OBC_CL) policy (strictly unreserved by default)",
+    "Horizontal reservation specifications (WOMEN, PWBD, EX_SERVICEMAN)",
+    "Post / stream / subject quota cross-tabulation dimensions"
+  ],
+  "inferencePolicy": "Personalized reservation engine is strictly barred from inferring unextracted reservation rules. If reservation policies are not audited, vacancy applicability returns VACANCIES_PENDING_RESERVATION_DATA."
+}

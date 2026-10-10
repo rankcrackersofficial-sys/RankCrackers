@@ -1,0 +1,111 @@
+{
+  "manifestCode": "RC_47B6_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T07:08:16.656Z",
+  "totalArtifactsTracked": 20,
+  "metrics": {
+    "PENDING_GENERATION_HASH_COUNT": 0,
+    "UNHASHED_REQUIRED_ARTIFACT_COUNT": 0
+  },
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_live_firestore_read_proof.json",
+      "byteLength": 477,
+      "sha256": "766ea8eab79ffb5266d9c0068bb1ada11308d25be321d13fa5ce3126fd6fde0f"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_live_production_snapshot.json",
+      "byteLength": 144591,
+      "sha256": "4ebe91362d022e9663c9e2bdf8b0c9c4b45b844a7b45d942fa3ae54634eae132"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_live_mission_union_census.json",
+      "byteLength": 3563,
+      "sha256": "11aadd932c1adf0158d89ccb986d31e530bb3a5f78490b7e655c092064af081c"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_latest_input_identity.json",
+      "byteLength": 667,
+      "sha256": "cd78da7274d38d9c047784cca79dbdd1a2092eca92aeb15ab893ea998571a7b1"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_input_hash_verification.json",
+      "byteLength": 7300,
+      "sha256": "6998b05016ab4767564c192f36d53de00d40e7e3d6dd8f048fca52f54c6f2714"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_authority_registry_purity.json",
+      "byteLength": 422,
+      "sha256": "00c671722419df91b35c6bee23e6c44a1d5eeccd900fb06e31cbb8b8783372a7"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_candidate_real_validation_ledger.json",
+      "byteLength": 45732,
+      "sha256": "1e6938e00a6d887874c0e2516c44ba2cb6b00d33ec376684b064929ebe914f0f"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_readiness_derivation_ledger.json",
+      "byteLength": 63362,
+      "sha256": "5211349175e1e76b57260544a494dc3ed31e6022630066ab6eeb959cb672eb43"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_computed_collision_audit.json",
+      "byteLength": 985,
+      "sha256": "f6ac142b349981bcd907282a8cdc190418478966fa3ec68cb343743a857e3312"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_governance_field_safety.json",
+      "byteLength": 357,
+      "sha256": "c8c96fb68d2014d00f2bee6d846e85df30502fca91ca64884028060f6d013ba2"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_founder_hold_safety.json",
+      "byteLength": 439,
+      "sha256": "3c7503550b1bbc9767177970d650cbff87445ed9062a7b0fe4adc3d1f3f5695c"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_variant_selection_gate_test.json",
+      "byteLength": 250,
+      "sha256": "5b5d7957d325dfb44c646d7d5184f37b65647be0eb73032016209ca6d02148b7"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_student_physical_consumer_audit.json",
+      "byteLength": 443,
+      "sha256": "ce0e28d6e096ad648a8ad26a45bd1de988e92ec1656676a0c44e7061555a96f4"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_founder_physical_consumer_audit.json",
+      "byteLength": 375,
+      "sha256": "a8a5887f9436e9508467022609e8b9164d34822a1bdd95c5282266a3babff56d"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_monitor_schema_compatibility.json",
+      "byteLength": 321,
+      "sha256": "1f7b0a5750821eea3c4f3e96301909e5bda1e376605a3dc2907768486dc6b042"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_live_snapshot_three_projection_dryrun.json",
+      "byteLength": 78133,
+      "sha256": "9946c553b1115b75cecdc3030dbd77e3a184b0ba896f7876097cd2f4acc5ce3b"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_live_snapshot_idempotency.json",
+      "byteLength": 669,
+      "sha256": "5bdf4450f2891c748a275f640b1fd89e1f69259b2cb4c146b30be9af01c38c64"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_immutable_pilot_three_projection_proof.json",
+      "byteLength": 314,
+      "sha256": "b988f3c9dbf7b54c1fb9031f0e036a6edcf19729fa15c222ebfd7e276998ad26"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_apply_rejection.json",
+      "byteLength": 304,
+      "sha256": "7f57e9d15af64edc40a0c3327c30f10599f79fcd12354cb7ab955f518309eb8f"
+    },
+    {
+      "relativePath": "docs/academic_review/47b6/47b6_final_report.md",
+      "byteLength": 6230,
+      "sha256": "d06f36b31ff475a375b14c41dc4fc98714c3f6faf22e8f4a6407b2f3b8193160"
+    }
+  ]
+}

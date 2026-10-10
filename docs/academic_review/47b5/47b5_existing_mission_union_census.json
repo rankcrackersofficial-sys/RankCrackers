@@ -1,0 +1,35 @@
+{
+  "censusCode": "RC_47B5_EXISTING_MISSION_UNION_CENSUS",
+  "executedAt": "2026-09-10T06:57:27.761Z",
+  "metrics": {
+    "EXISTING_MISSION_UNION_COUNT": 3,
+    "THREE_PROJECTION_COMPLETE_COUNT": 3,
+    "PROJECTION_ORPHAN_COUNT": 0
+  },
+  "censusDetails": [
+    {
+      "missionId": "jee_main_2026",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    }
+  ]
+}

@@ -1,0 +1,412 @@
+{
+  "auditCode": "RC_47C7V_READINESS_RECOMPUTATION",
+  "executedAt": "2026-09-10T07:42:50.822Z",
+  "metrics": {
+    "TOTAL_MISSIONS_EVALUATED": 49,
+    "SHELL_RECORD_READY_COUNT_RECOMPUTED": 45,
+    "CATALOG_PREPARING_DISCOVERABLE_COUNT_RECOMPUTED": 45,
+    "MISSION_SELECTION_READY_COUNT_RECOMPUTED": 5,
+    "ACADEMIC_START_READY_COUNT": 0
+  },
+  "selectionReadyMissions": [
+    "afcat",
+    "navy_agniveer_ssr",
+    "agniveervayu",
+    "cbse_ctet",
+    "navy_agniveer_mr"
+  ],
+  "readinessLedger": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ifos",
+      "shellRecordReady": false,
+      "catalogPreparingDiscoverable": false,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "upsc_cds",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_nda_na",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_capf_ac",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ese",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_cms",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "shellRecordReady": false,
+      "catalogPreparingDiscoverable": false,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "upsc_geo_scientist",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_gd",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_je",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_cuet_ug",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_cuet_pg",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_ugc_net",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_csir_ugc_net",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "shellRecordReady": false,
+      "catalogPreparingDiscoverable": false,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "shellRecordReady": false,
+      "catalogPreparingDiscoverable": false,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "rrb_ntpc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_level_1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_alp",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_technician",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_je",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rpf_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rpf_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_po_mt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_csa",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_so",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_rrb_officer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_rrb_office_assistant",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "sbi_po",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "sbi_ja",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "afcat",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "navy_agniveer_ssr",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "agniveervayu",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "cbse_ctet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "navy_agniveer_mr",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    }
+  ]
+}

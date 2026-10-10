@@ -1,0 +1,71 @@
+{
+  "manifestCode": "RC_47C7V3_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T08:22:35.159Z",
+  "totalArtifactsTracked": 12,
+  "metrics": {
+    "PENDING_GENERATION_HASH_COUNT": 0,
+    "UNHASHED_REQUIRED_ARTIFACT_COUNT": 0
+  },
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_47c7v2_defect_reconciliation.json",
+      "byteLength": 1193,
+      "sha256": "b58bb5c2fc4aa58a7bc307679ab02947118701730669d1fc15bde8771163f307"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_afcat_source_oracle.json",
+      "byteLength": 538,
+      "sha256": "92e51d0e3502005f62162ff121e008f1c01511a4b17f85300b039c46cea4faf4"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_afcat_route_physical_oracle.json",
+      "byteLength": 1960,
+      "sha256": "083c43d45c0ca20656147442d41e552388d959a98618d882c8258b050d8130fa"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_nta_47c6_s3waas_physical_audit.json",
+      "byteLength": 481,
+      "sha256": "6170cec65e7fe3639b3ccf84e4b5a5644176fada7bfd0e6376643a6fa37a7839"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_ib_evidence_oracle.json",
+      "byteLength": 407,
+      "sha256": "64f7f1ae79948922a378035607b9c312239b89f0a0708490784fd3fafd6faeba"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_epfo_evidence_oracle.json",
+      "byteLength": 454,
+      "sha256": "feeaa68607b17e09156e0d95892dd7d7b62768610395bedf56ab567f983d3a03"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_ibps_evidence_oracle.json",
+      "byteLength": 551,
+      "sha256": "58eb549719ac005ea534eea7817196ee64c039cefa7c098c47455fd227f54e7b"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_ctet_evidence_oracle.json",
+      "byteLength": 524,
+      "sha256": "e6f1d2c8964a2c12676fb6856f7a679803ef00e5fa780eb50044d2d28bbf2c64"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_materializer_measured_snapshot.json",
+      "byteLength": 368,
+      "sha256": "33cb95893579d6a77fd5c073066403a8cf738558907927998444c35606d7c43f"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_verifier_v2_source_identity.json",
+      "byteLength": 357,
+      "sha256": "80bea14b2ed7cf0b505c20751e163ce896cde5a971edcce80dac341b6232347b"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_verifier_self_audit.json",
+      "byteLength": 583,
+      "sha256": "de1ce6a6a7f0624f399f63b60b506815d1c426a4da6a1c5ce4e2acb4d3a44e77"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v3/47c7v3_final_report.md",
+      "byteLength": 3183,
+      "sha256": "9da95a1d1232cf27bf1254ff5fd4b52b5197ad13f4d740a2ced00467c4f73c2a"
+    }
+  ]
+}

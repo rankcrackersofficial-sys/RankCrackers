@@ -1,0 +1,36 @@
+{
+  "auditCode": "RC_47C7V_IB_EPFO_CARRY_FORWARD_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.812Z",
+  "metrics": {
+    "PREVIOUSLY_UNRESOLVED_CANDIDATE_SILENTLY_DROPPED_COUNT": 2
+  },
+  "historicalTrackingIn47C5": [
+    {
+      "candidate": "Army CEE Tradesman 8th/10th split",
+      "reason": "Exact current Army governing document required."
+    },
+    {
+      "candidate": "Intelligence Bureau major exam family",
+      "reason": "Canonical current official source and recurrence not finalized."
+    },
+    {
+      "candidate": "EPFO major exam family",
+      "reason": "Canonical conducting model and current official source not finalized."
+    }
+  ],
+  "auditFindings": [
+    {
+      "candidate": "Intelligence Bureau major exam family (IB ACIO / Security Assistant)",
+      "trackingIn47C5": "Carried under unresolved with reason: Canonical current official source and recurrence not finalized.",
+      "trackingIn47C6": "ABSENT / DROPPED WITHOUT DISPOSITION",
+      "complianceStatus": "DEFECT_BLOCKER"
+    },
+    {
+      "candidate": "EPFO major exam family (Enforcement Officer / Accounts Officer / APFC)",
+      "trackingIn47C5": "Carried under unresolved with reason: Canonical conducting model and current official source not finalized.",
+      "trackingIn47C6": "ABSENT / DROPPED WITHOUT DISPOSITION",
+      "complianceStatus": "DEFECT_BLOCKER"
+    }
+  ],
+  "governanceLaw": "No previously identified major candidate family may silently disappear across gate boundaries. Each candidate must be assigned an explicit status: MAJOR_MISSION_ACCEPTED, MAJOR_REVIEW_REQUIRED, NOT_MAJOR_CURRENT_SCOPE, DUPLICATE_OF_EXISTING_CANONICAL_MISSION, or DEFERRED_WITH_EXACT_SOURCE_BLOCKER."
+}

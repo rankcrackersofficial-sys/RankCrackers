@@ -1,0 +1,1428 @@
+{
+  "MISSION_ID_SUBSTRING_TAXONOMY_COUNT": 0,
+  "TITLE_SUBSTRING_TAXONOMY_COUNT": 0,
+  "taxonomyAuditRows": [
+    {
+      "canonicalMissionId": "afcat",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "CG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "CG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "DN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "LA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "lane": "STATE_UT",
+      "jurisdictionType": "UT",
+      "regionCode": "LA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "ML",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MZ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "ML",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MZ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "SCIENCE_FELLOWSHIP",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENTRANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENTRANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "TEACHING_FELLOWSHIP",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAYS",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_FINANCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "SK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "SK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "MEDICAL",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENGINEERING",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "SCIENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "lane": "NATIONAL",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "approvedCorrectionUsed": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "approvedCorrectionUsed": false
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "lane": "STATE_UT",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "approvedCorrectionUsed": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "adapterModule": "functions/services/real_source_adapter.js",
+  "gate": "GATE 48CS2R5",
+  "sourceInputDirectory": "docs/academic_review/48cs4/",
+  "physicalFilesIngested": [
+    "48cs4_cycle_identity_registry.json",
+    "48cs4_source_provenance_registry.json",
+    "48cs4_notification_rulebook_registry.json",
+    "48cs4_eligibility_rule_registry.json",
+    "48cs4_reservation_rule_registry.json",
+    "48cs4_vacancy_matrix_registry.json",
+    "48cs4_amendment_chain_registry.json",
+    "48cs4_cycle_lifecycle_ledger.json",
+    "48cs4_career_signal_event_evidence.json",
+    "48cs4_unresolved_fact_registry.json",
+    "48cs4_rpsc_first_grade_deep_case.json"
+  ],
+  "adaptedPilotCount": 6,
+  "adaptationInvariants": {
+    "zeroSourceStatePromotion": "URL_FOUND with sha256: null remains URL_FOUND. Never promoted to SHA_VERIFIED.",
+    "zeroMissingRulePromotion": "Unextracted rules remain UNRESOLVED. Missing rule != verified absence.",
+    "zeroVacancyTablePromotion": "UNKNOWN vacancy tables remain UNAUDITED / TOTAL_SEATS_ONLY. Never promoted to COMPLETE_OFFICIAL_TABLE.",
+    "zeroAmendmentChainPromotion": "URL-only corrigenda remain CHAIN_PARTIAL. Never promoted to CURRENT_CHAIN_VERIFIED.",
+    "neetYearSafety": "NEET UG 2026 evidence preserved strictly as PRIOR_CYCLE_REFERENCE for neet_(ug)-2027.",
+    "rpscFirstGradeSafety": "Quarantined 2022 PDF barred from current rule authority; exact 06/2025-26 bytes preserved.",
+    "opportunityKindSeparation": "JEE/NEET mapped to ADMISSION_ENTRANCE; RPSC/UPSC/SSC mapped to JOB_RECRUITMENT."
+  }
+}

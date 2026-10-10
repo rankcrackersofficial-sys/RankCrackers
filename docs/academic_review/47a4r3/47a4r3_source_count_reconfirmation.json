@@ -1,0 +1,8 @@
+{
+  "RAW_SOURCE_REFERENCE_COUNT": 551,
+  "UNIQUE_SOURCE_URL_COUNT": 234,
+  "RAW_REACHABLE_REFERENCE_COUNT": 523,
+  "UNIQUE_REACHABLE_URL_COUNT": 214,
+  "HARDCODED_SOURCE_COUNT_CONSTANT_COUNT": 0,
+  "derivation": "Counts recomputed from active physical surfaceIntegrityRows and canonicalSurfaces arrays; reachability is not treated as mission evidence."
+}

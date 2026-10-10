@@ -1,0 +1,81 @@
+{
+  "gate": "GATE 48A6R2 — FINAL MATERIALIZATION VERIFIER REPAIR + APPLY PREFLIGHT",
+  "generatedAt": "2026-09-10T13:07:44.096Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a6r2_field_evidence_ledger.json",
+      "byteLength": 263717,
+      "sha256": "37df8523df2590a7237789595ba1ef64819e247a2f30f45815425be05fa9fb8e"
+    },
+    {
+      "fileName": "48a6r2_taxonomy_no_heuristic_audit.json",
+      "byteLength": 41387,
+      "sha256": "94e87876a56a94216c114a328b2d2ab8270d9f354a7443ab0dd7e3a6dee3bf69"
+    },
+    {
+      "fileName": "48a6r2_dynamic_safety_metrics.json",
+      "byteLength": 743,
+      "sha256": "3240dec741c3135b365e95b942853693471008975d8708476c88bdb5464aee25"
+    },
+    {
+      "fileName": "48a6r2_three_projection_payloads.json",
+      "byteLength": 223669,
+      "sha256": "3401c79051ef986f374ec6f36747a49fcb29a31c0e7a1b26bc26a56a6c89fcb5"
+    },
+    {
+      "fileName": "48a6r2_three_projection_validation.json",
+      "byteLength": 39742,
+      "sha256": "e9fb54e48cdc776b92fb76212667573c981ddd14844c3e42bc573c264016f765"
+    },
+    {
+      "fileName": "48a6r2_corrected_batch0_replacement.json",
+      "byteLength": 7932,
+      "sha256": "1e46de0826579fb39b0788fce0f9e6bffefcaa5b6b10010042ce59532f750887"
+    },
+    {
+      "fileName": "48a6r2_career_signal_status.json",
+      "byteLength": 50465,
+      "sha256": "5b37addf97cd7635d6e28de60a3c3bc248d51cc8bbb1a5abf8669dc8927f2190"
+    },
+    {
+      "fileName": "48a6r2_ready_set.json",
+      "byteLength": 53993,
+      "sha256": "b5efc466b53285704961bcf08a4d4569fa2d1a86b979fa55e9f2bed914fb4d23"
+    },
+    {
+      "fileName": "48a6r2_hold_set.json",
+      "byteLength": 46,
+      "sha256": "cd7325d153f36c30b48ce69006022cdcb48be1f0ed7d0fa1360cbec2c7c2cba1"
+    },
+    {
+      "fileName": "48a6r2_dynamic_small_batches.json",
+      "byteLength": 10092,
+      "sha256": "c781a2f3855afdca1a551423552c742ca7e068045ad34ab63fea301f36ed9152"
+    },
+    {
+      "fileName": "48a6r2_first_net_new_canary.json",
+      "byteLength": 8648,
+      "sha256": "f3d549073b3d944bbeb16c4ac82f2de31cb11f838ef8c21211da0cf0efd58351"
+    },
+    {
+      "fileName": "48a6r2_static_integrity.json",
+      "byteLength": 336,
+      "sha256": "eec5e939faf055ff861f180d7d82d2eba56927d05d8c1e3578249533c595ae3b"
+    },
+    {
+      "fileName": "48a6r2_determinism.json",
+      "byteLength": 249,
+      "sha256": "b12a291517c0ca2b9714294cb48fbb67a8cf490a7e1cc0af48360a59b5d168be"
+    },
+    {
+      "fileName": "48a6r2_final_preapply_handoff.json",
+      "byteLength": 638,
+      "sha256": "f73aa04db6a7c5b7f0165167ff2ce709b764775649843884a9054f5f08af10a4"
+    },
+    {
+      "fileName": "48a6r2_final_report.md",
+      "byteLength": 3225,
+      "sha256": "9921a577be8602fb5fe7b234429dac8fe0b93601bfd274aac355701e1916de74"
+    }
+  ]
+}

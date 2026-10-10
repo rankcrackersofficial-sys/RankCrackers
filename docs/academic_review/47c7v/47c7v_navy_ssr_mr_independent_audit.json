@@ -1,0 +1,29 @@
+{
+  "auditCode": "RC_47C7V_NAVY_SSR_MR_INDEPENDENT_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.793Z",
+  "metrics": {
+    "NAVY_SSR_MR_FALSE_MERGE_COUNT": 0,
+    "NAVY_SSR_MR_FALSE_DUPLICATE_COUNT": 0,
+    "NAVY_MR_CLASSIFICATION": "SEPARATE_MAJOR_MISSION"
+  },
+  "cadreComparison": {
+    "ssr": {
+      "missionId": "navy_agniveer_ssr",
+      "title": "Indian Navy Agniveer SSR / INET",
+      "eligibility": "10+2 with Mathematics & Physics from an accredited Board",
+      "examinationStructure": "Stage-I INET: 100 Questions (English 25, Science 25, Mathematics 25, General Awareness 25), 60 Minutes duration, -0.25 Negative Marking"
+    },
+    "mr": {
+      "missionId": "navy_agniveer_mr",
+      "title": "Indian Navy Agniveer MR / INET",
+      "eligibility": "10th Standard (Matriculation) from a recognized Board",
+      "examinationStructure": "Stage-I INET: 50 Questions (Science & Mathematics 25, General Awareness 25), 30 Minutes duration, -0.25 Negative Marking"
+    }
+  },
+  "officialDocumentEvidence": {
+    "mrNotificationUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+    "documentClassification": "CURRENT_STRUCTURAL_AUTHORITY",
+    "structuralIndependenceVerified": true
+  },
+  "verdict": "PASS (Agniveer MR established as distinct recurring recruitment from SSR with distinct statutory educational gateway and examination structure)"
+}

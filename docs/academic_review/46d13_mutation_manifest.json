@@ -1,0 +1,56 @@
+{
+  "gate": "RC_46D12_REJECTION_AND_NON_CIRCULAR_SOURCE_RECERTIFICATION_46D13",
+  "generatedAt": "2026-09-09T16:00:18.181Z",
+  "firstRunExecutedWritesCount": 8,
+  "purgedNonDocumentRowsCount": 3,
+  "mutations": [
+    {
+      "targetPath": "mission_realms/jee_main_2026/canonical_profile/current",
+      "action": "UPDATE",
+      "sourceEvidence": "NTA Official JEE (Main) - 2026 Information Bulletin & Prescribed Syllabus",
+      "reason": "Repair JEE Main 2026 Paper-1 pattern to exact 75 compulsory questions, 300 marks, 180 minutes."
+    },
+    {
+      "targetPath": "recruitments/jee_main_2026",
+      "action": "MERGE",
+      "sourceEvidence": "NTA Official JEE (Main) - 2026 Information Bulletin & Prescribed Syllabus",
+      "reason": "Synchronize recruitment examStructure with exact 75 questions, 300 marks CBT Paper-1."
+    },
+    {
+      "targetPath": "mission_realms/jee_main_2026/official_documents/doc_nta_jee_main_2026_bulletin",
+      "action": "UPDATE",
+      "sourceEvidence": "NTA JEE Main 2026 Official Bulletin (91 pages)",
+      "reason": "Reconcile page count metadata with officially served 91-page bulletin."
+    },
+    {
+      "targetPath": "mission_realms/neet_(ug)-2027/canonical_profile/current",
+      "action": "UPDATE",
+      "sourceEvidence": "NTA Official NEET (UG) - 2026 Information Bulletin & Core Syllabus Framework",
+      "reason": "Repair NEET UG pattern to exact 180 questions, 720 marks, 180 minutes."
+    },
+    {
+      "targetPath": "recruitments/neet_(ug)-2027",
+      "action": "MERGE",
+      "sourceEvidence": "NTA Official NEET (UG) - 2026 Information Bulletin",
+      "reason": "Synchronize recruitment examStructure with exact 180 questions, 720 marks OMR Paper-1."
+    },
+    {
+      "targetPath": "mission_realms/neet_(ug)-2027/official_documents/doc_nta_neet_ug_2026_bulletin",
+      "action": "UPDATE",
+      "sourceEvidence": "NTA NEET UG 2026 Official Bulletin (124 pages)",
+      "reason": "Reconcile page count metadata with officially served 124-page bulletin."
+    },
+    {
+      "targetPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/canonical_profile/current",
+      "action": "UPDATE",
+      "sourceEvidence": "RPSC Advt 06/2025-26, Advt 09/2025-26, Corrigendum 08/2025-26, Official 2025 Syllabus Registry",
+      "reason": "Replace universal Paper-I with distinct source-derived Academic (75Q/90m), Physical Education (100Q/120m), and Coach (100Q/120m) family architecture."
+    },
+    {
+      "targetPath": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "action": "MERGE",
+      "sourceEvidence": "RPSC Official Examination Scheme & Syllabi 2025-2026",
+      "reason": "Synchronize recruitment examStructure with 3 distinct Paper-I/Paper-II family models."
+    }
+  ]
+}

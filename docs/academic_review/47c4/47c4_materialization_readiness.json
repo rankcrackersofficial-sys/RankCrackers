@@ -1,0 +1,27 @@
+{
+  "afcat": {
+    "identityReady": true,
+    "authorityOwnerReady": true,
+    "latestNotificationReady": true,
+    "latestSyllabusOrSchemeReady": true,
+    "variantModelReady": true,
+    "pyqSourceState": "OFFICIAL_PYQ_NOT_FOUND_AFTER_EXHAUSTIVE_SEARCH"
+  },
+  "army_agniveer_cee": {
+    "identityReady": true,
+    "authorityOwnerReady": true,
+    "latestNotificationReady": false,
+    "latestSyllabusOrSchemeReady": false,
+    "variantModelReady": true,
+    "pyqSourceState": "PYQ_SOURCE_UNRESOLVED"
+  },
+  "agniveervayu": {
+    "identityReady": true,
+    "authorityOwnerReady": true,
+    "latestNotificationReady": true,
+    "latestSyllabusOrSchemeReady": true,
+    "variantModelReady": true,
+    "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+  },
+  "pyqAbsenceBlocksMission": false
+}

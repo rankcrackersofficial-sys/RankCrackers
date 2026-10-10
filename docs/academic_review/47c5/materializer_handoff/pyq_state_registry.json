@@ -1,0 +1,192 @@
+{
+  "missions": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_ifos",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_cds",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_nda_na",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_capf_ac",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_ese",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_cms",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "upsc_geo_scientist",
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_gd",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_je",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    },
+    {
+      "missionId": "nta_jee_main",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_neet_ug",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_cuet_ug",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_cuet_pg",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_ugc_net",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_csir_ugc_net",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rrb_ntpc",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rrb_level_1",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rrb_alp",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rrb_technician",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rrb_je",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rpf_si",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rpf_constable",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_po_mt",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_csa",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_so",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_rrb_officer",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_rrb_office_assistant",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "sbi_po",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "sbi_ja",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "afcat",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "navy_agniveer_ssr",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "agniveervayu",
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED"
+    }
+  ]
+}

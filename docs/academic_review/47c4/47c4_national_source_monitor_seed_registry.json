@@ -1,0 +1,372 @@
+{
+  "authorityProfiles": [
+    {
+      "authorityKey": "auth_in_upsc",
+      "authorityName": "Union Public Service Commission",
+      "officialPrimaryDomains": [
+        "upsc.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_upsc_primary",
+          "authorityKey": "auth_in_upsc",
+          "officialUrl": "https://upsc.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_ssc",
+      "authorityName": "Staff Selection Commission",
+      "officialPrimaryDomains": [
+        "ssc.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_ssc_primary",
+          "authorityKey": "auth_in_ssc",
+          "officialUrl": "https://ssc.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_cbse",
+      "authorityName": "Central Board of Secondary Education",
+      "officialPrimaryDomains": [
+        "cbse.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_cbse_primary",
+          "authorityKey": "auth_in_cbse",
+          "officialUrl": "https://cbse.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_nta",
+      "authorityName": "National Testing Agency",
+      "officialPrimaryDomains": [
+        "nta.ac.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_nta_primary",
+          "authorityKey": "auth_in_nta",
+          "officialUrl": "https://nta.ac.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_rrb",
+      "authorityName": "Railway Recruitment Boards",
+      "officialPrimaryDomains": [
+        "rrbcdg.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rrb_primary",
+          "authorityKey": "auth_in_rrb",
+          "officialUrl": "https://rrbcdg.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_rpf_rrb",
+      "authorityName": "Railway Protection Force recruitment via RRB",
+      "officialPrimaryDomains": [
+        "indianrailways.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rpf_rrb_primary",
+          "authorityKey": "auth_in_rpf_rrb",
+          "officialUrl": "https://indianrailways.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_ibps",
+      "authorityName": "Institute of Banking Personnel Selection",
+      "officialPrimaryDomains": [
+        "ibps.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_ibps_primary",
+          "authorityKey": "auth_in_ibps",
+          "officialUrl": "https://ibps.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_sbi",
+      "authorityName": "State Bank of India",
+      "officialPrimaryDomains": [
+        "sbi.co.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_sbi_primary",
+          "authorityKey": "auth_in_sbi",
+          "officialUrl": "https://sbi.co.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_rbi",
+      "authorityName": "Reserve Bank of India",
+      "officialPrimaryDomains": [
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rbi_primary",
+          "authorityKey": "auth_in_rbi",
+          "officialUrl": "https://rbi.org.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_nabard",
+      "authorityName": "NABARD",
+      "officialPrimaryDomains": [
+        "nabard.org"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_nabard_primary",
+          "authorityKey": "auth_in_nabard",
+          "officialUrl": "https://nabard.org/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_indian_army",
+      "authorityName": "Indian Army",
+      "officialPrimaryDomains": [
+        "joinindianarmy.nic.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_army_primary",
+          "authorityKey": "auth_in_indian_army",
+          "officialUrl": "https://joinindianarmy.nic.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_indian_navy",
+      "authorityName": "Indian Navy",
+      "officialPrimaryDomains": [
+        "joinindiannavy.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_navy_primary",
+          "authorityKey": "auth_in_indian_navy",
+          "officialUrl": "https://joinindiannavy.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    },
+    {
+      "authorityKey": "auth_in_indian_air_force",
+      "authorityName": "Indian Air Force",
+      "officialPrimaryDomains": [
+        "careerairforce.gov.in",
+        "iafrecruitment.edcil.co.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_air_force_primary",
+          "authorityKey": "auth_in_indian_air_force",
+          "officialUrl": "https://careerairforce.gov.in/",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "missionScope": [
+            "AUTHORITY_WIDE"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "checkFrequencyRecommendation": "DAILY",
+          "ephemeralWindowRisk": "MEDIUM",
+          "browserAdapterRequired": true,
+          "captchaRisk": "UNKNOWN",
+          "loginRisk": "UNKNOWN",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+        }
+      ],
+      "monitorConfigured": false,
+      "monitorRuntimeProven": false,
+      "lastSuccessfulCheck": null
+    }
+  ],
+  "authoritySourceProfileRelationship": "authority profile -> source surfaces -> discovered documents -> mission router -> canonical missions",
+  "runtimeMonitorClaimCount": 0
+}

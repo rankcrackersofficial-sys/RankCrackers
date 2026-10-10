@@ -1,0 +1,117 @@
+{
+  "contractCode": "RC_47B2_AUTHORITY_RESOLUTION_CONTRACT",
+  "executedAt": "2026-09-10T06:00:00.726Z",
+  "knownCanonicalAuthoritiesCount": 14,
+  "failClosedPolicy": "Any manifest mission referencing an authorityKey not registered in CANONICAL_AUTHORITIES raises UNKNOWN_AUTHORITY error and fails validation immediately.",
+  "singleCentralOwnershipLaw": "Central authorities (auth_in_upsc, auth_in_ssc, auth_in_cbse, auth_in_ibps) cannot be cloned per State/UT.",
+  "acceptedAuthorities": [
+    {
+      "id": "auth_in_upsc",
+      "name": "Union Public Service Commission",
+      "shortName": "UPSC",
+      "jurisdiction": "CENTRAL",
+      "isCentral": true
+    },
+    {
+      "id": "auth_in_ssc",
+      "name": "Staff Selection Commission",
+      "shortName": "SSC",
+      "jurisdiction": "CENTRAL",
+      "isCentral": true
+    },
+    {
+      "id": "auth_in_cbse",
+      "name": "Central Board of Secondary Education",
+      "shortName": "CBSE",
+      "jurisdiction": "CENTRAL",
+      "isCentral": true
+    },
+    {
+      "id": "auth_in_ibps",
+      "name": "Institute of Banking Personnel Selection",
+      "shortName": "IBPS",
+      "jurisdiction": "CENTRAL",
+      "isCentral": true
+    },
+    {
+      "id": "auth_in_rj_rpsc",
+      "name": "Rajasthan Public Service Commission",
+      "shortName": "RPSC",
+      "jurisdiction": "STATE",
+      "regionCode": "RJ",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_up_uppsc",
+      "name": "Uttar Pradesh Public Service Commission",
+      "shortName": "UPPSC",
+      "jurisdiction": "STATE",
+      "regionCode": "UP",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_mp_mppsc",
+      "name": "Madhya Pradesh Public Service Commission",
+      "shortName": "MPPSC",
+      "jurisdiction": "STATE",
+      "regionCode": "MP",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_br_bpsc",
+      "name": "Bihar Public Service Commission",
+      "shortName": "BPSC",
+      "jurisdiction": "STATE",
+      "regionCode": "BR",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_la_dssrb",
+      "name": "LAHDC District Selection Services Board",
+      "shortName": "LAHDC_DSSRB",
+      "jurisdiction": "UT",
+      "regionCode": "LA",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_dl_dsssb",
+      "name": "Delhi Subordinate Services Selection Board",
+      "shortName": "DSSSB",
+      "jurisdiction": "UT",
+      "regionCode": "DL",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_pb_police",
+      "name": "Punjab Police Recruitment Board",
+      "shortName": "PUNJAB_POLICE",
+      "jurisdiction": "STATE",
+      "regionCode": "PB",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_ch_police",
+      "name": "Chandigarh Police Department",
+      "shortName": "CHANDIGARH_POLICE",
+      "jurisdiction": "UT",
+      "regionCode": "CH",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_la_police",
+      "name": "Ladakh Police Department",
+      "shortName": "LADAKH_POLICE",
+      "jurisdiction": "UT",
+      "regionCode": "LA",
+      "isCentral": false
+    },
+    {
+      "id": "auth_in_ch_admin",
+      "name": "Chandigarh Administration",
+      "shortName": "CHANDIGARH_ADMIN",
+      "jurisdiction": "UT",
+      "regionCode": "CH",
+      "isCentral": false
+    }
+  ]
+}

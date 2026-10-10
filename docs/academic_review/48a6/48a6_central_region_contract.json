@@ -1,0 +1,6 @@
+{
+  "canonicalCentralRegionCode": "IN",
+  "stateCodeForCentralMissions": null,
+  "schemaRule": "Central / All-India missions must store regionCode='IN' and stateCode=null in Firestore documents.",
+  "CENTRAL_REGION_SCHEMA_CONFLICT_COUNT": 0
+}

@@ -1,0 +1,1561 @@
+{
+  "matrix": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_RESOLVED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "variantStatus": "VARIANTS_NOT_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "sourceStatus": "SOURCE_PENDING",
+      "patternStatus": "PATTERN_UNVERIFIED",
+      "variantStatus": "VARIANTS_REQUIRED",
+      "selectionStatus": "SELECTION_NOT_READY",
+      "academicStatus": "ACADEMIC_HOLD"
+    }
+  ]
+}

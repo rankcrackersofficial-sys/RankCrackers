@@ -1,0 +1,23 @@
+{
+  "mandatoryAtOnboarding": false,
+  "progressiveFields": [
+    "dateOfBirth",
+    "gender",
+    "reservationCategory",
+    "domicileState",
+    "nationality",
+    "highestQualification",
+    "degreeOrCourse",
+    "subjectOrDiscipline",
+    "passingStatus",
+    "passingYear",
+    "percentageOrCgpa",
+    "experience",
+    "professionalRegistration",
+    "computerCertificate",
+    "drivingLicence",
+    "PwBD",
+    "exServiceman"
+  ],
+  "sensitiveCategoryPolicy": "SPECIAL_CATEGORY_VALUES_MUST_BE_EXPLICITLY_USER_PROVIDED_NEVER_INFERRED"
+}

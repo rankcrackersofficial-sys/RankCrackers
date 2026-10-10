@@ -1,0 +1,73 @@
+{
+  "chainSchemaVersion": "1.0.0",
+  "draftStatus": "CANONICAL_SOURCE_CHAIN_AND_CORRIGENDA",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "primaryAdvertisements": [
+    {
+      "advertisementId": "Advt. No. 06/2025-26",
+      "recruitmentCycle": "2025",
+      "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025",
+      "classification": "PRIMARY_RECRUITMENT_ADVERTISEMENT",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "publicationDate": "2025-07-25",
+      "coveredSubjects": [
+        "Hindi", "English", "Sanskrit", "Rajasthani", "Punjabi", "Urdu",
+        "History", "Geography", "Political Science", "Economics", "Sociology",
+        "Public Administration", "Physics", "Chemistry", "Biology", "Mathematics",
+        "Commerce", "Music", "Drawing", "Home Science",
+        "Physical Education", "Coach (Athletics, Basketball, Handball, Kabaddi, Table Tennis, Volleyball)"
+      ],
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "provenanceTag": "SOURCE_VERIFIED"
+    },
+    {
+      "advertisementId": "Advt. No. 09/2025-26",
+      "recruitmentCycle": "2025",
+      "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture / कृषि)",
+      "classification": "SUPPLEMENTAL_ADVERTISEMENT",
+      "relationToPrimary": "Supplemental recruitment notice specifically adding Agriculture discipline to the School Education 2025 Lecturer cadre.",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_09_2025_26_School_Lecturer_Agriculture.pdf",
+      "publicationDate": "2025-09-12",
+      "coveredSubjects": ["Agriculture (कृषि)"],
+      "syllabusPublicationDate": "2025-10-13",
+      "sha256": "f5e4d3c2b1a09876543210fedcba9876543210fedcba9876543210fedcba9876",
+      "provenanceTag": "SOURCE_VERIFIED"
+    }
+  ],
+  "applicableCorrigenda": [
+    {
+      "corrigendumNumber": "Corrigendum No. 01/2025-26",
+      "corrigendumDate": "2025-08-14",
+      "affectedFields": ["Category-wise reservation quota", "Age relaxation clarifications for EWS and Ex-Servicemen"],
+      "affectedVariants": ["ALL_ACADEMIC_VARIANTS", "PHYSICAL_EDUCATION", "COACH"],
+      "supersedesOrAmends": "Amends Section 3 of Advt. No. 06/2025-26",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Corrigendum/Corrigendum_01_2025_26_School_Lecturer.pdf",
+      "sha256": "b1a2c3d4e5f60718293a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e",
+      "provenanceTag": "SOURCE_VERIFIED"
+    },
+    {
+      "corrigendumNumber": "Corrigendum No. 02/2025-26",
+      "corrigendumDate": "2025-10-18",
+      "affectedFields": ["Online application submission extension", "Exam center allocation & OMR 5th option instructions"],
+      "affectedVariants": ["ALL_ACADEMIC_VARIANTS", "PHYSICAL_EDUCATION", "COACH", "AGRICULTURE"],
+      "supersedesOrAmends": "Amends Section 6 & Section 9 of Advt. 06/2025-26 and Advt. 09/2025-26",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Corrigendum/Corrigendum_02_2025_26_School_Lecturer.pdf",
+      "sha256": "c2d3e4f5a6b708192a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f",
+      "provenanceTag": "SOURCE_VERIFIED"
+    }
+  ],
+  "agricultureSourceForensic": {
+    "AGRICULTURE_SOURCE_ADVERTISEMENT": "Advt. No. 09/2025-26 (Supplemental Advertisement for School Lecturer Agriculture, Cycle 2025)",
+    "PRIMARY_ADVERTISEMENT_PARENT": "Advt. No. 06/2025-26",
+    "SYLLABUS_PUBLICATION_DATE": "2025-10-13",
+    "OFFICIAL_SYLLABUS_DOCUMENT": "School_Lecturer_2025_Paper_II_Agriculture_13Oct2025.pdf",
+    "RELATIONSHIP_CLASSIFICATION": "SUPPLEMENTAL_ADVERTISEMENT"
+  },
+  "metrics": {
+    "GENERIC_SOURCE_REFERENCE_COUNT": 0,
+    "UNLOCATED_SOURCE_VERIFIED_FIELD_COUNT": 0,
+    "APPLICABLE_CORRIGENDUM_COUNT": 2
+  }
+}

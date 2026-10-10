@@ -1,0 +1,103 @@
+{
+  "missionId": "army_agniveer_cee",
+  "authorityKey": "auth_in_indian_army",
+  "sourceReady": false,
+  "identityReady": true,
+  "currentRecruitingYear": "2026-27",
+  "currentBreadcrumbReady": true,
+  "directCurrentNotificationReady": false,
+  "schemeFacts": {
+    "mode": "Computer Based Test",
+    "feeInr": 250,
+    "registrationOpen": "2026-02-13",
+    "registrationClose": "2026-04-01",
+    "examDates": "2026-06-01 through 2026-06-12"
+  },
+  "categories": [
+    "Agniveer General Duty",
+    "Agniveer Technical",
+    "Agniveer Office Assistant/Store Keeper Technical",
+    "Agniveer Tradesman",
+    "Agniveer Women Military Police"
+  ],
+  "regularCadreRelationship": "Same Online CEE ecosystem also covers named regular-cadre entries; do not merge them without mission qualification.",
+  "exactBlocker": "OFFICIAL_SITE_ACCESS_BLOCKED: current MoD/PIB facts verified, but direct current Army notification/syllabus child was not publicly retrievable.",
+  "sources": [
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "title": "Indian Army Online CEE registration 2026-27",
+      "role": "MOD_PIB_CURRENT_BREADCRUMB",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48",
+      "title": "Indian Army Online CEE 2027 dates",
+      "role": "MOD_PIB_SCHEDULE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48",
+      "title": "Indian Army CEE results and categories",
+      "role": "MOD_PIB_CATEGORY_EVIDENCE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    }
+  ],
+  "attemptLedger": [
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_01",
+      "queryOrUrl": "https://www.joinindianarmy.nic.in/",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Canonical portal identified; exact child content not returned by research client",
+      "httpState": "TECHNICAL_ACCESS_GAP",
+      "linksDiscovered": [],
+      "nextAction": "Use MoD/PIB breadcrumb"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves registration 13 Feb–1 Apr 2026, CBT, Rs 250 fee, June exam and Army portal",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48"
+      ],
+      "nextAction": "Check schedule release"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves 1–12 June 2026 online CEE schedule",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48"
+      ],
+      "nextAction": "Check categories/results"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves GD, Technical, Office Assistant/SKT, Tradesman, Women MP and regular-cadre categories",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Continue direct-notice/syllabus discovery"
+    }
+  ]
+}

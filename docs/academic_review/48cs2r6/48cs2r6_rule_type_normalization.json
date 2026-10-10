@@ -1,0 +1,88 @@
+{
+  "gate": "48CS2R6",
+  "contractName": "REAL_RULE_TYPE_NORMALIZATION_MAP",
+  "contractVersion": "1.0.0",
+  "description": "Deterministic mapping of real-world rule types observed in 48CS2R5/48CS4/48CS5 to canonical rule families without substring heuristics.",
+  "mappingTable": [
+    {
+      "ruleType": "AGE_LIMIT",
+      "canonicalFamily": "AGE",
+      "description": "Explicit upper/lower age limits or post-specific bands"
+    },
+    {
+      "ruleType": "MINIMUM_AGE",
+      "canonicalFamily": "AGE",
+      "description": "Minimum age criterion as of crucial date"
+    },
+    {
+      "ruleType": "UPPER_AGE_LIMIT",
+      "canonicalFamily": "AGE",
+      "description": "Maximum age criterion as of crucial date"
+    },
+    {
+      "ruleType": "AGE_MAX",
+      "canonicalFamily": "AGE",
+      "description": "Upper age bound"
+    },
+    {
+      "ruleType": "AGE_MIN",
+      "canonicalFamily": "AGE",
+      "description": "Lower age bound"
+    },
+    {
+      "ruleType": "AGE_RELAXATION",
+      "canonicalFamily": "AGE",
+      "description": "Category/service-specific age relaxation rule"
+    },
+    {
+      "ruleType": "QUALIFYING_EXAM_YEAR",
+      "canonicalFamily": "EDUCATION",
+      "description": "Permissible passing/appearing years for qualifying exam"
+    },
+    {
+      "ruleType": "EDUCATION_CUTOFF_DATE",
+      "canonicalFamily": "EDUCATION",
+      "description": "Crucial date by which educational qualification must be acquired"
+    },
+    {
+      "ruleType": "QUALIFICATION_MIN",
+      "canonicalFamily": "EDUCATION",
+      "description": "Minimum educational credential requirement"
+    },
+    {
+      "ruleType": "QUALIFYING_SUBJECTS",
+      "canonicalFamily": "DISCIPLINE",
+      "description": "Mandatory academic subjects/disciplines studied in qualifying exam"
+    },
+    {
+      "ruleType": "DISCIPLINE_REQUIRED",
+      "canonicalFamily": "DISCIPLINE",
+      "description": "Degree discipline or branch requirement"
+    },
+    {
+      "ruleType": "STATE_ELIGIBILITY",
+      "canonicalFamily": "DOMICILE",
+      "description": "State of eligibility (e.g. school location vs native residence)"
+    },
+    {
+      "ruleType": "DOMICILE_REQUIRED",
+      "canonicalFamily": "DOMICILE",
+      "description": "State domicile requirement for regional quotas"
+    },
+    {
+      "ruleType": "CATEGORY_RESERVATION",
+      "canonicalFamily": "CATEGORY_OR_RESERVATION",
+      "description": "Vertical and horizontal reservation rules"
+    },
+    {
+      "ruleType": "EXPERIENCE_REQUIRED",
+      "canonicalFamily": "EXPERIENCE",
+      "description": "Post-qualification professional experience requirement"
+    }
+  ],
+  "failClosedPolicy": {
+    "unknownRuleTypeHandling": "Any ruleType not present in mappingTable is marked isRecognized: false and fails closed to status: UNRESOLVED with isSourceGap: true.",
+    "personalizationImpact": "Presence of an unrecognized ruleType forces overall eligibilityStatus to NOT_EVALUATED.",
+    "substringHeuristicsProhibited": "Strict boolean equality check against normalized ruleType enum; zero string.includes() matching."
+  }
+}

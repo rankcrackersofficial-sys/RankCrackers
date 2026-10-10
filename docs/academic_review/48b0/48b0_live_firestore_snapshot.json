@@ -1,0 +1,322 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "target": "LIVE_FIRESTORE_FRESH_READ",
+  "projectId": "rankcrackers-55",
+  "capturedAt": "2026-09-10T10:32:13.567Z",
+  "collectionsEvaluated": {
+    "mission_realms": {
+      "success": true,
+      "documentCount": 15,
+      "documentIds": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ],
+      "queryDurationMs": 8289,
+      "error": null,
+      "documentTimestamps": {
+        "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+          "createTime": "2026-09-09T12:59:12.377Z",
+          "updateTime": "2026-09-09T14:55:42.111Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "jee_main_2026": {
+          "createTime": "2026-09-09T12:59:12.377Z",
+          "updateTime": "2026-09-09T14:55:40.406Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "neet_(ug)-2027": {
+          "createTime": "2026-09-09T12:59:12.377Z",
+          "updateTime": "2026-09-09T14:55:40.751Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "rpsc_ras_prelims": {
+          "createTime": "2026-09-09T14:55:52.435Z",
+          "updateTime": "2026-09-09T14:55:52.435Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_cgl": {
+          "createTime": "2026-09-09T14:55:43.852Z",
+          "updateTime": "2026-09-09T14:55:43.852Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_chsl": {
+          "createTime": "2026-09-09T14:55:45.987Z",
+          "updateTime": "2026-09-09T14:55:45.987Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_cpo": {
+          "createTime": "2026-09-09T14:55:49.380Z",
+          "updateTime": "2026-09-09T14:55:49.380Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_gd": {
+          "createTime": "2026-09-09T14:55:50.708Z",
+          "updateTime": "2026-09-09T14:55:50.708Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_hindi_translators": {
+          "createTime": "2026-09-09T14:55:47.675Z",
+          "updateTime": "2026-09-09T14:55:47.675Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_je": {
+          "createTime": "2026-09-09T14:55:44.256Z",
+          "updateTime": "2026-09-09T14:55:44.256Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_mts_havaldar": {
+          "createTime": "2026-09-09T14:55:48.996Z",
+          "updateTime": "2026-09-09T14:55:48.996Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_selection_post": {
+          "createTime": "2026-09-09T14:55:45.586Z",
+          "updateTime": "2026-09-09T14:55:45.586Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "ssc_stenographer": {
+          "createTime": "2026-09-09T14:55:47.278Z",
+          "updateTime": "2026-09-09T14:55:47.278Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "uppsc_pcs_prelims": {
+          "createTime": "2026-09-09T14:55:51.120Z",
+          "updateTime": "2026-09-09T14:55:51.120Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        },
+        "upsc_cse_prelims": {
+          "createTime": "2026-09-09T14:55:42.485Z",
+          "updateTime": "2026-09-09T14:55:42.485Z",
+          "readTime": "2026-09-10T10:32:40.163Z"
+        }
+      }
+    },
+    "recruitments": {
+      "success": true,
+      "documentCount": 16,
+      "documentIds": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "test_mission_catalog_bridge",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ],
+      "queryDurationMs": 810,
+      "error": null,
+      "documentTimestamps": {
+        "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+          "createTime": "2026-07-04T08:15:55.216Z",
+          "updateTime": "2026-09-09T15:59:41.070Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "jee_main_2026": {
+          "createTime": "2026-07-06T14:00:16.708Z",
+          "updateTime": "2026-09-09T15:59:35.671Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "neet_(ug)-2027": {
+          "createTime": "2026-07-06T15:26:26.827Z",
+          "updateTime": "2026-09-09T15:59:37.702Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "rpsc_ras_prelims": {
+          "createTime": "2026-09-09T14:55:52.435Z",
+          "updateTime": "2026-09-09T15:44:11.370Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_cgl": {
+          "createTime": "2026-09-09T14:55:43.852Z",
+          "updateTime": "2026-09-09T15:44:04.164Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_chsl": {
+          "createTime": "2026-09-09T14:55:45.987Z",
+          "updateTime": "2026-09-09T15:44:06.421Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_cpo": {
+          "createTime": "2026-09-09T14:55:49.380Z",
+          "updateTime": "2026-09-09T15:44:09.325Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_gd": {
+          "createTime": "2026-09-09T14:55:50.708Z",
+          "updateTime": "2026-09-09T15:44:10.013Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_hindi_translators": {
+          "createTime": "2026-09-09T14:55:47.675Z",
+          "updateTime": "2026-09-09T15:44:07.986Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_je": {
+          "createTime": "2026-09-09T14:55:44.256Z",
+          "updateTime": "2026-09-09T15:44:05.080Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_mts_havaldar": {
+          "createTime": "2026-09-09T14:55:48.996Z",
+          "updateTime": "2026-09-09T15:44:08.666Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_selection_post": {
+          "createTime": "2026-09-09T14:55:45.586Z",
+          "updateTime": "2026-09-09T15:44:05.740Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "ssc_stenographer": {
+          "createTime": "2026-09-09T14:55:47.278Z",
+          "updateTime": "2026-09-09T15:44:07.084Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "test_mission_catalog_bridge": {
+          "createTime": "2026-07-10T10:57:45.069Z",
+          "updateTime": "2026-07-10T10:57:45.069Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "uppsc_pcs_prelims": {
+          "createTime": "2026-09-09T14:55:51.120Z",
+          "updateTime": "2026-09-09T15:44:10.698Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        },
+        "upsc_cse_prelims": {
+          "createTime": "2026-09-09T14:55:42.485Z",
+          "updateTime": "2026-09-09T15:44:03.189Z",
+          "readTime": "2026-09-10T10:32:40.637Z"
+        }
+      }
+    },
+    "student_mission_catalog": {
+      "success": true,
+      "documentCount": 15,
+      "documentIds": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ],
+      "queryDurationMs": 1272,
+      "error": null,
+      "documentTimestamps": {
+        "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+          "createTime": "2026-07-10T10:31:34.655Z",
+          "updateTime": "2026-09-09T15:07:32.664Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "jee_main_2026": {
+          "createTime": "2026-07-10T10:31:24.278Z",
+          "updateTime": "2026-09-09T14:55:40.406Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "neet_(ug)-2027": {
+          "createTime": "2026-07-10T10:31:29.394Z",
+          "updateTime": "2026-09-09T14:55:40.751Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "rpsc_ras_prelims": {
+          "createTime": "2026-09-09T14:55:52.435Z",
+          "updateTime": "2026-09-09T14:55:52.435Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_cgl": {
+          "createTime": "2026-09-09T14:55:43.852Z",
+          "updateTime": "2026-09-09T14:55:43.852Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_chsl": {
+          "createTime": "2026-09-09T14:55:45.987Z",
+          "updateTime": "2026-09-09T14:55:45.987Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_cpo": {
+          "createTime": "2026-09-09T14:55:49.380Z",
+          "updateTime": "2026-09-09T14:55:49.380Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_gd": {
+          "createTime": "2026-09-09T14:55:50.708Z",
+          "updateTime": "2026-09-09T14:55:50.708Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_hindi_translators": {
+          "createTime": "2026-09-09T14:55:47.675Z",
+          "updateTime": "2026-09-09T14:55:47.675Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_je": {
+          "createTime": "2026-09-09T14:55:44.256Z",
+          "updateTime": "2026-09-09T14:55:44.256Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_mts_havaldar": {
+          "createTime": "2026-09-09T14:55:48.996Z",
+          "updateTime": "2026-09-09T14:55:48.996Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_selection_post": {
+          "createTime": "2026-09-09T14:55:45.586Z",
+          "updateTime": "2026-09-09T14:55:45.586Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "ssc_stenographer": {
+          "createTime": "2026-09-09T14:55:47.278Z",
+          "updateTime": "2026-09-09T14:55:47.278Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "uppsc_pcs_prelims": {
+          "createTime": "2026-09-09T14:55:51.120Z",
+          "updateTime": "2026-09-09T14:55:51.120Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        },
+        "upsc_cse_prelims": {
+          "createTime": "2026-09-09T14:55:42.485Z",
+          "updateTime": "2026-09-09T14:55:42.485Z",
+          "readTime": "2026-09-10T10:32:41.989Z"
+        }
+      }
+    }
+  },
+  "metrics": {
+    "LIVE_UNION_COUNT": 16,
+    "MISSION_REALMS_COUNT": 15,
+    "RECRUITMENTS_COUNT": 16,
+    "STUDENT_MISSION_CATALOG_COUNT": 15,
+    "READ_SUCCESS": true,
+    "CACHED_FALLBACK_USED": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "gate": "GATE_48CS2R1_RESERVATION_ENGINE_CONTRACT",
+  "generatedAt": "2026-09-10T11:26:52.326Z",
+  "engineModule": "functions/services/career_signal_matching_engine.js",
+  "pureFunction": "evaluateApplicableVacancies(profile, vacancyRows)",
+  "constitutionalRulesEnforced": [
+    {
+      "rule": "VERTICAL_CATEGORY_ISOLATION",
+      "description": "An applicant belonging to a vertical reserved category (SC, ST, OBC, EWS) can only match UR (open merit) or their own exact category. An SC candidate NEVER matches OBC vacancies; an OBC candidate NEVER matches SC vacancies.",
+      "verifiedByTest": "Test 15: OBC female applicant is isolated from SC vacancies"
+    },
+    {
+      "rule": "HORIZONTAL_QUOTA_INTERSECTION",
+      "description": "Horizontal reservations (Women, PwBD, Ex-Servicemen) intersect vertical quotas. A female SC candidate matches SC (women/all) and UR (women/all).",
+      "verifiedByTest": "Test 14: SC female reservation applicability"
+    },
+    {
+      "rule": "NO_DOUBLE_COUNTING",
+      "description": "Applicants with intersecting quotas (e.g. UR PwBD) are matched only to authorized intersecting vacancies without inflating headcount.",
+      "verifiedByTest": "Test 16: Horizontal quota intersection without double counting"
+    },
+    {
+      "rule": "OPEN_MERIT_ACCESSIBILITY",
+      "description": "Unreserved (UR) vacancies are open to all meritorious candidates regardless of vertical reservation status.",
+      "verifiedByTest": "Test 17: UR (Open Merit) vacancy matches qualified candidate of any category"
+    }
+  ],
+  "metrics": {
+    "CROSS_VERTICAL_CATEGORY_FALSE_APPLICABILITY_COUNT": 0,
+    "HORIZONTAL_VERTICAL_DOUBLE_COUNT_COUNT": 0
+  }
+}

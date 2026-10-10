@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "stateCandidate": "CTET regional pointers",
+      "canonicalNationalMissionId": "cbse_ctet",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "stateCandidate": "Delhi Police SI",
+      "canonicalNationalMissionId": "ssc_cpo",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "stateCandidate": "SSC Selection Post Ladakh",
+      "canonicalNationalMissionId": "ssc_selection_post",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "stateCandidate": "UPSC regional discovery",
+      "canonicalNationalMissionId": "upsc_cse_prelims",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "stateCandidate": "IBPS RRB Officers",
+      "canonicalNationalMissionId": "ibps_crp_rrb_officers",
+      "manifestMissionId": "ibps_rrb_officer",
+      "resolution": "ID_REVIEW_REQUIRED_BEFORE_APPLY",
+      "collision": false
+    },
+    {
+      "stateCandidate": "IBPS RRB Office Assistant",
+      "canonicalNationalMissionId": "ibps_crp_rrb_office_assistant",
+      "manifestMissionId": "ibps_rrb_office_assistant",
+      "resolution": "ID_REVIEW_REQUIRED_BEFORE_APPLY",
+      "collision": false
+    }
+  ],
+  "stateNationalCanonicalCollisionCount": 0,
+  "unresolvedCrossLaneOwnershipCount": 0
+}

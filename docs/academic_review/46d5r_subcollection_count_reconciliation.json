@@ -1,0 +1,72 @@
+{
+  "gate": "RC_CANONICAL_MISSION_AUTHORITY_POST_REPAIR_CERTIFICATION_46D5R",
+  "analyzedAt": "2026-09-09T13:40:01.133Z",
+  "overallVerdict": "SUBCOLLECTION_COUNT_DISCREPANCY_EXPLAINED",
+  "reconciliations": [
+    {
+      "collectionPath": "mission_realms/jee_main_2026/crucible_days",
+      "count46d5Baseline": 1,
+      "method46d5Baseline": "Filtered query targeting single plan_jee_2026 sample entry",
+      "count46a5Final": 120,
+      "method46a5Final": "Full collection query (collection(\"crucible_days\").get())",
+      "freshLiveCount": 120,
+      "sampleDocCreationTime": "2026-07-09T15:26:27.000Z",
+      "breakdown": {
+        "plan_jee_2026": 100,
+        "legacy_plan_jee_2026": 20
+      },
+      "attribution": "COUNT_METHOD_DIFFERENCE",
+      "repairAttributableWrites": 0,
+      "explained": true
+    },
+    {
+      "collectionPath": "mission_realms/jee_main_2026/syllabus_atoms",
+      "count46d5Baseline": 223,
+      "method46d5Baseline": "Active/held-duplicate query filter (active: 211, heldDuplicate: 12)",
+      "count46a5Final": 430,
+      "method46a5Final": "Full collection query across Physics, Chemistry, and Mathematics",
+      "freshLiveCount": 430,
+      "sampleDocCreationTime": "2026-07-20T06:04:50.000Z",
+      "breakdown": {
+        "Physics": 177,
+        "Chemistry": 160,
+        "Mathematics": 93
+      },
+      "attribution": "COUNT_METHOD_DIFFERENCE",
+      "repairAttributableWrites": 0,
+      "explained": true
+    },
+    {
+      "collectionPath": "mission_realms/neet_(ug)-2027/syllabus_atoms",
+      "count46d5Baseline": 7,
+      "method46d5Baseline": "Limited to 7 Cell Biology prototype AMTNs (amtn_bio_cell_001..007)",
+      "count46a5Final": 219,
+      "method46a5Final": "Full collection query across all 20 units (U01..U20)",
+      "freshLiveCount": 219,
+      "sampleDocCreationTime": "2026-08-25T09:41:59.000Z",
+      "breakdown": {
+        "Biology": 33,
+        "Chemistry": 87,
+        "Physics": 99
+      },
+      "attribution": "COUNT_METHOD_DIFFERENCE",
+      "repairAttributableWrites": 0,
+      "explained": true
+    },
+    {
+      "collectionPath": "mission_realms/jee_main_2026/digibook_units",
+      "count46d5Baseline": "UNTRACKED",
+      "method46d5Baseline": "Omitted from 46D5 baseline subcollection inventory schema",
+      "count46a5Final": 31,
+      "method46a5Final": "Dynamic listCollections() discovery and query",
+      "freshLiveCount": 31,
+      "sampleDocCreationTime": "2026-07-10T07:17:32.000Z",
+      "breakdown": {
+        "digibook_units": 31
+      },
+      "attribution": "PREEXISTING_BASELINE_CAPTURE_LIMIT",
+      "repairAttributableWrites": 0,
+      "explained": true
+    }
+  ]
+}

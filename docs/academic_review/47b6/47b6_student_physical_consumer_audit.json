@@ -1,0 +1,18 @@
+{
+  "auditCode": "RC_47B6_STUDENT_PHYSICAL_CONSUMER_AUDIT",
+  "executedAt": "2026-09-10T07:08:16.413Z",
+  "physicalFileAudited": "lib/services/firestore_service.dart",
+  "methodAudited": "streamStudentMissionCatalogRecruitments",
+  "parsedFields": [
+    "id",
+    "missionId",
+    "title",
+    "catalogStatus",
+    "studentMessage",
+    "visibility"
+  ],
+  "metrics": {
+    "STUDENT_CONSUMER_SCHEMA_BLOCKER_COUNT": 0
+  },
+  "auditPass": true
+}

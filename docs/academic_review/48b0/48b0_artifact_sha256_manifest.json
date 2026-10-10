@@ -1,0 +1,72 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "manifestTimestamp": "2026-09-10T10:40:41.857Z",
+  "totalArtifactsCount": 16,
+  "totalBytes": 108895,
+  "artifacts": {
+    "48b0_current_live_semantic_defects.json": {
+      "sha256": "004a3354773056e036be40fe179183a1586764349ab39654823b1dd6b022c352",
+      "sizeBytes": 5500
+    },
+    "48b0_current_student_visible_set.json": {
+      "sha256": "e76202fab9ab4d0ee1d3b3cafec69f9a592a6b87bde9bb38831b2d1b3121dc90",
+      "sizeBytes": 10983
+    },
+    "48b0_final_report.md": {
+      "sha256": "c990e353676afc5cd19d67b9b747ac8a23430a6fc6ea4b4556f85e1a54727ebe",
+      "sizeBytes": 25280
+    },
+    "48b0_governance_safety.json": {
+      "sha256": "08a13cf4d6263f6b833a1e759ae04fdacdc2d1f6de847dbf38c92a47537e3898",
+      "sizeBytes": 806
+    },
+    "48b0_idempotency_proof.json": {
+      "sha256": "d579f68ba4660604043b96d4307bbfe1da629178d1ba362238a3eba6ad62c557",
+      "sizeBytes": 470
+    },
+    "48b0_live_firestore_snapshot.json": {
+      "sha256": "2427ed091b97345d8ea2c166627591cee77f28d5a92e8580f92f7ebca0a9895d",
+      "sizeBytes": 11170
+    },
+    "48b0_live_repair_operation_plan.json": {
+      "sha256": "35a4486af4be32767ce33f2c9d48746a84eabb2ae4db682ffd0c9b1198bfc0da",
+      "sizeBytes": 4491
+    },
+    "48b0_materializer_contract_audit.json": {
+      "sha256": "dfb6cdaf2bd6ec9cf5e605d7ccf5b10ca0feee4860f98ff1ab13b968e35ad30b",
+      "sizeBytes": 1709
+    },
+    "48b0_neet_repair_dryrun.json": {
+      "sha256": "1c4f2c23c1be3c521594abe02efb30a6c0efb2972a5e50c2710d141e3bc527e1",
+      "sizeBytes": 3856
+    },
+    "48b0_no_production_mutation_proof.json": {
+      "sha256": "2c1e5b9a7e974b1f5b5b1b2b4d6e31adeaa0f9a48317b23803f058dba75e2fb0",
+      "sizeBytes": 485
+    },
+    "48b0_orphan_forensic_ledger.json": {
+      "sha256": "3aab05c588221dcf9e0d1f63e8048bb3a22623907e1f0ed39195e0a2b648510e",
+      "sizeBytes": 1237
+    },
+    "48b0_rpsc_first_grade_variant_projection_dryrun.json": {
+      "sha256": "d9d109443e82f536768e5f0c3f45806309c5bdbe27a24da670dce91467bdd679",
+      "sizeBytes": 23354
+    },
+    "48b0_rpsc_ras_repair_dryrun.json": {
+      "sha256": "8bf3943d0393b6ba467775f6b511950ab73165a64626c440b0566f769e859ccb",
+      "sizeBytes": 2933
+    },
+    "48b0_startability_truth_audit.json": {
+      "sha256": "49c92ad42466c9ab51c35383bfb77e3d0292578b05b14ea100f02b34863f7299",
+      "sizeBytes": 1589
+    },
+    "48b0_student_founder_contract_compatibility.json": {
+      "sha256": "4ac76f424a87708b7666aa99e85bff186a400d9cd6b3eb492c85486588165ba2",
+      "sizeBytes": 1854
+    },
+    "48b0_three_projection_matrix.json": {
+      "sha256": "c508f2cceea0a63bc228b1ef9d8411588e8f5c9fb0794d1db7641b501f63672c",
+      "sizeBytes": 13178
+    }
+  }
+}

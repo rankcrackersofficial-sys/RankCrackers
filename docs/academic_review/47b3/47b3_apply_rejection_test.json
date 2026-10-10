@@ -1,0 +1,11 @@
+{
+  "testCode": "RC_47B3_APPLY_REJECTION_TEST",
+  "executedAt": "2026-09-10T06:11:50.564Z",
+  "scenario": "Invoking runGenericMissionMaterializer with mode = 'APPLY'",
+  "applyModeRejected": true,
+  "metrics": {
+    "APPLY_MODE_REQUEST_REJECTED": "YES",
+    "PRODUCTION_FIRESTORE_WRITE_COUNT": 0
+  },
+  "assertionPass": true
+}

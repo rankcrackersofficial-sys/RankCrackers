@@ -1,0 +1,27 @@
+{
+  "gate": "47UI5",
+  "contract": "India 28 States + 8 Union Territories = 36 Administrative Units",
+  "canonical_ut_codes": {
+    "AN": "Andaman and Nicobar Islands",
+    "CH": "Chandigarh",
+    "DN": "Dadra and Nagar Haveli and Daman and Diu",
+    "DL": "Delhi",
+    "JK": "Jammu and Kashmir",
+    "LA": "Ladakh",
+    "LD": "Lakshadweep",
+    "PY": "Puducherry"
+  },
+  "audit_results": {
+    "invalid_dh_usage": "Replaced with DN across all sources, models, and tests",
+    "states_supported": 28,
+    "uts_supported": 8,
+    "total_units": 36
+  },
+  "metrics": {
+    "INVALID_DH_REGION_CODE_USAGE_COUNT": 0,
+    "DN_UT_DISCOVERY_SUPPORTED": "YES",
+    "STATE_COUNT_SUPPORTED": 28,
+    "UT_COUNT_SUPPORTED": 8
+  },
+  "status": "PASSED"
+}

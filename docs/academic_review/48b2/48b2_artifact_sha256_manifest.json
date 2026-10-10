@@ -1,0 +1,17 @@
+{
+  "gate": "GATE_48B2_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T11:22:48.219Z",
+  "totalFiles": 10,
+  "files": {
+    "48b2_batch0_exact_mutation_plan.json": "1a4cdcd7edf83431e7720cc0acc5d424e92ea242c4ced134020b6a1905789db3",
+    "48b2_batch0_idempotency.json": "c60336f37b7307be044f05823829b03c853474bd6c34cb9a295c5230e0ed64b9",
+    "48b2_final_report.md": "71f49d0f088cd5d46fd69f9c6622c355b5f8b01043a49fd51037c7a6c03267c5",
+    "48b2_fresh_live_snapshot.json": "40b46111d4e4c59a955ccf7ba4fdb5db36491de2376595ce6e90eca5f66aaf02",
+    "48b2_neet_exact_repair.json": "24890259b6646ee308ff71ab4a38d3003936d8fab3057b07c026116401aea908",
+    "48b2_rpsc_first_grade_variant_authority.json": "f0c5b4723f53cf2cda0388c650df131b004326cd0885db4a369fb193b85019b3",
+    "48b2_rpsc_ras_exact_repair.json": "2e22c8620ef3408aca8926e65fa47ba9244cf071c0ab5974e9717858edbf4bc0",
+    "48b2_semantic_field_contract_audit.json": "d21641a95eb3f13e1fa3b56ad440f74e9654a9d0c80d67fd3b7c5c1d445b1997",
+    "48b2_startability_dynamic_repair.json": "783d495ab4ab74df414f48ef87cfe83e75cd9dfd212976a1a24b1409ad278571",
+    "48b2_test_orphan_cleanup_script_audit.json": "611d07f14c271b2517f9f698912863c73062afd338d7aa489ecef5c8801aec42"
+  }
+}

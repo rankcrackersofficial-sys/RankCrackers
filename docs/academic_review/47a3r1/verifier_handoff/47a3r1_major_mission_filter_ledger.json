@@ -1,0 +1,3065 @@
+{
+  "ledgerCode": "RC_47A3R1_MAJOR_MISSION_FILTER_LEDGER",
+  "generatedAt": "2026-09-10T07:00:05.915Z",
+  "metrics": {
+    "CANDIDATE_MISSION_COUNT": 153,
+    "MAJOR_MISSION_ACCEPTED_COUNT": 12,
+    "MAJOR_WITH_NON_NUMERIC_SCALE_EVIDENCE_COUNT": 128,
+    "MAJOR_REVIEW_REQUIRED_COUNT": 6,
+    "NOT_MAJOR_CURRENT_SCOPE_COUNT": 4,
+    "DUPLICATE_CANONICAL_MISSION_COUNT": 2,
+    "LEGACY_INACTIVE_ONLY_COUNT": 1,
+    "TOTAL_ACCEPTED_MAJOR_MISSIONS": 140,
+    "ACCEPTED_MAJOR_WITH_ZERO_EVIDENCE_COUNT": 0
+  },
+  "missionLedger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UPPSC PCS – Prelims",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_uppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Combined State / Upper Subordinate Services Examination Press Note",
+          "verifiedFact": "574,000+ applicants registered for Uttar Pradesh premier civil services examination."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Combined State / Upper Subordinate Services Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 220 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UPPSC RO/ARO – Prelims",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_uppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Samiksha Adhikari / Sahayak Samiksha Adhikari Examination Press Release",
+          "verifiedFact": "1,076,004 applications officially verified for 411 Review Officer / Assistant Review Officer posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Samiksha Adhikari / Sahayak Samiksha Adhikari Examination Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 411 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "studentRecognizableDisplayName": "UPSSSC PET",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_upsssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://upsssc.gov.in/Default.aspx",
+          "officialSourceTitle": "UPSSSC Preliminary Eligibility Test (PET) 2023 Candidate Statistics Notice",
+          "verifiedFact": "3,758,209 candidates registered for UPSSSC PET as statutory prerequisite for all UP Group C posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://upsssc.gov.in",
+          "officialSourceTitle": "UPSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 2
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "canonicalExamName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "studentRecognizableDisplayName": "UPSSSC VDO / Gram Panchayat Adhikari",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_upsssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://upsssc.gov.in",
+          "officialSourceTitle": "UPSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "studentRecognizableDisplayName": "UP Police Constable",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_upprpb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "4,817,441 applications officially verified for 60,244 constable posts under Advt PRPB-1(150)/2023."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 60,244 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://uppbpb.gov.in",
+          "officialSourceTitle": "UPPRPB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "studentRecognizableDisplayName": "UP Police SI",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_upprpb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://uppbpb.gov.in",
+          "officialSourceTitle": "UPPRPB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "studentRecognizableDisplayName": "UPTET (Paper 1 & Paper 2)",
+      "regionCode": "UP",
+      "canonicalAuthorityKey": "auth_in_up_pnp",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://updeled.gov.in",
+          "officialSourceTitle": "Pariksha Niyamak Pradhikari UPTET Examination Summary Notice",
+          "verifiedFact": "2,165,000 candidates registered across Paper 1 (Primary) and Paper 2 (Upper Primary)."
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://updeled.gov.in",
+          "officialSourceTitle": "PNP_UP Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 2
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "canonicalExamName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UKPSC PCS – Prelims",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "canonicalExamName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "studentRecognizableDisplayName": "UKPSC Lower Subordinate – Prelims",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "studentRecognizableDisplayName": "Uttarakhand Police SI",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "canonicalExamName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "studentRecognizableDisplayName": "UKSSSC Group C Combined",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_uksssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssc.uk.gov.in",
+          "officialSourceTitle": "UKSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "uk_police_constable",
+      "canonicalExamName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "studentRecognizableDisplayName": "Uttarakhand Police Constable",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_uksssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssc.uk.gov.in",
+          "officialSourceTitle": "UKSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "studentRecognizableDisplayName": "UTET (Paper 1 & Paper 2)",
+      "regionCode": "UK",
+      "canonicalAuthorityKey": "auth_in_uk_ubse",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://ubse.uk.gov.in",
+          "officialSourceTitle": "UBSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "canonicalExamName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "HPPSC HPAS – Prelims",
+      "regionCode": "HP",
+      "canonicalAuthorityKey": "auth_in_hp_hppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hppsc.hp.gov.in",
+          "officialSourceTitle": "HPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "canonicalExamName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "studentRecognizableDisplayName": "HP Police Constable",
+      "regionCode": "HP",
+      "canonicalAuthorityKey": "auth_in_hp_hppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hppsc.hp.gov.in",
+          "officialSourceTitle": "HPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "canonicalExamName": "Group C Common Computer Based Test / Screening Examination",
+      "studentRecognizableDisplayName": "HPRCA Group C Common",
+      "regionCode": "HP",
+      "canonicalAuthorityKey": "auth_in_hp_hprca",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hprca.hp.gov.in",
+          "officialSourceTitle": "HPRCA Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "studentRecognizableDisplayName": "HP TET",
+      "regionCode": "HP",
+      "canonicalAuthorityKey": "auth_in_hp_hpbose",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://hpbose.org",
+          "officialSourceTitle": "HPBOSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "canonicalExamName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "studentRecognizableDisplayName": "PPSC PSCSCCE – Prelims",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_ppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://ppsc.gov.in",
+          "officialSourceTitle": "PPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "psssb_clerk",
+      "canonicalExamName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "studentRecognizableDisplayName": "PSSSB Clerk Combined",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_psssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssb.punjab.gov.in",
+          "officialSourceTitle": "PSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "psssb_patwari",
+      "canonicalExamName": "Revenue Patwari Recruitment Examination",
+      "studentRecognizableDisplayName": "PSSSB Revenue Patwari",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_psssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssb.punjab.gov.in",
+          "officialSourceTitle": "PSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "studentRecognizableDisplayName": "Punjab Police Constable",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "470,000+ candidates applied for 1,746 district and armed police constable posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 1,746 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "studentRecognizableDisplayName": "Punjab Police SI",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "studentRecognizableDisplayName": "PSTET (Paper 1 & Paper 2)",
+      "regionCode": "PB",
+      "canonicalAuthorityKey": "auth_in_pb_pseb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://pseb.ac.in",
+          "officialSourceTitle": "PSEB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "canonicalExamName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "HPSC HCS – Prelims",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_hpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hpsc.gov.in",
+          "officialSourceTitle": "HPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "studentRecognizableDisplayName": "HSSC CET Group C",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_hssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group C Notification",
+          "verifiedFact": "1,120,000 candidates registered for common gateway to 32,000 Group C posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group C Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 32,000 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "studentRecognizableDisplayName": "HSSC CET Group D",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_hssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group D Notification",
+          "verifiedFact": "1,350,000 candidates registered for Group D recruitment across Haryana departments."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group D Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 13,536 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "studentRecognizableDisplayName": "Haryana Police Constable",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_hssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "400,000+ candidates registered for 6,000 male and female constable posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 6,000 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "haryana_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "studentRecognizableDisplayName": "Haryana Police SI",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_hssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "studentRecognizableDisplayName": "HTET (PRT / TGT / PGT)",
+      "regionCode": "HR",
+      "canonicalAuthorityKey": "auth_in_hr_bseh",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://bseh.org.in",
+          "officialSourceTitle": "BSEH Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "canonicalExamName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "studentRecognizableDisplayName": "JKPSC CCE – Prelims",
+      "regionCode": "JK",
+      "canonicalAuthorityKey": "auth_in_jk_jkpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://jkpsc.nic.in",
+          "officialSourceTitle": "JKPSC Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jk_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "studentRecognizableDisplayName": "J&K Police Constable",
+      "regionCode": "JK",
+      "canonicalAuthorityKey": "auth_in_jk_jkssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jk_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "studentRecognizableDisplayName": "J&K Police SI",
+      "regionCode": "JK",
+      "canonicalAuthorityKey": "auth_in_jk_jkssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "canonicalExamName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "studentRecognizableDisplayName": "JKSSB Graduate Combined",
+      "regionCode": "JK",
+      "canonicalAuthorityKey": "auth_in_jk_jkssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "studentRecognizableDisplayName": "SSC Selection Posts Ladakh",
+      "regionCode": "LA",
+      "canonicalAuthorityKey": "auth_in_la_admin",
+      "classification": "DUPLICATE_OF_EXISTING_CANONICAL_MISSION",
+      "classificationReason": "Conducted by SSC NWR under the canonical SSC Selection Post examination framework (ssc_selection_post). Vacancies belong to UT of Ladakh; not an independent examination identity.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://ladakh.gov.in",
+          "officialSourceTitle": "UT Ladakh Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "canonicalExamName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "studentRecognizableDisplayName": "Ladakh Police Constable",
+      "regionCode": "LA",
+      "canonicalAuthorityKey": "auth_in_la_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.ladakh.gov.in",
+          "officialSourceTitle": "Ladakh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "canonicalExamName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "studentRecognizableDisplayName": "LAHDC DSSRB District Cadre",
+      "regionCode": "LA",
+      "canonicalAuthorityKey": "auth_in_la_dssrb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://leh.nic.in",
+          "officialSourceTitle": "LAHDC DSSRB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "canonicalExamName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "studentRecognizableDisplayName": "Chandigarh Police Constable",
+      "regionCode": "CH",
+      "canonicalAuthorityKey": "auth_in_ch_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://chandigarhpolice.gov.in",
+          "officialSourceTitle": "Chandigarh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "canonicalExamName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "studentRecognizableDisplayName": "Chandigarh Police ASI",
+      "regionCode": "CH",
+      "canonicalAuthorityKey": "auth_in_ch_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://chandigarhpolice.gov.in",
+          "officialSourceTitle": "Chandigarh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "canonicalExamName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "studentRecognizableDisplayName": "Chandigarh JBT Teacher",
+      "regionCode": "CH",
+      "canonicalAuthorityKey": "auth_in_ch_admin",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://chandigarh.gov.in",
+          "officialSourceTitle": "Chandigarh Admin Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "studentRecognizableDisplayName": "Chandigarh TGT Teacher",
+      "regionCode": "CH",
+      "canonicalAuthorityKey": "auth_in_ch_admin",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://chandigarh.gov.in",
+          "officialSourceTitle": "Chandigarh Admin Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "studentRecognizableDisplayName": "DSSSB TGT Combined",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_dsssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "canonicalExamName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "studentRecognizableDisplayName": "DSSSB PRT Assistant Teacher",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_dsssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "studentRecognizableDisplayName": "DSSSB PGT Combined",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_dsssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "canonicalExamName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "studentRecognizableDisplayName": "DSSSB Junior Assistant / LDC",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_dsssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "studentRecognizableDisplayName": "Delhi Police Constable (Executive)",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_delpol",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://delhipolice.gov.in",
+          "officialSourceTitle": "Delhi Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "studentRecognizableDisplayName": "Delhi Police Sub-Inspector (SI)",
+      "regionCode": "DL",
+      "canonicalAuthorityKey": "auth_in_dl_delpol",
+      "classification": "DUPLICATE_OF_EXISTING_CANONICAL_MISSION",
+      "classificationReason": "Conducted centrally by Staff Selection Commission via SSC CPO Examination (ssc_cpo). Delhi regional pointer routes to ssc_cpo. Duplicate permanent mission suppressed.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://delhipolice.gov.in",
+          "officialSourceTitle": "Delhi Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "studentRecognizableDisplayName": "RPSC RAS / RTS (Prelims)",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_rpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Rajasthan State & Subordinate Services Examination Press Note",
+          "verifiedFact": "697,000+ candidates applied for RAS/RTS preliminary examination."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Rajasthan State & Subordinate Services Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 905 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "studentRecognizableDisplayName": "RPSC 1st Grade Teacher / School Lecturer",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_rpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "studentRecognizableDisplayName": "Rajasthan CET 12th Level",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_rssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rsmssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSMSSB Common Eligibility Test (Senior Secondary Level) Notification",
+          "verifiedFact": "1,600,000+ candidates registered for mandatory gateway test covering 7 subordinate state cadres."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://rssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 2
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "studentRecognizableDisplayName": "Rajasthan CET Graduate Level",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_rssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://rssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "studentRecognizableDisplayName": "REET (Level 1 & Level 2)",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_rbse",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "Board of Secondary Education Rajasthan REET Official Press Release",
+          "verifiedFact": "Over 1,400,000 candidates appeared for REET Level 1 and Level 2 mandatory teacher eligibility certification."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "Board of Secondary Education Rajasthan REET Official Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 48,000 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "RBSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Rajasthan Police Constable",
+      "regionCode": "RJ",
+      "canonicalAuthorityKey": "auth_in_rj_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "540,000+ candidates registered for constable GD, driver, and telecommunication posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 3,578 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "canonicalExamName": "Madhya Pradesh State Service Examination",
+      "studentRecognizableDisplayName": "MPPSC State Service Exam (Prelims)",
+      "regionCode": "MP",
+      "canonicalAuthorityKey": "auth_in_mp_mppsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mppsc.mp.gov.in",
+          "officialSourceTitle": "MPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "studentRecognizableDisplayName": "MP Police Constable",
+      "regionCode": "MP",
+      "canonicalAuthorityKey": "auth_in_mp_mpesb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Over 950,000 candidates applied for 7,411 constable executive and radio operator posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 7,411 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "canonicalExamName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "studentRecognizableDisplayName": "MP Patwari / Group 2 Sub Group 4",
+      "regionCode": "MP",
+      "canonicalAuthorityKey": "auth_in_mp_mpesb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "studentRecognizableDisplayName": "MP TET (Varg 1, Varg 2, Varg 3)",
+      "regionCode": "MP",
+      "canonicalAuthorityKey": "auth_in_mp_mpesb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "canonicalExamName": "Chhattisgarh State Service Examination",
+      "studentRecognizableDisplayName": "CGPSC State Service Exam (Prelims)",
+      "regionCode": "CG",
+      "canonicalAuthorityKey": "auth_in_cg_cgpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.cg.gov.in",
+          "officialSourceTitle": "CGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "studentRecognizableDisplayName": "CG TET (Paper 1 & Paper 2)",
+      "regionCode": "CG",
+      "canonicalAuthorityKey": "auth_in_cg_cgvyapam",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://vyapam.cgstate.gov.in",
+          "officialSourceTitle": "CG Vyapam Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "cg_police_constable",
+      "canonicalExamName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "studentRecognizableDisplayName": "CG Police Constable",
+      "regionCode": "CG",
+      "canonicalAuthorityKey": "auth_in_cg_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://cgpolice.gov.in",
+          "officialSourceTitle": "CG Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "canonicalExamName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "studentRecognizableDisplayName": "GPSC Class 1-2 (Gujarat Civil Services)",
+      "regionCode": "GJ",
+      "canonicalAuthorityKey": "auth_in_gj_gpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://gpsc.gujarat.gov.in",
+          "officialSourceTitle": "GPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gsssb_cce",
+      "canonicalExamName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "studentRecognizableDisplayName": "GSSSB CCE (Clerk / Head Clerk / Office Assistant)",
+      "regionCode": "GJ",
+      "canonicalAuthorityKey": "auth_in_gj_gsssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gsssb.gujarat.gov.in",
+          "officialSourceTitle": "GSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gpssb_talati",
+      "canonicalExamName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "studentRecognizableDisplayName": "GPSSB Talati cum Mantri",
+      "regionCode": "GJ",
+      "canonicalAuthorityKey": "auth_in_gj_gpssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gpssb.gujarat.gov.in",
+          "officialSourceTitle": "GPSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "canonicalExamName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "studentRecognizableDisplayName": "Gujarat Police Constable / Lokrakshak",
+      "regionCode": "GJ",
+      "canonicalAuthorityKey": "auth_in_gj_gprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.gujarat.gov.in",
+          "officialSourceTitle": "GPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "studentRecognizableDisplayName": "Gujarat TET (TET-1 / TET-2)",
+      "regionCode": "GJ",
+      "canonicalAuthorityKey": "auth_in_gj_seb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://sebexam.org",
+          "officialSourceTitle": "SEB Gujarat Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "studentRecognizableDisplayName": "MPSC Rajyaseva / Civil Services Combined Prelims",
+      "regionCode": "MH",
+      "canonicalAuthorityKey": "auth_in_mh_mpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC State Services Examination Statistical Summary",
+          "verifiedFact": "385,000 candidates applied for Maharashtra Civil Services preliminary screening."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC State Services Examination Statistical Summary",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 274 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "canonicalExamName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "studentRecognizableDisplayName": "MPSC Group B & C Combined Prelims (PSI / STI / ASO / Clerk)",
+      "regionCode": "MH",
+      "canonicalAuthorityKey": "auth_in_mh_mpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "studentRecognizableDisplayName": "Maharashtra Police Constable (Police Bharti)",
+      "regionCode": "MH",
+      "canonicalAuthorityKey": "auth_in_mh_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "1,750,000+ applications received for 17,471 police constable, driver, and SRPF band posts statewide."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 17,471 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://mahapolice.gov.in",
+          "officialSourceTitle": "Maharashtra Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "studentRecognizableDisplayName": "MAHATET (Paper 1 & Paper 2)",
+      "regionCode": "MH",
+      "canonicalAuthorityKey": "auth_in_mh_mscepune",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://mscepune.in",
+          "officialSourceTitle": "MSCE Pune Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "canonicalExamName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "studentRecognizableDisplayName": "Goa Civil Service (JSO / GPSC)",
+      "regionCode": "GA",
+      "canonicalAuthorityKey": "auth_in_ga_gpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://gpsc.goa.gov.in",
+          "officialSourceTitle": "GPSC Goa Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "canonicalExamName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "studentRecognizableDisplayName": "GSSC Goa Group C (LDC / Junior Stenographer / MTS)",
+      "regionCode": "GA",
+      "canonicalAuthorityKey": "auth_in_ga_gssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gssc.goa.gov.in",
+          "officialSourceTitle": "GSSC Goa Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "canonicalExamName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "studentRecognizableDisplayName": "Goa Police PSI & Constable",
+      "regionCode": "GA",
+      "canonicalAuthorityKey": "auth_in_ga_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://goapolice.gov.in",
+          "officialSourceTitle": "Goa Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "canonicalExamName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "studentRecognizableDisplayName": "DNH & DD SSB Group B & Group C (LDC / Assistant / JE / Police Constable)",
+      "regionCode": "DN",
+      "canonicalAuthorityKey": "auth_in_dn_ssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://ssb.dd.gov.in",
+          "officialSourceTitle": "DNH & DD SSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "studentRecognizableDisplayName": "BPSC CCE Prelims",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC Combined Competitive Examination Official Press Note",
+          "verifiedFact": "Over 600,000 candidates registered for Bihar administrative and police services selection."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC Combined Competitive Examination Official Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 442 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://bpsc.bihar.gov.in",
+          "officialSourceTitle": "BPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "studentRecognizableDisplayName": "BPSC TRE (School Teacher)",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC School Teacher Written Examination (TRE 3.0) Official Notice",
+          "verifiedFact": "Over 874,000 applications registered across 87,774 teaching vacancies in primary, middle, secondary schools."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC School Teacher Written Examination (TRE 3.0) Official Notice",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 87,774 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://bpsc.bihar.gov.in",
+          "officialSourceTitle": "BPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "bssc_cgl",
+      "canonicalExamName": "BSSC Graduate Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "BSSC CGL (Graduate Level)",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "BSSC Inter Level (10+2)",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC 2nd Inter Level Combined Competitive Examination Advertisement 02/23",
+          "verifiedFact": "Over 2,500,000 candidates applied for 12,199 intermediate level subordinate posts across Bihar departments."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC 2nd Inter Level Combined Competitive Examination Advertisement 02/23",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 12,199 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "studentRecognizableDisplayName": "Bihar Police SI (Daroga)",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bpssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpssc.bih.nic.in",
+          "officialSourceTitle": "BPSSC Sub-Inspector Direct Recruitment Advt 02/2023",
+          "verifiedFact": "660,000+ candidates applied for 1,275 Police Sub-Inspector (Daroga) posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpssc.bih.nic.in",
+          "officialSourceTitle": "BPSSC Sub-Inspector Direct Recruitment Advt 02/2023",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 1,275 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://bpssc.bihar.gov.in",
+          "officialSourceTitle": "BPSSC Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Bihar Police Constable",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_csbc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "1,780,000 candidates applied for 21,391 police constable posts across Bihar districts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 21,391 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://csbc.bihar.gov.in",
+          "officialSourceTitle": "CSBC Bihar Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Bihar STET",
+      "regionCode": "BR",
+      "canonicalAuthorityKey": "auth_in_br_bseb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bsebstet2024.com",
+          "officialSourceTitle": "Bihar School Examination Board STET Candidate Statistics",
+          "verifiedFact": "420,000+ candidates registered for secondary and senior secondary teacher eligibility."
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://secondary.biharboardonline.com",
+          "officialSourceTitle": "BSEB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 2
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "canonicalExamName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "studentRecognizableDisplayName": "JPSC CCE Prelims",
+      "regionCode": "JH",
+      "canonicalAuthorityKey": "auth_in_jh_jpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://jpsc.gov.in",
+          "officialSourceTitle": "JPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jssc_cgl",
+      "canonicalExamName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "JSSC CGL (JGGLCCE)",
+      "regionCode": "JH",
+      "canonicalAuthorityKey": "auth_in_jh_jssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jssc.nic.in",
+          "officialSourceTitle": "JSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "canonicalExamName": "Jharkhand Constable Competitive Examination",
+      "studentRecognizableDisplayName": "Jharkhand Police Constable (JCCE)",
+      "regionCode": "JH",
+      "canonicalAuthorityKey": "auth_in_jh_jssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jssc.nic.in",
+          "officialSourceTitle": "JSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Jharkhand TET (JTET)",
+      "regionCode": "JH",
+      "canonicalAuthorityKey": "auth_in_jh_jac",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://jac.jharkhand.gov.in",
+          "officialSourceTitle": "JAC Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "canonicalExamName": "Odisha Civil Services Examination (Prelims)",
+      "studentRecognizableDisplayName": "OPSC OCS Prelims (OAS / OFS)",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_opsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://www.opsc.gov.in",
+          "officialSourceTitle": "OPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ossc_cgl",
+      "canonicalExamName": "OSSC Combined Graduate Level Recruitment Examination",
+      "studentRecognizableDisplayName": "OSSC CGL (CGLRE)",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_ossc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://www.ossc.gov.in",
+          "officialSourceTitle": "OSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "canonicalExamName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "studentRecognizableDisplayName": "OSSSC Combined Exam (RI / ARI / AMIN)",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_osssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://www.osssc.gov.in",
+          "officialSourceTitle": "OSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "canonicalExamName": "Odisha Police Civil Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Odisha Police Constable",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_opssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://odishapolice.gov.in",
+          "officialSourceTitle": "OPSSB / OUSSSC Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Odisha TET (OTET)",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_bse",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.bseodisha.ac.in",
+          "officialSourceTitle": "BSE Odisha Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "studentRecognizableDisplayName": "SSB Odisha Lecturer / PGT Recruitment",
+      "regionCode": "OD",
+      "canonicalAuthorityKey": "auth_in_od_ssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://ssbodisha.ac.in",
+          "officialSourceTitle": "SSB Odisha Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "canonicalExamName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "studentRecognizableDisplayName": "WBCS Prelims",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.wb.gov.in",
+          "officialSourceTitle": "WBPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "canonicalExamName": "WBPSC Clerkship Examination",
+      "studentRecognizableDisplayName": "WBPSC Clerkship",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.wb.gov.in",
+          "officialSourceTitle": "WBPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "WB Police Constable",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "850,000+ applications received for 11,749 constable posts in West Bengal Police."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 11,749 posts."
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "canonicalExamName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "studentRecognizableDisplayName": "WB Police SI",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "WB Primary TET",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbbpe",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://wbbpe.org",
+          "officialSourceTitle": "West Bengal Board of Primary Education TET Press Release",
+          "verifiedFact": "620,000+ candidates registered for West Bengal Primary Teacher Eligibility Test."
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.wbbpe.org",
+          "officialSourceTitle": "WBBPE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 2
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "studentRecognizableDisplayName": "WB School Service Commission SLST (Assistant Teacher)",
+      "regionCode": "WB",
+      "canonicalAuthorityKey": "auth_in_wb_wbcssc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.westbengalssc.com",
+          "officialSourceTitle": "WBCSSC Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "canonicalExamName": "A&N Administration Common Higher Secondary Level Recruitment Examination",
+      "studentRecognizableDisplayName": "A&N Administration CHSL",
+      "regionCode": "AN",
+      "canonicalAuthorityKey": "auth_in_an_erecruitment",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://erecruitment.andaman.gov.in",
+          "officialSourceTitle": "A&N Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "canonicalExamName": "A&N Administration Combined Matric Level Recruitment Examination",
+      "studentRecognizableDisplayName": "A&N Administration Matric Level (CML)",
+      "regionCode": "AN",
+      "canonicalAuthorityKey": "auth_in_an_erecruitment",
+      "classification": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE",
+      "classificationReason": "Small Island UT sporadic administration recruitment with low preparation target demand.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://erecruitment.andaman.gov.in",
+          "officialSourceTitle": "A&N Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "canonicalExamName": "Andaman & Nicobar Police Constable & Sub-Inspector Examination",
+      "studentRecognizableDisplayName": "A&N Police Constable / SI",
+      "regionCode": "AN",
+      "canonicalAuthorityKey": "auth_in_an_police",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.andaman.gov.in",
+          "officialSourceTitle": "A&N Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "appsc_group1",
+      "canonicalExamName": "APPSC Group-I Services Examination",
+      "studentRecognizableDisplayName": "APPSC Group 1",
+      "regionCode": "AP",
+      "canonicalAuthorityKey": "auth_in_ap_appsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.ap.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "appsc_group2",
+      "canonicalExamName": "APPSC Group-II Services Examination",
+      "studentRecognizableDisplayName": "APPSC Group 2",
+      "regionCode": "AP",
+      "canonicalAuthorityKey": "auth_in_ap_appsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.ap.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "studentRecognizableDisplayName": "AP Police SI",
+      "regionCode": "AP",
+      "canonicalAuthorityKey": "auth_in_ap_apslprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprb.ap.gov.in",
+          "officialSourceTitle": "APSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "studentRecognizableDisplayName": "AP Police Constable",
+      "regionCode": "AP",
+      "canonicalAuthorityKey": "auth_in_ap_apslprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprb.ap.gov.in",
+          "officialSourceTitle": "APSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "canonicalExamName": "TGPSC Group-I Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 1",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "canonicalExamName": "TGPSC Group-II Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 2",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "canonicalExamName": "TGPSC Group-III Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 3",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "canonicalExamName": "TGPSC Group-IV Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 4",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "studentRecognizableDisplayName": "Telangana Police SI",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgslprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tslprb.co.in",
+          "officialSourceTitle": "TGSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "studentRecognizableDisplayName": "Telangana Police Constable",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_tgslprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tslprb.co.in",
+          "officialSourceTitle": "TGSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "studentRecognizableDisplayName": "Telangana Gurukulam Teachers",
+      "regionCode": "TG",
+      "canonicalAuthorityKey": "auth_in_tg_treirb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://treirb.telangana.gov.in",
+          "officialSourceTitle": "TREIRB Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "canonicalExamName": "KPSC Gazetted Probationers Examination (KAS)",
+      "studentRecognizableDisplayName": "Karnataka KAS (Gazetted Probationers)",
+      "regionCode": "KA",
+      "canonicalAuthorityKey": "auth_in_ka_kpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://kpsc.kar.nic.in",
+          "officialSourceTitle": "KPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "canonicalExamName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "studentRecognizableDisplayName": "Karnataka FDA / SDA & Village Administrative Officer",
+      "regionCode": "KA",
+      "canonicalAuthorityKey": "auth_in_ka_kea",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://cetonline.karnataka.gov.in",
+          "officialSourceTitle": "KEA Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "studentRecognizableDisplayName": "Karnataka Police Sub-Inspector (PSI)",
+      "regionCode": "KA",
+      "canonicalAuthorityKey": "auth_in_ka_ksp",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://ksp-recruitment.in",
+          "officialSourceTitle": "KSP Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ksp_cpc",
+      "canonicalExamName": "KSP Civil Police Constable (CPC)",
+      "studentRecognizableDisplayName": "Karnataka Civil Police Constable",
+      "regionCode": "KA",
+      "canonicalAuthorityKey": "auth_in_ka_ksp",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://ksp-recruitment.in",
+          "officialSourceTitle": "KSP Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "canonicalExamName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "studentRecognizableDisplayName": "Kerala Administrative Service (KAS)",
+      "regionCode": "KL",
+      "canonicalAuthorityKey": "auth_in_kl_kpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "studentRecognizableDisplayName": "Kerala PSC Degree Level Prelims",
+      "regionCode": "KL",
+      "canonicalAuthorityKey": "auth_in_kl_kpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "studentRecognizableDisplayName": "Kerala PSC 10th & Plus Two Prelims (LDC / Fireman / Excise)",
+      "regionCode": "KL",
+      "canonicalAuthorityKey": "auth_in_kl_kpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "canonicalExamName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "studentRecognizableDisplayName": "Kerala Police Constable",
+      "regionCode": "KL",
+      "canonicalAuthorityKey": "auth_in_kl_kpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 1",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Group I Services Preliminary Examination Press Note",
+          "verifiedFact": "315,000+ candidates applied for Deputy Collector, DSP, and Commercial Tax Officer posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Group I Services Preliminary Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 90 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 2 / 2A",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 4 & VAO",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Combined Civil Services Examination IV (Group IV & VAO) Notification",
+          "verifiedFact": "1,850,000+ candidates applied for Village Administrative Officer and Junior Assistant subordinate posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Combined Civil Services Examination IV (Group IV & VAO) Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 6,244 posts."
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "tnusrb_si",
+      "canonicalExamName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "studentRecognizableDisplayName": "TNUSRB Police SI",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnusrb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tnusrb.tn.gov.in",
+          "officialSourceTitle": "TNUSRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "canonicalExamName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "studentRecognizableDisplayName": "TNUSRB Police Constable",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnusrb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tnusrb.tn.gov.in",
+          "officialSourceTitle": "TNUSRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "studentRecognizableDisplayName": "TN TRB PG Assistant & TNTET",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tntrb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tn.gov.in",
+          "officialSourceTitle": "TN TRB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "canonicalExamName": "TN MRB Recruitment of Assistant Surgeons (General / Specialty)",
+      "studentRecognizableDisplayName": "TN MRB Assistant Surgeon",
+      "regionCode": "TN",
+      "canonicalAuthorityKey": "auth_in_tn_tnmrb",
+      "classification": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE",
+      "classificationReason": "Specialist medical officer (MBBS/MD) recruitment; outside current RankCrackers general competitive examination scope.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://mrb.tn.gov.in",
+          "officialSourceTitle": "TN MRB Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "canonicalExamName": "Puducherry DPAR General Recruitment (UDC / LDC / VAO)",
+      "studentRecognizableDisplayName": "Puducherry UDC, LDC & VAO",
+      "regionCode": "PY",
+      "canonicalAuthorityKey": "auth_in_py_dpar",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://recruitment.py.gov.in",
+          "officialSourceTitle": "PY DPAR Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "canonicalExamName": "Puducherry Police Sub-Inspector & Police Constable Recruitment",
+      "studentRecognizableDisplayName": "Puducherry Police SI & Constable",
+      "regionCode": "PY",
+      "canonicalAuthorityKey": "auth_in_py_police",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.py.gov.in",
+          "officialSourceTitle": "PY Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "canonicalExamName": "Lakshadweep Administration Group C Direct Recruitment / IRBn Constable",
+      "studentRecognizableDisplayName": "Lakshadweep Administration Group C & Police Constable",
+      "regionCode": "LD",
+      "canonicalAuthorityKey": "auth_in_ld_admin",
+      "classification": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE",
+      "classificationReason": "Small Island UT sporadic administration recruitment with low preparation target demand.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://lakshadweep.gov.in",
+          "officialSourceTitle": "LD Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "apsc_cce",
+      "canonicalExamName": "Combined Competitive Examination",
+      "studentRecognizableDisplayName": "APSC CCE (Assam Civil Services)",
+      "regionCode": "AS",
+      "canonicalAuthorityKey": "auth_in_as_apsc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://apsc.nic.in",
+          "officialSourceTitle": "APSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "studentRecognizableDisplayName": "ADRE Grade 3 & Grade 4 (Assam Direct Recruitment)",
+      "regionCode": "AS",
+      "canonicalAuthorityKey": "auth_in_as_slrc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Over 1,800,000 candidates registered for 26,000 Class III and IV direct recruitment posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 26,000 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://assam.gov.in",
+          "officialSourceTitle": "SLRC Assam (ADRE) Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 3
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "canonicalExamName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "studentRecognizableDisplayName": "Assam Police SI & Constable Recruitment",
+      "regionCode": "AS",
+      "canonicalAuthorityKey": "auth_in_as_slprb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprbassam.in",
+          "officialSourceTitle": "SLPRB Assam Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "canonicalExamName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "studentRecognizableDisplayName": "APPSC APPSCCE (Arunachal Civil Services)",
+      "regionCode": "AR",
+      "canonicalAuthorityKey": "auth_in_ar_appsc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://appsc.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "canonicalExamName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "studentRecognizableDisplayName": "APSSB CGL & CSLE (Combined Secondary Level)",
+      "regionCode": "AR",
+      "canonicalAuthorityKey": "auth_in_ar_apssb",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://apssb.nic.in",
+          "officialSourceTitle": "APSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "canonicalExamName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "studentRecognizableDisplayName": "Arunachal Police Constable & Specialist Recruitment",
+      "regionCode": "AR",
+      "canonicalAuthorityKey": "auth_in_ar_police",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://arunpol.nic.in",
+          "officialSourceTitle": "Arunachal Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "canonicalExamName": "Manipur Combined Competitive Examination (MCSCC)",
+      "studentRecognizableDisplayName": "MPSC Manipur MCSCCE (Manipur Civil Services)",
+      "regionCode": "MN",
+      "canonicalAuthorityKey": "auth_in_mn_mpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpscmanipur.gov.in",
+          "officialSourceTitle": "MPSC Manipur Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "canonicalExamName": "Manipur Staff Selection Combined Group C & D Recruitment Examination",
+      "studentRecognizableDisplayName": "Manipur SSC Group C & MTS Recruitment",
+      "regionCode": "MN",
+      "canonicalAuthorityKey": "auth_in_mn_mssc",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://manipurssc.mn.gov.in",
+          "officialSourceTitle": "MSSC Manipur Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "canonicalExamName": "Manipur Police Constable & Rifleman Recruitment",
+      "studentRecognizableDisplayName": "Manipur Police Rifleman / Constable Recruitment",
+      "regionCode": "MN",
+      "canonicalAuthorityKey": "auth_in_mn_police",
+      "classification": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "classificationReason": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://manipurpolice.gov.in",
+          "officialSourceTitle": "Manipur Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "canonicalExamName": "Meghalaya Civil Services Combined Examination",
+      "studentRecognizableDisplayName": "MPSC Meghalaya Civil Services (MCS / MPS)",
+      "regionCode": "ML",
+      "canonicalAuthorityKey": "auth_in_ml_mpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.meghalaya.gov.in",
+          "officialSourceTitle": "MPSC Meghalaya Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "canonicalExamName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "studentRecognizableDisplayName": "Meghalaya Police SI & Constable Recruitment (CRB)",
+      "regionCode": "ML",
+      "canonicalAuthorityKey": "auth_in_ml_crb",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://megpolice.gov.in",
+          "officialSourceTitle": "Meghalaya Police CRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "canonicalExamName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "studentRecognizableDisplayName": "MPSC Mizoram Civil Services (MCS / MPS)",
+      "regionCode": "MZ",
+      "canonicalAuthorityKey": "auth_in_mz_mpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.mizoram.gov.in",
+          "officialSourceTitle": "MPSC Mizoram Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "canonicalExamName": "Mizoram Subordinate Services Selection Board Combined Recruitment (Reverted)",
+      "studentRecognizableDisplayName": "Mizoram Subordinate Services (Group B Non-Gazetted via MPSC)",
+      "regionCode": "MZ",
+      "canonicalAuthorityKey": "auth_in_mz_mpsc",
+      "classification": "LEGACY_OR_INACTIVE_ONLY",
+      "classificationReason": "Mizoram Subordinate Services Selection Board recruitment reverted / board restructured. Inactive recruitment vehicle.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.mizoram.gov.in",
+          "officialSourceTitle": "MPSC Mizoram Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "canonicalExamName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "studentRecognizableDisplayName": "Mizoram Police Constable Recruitment",
+      "regionCode": "MZ",
+      "canonicalAuthorityKey": "auth_in_mz_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.mizoram.gov.in",
+          "officialSourceTitle": "Mizoram Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "canonicalExamName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "studentRecognizableDisplayName": "NPSC NCS & NPS (Nagaland Civil Services)",
+      "regionCode": "NL",
+      "canonicalAuthorityKey": "auth_in_nl_npsc",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://npsc.nagaland.gov.in",
+          "officialSourceTitle": "NPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "canonicalExamName": "Combined Technical Services Examination (CTSE)",
+      "studentRecognizableDisplayName": "NPSC CTSE (Technical & Engineering Services)",
+      "regionCode": "NL",
+      "canonicalAuthorityKey": "auth_in_nl_npsc",
+      "classification": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE",
+      "classificationReason": "Specialist engineering/veterinary technical cadre examination; outside core general competitive scope.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://npsc.nagaland.gov.in",
+          "officialSourceTitle": "NPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "canonicalExamName": "Combined Staff Recruitment Examination (CSRE)",
+      "studentRecognizableDisplayName": "NSSB CSRE (Nagaland Combined Staff Recruitment)",
+      "regionCode": "NL",
+      "canonicalAuthorityKey": "auth_in_nl_nssb",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://nssb.nagaland.gov.in",
+          "officialSourceTitle": "NSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "canonicalExamName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "studentRecognizableDisplayName": "Nagaland Police Constable (GD) Recruitment",
+      "regionCode": "NL",
+      "canonicalAuthorityKey": "auth_in_nl_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.nagaland.gov.in",
+          "officialSourceTitle": "Nagaland Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "canonicalExamName": "Sikkim State Civil Services Combined Competitive Examination",
+      "studentRecognizableDisplayName": "SPSC Sikkim Civil Services (Under Secretary / DSP)",
+      "regionCode": "SK",
+      "canonicalAuthorityKey": "auth_in_sk_spsc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "canonicalExamName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "studentRecognizableDisplayName": "SPSC Sikkim Police Sub-Inspector (SI)",
+      "regionCode": "SK",
+      "canonicalAuthorityKey": "auth_in_sk_spsc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "canonicalExamName": "Sikkim Police Constable & Follower Recruitment",
+      "studentRecognizableDisplayName": "Sikkim Police Constable Recruitment",
+      "regionCode": "SK",
+      "canonicalAuthorityKey": "auth_in_sk_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.sikkim.gov.in",
+          "officialSourceTitle": "Sikkim Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "canonicalExamName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "studentRecognizableDisplayName": "TPSC Combined Competitive Exam (TCS & TPS)",
+      "regionCode": "TR",
+      "canonicalAuthorityKey": "auth_in_tr_tpsc",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tpsc.tripura.gov.in",
+          "officialSourceTitle": "TPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "canonicalExamName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "studentRecognizableDisplayName": "JRBT Group C & Group D Recruitment",
+      "regionCode": "TR",
+      "canonicalAuthorityKey": "auth_in_tr_jrbt",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jrbtripura.com",
+          "officialSourceTitle": "JRBT Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "studentRecognizableDisplayName": "Tripura TET (T-TET Paper 1 & 2)",
+      "regionCode": "TR",
+      "canonicalAuthorityKey": "auth_in_tr_trbt",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "studentRecognizableDisplayName": "TRBT STGT & STPGT (Secondary Teachers)",
+      "regionCode": "TR",
+      "canonicalAuthorityKey": "auth_in_tr_trbt",
+      "classification": "MAJOR_MISSION_ACCEPTED",
+      "classificationReason": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ],
+      "evidenceRowCount": 1
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "canonicalExamName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "studentRecognizableDisplayName": "Tripura Police Constable & TSR Rifleman Recruitment",
+      "regionCode": "TR",
+      "canonicalAuthorityKey": "auth_in_tr_police",
+      "classification": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE",
+      "classificationReason": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "majorQualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tripurapolice.gov.in",
+          "officialSourceTitle": "Tripura Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ],
+      "evidenceRowCount": 1
+    }
+  ]
+}

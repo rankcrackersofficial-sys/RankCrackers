@@ -1,0 +1,80 @@
+{
+  "gate": "GATE_48B1_IDEMPOTENCY_SIMULATION_PROOF",
+  "generatedAt": "2026-09-10T11:03:34.013Z",
+  "simulation": "SECOND_PASS_MUTATION_APPLY",
+  "MUTATION_PASS_2_MODIFIED_COUNT": 0,
+  "MUTATION_PASS_2_DIFF_COUNT": 0,
+  "isStrictlyIdempotent": true,
+  "audit": [
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "pass1Hash": "ca850100bb69f92f3bf6f6bcda601f5425b4eb3bef972bc36eba8025b855a27a",
+      "pass2Hash": "ca850100bb69f92f3bf6f6bcda601f5425b4eb3bef972bc36eba8025b855a27a",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "pass1Hash": "81caed3f3007a29730edc2ff4423354852c1bebee7f542d3a3aec049edafcac3",
+      "pass2Hash": "81caed3f3007a29730edc2ff4423354852c1bebee7f542d3a3aec049edafcac3",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "pass1Hash": "d034e3f53941a7e8f8caeda245a9f302b1927f56422df8b0442aede1aad55846",
+      "pass2Hash": "d034e3f53941a7e8f8caeda245a9f302b1927f56422df8b0442aede1aad55846",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "pass1Hash": "83b4cff461acfa544945d3f3be540c2efe42674ab5439376e632d051c2a00d58",
+      "pass2Hash": "83b4cff461acfa544945d3f3be540c2efe42674ab5439376e632d051c2a00d58",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "pass1Hash": "b0cbfe65d0d1dce1f3df374f61a89e8f42f5790b9b06942b1417c1c530259b40",
+      "pass2Hash": "b0cbfe65d0d1dce1f3df374f61a89e8f42f5790b9b06942b1417c1c530259b40",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "mission_realms",
+      "pass1Hash": "7fb02cb8d30c353fe7390d07015efc0cc6099fe551277752e29b0b5ea553e1aa",
+      "pass2Hash": "7fb02cb8d30c353fe7390d07015efc0cc6099fe551277752e29b0b5ea553e1aa",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "pass1Hash": "cb4b22f38c3130fec6138bbee7a8e8a4fd52f8ec1237bdf6b74bcb1c0fe31968",
+      "pass2Hash": "cb4b22f38c3130fec6138bbee7a8e8a4fd52f8ec1237bdf6b74bcb1c0fe31968",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "recruitments",
+      "pass1Hash": "7f94174ee930e524b38336afaa8d2f58992aaa5454dcb0a30a7a0ca85f1375db",
+      "pass2Hash": "7f94174ee930e524b38336afaa8d2f58992aaa5454dcb0a30a7a0ca85f1375db",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "pass1Hash": "631d385a29a9d4184d1565f54ebf4e45ca73f915a37ce6f33cc331e3ebed6595",
+      "pass2Hash": "631d385a29a9d4184d1565f54ebf4e45ca73f915a37ce6f33cc331e3ebed6595",
+      "secondPassModificationsCount": 0
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "pass1Hash": "e3c542b8885172643f68bd3419cf7a680189ad97ff76a0aa55e5908976341e1c",
+      "pass2Hash": "e3c542b8885172643f68bd3419cf7a680189ad97ff76a0aa55e5908976341e1c",
+      "secondPassModificationsCount": 0
+    }
+  ]
+}

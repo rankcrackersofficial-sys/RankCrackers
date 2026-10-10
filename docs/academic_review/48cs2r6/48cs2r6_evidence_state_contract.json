@@ -1,0 +1,86 @@
+{
+  "gate": "48CS2R6",
+  "contractName": "DOCUMENT_EVIDENCE_LEVEL_CONTRACT",
+  "contractVersion": "1.0.0",
+  "summary": "Formal specification of the 5 discrete uncollapsed document evidence levels required to cross the Byte-Authority Barrier.",
+  "uncollapsedEvidenceLevels": [
+    {
+      "level": "URL_FOUND",
+      "tier": 1,
+      "definition": "An official URL has been discovered on a government or public testing authority portal.",
+      "requiredProof": [
+        "officialSourceUrl string matching http/https gov portal scheme"
+      ],
+      "disallowedClaims": [
+        "SHA256_VERIFIED",
+        "BYTES_ACQUIRED",
+        "TEXT_EXTRACTED_AND_BOUND",
+        "RULE_VERIFIED"
+      ],
+      "personalizationPermission": "BLOCKED (strictly NOT_EVALUATED)"
+    },
+    {
+      "level": "EXACT_DOCUMENT_RESOLVED",
+      "tier": 2,
+      "definition": "The specific official document identity (notice number, file name, portal listing row) is resolved.",
+      "requiredProof": [
+        "officialSourceUrl",
+        "documentIdentity (official notice or file ID)"
+      ],
+      "disallowedClaims": [
+        "SHA256_VERIFIED",
+        "BYTES_ACQUIRED",
+        "TEXT_EXTRACTED_AND_BOUND",
+        "RULE_VERIFIED"
+      ],
+      "personalizationPermission": "BLOCKED (strictly NOT_EVALUATED)"
+    },
+    {
+      "level": "BYTES_ACQUIRED",
+      "tier": 3,
+      "definition": "The document binary payload has been downloaded and persisted into local/object storage.",
+      "requiredProof": [
+        "documentIdentity",
+        "byteLength > 0",
+        "local/storage persistence record"
+      ],
+      "disallowedClaims": [
+        "SHA256_VERIFIED (until digest calculated)",
+        "TEXT_EXTRACTED_AND_BOUND",
+        "RULE_VERIFIED"
+      ],
+      "personalizationPermission": "BLOCKED (strictly NOT_EVALUATED)"
+    },
+    {
+      "level": "SHA256_VERIFIED",
+      "tier": 4,
+      "definition": "The acquired bytes have been cryptographically hashed and verified with a valid 64-character hex SHA-256 digest.",
+      "requiredProof": [
+        "documentSha256 regex /^[a-f0-9]{64}$/i",
+        "bytes acquired matching digest"
+      ],
+      "disallowedClaims": [
+        "TEXT_EXTRACTED_AND_BOUND (if scan text unresolved or unparsed)"
+      ],
+      "personalizationPermission": "BLOCKED if text unresolved; permits generic public facts"
+    },
+    {
+      "level": "TEXT_EXTRACTED_AND_BOUND",
+      "tier": 5,
+      "definition": "Document text is machine-readable and extracted with verified page and paragraph offset bindings.",
+      "requiredProof": [
+        "documentSha256",
+        "extractedTextSha256",
+        "page-level offset bindings"
+      ],
+      "disallowedClaims": [],
+      "personalizationPermission": "ELIGIBLE to cross Byte-Authority Barrier for rule verification"
+    }
+  ],
+  "governanceLaws": [
+    "LAW 1 (NO COLLAPSE): URL_FOUND can never be collapsed into SHA256_VERIFIED or BYTES_ACQUIRED.",
+    "LAW 2 (BYTE-AUTHORITY BARRIER): Final ELIGIBLE / NOT_ELIGIBLE emitted only when source evidence is at least SHA256_VERIFIED with extracted text bound.",
+    "LAW 3 (ZERO DEFAULTING): Missing document proof defaults to lower tier; never promotes upwards.",
+    "LAW 4 (SCAN SAFETY): Scanned PDF with verified SHA256 remains at SHA256_VERIFIED / BYTE_VERIFIED; scanTextUnresolved blocks TEXT_EXTRACTED_AND_BOUND."
+  ]
+}

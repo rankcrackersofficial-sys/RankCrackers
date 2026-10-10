@@ -1,0 +1,53 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "STARTABILITY_FAIL_SAFE_AUDIT",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "metric": {
+    "missing_flag_defaults_to_startable_count": 0
+  },
+  "rules_enforced": [
+    {
+      "target": "Recruitment Constructor",
+      "field": "quickEntryEnabled",
+      "defaultValue": false,
+      "compliant": true
+    },
+    {
+      "target": "Recruitment Constructor",
+      "field": "smartEntryEnabled",
+      "defaultValue": false,
+      "compliant": true
+    },
+    {
+      "target": "Recruitment Constructor",
+      "field": "missionSelectionReady",
+      "defaultValue": false,
+      "compliant": true
+    },
+    {
+      "target": "Recruitment.fromMap",
+      "field": "quickEntryEnabled",
+      "rule": "map['quickEntryEnabled'] == true",
+      "compliant": true
+    },
+    {
+      "target": "Recruitment.fromMap",
+      "field": "smartEntryEnabled",
+      "rule": "map['smartEntryEnabled'] == true",
+      "compliant": true
+    },
+    {
+      "target": "Recruitment.fromMap",
+      "field": "missionSelectionReady",
+      "rule": "map['missionSelectionReady'] == true",
+      "compliant": true
+    },
+    {
+      "target": "FirestoreService._studentCatalogDocToRecruitment",
+      "field": "quickEntryEnabled / smartEntryEnabled / missionSelectionReady",
+      "rule": "data[flag] == true",
+      "compliant": true
+    }
+  ],
+  "status": "PASSED"
+}

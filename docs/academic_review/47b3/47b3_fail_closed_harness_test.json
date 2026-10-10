@@ -1,0 +1,10 @@
+{
+  "testCode": "RC_47B3_FAIL_CLOSED_HARNESS_TEST",
+  "executedAt": "2026-09-10T06:11:50.561Z",
+  "metrics": {
+    "STATIC_PASS_FIELD_WITHOUT_ASSERTION_COUNT": 0,
+    "TEST_PROCESS_EXIT_CODE": 0
+  },
+  "policy": "All tests execute node assert assertions. Any failed assertion throws, logs exact error, and halts test harness.",
+  "assertionPass": true
+}

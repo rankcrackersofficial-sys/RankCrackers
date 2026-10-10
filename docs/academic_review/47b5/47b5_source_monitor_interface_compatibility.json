@@ -1,0 +1,14 @@
+{
+  "compatibilityCode": "RC_47B5_SOURCE_MONITOR_INTERFACE_COMPATIBILITY",
+  "executedAt": "2026-09-10T06:57:27.985Z",
+  "supportedReferences": [
+    "sourceProfileId",
+    "monitorProfileId",
+    "documentRegistryPath",
+    "pyqArchivePath"
+  ],
+  "metrics": {
+    "FAKE_MONITOR_RUNTIME_COUNT": 0
+  },
+  "compatibilityPass": true
+}

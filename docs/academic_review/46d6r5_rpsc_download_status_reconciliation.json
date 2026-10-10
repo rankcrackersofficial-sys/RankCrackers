@@ -1,0 +1,123 @@
+{
+  "reconciliationSchemaVersion": "5.0.0",
+  "draftStatus": "CANONICAL_DOWNLOAD_STATUS_RECONCILIATION_46D6R5",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "generatedAt": "2026-09-09T19:38:00.000Z",
+  "summary": {
+    "RPSC_UNIQUE_OFFICIAL_DOCUMENT_COUNT": 29,
+    "RPSC_PHYSICAL_DOCUMENTS_ACQUIRED": 1,
+    "RPSC_PHYSICAL_DOCUMENTS_HASHED": 1,
+    "RPSC_PORTAL_TEXT_RECORDS_VERIFIED": 2,
+    "RPSC_PORTAL_REGISTRY_REFERENCES_VERIFIED": 26,
+    "RPSC_PHYSICAL_DOCUMENTS_NOT_ACQUIRED": 28,
+    "DOWNLOAD_ATTEMPT_FAILURE_COUNT": 0,
+    "NOT_ATTEMPTED_OR_DYNAMIC_ONLY_COUNT": 28,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "reconciliationBreakdown": {
+    "byteVerifiedDocuments": [
+      {
+        "documentAuthorityKey": "doc_advt_06_2025_26",
+        "title": "Detailed Advertisement for School Lecturer (School Education) - 2025",
+        "advertisementNumber": "Advt. No. 06/2025-26",
+        "servedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+        "actualDownloadHref": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+        "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+        "evidenceStatus": "BYTE_VERIFIED",
+        "acquisitionMode": "PHYSICAL_BYTE_DOWNLOAD_AND_HASHED"
+      }
+    ],
+    "portalTextVerifiedDocuments": [
+      {
+        "documentAuthorityKey": "doc_advt_09_2025_26",
+        "title": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture / कृषि)",
+        "advertisementNumber": "Advt. No. 09/2025-26",
+        "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+        "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+        "acquisitionMode": "PORTAL_TEXT_READ_AND_VERIFIED",
+        "sha256": null
+      },
+      {
+        "documentAuthorityKey": "doc_corrigendum_08_2025_26",
+        "title": "Corrigendum No. 08/2025-26 regarding School Lecturer (School Education) Exam 2025",
+        "advertisementNumber": "Advt. No. 06/2025-26",
+        "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+        "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+        "acquisitionMode": "PORTAL_TEXT_READ_AND_VERIFIED",
+        "sha256": null
+      }
+    ],
+    "portalRegistryVerifiedDocuments": [
+      {
+        "category": "PAPER_1_SYLLABI",
+        "count": 3,
+        "documents": [
+          "doc_syllabus_p1_academic",
+          "doc_syllabus_p1_phy_edu",
+          "doc_syllabus_p1_coach"
+        ],
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED",
+        "acquisitionMode": "PORTAL_REGISTRY_METADATA_VERIFIED",
+        "sha256": null
+      },
+      {
+        "category": "PAPER_2_ACADEMIC_SYLLABI",
+        "count": 21,
+        "documents": [
+          "doc_syllabus_p2_hindi",
+          "doc_syllabus_p2_english",
+          "doc_syllabus_p2_sanskrit",
+          "doc_syllabus_p2_rajasthani",
+          "doc_syllabus_p2_punjabi",
+          "doc_syllabus_p2_urdu",
+          "doc_syllabus_p2_history",
+          "doc_syllabus_p2_geography",
+          "doc_syllabus_p2_political_science",
+          "doc_syllabus_p2_economics",
+          "doc_syllabus_p2_sociology",
+          "doc_syllabus_p2_public_administration",
+          "doc_syllabus_p2_physics",
+          "doc_syllabus_p2_chemistry",
+          "doc_syllabus_p2_biology",
+          "doc_syllabus_p2_mathematics",
+          "doc_syllabus_p2_commerce",
+          "doc_syllabus_p2_music",
+          "doc_syllabus_p2_drawing",
+          "doc_syllabus_p2_home_science",
+          "doc_syllabus_p2_agriculture"
+        ],
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED",
+        "acquisitionMode": "PORTAL_REGISTRY_METADATA_VERIFIED",
+        "sha256": null
+      },
+      {
+        "category": "PAPER_2_PHYSICAL_EDUCATION_SYLLABUS",
+        "count": 1,
+        "documents": [
+          "doc_syllabus_p2_phy_edu"
+        ],
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED",
+        "acquisitionMode": "PORTAL_REGISTRY_METADATA_VERIFIED",
+        "sha256": null
+      },
+      {
+        "category": "PAPER_2_COACH_SHARED_SYLLABUS",
+        "count": 1,
+        "documents": [
+          "doc_syllabus_p2_coach_shared"
+        ],
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED",
+        "acquisitionMode": "PORTAL_REGISTRY_METADATA_VERIFIED",
+        "sha256": null
+      }
+    ]
+  },
+  "provenanceLawConformance": {
+    "truthfulClassification": "All 29 unique official documents are strictly classified according to the actual evidence held.",
+    "zeroHallucination": "0 fake hashes, 0 guessed URLs, 0 fabricated document filenames.",
+    "nullHashValidity": "Null hashes are preserved for PORTAL_TEXT_VERIFIED and PORTAL_REGISTRY_VERIFIED records without falsely claiming byte-level authority."
+  }
+}

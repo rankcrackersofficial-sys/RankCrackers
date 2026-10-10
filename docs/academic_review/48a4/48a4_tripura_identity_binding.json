@@ -1,0 +1,9 @@
+{
+  "primaryUpstreamId": "trbt_tripura_ttet",
+  "aliasUpstreamId": "tripura_tet",
+  "bindingStatus": "VERIFIED_ALIAS_UNBOUND_DISCREPANCY",
+  "canonicalMissionId": "trbt_tripura_ttet",
+  "disposition": "HOLD",
+  "holdSubreason": "HOLD_IDENTITY_ALIAS_DISCREPANCY",
+  "note": "Upstream artifacts contain both trbt_tripura_ttet and tripura_tet. Kept on HOLD until producer issue single bound alias."
+}

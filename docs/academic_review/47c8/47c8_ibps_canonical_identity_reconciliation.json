@@ -1,0 +1,28 @@
+{
+  "canonicalIdentities": [
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "aliases": [
+        "ibps_rrb_officer",
+        "ibps_rrb_po"
+      ],
+      "materializationAllowed": false
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "aliases": [
+        "ibps_rrb_office_assistant",
+        "ibps_rrb_clerk"
+      ],
+      "materializationAllowed": false
+    }
+  ],
+  "activeIds": [
+    "ibps_po_mt",
+    "ibps_csa",
+    "ibps_so",
+    "ibps_crp_rrb_officers",
+    "ibps_crp_rrb_office_assistant"
+  ],
+  "IBPS_RRB_ACTIVE_IDENTITY_CONFLICT_COUNT": 0
+}

@@ -1,0 +1,1543 @@
+{
+  "ledgerCode": "RC_47B6_CANDIDATE_REAL_VALIDATION_LEDGER",
+  "executedAt": "2026-09-10T07:08:16.232Z",
+  "metrics": {
+    "TOTAL_CANDIDATE_MISSIONS": 153,
+    "VALIDATION_PASS_COUNT": 124,
+    "VALIDATION_HOLD_COUNT": 29,
+    "VALIDATION_REJECT_COUNT": 0,
+    "VALIDATION_RECONCILIATION_ERROR_COUNT": 0
+  },
+  "ledger": [
+    {
+      "index": 0,
+      "missionId": "uppsc_pcs_prelims",
+      "title": "UPPSC PCS – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 1,
+      "missionId": "uppsc_ro_aro_prelims",
+      "title": "UPPSC RO/ARO – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 2,
+      "missionId": "upsssc_pet",
+      "title": "UPSSSC PET",
+      "authorityKey": "auth_in_up_upsssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 3,
+      "missionId": "upsssc_vdo",
+      "title": "UPSSSC VDO / Gram Panchayat Adhikari",
+      "authorityKey": "auth_in_up_upsssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 4,
+      "missionId": "upprpb_police_constable",
+      "title": "UP Police Constable",
+      "authorityKey": "auth_in_up_upprpb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 5,
+      "missionId": "upprpb_police_si",
+      "title": "UP Police SI",
+      "authorityKey": "auth_in_up_upprpb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 6,
+      "missionId": "up_tet",
+      "title": "UPTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_up_pnp",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 7,
+      "missionId": "ukpsc_pcs_prelims",
+      "title": "UKPSC PCS – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 8,
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "title": "UKPSC Lower Subordinate – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 9,
+      "missionId": "uk_police_si",
+      "title": "Uttarakhand Police SI",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 10,
+      "missionId": "uksssc_group_c_combined",
+      "title": "UKSSSC Group C Combined",
+      "authorityKey": "auth_in_uk_uksssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 11,
+      "missionId": "uk_police_constable",
+      "title": "Uttarakhand Police Constable",
+      "authorityKey": "auth_in_uk_uksssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 12,
+      "missionId": "uk_tet",
+      "title": "UTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_uk_ubse",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UK",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 13,
+      "missionId": "hppsc_hpas_prelims",
+      "title": "HPPSC HPAS – Prelims",
+      "authorityKey": "auth_in_hp_hppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 14,
+      "missionId": "hppsc_police_constable",
+      "title": "HP Police Constable",
+      "authorityKey": "auth_in_hp_hppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 15,
+      "missionId": "hprca_group_c_common",
+      "title": "HPRCA Group C Common",
+      "authorityKey": "auth_in_hp_hprca",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 16,
+      "missionId": "hp_tet",
+      "title": "HP TET",
+      "authorityKey": "auth_in_hp_hpbose",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HP",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 17,
+      "missionId": "ppsc_pscce_prelims",
+      "title": "PPSC PSCSCCE – Prelims",
+      "authorityKey": "auth_in_pb_ppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 18,
+      "missionId": "psssb_clerk",
+      "title": "PSSSB Clerk Combined",
+      "authorityKey": "auth_in_pb_psssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 19,
+      "missionId": "psssb_patwari",
+      "title": "PSSSB Revenue Patwari",
+      "authorityKey": "auth_in_pb_psssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 20,
+      "missionId": "punjab_police_constable",
+      "title": "Punjab Police Constable",
+      "authorityKey": "auth_in_pb_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 21,
+      "missionId": "punjab_police_si",
+      "title": "Punjab Police SI",
+      "authorityKey": "auth_in_pb_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 22,
+      "missionId": "punjab_pstet",
+      "title": "PSTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_pb_pseb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "PB",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 23,
+      "missionId": "hpsc_hcs_prelims",
+      "title": "HPSC HCS – Prelims",
+      "authorityKey": "auth_in_hr_hpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 24,
+      "missionId": "hssc_cet_group_c",
+      "title": "HSSC CET Group C",
+      "authorityKey": "auth_in_hr_hssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 25,
+      "missionId": "hssc_cet_group_d",
+      "title": "HSSC CET Group D",
+      "authorityKey": "auth_in_hr_hssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 26,
+      "missionId": "haryana_police_constable",
+      "title": "Haryana Police Constable",
+      "authorityKey": "auth_in_hr_hssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 27,
+      "missionId": "haryana_police_si",
+      "title": "Haryana Police SI",
+      "authorityKey": "auth_in_hr_hssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 28,
+      "missionId": "haryana_htet",
+      "title": "HTET (PRT / TGT / PGT)",
+      "authorityKey": "auth_in_hr_bseh",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "HR",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 29,
+      "missionId": "jkpsc_cce_prelims",
+      "title": "JKPSC CCE – Prelims",
+      "authorityKey": "auth_in_jk_jkpsc",
+      "jurisdictionLevel": "UT",
+      "stateCode": "JK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 30,
+      "missionId": "jk_police_constable",
+      "title": "J&K Police Constable",
+      "authorityKey": "auth_in_jk_jkssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "JK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 31,
+      "missionId": "jk_police_si",
+      "title": "J&K Police SI",
+      "authorityKey": "auth_in_jk_jkssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "JK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 32,
+      "missionId": "jkssb_graduate_level",
+      "title": "JKSSB Graduate Combined",
+      "authorityKey": "auth_in_jk_jkssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "JK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 33,
+      "missionId": "ssc_ladakh_selection_post",
+      "title": "SSC Selection Posts Ladakh",
+      "authorityKey": "auth_in_la_admin",
+      "jurisdictionLevel": "UT",
+      "stateCode": "LA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 34,
+      "missionId": "ladakh_police_constable",
+      "title": "Ladakh Police Constable",
+      "authorityKey": "auth_in_la_police",
+      "jurisdictionLevel": "UT",
+      "stateCode": "LA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 35,
+      "missionId": "lahdc_dssrb_district_cadre",
+      "title": "LAHDC DSSRB District Cadre",
+      "authorityKey": "auth_in_la_dssrb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "LA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 36,
+      "missionId": "chandigarh_police_constable",
+      "title": "Chandigarh Police Constable",
+      "authorityKey": "auth_in_ch_police",
+      "jurisdictionLevel": "UT",
+      "stateCode": "CH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 37,
+      "missionId": "chandigarh_police_asi",
+      "title": "Chandigarh Police ASI",
+      "authorityKey": "auth_in_ch_police",
+      "jurisdictionLevel": "UT",
+      "stateCode": "CH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 38,
+      "missionId": "chandigarh_jbt_teacher",
+      "title": "Chandigarh JBT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "jurisdictionLevel": "UT",
+      "stateCode": "CH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 39,
+      "missionId": "chandigarh_tgt_teacher",
+      "title": "Chandigarh TGT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "jurisdictionLevel": "UT",
+      "stateCode": "CH",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 40,
+      "missionId": "dsssb_delhi_tgt",
+      "title": "DSSSB TGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 41,
+      "missionId": "dsssb_delhi_prt",
+      "title": "DSSSB PRT Assistant Teacher",
+      "authorityKey": "auth_in_dl_dsssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 42,
+      "missionId": "dsssb_delhi_pgt",
+      "title": "DSSSB PGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 43,
+      "missionId": "dsssb_junior_assistant_ldc",
+      "title": "DSSSB Junior Assistant / LDC",
+      "authorityKey": "auth_in_dl_dsssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 44,
+      "missionId": "delhi_police_constable",
+      "title": "Delhi Police Constable (Executive)",
+      "authorityKey": "auth_in_dl_delpol",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 45,
+      "missionId": "delhi_police_si",
+      "title": "Delhi Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_dl_delpol",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 46,
+      "missionId": "rpsc_ras_prelims",
+      "title": "RPSC RAS / RTS (Prelims)",
+      "authorityKey": "auth_in_rj_rpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 47,
+      "missionId": "rpsc_school_lecturer",
+      "title": "RPSC 1st Grade Teacher / School Lecturer",
+      "authorityKey": "auth_in_rj_rpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 48,
+      "missionId": "rssb_cet_senior_secondary",
+      "title": "Rajasthan CET 12th Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 49,
+      "missionId": "rssb_cet_graduate",
+      "title": "Rajasthan CET Graduate Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 50,
+      "missionId": "rbse_reet",
+      "title": "REET (Level 1 & Level 2)",
+      "authorityKey": "auth_in_rj_rbse",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 51,
+      "missionId": "rj_police_constable",
+      "title": "Rajasthan Police Constable",
+      "authorityKey": "auth_in_rj_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 52,
+      "missionId": "mppsc_state_service",
+      "title": "MPPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_mp_mppsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 53,
+      "missionId": "mpesb_police_constable",
+      "title": "MP Police Constable",
+      "authorityKey": "auth_in_mp_mpesb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 54,
+      "missionId": "mpesb_group2_subgroup4",
+      "title": "MP Patwari / Group 2 Sub Group 4",
+      "authorityKey": "auth_in_mp_mpesb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 55,
+      "missionId": "mpesb_mptet",
+      "title": "MP TET (Varg 1, Varg 2, Varg 3)",
+      "authorityKey": "auth_in_mp_mpesb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MP",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 56,
+      "missionId": "cgpsc_state_service",
+      "title": "CGPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_cg_cgpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "CG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 57,
+      "missionId": "cgvyapam_cgtet",
+      "title": "CG TET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_cg_cgvyapam",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "CG",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 58,
+      "missionId": "cg_police_constable",
+      "title": "CG Police Constable",
+      "authorityKey": "auth_in_cg_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "CG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 59,
+      "missionId": "gpsc_class_1_2",
+      "title": "GPSC Class 1-2 (Gujarat Civil Services)",
+      "authorityKey": "auth_in_gj_gpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 60,
+      "missionId": "gsssb_cce",
+      "title": "GSSSB CCE (Clerk / Head Clerk / Office Assistant)",
+      "authorityKey": "auth_in_gj_gsssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 61,
+      "missionId": "gpssb_talati",
+      "title": "GPSSB Talati cum Mantri",
+      "authorityKey": "auth_in_gj_gpssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 62,
+      "missionId": "gprb_lokrakshak",
+      "title": "Gujarat Police Constable / Lokrakshak",
+      "authorityKey": "auth_in_gj_gprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GJ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 63,
+      "missionId": "seb_gujarattet",
+      "title": "Gujarat TET (TET-1 / TET-2)",
+      "authorityKey": "auth_in_gj_seb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GJ",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 64,
+      "missionId": "mpsc_rajyaseva",
+      "title": "MPSC Rajyaseva / Civil Services Combined Prelims",
+      "authorityKey": "auth_in_mh_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 65,
+      "missionId": "mpsc_group_bc_combined",
+      "title": "MPSC Group B & C Combined Prelims (PSI / STI / ASO / Clerk)",
+      "authorityKey": "auth_in_mh_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 66,
+      "missionId": "mh_police_constable",
+      "title": "Maharashtra Police Constable (Police Bharti)",
+      "authorityKey": "auth_in_mh_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 67,
+      "missionId": "mscepune_mahatet",
+      "title": "MAHATET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_mh_mscepune",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MH",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 68,
+      "missionId": "gpsc_goa_civil_service",
+      "title": "Goa Civil Service (JSO / GPSC)",
+      "authorityKey": "auth_in_ga_gpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 69,
+      "missionId": "gssc_goa_group_c",
+      "title": "GSSC Goa Group C (LDC / Junior Stenographer / MTS)",
+      "authorityKey": "auth_in_ga_gssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 70,
+      "missionId": "ga_police_recruitment",
+      "title": "Goa Police PSI & Constable",
+      "authorityKey": "auth_in_ga_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "GA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 71,
+      "missionId": "dnhdd_ssb_group_bc",
+      "title": "DNH & DD SSB Group B & Group C (LDC / Assistant / JE / Police Constable)",
+      "authorityKey": "auth_in_dn_ssb",
+      "jurisdictionLevel": "UT",
+      "stateCode": "DN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 72,
+      "missionId": "bpsc_cce_prelims",
+      "title": "BPSC CCE Prelims",
+      "authorityKey": "auth_in_br_bpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 73,
+      "missionId": "bpsc_tre",
+      "title": "BPSC TRE (School Teacher)",
+      "authorityKey": "auth_in_br_bpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 74,
+      "missionId": "bssc_cgl",
+      "title": "BSSC CGL (Graduate Level)",
+      "authorityKey": "auth_in_br_bssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 75,
+      "missionId": "bssc_inter_level",
+      "title": "BSSC Inter Level (10+2)",
+      "authorityKey": "auth_in_br_bssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 76,
+      "missionId": "bpssc_police_si",
+      "title": "Bihar Police SI (Daroga)",
+      "authorityKey": "auth_in_br_bpssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 77,
+      "missionId": "csbc_bihar_police_constable",
+      "title": "Bihar Police Constable",
+      "authorityKey": "auth_in_br_csbc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 78,
+      "missionId": "bseb_stet",
+      "title": "Bihar STET",
+      "authorityKey": "auth_in_br_bseb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "BR",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 79,
+      "missionId": "jpsc_cce_prelims",
+      "title": "JPSC CCE Prelims",
+      "authorityKey": "auth_in_jh_jpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "JH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 80,
+      "missionId": "jssc_cgl",
+      "title": "JSSC CGL (JGGLCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "JH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 81,
+      "missionId": "jssc_police_constable",
+      "title": "Jharkhand Police Constable (JCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "JH",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 82,
+      "missionId": "jac_jtet",
+      "title": "Jharkhand TET (JTET)",
+      "authorityKey": "auth_in_jh_jac",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "JH",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 83,
+      "missionId": "opsc_ocs_prelims",
+      "title": "OPSC OCS Prelims (OAS / OFS)",
+      "authorityKey": "auth_in_od_opsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 84,
+      "missionId": "ossc_cgl",
+      "title": "OSSC CGL (CGLRE)",
+      "authorityKey": "auth_in_od_ossc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 85,
+      "missionId": "osssc_cre_combined",
+      "title": "OSSSC Combined Exam (RI / ARI / AMIN)",
+      "authorityKey": "auth_in_od_osssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 86,
+      "missionId": "odisha_police_constable",
+      "title": "Odisha Police Constable",
+      "authorityKey": "auth_in_od_opssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 87,
+      "missionId": "bse_odisha_otet",
+      "title": "Odisha TET (OTET)",
+      "authorityKey": "auth_in_od_bse",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 88,
+      "missionId": "ssb_odisha_lecturer",
+      "title": "SSB Odisha Lecturer / PGT Recruitment",
+      "authorityKey": "auth_in_od_ssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "OD",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 89,
+      "missionId": "wbpsc_wbcs_prelims",
+      "title": "WBCS Prelims",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 90,
+      "missionId": "wbpsc_clerkship",
+      "title": "WBPSC Clerkship",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 91,
+      "missionId": "wbprb_police_constable",
+      "title": "WB Police Constable",
+      "authorityKey": "auth_in_wb_wbprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 92,
+      "missionId": "wbprb_police_si",
+      "title": "WB Police SI",
+      "authorityKey": "auth_in_wb_wbprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 93,
+      "missionId": "wbbpe_primary_tet",
+      "title": "WB Primary TET",
+      "authorityKey": "auth_in_wb_wbbpe",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 94,
+      "missionId": "wbcssc_slst_teacher",
+      "title": "WB School Service Commission SLST (Assistant Teacher)",
+      "authorityKey": "auth_in_wb_wbcssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "WB",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 95,
+      "missionId": "an_erecruitment_chsl",
+      "title": "A&N Administration CHSL",
+      "authorityKey": "auth_in_an_erecruitment",
+      "jurisdictionLevel": "UT",
+      "stateCode": "AN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 96,
+      "missionId": "an_erecruitment_cml",
+      "title": "A&N Administration Matric Level (CML)",
+      "authorityKey": "auth_in_an_erecruitment",
+      "jurisdictionLevel": "UT",
+      "stateCode": "AN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 97,
+      "missionId": "an_police_constable_si",
+      "title": "A&N Police Constable / SI",
+      "authorityKey": "auth_in_an_police",
+      "jurisdictionLevel": "UT",
+      "stateCode": "AN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 98,
+      "missionId": "appsc_group1",
+      "title": "APPSC Group 1",
+      "authorityKey": "auth_in_ap_appsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 99,
+      "missionId": "appsc_group2",
+      "title": "APPSC Group 2",
+      "authorityKey": "auth_in_ap_appsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 100,
+      "missionId": "apslprb_sct_si",
+      "title": "AP Police SI",
+      "authorityKey": "auth_in_ap_apslprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AP",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 101,
+      "missionId": "apslprb_sct_pc",
+      "title": "AP Police Constable",
+      "authorityKey": "auth_in_ap_apslprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AP",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 102,
+      "missionId": "tgpsc_group1",
+      "title": "TGPSC Group 1",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 103,
+      "missionId": "tgpsc_group2",
+      "title": "TGPSC Group 2",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 104,
+      "missionId": "tgpsc_group3",
+      "title": "TGPSC Group 3",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 105,
+      "missionId": "tgpsc_group4",
+      "title": "TGPSC Group 4",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 106,
+      "missionId": "tgslprb_sct_si",
+      "title": "Telangana Police SI",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 107,
+      "missionId": "tgslprb_sct_pc",
+      "title": "Telangana Police Constable",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 108,
+      "missionId": "treirb_teaching",
+      "title": "Telangana Gurukulam Teachers",
+      "authorityKey": "auth_in_tg_treirb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TG",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 109,
+      "missionId": "kpsc_kas_gp",
+      "title": "Karnataka KAS (Gazetted Probationers)",
+      "authorityKey": "auth_in_ka_kpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 110,
+      "missionId": "kea_fda_sda",
+      "title": "Karnataka FDA / SDA & Village Administrative Officer",
+      "authorityKey": "auth_in_ka_kea",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 111,
+      "missionId": "ksp_psi",
+      "title": "Karnataka Police Sub-Inspector (PSI)",
+      "authorityKey": "auth_in_ka_ksp",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KA",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 112,
+      "missionId": "ksp_cpc",
+      "title": "Karnataka Civil Police Constable",
+      "authorityKey": "auth_in_ka_ksp",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KA",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 113,
+      "missionId": "kpsc_kl_kas",
+      "title": "Kerala Administrative Service (KAS)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 114,
+      "missionId": "kpsc_kl_degree_prelims",
+      "title": "Kerala PSC Degree Level Prelims",
+      "authorityKey": "auth_in_kl_kpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 115,
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "title": "Kerala PSC 10th & Plus Two Prelims (LDC / Fireman / Excise)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 116,
+      "missionId": "kpsc_kl_police_constable",
+      "title": "Kerala Police Constable",
+      "authorityKey": "auth_in_kl_kpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "KL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 117,
+      "missionId": "tnpsc_group1",
+      "title": "TNPSC Group 1",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 118,
+      "missionId": "tnpsc_group2_2a",
+      "title": "TNPSC Group 2 / 2A",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 119,
+      "missionId": "tnpsc_group4_vao",
+      "title": "TNPSC Group 4 & VAO",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 120,
+      "missionId": "tnusrb_si",
+      "title": "TNUSRB Police SI",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 121,
+      "missionId": "tnusrb_pc",
+      "title": "TNUSRB Police Constable",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 122,
+      "missionId": "tntrb_pg_assistant_tet",
+      "title": "TN TRB PG Assistant & TNTET",
+      "authorityKey": "auth_in_tn_tntrb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 123,
+      "missionId": "tnmrb_assistant_surgeon",
+      "title": "TN MRB Assistant Surgeon",
+      "authorityKey": "auth_in_tn_tnmrb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 124,
+      "missionId": "py_dpar_clerk_vao",
+      "title": "Puducherry UDC, LDC & VAO",
+      "authorityKey": "auth_in_py_dpar",
+      "jurisdictionLevel": "UT",
+      "stateCode": "PY",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 125,
+      "missionId": "py_police_si_pc",
+      "title": "Puducherry Police SI & Constable",
+      "authorityKey": "auth_in_py_police",
+      "jurisdictionLevel": "UT",
+      "stateCode": "PY",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 126,
+      "missionId": "ld_admin_group_c",
+      "title": "Lakshadweep Administration Group C & Police Constable",
+      "authorityKey": "auth_in_ld_admin",
+      "jurisdictionLevel": "UT",
+      "stateCode": "LD",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 127,
+      "missionId": "apsc_cce",
+      "title": "APSC CCE (Assam Civil Services)",
+      "authorityKey": "auth_in_as_apsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AS",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 128,
+      "missionId": "slrc_adre",
+      "title": "ADRE Grade 3 & Grade 4 (Assam Direct Recruitment)",
+      "authorityKey": "auth_in_as_slrc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AS",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 129,
+      "missionId": "slprb_assam_police",
+      "title": "Assam Police SI & Constable Recruitment",
+      "authorityKey": "auth_in_as_slprb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AS",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 130,
+      "missionId": "appsc_arunachal_cce",
+      "title": "APPSC APPSCCE (Arunachal Civil Services)",
+      "authorityKey": "auth_in_ar_appsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 131,
+      "missionId": "apssb_cgl_csle",
+      "title": "APSSB CGL & CSLE (Combined Secondary Level)",
+      "authorityKey": "auth_in_ar_apssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 132,
+      "missionId": "arunachal_police_constable",
+      "title": "Arunachal Police Constable & Specialist Recruitment",
+      "authorityKey": "auth_in_ar_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "AR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 133,
+      "missionId": "mpsc_manipur_mcscc",
+      "title": "MPSC Manipur MCSCCE (Manipur Civil Services)",
+      "authorityKey": "auth_in_mn_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 134,
+      "missionId": "mssc_manipur_group_cd",
+      "title": "Manipur SSC Group C & MTS Recruitment",
+      "authorityKey": "auth_in_mn_mssc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 135,
+      "missionId": "manipur_police_constable",
+      "title": "Manipur Police Rifleman / Constable Recruitment",
+      "authorityKey": "auth_in_mn_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MN",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 136,
+      "missionId": "mpsc_meghalaya_mcs",
+      "title": "MPSC Meghalaya Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_ml_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "ML",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 137,
+      "missionId": "meghalaya_crb_police",
+      "title": "Meghalaya Police SI & Constable Recruitment (CRB)",
+      "authorityKey": "auth_in_ml_crb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "ML",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 138,
+      "missionId": "mpsc_mizoram_mcs",
+      "title": "MPSC Mizoram Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MZ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 139,
+      "missionId": "mizoram_subordinate_services",
+      "title": "Mizoram Subordinate Services (Group B Non-Gazetted via MPSC)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MZ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 140,
+      "missionId": "mizoram_police_constable",
+      "title": "Mizoram Police Constable Recruitment",
+      "authorityKey": "auth_in_mz_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "MZ",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 141,
+      "missionId": "npsc_nagaland_ncs",
+      "title": "NPSC NCS & NPS (Nagaland Civil Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "NL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 142,
+      "missionId": "npsc_nagaland_ctse",
+      "title": "NPSC CTSE (Technical & Engineering Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "NL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 143,
+      "missionId": "nssb_nagaland_csre",
+      "title": "NSSB CSRE (Nagaland Combined Staff Recruitment)",
+      "authorityKey": "auth_in_nl_nssb",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "NL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 144,
+      "missionId": "nagaland_police_constable",
+      "title": "Nagaland Police Constable (GD) Recruitment",
+      "authorityKey": "auth_in_nl_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "NL",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 145,
+      "missionId": "spsc_sikkim_cce",
+      "title": "SPSC Sikkim Civil Services (Under Secretary / DSP)",
+      "authorityKey": "auth_in_sk_spsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "SK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 146,
+      "missionId": "spsc_sikkim_police_si",
+      "title": "SPSC Sikkim Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_sk_spsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "SK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 147,
+      "missionId": "sikkim_police_constable",
+      "title": "Sikkim Police Constable Recruitment",
+      "authorityKey": "auth_in_sk_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "SK",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 148,
+      "missionId": "tpsc_tripura_tcs_tps",
+      "title": "TPSC Combined Competitive Exam (TCS & TPS)",
+      "authorityKey": "auth_in_tr_tpsc",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 149,
+      "missionId": "jrbt_tripura_group_cd",
+      "title": "JRBT Group C & Group D Recruitment",
+      "authorityKey": "auth_in_tr_jrbt",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    },
+    {
+      "index": 150,
+      "missionId": "trbt_tripura_ttet",
+      "title": "Tripura TET (T-TET Paper 1 & 2)",
+      "authorityKey": "auth_in_tr_trbt",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TR",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 151,
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "title": "TRBT STGT & STPGT (Secondary Teachers)",
+      "authorityKey": "auth_in_tr_trbt",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TR",
+      "validationStatus": "VALIDATION_HOLD",
+      "holdReason": "VARIANT_TAXONOMY_UNRESOLVED"
+    },
+    {
+      "index": 152,
+      "missionId": "tripura_police_constable",
+      "title": "Tripura Police Constable & TSR Rifleman Recruitment",
+      "authorityKey": "auth_in_tr_police",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "TR",
+      "validationStatus": "VALIDATION_PASS",
+      "holdReason": null
+    }
+  ]
+}

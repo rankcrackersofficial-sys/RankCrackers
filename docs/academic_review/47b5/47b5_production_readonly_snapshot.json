@@ -1,0 +1,93 @@
+{
+  "snapshotCode": "RC_47B5_PRODUCTION_READONLY_SNAPSHOT",
+  "executedAt": "2026-09-10T06:57:27.757Z",
+  "metrics": {
+    "PRODUCTION_READ_COUNT": 9,
+    "PRODUCTION_WRITE_COUNT": 0
+  },
+  "snapshotSummary": {
+    "missionRealmsCount": 3,
+    "recruitmentsCount": 3,
+    "studentMissionCatalogCount": 3
+  },
+  "snapshotData": {
+    "mission_realms": {
+      "jee_main_2026": {
+        "id": "jee_main_2026",
+        "missionId": "jee_main_2026",
+        "title": "jee_main_2026",
+        "status": "ACTIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "neet_(ug)-2027": {
+        "id": "neet_(ug)-2027",
+        "missionId": "neet_(ug)-2027",
+        "title": "neet_(ug)-2027",
+        "status": "ACTIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "status": "ACTIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      }
+    },
+    "recruitments": {
+      "jee_main_2026": {
+        "id": "jee_main_2026",
+        "recruitmentId": "jee_main_2026",
+        "missionId": "jee_main_2026",
+        "title": "jee_main_2026",
+        "status": "published",
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "neet_(ug)-2027": {
+        "id": "neet_(ug)-2027",
+        "recruitmentId": "neet_(ug)-2027",
+        "missionId": "neet_(ug)-2027",
+        "title": "neet_(ug)-2027",
+        "status": "published",
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "recruitmentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "status": "published",
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      }
+    },
+    "student_mission_catalog": {
+      "jee_main_2026": {
+        "id": "jee_main_2026",
+        "missionId": "jee_main_2026",
+        "title": "jee_main_2026",
+        "status": "LIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "neet_(ug)-2027": {
+        "id": "neet_(ug)-2027",
+        "missionId": "neet_(ug)-2027",
+        "title": "neet_(ug)-2027",
+        "status": "LIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      },
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "status": "LIVE",
+        "archived": false,
+        "createdAt": "2026-08-01T00:00:00.000Z"
+      }
+    }
+  }
+}

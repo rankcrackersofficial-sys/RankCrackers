@@ -1,0 +1,64 @@
+{
+  "sources": [
+    {
+      "url": "https://www.upsc.gov.in/examinations/active-exams",
+      "title": "UPSC active examinations",
+      "verification": "OFFICIAL_PORTAL_VERIFIED"
+    },
+    {
+      "url": "https://ssc.gov.in/",
+      "title": "SSC examination and candidate resources",
+      "verification": "OFFICIAL_PORTAL_VERIFIED"
+    },
+    {
+      "url": "https://nta.ac.in/NoticeBoardArchive",
+      "title": "NTA notice-board archive",
+      "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+    },
+    {
+      "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "title": "RRB centralised employment notices",
+      "verification": "OFFICIAL_LISTING_VERIFIED"
+    },
+    {
+      "url": "https://www.ibps.in/index.php/crp-updates/",
+      "title": "IBPS CRP updates",
+      "verification": "OFFICIAL_LISTING_VERIFIED"
+    },
+    {
+      "url": "https://sbi.co.in/web/careers",
+      "title": "SBI careers",
+      "verification": "OFFICIAL_PORTAL_VERIFIED"
+    },
+    {
+      "url": "https://opportunities.rbi.org.in/",
+      "title": "RBI opportunities",
+      "verification": "OFFICIAL_PORTAL_VERIFIED"
+    },
+    {
+      "url": "https://www.nabard.org/careers-notices1.aspx?cid=693&id=26",
+      "title": "NABARD careers",
+      "verification": "OFFICIAL_LISTING_VERIFIED"
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "title": "Indian Army Online CEE registration 2026-27",
+      "verification": "OFFICIAL_MOD_PIB_EVENT_VERIFIED"
+    },
+    {
+      "url": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+      "title": "Indian Navy Agniveer SSR notice",
+      "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+    },
+    {
+      "url": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "title": "AFCAT Cycle 02/2026 Notification",
+      "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+    },
+    {
+      "url": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "title": "Agniveervayu Intake 01/2027 advertisement",
+      "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+    }
+  ]
+}

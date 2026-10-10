@@ -1,0 +1,14 @@
+{
+  "validationCode": "RC_47B5_REGION_JURISDICTION_VALIDATION",
+  "executedAt": "2026-09-10T06:57:27.778Z",
+  "metrics": {
+    "STATE_COUNT": 28,
+    "UT_COUNT": 8,
+    "TELANGANA_CANONICAL_CODE": "TG",
+    "LADAKH_CANONICAL_CODE": "LA",
+    "LAKSHADWEEP_CANONICAL_CODE": "LD",
+    "REGION_CODE_COLLISION_COUNT": 0,
+    "JURISDICTION_TYPE_MISMATCH_COUNT": 0
+  },
+  "validationPass": true
+}

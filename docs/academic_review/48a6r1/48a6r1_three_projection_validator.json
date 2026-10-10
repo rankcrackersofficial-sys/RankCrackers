@@ -1,0 +1,2690 @@
+{
+  "validatorRows": [
+    {
+      "canonicalMissionId": "afcat",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "missionRealmsPayloadValid": true,
+      "recruitmentsPayloadValid": true,
+      "studentCatalogPayloadValid": true,
+      "failClosedPublicationConfig": {
+        "cardVisible": false,
+        "userPanelVisible": false,
+        "catalogDiscoverable": false,
+        "studentPublicationState": "INTERNAL_DRAFT",
+        "academicStartReady": false,
+        "smartEntryReady": false,
+        "crucibleReady": false,
+        "careerPersonalizationReady": false
+      },
+      "payloadCompatibilityCertified": true
+    }
+  ]
+}

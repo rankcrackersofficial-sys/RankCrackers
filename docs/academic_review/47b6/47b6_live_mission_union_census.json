@@ -1,0 +1,139 @@
+{
+  "censusCode": "RC_47B6_LIVE_MISSION_UNION_CENSUS",
+  "executedAt": "2026-09-10T07:08:16.167Z",
+  "metrics": {
+    "LIVE_UNION_MISSION_COUNT": 16,
+    "LIVE_THREE_PROJECTION_COMPLETE_COUNT": 15,
+    "LIVE_PROJECTION_ORPHAN_COUNT": 1
+  },
+  "details": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    },
+    {
+      "missionId": "jee_main_2026",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_cgl",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_chsl",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_cpo",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_gd",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_je",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false
+    },
+    {
+      "missionId": "test_mission_catalog_bridge",
+      "inRealms": false,
+      "inRecruitments": true,
+      "inStudentCatalog": false,
+      "isComplete3Projection": false,
+      "isPilotImmutable": false
+    }
+  ]
+}

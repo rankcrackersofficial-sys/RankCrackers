@@ -1,0 +1,51 @@
+{
+  "gate": "GATE_48CS2R1_OFFICIAL_RULE_MODEL",
+  "generatedAt": "2026-09-10T11:26:52.324Z",
+  "modelName": "EligibilityRule",
+  "governedRuleTypes": [
+    "AGE_MIN",
+    "AGE_MAX",
+    "QUALIFICATION_MIN",
+    "DEGREE_REQUIRED",
+    "DISCIPLINE_REQUIRED",
+    "DOMICILE_REQUIRED",
+    "RESERVATION_FEE",
+    "GENDER_RESTRICTION",
+    "PWBD_RESTRICTION",
+    "EXPERIENCE_MIN"
+  ],
+  "governedOperators": [
+    "GTE",
+    "LTE",
+    "EQUALS",
+    "IN",
+    "EXISTS",
+    "BETWEEN"
+  ],
+  "schemaDefinition": {
+    "ruleId": "String (Primary Key)",
+    "cycleId": "String",
+    "postId": "String | null (Post-specific or general)",
+    "ruleType": "Enum of governedRuleTypes",
+    "operator": "Enum of governedOperators",
+    "officialValue": "Any (Raw value as stated in official gazette/notification)",
+    "normalizedValue": "Any | null (Pre-computed normalized value)",
+    "sourceDocumentId": "String",
+    "sourceLocator": "String (e.g. \"Clause 4(a), Page 8\")",
+    "effectiveFrom": "String (ISO 8601)",
+    "supersededBy": "String | null (Corrigendum rule replacement)"
+  },
+  "sampleInstance": {
+    "ruleId": "rule_upsc_cse_2026_age_max",
+    "cycleId": "rc_upsc_cse_2026",
+    "postId": null,
+    "ruleType": "AGE_MAX",
+    "operator": "LTE",
+    "officialValue": 32,
+    "normalizedValue": 32,
+    "sourceDocumentId": "doc_upsc_cse_2026_gazette",
+    "sourceLocator": "Section II, Clause 3(b)",
+    "effectiveFrom": "2026-08-01T00:00:00Z",
+    "supersededBy": null
+  }
+}

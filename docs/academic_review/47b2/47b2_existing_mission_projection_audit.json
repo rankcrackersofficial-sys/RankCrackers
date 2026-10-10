@@ -1,0 +1,26 @@
+{
+  "auditCode": "RC_47B2_PROJECTION_AUDIT",
+  "executedAt": "2026-09-10T06:00:00.583Z",
+  "canonicalProjectionsAudited": [
+    {
+      "collection": "mission_realms",
+      "path": "mission_realms/{missionId}",
+      "purpose": "Root authority, academic structure, Crucible, and official document registry",
+      "status": "CANONICAL_MANDATORY"
+    },
+    {
+      "collection": "recruitments",
+      "path": "recruitments/{missionId}",
+      "purpose": "Recruitment specification, examination structure, and Founder UI mirror",
+      "status": "CANONICAL_MANDATORY"
+    },
+    {
+      "collection": "student_mission_catalog",
+      "path": "student_mission_catalog/{missionId}",
+      "purpose": "Student discovery, catalog status, visibility flags, and readiness locks",
+      "status": "CANONICAL_MANDATORY"
+    }
+  ],
+  "additionalParallelCollectionsFound": 0,
+  "projectionSetComplete": true
+}

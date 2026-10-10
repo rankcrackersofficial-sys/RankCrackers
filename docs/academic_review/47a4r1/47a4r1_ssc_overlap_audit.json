@@ -1,0 +1,31 @@
+{
+  "auditCode": "RC_47A4R1_SSC_OVERLAP_AUDIT",
+  "executedAt": "2026-09-10T07:36:25.917Z",
+  "resolvedOverlaps": [
+    {
+      "pair": [
+        "delhi_police_si",
+        "ssc_cpo"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    },
+    {
+      "pair": [
+        "ssc_ladakh_selection_post",
+        "ssc_selection_post"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    },
+    {
+      "pair": [
+        "delhi_police_constable",
+        "ssc_gd"
+      ],
+      "status": "CANONICAL_IDENTITY_RESOLVED"
+    }
+  ],
+  "metrics": {
+    "UNRESOLVED_SSC_OVERLAP_COUNT": 0
+  },
+  "auditPass": true
+}

@@ -1,0 +1,181 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.693Z",
+  "summary": {
+    "CANONICAL_PROFILE_SCHEMA_CONTRADICTION_COUNT": 0,
+    "TOTAL_MISSIONS_RECONCILED": 15,
+    "AUTHORITATIVE_CYCLE_PATH": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+    "AUTHORITATIVE_PAPER_MODEL_PATH": "paperModel.papers, paperModel.paperCount",
+    "STALE_DUPLICATE_PATHS_PURGED": [
+      "papers",
+      "paperCount"
+    ]
+  },
+  "details": [
+    {
+      "missionId": "jee_main_2026",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 3
+    },
+    {
+      "missionId": "ssc_je",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "ssc_gd",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 2
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "authoritativeCyclePath": "missionTargetYear, sourceBaselineYear, cycleRelation, cycleContext",
+      "authoritativePaperModelPath": "paperModel.papers, paperModel.paperCount",
+      "staleDeletedPaths": [
+        "papers",
+        "paperCount"
+      ],
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "paperCount": 1
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "contractName": "Verified Absence Attestation Contract",
+  "gate": "GATE 48CS2R4",
+  "invariant": "ABSENCE_WITHOUT_EVIDENCE_COUNT = 0",
+  "description": "Negative rules or exemptions cannot be derived from search failures. Explicit legal absence attestation is mandatory to claim RULE_ABSENCE_VERIFIED.",
+  "schema": {
+    "ruleFamily": "string (must match target family)",
+    "cycleId": "string (must match target recruitment cycle)",
+    "authoritativeDocumentsReviewed": "array of strings (minimum 1 document)",
+    "sourceScope": "string (e.g. FULL_NOTIFICATION_TEXT_AND_ANNEXURES)",
+    "evidenceRefs": "array of strings (minimum 1 specific clause/section proof)",
+    "reviewStatus": "string (must be AUDITED_ABSENCE_CONFIRMED)",
+    "attestationReason": "string (comprehensive legal/statutory rationale)"
+  },
+  "prohibitedBehaviors": [
+    "Search returned 0 results treated as RULE_ABSENCE_VERIFIED",
+    "Empty rules array treated as absence of restrictions",
+    "Absence attestation missing evidenceRefs",
+    "Absence attestation with reviewStatus !== AUDITED_ABSENCE_CONFIRMED"
+  ],
+  "enforcementOutcome": "Falsified or incomplete absence attestation drops family resolution strictly to RULE_UNRESOLVED, triggering PARTIAL_SOURCE_PACKAGE and preventing false eligibility."
+}

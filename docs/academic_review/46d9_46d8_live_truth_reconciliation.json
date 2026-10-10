@@ -1,0 +1,25 @@
+{
+  "reconciliationSchemaVersion": "9.0.0",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "agent": "AGENT-3 — FOUNDER BACKEND / OFFICIAL SOURCE / CANONICAL MISSION LANE",
+  "generatedAt": "2026-09-09T14:57:58.796Z",
+  "truthVerdict": "46D8_WAS_DRY_RUN_ONLY",
+  "semanticCorrection": {
+    "issueIdentified": "Contradiction in 46D8 report claiming MISSION_PRODUCTION_CREATED_COUNT = 12 while PRODUCTION_WRITE_COUNT = 0 and executionMode = DRY_RUN_VALIDATION_ONLY",
+    "liveCensusResultBefore46D9": {
+      "NEW_MISSION_LIVE_COUNT_BEFORE": 0,
+      "LIVE_REALM_EXISTS_COUNT": 0,
+      "LIVE_RECRUITMENT_EXISTS_COUNT": 0,
+      "LIVE_STUDENT_CATALOG_EXISTS_COUNT": 0,
+      "LIVE_CANONICAL_PROFILE_EXISTS_COUNT": 0,
+      "LIVE_OFFICIAL_DOCUMENTS_COUNT": 0
+    },
+    "correctedCounts": {
+      "MISSION_PRODUCTION_CREATED_IN_46D8": 0,
+      "NEW_MISSION_LIVE_COUNT_BEFORE_46D9": 0,
+      "NEW_MISSION_ACTUALLY_CREATED_IN_46D9": 12,
+      "NEW_MISSION_LIVE_COUNT_AFTER_46D9": 12
+    },
+    "explanation": "46D8 successfully validated offline canonical profile schemas and planned projection diffs, but in accordance with DRY_RUN_VALIDATION_ONLY, attempted 0 production writes. The live census on production Firestore confirmed 0 documents existed for the 12 new missions prior to 46D9 execution."
+  }
+}

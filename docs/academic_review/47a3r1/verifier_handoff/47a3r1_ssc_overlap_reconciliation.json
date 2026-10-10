@@ -1,0 +1,58 @@
+{
+  "reconciliationCode": "RC_47A3R1_SSC_OVERLAP_RECONCILIATION",
+  "generatedAt": "2026-09-10T07:00:05.925Z",
+  "metrics": {
+    "SSC_GD_DUPLICATE_ID_COUNT": 0,
+    "UNJUSTIFIED_SELECTION_POST_DUPLICATE_COUNT": 0,
+    "DELHI_POLICE_SI_ACTION": "RESOLVED_TO_CANONICAL_SSC_CPO_REGIONAL_POINTER",
+    "DELHI_POLICE_CONSTABLE_ACTION": "RETAINED_AS_DEDICATED_MISSION_CONDUCTED_BY_SSC"
+  },
+  "sscReconciliations": [
+    {
+      "topic": "SSC_GD_CANONICAL_IDENTITY",
+      "canonicalMissionId": "ssc_gd",
+      "historicalAliasCandidates": [
+        "ssc_gd_constable"
+      ],
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_mha_capfs",
+      "regionalContext": "National / Pan-India (including Assam Rifles in North Eastern states: AS, AR, MN, ML, MZ, NL, TR)",
+      "findings": "Current RankCrackers canonical permanent mission identity is ssc_gd. Historical reference ssc_gd_constable is recorded strictly as alias candidate. Assam Rifles regional discoverability routes to ssc_gd.",
+      "duplicateCount": 0
+    },
+    {
+      "topic": "SSC_CPO_AND_DELHI_POLICE_SI",
+      "canonicalMissionId": "ssc_cpo",
+      "studentDisplayAlias": "SSC CPO (Sub-Inspector in Delhi Police & CAPFs)",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_dl_delpol",
+      "regionalContext": "DL (Delhi)",
+      "findings": "Sub-Inspector (Executive) in Delhi Police is recruited centrally by SSC through the annual SSC CPO Examination. Delhi regional discovery routes to ssc_cpo. Duplicate delhi_police_si mission is suppressed from materialization.",
+      "duplicateCount": 0
+    },
+    {
+      "topic": "DELHI_POLICE_CONSTABLE",
+      "canonicalMissionId": "delhi_police_constable",
+      "studentDisplayAlias": "Delhi Police Constable (Executive)",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_dl_delpol",
+      "regionalContext": "DL (Delhi)",
+      "findings": "Constable (Executive) Male & Female in Delhi Police is an independently distinct examination conducted exclusively for Delhi Police by SSC under a dedicated MOU/scheme. It retains its own dedicated mission identity.",
+      "duplicateCount": 0
+    },
+    {
+      "topic": "SSC_SELECTION_POST_LADAKH",
+      "canonicalMissionId": "ssc_selection_post",
+      "studentDisplayAlias": "SSC Selection Posts (Matriculation, Higher Secondary, Graduation Levels)",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_la_admin",
+      "regionalContext": "LA (Ladakh)",
+      "findings": "SSC conducts Selection Posts (Matric, Higher Secondary, Graduation) across all regions (including Ladakh posts via SSC NWR) under the canonical three-tier Computer Based Examination scheme and syllabus. Vacancies belong to UT of Ladakh Administration, but the examination identity is canonical ssc_selection_post. Duplicate permanent mission ssc_ladakh_selection_post is suppressed.",
+      "duplicateCount": 0
+    }
+  ]
+}

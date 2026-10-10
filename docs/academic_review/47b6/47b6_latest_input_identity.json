@@ -1,0 +1,17 @@
+{
+  "identityCode": "RC_47B6_LATEST_INPUT_IDENTITY",
+  "executedAt": "2026-09-10T07:08:16.203Z",
+  "handoffDirectory": "docs/academic_review/47a3r/verifier_handoff/",
+  "LATEST_STATE_UT_MANIFEST_AVAILABLE": "NO",
+  "inputClassification": "UNFROZEN_CORRECTED_CANDIDATE_INPUT",
+  "loadedFiles": [
+    "47a3_authority_registry.json",
+    "47a3_candidate_manifest.json",
+    "47a3r_central_authority_id_reconciliation.json",
+    "47a3r_duplicate_ownership_registry.json",
+    "47a3r_candidate_manifest_delta.json",
+    "47a3r_variant_source_binding_registry.json",
+    "47a3r_source_resolution_semantics.json",
+    "47a3r_state_ut_source_monitor_seed_registry.json"
+  ]
+}

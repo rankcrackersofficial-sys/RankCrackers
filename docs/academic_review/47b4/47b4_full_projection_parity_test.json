@@ -1,0 +1,40 @@
+{
+  "testCode": "RC_47B4_FULL_PROJECTION_PARITY_TEST",
+  "executedAt": "2026-09-10T06:57:27.684Z",
+  "sharedFieldContract": [
+    "missionId",
+    "canonicalAuthorityKey",
+    "authorityGroupKey",
+    "jurisdictionLevel",
+    "stateCode",
+    "stateName",
+    "studentHierarchyPath"
+  ],
+  "parityCheckResults": [
+    {
+      "missionId": "jee_main_2026",
+      "sharedFieldContractLength": 7,
+      "parityCheckPass": true
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "sharedFieldContractLength": 7,
+      "parityCheckPass": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "sharedFieldContractLength": 7,
+      "parityCheckPass": true
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "sharedFieldContractLength": 7,
+      "parityCheckPass": true
+    }
+  ],
+  "metrics": {
+    "UNMEASURED_SHARED_PARITY_FIELD_COUNT": 0,
+    "STATIC_PASS_FIELD_WITHOUT_COMPUTATION_COUNT": 0
+  },
+  "assertionPass": true
+}

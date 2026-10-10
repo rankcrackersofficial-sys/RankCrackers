@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "48CS5-1",
+  "missionId": "jee_main_2026",
+  "cycleId": "JEE-MAIN-2026",
+  "opportunityKind": "ADMISSION_ENTRANCE",
+  "capacityModelKind": "ADMISSION_SEAT_OR_COUNSELLING",
+  "jobVacancyMatrix": null,
+  "applicationState": "CLOSED",
+  "examState": "COMPLETED",
+  "answerKeyState": "FINAL_ANSWER_KEY_RELEASED",
+  "resultState": "RESULT_DECLARED",
+  "session2ApplicationDocuments": {
+    "applicationNotice": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/20260201612425163.pdf",
+    "correctionNotice": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/202602211726839591.pdf",
+    "reopeningNotice": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/03/20260312579267972.pdf",
+    "exactDocumentsVerified": true,
+    "exactWindowDates": "UNRESOLVED_FROM_MACHINE_READABLE_TEXT"
+  },
+  "ruleFamiliesVerified": 9,
+  "ruleFamiliesUnresolved": 1,
+  "rules": [
+    {
+      "ruleId": "JEE26-AGE",
+      "family": "AGE_RULE",
+      "officialValue": "No age limit for appearing in JEE Main 2026; institute-specific admission age rules may still apply.",
+      "page": 18,
+      "section": "3.1",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-QE-YEAR",
+      "family": "QUALIFICATION_PASSING_YEAR",
+      "officialValue": "Class XII/equivalent passed in 2024 or 2025, or appearing in 2026; passing in 2023 or earlier is not eligible.",
+      "page": 19,
+      "section": "3.3",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-STATE",
+      "family": "STATE_OF_ELIGIBILITY",
+      "officialValue": "State is where Class XII/equivalent was first passed, not native place/residence.",
+      "page": 19,
+      "section": "3.4",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-SESSIONS",
+      "family": "SESSION_ATTEMPT_RULE",
+      "officialValue": "Two sessions; appearance in both is optional; best total NTA score is used when a candidate appears in more than one session.",
+      "page": 7,
+      "section": "1.3",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-S1-WINDOW",
+      "family": "APPLICATION_WINDOW",
+      "officialValue": "Session 1 online application: 31 October 2025 through 27 November 2025 21:00.",
+      "page": 2,
+      "section": "Important dates",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-EXAM-DATES",
+      "family": "EXAM_LIFECYCLE",
+      "officialValue": "Session 1: 21-30 January 2026; Session 2: 02-09 April 2026.",
+      "page": 2,
+      "section": "Important dates",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "JEE26-RESERVATION",
+      "family": "ADMISSION_RESERVATION",
+      "officialValue": "GEN-EWS 10%, OBC-NCL 27%, SC 15%, ST 7.5%; PwBD 5% horizontally within each vertical category.",
+      "page": 21,
+      "section": "4.1",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialDocumentId": "JEE_MAIN_IB_2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    }
+  ],
+  "personalizationSafety": {
+    "jobVacancySemanticsProhibited": true,
+    "seatCapacityOwnedBy": "ADMISSION_COUNSELLING_DOMAIN"
+  },
+  "exactSourceDocumentCount": 6,
+  "opportunitySignalActive": "NO",
+  "processUpdateSignalActive": "NO",
+  "currentCycleStatus": "NTA_EXAM_CYCLE_RESULT_DECLARED_AND_FINAL_ANSWER_KEYS_RELEASED",
+  "counsellingLifecycle": "OUTSIDE_NTA_EXAM_RULEBOOK_PACKAGE"
+}

@@ -1,0 +1,1476 @@
+{
+  "registryCode": "RC_47A3_VARIANT_REGISTRY",
+  "metrics": {
+    "totalMissionsEvaluated": 153,
+    "VARIANT_REQUIRED_COUNT": 29,
+    "VARIANT_EVIDENCE_READY_COUNT": 15,
+    "VARIANT_REVIEW_REQUIRED_COUNT": 14,
+    "SYNTHETIC_PAPER_AS_VARIANT_COUNT": 0
+  },
+  "variantLedger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "canonicalExamName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "canonicalExamName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "canonicalExamName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "canonicalExamName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "uk_police_constable",
+      "canonicalExamName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "canonicalExamName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "canonicalExamName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "canonicalExamName": "Group C Common Computer Based Test / Screening Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "canonicalExamName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "psssb_clerk",
+      "canonicalExamName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "psssb_patwari",
+      "canonicalExamName": "Revenue Patwari Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "canonicalExamName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "haryana_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "canonicalExamName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jk_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jk_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "canonicalExamName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "canonicalExamName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "canonicalExamName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "canonicalExamName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "canonicalExamName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "canonicalExamName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "canonicalExamName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "canonicalExamName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "canonicalExamName": "Madhya Pradesh State Service Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "canonicalExamName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "canonicalExamName": "Chhattisgarh State Service Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "cg_police_constable",
+      "canonicalExamName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "canonicalExamName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "gsssb_cce",
+      "canonicalExamName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "gpssb_talati",
+      "canonicalExamName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "canonicalExamName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "canonicalExamName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "canonicalExamName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "canonicalExamName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "canonicalExamName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "canonicalExamName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bssc_cgl",
+      "canonicalExamName": "BSSC Graduate Level Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "canonicalExamName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jssc_cgl",
+      "canonicalExamName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "canonicalExamName": "Jharkhand Constable Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "canonicalExamName": "Odisha Civil Services Examination (Prelims)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ossc_cgl",
+      "canonicalExamName": "OSSC Combined Graduate Level Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "canonicalExamName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "canonicalExamName": "Odisha Police Civil Constable Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "canonicalExamName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "canonicalExamName": "WBPSC Clerkship Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "canonicalExamName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "canonicalExamName": "A&N Administration Common Higher Secondary Level Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "canonicalExamName": "A&N Administration Combined Matric Level Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "canonicalExamName": "Andaman & Nicobar Police Constable & Sub-Inspector Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "appsc_group1",
+      "canonicalExamName": "APPSC Group-I Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "appsc_group2",
+      "canonicalExamName": "APPSC Group-II Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "canonicalExamName": "TGPSC Group-I Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "canonicalExamName": "TGPSC Group-II Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "canonicalExamName": "TGPSC Group-III Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "canonicalExamName": "TGPSC Group-IV Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "canonicalExamName": "KPSC Gazetted Probationers Examination (KAS)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "canonicalExamName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ksp_cpc",
+      "canonicalExamName": "KSP Civil Police Constable (CPC)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "canonicalExamName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "canonicalExamName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnusrb_si",
+      "canonicalExamName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "canonicalExamName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "canonicalExamName": "TN MRB Recruitment of Assistant Surgeons (General / Specialty)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "canonicalExamName": "Puducherry DPAR General Recruitment (UDC / LDC / VAO)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "canonicalExamName": "Puducherry Police Sub-Inspector & Police Constable Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "canonicalExamName": "Lakshadweep Administration Group C Direct Recruitment / IRBn Constable",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "apsc_cce",
+      "canonicalExamName": "Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "canonicalExamName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "canonicalExamName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "canonicalExamName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "canonicalExamName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "canonicalExamName": "Manipur Combined Competitive Examination (MCSCC)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "canonicalExamName": "Manipur Staff Selection Combined Group C & D Recruitment Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "canonicalExamName": "Manipur Police Constable & Rifleman Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "canonicalExamName": "Meghalaya Civil Services Combined Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "canonicalExamName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "canonicalExamName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "canonicalExamName": "Mizoram Subordinate Services Selection Board Combined Recruitment (Reverted)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "canonicalExamName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "canonicalExamName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "canonicalExamName": "Combined Technical Services Examination (CTSE)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "canonicalExamName": "Combined Staff Recruitment Examination (CSRE)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "canonicalExamName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "canonicalExamName": "Sikkim State Civil Services Combined Competitive Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "canonicalExamName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "canonicalExamName": "Sikkim Police Constable & Follower Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "canonicalExamName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "canonicalExamName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantKey": "paper_1_primary",
+          "displayName": "Paper I (Classes I to V - Primary Teacher)",
+          "dimensionValue": "PRIMARY_STAGE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_math_science",
+          "displayName": "Paper II (Classes VI to VIII - Mathematics & Science)",
+          "dimensionValue": "UPPER_PRIMARY_MATH_SCIENCE"
+        },
+        {
+          "variantKey": "paper_2_upper_primary_social_studies",
+          "displayName": "Paper II (Classes VI to VIII - Social Studies)",
+          "dimensionValue": "UPPER_PRIMARY_SOCIAL_STUDIES"
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "canonicalExamName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "state": {
+    "missionId": "neet_(ug)-2027",
+    "cycle": "NEET UG 2026",
+    "currentCycleStatus": "RESULT_AND_REEXAM_FINAL_KEY_PUBLISHED",
+    "latestOfficialEvent": "Re-examination final keys, 16 Jul 2026",
+    "HAS_EXAM_OCCURRED": "YES",
+    "HAS_RESULT_OCCURRED": "YES",
+    "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+    "IS_PROCESS_UPDATE_STILL_ACTIVE": "NO",
+    "opportunitySignalActive": "NO",
+    "processUpdateSignalActive": "NO",
+    "fullCurrentStateResolved": true
+  },
+  "events": [
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "neet_(ug)-2027",
+      "officialCycleIdentity": "NEET UG 2026",
+      "eventType": "RESULT",
+      "officialTitle": "Press Release for NEET UG 2026 Results",
+      "officialListingPage": "https://neet.nta.nic.in/public-notices/",
+      "exactDocumentUrl": "https://neet.nta.nic.in/public-notices/",
+      "publicationDate": "2026-06-21",
+      "effectiveDate": "2026-06-21",
+      "pageOrSection": "public notices listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "neet_(ug)-2027",
+      "officialCycleIdentity": "NEET UG 2026",
+      "eventType": "FINAL_ANSWER_KEY",
+      "officialTitle": "Final Answer Keys for NEET UG 2026 Re-Examination",
+      "officialListingPage": "https://neet.nta.nic.in/public-notices/",
+      "exactDocumentUrl": "https://neet.nta.nic.in/final-answer-keys-for-neet-ug-2026-re-examination/",
+      "publicationDate": "2026-07-16",
+      "effectiveDate": "2026-07-16",
+      "pageOrSection": "document page",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    }
+  ]
+}

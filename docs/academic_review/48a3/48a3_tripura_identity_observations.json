@@ -1,0 +1,18 @@
+{
+  "observedIds": [
+    "jrbt_tripura_group_cd",
+    "tpsc_tripura_tcs_tps",
+    "trbt_tripura_stgt_stpgt",
+    "trbt_tripura_ttet",
+    "tripura_police_constable",
+    "tripura_tet"
+  ],
+  "sourceArtifacts": [
+    "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+    "docs/academic_review/47a4r3/47a4r3_tripura_tet_exact_pattern_audit.json",
+    "docs/academic_review/48c/48c_article315_reclassification_result.json",
+    "docs/academic_review/48c/48c_tripura_tet_source_recovery.json"
+  ],
+  "conflictStatus": "UNBOUND_ALIAS_DISCREPANCY",
+  "note": "Upstream producer files contain both 'trbt_tripura_ttet' (in State/UT manifest) and 'tripura_tet' (in 48C field audit). Canonical binding is not unified in upstream producer manifest."
+}

@@ -1,0 +1,17 @@
+{
+  "gate": "48CS1R1",
+  "task": "RC_48A1_REPORT_CODE_CONTRADICTION_AND_CAREER_SIGNAL_PERSONALIZATION_CONTROL_48A2_CS1R1",
+  "generatedAt": "2026-09-10T11:16:53.233Z",
+  "reconciledDefects": [
+    {
+      "defectId": "CAREER_SIGNAL_VACANCY_FEED_ONLY_COLLAPSE",
+      "finding": "Career signal was modeled as a generic vacancy feed without personalization flow.",
+      "reconciliation": "Established Core Personalization Law: RecruitmentCycle + Rules + Career Profile + Participation State = Personalized View."
+    },
+    {
+      "defectId": "PROFILE_DUPLICATION_RISK",
+      "finding": "Primary Profile and Career Profile risked creating duplicate backend objects.",
+      "reconciliation": "Mandated ONE canonical Career Profile object per user, shared across Career Signals page and Profile/Settings."
+    }
+  ]
+}

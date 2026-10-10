@@ -1,0 +1,48 @@
+# 47C4 Deep National Official Source Recovery
+
+Canonical root: C:\RankCrackers\RankCrackers-55
+
+AFCAT 02/2026 and Agniveervayu 01/2027 are source-ready from exact official IAF documents. Army CEE current identity, CBT, fee, schedule and categories are verified through MoD/PIB, while the direct current Army notification/syllabus remains blocked by official-site access. SSC has no fabricated child URLs; zero persistent exact child papers were promoted.
+
+## Metrics
+
+```json
+{
+  "CANONICAL_EXECUTION_ROOT": "C:\\RankCrackers\\RankCrackers-55",
+  "CANONICAL_ROOT_PREFLIGHT_PASS": "YES",
+  "AFCAT_CURRENT_EXACT_NOTIFICATION_READY": "YES",
+  "AFCAT_CURRENT_EXACT_NOTIFICATION_URL": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+  "AFCAT_NOTIFICATION_BYTES_ACQUIRED": "NO",
+  "AFCAT_NOTIFICATION_SHA256": null,
+  "ARMY_AGNIVEER_CURRENT_SOURCE_READY": "NO",
+  "ARMY_ATTEMPT_METHOD_COUNT": 4,
+  "ARMY_EXACT_BLOCKER_IF_ANY": "OFFICIAL_SITE_ACCESS_BLOCKED: direct notice/syllabus child unavailable; MoD/PIB current breadcrumbs verified.",
+  "AGNIVEERVAYU_CURRENT_SOURCE_READY": "YES",
+  "AGNIVEERVAYU_ATTEMPT_METHOD_COUNT": 2,
+  "AGNIVEERVAYU_EXACT_BLOCKER_IF_ANY": null,
+  "SSC_MISSIONS_AUDITED": 9,
+  "SSC_EXACT_CHILD_PYQ_ROWS": 0,
+  "SSC_ARCHIVE_LISTING_ONLY_MISSIONS": 9,
+  "SSC_PORTAL_ONLY_MISSIONS": 0,
+  "SSC_SYNTHETIC_CHILD_URL_COUNT": 0,
+  "NATIONAL_AUTHORITIES_INCLUDED": 13,
+  "NATIONAL_MISSIONS_INCLUDED": 46,
+  "NATIONAL_AUTHORITIES_CONSIDERED_BUT_EXCLUDED": 3,
+  "NATIONAL_AUTHORITIES_UNRESOLVED": 2,
+  "OFFICIAL_EXACT_DOCUMENT_COUNT": 6,
+  "LOCAL_OFFICIAL_DOCUMENT_DOWNLOAD_COUNT": 0,
+  "SHA256_COMPUTED_COUNT": 0,
+  "SOURCE_MONITOR_AUTHORITY_COUNT": 13,
+  "SOURCE_MONITOR_SURFACE_COUNT": 13,
+  "THIRD_PARTY_SOURCE_USED_AS_OFFICIAL_COUNT": 0,
+  "FABRICATED_URL_COUNT": 0,
+  "YEARWISE_DUPLICATE_MISSION_COUNT": 0,
+  "PRODUCTION_FIRESTORE_WRITE_COUNT": 0,
+  "MISSION_CREATE_COUNT": 0,
+  "S2_JOB_COUNT": 0
+}
+```
+
+## Verdict
+
+47C4_NATIONAL_SOURCE_HOLD_AFTER_EXHAUSTIVE_OFFICIAL_EVIDENCE_SEARCH

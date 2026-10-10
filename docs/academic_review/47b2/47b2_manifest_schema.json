@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "47b2_manifest_schema",
+  "executedAt": "2026-09-10T06:00:00.723Z",
+  "type": "object",
+  "required": [
+    "manifestVersion",
+    "manifestId",
+    "missions"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "type": "string"
+    },
+    "manifestId": {
+      "type": "string"
+    },
+    "missions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "missionId",
+          "title",
+          "canonicalAuthorityKey",
+          "jurisdictionLevel"
+        ],
+        "properties": {
+          "missionId": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "canonicalAuthorityKey": {
+            "type": "string"
+          },
+          "jurisdictionLevel": {
+            "type": "string",
+            "enum": [
+              "CENTRAL",
+              "STATE",
+              "UT"
+            ]
+          },
+          "stateCode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stateName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "region": {
+            "type": "string"
+          },
+          "sector": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "examCategory": {
+            "type": "string"
+          },
+          "variants": {
+            "type": "array"
+          },
+          "officialSourceLocator": {
+            "type": "object"
+          },
+          "readiness": {
+            "type": "object"
+          },
+          "visibility": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

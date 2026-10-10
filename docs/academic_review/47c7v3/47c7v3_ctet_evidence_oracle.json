@@ -1,0 +1,18 @@
+{
+  "oracleCode": "RC_47C7V3_CTET_EVIDENCE_ORACLE",
+  "executedAt": "2026-09-10T08:22:34.790Z",
+  "authorityId": "auth_in_cbse",
+  "officialSourceUrl": "https://ctet.nic.in",
+  "exactDocumentUrl": "https://ctet.nic.in/information-bulletin",
+  "levelVariants": [
+    {
+      "variantId": "ctet_level_1_primary",
+      "displayName": "Primary Level (Classes I-V)"
+    },
+    {
+      "variantId": "ctet_level_2_upper_primary",
+      "displayName": "Upper Primary Level (Classes VI-VIII)"
+    }
+  ],
+  "evidenceVerified": true
+}

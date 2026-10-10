@@ -1,0 +1,1053 @@
+{
+  "ledgerCode": "RC_47B5_SHELL_SELECTION_READINESS_LEDGER",
+  "executedAt": "2026-09-10T06:57:27.788Z",
+  "metrics": {
+    "totalCandidates": 153,
+    "shellRecordReadyCount": 153,
+    "ACADEMIC_START_READY_COUNT": 0
+  },
+  "ledger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "upsssc_pet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "up_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "uk_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "uk_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "uk_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hp_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "psssb_clerk",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "psssb_patwari",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "punjab_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "punjab_pstet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "haryana_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "haryana_htet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jk_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jk_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "delhi_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rbse_reet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "rj_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "cg_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gsssb_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gpssb_talati",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bpsc_tre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bssc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bseb_stet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jssc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jac_jtet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ossc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "appsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "appsc_group2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "treirb_teaching",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ksp_psi",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ksp_cpc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnusrb_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "apsc_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "slrc_adre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "academicStartReady": false
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    }
+  ]
+}

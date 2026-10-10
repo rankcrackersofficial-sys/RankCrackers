@@ -1,0 +1,60 @@
+{
+  "gate": "GATE 48CS2R4",
+  "package": "VERIFIED RULEBOOK PACKAGE TRUST BOUNDARY",
+  "lane": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "canonicalRoot": "C:/RankCrackers/RankCrackers-55",
+  "sealedAt": "2026-09-10T12:11:35.521Z",
+  "totalArtifactsHashed": 10,
+  "manifestEntries": [
+    {
+      "artifact": "48cs2r4_rulebook_package_schema.json",
+      "byteSize": 8318,
+      "sha256": "21506fe14bd01559083145172fd0ab055c680bef7fbc63fcf9584d4eeafaf662"
+    },
+    {
+      "artifact": "48cs2r4_completeness_derivation_contract.json",
+      "byteSize": 2745,
+      "sha256": "2b09948ad9121e20bf835c2276fa571c9ec864ff01380ab570b88a0c12b5556b"
+    },
+    {
+      "artifact": "48cs2r4_verified_absence_contract.json",
+      "byteSize": 1294,
+      "sha256": "86b854e33e786f3bfb83255e754d6ce013190204f490a54225301310e5dd25a7"
+    },
+    {
+      "artifact": "48cs2r4_amendment_trust_contract.json",
+      "byteSize": 1190,
+      "sha256": "c9dd7eae6432f4ee0ca48150899e9383c11ce20ac7127f908e1b3ee8f7cc0e34"
+    },
+    {
+      "artifact": "48cs2r4_vacancy_coverage_contract.json",
+      "byteSize": 1008,
+      "sha256": "4246b8fe68fd6d2363f2926b70c5def594211fd5d1367847ba4bf01560c6b525"
+    },
+    {
+      "artifact": "48cs2r4_source_state_contract.json",
+      "byteSize": 1097,
+      "sha256": "a78644aa8affcdcc38578ccdc6a1c62a4463f0de071fc7ea3e14e2a35e3aabd1"
+    },
+    {
+      "artifact": "48cs2r4_package_validator_results.json",
+      "byteSize": 1347,
+      "sha256": "38866e03ac8a8885f7ba77d3d70db9c75f572e9812f4d4a53905a7ea00f61d06"
+    },
+    {
+      "artifact": "48cs2r4_adversarial_tests.json",
+      "byteSize": 2130,
+      "sha256": "b96a5ed6ecdf2e2ecf2af91545048b43d19a35e410aa4bf02aa68e86b0e883fc"
+    },
+    {
+      "artifact": "48cs2r4_no_production_mutation_proof.json",
+      "byteSize": 948,
+      "sha256": "ef7c6e7d3beb69c88df05bc51293166f2907f0c0d12482266456f8ba290c3b1f"
+    },
+    {
+      "artifact": "48cs2r4_final_report.md",
+      "byteSize": 10856,
+      "sha256": "f47f2d6f5919579cac3d414d17ea3af142c8c5cc60e864f8aaf08a1b5b3c34ac"
+    }
+  ]
+}

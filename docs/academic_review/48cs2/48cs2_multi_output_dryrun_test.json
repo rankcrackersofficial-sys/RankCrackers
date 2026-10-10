@@ -1,0 +1,92 @@
+{
+  "gate": "GATE_48CS2_MULTI_OUTPUT_DRYRUN_TEST",
+  "generatedAt": "2026-09-10T11:06:36.547Z",
+  "inputDocument": {
+    "title": "UPSC CSE 2026 Combined Notification",
+    "documentType": "ADVERTISEMENT",
+    "permanentMissionId": "upsc_cse_prelims",
+    "year": 2026,
+    "provenance": {
+      "officialSourceIdentity": "https://upsc.gov.in/examinations/CSP2026",
+      "authorityBinding": "auth_in_upsc",
+      "documentIdentity": "doc_upsc_cse_2026_notice",
+      "documentSha256": "4a6b2c9d8e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b",
+      "verificationState": "VERIFIED_SOURCE"
+    },
+    "payload": {
+      "applicationWindow": {
+        "startDate": "2026-02-14T00:00:00.000Z",
+        "endDate": "2026-03-05T18:00:00.000Z"
+      },
+      "totalVacancies": 1056
+    }
+  },
+  "dryRunRouterOutput": {
+    "success": true,
+    "duplicateDetected": false,
+    "documentIdentity": "doc_upsc_cse_2026_notice",
+    "documentSha256": "4a6b2c9d8e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b",
+    "impacts": {
+      "missionImpact": {
+        "operation": "UPDATE_MISSION_SOURCE_LINKAGE",
+        "permanentMissionId": "upsc_cse_prelims",
+        "authorityKey": "auth_in_upsc",
+        "documentRef": "doc_upsc_cse_2026_notice",
+        "sourceSha": "4a6b2c9d8e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b",
+        "verifiedAt": "2026-09-10T11:06:36.546Z",
+        "dryRunDetails": {
+          "linkOfficialSource": true,
+          "updateLatestEffectiveSource": true,
+          "sourceLocator": null
+        }
+      },
+      "careerSignalImpact": {
+        "operation": "EMIT_CAREER_SIGNAL_EVENT",
+        "cycleId": "rc_auth_in_upsc_upsc_cse_prelims_2026",
+        "permanentMissionId": "upsc_cse_prelims",
+        "event": {
+          "eventId": "evt_4a6b2c9d8e7f1a3b",
+          "cycleId": "rc_auth_in_upsc_upsc_cse_prelims_2026",
+          "permanentMissionId": "upsc_cse_prelims",
+          "authorityKey": "auth_in_upsc",
+          "eventType": "NEW_NOTIFICATION",
+          "effectiveDate": "2026-09-10T11:06:36.546Z",
+          "payload": {
+            "applicationStart": null,
+            "applicationEnd": null,
+            "scheduledExamDate": null,
+            "examStage": null,
+            "vacancies": null,
+            "details": null,
+            "amendmentReason": null
+          },
+          "documentProvenance": {
+            "officialSourceIdentity": "https://upsc.gov.in/examinations/CSP2026",
+            "authorityBinding": "auth_in_upsc",
+            "documentIdentity": "doc_upsc_cse_2026_notice",
+            "documentSha256": "4a6b2c9d8e7f1a3b5c7d9e1f3a5b7c9d1e3f5a7b9c1d3e5f7a9b1c3d5e7f9a1b",
+            "verificationState": "VERIFIED_SOURCE",
+            "publishedAt": null,
+            "officialUrl": null
+          },
+          "emittedAt": "2026-09-10T11:06:36.546Z"
+        },
+        "dryRunDetails": {
+          "cycleExists": false,
+          "isOneOffRecruitment": false,
+          "plannedAction": "CREATE_CYCLE_AND_EMIT_SIGNAL"
+        }
+      },
+      "academicImpactRef": null,
+      "pyqPatternImpactRef": null
+    }
+  },
+  "verification": {
+    "missionImpactCorrect": true,
+    "careerSignalGenerated": true,
+    "eventIdDerivedFromSha": true,
+    "academicImpactCaptured": false,
+    "pyqPatternCaptured": false,
+    "allImpactsSynchronized": true
+  }
+}

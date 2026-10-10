@@ -1,0 +1,72 @@
+{
+  "missionId": "tripura_tet",
+  "authorityId": "auth_in_tr_trbt",
+  "officialPage": "https://trb.tripura.gov.in/",
+  "attempts": [
+    "official current page",
+    "notice/archive",
+    "T-TET exact prospectus query",
+    "Tripura government historical fallback"
+  ],
+  "prospectusBytesAcquired": false,
+  "byteLength": null,
+  "sha256": null,
+  "fields": [
+    {
+      "fieldName": "paper1TotalQuestions",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper1TotalMarks",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper1Duration",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2TotalQuestions",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2TotalMarks",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2Duration",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "negativeMarking",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "primaryStageClasses",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "upperPrimaryStageClasses",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "mathScienceChoiceStructure",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "socialStudiesChoiceStructure",
+      "officialValue": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    }
+  ],
+  "TRIPURA_PATTERN_CERTIFIED": "NO"
+}

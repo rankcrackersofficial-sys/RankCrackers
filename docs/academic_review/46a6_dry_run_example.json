@@ -1,0 +1,199 @@
+{
+  "gate": "RC_CANONICAL_MISSION_PROFILE_MATERIALIZATION_ENGINE_46A6",
+  "executionMode": "DRY_RUN_VALIDATION_ONLY",
+  "productionWritesAttempted": 0,
+  "isProductionWritePermitted": false,
+  "targetDocumentPath": "mission_realms/mock_multi_family/canonical_profile/current",
+  "changeType": "CREATE",
+  "isNoOp": false,
+  "plannedWritesCount": 1,
+  "profileHash": "e30e8869f3a8c5076d8e70185e6ebeecf4c6b2e23545e30effa3656b39a0414d",
+  "validationSummary": {
+    "valid": true,
+    "canMaterialize": true,
+    "warnings": []
+  },
+  "sourceEvidenceSummary": {
+    "organization": "National Authority",
+    "evidenceClass": "BYTE_VERIFIED",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "portals": [
+      "https://authority.gov.in"
+    ]
+  },
+  "academicMetrics": {
+    "paperCount": 3,
+    "variantCount": 3,
+    "subjectCount": 1
+  },
+  "s2Readiness": {
+    "status": "READY",
+    "resolved": true,
+    "reason": "GOVERNED_PROFILE_RESOLVED"
+  },
+  "fieldDiffsCount": 1,
+  "fieldDiffsSample": [
+    {
+      "field": "*",
+      "type": "INITIAL_CREATION",
+      "before": null,
+      "after": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "mock_multi_family",
+          "canonicalExamName": "Technical & General Service",
+          "canonicalDisplayName": "Technical & General Service 2026"
+        },
+        "missionTargetYear": 2026,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "National Authority",
+          "officialPortals": [
+            "https://authority.gov.in"
+          ],
+          "sourceDocumentType": "Official Notification",
+          "officialNotificationTitle": "Technical & General Service Official Notification",
+          "officialPdfUrl": "https://authority.gov.in/docs/notification.pdf",
+          "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+          "evidenceClass": "BYTE_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED"
+        },
+        "paperModel": {
+          "paperCount": 3,
+          "paperFamilies": [
+            {
+              "familyId": "fam_general",
+              "familyName": "General Cadre",
+              "applicableVariants": [
+                "var_admin"
+              ],
+              "paperIds": [
+                "paper_general_1",
+                "paper_general_2"
+              ]
+            },
+            {
+              "familyId": "fam_engineering",
+              "familyName": "Engineering Cadre",
+              "applicableVariants": [
+                "var_civil",
+                "var_mech"
+              ],
+              "paperIds": [
+                "paper_general_1",
+                "paper_tech"
+              ]
+            }
+          ],
+          "papers": [
+            {
+              "paperId": "paper_general_1",
+              "paperNumber": 1,
+              "paperName": "General Studies",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT",
+              "durationMinutes": 120,
+              "totalQuestions": 100,
+              "totalMarks": 200
+            },
+            {
+              "paperId": "paper_general_2",
+              "paperNumber": 2,
+              "paperName": "Public Administration",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT",
+              "durationMinutes": 180,
+              "totalQuestions": 120,
+              "totalMarks": 300
+            },
+            {
+              "paperId": "paper_tech",
+              "paperNumber": 2,
+              "paperName": "Engineering Disciplines",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT",
+              "durationMinutes": 180,
+              "totalQuestions": 120,
+              "totalMarks": 300
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "var_admin",
+              "variantName": "Administrative Service",
+              "applicablePaperFamilyId": "fam_general"
+            },
+            {
+              "variantId": "var_civil",
+              "variantName": "Civil Engineering",
+              "applicablePaperFamilyId": "fam_engineering"
+            },
+            {
+              "variantId": "var_mech",
+              "variantName": "Mechanical Engineering",
+              "applicablePaperFamilyId": "fam_engineering"
+            }
+          ]
+        },
+        "subjectModel": {
+          "subjects": [
+            {
+              "subjectId": "subj_1",
+              "subjectName": "Subject 1",
+              "canonicalKey": "key_1"
+            }
+          ]
+        },
+        "languageModel": {
+          "defaultLanguage": "en",
+          "supportedLanguages": [
+            "English",
+            "Hindi"
+          ],
+          "mediumPolicy": "BILINGUAL"
+        },
+        "s2DocumentProfile": {
+          "expectedPapers": [
+            "General Paper"
+          ],
+          "paperAliases": {
+            "General Paper": [
+              "Paper 1"
+            ]
+          },
+          "expectedSubjects": [
+            "Subject 1"
+          ],
+          "subjectAliases": {
+            "Subject 1": [
+              "Subj 1"
+            ]
+          },
+          "languageScripts": [
+            "Latin",
+            "Devanagari"
+          ],
+          "preferredOcrLanguages": [
+            "eng",
+            "hin"
+          ],
+          "sourceYearPolicy": "USE_2025_BASELINE",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+        },
+        "fieldAuthorityMap": {
+          "paperStructure": "SOURCE_VERIFIED",
+          "subjectModel": "SOURCE_VERIFIED"
+        },
+        "profileHash": "e30e8869f3a8c5076d8e70185e6ebeecf4c6b2e23545e30effa3656b39a0414d"
+      }
+    }
+  ]
+}

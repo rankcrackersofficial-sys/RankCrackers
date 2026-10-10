@@ -1,0 +1,1408 @@
+{
+  "registryCode": "RC_47A2_VARIANT_REGISTRY",
+  "executedAt": "2026-09-10T05:36:15.513Z",
+  "metrics": {
+    "totalMissionsEvaluated": 153,
+    "VARIANT_REQUIRED_MISSION_COUNT": 75,
+    "EXACT_VARIANT_ENUMERATION_READY_COUNT": 2,
+    "VARIANT_REVIEW_REQUIRED_COUNT": 73,
+    "FAKE_DEFAULT_VARIANT_COUNT": 0
+  },
+  "variantLedger": [
+    {
+      "proposedYearlessMissionKey": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "authorityKey": "auth_in_up_uppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "authorityKey": "auth_in_up_uppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "authorityKey": "auth_in_up_upsssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "upsssc_vdo",
+      "canonicalExamName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "authorityKey": "auth_in_up_upsssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "authorityKey": "auth_in_up_upprpb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "upprpb_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "authorityKey": "auth_in_up_upprpb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "authorityKey": "auth_in_up_pnp",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Paper 1 Primary / Paper 2 Upper Primary; STREAM: Science-Math / Social Studies",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ukpsc_pcs_prelims",
+      "canonicalExamName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ukpsc_lower_subordinate_prelims",
+      "canonicalExamName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "variantRequired": "YES",
+      "variantDimension": "POST_CADRE: Civil Police & Intelligence vs Fire Station Second Officer",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "uksssc_group_c_combined",
+      "canonicalExamName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "authorityKey": "auth_in_uk_uksssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "uk_police_constable",
+      "canonicalExamName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "authorityKey": "auth_in_uk_uksssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "authorityKey": "auth_in_uk_ubse",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Paper 1 Primary / Paper 2 Upper Primary; STREAM: Science-Math / Social Science",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hppsc_hpas_prelims",
+      "canonicalExamName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "authorityKey": "auth_in_hp_hppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hppsc_police_constable",
+      "canonicalExamName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "authorityKey": "auth_in_hp_hppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hprca_group_c_common",
+      "canonicalExamName": "Group C Common Computer Based Test / Screening Examination",
+      "authorityKey": "auth_in_hp_hprca",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "authorityKey": "auth_in_hp_hpbose",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT_TRACK: TGT Arts, TGT Non-Medical, TGT Medical, Shastri, JBT, Language Teacher, Punjabi, Urdu",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ppsc_pscce_prelims",
+      "canonicalExamName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "authorityKey": "auth_in_pb_ppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "psssb_clerk",
+      "canonicalExamName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "authorityKey": "auth_in_pb_psssb",
+      "variantRequired": "YES",
+      "variantDimension": "POST_CADRE: General Clerk / Clerk IT / Clerk Accounts",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "psssb_patwari",
+      "canonicalExamName": "Revenue Patwari Recruitment Examination",
+      "authorityKey": "auth_in_pb_psssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "authorityKey": "auth_in_pb_police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "authorityKey": "auth_in_pb_police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "authorityKey": "auth_in_pb_pseb",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Paper 1 Primary / Paper 2 Upper Primary; STREAM: Science-Math / Social Studies",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hpsc_hcs_prelims",
+      "canonicalExamName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "authorityKey": "auth_in_hr_hpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "authorityKey": "auth_in_hr_hssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "authorityKey": "auth_in_hr_hssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "authorityKey": "auth_in_hr_hssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "authorityKey": "auth_in_hr_hssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "authorityKey": "auth_in_hr_bseh",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Level 1 PRT, Level 2 TGT, Level 3 PGT; SUBJECT: TGT/PGT specific discipline",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jkpsc_cce_prelims",
+      "canonicalExamName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "authorityKey": "auth_in_jk_jkpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jk_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "authorityKey": "auth_in_jk_jkssb",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE: Executive, Armed/IRP, SDRF, Telecommunication, Photographer",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jk_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "authorityKey": "auth_in_jk_jkssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jkssb_graduate_level",
+      "canonicalExamName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "authorityKey": "auth_in_jk_jkssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "authorityKey": "auth_in_ssc",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Matriculation / Higher Secondary 10+2 / Graduation & Above",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ladakh_police_constable",
+      "canonicalExamName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "authorityKey": "auth_in_la_police",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE: Executive/Armed vs Telecommunication",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "lahdc_dssrb_district_cadre",
+      "canonicalExamName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "authorityKey": "auth_in_la_dssrb",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL: Graduate / 10+2 / Matric",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_police_constable",
+      "canonicalExamName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "authorityKey": "auth_in_ch_police",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE: Executive General vs IT Specialization",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_police_asi",
+      "canonicalExamName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "authorityKey": "auth_in_ch_police",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_jbt_teacher",
+      "canonicalExamName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "authorityKey": "auth_in_ch_admin",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "authorityKey": "auth_in_ch_admin",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT_TRACK: TGT Science Non-Medical, Medical, Social Science, Math, Hindi, English, Punjabi",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT_TRACK: TGT Math, Natural Science, Social Science, English, Hindi, Sanskrit, Urdu, Punjabi",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_prt",
+      "canonicalExamName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT_TRACK: PGT Physics, Chemistry, Biology, Math, History, Political Science, Economics, English, Hindi, Commerce",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_junior_assistant_ldc",
+      "canonicalExamName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "authorityKey": "auth_in_dl_dsssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "authorityKey": "auth_in_ssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "authorityKey": "auth_in_ssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "authorityKey": "auth_in_rj_rpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "authorityKey": "auth_in_rj_rpsc",
+      "variantRequired": "YES",
+      "variantDimension": "teachingSubject",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "authorityKey": "auth_in_rj_rssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rssb_cet_graduate",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "authorityKey": "auth_in_rj_rssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "authorityKey": "auth_in_rj_rbse",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_rj_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mppsc_state_service",
+      "canonicalExamName": "Madhya Pradesh State Service Examination",
+      "authorityKey": "auth_in_mp_mppsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "authorityKey": "auth_in_mp_mpesb",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_group2_subgroup4",
+      "canonicalExamName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "authorityKey": "auth_in_mp_mpesb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "authorityKey": "auth_in_mp_mpesb",
+      "variantRequired": "YES",
+      "variantDimension": "vargLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "cgpsc_state_service",
+      "canonicalExamName": "Chhattisgarh State Service Examination",
+      "authorityKey": "auth_in_cg_cgpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "authorityKey": "auth_in_cg_cgvyapam",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "cg_police_constable",
+      "canonicalExamName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "authorityKey": "auth_in_cg_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gpsc_class_1_2",
+      "canonicalExamName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "authorityKey": "auth_in_gj_gpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gsssb_cce",
+      "canonicalExamName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "authorityKey": "auth_in_gj_gsssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gpssb_talati",
+      "canonicalExamName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "authorityKey": "auth_in_gj_gpssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gprb_lokrakshak",
+      "canonicalExamName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "authorityKey": "auth_in_gj_gprb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "authorityKey": "auth_in_gj_seb",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "authorityKey": "auth_in_mh_mpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_group_bc_combined",
+      "canonicalExamName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "authorityKey": "auth_in_mh_mpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "authorityKey": "auth_in_mh_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "authorityKey": "auth_in_mh_mscepune",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gpsc_goa_civil_service",
+      "canonicalExamName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "authorityKey": "auth_in_ga_gpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "gssc_goa_group_c",
+      "canonicalExamName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "authorityKey": "auth_in_ga_gssc",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ga_police_recruitment",
+      "canonicalExamName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "authorityKey": "auth_in_ga_police",
+      "variantRequired": "YES",
+      "variantDimension": "postRank",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "dnhdd_ssb_group_bc",
+      "canonicalExamName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "authorityKey": "auth_in_dn_ssb",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "authorityKey": "auth_in_br_bpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "authorityKey": "auth_in_br_bpsc",
+      "variantRequired": "YES",
+      "variantDimension": "teachingTierAndSubject",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bssc_cgl",
+      "canonicalExamName": "BSSC Graduate Level Combined Competitive Examination",
+      "authorityKey": "auth_in_br_bssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "authorityKey": "auth_in_br_bssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "authorityKey": "auth_in_br_bpssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_br_csbc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "authorityKey": "auth_in_br_bseb",
+      "variantRequired": "YES",
+      "variantDimension": "paperAndSubject",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jpsc_cce_prelims",
+      "canonicalExamName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "authorityKey": "auth_in_jh_jpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jssc_cgl",
+      "canonicalExamName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "authorityKey": "auth_in_jh_jssc",
+      "variantRequired": "YES",
+      "variantDimension": "regionalLanguage",
+      "variantStatus": "EXACT_VARIANT_ENUMERATION_READY",
+      "variants": [
+        {
+          "variantId": "paper_1_gs",
+          "variantName": "General Studies Paper I"
+        },
+        {
+          "variantId": "paper_2_csat",
+          "variantName": "General Studies Paper II (CSAT)"
+        }
+      ]
+    },
+    {
+      "proposedYearlessMissionKey": "jssc_police_constable",
+      "canonicalExamName": "Jharkhand Constable Competitive Examination",
+      "authorityKey": "auth_in_jh_jssc",
+      "variantRequired": "YES",
+      "variantDimension": "regionalLanguage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "authorityKey": "auth_in_jh_jac",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "opsc_ocs_prelims",
+      "canonicalExamName": "Odisha Civil Services Examination (Prelims)",
+      "authorityKey": "auth_in_od_opsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ossc_cgl",
+      "canonicalExamName": "OSSC Combined Graduate Level Recruitment Examination",
+      "authorityKey": "auth_in_od_ossc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "osssc_cre_combined",
+      "canonicalExamName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "authorityKey": "auth_in_od_osssc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "odisha_police_constable",
+      "canonicalExamName": "Odisha Police Civil Constable Recruitment Examination",
+      "authorityKey": "auth_in_od_opssb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "authorityKey": "auth_in_od_bse",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "authorityKey": "auth_in_od_ssb",
+      "variantRequired": "YES",
+      "variantDimension": "subjectDiscipline",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbpsc_wbcs_prelims",
+      "canonicalExamName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbpsc_clerkship",
+      "canonicalExamName": "WBPSC Clerkship Examination",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_wb_wbprb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbprb_police_si",
+      "canonicalExamName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "authorityKey": "auth_in_wb_wbprb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "authorityKey": "auth_in_wb_wbbpe",
+      "variantRequired": "YES",
+      "variantDimension": "firstLanguage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "authorityKey": "auth_in_wb_wbcssc",
+      "variantRequired": "YES",
+      "variantDimension": "subjectAndLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "an_erecruitment_chsl",
+      "canonicalExamName": "A&N Administration Common Higher Secondary Level Recruitment Examination",
+      "authorityKey": "auth_in_an_erecruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "an_erecruitment_cml",
+      "canonicalExamName": "A&N Administration Combined Matric Level Recruitment Examination",
+      "authorityKey": "auth_in_an_erecruitment",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "an_police_constable_si",
+      "canonicalExamName": "Andaman & Nicobar Police Constable & Sub-Inspector Examination",
+      "authorityKey": "auth_in_an_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreRank",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_group1",
+      "canonicalExamName": "APPSC Group-I Services Examination",
+      "authorityKey": "auth_in_ap_appsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_group2",
+      "canonicalExamName": "APPSC Group-II Services Examination",
+      "authorityKey": "auth_in_ap_appsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityKey": "auth_in_ap_apslprb",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "apslprb_sct_pc",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityKey": "auth_in_ap_apslprb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group1",
+      "canonicalExamName": "TGPSC Group-I Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group2",
+      "canonicalExamName": "TGPSC Group-II Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group3",
+      "canonicalExamName": "TGPSC Group-III Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group4",
+      "canonicalExamName": "TGPSC Group-IV Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tgslprb_sct_pc",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "authorityKey": "auth_in_tg_treirb",
+      "variantRequired": "YES",
+      "variantDimension": "teachingCadre",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kas_gp",
+      "canonicalExamName": "KPSC Gazetted Probationers Examination (KAS)",
+      "authorityKey": "auth_in_ka_kpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kea_fda_sda",
+      "canonicalExamName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "authorityKey": "auth_in_ka_kea",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "authorityKey": "auth_in_ka_ksp",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ksp_cpc",
+      "canonicalExamName": "KSP Civil Police Constable (CPC)",
+      "authorityKey": "auth_in_ka_ksp",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_kas",
+      "canonicalExamName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "authorityKey": "auth_in_kl_kpsc",
+      "variantRequired": "YES",
+      "variantDimension": "recruitmentStream",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_degree_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_10th_plus2_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "variantRequired": "YES",
+      "variantDimension": "qualificationLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_police_constable",
+      "canonicalExamName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "variantRequired": "YES",
+      "variantDimension": "battalionDistrict",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group2_2a",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnusrb_si",
+      "canonicalExamName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "variantRequired": "YES",
+      "variantDimension": "recruitmentQuota",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnusrb_pc",
+      "canonicalExamName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "authorityKey": "auth_in_tn_tntrb",
+      "variantRequired": "YES",
+      "variantDimension": "subjectDiscipline",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tnmrb_assistant_surgeon",
+      "canonicalExamName": "TN MRB Recruitment of Assistant Surgeons (General / Specialty)",
+      "authorityKey": "auth_in_tn_tnmrb",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "py_dpar_clerk_vao",
+      "canonicalExamName": "Puducherry DPAR General Recruitment (UDC / LDC / VAO)",
+      "authorityKey": "auth_in_py_dpar",
+      "variantRequired": "NO",
+      "variantDimension": null,
+      "variantStatus": "NO_VARIANT_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "py_police_si_pc",
+      "canonicalExamName": "Puducherry Police Sub-Inspector & Police Constable Recruitment",
+      "authorityKey": "auth_in_py_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreRank",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "ld_admin_group_c",
+      "canonicalExamName": "Lakshadweep Administration Group C Direct Recruitment / IRBn Constable",
+      "authorityKey": "auth_in_ld_admin",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "apsc_cce",
+      "canonicalExamName": "Combined Competitive Examination",
+      "authorityKey": "auth_in_as_apsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "authorityKey": "auth_in_as_slrc",
+      "variantRequired": "YES",
+      "variantDimension": "postCategory",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "slprb_assam_police",
+      "canonicalExamName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "authorityKey": "auth_in_as_slprb",
+      "variantRequired": "YES",
+      "variantDimension": "postRank",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_arunachal_cce",
+      "canonicalExamName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "authorityKey": "auth_in_ar_appsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "apssb_cgl_csle",
+      "canonicalExamName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "authorityKey": "auth_in_ar_apssb",
+      "variantRequired": "YES",
+      "variantDimension": "qualificationLevel",
+      "variantStatus": "EXACT_VARIANT_ENUMERATION_READY",
+      "variants": [
+        {
+          "variantId": "paper_1_gs",
+          "variantName": "General Studies Paper I"
+        },
+        {
+          "variantId": "paper_2_csat",
+          "variantName": "General Studies Paper II (CSAT)"
+        }
+      ]
+    },
+    {
+      "proposedYearlessMissionKey": "arunachal_police_constable",
+      "canonicalExamName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "authorityKey": "auth_in_ar_police",
+      "variantRequired": "YES",
+      "variantDimension": "postTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_manipur_mcscc",
+      "canonicalExamName": "Manipur Combined Competitive Examination (MCSCC)",
+      "authorityKey": "auth_in_mn_mpsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mssc_manipur_group_cd",
+      "canonicalExamName": "Manipur Staff Selection Combined Group C & D Recruitment Examination",
+      "authorityKey": "auth_in_mn_mssc",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTier",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "manipur_police_constable",
+      "canonicalExamName": "Manipur Police Constable & Rifleman Recruitment",
+      "authorityKey": "auth_in_mn_police",
+      "variantRequired": "YES",
+      "variantDimension": "postTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_meghalaya_mcs",
+      "canonicalExamName": "Meghalaya Civil Services Combined Examination",
+      "authorityKey": "auth_in_ml_mpsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "meghalaya_crb_police",
+      "canonicalExamName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "authorityKey": "auth_in_ml_crb",
+      "variantRequired": "YES",
+      "variantDimension": "postCadre",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_mizoram_mcs",
+      "canonicalExamName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mizoram_subordinate_services",
+      "canonicalExamName": "Mizoram Subordinate Services Selection Board Combined Recruitment (Reverted)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "variantRequired": "YES",
+      "variantDimension": "postGrade",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "mizoram_police_constable",
+      "canonicalExamName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "authorityKey": "auth_in_mz_police",
+      "variantRequired": "YES",
+      "variantDimension": "postBranch",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "npsc_nagaland_ncs",
+      "canonicalExamName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "authorityKey": "auth_in_nl_npsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "npsc_nagaland_ctse",
+      "canonicalExamName": "Combined Technical Services Examination (CTSE)",
+      "authorityKey": "auth_in_nl_npsc",
+      "variantRequired": "YES",
+      "variantDimension": "engineeringDiscipline",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "nssb_nagaland_csre",
+      "canonicalExamName": "Combined Staff Recruitment Examination (CSRE)",
+      "authorityKey": "auth_in_nl_nssb",
+      "variantRequired": "YES",
+      "variantDimension": "postStream",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "nagaland_police_constable",
+      "canonicalExamName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "authorityKey": "auth_in_nl_police",
+      "variantRequired": "YES",
+      "variantDimension": "battalionType",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "spsc_sikkim_cce",
+      "canonicalExamName": "Sikkim State Civil Services Combined Competitive Examination",
+      "authorityKey": "auth_in_sk_spsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "spsc_sikkim_police_si",
+      "canonicalExamName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "authorityKey": "auth_in_sk_spsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "sikkim_police_constable",
+      "canonicalExamName": "Sikkim Police Constable & Follower Recruitment",
+      "authorityKey": "auth_in_sk_police",
+      "variantRequired": "YES",
+      "variantDimension": "postCategory",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tpsc_tripura_tcs_tps",
+      "canonicalExamName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "authorityKey": "auth_in_tr_tpsc",
+      "variantRequired": "YES",
+      "variantDimension": "stage",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "jrbt_tripura_group_cd",
+      "canonicalExamName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "authorityKey": "auth_in_tr_jrbt",
+      "variantRequired": "YES",
+      "variantDimension": "postGrade",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "authorityKey": "auth_in_tr_trbt",
+      "variantRequired": "YES",
+      "variantDimension": "paperLevel",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "authorityKey": "auth_in_tr_trbt",
+      "variantRequired": "YES",
+      "variantDimension": "teachingCadre",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    },
+    {
+      "proposedYearlessMissionKey": "tripura_police_constable",
+      "canonicalExamName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "authorityKey": "auth_in_tr_police",
+      "variantRequired": "YES",
+      "variantDimension": "cadreTrack",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": []
+    }
+  ]
+}

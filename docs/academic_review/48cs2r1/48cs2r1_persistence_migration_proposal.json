@@ -1,0 +1,32 @@
+{
+  "gate": "GATE_48CS2R1_PERSISTENCE_MIGRATION_PROPOSAL",
+  "generatedAt": "2026-09-10T11:26:52.332Z",
+  "productionPersistenceStatus": "HOLD_NO_PRODUCTION_COLLECTIONS_CREATED",
+  "proposedSchema": {
+    "career_profiles/{userId}": {
+      "description": "Single canonical career profile storing user-verified dimensions.",
+      "securityRules": "User read/write owner only."
+    },
+    "recruitment_cycles/{cycleId}": {
+      "description": "Canonical 12-state official recruitment cycles.",
+      "securityRules": "Public read, admin write only."
+    },
+    "career_signal_events/{eventId}": {
+      "description": "Immutable append-only ledger of official announcements and amendments.",
+      "securityRules": "Public read, admin write only."
+    },
+    "career_signal_views/{userId}_{eventId}": {
+      "description": "Derived personalized evaluation views.",
+      "securityRules": "User read, backend worker write."
+    },
+    "notification_events/{notificationId}": {
+      "description": "Delivery alert queue records.",
+      "securityRules": "User read/update readStatus, worker create."
+    }
+  },
+  "migrationPrerequisites": [
+    "Chief approval of Gate 48CS2R1 pure domain models and test suite",
+    "Deployment of Firestore security rules for new collections",
+    "Reconciliation with notification delivery workers"
+  ]
+}

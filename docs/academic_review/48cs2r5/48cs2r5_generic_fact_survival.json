@@ -1,0 +1,148 @@
+{
+  "gate": "GATE 48CS2R5",
+  "description": "Proves that for all PARTIAL_SOURCE_PACKAGE instances, independently verified public facts (application window, exam dates, title, total seats, result updates) remain fully accessible for candidate broadcast.",
+  "survivingFactsByPilot": [
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "authorityId": "RPSC",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": "2025-08-14",
+        "endDate": "2025-09-12",
+        "isExtended": true
+      },
+      "examDates": [],
+      "totalVacancies": 3225,
+      "resultEvents": [
+        {
+          "eventId": "RPSC-RAS-PRELIM-RESULT-2025-02-20",
+          "missionId": "rpsc_ras_prelims",
+          "eventType": "RESULT",
+          "eventDate": "2025-02-20",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in/Result.aspx"
+        }
+      ],
+      "factsSurviveUnderPartial": true
+    },
+    {
+      "cycleId": "RPSC-RAS-2024",
+      "authorityId": "RPSC",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": null,
+        "endDate": null,
+        "isExtended": false
+      },
+      "examDates": [],
+      "totalVacancies": null,
+      "resultEvents": [
+        {
+          "eventId": "RPSC-RAS-PRELIM-RESULT-2025-02-20",
+          "missionId": "rpsc_ras_prelims",
+          "eventType": "RESULT",
+          "eventDate": "2025-02-20",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in/Result.aspx"
+        }
+      ],
+      "factsSurviveUnderPartial": true
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "authorityId": "NTA",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": "2025-10-31",
+        "endDate": "2025-11-27",
+        "isExtended": false
+      },
+      "examDates": [
+        {
+          "stageName": "PRIMARY_STAGE",
+          "scheduledDate": "2026-01-21/2026-04-02",
+          "isTentative": false
+        }
+      ],
+      "totalVacancies": null,
+      "resultEvents": [
+        {
+          "eventId": "JEE-MAIN-2026-RESULT",
+          "missionId": "jee_main_2026",
+          "eventType": "RESULT",
+          "eventDate": null,
+          "officialSourceUrl": "https://jeemain.nta.nic.in/document-category/current-events/"
+        }
+      ],
+      "factsSurviveUnderPartial": true
+    },
+    {
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "authorityId": "NTA",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": "2026-02-08",
+        "endDate": "2026-03-11",
+        "isExtended": true
+      },
+      "examDates": [
+        {
+          "stageName": "PRIMARY_STAGE",
+          "scheduledDate": "2026-05-03",
+          "isTentative": false
+        }
+      ],
+      "totalVacancies": null,
+      "resultEvents": [
+        {
+          "eventId": "NEET-UG-2026-RESULT",
+          "missionId": "neet_(ug)-2027",
+          "eventType": "RESULT",
+          "eventDate": "2026-06-21",
+          "officialSourceUrl": "https://neet.nta.nic.in/public-notices/"
+        }
+      ],
+      "factsSurviveUnderPartial": true
+    },
+    {
+      "cycleId": "UPSC-CSE-2026",
+      "authorityId": "UPSC",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": "2026-02-04",
+        "endDate": "2026-02-27",
+        "isExtended": false
+      },
+      "examDates": [
+        {
+          "stageName": "PRIMARY_STAGE",
+          "scheduledDate": "2026-05-24",
+          "isTentative": false
+        }
+      ],
+      "totalVacancies": null,
+      "resultEvents": [
+        {
+          "eventId": "UPSC-CSE-PRELIM-2026-RESULT",
+          "missionId": "upsc_cse_prelims",
+          "eventType": "RESULT",
+          "eventDate": "2026-06-15",
+          "officialSourceUrl": "https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
+        }
+      ],
+      "factsSurviveUnderPartial": true
+    },
+    {
+      "cycleId": "SSC-CGL-2026",
+      "authorityId": "SSC",
+      "title": "Official cycle surface identified; structured document text not fully recovered",
+      "applicationWindow": {
+        "startDate": "2026-05-21",
+        "endDate": "2026-06-22",
+        "isExtended": true
+      },
+      "examDates": [],
+      "totalVacancies": null,
+      "resultEvents": [],
+      "factsSurviveUnderPartial": true
+    }
+  ]
+}

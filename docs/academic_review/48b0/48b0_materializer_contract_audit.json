@@ -1,0 +1,36 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "contractFile": "functions/services/generic_mission_materializer.js",
+  "evaluatedAt": "2026-09-10T10:39:12.887Z",
+  "contractDimensions": {
+    "threeProjectionWrites": {
+      "status": "PASS",
+      "details": "Materializer explicitly generates targets for mission_realms, recruitments, and student_mission_catalog with owned-field merge semantics."
+    },
+    "authorityPurity": {
+      "status": "PASS",
+      "details": "Strict authority registry validation. Governed context enforces authorityGroupKey from registry and rejects auth_central_ prefixes."
+    },
+    "regionPurity": {
+      "status": "PASS",
+      "details": "Enforces canonical 28 State + 8 UT region codes (TG = Telangana, LA = Ladakh, LD = Lakshadweep). Central authorities strictly set stateCode = null."
+    },
+    "variantProjection": {
+      "status": "PASS",
+      "details": "Enforces ALLOWED_VARIANT_DIMENSIONS, disallows compulsory papers as variants, gates selection and startability if variantRequired = true with empty variants."
+    },
+    "startability": {
+      "status": "PASS",
+      "details": "Enforces startability is strictly false unless syllabus, digibook, questionBank, and crucible readiness are all ready."
+    },
+    "idempotency": {
+      "status": "PASS",
+      "details": "Calculates SHA-256 semantic hash ignoring updatedAt/timestamps, producing zero timestamp drift on subsequent runs."
+    },
+    "governancePreservation": {
+      "status": "PASS",
+      "details": "Never overwrites unowned governance fields (...existingDoc) and enforces founder hold blocking."
+    }
+  },
+  "overallContractVerdict": "COMPLIANT"
+}

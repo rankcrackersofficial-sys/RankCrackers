@@ -1,0 +1,127 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "rpsc_ras_prelims",
+  "canonicalDisplayName": "RPSC RAS – Prelims",
+  "examAuthority": {
+    "authorityKey": "rpsc",
+    "name": "Rajasthan Public Service Commission",
+    "acronym": "RPSC",
+    "headquarters": "Ghooghara Ghati, Jaipur Road, Ajmer, Rajasthan",
+    "officialPortalUrl": "https://rpsc.rajasthan.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": null,
+    "officialCycleStatus": "PREPARATION_TARGET_UNANNOUNCED",
+    "sourceBaselineCycle": "2024",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "PRIOR_CYCLE_NOTIFICATION_BOUND",
+    "baselineAdvertisement": "Advt. No. 02/2024-25 (Rajasthan State and Subordinate Services Combined Competitive Examination 2024 / राजस्थान राज्य एवं अधीनस्थ सेवाएं संयुक्त प्रतियोगी परीक्षा, 2024)"
+  },
+  "rankCrackersScope": {
+    "supportedStage": "PRELIMS_OBJECTIVE_MCQ",
+    "unsupportedStages": [
+      { "stageName": "Main Examination (Descriptive Papers: GS-I, GS-II, GS-III, General Hindi & English)", "reason": "Subjective Written Papers" },
+      { "stageName": "Personality and Viva-Voce Examination", "reason": "Oral Interview Board" }
+    ]
+  },
+  "examinationStructure": {
+    "totalPapers": 1,
+    "totalMarks": 200,
+    "totalDurationMinutes": 180,
+    "languageScripts": ["LATIN", "DEVANAGARI"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "questionFormat": "OBJECTIVE_MCQ_5_CHOICES",
+    "rpscFifthOptionRule": {
+      "mandatoryFifthOption": true,
+      "unansweredPenaltyFactor": "ONE_THIRD",
+      "disqualificationThresholdPercentage": 10.0,
+      "disqualificationQuestionCountThreshold": 15,
+      "ruleDescription": "Every question has 5 choices (1, 2, 3, 4, 5). If a candidate does not wish to attempt a question, they must darken the 5th circle ('E'). Leaving the question entirely blank incurs a 1/3 mark negative penalty. If more than 10% of total questions (i.e. > 15 questions) are left with no option darkened, the candidate is disqualified."
+    },
+    "papers": [
+      {
+        "paperId": "rpsc_ras_prelims_paper_single",
+        "paperCode": "GK_GS",
+        "officialName": "General Knowledge and General Science (सामान्य ज्ञान एवं सामान्य विज्ञान)",
+        "totalQuestions": 150,
+        "totalMarks": 200,
+        "durationMinutes": 180,
+        "marksPerQuestion": 1.3333333333333333,
+        "negativeMarkingPerQuestion": 0.4444444444444444,
+        "negativeMarkingFactor": "ONE_THIRD",
+        "isQualifying": false,
+        "countsForMerit": true,
+        "subjects": [
+          {
+            "subjectId": "rajasthan_history_art_culture",
+            "subjectName": "History, Art, Culture, Literature, Tradition & Heritage of Rajasthan",
+            "subjectAliases": ["Rajasthan History", "Rajasthan Art and Culture", "Rajasthani Literature", "Forts and Monuments", "Folk Traditions"]
+          },
+          {
+            "subjectId": "indian_history_ancient_medieval_modern",
+            "subjectName": "Indian History (Ancient, Medieval, and Modern Period)",
+            "subjectAliases": ["Ancient India", "Medieval India", "Modern Indian History", "Indian National Movement", "19th & 20th Century Renaissance"]
+          },
+          {
+            "subjectId": "world_and_indian_geography",
+            "subjectName": "Geography of World and India",
+            "subjectAliases": ["World Geography", "Indian Geography", "Physical Features", "Climate", "Natural Resources", "Agriculture & Minerals"]
+          },
+          {
+            "subjectId": "rajasthan_geography",
+            "subjectName": "Geography of Rajasthan",
+            "subjectAliases": ["Physiographic Regions", "Rivers and Lakes", "Forests and Wildlife", "Minerals of Rajasthan", "Demographics of Rajasthan"]
+          },
+          {
+            "subjectId": "indian_constitution_polity_governance",
+            "subjectName": "Indian Constitution, Political System & Governance",
+            "subjectAliases": ["Indian Polity", "Constitution of India", "Parliament", "Supreme Court", "Election Commission", "Public Policy"]
+          },
+          {
+            "subjectId": "rajasthan_political_administrative_system",
+            "subjectName": "Political and Administrative System of Rajasthan",
+            "subjectAliases": ["Governor", "Chief Minister", "State Legislative Assembly", "High Court", "RPSC", "State Human Rights Commission", "Lokayukta", "Panchayati Raj"]
+          },
+          {
+            "subjectId": "economic_concepts_and_indian_economy",
+            "subjectName": "Economic Concepts and Indian Economy",
+            "subjectAliases": ["Indian Economy", "Macroeconomics", "Fiscal Policy", "Monetary Policy", "Inflation", "Banking", "Poverty & Unemployment"]
+          },
+          {
+            "subjectId": "economy_of_rajasthan",
+            "subjectName": "Economy of Rajasthan",
+            "subjectAliases": ["Rajasthan Economy", "Economic Review of Rajasthan", "Flagship Schemes", "Industrial Development", "Infrastructure of Rajasthan"]
+          },
+          {
+            "subjectId": "science_and_technology",
+            "subjectName": "Science and Technology",
+            "subjectAliases": ["General Science", "Physics", "Chemistry", "Biology", "Defence Technology", "Space Science", "Nanotechnology", "Biotechnology"]
+          },
+          {
+            "subjectId": "reasoning_and_mental_ability",
+            "subjectName": "Reasoning & Mental Ability (Logical Reasoning, Mental Ability, Basic Numeracy)",
+            "subjectAliases": ["Logical Reasoning", "Analytical Reasoning", "Number Series", "Data Interpretation", "Basic Math"]
+          },
+          {
+            "subjectId": "current_affairs",
+            "subjectName": "Current Affairs (Major Current Events of Rajasthan, National, and International Importance)",
+            "subjectAliases": ["Current Affairs", "Rajasthan Current Events", "National Issues", "Persons & Places in News", "Sports and Games"]
+          }
+        ]
+      }
+    ]
+  },
+  "variantArchitecture": {
+    "model": "SINGLE_ACADEMIC_TRACK_ALL_CANDIDATES",
+    "academicVariants": [
+      {
+        "variantKey": "rpsc_ras_prelims_common",
+        "variantName": "Rajasthan State and Subordinate Services (State & Subordinate Cadres)",
+        "paperAuthority": "rpsc_ras_prelims_paper_single",
+        "cadreNote": "Unified preliminary screening examination for Rajasthan Administrative Service (RAS), Rajasthan Police Service (RPS), Rajasthan Accounts Service (RAcS), and associated subordinate services. Service allocations are post-selection preferences and do not create separate preliminary syllabi."
+      }
+    ]
+  }
+}

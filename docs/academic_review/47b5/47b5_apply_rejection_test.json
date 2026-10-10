@@ -1,0 +1,12 @@
+{
+  "rejectionCode": "RC_47B5_APPLY_REJECTION_TEST",
+  "executedAt": "2026-09-10T06:57:28.200Z",
+  "applyModeRejected": true,
+  "metrics": {
+    "APPLY_MODE_REQUEST_REJECTED": "YES",
+    "PRODUCTION_FIRESTORE_WRITE_COUNT": 0,
+    "MISSION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "assertionPass": true
+}

@@ -1,0 +1,56 @@
+{
+  "oracleCode": "RC_47C7V2_IBPS_IDENTITY_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.283Z",
+  "statutoryFramework": "Regional Rural Banks Act, 1976 & NABARD / Ministry of Finance Guidelines",
+  "officialRecruitmentProcess": "Common Recruitment Process for Recruitment of Officers (Scale-I, II & III) and Office Assistants (Multipurpose) in Regional Rural Banks (RRBs) - CRP RRBs",
+  "officialSourcePortal": "https://www.ibps.in/",
+  "cadreTaxonomy": {
+    "officers": [
+      "Officer Scale-I (Assistant Manager / Probationary Officer equivalent)",
+      "Officer Scale-II (Manager / Specialist Officer equivalent)",
+      "Officer Scale-III (Senior Manager)"
+    ],
+    "clerical": [
+      "Office Assistant (Multipurpose) (Clerk equivalent)"
+    ]
+  },
+  "chiefLockedCanonicalMissions": [
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "officialTitle": "IBPS CRP RRBs Officers (Scale-I, II & III)",
+      "primaryTargetCadre": "Officer Scale-I",
+      "crossLaneStandard": "Frozen in State/UT Gate 47A3R1 and certified in Gate 47A4R1"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "officialTitle": "IBPS CRP RRBs Office Assistant (Multipurpose)",
+      "primaryTargetCadre": "Office Assistant (Multipurpose)",
+      "crossLaneStandard": "Frozen in State/UT Gate 47A3R1 and certified in Gate 47A4R1"
+    }
+  ],
+  "prohibitedCanonicalIds": [
+    "ibps_rrb_officer",
+    "ibps_rrb_po",
+    "ibps_rrb_clerk",
+    "ibps_rrb_office_assistant"
+  ],
+  "allowedDisplayAliases": [
+    {
+      "alias": "IBPS RRB PO",
+      "targetCanonicalId": "ibps_crp_rrb_officers",
+      "materializationAllowed": false
+    },
+    {
+      "alias": "IBPS RRB Clerk",
+      "targetCanonicalId": "ibps_crp_rrb_office_assistant",
+      "materializationAllowed": false
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_IBPS_CANONICAL_ID_MATCH",
+      "assertion": "National manifest must use exact canonical IDs ibps_crp_rrb_officers and ibps_crp_rrb_office_assistant.",
+      "failCondition": "Manifest uses ibps_rrb_officer, ibps_rrb_po, or ibps_rrb_clerk as canonical missionId."
+    }
+  ]
+}

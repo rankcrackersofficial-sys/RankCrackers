@@ -1,0 +1,33 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Official Notification Age Rule & Relaxation Contract",
+  "architecture": {
+    "hardcodedLogicEliminated": "switch(category) { case SC: +5; case OBC: +3; } completely deleted.",
+    "governanceModel": "All age relaxation must be declared in official EligibilityRule objects of ruleType AGE_RELAXATION.",
+    "mandatoryFields": [
+      "ruleId",
+      "ruleType (AGE_MAX / AGE_MIN / AGE_RELAXATION)",
+      "officialValue (Number)",
+      "category (Vertical reservation category)",
+      "relaxationYears (Number)",
+      "sourceDocumentId (Verified notification PDF reference)",
+      "sourceLocator (Clause / paragraph in advertisement)"
+    ]
+  },
+  "evaluationLifecycle": [
+    "Step 1: Calculate student age in years at reference date (nowIso or notification cutoff date).",
+    "Step 2: Check student age against baseMax in AGE_MAX rule.",
+    "Step 3: If age <= baseMax, rule passes with base eligibility reason.",
+    "Step 4: If age > baseMax, search verified rules for an AGE_RELAXATION rule targeting candidate category.",
+    "Step 5: If verified relaxation rule found, apply relaxationYears to baseMax. If age <= effectiveMax, pass with relaxation audit reason.",
+    "Step 6: If NO verified relaxation rule exists for candidate category, rule FAILS. Zero assumed relaxation."
+  ],
+  "adversarialProof": {
+    "scWithoutRuleTest": "PASSED (Evaluated age 33 vs baseMax 30 => FAILED with reason \"No official age relaxation rule provided\")",
+    "obcWithoutRuleTest": "PASSED (Evaluated age 32 vs baseMax 30 => FAILED with reason \"No official age relaxation rule provided\")",
+    "scWithOfficialRuleTest": "PASSED (Evaluated age 33 vs baseMax 30 + 5y official rule => PASSED)"
+  },
+  "verificationMetric": {
+    "GLOBAL_HARDCODED_AGE_RELAXATION_COUNT": 0
+  }
+}

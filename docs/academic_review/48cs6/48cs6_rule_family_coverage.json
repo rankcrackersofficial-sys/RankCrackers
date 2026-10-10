@@ -1,0 +1,39 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "productionWrites": 0,
+  "scope": [
+    "jee_main_2026",
+    "ssc_cgl"
+  ],
+  "jee": [
+    {
+      "family": "AGE",
+      "status": "NOT_APPLICABLE_VERIFIED",
+      "evidenceRuleId": "JEE26-AGE-01"
+    },
+    {
+      "family": "EDUCATION",
+      "status": "RULE_PRESENT_VERIFIED",
+      "evidenceRuleIds": [
+        "JEE26-QE-01",
+        "JEE26-YEAR-01"
+      ]
+    },
+    {
+      "family": "DISCIPLINE",
+      "status": "RULE_PRESENT_VERIFIED",
+      "evidenceRuleId": "JEE26-SUBJECT-01"
+    },
+    {
+      "family": "QUALIFYING_STATE",
+      "status": "RULE_PRESENT_VERIFIED",
+      "evidenceRuleId": "JEE26-STATE-01"
+    },
+    {
+      "family": "ADMISSION_CAPACITY",
+      "status": "SEPARATE_COUNSELLING_DOMAIN"
+    }
+  ],
+  "ssc": []
+}

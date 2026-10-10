@@ -1,0 +1,53 @@
+{
+  "gate": "48CS2R6R1",
+  "auditTitle": "Text-Bound Completeness Barrier Specification and Proof",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "auditor": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "specification": {
+    "rule": "A RULE_PRESENT_VERIFIED family may become VERIFIED_COMPLETE if and only if all 4 conditions are met:",
+    "condition1_shaVerified": "Base notification bytes must be SHA256_VERIFIED with a valid 64-char hex digest.",
+    "condition2_textBound": "Base notification must have isTextExtractedAndBound === true and scanTextUnresolved !== true.",
+    "condition3_evidenceLocator": "Every rule in the family must have non-empty locator/page/span evidence resolving into that document.",
+    "condition4_exhaustiveCoverage": "Coverage status must be explicitly EXHAUSTIVE."
+  },
+  "scenarios": [
+    {
+      "scenarioId": "SHA_VERIFIED_BUT_SCAN_UNRESOLVED",
+      "targetCycle": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "documentSha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+      "isShaVerified": true,
+      "scanTextUnresolved": true,
+      "evidenceLevel": "SHA256_VERIFIED",
+      "derivedFamilyStatus": "UNRESOLVED",
+      "derivedCompleteness": "INCOMPLETE",
+      "packageValidationResult": "PARTIAL_SOURCE_PACKAGE",
+      "personalizationVerdict": "NOT_EVALUATED"
+    },
+    {
+      "scenarioId": "URL_FOUND_ONLY",
+      "targetCycle": "UPSC-CSE-2026",
+      "isShaVerified": false,
+      "scanTextUnresolved": false,
+      "evidenceLevel": "URL_FOUND",
+      "derivedFamilyStatus": "UNRESOLVED",
+      "derivedCompleteness": "INCOMPLETE",
+      "packageValidationResult": "PARTIAL_SOURCE_PACKAGE",
+      "personalizationVerdict": "NOT_EVALUATED"
+    },
+    {
+      "scenarioId": "TEXT_BOUND_AND_SHA_VERIFIED_BUT_PARTIAL_COVERAGE",
+      "targetCycle": "JEE-MAIN-2026",
+      "isShaVerified": true,
+      "scanTextUnresolved": false,
+      "isTextExtractedAndBound": true,
+      "evidenceLevel": "TEXT_EXTRACTED_AND_BOUND",
+      "unresolvedFamilies": [
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "derivedCompleteness": "INCOMPLETE",
+      "packageValidationResult": "PARTIAL_SOURCE_PACKAGE",
+      "personalizationVerdict": "NOT_EVALUATED"
+    }
+  ],
+  "verdict": "TEXT_BOUND_COMPLETENESS_BARRIER_VERIFIED"
+}

@@ -1,0 +1,17 @@
+{
+  "judicialTargetCount": 8,
+  "judicialConfirmedCount": 4,
+  "judicialSourceUnresolvedCount": 4,
+  "judicialProducerRowRequiredCount": 8,
+  "judicialStatuses": {
+    "delhi_judicial_service_prelims": "MATERIALIZATION_HOLD",
+    "uppsc_pcs_j_prelims": "MATERIALIZATION_HOLD",
+    "bpsc_judicial_service_prelims": "MATERIALIZATION_HOLD",
+    "rhc_civil_judge_prelims": "MATERIALIZATION_HOLD",
+    "mphc_civil_judge_prelims": "MATERIALIZATION_HOLD",
+    "ppsc_pcs_j_prelims": "MATERIALIZATION_HOLD",
+    "hpsc_hcs_j_prelims": "MATERIALIZATION_HOLD",
+    "gauhc_ajs_grade3_prelims": "MATERIALIZATION_HOLD"
+  },
+  "note": "Confirmed identity without producer row remains MATERIALIZATION_HOLD."
+}

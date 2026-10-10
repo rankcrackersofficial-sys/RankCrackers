@@ -1,0 +1,71 @@
+{
+  "manifestCode": "RC_47C8V_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T08:22:06.247Z",
+  "totalArtifactsTracked": 12,
+  "metrics": {
+    "PENDING_GENERATION_HASH_COUNT": 0,
+    "UNHASHED_REQUIRED_ARTIFACT_COUNT": 0
+  },
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_input_handoff_hash_verification.json",
+      "byteLength": 2414,
+      "sha256": "c10f687445b9b8d20b5dfec6cfff844cd4b55017f202a3c0ec412e6d41d1320f"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_engine_identity.json",
+      "byteLength": 399,
+      "sha256": "eee869f0725e528333af96e9f5f8a8261c5839f40d3af7c3041322b7470b9621"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_authority_security_audit.json",
+      "byteLength": 225,
+      "sha256": "8b1508361eddc8c57cb5320b5a5ff86cff736ddc2d7bc2cbbb2716a4df824c21"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_afcat_platform_audit.json",
+      "byteLength": 239,
+      "sha256": "a6466e8e5a24e25f146a85f4753186b7dc07e33ec4a93b0f15b2a9a143756fb9"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_afcat_route_audit.json",
+      "byteLength": 264,
+      "sha256": "0f64f2b7130fdd64cd27bc8aad6c0a887cf5f3261acbb07773b79a5ca1a93618"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_nta_s3waas_binding_audit.json",
+      "byteLength": 196,
+      "sha256": "fd52ae67dc8d43cffc23de43248d4ee3b3473113449c5b1aba7544287f712530"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_ib_epfo_completeness_audit.json",
+      "byteLength": 270,
+      "sha256": "f307bd0aff6efdf1fdf26f5e73569d5ed659d7a5c3ac94caea87a51701dcccfa"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_ibps_identity_audit.json",
+      "byteLength": 348,
+      "sha256": "82bfca3e617eba935e18edb1158d9d60cd81833b5f361e20da0fa71dcf74ff85"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_review_deferred_materialization_safety.json",
+      "byteLength": 306,
+      "sha256": "096e6ff945ec3c9dd01039da55177b8738c7924c6c44c464a22e62ec4710061e"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_materializer_validate_only_rerun.json",
+      "byteLength": 179,
+      "sha256": "885ea78a5fef2f40bc68b65030bed7ca8bd150eff1f36060cf8189a966942fc5"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_readiness_recomputation.json",
+      "byteLength": 244,
+      "sha256": "744730031628fe7c7d0336252102eb7b263a94f7b526178d5ffd39867af15dfa"
+    },
+    {
+      "relativePath": "docs/academic_review/47c8v/47c8v_final_report.md",
+      "byteLength": 3869,
+      "sha256": "967cf65f253f759f7611cfcd54329c2cc946d6d9235876271e8886627ed85bdd"
+    }
+  ]
+}

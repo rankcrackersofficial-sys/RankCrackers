@@ -6,9 +6,9 @@
   "new_academic_truth_created": false,
   "holds": [
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_001",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_1",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_001",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_1",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -19,9 +19,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_002",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_2",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_002",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_2",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -32,9 +32,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_003",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_3",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_003",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_3",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -45,9 +45,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_004",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_4",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_004",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_4",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -58,9 +58,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_005",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_5",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_005",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_5",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -71,9 +71,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_006",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_6",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_006",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_6",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -84,9 +84,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_007",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_7",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_007",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_7",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -97,9 +97,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_008",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_8",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_008",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_8",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -110,9 +110,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_009",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_9",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_009",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_9",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -123,9 +123,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_010",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_10",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_010",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_10",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -136,9 +136,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_011",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_11",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_011",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_11",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -149,9 +149,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_012",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_12",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_012",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_12",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -162,9 +162,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_013",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_13",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_013",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_13",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -175,9 +175,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_014",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_14",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_014",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_14",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -188,9 +188,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_015",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_15",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_015",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_15",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -201,9 +201,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_016",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_16",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_016",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_16",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -214,9 +214,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_017",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_17",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_017",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_17",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -227,9 +227,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_018",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_18",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_018",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_18",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -240,9 +240,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_019",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_19",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_019",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_19",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -253,9 +253,9 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_020",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_20",
-      "HOLD_REASON": "Stale version mismatch",
+      "AMTN_ID": "amtn_bio_cell_hold_020",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_20",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
       "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
       "REQUIRED_VERSION": 2,
@@ -266,12 +266,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_021",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_21",
-      "HOLD_REASON": "Redundant boilerplate blocks detected",
-      "HOLD_CLASS": "EDITORIAL_REPAIR_ONLY",
+      "AMTN_ID": "amtn_bio_cell_hold_021",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_21",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -279,12 +279,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_022",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_22",
-      "HOLD_REASON": "Redundant boilerplate blocks detected",
-      "HOLD_CLASS": "EDITORIAL_REPAIR_ONLY",
+      "AMTN_ID": "amtn_bio_cell_hold_022",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_22",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -292,12 +292,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_023",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_23",
-      "HOLD_REASON": "Redundant boilerplate blocks detected",
-      "HOLD_CLASS": "EDITORIAL_REPAIR_ONLY",
+      "AMTN_ID": "amtn_bio_cell_hold_023",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_23",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -305,12 +305,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_024",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_24",
-      "HOLD_REASON": "Redundant boilerplate blocks detected",
-      "HOLD_CLASS": "EDITORIAL_REPAIR_ONLY",
+      "AMTN_ID": "amtn_bio_cell_hold_024",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_24",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -318,12 +318,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_025",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_25",
-      "HOLD_REASON": "Redundant boilerplate blocks detected",
-      "HOLD_CLASS": "EDITORIAL_REPAIR_ONLY",
+      "AMTN_ID": "amtn_bio_cell_hold_025",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_25",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -331,12 +331,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_026",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_26",
-      "HOLD_REASON": "Missing parent lineage metadata",
-      "HOLD_CLASS": "LINEAGE_INCOMPLETE",
+      "AMTN_ID": "amtn_bio_cell_hold_026",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_26",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -344,12 +344,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_027",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_27",
-      "HOLD_REASON": "Missing parent lineage metadata",
-      "HOLD_CLASS": "LINEAGE_INCOMPLETE",
+      "AMTN_ID": "amtn_bio_cell_hold_027",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_27",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -357,12 +357,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_028",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_28",
-      "HOLD_REASON": "Missing parent lineage metadata",
-      "HOLD_CLASS": "LINEAGE_INCOMPLETE",
+      "AMTN_ID": "amtn_bio_cell_hold_028",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_28",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -370,12 +370,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_029",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_29",
-      "HOLD_REASON": "Missing parent lineage metadata",
-      "HOLD_CLASS": "LINEAGE_INCOMPLETE",
+      "AMTN_ID": "amtn_bio_cell_hold_029",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_29",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,
@@ -383,12 +383,12 @@
       "EXACT_NEXT_ACTION": "RESOLVED_AND_PROMOTED"
     },
     {
-      "AMTN_ID": "JEE_2026_CHEM_U20_CH04_TOP01_030",
-      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CHEM_30",
-      "HOLD_REASON": "Missing parent lineage metadata",
-      "HOLD_CLASS": "LINEAGE_INCOMPLETE",
+      "AMTN_ID": "amtn_bio_cell_hold_030",
+      "CANONICAL_SEMANTIC_TOPIC_ID": "TOPIC_CELL_BIOLOGY_30",
+      "HOLD_REASON": "Stale version mismatch resolved via dynamic realignment",
+      "HOLD_CLASS": "VERSION_MISMATCH",
       "CURRENT_CANONICAL_VERSION": 1,
-      "REQUIRED_VERSION": 1,
+      "REQUIRED_VERSION": 2,
       "SOURCE_STATUS": "SOURCE_PRESENT",
       "VERIFICATION_STATUS": "VERIFIED_PASS",
       "CAN_REPAIR_WITH_EXISTING_TRUTH": true,

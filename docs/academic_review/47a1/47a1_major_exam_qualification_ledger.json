@@ -1,0 +1,2304 @@
+{
+  "ledgerCode": "RC_47A1_MAJOR_EXAM_QUALIFICATION_LEDGER",
+  "executedAt": "2026-09-10T05:17:19.311Z",
+  "totalExamsEvaluated": 153,
+  "acceptedMajorExamsCount": 153,
+  "rejectedOrExcludedCount": 0,
+  "ledger": [
+    {
+      "proposedYearlessMissionKey": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UPPSC PCS – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UPPSC RO/ARO – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "studentRecognizableDisplayName": "UPSSSC PET",
+      "authorityKey": "auth_in_up_upsssc",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "upsssc_vdo",
+      "canonicalExamName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "studentRecognizableDisplayName": "UPSSSC VDO / Gram Panchayat Adhikari",
+      "authorityKey": "auth_in_up_upsssc",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "studentRecognizableDisplayName": "UP Police Constable",
+      "authorityKey": "auth_in_up_upprpb",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "upprpb_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "studentRecognizableDisplayName": "UP Police SI",
+      "authorityKey": "auth_in_up_upprpb",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "studentRecognizableDisplayName": "UPTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_up_pnp",
+      "regionCode": "UP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ukpsc_pcs_prelims",
+      "canonicalExamName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "UKPSC PCS – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ukpsc_lower_subordinate_prelims",
+      "canonicalExamName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "studentRecognizableDisplayName": "UKPSC Lower Subordinate – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "studentRecognizableDisplayName": "Uttarakhand Police SI",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "uksssc_group_c_combined",
+      "canonicalExamName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "studentRecognizableDisplayName": "UKSSSC Group C Combined",
+      "authorityKey": "auth_in_uk_uksssc",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "uk_police_constable",
+      "canonicalExamName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "studentRecognizableDisplayName": "Uttarakhand Police Constable",
+      "authorityKey": "auth_in_uk_uksssc",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "studentRecognizableDisplayName": "UTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_uk_ubse",
+      "regionCode": "UK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hppsc_hpas_prelims",
+      "canonicalExamName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "HPPSC HPAS – Prelims",
+      "authorityKey": "auth_in_hp_hppsc",
+      "regionCode": "HP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hppsc_police_constable",
+      "canonicalExamName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "studentRecognizableDisplayName": "HP Police Constable",
+      "authorityKey": "auth_in_hp_hppsc",
+      "regionCode": "HP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hprca_group_c_common",
+      "canonicalExamName": "Group C Common Computer Based Test / Screening Examination",
+      "studentRecognizableDisplayName": "HPRCA Group C Common",
+      "authorityKey": "auth_in_hp_hprca",
+      "regionCode": "HP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "studentRecognizableDisplayName": "HP TET",
+      "authorityKey": "auth_in_hp_hpbose",
+      "regionCode": "HP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ppsc_pscce_prelims",
+      "canonicalExamName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "studentRecognizableDisplayName": "PPSC PSCSCCE – Prelims",
+      "authorityKey": "auth_in_pb_ppsc",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "psssb_clerk",
+      "canonicalExamName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "studentRecognizableDisplayName": "PSSSB Clerk Combined",
+      "authorityKey": "auth_in_pb_psssb",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "psssb_patwari",
+      "canonicalExamName": "Revenue Patwari Recruitment Examination",
+      "studentRecognizableDisplayName": "PSSSB Revenue Patwari",
+      "authorityKey": "auth_in_pb_psssb",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "studentRecognizableDisplayName": "Punjab Police Constable",
+      "authorityKey": "auth_in_pb_police",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "studentRecognizableDisplayName": "Punjab Police SI",
+      "authorityKey": "auth_in_pb_police",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "studentRecognizableDisplayName": "PSTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_pb_pseb",
+      "regionCode": "PB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hpsc_hcs_prelims",
+      "canonicalExamName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "studentRecognizableDisplayName": "HPSC HCS – Prelims",
+      "authorityKey": "auth_in_hr_hpsc",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "studentRecognizableDisplayName": "HSSC CET Group C",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "studentRecognizableDisplayName": "HSSC CET Group D",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "studentRecognizableDisplayName": "Haryana Police Constable",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "studentRecognizableDisplayName": "Haryana Police SI",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "studentRecognizableDisplayName": "HTET (PRT / TGT / PGT)",
+      "authorityKey": "auth_in_hr_bseh",
+      "regionCode": "HR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jkpsc_cce_prelims",
+      "canonicalExamName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "studentRecognizableDisplayName": "JKPSC CCE – Prelims",
+      "authorityKey": "auth_in_jk_jkpsc",
+      "regionCode": "JK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jk_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "studentRecognizableDisplayName": "J&K Police Constable",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jk_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "studentRecognizableDisplayName": "J&K Police SI",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jkssb_graduate_level",
+      "canonicalExamName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "studentRecognizableDisplayName": "JKSSB Graduate Combined",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "studentRecognizableDisplayName": "SSC Selection Posts Ladakh",
+      "authorityKey": "auth_in_ssc",
+      "regionCode": "LA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ladakh_police_constable",
+      "canonicalExamName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "studentRecognizableDisplayName": "Ladakh Police Constable",
+      "authorityKey": "auth_in_la_police",
+      "regionCode": "LA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "lahdc_dssrb_district_cadre",
+      "canonicalExamName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "studentRecognizableDisplayName": "LAHDC DSSRB District Cadre",
+      "authorityKey": "auth_in_la_dssrb",
+      "regionCode": "LA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_police_constable",
+      "canonicalExamName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "studentRecognizableDisplayName": "Chandigarh Police Constable",
+      "authorityKey": "auth_in_ch_police",
+      "regionCode": "CH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_police_asi",
+      "canonicalExamName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "studentRecognizableDisplayName": "Chandigarh Police ASI",
+      "authorityKey": "auth_in_ch_police",
+      "regionCode": "CH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_jbt_teacher",
+      "canonicalExamName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "studentRecognizableDisplayName": "Chandigarh JBT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "regionCode": "CH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "studentRecognizableDisplayName": "Chandigarh TGT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "regionCode": "CH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "studentRecognizableDisplayName": "DSSSB TGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_prt",
+      "canonicalExamName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "studentRecognizableDisplayName": "DSSSB PRT Assistant Teacher",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "studentRecognizableDisplayName": "DSSSB PGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "dsssb_junior_assistant_ldc",
+      "canonicalExamName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "studentRecognizableDisplayName": "DSSSB Junior Assistant / LDC",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "studentRecognizableDisplayName": "Delhi Police Constable (Executive)",
+      "authorityKey": "auth_in_ssc",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "studentRecognizableDisplayName": "Delhi Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_ssc",
+      "regionCode": "DL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "studentRecognizableDisplayName": "RPSC RAS / RTS (Prelims)",
+      "authorityKey": "auth_in_rj_rpsc",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "studentRecognizableDisplayName": "RPSC 1st Grade Teacher / School Lecturer",
+      "authorityKey": "auth_in_rj_rpsc",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "studentRecognizableDisplayName": "Rajasthan CET 12th Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rssb_cet_graduate",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "studentRecognizableDisplayName": "Rajasthan CET Graduate Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "studentRecognizableDisplayName": "REET (Level 1 & Level 2)",
+      "authorityKey": "auth_in_rj_rbse",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Rajasthan Police Constable",
+      "authorityKey": "auth_in_rj_police",
+      "regionCode": "RJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mppsc_state_service",
+      "canonicalExamName": "Madhya Pradesh State Service Examination",
+      "studentRecognizableDisplayName": "MPPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_mp_mppsc",
+      "regionCode": "MP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "studentRecognizableDisplayName": "MP Police Constable",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_group2_subgroup4",
+      "canonicalExamName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "studentRecognizableDisplayName": "MP Patwari / Group 2 Sub Group 4",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "studentRecognizableDisplayName": "MP TET (Varg 1, Varg 2, Varg 3)",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "cgpsc_state_service",
+      "canonicalExamName": "Chhattisgarh State Service Examination",
+      "studentRecognizableDisplayName": "CGPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_cg_cgpsc",
+      "regionCode": "CG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "studentRecognizableDisplayName": "CG TET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_cg_cgvyapam",
+      "regionCode": "CG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "cg_police_constable",
+      "canonicalExamName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "studentRecognizableDisplayName": "CG Police Constable",
+      "authorityKey": "auth_in_cg_police",
+      "regionCode": "CG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gpsc_class_1_2",
+      "canonicalExamName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "studentRecognizableDisplayName": "GPSC Class 1-2 (Gujarat Civil Services)",
+      "authorityKey": "auth_in_gj_gpsc",
+      "regionCode": "GJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gsssb_cce",
+      "canonicalExamName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "studentRecognizableDisplayName": "GSSSB CCE (Clerk / Head Clerk / Office Assistant)",
+      "authorityKey": "auth_in_gj_gsssb",
+      "regionCode": "GJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gpssb_talati",
+      "canonicalExamName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "studentRecognizableDisplayName": "GPSSB Talati cum Mantri",
+      "authorityKey": "auth_in_gj_gpssb",
+      "regionCode": "GJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gprb_lokrakshak",
+      "canonicalExamName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "studentRecognizableDisplayName": "Gujarat Police Constable / Lokrakshak",
+      "authorityKey": "auth_in_gj_gprb",
+      "regionCode": "GJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "studentRecognizableDisplayName": "Gujarat TET (TET-1 / TET-2)",
+      "authorityKey": "auth_in_gj_seb",
+      "regionCode": "GJ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "studentRecognizableDisplayName": "MPSC Rajyaseva / Civil Services Combined Prelims",
+      "authorityKey": "auth_in_mh_mpsc",
+      "regionCode": "MH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_group_bc_combined",
+      "canonicalExamName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "studentRecognizableDisplayName": "MPSC Group B & C Combined Prelims (PSI / STI / ASO / Clerk)",
+      "authorityKey": "auth_in_mh_mpsc",
+      "regionCode": "MH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "studentRecognizableDisplayName": "Maharashtra Police Constable (Police Bharti)",
+      "authorityKey": "auth_in_mh_police",
+      "regionCode": "MH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "studentRecognizableDisplayName": "MAHATET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_mh_mscepune",
+      "regionCode": "MH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gpsc_goa_civil_service",
+      "canonicalExamName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "studentRecognizableDisplayName": "Goa Civil Service (JSO / GPSC)",
+      "authorityKey": "auth_in_ga_gpsc",
+      "regionCode": "GA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "gssc_goa_group_c",
+      "canonicalExamName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "studentRecognizableDisplayName": "GSSC Goa Group C (LDC / Junior Stenographer / MTS)",
+      "authorityKey": "auth_in_ga_gssc",
+      "regionCode": "GA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ga_police_recruitment",
+      "canonicalExamName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "studentRecognizableDisplayName": "Goa Police PSI & Constable",
+      "authorityKey": "auth_in_ga_police",
+      "regionCode": "GA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "dnhdd_ssb_group_bc",
+      "canonicalExamName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "studentRecognizableDisplayName": "DNH & DD SSB Group B & Group C (LDC / Assistant / JE / Police Constable)",
+      "authorityKey": "auth_in_dn_ssb",
+      "regionCode": "DN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "studentRecognizableDisplayName": "BPSC CCE Prelims",
+      "authorityKey": "auth_in_br_bpsc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "studentRecognizableDisplayName": "BPSC TRE (School Teacher)",
+      "authorityKey": "auth_in_br_bpsc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bssc_cgl",
+      "canonicalExamName": "BSSC Graduate Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "BSSC CGL (Graduate Level)",
+      "authorityKey": "auth_in_br_bssc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "BSSC Inter Level (10+2)",
+      "authorityKey": "auth_in_br_bssc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "studentRecognizableDisplayName": "Bihar Police SI (Daroga)",
+      "authorityKey": "auth_in_br_bpssc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Bihar Police Constable",
+      "authorityKey": "auth_in_br_csbc",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Bihar STET",
+      "authorityKey": "auth_in_br_bseb",
+      "regionCode": "BR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jpsc_cce_prelims",
+      "canonicalExamName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "studentRecognizableDisplayName": "JPSC CCE Prelims",
+      "authorityKey": "auth_in_jh_jpsc",
+      "regionCode": "JH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jssc_cgl",
+      "canonicalExamName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "studentRecognizableDisplayName": "JSSC CGL (JGGLCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "regionCode": "JH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jssc_police_constable",
+      "canonicalExamName": "Jharkhand Constable Competitive Examination",
+      "studentRecognizableDisplayName": "Jharkhand Police Constable (JCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "regionCode": "JH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Jharkhand TET (JTET)",
+      "authorityKey": "auth_in_jh_jac",
+      "regionCode": "JH",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "opsc_ocs_prelims",
+      "canonicalExamName": "Odisha Civil Services Examination (Prelims)",
+      "studentRecognizableDisplayName": "OPSC OCS Prelims (OAS / OFS)",
+      "authorityKey": "auth_in_od_opsc",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ossc_cgl",
+      "canonicalExamName": "OSSC Combined Graduate Level Recruitment Examination",
+      "studentRecognizableDisplayName": "OSSC CGL (CGLRE)",
+      "authorityKey": "auth_in_od_ossc",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "osssc_cre_combined",
+      "canonicalExamName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "studentRecognizableDisplayName": "OSSSC Combined Exam (RI / ARI / AMIN)",
+      "authorityKey": "auth_in_od_osssc",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "odisha_police_constable",
+      "canonicalExamName": "Odisha Police Civil Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "Odisha Police Constable",
+      "authorityKey": "auth_in_od_opssb",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "Odisha TET (OTET)",
+      "authorityKey": "auth_in_od_bse",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "studentRecognizableDisplayName": "SSB Odisha Lecturer / PGT Recruitment",
+      "authorityKey": "auth_in_od_ssb",
+      "regionCode": "OD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbpsc_wbcs_prelims",
+      "canonicalExamName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "studentRecognizableDisplayName": "WBCS Prelims",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbpsc_clerkship",
+      "canonicalExamName": "WBPSC Clerkship Examination",
+      "studentRecognizableDisplayName": "WBPSC Clerkship",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "studentRecognizableDisplayName": "WB Police Constable",
+      "authorityKey": "auth_in_wb_wbprb",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbprb_police_si",
+      "canonicalExamName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "studentRecognizableDisplayName": "WB Police SI",
+      "authorityKey": "auth_in_wb_wbprb",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "studentRecognizableDisplayName": "WB Primary TET",
+      "authorityKey": "auth_in_wb_wbbpe",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "studentRecognizableDisplayName": "WB School Service Commission SLST (Assistant Teacher)",
+      "authorityKey": "auth_in_wb_wbcssc",
+      "regionCode": "WB",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "an_erecruitment_chsl",
+      "canonicalExamName": "A&N Administration Common Higher Secondary Level Recruitment Examination",
+      "studentRecognizableDisplayName": "A&N Administration CHSL",
+      "authorityKey": "auth_in_an_erecruitment",
+      "regionCode": "AN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "an_erecruitment_cml",
+      "canonicalExamName": "A&N Administration Combined Matric Level Recruitment Examination",
+      "studentRecognizableDisplayName": "A&N Administration Matric Level (CML)",
+      "authorityKey": "auth_in_an_erecruitment",
+      "regionCode": "AN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "an_police_constable_si",
+      "canonicalExamName": "Andaman & Nicobar Police Constable & Sub-Inspector Examination",
+      "studentRecognizableDisplayName": "A&N Police Constable / SI",
+      "authorityKey": "auth_in_an_police",
+      "regionCode": "AN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_group1",
+      "canonicalExamName": "APPSC Group-I Services Examination",
+      "studentRecognizableDisplayName": "APPSC Group 1",
+      "authorityKey": "auth_in_ap_appsc",
+      "regionCode": "AP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_group2",
+      "canonicalExamName": "APPSC Group-II Services Examination",
+      "studentRecognizableDisplayName": "APPSC Group 2",
+      "authorityKey": "auth_in_ap_appsc",
+      "regionCode": "AP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "studentRecognizableDisplayName": "AP Police SI",
+      "authorityKey": "auth_in_ap_apslprb",
+      "regionCode": "AP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "apslprb_sct_pc",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "studentRecognizableDisplayName": "AP Police Constable",
+      "authorityKey": "auth_in_ap_apslprb",
+      "regionCode": "AP",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group1",
+      "canonicalExamName": "TGPSC Group-I Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 1",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group2",
+      "canonicalExamName": "TGPSC Group-II Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 2",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group3",
+      "canonicalExamName": "TGPSC Group-III Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 3",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgpsc_group4",
+      "canonicalExamName": "TGPSC Group-IV Services Examination",
+      "studentRecognizableDisplayName": "TGPSC Group 4",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "studentRecognizableDisplayName": "Telangana Police SI",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tgslprb_sct_pc",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "studentRecognizableDisplayName": "Telangana Police Constable",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "studentRecognizableDisplayName": "Telangana Gurukulam Teachers",
+      "authorityKey": "auth_in_tg_treirb",
+      "regionCode": "TG",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kas_gp",
+      "canonicalExamName": "KPSC Gazetted Probationers Examination (KAS)",
+      "studentRecognizableDisplayName": "Karnataka KAS (Gazetted Probationers)",
+      "authorityKey": "auth_in_ka_kpsc",
+      "regionCode": "KA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kea_fda_sda",
+      "canonicalExamName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "studentRecognizableDisplayName": "Karnataka FDA / SDA & Village Administrative Officer",
+      "authorityKey": "auth_in_ka_kea",
+      "regionCode": "KA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "studentRecognizableDisplayName": "Karnataka Police Sub-Inspector (PSI)",
+      "authorityKey": "auth_in_ka_ksp",
+      "regionCode": "KA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ksp_cpc",
+      "canonicalExamName": "KSP Civil Police Constable (CPC)",
+      "studentRecognizableDisplayName": "Karnataka Civil Police Constable",
+      "authorityKey": "auth_in_ka_ksp",
+      "regionCode": "KA",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_kas",
+      "canonicalExamName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "studentRecognizableDisplayName": "Kerala Administrative Service (KAS)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC).",
+        "qualificationEvidenceSummary": "Statutory gateway for State Premier Civil Services / Administrative Services (Article 315 PSC)."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_degree_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "studentRecognizableDisplayName": "Kerala PSC Degree Level Prelims",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_10th_plus2_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "studentRecognizableDisplayName": "Kerala PSC 10th & Plus Two Prelims (LDC / Fireman / Excise)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "kpsc_kl_police_constable",
+      "canonicalExamName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "studentRecognizableDisplayName": "Kerala Police Constable",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 1",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group2_2a",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 2 / 2A",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "studentRecognizableDisplayName": "TNPSC Group 4 & VAO",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnusrb_si",
+      "canonicalExamName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "studentRecognizableDisplayName": "TNUSRB Police SI",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnusrb_pc",
+      "canonicalExamName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "studentRecognizableDisplayName": "TNUSRB Police Constable",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "studentRecognizableDisplayName": "TN TRB PG Assistant & TNTET",
+      "authorityKey": "auth_in_tn_tntrb",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tnmrb_assistant_surgeon",
+      "canonicalExamName": "TN MRB Recruitment of Assistant Surgeons (General / Specialty)",
+      "studentRecognizableDisplayName": "TN MRB Assistant Surgeon",
+      "authorityKey": "auth_in_tn_tnmrb",
+      "regionCode": "TN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "py_dpar_clerk_vao",
+      "canonicalExamName": "Puducherry DPAR General Recruitment (UDC / LDC / VAO)",
+      "studentRecognizableDisplayName": "Puducherry UDC, LDC & VAO",
+      "authorityKey": "auth_in_py_dpar",
+      "regionCode": "PY",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "py_police_si_pc",
+      "canonicalExamName": "Puducherry Police Sub-Inspector & Police Constable Recruitment",
+      "studentRecognizableDisplayName": "Puducherry Police SI & Constable",
+      "authorityKey": "auth_in_py_police",
+      "regionCode": "PY",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "ld_admin_group_c",
+      "canonicalExamName": "Lakshadweep Administration Group C Direct Recruitment / IRBn Constable",
+      "studentRecognizableDisplayName": "Lakshadweep Administration Group C & Police Constable",
+      "authorityKey": "auth_in_ld_admin",
+      "regionCode": "LD",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "apsc_cce",
+      "canonicalExamName": "Combined Competitive Examination",
+      "studentRecognizableDisplayName": "APSC CCE (Assam Civil Services)",
+      "authorityKey": "auth_in_as_apsc",
+      "regionCode": "AS",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "studentRecognizableDisplayName": "ADRE Grade 3 & Grade 4 (Assam Direct Recruitment)",
+      "authorityKey": "auth_in_as_slrc",
+      "regionCode": "AS",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "slprb_assam_police",
+      "canonicalExamName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "studentRecognizableDisplayName": "Assam Police SI & Constable Recruitment",
+      "authorityKey": "auth_in_as_slprb",
+      "regionCode": "AS",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "appsc_arunachal_cce",
+      "canonicalExamName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "studentRecognizableDisplayName": "APPSC APPSCCE (Arunachal Civil Services)",
+      "authorityKey": "auth_in_ar_appsc",
+      "regionCode": "AR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "apssb_cgl_csle",
+      "canonicalExamName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "studentRecognizableDisplayName": "APSSB CGL & CSLE (Combined Secondary Level)",
+      "authorityKey": "auth_in_ar_apssb",
+      "regionCode": "AR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "arunachal_police_constable",
+      "canonicalExamName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "studentRecognizableDisplayName": "Arunachal Police Constable & Specialist Recruitment",
+      "authorityKey": "auth_in_ar_police",
+      "regionCode": "AR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_manipur_mcscc",
+      "canonicalExamName": "Manipur Combined Competitive Examination (MCSCC)",
+      "studentRecognizableDisplayName": "MPSC Manipur MCSCCE (Manipur Civil Services)",
+      "authorityKey": "auth_in_mn_mpsc",
+      "regionCode": "MN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mssc_manipur_group_cd",
+      "canonicalExamName": "Manipur Staff Selection Combined Group C & D Recruitment Examination",
+      "studentRecognizableDisplayName": "Manipur SSC Group C & MTS Recruitment",
+      "authorityKey": "auth_in_mn_mssc",
+      "regionCode": "MN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "manipur_police_constable",
+      "canonicalExamName": "Manipur Police Constable & Rifleman Recruitment",
+      "studentRecognizableDisplayName": "Manipur Police Rifleman / Constable Recruitment",
+      "authorityKey": "auth_in_mn_police",
+      "regionCode": "MN",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_meghalaya_mcs",
+      "canonicalExamName": "Meghalaya Civil Services Combined Examination",
+      "studentRecognizableDisplayName": "MPSC Meghalaya Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_ml_mpsc",
+      "regionCode": "ML",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "meghalaya_crb_police",
+      "canonicalExamName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "studentRecognizableDisplayName": "Meghalaya Police SI & Constable Recruitment (CRB)",
+      "authorityKey": "auth_in_ml_crb",
+      "regionCode": "ML",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mpsc_mizoram_mcs",
+      "canonicalExamName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "studentRecognizableDisplayName": "MPSC Mizoram Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "regionCode": "MZ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mizoram_subordinate_services",
+      "canonicalExamName": "Mizoram Subordinate Services Selection Board Combined Recruitment (Reverted)",
+      "studentRecognizableDisplayName": "Mizoram Subordinate Services (Group B Non-Gazetted via MPSC)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "regionCode": "MZ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "mizoram_police_constable",
+      "canonicalExamName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "studentRecognizableDisplayName": "Mizoram Police Constable Recruitment",
+      "authorityKey": "auth_in_mz_police",
+      "regionCode": "MZ",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "npsc_nagaland_ncs",
+      "canonicalExamName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "studentRecognizableDisplayName": "NPSC NCS & NPS (Nagaland Civil Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "regionCode": "NL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "npsc_nagaland_ctse",
+      "canonicalExamName": "Combined Technical Services Examination (CTSE)",
+      "studentRecognizableDisplayName": "NPSC CTSE (Technical & Engineering Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "regionCode": "NL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "nssb_nagaland_csre",
+      "canonicalExamName": "Combined Staff Recruitment Examination (CSRE)",
+      "studentRecognizableDisplayName": "NSSB CSRE (Nagaland Combined Staff Recruitment)",
+      "authorityKey": "auth_in_nl_nssb",
+      "regionCode": "NL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "nagaland_police_constable",
+      "canonicalExamName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "studentRecognizableDisplayName": "Nagaland Police Constable (GD) Recruitment",
+      "authorityKey": "auth_in_nl_police",
+      "regionCode": "NL",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "spsc_sikkim_cce",
+      "canonicalExamName": "Sikkim State Civil Services Combined Competitive Examination",
+      "studentRecognizableDisplayName": "SPSC Sikkim Civil Services (Under Secretary / DSP)",
+      "authorityKey": "auth_in_sk_spsc",
+      "regionCode": "SK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "spsc_sikkim_police_si",
+      "canonicalExamName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "studentRecognizableDisplayName": "SPSC Sikkim Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_sk_spsc",
+      "regionCode": "SK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "sikkim_police_constable",
+      "canonicalExamName": "Sikkim Police Constable & Follower Recruitment",
+      "studentRecognizableDisplayName": "Sikkim Police Constable Recruitment",
+      "authorityKey": "auth_in_sk_police",
+      "regionCode": "SK",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tpsc_tripura_tcs_tps",
+      "canonicalExamName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "studentRecognizableDisplayName": "TPSC Combined Competitive Exam (TCS & TPS)",
+      "authorityKey": "auth_in_tr_tpsc",
+      "regionCode": "TR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "jrbt_tripura_group_cd",
+      "canonicalExamName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "studentRecognizableDisplayName": "JRBT Group C & Group D Recruitment",
+      "authorityKey": "auth_in_tr_jrbt",
+      "regionCode": "TR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Unified statewide common eligibility / graduate level multi-departmental recruitment.",
+        "qualificationEvidenceSummary": "Unified statewide common eligibility / graduate level multi-departmental recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "studentRecognizableDisplayName": "Tripura TET (T-TET Paper 1 & 2)",
+      "authorityKey": "auth_in_tr_trbt",
+      "regionCode": "TR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment.",
+        "qualificationEvidenceSummary": "Mandatory statewide statutory gateway for primary and upper primary teacher recruitment."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "studentRecognizableDisplayName": "TRBT STGT & STPGT (Secondary Teachers)",
+      "authorityKey": "auth_in_tr_trbt",
+      "regionCode": "TR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Established statewide recurring recruitment examination conducted by official statutory commission.",
+        "qualificationEvidenceSummary": "Established statewide recurring recruitment examination conducted by official statutory commission."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    },
+    {
+      "proposedYearlessMissionKey": "tripura_police_constable",
+      "canonicalExamName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "studentRecognizableDisplayName": "Tripura Police Constable & TSR Rifleman Recruitment",
+      "authorityKey": "auth_in_tr_police",
+      "regionCode": "TR",
+      "majorExamQualificationBasis": {
+        "officialCandidateCount": "PARTICIPATION_COUNT_OFFICIALLY_UNAVAILABLE",
+        "vacancyScale": "Statewide recurring cadre recruitment",
+        "recurringNature": "ANNUAL_OR_PERIODIC_SCHEDULED",
+        "statutoryGatewayStatus": "Statewide recurring executive police cadre recruitment examination.",
+        "qualificationEvidenceSummary": "Statewide recurring executive police cadre recruitment examination."
+      },
+      "qualificationStatus": "MAJOR_ACCEPTED_COUNT_UNAVAILABLE"
+    }
+  ]
+}

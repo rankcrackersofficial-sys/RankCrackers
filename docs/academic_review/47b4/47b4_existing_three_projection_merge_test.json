@@ -1,0 +1,12 @@
+{
+  "testCode": "RC_47B4_EXISTING_THREE_PROJECTION_MERGE_TEST",
+  "executedAt": "2026-09-10T06:57:27.690Z",
+  "realmFieldPreserved": true,
+  "recruitmentFieldPreserved": true,
+  "catalogFieldPreserved": true,
+  "nestedFieldPreserved": true,
+  "metrics": {
+    "UNKNOWN_NESTED_GOVERNED_FIELD_PRESERVED": "PASS"
+  },
+  "assertionPass": true
+}

@@ -1,0 +1,32 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Age Relaxation Resolution Specification",
+  "resolutionStates": {
+    "RELAXATION_PRESENT_VERIFIED": {
+      "description": "Official relaxation rule found with verified source evidence.",
+      "behavior": "Apply exact relaxationYears to baseMax. Pass if age <= effectiveMax."
+    },
+    "RELAXATION_NONE_VERIFIED": {
+      "description": "Official notification explicitly verified that NO relaxation applies.",
+      "behavior": "Candidate exceeding baseMax is strictly disqualified (NOT_ELIGIBLE)."
+    },
+    "RELAXATION_UNRESOLVED": {
+      "description": "Relaxation clauses have not been audited or verified.",
+      "behavior": "Candidate belonging to relaxable category (SC, ST, OBC, EWS, PwBD) exceeding baseMax yields UNRESOLVED / NOT_EVALUATED. Disqualification barred."
+    }
+  },
+  "adversarialProofs": [
+    {
+      "case": "SC candidate aged 33 vs 30 baseMax + RELAXATION_UNRESOLVED",
+      "verdict": "NOT_EVALUATED (Disqualification prevented)"
+    },
+    {
+      "case": "SC candidate aged 33 vs 30 baseMax + RELAXATION_NONE_VERIFIED",
+      "verdict": "NOT_ELIGIBLE (Safely disqualified)"
+    },
+    {
+      "case": "SC candidate aged 33 vs 30 baseMax + 5y verified relaxation rule",
+      "verdict": "ELIGIBLE (Rule applied exactly)"
+    }
+  ]
+}

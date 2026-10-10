@@ -1,0 +1,203 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "algorithm": "SHA-256",
+  "selfExcluded": true,
+  "artifacts": [
+    {
+      "path": "docs/academic_review/48cs6/48cs6_agent3_handoff_package.json",
+      "byteLength": 64229,
+      "sha256": "c20b14c1e91f1b8945168b6666bcf9648dcd064d750c52066550c18611601ebf"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_agent3_handoff_packages.json",
+      "byteLength": 73090,
+      "sha256": "a1f4729ccb24cfdf440398ad73b4be81ff297c3fa95513fe9426663ac11a9947"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_amendment_chain_registry.json",
+      "byteLength": 864,
+      "sha256": "aa4ae6d2136f607f95794e8a4a6c23a99c299c39d15bf5b34fb370957c754b5d"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_byte_sha_registry.json",
+      "byteLength": 3530,
+      "sha256": "45322947f39f85c96153a6664f129131806a1c4acaf4bed98b675a5857ac84d8"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_career_signal_event_candidates.json",
+      "byteLength": 987,
+      "sha256": "4ecd214fc8dbee628cb8cba21b9217ab7dfadf9f498380fa30f4bfc5127d444f"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_current_effective_state.json",
+      "byteLength": 688,
+      "sha256": "8557a526c4380ea968b6f7391e16f5af7c1031cb99fdac6296d163aa5a8830eb"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_exact_source_document_registry.json",
+      "byteLength": 57091,
+      "sha256": "57806551290e8caa8db1b11512c190ebb2d974e3fa55730a61f0aa553339130e"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_final_report.md",
+      "byteLength": 1763,
+      "sha256": "b310480045e8655338bcd3a7d2d515fb0a180eddf5ce55b6706d63d978c15c3c"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_jee_amendment_chain.json",
+      "byteLength": 944,
+      "sha256": "2b2c5b9f5a5e8226f5f9c24b04687597fa3e2fcc5c5f6384429e66f2979ddafc"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_jee_exact_source_registry.json",
+      "byteLength": 27847,
+      "sha256": "b25ae653f748448992968a5dfba5f861e812f330261990667e069226726acce5"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_jee_main_2026_complete_rulebook.json",
+      "byteLength": 32418,
+      "sha256": "a6d069690cad3d7c38baaccdb4604ebfed0ebae588d0175f04f2b792b5a37c62"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_jee_text_bound_rulebook.json",
+      "byteLength": 32344,
+      "sha256": "ddffb9cef42c631e21e74ddc9336c285abffcc8970435c8b45f8fe648bbc70e5"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_rpsc_first_grade_rulebook.json",
+      "byteLength": 4550,
+      "sha256": "af172fd844e73ea30f5689e4374e1a09464bab23df15e1ae29bb6f55923a2f9a"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_rpsc_first_grade_text_recovery.json",
+      "byteLength": 620,
+      "sha256": "4d68295a517251c5ce375ef72d68063cd457feea586383f5f6b4c8e9fec7ba74"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_rpsc_first_grade_vacancy_audit.json",
+      "byteLength": 341,
+      "sha256": "d8fa90b5fc96c99a714c2201f71d6722e093d4fe69b5d4cd6732c0faba13257e"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_rule_family_completeness.json",
+      "byteLength": 2816,
+      "sha256": "ebfe1a0ac5ea8ecb0cb9bbcd69af05460571a06dcf8f0fcc93c0c75ceb37ebde"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_rule_family_coverage.json",
+      "byteLength": 841,
+      "sha256": "1fda95ffa7ad374e0348d918806e59a5ed3faa93cc5f8e7b31d8ee36d56366e9"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_ssc_cgl_complete_rulebook.json",
+      "byteLength": 28389,
+      "sha256": "58aa053a3ebaaf5c46b9d587830ce3c765bc0a2ef92a006365ede507a16cb08a"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_ssc_cgl_vacancy_audit.json",
+      "byteLength": 358,
+      "sha256": "a3dd3419c1c3b4f427e3bb4a14103d0049a99490137f23f6819a33a41e315d88"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_ssc_exact_source_registry.json",
+      "byteLength": 24265,
+      "sha256": "8c6c117e9b43c4f266acf009d231da2c6c564f9168ed2a7d697c9b2bde757e09"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_ssc_rulebook.json",
+      "byteLength": 24827,
+      "sha256": "88b2a3d5890d9eca2239d0ca64fd9a583af5b3dab6fb9af10717fe843e4f6151"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_ssc_vacancy_audit.json",
+      "byteLength": 340,
+      "sha256": "ca7091900cb331366c70e9b222eed74eacf5fff6c845f179386ae30b76837eaa"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_text_binding_registry.json",
+      "byteLength": 48533,
+      "sha256": "224e256b2b8c8ef942ea65d84917f826c41d18dae8380f2a764f88e3b41831ec"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_unresolved_fact_registry.json",
+      "byteLength": 904,
+      "sha256": "41d340f727b85521b693613eaa111a93ace35eb507d8c4ae0c85c7559f2c0e34"
+    },
+    {
+      "path": "docs/academic_review/48cs6/48cs6_unresolved_facts.json",
+      "byteLength": 684,
+      "sha256": "06415a1cc7f0b19a21c949528d19b81c2ea75634624290d1c2cdb02155a2658c"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_ib_2026.pdf",
+      "byteLength": 6092568,
+      "sha256": "b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s1_application.pdf",
+      "byteLength": 1136459,
+      "sha256": "2d82abd73e066c9fe41950e75a4075ff684df284d6f5c9de913be667d66b6f5c"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s1_correction.pdf",
+      "byteLength": 238173,
+      "sha256": "f966bf85a74601b1ed82e8663c3492231138bacb31774f4b34e550542f2f6884"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_application.pdf",
+      "byteLength": 963033,
+      "sha256": "f12bcf6cc1c6b65294c5f538c837af9498d7f3088d83b6dc7321963fe7b4bcd0"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_correction.pdf",
+      "byteLength": 1073878,
+      "sha256": "01470c40d79684c61763aabc7df21d2524b18bb3aa900829381dbefa50d87558"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_final_answer_key.pdf",
+      "byteLength": 33395,
+      "sha256": "07c89e20741c17f14a000501d6f79055d09834692de0dcb792bf237b77e1c7f9"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_reopening.pdf",
+      "byteLength": 557407,
+      "sha256": "212751776ae7d98f8337f92fdc53255130e6257a16eb6ed8a03228a26e50de66"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_result_notice.pdf",
+      "byteLength": 7102530,
+      "sha256": "be8dad15367dac355775a6df891b2307cbd89190a5c2448d45042335b9b306dd"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/rpsc/rpsc_first_grade_advt_06_2025_26.pdf",
+      "byteLength": 8257902,
+      "sha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/rpsc/rpsc_first_grade_amendment.pdf",
+      "byteLength": 43091,
+      "sha256": "9a53cdf39c9426c99b52000995692db78772f6db3a18660bbfb85e682cb3b099"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/ssc/ssc_cgl_2026_base_notice.pdf",
+      "byteLength": 4251150,
+      "sha256": "54a01dda220cb8836f19983908e1f3fd14ddba8286781765a02765728a89e070"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/ssc/ssc_cgl_2026_base_notice_exact_url.pdf",
+      "byteLength": 4251150,
+      "sha256": "54a01dda220cb8836f19983908e1f3fd14ddba8286781765a02765728a89e070"
+    },
+    {
+      "path": "docs/academic_review/48cs6/source_bytes/ssc/ssc_cgl_2026_reopening.pdf",
+      "byteLength": 596888,
+      "sha256": "6a9f0cd5b4ecd3f027835567ab6a9a2a35a4b2446997b6ce4382d8bd6fcba563"
+    }
+  ]
+}

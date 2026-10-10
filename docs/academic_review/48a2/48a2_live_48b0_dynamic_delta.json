@@ -1,0 +1,15 @@
+{
+  "capturedAt": "2026-09-10T10:32:13.567Z",
+  "liveUnionCount": 16,
+  "liveThreeProjectionCompleteCount": 15,
+  "liveOrphanCount": 1,
+  "manualLiveDeltaRowCount": 0,
+  "highPriorityReconciliations": {
+    "jee_main_2026": "MATCHED_EXACT",
+    "neet_ug_2027": "MATCHED_EXACT",
+    "upsc_cse_prelims": "MATCHED_EXACT",
+    "rpsc_ras_prelims": "MATCHED_EXACT",
+    "rpsc_first_grade": "MATCHED_EXACT",
+    "sscMissions": "ALL_MATCHED_EXACT"
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "gate": "RC_46D10_SOURCE_TRUTH_AND_PRODUCTION_CERTIFICATION_REPAIR_46D11",
+  "generatedAt": "2026-09-09T15:27:05.098Z",
+  "bucketName": "rankcrackers-55.firebasestorage.app",
+  "summary": {
+    "REAL_STORAGE_OBJECT_COUNT": 0,
+    "METADATA_STORAGE_TRUE_BUT_OBJECT_MISSING_COUNT_BEFORE": 0,
+    "STORAGE_OBJECT_MISSING_COUNT_AFTER": 0,
+    "STORAGE_SHA_MISMATCH_COUNT": 0,
+    "STORAGE_METADATA_CORRECTED": true
+  },
+  "auditByMission": {
+    "jee_main_2026": [
+      {
+        "documentId": "different_document_id",
+        "storagePath": null,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_nta_jee_main_2026_bulletin",
+        "storagePath": "official_documents/jee_main_2026/information-bulletin-jee-main-2026.pdf",
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": "9a710bc85172ea2bb8fb59178ad38e64c39f2982fa144e13511eb982703f8373",
+        "physicalSha": null
+      },
+      {
+        "documentId": "historical_test_doc_redacted",
+        "storagePath": null,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "neet_(ug)-2027": [
+      {
+        "documentId": "doc_nta_neet_ug_2026_bulletin",
+        "storagePath": "official_documents/neet_(ug)-2027/information-bulletin-neet-ug-2026.pdf",
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": "c32fdba7fb459ef4e1e8eb95015ff3dfa1050e828d11fa9ffb44cb7e39a3f2d0",
+        "physicalSha": null
+      },
+      {
+        "documentId": "historical_test_doc_redacted",
+        "storagePath": null,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": [
+      {
+        "documentId": "doc_advt_06_2025_26",
+        "storagePath": "official_documents/RPSC_FIRST_GRADE2026_2026_1782713222215/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_advt_09_2025_26",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_corrigendum_08_2025_26",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_rpsc_school_lecturer_advt_06_2025_26",
+        "storagePath": "official_documents/RPSC_FIRST_GRADE2026_2026_1782713222215/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": "132649a3c333a39e7ae98835845c479326d9c66da915998a96677fec3cf2a048",
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_rpsc_school_lecturer_advt_09_2025_26_agri",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_rpsc_school_lecturer_corrigendum_08_2025_26",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p1_academic",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p1_coach",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p1_phy_edu",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_agriculture",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_biology",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_chemistry",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_coach_shared",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_commerce",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_drawing",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_economics",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_english",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_geography",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_hindi",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_history",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_home_science",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_mathematics",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_music",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_phy_edu",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_physics",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_political_science",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_public_admin",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_punjabi",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_rajasthani",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_sanskrit",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_sociology",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_syllabus_p2_urdu",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "upsc_cse_prelims": [
+      {
+        "documentId": "doc_upsc_annual_calendar_2027",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      },
+      {
+        "documentId": "doc_upsc_cse_2026_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_cgl": [
+      {
+        "documentId": "doc_ssc_cgl_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_je": [
+      {
+        "documentId": "doc_ssc_je_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_selection_post": [
+      {
+        "documentId": "doc_ssc_selection_post_phase13_notification",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_chsl": [
+      {
+        "documentId": "doc_ssc_chsl_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_stenographer": [
+      {
+        "documentId": "doc_ssc_steno_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_hindi_translators": [
+      {
+        "documentId": "doc_ssc_jht_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_mts_havaldar": [
+      {
+        "documentId": "doc_ssc_mts_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_cpo": [
+      {
+        "documentId": "doc_ssc_cpo_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "ssc_gd": [
+      {
+        "documentId": "doc_ssc_gd_2025_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "uppsc_pcs_prelims": [
+      {
+        "documentId": "doc_uppsc_pcs_2026_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ],
+    "rpsc_ras_prelims": [
+      {
+        "documentId": "doc_rpsc_ras_2024_notification_and_syllabus",
+        "storagePath": null,
+        "metadataStorageObjectExistsBefore": false,
+        "physicalExistsInBucket": false,
+        "metadataSha": null,
+        "physicalSha": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "missionId": "tripura_tet",
+  "authorityId": "auth_in_tr_trbt",
+  "boundedAttempts": [
+    "official authority search",
+    "official notice/archive search",
+    "exact exam keyword search",
+    "historical official-source fallback"
+  ],
+  "result": "OFFICIAL_PROSPECTUS_BYTES_NOT_ACQUIRED",
+  "patternCertified": "NO",
+  "numericValuesInvented": false
+}

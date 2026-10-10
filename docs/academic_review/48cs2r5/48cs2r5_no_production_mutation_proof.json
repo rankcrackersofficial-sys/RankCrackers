@@ -1,0 +1,26 @@
+{
+  "gate": "GATE 48CS2R5",
+  "mode": "LOCAL ADAPTER + REAL SOURCE PILOT VALIDATION",
+  "verifiedAt": "2026-09-10T12:31:44.533Z",
+  "metrics": {
+    "REAL_PACKAGE_COUNT": 6,
+    "ACCEPTED_FOR_MATCHING_COUNT": 0,
+    "PARTIAL_SOURCE_PACKAGE_COUNT": 6,
+    "REJECTED_SOURCE_PACKAGE_COUNT": 0,
+    "NEET_2026_PROMOTED_TO_2027_CURRENT_TRUTH_COUNT": 0,
+    "PARTIAL_PACKAGE_PRODUCED_FINAL_ELIGIBLE_COUNT": 0,
+    "ADMISSION_FORCED_TO_JOB_VACANCY_COUNT": 0,
+    "REAL_USER_DATA_USED_COUNT": 0,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "CAREER_SIGNAL_PRODUCTION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0,
+    "TEST_FAILURE_COUNT": 0
+  },
+  "environmentalChecks": {
+    "liveFirestoreWritesBlocked": true,
+    "studentUiModifications": 0,
+    "canonicalRoot": "C:/RankCrackers/RankCrackers-55",
+    "batch0MissionRepairStatus": "HOLD"
+  },
+  "attestation": "Zero writes to production Firestore collections, zero mutations to student UI, zero career signal records created in production database, zero real user records accessed."
+}

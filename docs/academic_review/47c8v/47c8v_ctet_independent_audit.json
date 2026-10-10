@@ -1,0 +1,46 @@
+{
+  "auditCode": "RC_47C8V_CTET_INDEPENDENT_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.325Z",
+  "authorityDetails": {
+    "authorityId": "auth_in_cbse",
+    "officialDomains": [
+      "cbse.gov.in",
+      "cbse.nic.in",
+      "ctet.nic.in"
+    ],
+    "conductingBody": "Central Board of Secondary Education (CBSE)"
+  },
+  "sourceEvidence": {
+    "officialPortal": "https://ctet.nic.in/",
+    "officialArchive": "https://ctet.nic.in/archive/",
+    "pyqCoverage": "Official historical question papers and final answer keys exposed from 2018 through February 2026 cycle",
+    "informationBulletin": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+  },
+  "variantModel": {
+    "variantRequired": true,
+    "variantDimension": "LEVEL",
+    "levels": [
+      {
+        "variantId": "PRIMARY_CLASSES_I_V",
+        "displayName": "Primary Level (Classes I–V) — Paper I",
+        "variantDimension": "LEVEL",
+        "paperStructure": "Paper I",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      },
+      {
+        "variantId": "UPPER_PRIMARY_CLASSES_VI_VIII",
+        "displayName": "Upper Primary Level (Classes VI–VIII) — Paper II",
+        "variantDimension": "LEVEL",
+        "paperStructure": "Paper II",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      }
+    ],
+    "paperNumberIsCanonicalVariantId": false
+  },
+  "metrics": {
+    "CTET_CLASSIFICATION": "MAJOR_MISSION_ACCEPTED",
+    "CTET_LEVEL_VARIANT_COUNT": 2,
+    "SEPARATE_ANNUAL_MISSION_SPAWN_COUNT": 0
+  },
+  "verdict": "PASS"
+}

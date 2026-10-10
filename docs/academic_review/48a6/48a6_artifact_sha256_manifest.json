@@ -1,0 +1,61 @@
+{
+  "gate": "GATE 48A6 — MATERIALIZATION HANDOFF SAFETY CORRECTION",
+  "generatedAt": "2026-09-10T12:42:43.740Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a6_default_invention_audit.json",
+      "byteLength": 49641,
+      "sha256": "630831cd69e009516afaee71672b47849cf91167a41d7c099877db920e920118"
+    },
+    {
+      "fileName": "48a6_taxonomy_correction.json",
+      "byteLength": 38469,
+      "sha256": "83bc851a92b7a28d71a38df43b900cff59fd0725263c1b05450c3085c8667451"
+    },
+    {
+      "fileName": "48a6_central_region_contract.json",
+      "byteLength": 242,
+      "sha256": "4f4b99b18f8760504444e0895939482a6460521ac765cc73426bad5f69f13766"
+    },
+    {
+      "fileName": "48a6_48b2_supersession.json",
+      "byteLength": 747,
+      "sha256": "8f57564f2d261fb038e937945211b28a11ad9b8e915ca7282626424580b65433"
+    },
+    {
+      "fileName": "48a6_career_signal_status_correction.json",
+      "byteLength": 33156,
+      "sha256": "acbe65c8c97c09e5e0b45f24622a0423172d2beeeaf18f3b11b62d4db3020814"
+    },
+    {
+      "fileName": "48a6_publication_fail_closed_contract.json",
+      "byteLength": 444,
+      "sha256": "f19c8c4f4bb55a1ff30bf181e054b763a0e42258587cfa09fe09ac537d946b54"
+    },
+    {
+      "fileName": "48a6_three_projection_payload_audit.json",
+      "byteLength": 123082,
+      "sha256": "ceae09dd0e9e3d547fcf3a7992b2c64556694a35ca646d9d0f0ab82fd6ab4b92"
+    },
+    {
+      "fileName": "48a6_recomputed_ready_hold_sets.json",
+      "byteLength": 144,
+      "sha256": "3254726d418891963466622ff5b87876fafbb65136f228d1279503af9a18f866"
+    },
+    {
+      "fileName": "48a6_small_batch_plan.json",
+      "byteLength": 5534,
+      "sha256": "f162e99316be82f1f6dc20ebd5f6902b148b62463e2afb515eb7046081229692"
+    },
+    {
+      "fileName": "48a6_final_materializer_handoff.json",
+      "byteLength": 643,
+      "sha256": "c63095d2f9095fd025e1534a7d36b5d9e9a4f0ce7e630d591d7a1e1e1582f2ba"
+    },
+    {
+      "fileName": "48a6_final_report.md",
+      "byteLength": 2632,
+      "sha256": "dd901755c686a433d81bdb6b5fabc93be824b285693ed784cf74c13212245f4c"
+    }
+  ]
+}

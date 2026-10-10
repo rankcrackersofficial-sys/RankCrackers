@@ -1,0 +1,77 @@
+{
+  "auditCode": "RC_47C8V_REVIEW_REQUIRED_SET_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.342Z",
+  "metrics": {
+    "TOTAL_REVIEW_REQUIRED_COUNT": 8,
+    "IN_MANIFEST_REVIEW_REQUIRED_COUNT": 4,
+    "LEDGER_ONLY_REVIEW_REQUIRED_COUNT": 4,
+    "REVIEW_REQUIRED_MATERIALIZATION_ELIGIBLE_COUNT": 0
+  },
+  "reviewRequiredMissions": [
+    {
+      "missionId": "upsc_ifos",
+      "title": "Indian Forest Service Examination (Preliminary)",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "location": "IN_MANIFEST",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "title": "Indian Economic Service / Indian Statistical Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "location": "IN_MANIFEST",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "title": "ICAR AIEEA PG Examination",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "location": "IN_MANIFEST",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "title": "NCHM JEE (Hotel Management)",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "location": "IN_MANIFEST",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "ib_acio_ii_executive",
+      "title": "IB ACIO-II/Executive",
+      "canonicalAuthorityKey": "auth_in_ib",
+      "location": "LEDGER_ONLY",
+      "selectionImpact": "NOT_IN_MANIFEST",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "ib_security_assistant_executive",
+      "title": "IB Security Assistant/Executive",
+      "canonicalAuthorityKey": "auth_in_ib",
+      "location": "LEDGER_ONLY",
+      "selectionImpact": "NOT_IN_MANIFEST",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "epfo_enforcement_officer_accounts_officer",
+      "title": "EPFO Enforcement Officer / Accounts Officer",
+      "canonicalAuthorityKey": "auth_in_epfo",
+      "location": "LEDGER_ONLY",
+      "selectionImpact": "NOT_IN_MANIFEST",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "epfo_assistant_provident_fund_commissioner",
+      "title": "EPFO Assistant Provident Fund Commissioner",
+      "canonicalAuthorityKey": "auth_in_epfo",
+      "location": "LEDGER_ONLY",
+      "selectionImpact": "NOT_IN_MANIFEST",
+      "shellMaterializationAllowed": false
+    }
+  ],
+  "verdict": "PASS (All 8 review-required missions strictly blocked from shell and selection materialization)"
+}

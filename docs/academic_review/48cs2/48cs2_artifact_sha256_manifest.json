@@ -1,0 +1,17 @@
+{
+  "gate": "GATE_48CS2_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T11:07:05.489Z",
+  "totalFiles": 10,
+  "files": {
+    "48cs2_career_signal_event_model.json": "9a62cc75d155c8755bcfe04b3bf18f09015a3c9ed3e43d17e8c6b900cb62c318",
+    "48cs2_effective_state_reducer.json": "9f3fe7aad004497bc6ad3af7224433db430ace0d213cd2916c71c5697a4a5156",
+    "48cs2_existing_career_backend_architecture_audit.json": "0e696400b7c96a666fbc8be076cb808ccfdadbf290aed48c9640c9708fbaf667",
+    "48cs2_final_report.md": "c84226498425b2872728a648d257f19a3b7541eb27b231c79cbcb78c4b3a294f",
+    "48cs2_idempotency_test.json": "5474d3b50c45617d874adc404d9f7142c0b7c64a9c3cf98585cc688bdf1a3d35",
+    "48cs2_mission_cycle_separation_proof.json": "a50b07ef9776b30cf02cce39e805c456ccdd0c266e0b591d9ec75d94efac3dcb",
+    "48cs2_multi_output_dryrun_test.json": "f83809e0d909e720bc77ddfc0f8c128dee9ebfc06b87c8deacbe831af457131f",
+    "48cs2_notification_candidate_compatibility.json": "800e6ce2feb3341b44b952098860e56a68fbcbc224570e04f0d8843db6d9df96",
+    "48cs2_recruitment_cycle_model.json": "d54ef12123b8d5077c1afb239d5c53fc2282789730f09843550e0716ee5a4441",
+    "48cs2_source_impact_router_contract.json": "907715f6079808d944f71701405f08dbcc1e91a6d4abb578db5a30f240e0dc7c"
+  }
+}

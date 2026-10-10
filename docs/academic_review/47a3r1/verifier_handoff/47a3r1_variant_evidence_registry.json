@@ -1,0 +1,305 @@
+{
+  "registryCode": "RC_47A3R1_VARIANT_EVIDENCE_REGISTRY",
+  "generatedAt": "2026-09-10T07:00:05.930Z",
+  "metrics": {
+    "VARIANT_REQUIRED_COUNT": 29,
+    "VARIANT_EVIDENCE_READY_COUNT": 1,
+    "VARIANT_REVIEW_REQUIRED_COUNT": 28,
+    "PAPER_ONLY_VARIANT_READY_COUNT": 0,
+    "VARIANT_WITHOUT_EXACT_SOURCE_REFERENCE_COUNT": 0
+  },
+  "variantAuditLedger": [
+    {
+      "missionId": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "variantRequired": "YES",
+      "variantDimension": "LEVEL_AND_STREAM",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "variantRequired": "YES",
+      "variantDimension": "CADRE",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "variantRequired": "YES",
+      "variantDimension": "ELIGIBILITY_LEVEL_AND_SUBJECT_STREAM",
+      "variantStatus": "VARIANT_EVIDENCE_READY",
+      "variants": [
+        {
+          "variantId": "var_trbt_ttet_level_1_primary",
+          "displayName": "Tripura TET Level 1 (Classes I to V - Under Graduate Teacher)",
+          "variantDimension": "ELIGIBILITY_LEVEL",
+          "selectionMeaning": "Candidate targets eligibility qualification for Primary stage (Classes I through V) in Tripura schools.",
+          "officialSourceEvidenceRef": "TRBT Prospectus-cum-Syllabus for Tripura Teachers Eligibility Test (T-TET)",
+          "officialSourceUrl": "https://trb.tripura.gov.in/syllabus/ttet_syllabus.pdf",
+          "documentTitle": "Prospectus-cum-Syllabus for T-TET",
+          "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+        },
+        {
+          "variantId": "var_trbt_ttet_level_2_math_science",
+          "displayName": "Tripura TET Level 2 (Classes VI to VIII - Mathematics & Science)",
+          "variantDimension": "UPPER_PRIMARY_SUBJECT_STREAM",
+          "selectionMeaning": "Candidate targets eligibility qualification for Upper Primary Mathematics & Science teaching cadre.",
+          "officialSourceEvidenceRef": "TRBT Prospectus-cum-Syllabus for Tripura Teachers Eligibility Test (T-TET)",
+          "officialSourceUrl": "https://trb.tripura.gov.in/syllabus/ttet_syllabus.pdf",
+          "documentTitle": "Prospectus-cum-Syllabus for T-TET",
+          "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+        },
+        {
+          "variantId": "var_trbt_ttet_level_2_social_studies",
+          "displayName": "Tripura TET Level 2 (Classes VI to VIII - Social Studies)",
+          "variantDimension": "UPPER_PRIMARY_SUBJECT_STREAM",
+          "selectionMeaning": "Candidate targets eligibility qualification for Upper Primary Social Studies teaching cadre.",
+          "officialSourceEvidenceRef": "TRBT Prospectus-cum-Syllabus for Tripura Teachers Eligibility Test (T-TET)",
+          "officialSourceUrl": "https://trb.tripura.gov.in/syllabus/ttet_syllabus.pdf",
+          "documentTitle": "Prospectus-cum-Syllabus for T-TET",
+          "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+        }
+      ],
+      "notes": "Verified against physical PDF (ttet_syllabus.pdf). Not a sequential paper structure; candidates independently choose Level 1 (Primary) or Level 2 (Upper Primary Math/Science vs Social Studies)."
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "variantRequired": "YES",
+      "variantDimension": "SUBJECT",
+      "variantStatus": "VARIANT_REVIEW_REQUIRED",
+      "variants": [],
+      "notes": "Multi-level or multi-subject taxonomy pending founder freeze review with exact official notification document."
+    }
+  ]
+}

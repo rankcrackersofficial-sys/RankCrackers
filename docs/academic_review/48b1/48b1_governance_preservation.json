@@ -1,0 +1,268 @@
+{
+  "gate": "GATE_48B1_GOVERNANCE_PRESERVATION_AUDIT",
+  "generatedAt": "2026-09-10T11:03:33.931Z",
+  "immutableFieldsAudited": [
+    "createdAt",
+    "created_at",
+    "createdBy",
+    "publishedAt",
+    "publishedBy",
+    "provenance",
+    "source",
+    "sourceMissionId",
+    "sourceWorkbenchPath",
+    "realmId",
+    "missionId",
+    "id"
+  ],
+  "GOVERNANCE_FIELD_OVERWRITE_COUNT": 0,
+  "preservationVerdict": "STRICT_ZERO_GOVERNANCE_OVERWRITES_PASSED",
+  "totalGovernanceFieldsChecked": 35,
+  "checks": [
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "neet_(ug)-2027"
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "governanceField": "createdAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "neet_(ug)-2027"
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "neet_(ug)-2027"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "createdAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "source",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "realmId",
+      "preserved": true,
+      "originalValueSnippet": "rpsc_ras_prelims"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "missionId",
+      "preserved": true,
+      "originalValueSnippet": "rpsc_ras_prelims"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "rpsc_ras_prelims"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "governanceField": "createdAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "rpsc_ras_prelims"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "mission_realms",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "collection": "mission_realms",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "rpsc_ras_prelims"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "createdAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "source",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "sourceMissionId",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "realmId",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "missionId",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "recruitments",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "createdAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "created_at",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "publishedAt",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "publishedBy",
+      "preserved": true,
+      "originalValueSnippet": "bywto0FzLaQ337rWrbCKOeffdJ92"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "provenance",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "source",
+      "preserved": true,
+      "originalValueSnippet": "[Object]"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "sourceMissionId",
+      "preserved": true,
+      "originalValueSnippet": "jee_main_2026"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "realmId",
+      "preserved": true,
+      "originalValueSnippet": "jee_main_2026"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "missionId",
+      "preserved": true,
+      "originalValueSnippet": "jee_main_2026"
+    },
+    {
+      "targetId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "governanceField": "id",
+      "preserved": true,
+      "originalValueSnippet": "jee_main_2026"
+    }
+  ]
+}

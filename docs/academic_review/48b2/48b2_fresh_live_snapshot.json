@@ -1,0 +1,120 @@
+{
+  "gate": "GATE_48B2_FRESH_LIVE_SNAPSHOT",
+  "recordedAt": "2026-09-10T11:16:17.640Z",
+  "projectId": "rankcrackers-55",
+  "metrics": {
+    "LIVE_UNION_COUNT": 16,
+    "THREE_PROJECTION_COMPLETE_COUNT": 15,
+    "ORPHAN_COUNT": 1,
+    "STUDENT_VISIBLE_COUNT": 15,
+    "ACADEMIC_START_READY_COUNT": 0
+  },
+  "collections": {
+    "mission_realms": {
+      "count": 15,
+      "ids": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ]
+    },
+    "recruitments": {
+      "count": 16,
+      "ids": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "test_mission_catalog_bridge",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ]
+    },
+    "student_mission_catalog": {
+      "count": 15,
+      "ids": [
+        "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "rpsc_ras_prelims",
+        "ssc_cgl",
+        "ssc_chsl",
+        "ssc_cpo",
+        "ssc_gd",
+        "ssc_hindi_translators",
+        "ssc_je",
+        "ssc_mts_havaldar",
+        "ssc_selection_post",
+        "ssc_stenographer",
+        "uppsc_pcs_prelims",
+        "upsc_cse_prelims"
+      ]
+    }
+  },
+  "orphans": [
+    {
+      "id": "test_mission_catalog_bridge",
+      "inMR": false,
+      "inREC": true,
+      "inSMC": false
+    }
+  ],
+  "subcollections": {
+    "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/variables": {
+      "count": 2,
+      "docIds": [
+        "var_ENGLISH_2026_1782736222410",
+        "var_HINDI_1782713551600"
+      ]
+    }
+  },
+  "falseStartableLiveMissions": [
+    {
+      "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "smartEntryEnabled": true,
+      "quickEntryEnabled": true,
+      "contentReadiness": {
+        "notification": "uploaded",
+        "syllabus": "not_ready",
+        "tests": "not_ready",
+        "crucible": "not_ready",
+        "digibook": "not_ready"
+      }
+    },
+    {
+      "id": "jee_main_2026",
+      "smartEntryEnabled": true,
+      "quickEntryEnabled": true,
+      "contentReadiness": {
+        "notification": "not_ready",
+        "syllabus": "preparing",
+        "tests": "preparing",
+        "downloads": "preparing",
+        "crucible": "preparing",
+        "examRules": "preparing",
+        "digibook": "preparing"
+      }
+    }
+  ]
+}

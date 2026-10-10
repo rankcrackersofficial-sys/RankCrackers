@@ -1,0 +1,117 @@
+{
+  "gate": "RC_46D12_REJECTION_AND_NON_CIRCULAR_SOURCE_RECERTIFICATION_46D13",
+  "generatedAt": "2026-09-09T16:00:18.179Z",
+  "summary": {
+    "OFFICIAL_PYQ_EXACT_EVIDENCE_FOUND_COUNT": 2,
+    "OFFICIAL_PYQ_PORTAL_ONLY_COUNT": 13,
+    "OFFICIAL_PYQ_BYTE_ACQUIRED_COUNT": 0,
+    "TOTAL_MISSIONS_AUDITED": 15
+  },
+  "missions": [
+    {
+      "missionId": "jee_main_2026",
+      "authority": "NTA",
+      "classification": "EXACT_EVIDENCE_FOUND",
+      "directArchiveUrl": "https://nta.ac.in/Downloads",
+      "details": "Direct official question paper archive for B.E./B.Tech CBT sessions"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authority": "RPSC",
+      "classification": "EXACT_EVIDENCE_FOUND",
+      "directArchiveUrl": "https://rpsc.rajasthan.gov.in/candidateinformation/questionpapers",
+      "details": "Direct official question paper archive for School Lecturer & Coach exams"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authority": "NTA",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://neet.nta.nic.in",
+      "details": "NTA NEET portal announcements"
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "authority": "UPSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "details": "UPSC Previous Question Papers listing"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_je",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "ssc_gd",
+      "authority": "SSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://ssc.gov.in",
+      "details": "SSC Candidate Portal"
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "authority": "UPPSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://uppsc.up.nic.in",
+      "details": "UPPSC Portal"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "authority": "RPSC",
+      "classification": "PORTAL_ONLY",
+      "portalUrl": "https://rpsc.rajasthan.gov.in/candidateinformation/questionpapers",
+      "details": "RPSC Candidate Information"
+    }
+  ]
+}

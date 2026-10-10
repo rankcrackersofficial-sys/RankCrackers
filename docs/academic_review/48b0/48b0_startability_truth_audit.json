@@ -1,0 +1,45 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "auditTimestamp": "2026-09-10T10:39:12.883Z",
+  "governanceLaw": "Startability (smartEntryEnabled / quickEntryEnabled) must remain strictly FALSE across all missions until downstream academic verification (S2 Crucible, Syllabus Atoms, Digibook Units, Question Cells) is certified.",
+  "downstreamReadinessState": {
+    "crucibleVerifiedCount": 0,
+    "syllabusAtomsCompleteCount": 0,
+    "digibookUnitsVerifiedCount": 0,
+    "questionCellsVerifiedCount": 0,
+    "overallAcademicReadiness": "BLOCKED"
+  },
+  "measuredDefects": {
+    "LIVE_SMART_ENTRY_WITHOUT_ACADEMIC_PROOF_COUNT": 2,
+    "LIVE_QUICK_ENTRY_WITHOUT_DELIVERY_PROOF_COUNT": 2,
+    "affectedMissions": [
+      {
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "liveFlags": {
+          "smcSmartEntry": true,
+          "smcQuickEntry": true
+        },
+        "plannedDryRunCorrection": {
+          "smartEntryEnabled": false,
+          "quickEntryEnabled": false,
+          "visibility.smartEntryEnabled": false,
+          "visibility.quickEntryEnabled": false
+        }
+      },
+      {
+        "missionId": "jee_main_2026",
+        "liveFlags": {
+          "smcSmartEntry": true,
+          "smcQuickEntry": true
+        },
+        "plannedDryRunCorrection": {
+          "smartEntryEnabled": false,
+          "quickEntryEnabled": false,
+          "visibility.smartEntryEnabled": false,
+          "visibility.quickEntryEnabled": false
+        }
+      }
+    ]
+  },
+  "plannedOperation": "DISABLE_FALSE_STARTABILITY"
+}

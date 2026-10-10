@@ -1,0 +1,11 @@
+{
+  "testCode": "RC_47B5_47B4_REGRESSION_TEST",
+  "executedAt": "2026-09-10T06:57:27.750Z",
+  "commandExecuted": "node functions/test_47b4_generic_materializer.js",
+  "exitCode": 0,
+  "stdoutSummary": "ALL 20 GATE 47B4 ARTIFACTS GENERATED AND VERIFIED SUCCESSFULLY!",
+  "metrics": {
+    "47B4_REGRESSION_FAILURE_COUNT": 0
+  },
+  "regressionPass": true
+}

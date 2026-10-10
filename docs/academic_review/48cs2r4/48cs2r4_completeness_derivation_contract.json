@@ -1,0 +1,74 @@
+{
+  "contractName": "Pure Completeness Derivation Contract",
+  "gate": "GATE 48CS2R4",
+  "invariant": "RULEBOOK_CALLER_SELF_CERTIFICATION_COUNT = 0",
+  "description": "Completeness is derived strictly by auditing required rule family coverage rows against verified source evidence. Caller booleans are completely ignored.",
+  "mandatoryStandardFamilies": [
+    "AGE",
+    "EDUCATION",
+    "DISCIPLINE",
+    "DOMICILE",
+    "CATEGORY_OR_RESERVATION"
+  ],
+  "derivationRules": {
+    "callerSelfCertificationDisregarded": "Any caller supplied isComplete: true or rulebookCompleteness: { isComplete: true } is stripped and replaced by pure derived boolean.",
+    "familyExhaustiveRule": "A family is VERIFIED_COMPLETE only if coverageStatus === EXHAUSTIVE and evidenceRefs.length > 0.",
+    "absenceAttestationRule": "A family is NOT_APPLICABLE_VERIFIED only if backed by an explicit verified AbsenceAttestation with reviewStatus === AUDITED_ABSENCE_CONFIRMED.",
+    "unresolvedFallbackRule": "Missing coverage row, partial coverage, unverified absence, or empty evidenceRefs forces family status to UNRESOLVED.",
+    "packageCompletenessRule": "isComplete is true IF AND ONLY IF all mandatory families are either VERIFIED_COMPLETE or NOT_APPLICABLE_VERIFIED."
+  },
+  "derivationTruthTable": [
+    {
+      "resolutionStatus": "RULE_PRESENT_VERIFIED",
+      "coverageStatus": "EXHAUSTIVE",
+      "evidenceRefs": [
+        "c1"
+      ],
+      "attestation": null,
+      "derivedStatus": "VERIFIED_COMPLETE",
+      "isCompletePermitted": true
+    },
+    {
+      "resolutionStatus": "RULE_PRESENT_VERIFIED",
+      "coverageStatus": "PARTIAL",
+      "evidenceRefs": [
+        "c1"
+      ],
+      "attestation": null,
+      "derivedStatus": "UNRESOLVED",
+      "isCompletePermitted": false
+    },
+    {
+      "resolutionStatus": "RULE_PRESENT_VERIFIED",
+      "coverageStatus": "EXHAUSTIVE",
+      "evidenceRefs": [],
+      "attestation": null,
+      "derivedStatus": "UNRESOLVED",
+      "isCompletePermitted": false
+    },
+    {
+      "resolutionStatus": "RULE_ABSENCE_VERIFIED",
+      "coverageStatus": "NOT_APPLICABLE_VERIFIED",
+      "evidenceRefs": [],
+      "attestation": "VALID_ATTESTATION",
+      "derivedStatus": "NOT_APPLICABLE_VERIFIED",
+      "isCompletePermitted": true
+    },
+    {
+      "resolutionStatus": "RULE_ABSENCE_VERIFIED",
+      "coverageStatus": "NOT_APPLICABLE_VERIFIED",
+      "evidenceRefs": [],
+      "attestation": null,
+      "derivedStatus": "UNRESOLVED",
+      "isCompletePermitted": false
+    },
+    {
+      "resolutionStatus": "RULE_UNRESOLVED",
+      "coverageStatus": "UNAUDITED",
+      "evidenceRefs": [],
+      "attestation": null,
+      "derivedStatus": "UNRESOLVED",
+      "isCompletePermitted": false
+    }
+  ]
+}

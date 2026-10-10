@@ -1,0 +1,83 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.702Z",
+  "canonicalArchitecture": "CRUCIBLE = 98-DAY (7 PHASES x 14 DAYS) CONTINUOUS ROTATING CYCLE",
+  "summary": {
+    "GENERIC_98_DAY_TEMPLATE_SOURCE_PATCHED": "YES",
+    "CANONICAL_PHASE_STRUCTURE": "7_PHASES_X_14_DAYS",
+    "INVARIANTS_PROTECTED_FROM_OVERRIDES": "YES",
+    "SAFE_DEFAULT_STATUS": "draft",
+    "NEW_TEST_MISSION_98_DAY_DRY_RUN": "PASS",
+    "SOURCE_MODULE": "tools/canonical_profile_engine_46a6/mission_template_defaults.cjs",
+    "TEST_HARNESS": "tools/canonical_profile_engine_46a6/test_mission_template_defaults.cjs"
+  },
+  "phases": [
+    {
+      "phaseNumber": 1,
+      "name": "Phase 1 - Initial Foundation & Core Syntax",
+      "startDay": 1,
+      "endDay": 14,
+      "durationDays": 14,
+      "type": "FOUNDATION"
+    },
+    {
+      "phaseNumber": 2,
+      "name": "Phase 2 - Core Mechanics & Concept Integration",
+      "startDay": 15,
+      "endDay": 28,
+      "durationDays": 14,
+      "type": "CORE_CONCEPTS"
+    },
+    {
+      "phaseNumber": 3,
+      "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+      "startDay": 29,
+      "endDay": 42,
+      "durationDays": 14,
+      "type": "INTERMEDIATE_SYNTHESIS"
+    },
+    {
+      "phaseNumber": 4,
+      "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+      "startDay": 43,
+      "endDay": 56,
+      "durationDays": 14,
+      "type": "ADVANCED_MASTERY"
+    },
+    {
+      "phaseNumber": 5,
+      "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+      "startDay": 57,
+      "endDay": 70,
+      "durationDays": 14,
+      "type": "VELOCITY_CONDITIONING"
+    },
+    {
+      "phaseNumber": 6,
+      "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+      "startDay": 71,
+      "endDay": 84,
+      "durationDays": 14,
+      "type": "ERROR_ELIMINATION"
+    },
+    {
+      "phaseNumber": 7,
+      "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+      "startDay": 85,
+      "endDay": 98,
+      "durationDays": 14,
+      "type": "SYNTHESIS_CONSOLIDATION"
+    }
+  ],
+  "testExecutionOutput": {
+    "status": "PASS",
+    "testMissionId": "rec_rc_test_generic_template_2099",
+    "defaultStatus": "draft",
+    "totalDays": 98,
+    "cycleDays": 98,
+    "phaseCount": 7,
+    "phaseStructure": "7 phases x 14 days = 98 days",
+    "majorTestDecoupled": true,
+    "invariantsProtected": true
+  }
+}

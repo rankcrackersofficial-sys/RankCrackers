@@ -1,0 +1,64 @@
+{
+  "oracleCode": "RC_47C7V2_EPFO_COMPLETENESS_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.281Z",
+  "targetAuthority": "Employees Provident Fund Organisation (EPFO)",
+  "candidateCount": 3,
+  "candidates": [
+    {
+      "candidateId": "epfo_eo_ao",
+      "officialRecruitmentTitle": "Enforcement Officer / Accounts Officer (EO/AO) in Employees Provident Fund Organisation",
+      "clientAuthority": "Employees Provident Fund Organisation (EPFO)",
+      "administrativeMinistry": "Ministry of Labour and Employment, Government of India",
+      "conductingAuthority": "Union Public Service Commission (UPSC) — Special Recruitment Examination",
+      "officialSourcePortal": "https://upsc.gov.in/",
+      "examinationStructure": {
+        "stage1": "Recruitment Test (RT) — Objective Single-Day MCQ Examination (2 Hours, 300 Marks, -0.33 Negative Marking). Topics: General English, Indian Freedom Struggle, Current Events, Indian Polity & Economy, Accounting Principles, Industrial Relations & Labour Laws, General Science & Computer Apps, Quantitative Aptitude & Reasoning, Social Security in India",
+        "stage2": "Interview (Weightage: 75% RT, 25% Interview)"
+      },
+      "recurrenceEvidence": "Periodic major recruitment conducted via UPSC Special Advertisements (Spl Advt 51/2020, Spl Advt 51/2023 with ~900,000+ candidates).",
+      "currentStatus": "PERIODIC_CENTRAL_STATUTORY_RECRUITMENT",
+      "possibleRankCrackersDisposition": "MAJOR_MISSION_ACCEPTED (conducted by auth_in_upsc) or MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "candidateId": "epfo_apfc",
+      "officialRecruitmentTitle": "Assistant Public Provident Commissioner (APFC) in Employees Provident Fund Organisation",
+      "clientAuthority": "Employees Provident Fund Organisation (EPFO)",
+      "conductingAuthority": "Union Public Service Commission (UPSC)",
+      "officialSourcePortal": "https://upsc.gov.in/",
+      "examinationStructure": {
+        "stage1": "Recruitment Test (RT) — Objective MCQ Examination (2 Hours, 300 Marks, -0.33 Negative Marking)",
+        "stage2": "Interview (75:25 Weightage Scheme)"
+      },
+      "recurrenceEvidence": "Group A statutory cadre; conducted jointly with EO/AO in recent 2023 recruitment cycle.",
+      "currentStatus": "PERIODIC_CENTRAL_STATUTORY_RECRUITMENT",
+      "possibleRankCrackersDisposition": "MAJOR_MISSION_ACCEPTED (or combined under epfo_eo_ao_apfc family)"
+    },
+    {
+      "candidateId": "epfo_ssa",
+      "officialRecruitmentTitle": "Social Security Assistant (SSA) in Employees Provident Fund Organisation",
+      "clientAuthority": "Employees Provident Fund Organisation (EPFO)",
+      "conductingAuthority": "National Testing Agency (NTA)",
+      "officialSourcePortal": "https://epfindia.gov.in/ and NTA Portal",
+      "examinationStructure": {
+        "stage1": "Stage-I Computer Based Examination: 150 Qs, 600 Marks, 150 Minutes, -0.25 Negative Marking",
+        "stage2": "Stage-II Computer Data Entry Skill Test"
+      },
+      "recurrenceEvidence": "Subordinate cadre recruitment conducted in 2019 and 2023.",
+      "currentStatus": "PERIODIC_CENTRAL_RECRUITMENT",
+      "possibleRankCrackersDisposition": "MAJOR_MISSION_ACCEPTED (conducted by auth_in_nta) or MAJOR_REVIEW_REQUIRED"
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_EPFO_DISPOSITION_MANDATORY",
+      "assertion": "47C8 must declare an explicit disposition for the EPFO recruitment family.",
+      "allowedDispositions": [
+        "MAJOR_MISSION_ACCEPTED",
+        "MAJOR_REVIEW_REQUIRED",
+        "NOT_MAJOR_CURRENT_SCOPE",
+        "DEFERRED_WITH_EXACT_SOURCE_BLOCKER"
+      ],
+      "failCondition": "EPFO family silently omitted without disposition."
+    }
+  ]
+}

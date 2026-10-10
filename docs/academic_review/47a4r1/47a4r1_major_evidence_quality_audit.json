@@ -1,0 +1,776 @@
+{
+  "auditCode": "RC_47A4R1_MAJOR_EVIDENCE_QUALITY_AUDIT",
+  "executedAt": "2026-09-10T07:36:25.901Z",
+  "metrics": {
+    "PSC_EXISTENCE_MISUSED_AS_MISSION_SCALE_EVIDENCE_COUNT": 3,
+    "NON_NUMERIC_MAJOR_WITH_ONLY_GENERIC_HOMEPAGE_COUNT": 0,
+    "ACCEPTED_MAJOR_WITH_UNSUPPORTED_EVIDENCE_COUNT": 0
+  },
+  "ledger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_pet",
+      "basis": "OFFICIAL_APPLICATION_COUNT + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "up_tet",
+      "basis": "OFFICIAL_APPLICATION_COUNT + STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_si",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_tet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "hp_tet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_clerk",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_pstet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_si",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_htet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_si",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "basis": "OFFICIAL_APPLICATION_COUNT + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "rbse_reet",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gsssb_cce",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "gpssb_talati",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_tre",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_cgl",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "bseb_stet",
+      "basis": "OFFICIAL_APPLICATION_COUNT + STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_cgl",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jac_jtet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ossc_cgl",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "basis": "OFFICIAL_APPLICATION_COUNT + STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_group1",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_group2",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "treirb_teaching",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_psi",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_cpc",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_si",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "basis": "OTHER_VERIFIED_SCALE_SIGNAL",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "apsc_cce",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "slrc_adre",
+      "basis": "OFFICIAL_APPLICATION_COUNT + OFFICIAL_VACANCY_SCALE + MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "basis": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "basis": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "basis": "STATEWIDE_POLICE_RECRUITMENT",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    }
+  ]
+}

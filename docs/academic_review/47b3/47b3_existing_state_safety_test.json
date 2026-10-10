@@ -1,0 +1,10 @@
+{
+  "testCode": "RC_47B3_EXISTING_STATE_SAFETY_TEST",
+  "executedAt": "2026-09-10T06:11:50.568Z",
+  "scenario": "OWNED_FIELD_MERGE test on existing doc with custom governed fields",
+  "governedFieldPreserved": true,
+  "metrics": {
+    "OWNED_FIELD_MERGE_PRESERVATION": "PASS"
+  },
+  "assertionPass": true
+}

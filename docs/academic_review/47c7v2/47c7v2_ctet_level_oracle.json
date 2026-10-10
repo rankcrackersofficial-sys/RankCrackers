@@ -1,0 +1,42 @@
+{
+  "oracleCode": "RC_47C7V2_CTET_LEVEL_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.285Z",
+  "canonicalAuthority": "auth_in_cbse",
+  "authorityGroupKey": "cbse",
+  "officialDomains": [
+    "cbse.gov.in",
+    "cbse.nic.in",
+    "ctet.nic.in"
+  ],
+  "officialInformationBulletin": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/",
+  "officialArchive": "https://ctet.nic.in/archive/",
+  "pyqCoverage": "Official question papers and final answer keys from 2018 to February 2026 cycle",
+  "canonicalMissionId": "cbse_ctet",
+  "governedVariantDimension": "LEVEL",
+  "variants": [
+    {
+      "variantId": "primary",
+      "displayName": "Paper I — Primary Stage (Classes I–V)",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+    },
+    {
+      "variantId": "upper_primary",
+      "displayName": "Paper II — Upper Primary Stage (Classes VI–VIII)",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_CTET_VARIANT_DIMENSION_LEVEL",
+      "assertion": "CTET variants must declare variantDimension as LEVEL.",
+      "failCondition": "variantDimension is not LEVEL or naked paper_1/paper_2 used without level definition."
+    },
+    {
+      "ruleId": "ORACLE_CTET_SINGLE_PERMANENT_MISSION",
+      "assertion": "CTET must be modeled as a single permanent canonical mission cbse_ctet, not split into annual missions.",
+      "failCondition": "Annual or cycle-specific CTET missions created."
+    }
+  ]
+}

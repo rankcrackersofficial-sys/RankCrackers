@@ -1,0 +1,48 @@
+{
+  "generatedAt": "2026-09-10T10:34:36.141Z",
+  "count": 2,
+  "pointers": [
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "displayName": "SSC Selection Posts Ladakh",
+      "authorityId": "auth_in_la_admin",
+      "jurisdictionType": "UT",
+      "regionCode": "LA",
+      "scopeType": "UT_SPECIFIC",
+      "examFamily": "SSC_RECRUITMENT",
+      "displayCategory": "SSC Exams",
+      "academicStatus": "NOT_READY",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "canonicalStatus": "REGIONAL_POINTER",
+      "sourceStatus": "VERIFIED",
+      "shellStatus": "SHELL_READY",
+      "selectionStatus": "SELECTION_READY",
+      "variantStatus": "NO_VARIANT_NEEDED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "pointerTarget": "ssc_selection_post"
+    },
+    {
+      "missionId": "delhi_police_si",
+      "displayName": "Delhi Police Sub-Inspector (SI)",
+      "authorityId": "auth_in_dl_delpol",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "UT_SPECIFIC",
+      "examFamily": "POLICE_RECRUITMENT",
+      "displayCategory": "Police Recruitment",
+      "academicStatus": "NOT_READY",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "canonicalStatus": "REGIONAL_POINTER",
+      "sourceStatus": "VERIFIED",
+      "shellStatus": "SHELL_READY",
+      "selectionStatus": "SELECTION_READY",
+      "variantStatus": "NO_VARIANT_NEEDED",
+      "patternStatus": "PATTERN_VERIFIED",
+      "pointerTarget": "ssc_cpo"
+    }
+  ]
+}

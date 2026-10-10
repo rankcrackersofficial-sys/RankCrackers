@@ -1,0 +1,23 @@
+{
+  "auditCode": "RC_47C7V_IBPS_IDENTITY_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.805Z",
+  "metrics": {
+    "IBPS_NATIONAL_MISSION_COUNT": 5,
+    "IBPS_STATE_NATIONAL_IDENTITY_CONFLICT_COUNT": 1
+  },
+  "crossLaneComparison": {
+    "stateUt47A3R1": {
+      "officerScaleMissionId": "ibps_crp_rrb_officers",
+      "clericalMissionId": "ibps_crp_rrb_office_assistant",
+      "basis": "Official CRP RRBs notification terminology: Officers (Scale-I, II & III)"
+    },
+    "national47C6": {
+      "officerScaleMissionId": "ibps_rrb_officer",
+      "clericalMissionId": "ibps_rrb_office_assistant",
+      "basis": "Agent-4 national candidate nomenclature"
+    },
+    "conflictDetected": true,
+    "conflictDescription": "State/UT 47A3R1 froze canonical mission ID as ibps_crp_rrb_officers, whereas National 47C6 models it as ibps_rrb_officer. This creates a cross-lane canonical ID divergence that blocks unified materializer freeze."
+  },
+  "verdict": "BLOCKER (Cross-lane IBPS RRB officer canonical ID mismatch)"
+}

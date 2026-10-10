@@ -1,0 +1,201 @@
+{
+  "gate": "GATE_48B2_BATCH0_IDEMPOTENCY",
+  "generatedAt": "2026-09-10T11:21:55.077Z",
+  "simulation": "DUAL_PASS_MUTATION_APPLY",
+  "MUTATION_PASS_2_DIFF_COUNT": 0,
+  "isStrictlyIdempotent": true,
+  "audit": [
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examCategory",
+      "pass1Value": "medical_entrance",
+      "pass2TargetValue": "medical_entrance",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examFamily",
+      "pass1Value": "MEDICAL_ENTRANCE",
+      "pass2TargetValue": "MEDICAL_ENTRANCE",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "scopeType",
+      "pass1Value": "ALL_INDIA",
+      "pass2TargetValue": "ALL_INDIA",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "jurisdictionType",
+      "pass1Value": "CENTRAL",
+      "pass2TargetValue": "CENTRAL",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "displayCategory",
+      "pass1Value": "Medical Entrance",
+      "pass2TargetValue": "Medical Entrance",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "state",
+      "pass1Value": "Central",
+      "pass2TargetValue": "Central",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "org",
+      "pass1Value": "National Testing Agency",
+      "pass2TargetValue": "National Testing Agency",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "examCategory",
+      "pass1Value": "medical_entrance",
+      "pass2TargetValue": "medical_entrance",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "examFamily",
+      "pass1Value": "MEDICAL_ENTRANCE",
+      "pass2TargetValue": "MEDICAL_ENTRANCE",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "fieldPath": "organization",
+      "pass1Value": "National Testing Agency",
+      "pass2TargetValue": "National Testing Agency",
+      "isEqual": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "fieldPath": "exam_category",
+      "pass1Value": "medical_entrance",
+      "pass2TargetValue": "medical_entrance",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "state",
+      "pass1Value": "Rajasthan",
+      "pass2TargetValue": "Rajasthan",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "stateCode",
+      "pass1Value": "RJ",
+      "pass2TargetValue": "RJ",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "jurisdictionType",
+      "pass1Value": "STATE",
+      "pass2TargetValue": "STATE",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "regionCode",
+      "pass1Value": "RJ",
+      "pass2TargetValue": "RJ",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "scopeType",
+      "pass1Value": "STATE_SPECIFIC",
+      "pass2TargetValue": "STATE_SPECIFIC",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examFamily",
+      "pass1Value": "CIVIL_SERVICES",
+      "pass2TargetValue": "CIVIL_SERVICES",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "displayCategory",
+      "pass1Value": "State Civil Services",
+      "pass2TargetValue": "State Civil Services",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "fieldPath": "scopeType",
+      "pass1Value": "STATE_SPECIFIC",
+      "pass2TargetValue": "STATE_SPECIFIC",
+      "isEqual": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "fieldPath": "examFamily",
+      "pass1Value": "CIVIL_SERVICES",
+      "pass2TargetValue": "CIVIL_SERVICES",
+      "isEqual": true
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.smartEntryEnabled",
+      "pass1Value": false,
+      "pass2TargetValue": false,
+      "isEqual": true
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.quickEntryEnabled",
+      "pass1Value": false,
+      "pass2TargetValue": false,
+      "isEqual": true
+    },
+    {
+      "missionId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.smartEntryEnabled",
+      "pass1Value": false,
+      "pass2TargetValue": false,
+      "isEqual": true
+    },
+    {
+      "missionId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.quickEntryEnabled",
+      "pass1Value": false,
+      "pass2TargetValue": false,
+      "isEqual": true
+    }
+  ]
+}

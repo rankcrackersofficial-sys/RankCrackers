@@ -1,0 +1,84 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Career Profile Unknown Semantics & Fallback Elimination Contract",
+  "principles": [
+    "User facts must only be established by explicit user input.",
+    "Missing profile fields must remain null or UNKNOWN.",
+    "Absence of reservationCategory must NEVER default to UR.",
+    "Absence of isPwBD or isExServiceman must NEVER default to false.",
+    "Absence of experienceMonths must NEVER default to 0."
+  ],
+  "fieldSpecifications": {
+    "userId": {
+      "type": "String",
+      "required": true,
+      "default": "NONE (Throws USER_ID_REQUIRED)"
+    },
+    "dateOfBirth": {
+      "type": "String (ISO)",
+      "required": false,
+      "default": null
+    },
+    "gender": {
+      "type": "Enum",
+      "values": [
+        "MALE",
+        "FEMALE",
+        "TRANSGENDER",
+        "OTHER"
+      ],
+      "default": null
+    },
+    "reservationCategory": {
+      "type": "Enum",
+      "values": [
+        "UR",
+        "SC",
+        "ST",
+        "OBC_NCL",
+        "OBC_CL",
+        "EWS",
+        "UNKNOWN"
+      ],
+      "default": null
+    },
+    "domicileState": {
+      "type": "String (2-letter)",
+      "default": null
+    },
+    "highestQualification": {
+      "type": "Enum",
+      "values": [
+        "10TH",
+        "12TH",
+        "DIPLOMA",
+        "GRADUATION",
+        "POST_GRADUATION",
+        "DOCTORATE"
+      ],
+      "default": null
+    },
+    "isPwBD": {
+      "type": "Boolean",
+      "default": null
+    },
+    "isExServiceman": {
+      "type": "Boolean",
+      "default": null
+    },
+    "experienceMonths": {
+      "type": "Integer",
+      "default": null
+    }
+  },
+  "matchingEngineBehaviorOnUnknown": {
+    "missingDateOfBirth": "Returns status MISSING_FIELD, prompts user for DOB",
+    "missingReservationCategory": "Returns status VACANCIES_PENDING_RESERVATION_DATA for vacancies, prompts user for category",
+    "missingQualification": "Returns status MISSING_FIELD, prompts user for qualification",
+    "missingPwBD": "Disallows matching PWBD reserved vacancies without assuming candidate is non-PwBD",
+    "missingExServiceman": "Disallows matching EX_SERVICEMAN reserved vacancies without assuming candidate is civilian"
+  },
+  "verificationMetric": {
+    "UNKNOWN_PROFILE_FACT_DEFAULTED_TO_REAL_VALUE_COUNT": 0
+  }
+}

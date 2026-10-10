@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0-48cs1",
+  "principle": "One verified official document may create independent impacts across four domain outputs without duplicating crawler infrastructure.",
+  "outputChannels": {
+    "affectsMissionTruth": "Updates canonical mission identity metadata, eligibility criteria, or authority mapping.",
+    "affectsCareerSignal": "Emits an OPPORTUNITY_SIGNAL or PROCESS_UPDATE_SIGNAL to student feeds.",
+    "affectsAcademicTruth": "Triggers updates to official syllabus atom structures or subject blueprints.",
+    "affectsPyqPattern": "Updates objective preliminary pattern definitions, total marks, or marking scheme."
+  },
+  "examples": [
+    {
+      "documentType": "NEW_NOTIFICATION",
+      "channels": [
+        "affectsMissionTruth",
+        "affectsCareerSignal"
+      ]
+    },
+    {
+      "documentType": "CORRIGENDUM",
+      "channels": [
+        "affectsMissionTruth",
+        "affectsCareerSignal"
+      ]
+    },
+    {
+      "documentType": "SYLLABUS_PDF",
+      "channels": [
+        "affectsMissionTruth",
+        "affectsAcademicTruth"
+      ]
+    },
+    {
+      "documentType": "RESULT_PDF",
+      "channels": [
+        "affectsCareerSignal"
+      ]
+    },
+    {
+      "documentType": "SCHEME_AND_PATTERN",
+      "channels": [
+        "affectsMissionTruth",
+        "affectsPyqPattern"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "centralRegionCode": "IN",
+  "stateCodeMappings": {
+    "Telangana": "TG",
+    "Ladakh": "LA",
+    "Lakshadweep": "LD",
+    "Dadra and Nagar Haveli and Daman and Diu": "DN",
+    "Delhi": "DL",
+    "Chandigarh": "CH"
+  },
+  "authorityGroupDerivation": "Directly derived from authorityGroupKey and authorityDisplayName in Firestore document metadata.",
+  "substringTitleAuthorityMatchingUsed": false,
+  "unknownAuthorityFallback": "other / Other Exams"
+}

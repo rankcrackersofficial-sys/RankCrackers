@@ -1,0 +1,53 @@
+{
+  "JUDICIAL_TARGET_COUNT": 8,
+  "rows": [
+    {
+      "missionId": "delhi_judicial_service_prelims",
+      "displayName": "Delhi Judicial Service Preliminary Examination",
+      "authorityId": "auth_in_dl_delhc",
+      "regionCode": "DL"
+    },
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "displayName": "U.P. Judicial Service Civil Judge Preliminary Examination",
+      "authorityId": "auth_in_up_uppsc",
+      "regionCode": "UP"
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "displayName": "Bihar Judicial Service Competitive Preliminary Examination",
+      "authorityId": "auth_in_br_bpsc",
+      "regionCode": "BR"
+    },
+    {
+      "missionId": "rhc_civil_judge_prelims",
+      "displayName": "Rajasthan Judicial Service Civil Judge Preliminary Examination",
+      "authorityId": "auth_in_rj_rhc",
+      "regionCode": "RJ"
+    },
+    {
+      "missionId": "mphc_civil_judge_prelims",
+      "displayName": "MP Civil Judge Junior Division Entry Level Preliminary Examination",
+      "authorityId": "auth_in_mp_mphc",
+      "regionCode": "MP"
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "displayName": "Punjab Civil Service Judicial Branch Preliminary Examination",
+      "authorityId": "auth_in_pb_ppsc",
+      "regionCode": "PB"
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "displayName": "Haryana Civil Service Judicial Branch Preliminary Examination",
+      "authorityId": "auth_in_hr_hpsc",
+      "regionCode": "HR"
+    },
+    {
+      "missionId": "gauhc_ajs_grade3_prelims",
+      "displayName": "Assam Judicial Service Grade III Preliminary Examination",
+      "authorityId": "auth_in_as_gauhc",
+      "regionCode": "AS"
+    }
+  ]
+}

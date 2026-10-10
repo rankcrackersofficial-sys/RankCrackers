@@ -1,0 +1,92 @@
+{
+  "gate": "GATE_48CS2R2",
+  "timestamp": "2026-09-10T11:43:38.069Z",
+  "lane": "AGENT_3_CAREER_SIGNAL_BACKEND_ENGINE",
+  "title": "Chief Architect 48CS2R1 Defect Reconciliation Audit",
+  "reconciledDefects": [
+    {
+      "defectId": "DEF_01_GLOBAL_HARDCODED_AGE_RELAXATION",
+      "severity": "CRITICAL",
+      "finding": "Code hardcoded SC/ST => +5 and OBC => +3 globally across all recruitments.",
+      "rootCause": "getAgeRelaxationYears used static switch statement without checking recruitment rules.",
+      "remediation": "Deleted getAgeRelaxationYears. Relaxation must now be supplied by explicit official EligibilityRule objects of type AGE_RELAXATION with verified source evidence. If no rule exists, relaxation is strictly 0.",
+      "status": "RESOLVED",
+      "metric": "GLOBAL_HARDCODED_AGE_RELAXATION_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_02_UNKNOWN_PROFILE_DEFAULTED_TO_FACTS",
+      "severity": "CRITICAL",
+      "finding": "Missing category defaulted to UR, missing isPwBD/isExServiceman defaulted to false, experience defaulted to 0.",
+      "rootCause": "normalizeCareerProfile applied aggressive default fallbacks.",
+      "remediation": "Absent sensitive profile attributes now strictly remain null or UNKNOWN. Rules requiring missing facts return MISSING_FIELD diagnostics.",
+      "status": "RESOLVED",
+      "metric": "UNKNOWN_PROFILE_FACT_DEFAULTED_TO_REAL_VALUE_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_03_SYNTHETIC_EVENT_ID_IN_USER_VIEW",
+      "severity": "HIGH",
+      "finding": "Matching engine synthesized fake eventId using cycleId + Date.now().",
+      "rootCause": "evaluateCareerSignalPersonalization did not mandate canonical eventId from caller.",
+      "remediation": "CareerSignalView now strictly mandates and receives real canonical eventId from verified CareerSignalEvent. ViewId is deterministically ${userId}_${eventId}.",
+      "status": "RESOLVED",
+      "metric": "USER_VIEW_WITH_SYNTHETIC_EVENT_ID_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_04_WEAK_EVENT_IDENTITY_COLLISION",
+      "severity": "HIGH",
+      "finding": "Event ID only used first 16 characters of documentSha256, causing collisions for multiple events in same PDF.",
+      "rootCause": "Event ID did not bind semantic event keys or event types.",
+      "remediation": "computeCareerSignalEventId now binds cycleId + documentSha256 + eventType + semanticEventKey.",
+      "status": "RESOLVED",
+      "metric": "MULTI_EVENT_SAME_DOCUMENT_COLLISION_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_05_COMPETING_CANONICAL_STATE_ENUMS",
+      "severity": "MEDIUM",
+      "finding": "RECRUITMENT_CYCLE_STATUS retained UPCOMING, ACTIVE, IN_SELECTION, CLOSED as enum members while report claimed 12 different states.",
+      "rootCause": "Legacy enum members were preserved alongside canonical 12-state enum.",
+      "remediation": "Removed legacy members from exported canonical enum. Legacy strings are normalized at input boundary only via normalizeCycleStatus.",
+      "status": "RESOLVED",
+      "metric": "COMPETING_CANONICAL_STATE_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_06_FINAL_RESULT_DECLARED_PROCESS_SIGNAL_SUPPRESSION",
+      "severity": "MEDIUM",
+      "finding": "FINAL_RESULT_DECLARED suppressed process signals as if closed.",
+      "rootCause": "Reducer grouped FINAL_RESULT_DECLARED with CLOSED and set processUpdateSignalActive = false.",
+      "remediation": "FINAL_RESULT_DECLARED keeps processUpdateSignalActive = true. Only CYCLE_CLOSED definitively terminates the cycle.",
+      "status": "RESOLVED",
+      "metric": "PREMATURE_PROCESS_SIGNAL_TERMINATION_COUNT",
+      "value": 0
+    },
+    {
+      "defectId": "DEF_07_RESERVATION_OBC_CL_LEAK_AND_HORIZONTAL_BYPASS",
+      "severity": "HIGH",
+      "finding": "OBC_CL matched OBC reserved seats; WOMEN horizontal quota was not strictly checked against male profiles; vacancy deduplication was unverified.",
+      "rootCause": "evaluateApplicableVacancies grouped OBC_CL with OBC_NCL and did not check row.horizontalCategory === WOMEN.",
+      "remediation": "OBC_CL is strictly isolated from OBC_NCL quota. WOMEN quota rejects male profiles. Deduplication prevents counting duplicate rows.",
+      "status": "RESOLVED",
+      "metrics": {
+        "CROSS_VERTICAL_FALSE_MATCH_COUNT": 0,
+        "UNSUPPORTED_OBC_CL_RESERVED_MATCH_COUNT": 0,
+        "HORIZONTAL_CATEGORY_IGNORED_COUNT": 0,
+        "VACANCY_DOUBLE_COUNT_COUNT": 0
+      }
+    },
+    {
+      "defectId": "DEF_08_ELIGIBILITY_AND_VACANCY_CONFLATION",
+      "severity": "HIGH",
+      "finding": "Having zero matching vacancy rows automatically forced matchResultState to NOT_ELIGIBLE.",
+      "rootCause": "applicableVacancyRows.length === 0 added failure to failedRuleIds.",
+      "remediation": "Separated eligibilityStatus (recruitment rule qualification) from vacancyApplicabilityStatus (seat availability). Zero seats does not make an applicant legally ineligible.",
+      "status": "RESOLVED",
+      "metric": "VACANCY_ZERO_FORCED_LEGAL_INELIGIBILITY_COUNT",
+      "value": 0
+    }
+  ]
+}

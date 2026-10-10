@@ -1,0 +1,2154 @@
+{
+  "ledgerCode": "RC_47B6_READINESS_DERIVATION_LEDGER",
+  "executedAt": "2026-09-10T07:08:16.237Z",
+  "metrics": {
+    "TOTAL_CANDIDATES_EVALUATED": 153,
+    "HARDCODED_SHELL_READY_COUNT": 0,
+    "HARDCODED_CATALOG_DISCOVERABLE_COUNT": 0,
+    "ACADEMIC_START_READY_COUNT": 0
+  },
+  "ledger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://uppsc.up.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://uppsc.up.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "upsssc_pet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://upsssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://upsssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://uppbpb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://uppbpb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "up_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://updeled.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "uk_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://sssc.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "uk_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://sssc.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "uk_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ubse.uk.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hppsc.hp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hppsc.hp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hprca.hp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hp_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hpbose.org/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ppsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "psssb_clerk",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://sssb.punjab.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "psssb_patwari",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://sssb.punjab.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://punjabpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "punjab_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://punjabpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "punjab_pstet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://pseb.ac.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "haryana_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://hssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "haryana_htet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bseh.org.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jkpsc.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jk_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jkssb.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jk_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jkssb.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jkssb.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ladakh.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.ladakh.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://leh.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://chandigarhpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://chandigarhpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://chandigarh.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://chandigarh.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://dsssb.delhi.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://dsssb.delhi.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://dsssb.delhi.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://dsssb.delhi.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://delhipolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "delhi_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://delhipolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://rpsc.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://rpsc.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://rssb.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://rssb.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rbse_reet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://rajeduboard.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.rajasthan.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mppsc.mp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://esb.mp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://esb.mp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://esb.mp.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.cg.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://vyapam.cgstate.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "cg_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://cgpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://gpsc.gujarat.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gsssb_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://gsssb.gujarat.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gpssb_talati",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://gpssb.gujarat.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.gujarat.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://sebexam.org/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mh_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mahapolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mscepune.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://gpsc.goa.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://gssc.goa.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://goapolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ssb.dd.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bpsc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bpsc_tre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bpsc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bssc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bssc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bssc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://bpssc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://csbc.bihar.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bseb_stet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://secondary.biharboardonline.com/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jssc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jssc.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jssc.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jac_jtet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jac.jharkhand.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.opsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ossc_cgl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.ossc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.osssc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://odishapolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.bseodisha.ac.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ssbodisha.ac.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.wb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.wb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://prb.wb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://prb.wb.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.wbbpe.org/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://www.westbengalssc.com/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://erecruitment.andaman.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://erecruitment.andaman.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.andaman.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "appsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.ap.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "appsc_group2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://psc.ap.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://slprb.ap.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://slprb.ap.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tgpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tgpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tgpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tgpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tslprb.co.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tslprb.co.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "treirb_teaching",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://treirb.telangana.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://kpsc.kar.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://cetonline.karnataka.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ksp_psi",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ksp-recruitment.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ksp_cpc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://ksp-recruitment.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://keralapsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://keralapsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://keralapsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://keralapsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tnpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tnpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tnpsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnusrb_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tnusrb.tn.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tnusrb.tn.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://trb.tn.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mrb.tn.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://recruitment.py.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.py.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://lakshadweep.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "apsc_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://apsc.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "slrc_adre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://assam.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://slprbassam.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://appsc.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://apssb.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://arunpol.nic.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpscmanipur.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://manipurssc.mn.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://manipurpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpsc.meghalaya.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://megpolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpsc.mizoram.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://mpsc.mizoram.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.mizoram.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://npsc.nagaland.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://npsc.nagaland.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://nssb.nagaland.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.nagaland.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://spsc.sikkim.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://spsc.sikkim.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://police.sikkim.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tpsc.tripura.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://jrbtripura.com/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://trb.tripura.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": false,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://trb.tripura.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false,
+      "derivedValue": "PREPARING_SHELL_DISCOVERABLE",
+      "supportingEvidenceRefs": [
+        "https://tripurapolice.gov.in/notifications"
+      ],
+      "blockers": [
+        "ACADEMIC_CONTENT_PREPARING"
+      ]
+    }
+  ]
+}

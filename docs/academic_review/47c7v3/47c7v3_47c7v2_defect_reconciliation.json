@@ -1,0 +1,31 @@
+{
+  "reconciliationCode": "RC_47C7V3_DEFECT_RECONCILIATION",
+  "executedAt": "2026-09-10T08:22:34.766Z",
+  "defectsResolved": [
+    {
+      "defect": "DEFECT_A_SELF_AUDIT_TIMING",
+      "fix": "Verifier V2 created FIRST; bytes hashed and scanned BEFORE self-audit artifact generation."
+    },
+    {
+      "defect": "DEFECT_B_AFCAT_PLATFORM_TAXONOMY",
+      "fix": "afcat.edcil.co.in accepted as AUTHORIZED_CURRENT_RECRUITMENT_PLATFORM without requiring authority-owned domain status."
+    },
+    {
+      "defect": "DEFECT_C_AFCAT_FILENAME_MISMATCH",
+      "fix": "Verifier V2 corrected to look for 47c8_afcat_current_portal_and_route_evidence.json."
+    },
+    {
+      "defect": "DEFECT_D_IBPS_OFFICE_ASSISTANT_ENFORCEMENT",
+      "fix": "Both ibps_crp_rrb_officers and ibps_crp_rrb_office_assistant strictly enforced as canonical IDs."
+    },
+    {
+      "defect": "DEFECT_E_UNSOURCED_IB_EPFO_ORACLES",
+      "fix": "IB and EPFO claims bound to exact official-source evidence locators."
+    },
+    {
+      "defect": "DEFECT_F_MATERIALIZER_DRIFT_WARNING",
+      "fix": "Materializer source version drift converted from warning to FAIL CLOSED blocker."
+    }
+  ],
+  "reconciliationPass": true
+}

@@ -1,0 +1,18 @@
+{
+  "gate": "RC_46D10_SOURCE_TRUTH_AND_PRODUCTION_CERTIFICATION_REPAIR_46D11",
+  "generatedAt": "2026-09-09T15:27:05.108Z",
+  "canonicalArchitecture": "CRUCIBLE = 98-DAY CONTINUOUS ROTATING CYCLE (Major Tests decoupled to Test Arena)",
+  "summary": {
+    "GENERIC_98_DAY_TEMPLATE_SOURCE_PATCHED": "YES",
+    "NEW_TEST_MISSION_98_DAY_DRY_RUN": "PASS",
+    "SOURCE_MODULE": "tools/canonical_profile_engine_46a6/mission_template_defaults.cjs",
+    "TEST_HARNESS": "tools/canonical_profile_engine_46a6/test_mission_template_defaults.cjs"
+  },
+  "testExecutionOutput": {
+    "status": "PASS",
+    "testMissionId": "rec_rc_test_generic_template_2099",
+    "totalDays": 98,
+    "cycleDays": 98,
+    "majorTestDecoupled": true
+  }
+}

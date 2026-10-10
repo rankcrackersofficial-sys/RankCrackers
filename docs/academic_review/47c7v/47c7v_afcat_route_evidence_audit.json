@@ -1,0 +1,53 @@
+{
+  "auditCode": "RC_47C7V_AFCAT_ROUTE_EVIDENCE_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.796Z",
+  "metrics": {
+    "AFCAT_ROUTE_COUNT": 5,
+    "AFCAT_ROUTE_WITH_SOURCE_EVIDENCE_COUNT": 0,
+    "AFCAT_ROUTE_WITHOUT_SOURCE_EVIDENCE_COUNT": 5
+  },
+  "routes": [
+    {
+      "routeId": "flying",
+      "displayName": "Flying Branch",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": null,
+      "evidenceStatus": "MISSING_IN_PRODUCER_ARTIFACT"
+    },
+    {
+      "routeId": "ground_duty_technical",
+      "displayName": "Ground Duty Technical",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": null,
+      "evidenceStatus": "MISSING_IN_PRODUCER_ARTIFACT"
+    },
+    {
+      "routeId": "ground_duty_non_technical",
+      "displayName": "Ground Duty Non-Technical",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": null,
+      "evidenceStatus": "MISSING_IN_PRODUCER_ARTIFACT"
+    },
+    {
+      "routeId": "ncc_special_entry",
+      "displayName": "NCC Special Entry",
+      "usesAfcatWrittenExam": false,
+      "sourceEvidenceRef": null,
+      "evidenceStatus": "MISSING_IN_PRODUCER_ARTIFACT"
+    },
+    {
+      "routeId": "gate_entry",
+      "displayName": "GATE-based entry",
+      "usesAfcatWrittenExam": false,
+      "sourceEvidenceRef": null,
+      "evidenceStatus": "MISSING_IN_PRODUCER_ARTIFACT"
+    }
+  ],
+  "groundTruthNotificationProof": {
+    "notification": "AFCAT Cycle 02/2026 Notification",
+    "sourceUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+    "nccSpecialEntryExemptionProof": "Para 3(e) & Para 6(b): NCC Special Entry candidates are exempted from AFCAT online examination and directly shortlisted for AFSB testing.",
+    "gateScoreEntryExemptionProof": "Para 3(f) & Para 6(c): GATE Score Entry candidates apply based on valid GATE score in designated engineering disciplines and are exempted from AFCAT online examination."
+  },
+  "blockerDescription": "Producer artifact 47c6_afcat_route_variant_recheck.json omitted route-level sourceEvidenceRef in its published JSON schema across all 5 recruitment routes. Traceability established forensically via master notification, but producer artifact requires formal binding before national freeze."
+}

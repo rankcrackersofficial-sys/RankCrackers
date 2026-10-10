@@ -1,0 +1,37 @@
+{
+  "collisionCode": "RC_47B5_CANONICAL_COLLISION_AUDIT",
+  "executedAt": "2026-09-10T06:57:27.769Z",
+  "metrics": {
+    "UNRESOLVED_CANONICAL_ID_COLLISION_COUNT": 0
+  },
+  "auditedCollisionPairs": [
+    {
+      "pair": [
+        "ssc_gd",
+        "ssc_gd_constable"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    },
+    {
+      "pair": [
+        "ssc_selection_post",
+        "ssc_ladakh_selection_post"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    },
+    {
+      "pair": [
+        "ibps_rrb_po",
+        "ibps_rrb_officer_scale_1"
+      ],
+      "status": "CANONICAL_IDENTITY_RESOLVED"
+    },
+    {
+      "pair": [
+        "ssc_cpo",
+        "delhi_police_si"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    }
+  ]
+}

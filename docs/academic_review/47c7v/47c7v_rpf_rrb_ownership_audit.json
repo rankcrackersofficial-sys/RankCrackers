@@ -1,0 +1,29 @@
+{
+  "auditCode": "RC_47C7V_RPF_RRB_OWNERSHIP_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.802Z",
+  "metrics": {
+    "RPF_SOURCE_DOMAIN_WITHOUT_STRUCTURED_OWNER_COUNT": 0,
+    "RPF_CROSS_AGENCY_STRUCTURED_COUNT": 2
+  },
+  "structuredContracts": [
+    {
+      "missionId": "rpf_si",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0",
+      "validation": "STRUCTURED_CROSS_AGENCY_CONTRACT_SATISFIED"
+    },
+    {
+      "missionId": "rpf_constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0",
+      "validation": "STRUCTURED_CROSS_AGENCY_CONTRACT_SATISFIED"
+    }
+  ],
+  "verdict": "PASS (RPF recruitments published on RRB domains governed via structured agency contracts, not blanket domain whitelisting)"
+}

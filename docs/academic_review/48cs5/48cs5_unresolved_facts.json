@@ -1,0 +1,31 @@
+{
+  "unresolvedFactCount": 4,
+  "unverifiedVacancyCount": 0,
+  "unverifiedRuleFactCount": 0,
+  "rows": [
+    {
+      "missionId": "ssc_cgl",
+      "fact": "POST_WISE_CATEGORY_WISE_VACANCY_MATRIX",
+      "reason": "Base notice supplies only an approximate total and delegates exact matrix to a later publication."
+    },
+    {
+      "missionId": "ssc_cgl",
+      "fact": "CURRENT_2026_ANSWER_KEY_STATE",
+      "reason": "No exact current-cycle official document recovered."
+    },
+    {
+      "missionId": "ssc_cgl",
+      "fact": "CURRENT_2026_RESULT_STATE",
+      "reason": "No exact current-cycle official document recovered."
+    },
+    {
+      "missionId": "jee_main_2026",
+      "fact": "SESSION2_EXACT_APPLICATION_CORRECTION_REOPEN_DATES",
+      "reason": "Exact official documents and bytes are verified, but machine-readable date text was unavailable; absence is not claimed."
+    }
+  ],
+  "productionWriteCount": 0,
+  "missionCreateCount": 0,
+  "careerSignalCreateCount": 0,
+  "s2JobCount": 0
+}

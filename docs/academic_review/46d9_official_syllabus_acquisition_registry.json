@@ -1,0 +1,194 @@
+{
+  "registrySchemaVersion": "9.0.0",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "generatedAt": "2026-09-09T14:57:58.803Z",
+  "summary": {
+    "OFFICIAL_SYLLABUS_REQUIRED_COUNT": 15,
+    "OFFICIAL_SYLLABUS_BYTE_VERIFIED_COUNT": 2,
+    "OFFICIAL_SYLLABUS_PORTAL_TEXT_VERIFIED_COUNT": 12,
+    "OFFICIAL_SYLLABUS_REGISTRY_ONLY_COUNT": 1,
+    "RPSC_LECTURER_REQUIRED_SYLLABUS_CONTENT_READY": "NO",
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0
+  },
+  "syllabi": [
+    {
+      "missionId": "jee_main_2026",
+      "title": "JEE Main Prescribed Physics, Chemistry, Mathematics Syllabus",
+      "authority": "NTA",
+      "evidenceStatus": "BYTE_VERIFIED",
+      "fileSha256": "9a710bc85172ea2bb8fb59178ad38e64c39f2982fa144e13511eb982703f8373",
+      "contentLocator": "Appendix-VI (Syllabus for JEE (Main) - 2026)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "title": "NEET (UG) Core Physics, Chemistry, Biology/Biotechnology Syllabus",
+      "authority": "NMC / NTA",
+      "evidenceStatus": "BYTE_VERIFIED",
+      "fileSha256": "c32fdba7fb459ef4e1e8eb95015ff3dfa1050e828d11fa9ffb44cb7e39a3f2d0",
+      "contentLocator": "Appendix-V (Undergraduate Medical Syllabus)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "title": "RPSC School Lecturer Paper-I & 28 Paper-II Subject Syllabi",
+      "authority": "RPSC",
+      "evidenceStatus": "PORTAL_REGISTRY_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "RPSC Official Syllabus Portal: Scheme & Syllabus for School Lecturer (Paper-I + 28 Paper-II Subjects)",
+      "academicVariants": [
+        "Hindi",
+        "English",
+        "Sanskrit",
+        "History",
+        "Geography",
+        "Political Science",
+        "Economics",
+        "Sociology",
+        "Commerce",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Home Science",
+        "Drawing",
+        "Music",
+        "Urdu",
+        "Punjabi",
+        "Rajasthani",
+        "Physical Education",
+        "Coach Athletics",
+        "Coach Badminton",
+        "Coach Basketball",
+        "Coach Gymnastics",
+        "Coach Hockey",
+        "Coach Swimming",
+        "Coach Wrestling",
+        "Coach Kho-Kho"
+      ]
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "title": "UPSC Civil Services Preliminary Examination Syllabus (Paper-I GS & Paper-II CSAT)",
+      "authority": "UPSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Appendix-I Section III (Detailed Prelims Syllabus)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "ssc_cgl",
+      "title": "SSC CGL Indicative Syllabus (Tier-I 4 Modules & Tier-II Paper-I, Paper-II Statistics)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 13 (Indicative Syllabus: Tier-I & Tier-II)",
+      "academicVariants": [
+        "All Posts Track",
+        "Junior Statistical Officer (JSO) Track"
+      ]
+    },
+    {
+      "missionId": "ssc_je",
+      "title": "SSC JE Indicative Syllabus (Paper-I & Paper-II: Civil, Electrical, Mechanical)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 14 (Indicative Syllabus: Civil & Structural, Electrical, Mechanical)",
+      "academicVariants": [
+        "Civil Engineering",
+        "Electrical Engineering",
+        "Mechanical Engineering"
+      ]
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "title": "SSC Selection Post Phase-XIII Level-Wise Indicative Syllabus",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 16 (Syllabus for Matriculation, Higher Secondary, Graduation levels)",
+      "academicVariants": [
+        "Matriculation Level",
+        "Higher Secondary 10+2 Level",
+        "Graduation & Above Level"
+      ]
+    },
+    {
+      "missionId": "ssc_chsl",
+      "title": "SSC CHSL Indicative Syllabus (Tier-I & Tier-II)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 14 (Indicative Syllabus)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "title": "SSC Stenographer Grade 'C' & 'D' Indicative Syllabus",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 13 (Indicative Syllabus)",
+      "academicVariants": [
+        "Grade 'C'",
+        "Grade 'D'"
+      ]
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "title": "SSC Combined Hindi Translators Indicative Syllabus (Paper-I & Paper-II)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 12 (Indicative Syllabus: General Hindi, General English, Translation & Essay)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "title": "SSC MTS & Havaldar Indicative Syllabus (Session-I & Session-II)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 15 (Indicative Syllabus: Numerical & Mathematical Ability, Reasoning, GA, English)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "ssc_cpo",
+      "title": "SSC CPO Indicative Syllabus (Paper-I & Paper-II English)",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 13 (Indicative Syllabus: Paper-I General Intelligence, GA, Quant, English; Paper-II English Comprehension)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "ssc_gd",
+      "title": "SSC GD Constable Indicative Syllabus",
+      "authority": "SSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Section 12 (Indicative Syllabus: General Intelligence, General Knowledge, Elementary Mathematics, English/Hindi)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "title": "UPPSC Combined State / Upper Subordinate Services Preliminary Examination Syllabus",
+      "authority": "UPPSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Appendix-5 (Syllabus for Preliminary Examination: Paper-I General Studies-I & Paper-II General Studies-II)",
+      "academicVariants": []
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "title": "RPSC RAS/RTS Combined Competitive Preliminary Examination Scheme & Syllabus",
+      "authority": "RPSC",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentLocator": "Official Listing: Scheme and Syllabus of Preliminary Examination for Rajasthan State & Subordinate Services",
+      "academicVariants": []
+    }
+  ]
+}

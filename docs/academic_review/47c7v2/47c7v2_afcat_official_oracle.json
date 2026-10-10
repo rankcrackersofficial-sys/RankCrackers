@@ -1,0 +1,50 @@
+{
+  "oracleCode": "RC_47C7V2_AFCAT_OFFICIAL_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.268Z",
+  "verifierAgent": "AGENT-2 — INDEPENDENT NATIONAL FORENSIC VERIFICATION LANE",
+  "officialEvidenceSource": {
+    "notificationTitle": "Indian Air Force Air Force Common Admission Test (AFCAT) 02/2026 / NCC Special Entry / Meteorology Entry Courses Commencing July 2026",
+    "officialAuthorityDomain": "careerairforce.gov.in",
+    "officialNotificationUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+    "activeApplicationPortalClause": "Applications are to be filled online ONLY at https://afcat.edcil.co.in",
+    "currentApplicationPortal": "https://afcat.edcil.co.in"
+  },
+  "platformTaxonomy": [
+    {
+      "domain": "careerairforce.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "role": "Primary sovereign Indian Air Force portal and official gazette notification publisher",
+      "activeForCycle022026": true
+    },
+    {
+      "domain": "afcat.edcil.co.in",
+      "classification": "CURRENT_OFFICIAL_PORTAL",
+      "role": "Designated active live online registration portal for AFCAT 02/2026 applications",
+      "activeForCycle022026": true
+    },
+    {
+      "domain": "iafrecruitment.edcil.co.in",
+      "classification": "AUTHORIZED_RECRUITMENT_PLATFORM",
+      "role": "Contracted EdCIL recruitment engine hosting PDF notices and candidate communications",
+      "activeForCycle022026": true
+    },
+    {
+      "domain": "afcat.cdac.in",
+      "classification": "HISTORICAL_OFFICIAL_PORTAL",
+      "role": "Legacy C-DAC recruitment engine from previous cycles; superseded for live registration",
+      "activeForCycle022026": false
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_AFCAT_CURRENT_PORTAL_MATCH",
+      "assertion": "auth_in_indian_air_force.officialDomains or authorized platforms MUST include afcat.edcil.co.in.",
+      "failCondition": "afcat.edcil.co.in absent from current authorized platform model."
+    },
+    {
+      "ruleId": "ORACLE_AFCAT_SUPERSEDED_PORTAL_NOT_CURRENT",
+      "assertion": "afcat.cdac.in MUST NOT be marked or classified as the active current application portal.",
+      "failCondition": "afcat.cdac.in represented as sole or active current application portal."
+    }
+  ]
+}

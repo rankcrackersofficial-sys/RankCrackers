@@ -1,0 +1,1042 @@
+{
+  "statuses": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "careerSignalSourceStatus": "CURRENT_CYCLE_RESOLVED",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "careerSignalSourceStatus": "PARTIAL",
+      "materializationBlocked": false,
+      "note": "Career signal status is orthogonal and does not block mission shell creation."
+    }
+  ]
+}

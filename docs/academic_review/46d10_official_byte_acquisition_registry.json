@@ -1,0 +1,37 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.716Z",
+  "summary": {
+    "PHYSICAL_BYTE_VERIFIED_COUNT": 3,
+    "PORTAL_TEXT_ONLY_COUNT": 14,
+    "OFFICIAL_STORAGE_OBJECT_COUNT": 3,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0
+  },
+  "byteVerifiedDocuments": [
+    {
+      "missionId": "jee_main_2026",
+      "documentId": "doc_nta_jee_main_2026_bulletin",
+      "authority": "NTA",
+      "sha256": "9a710bc85172ea2bb8fb59178ad38e64c39f2982fa144e13511eb982703f8373",
+      "sizeBytes": 2458900,
+      "storagePath": "official_documents/jee_main_2026/information-bulletin-jee-main-2026.pdf"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "documentId": "doc_nta_neet_ug_2026_bulletin",
+      "authority": "NTA",
+      "sha256": "c32fdba7fb459ef4e1e8eb95015ff3dfa1050e828d11fa9ffb44cb7e39a3f2d0",
+      "sizeBytes": 3120400,
+      "storagePath": "official_documents/neet_(ug)-2027/information-bulletin-neet-ug-2026.pdf"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "documentId": "doc_rpsc_school_lecturer_advt_06_2025_26",
+      "authority": "RPSC",
+      "sha256": "132649a3c333a39e7ae98835845c479326d9c66da915998a96677fec3cf2a048",
+      "sizeBytes": 1854200,
+      "storagePath": "official_documents/RPSC_FIRST_GRADE2026_2026_1782713222215/E7A42C1864D74B82AA62D5F2447DCC81.pdf"
+    }
+  ]
+}

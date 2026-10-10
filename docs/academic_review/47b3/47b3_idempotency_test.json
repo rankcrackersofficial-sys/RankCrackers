@@ -1,0 +1,28 @@
+{
+  "testCode": "RC_47B3_IDEMPOTENCY_TEST",
+  "executedAt": "2026-09-10T06:11:50.575Z",
+  "dryRun1Summary": {
+    "semanticCreates": 12,
+    "semanticUpdates": 0,
+    "semanticNoOps": 0,
+    "semanticDeletes": 0,
+    "semanticRejects": 0,
+    "totalMutationsPlanned": 12
+  },
+  "dryRun2Summary": {
+    "semanticCreates": 0,
+    "semanticUpdates": 0,
+    "semanticNoOps": 12,
+    "semanticDeletes": 0,
+    "semanticRejects": 0,
+    "totalMutationsPlanned": 0
+  },
+  "verification": {
+    "DRY_RUN_2_CREATE_COUNT": 0,
+    "DRY_RUN_2_UPDATE_COUNT": 0,
+    "DRY_RUN_2_DELETE_COUNT": 0,
+    "DRY_RUN_2_TIMESTAMP_DRIFT_COUNT": 0,
+    "idempotenceVerified": true
+  },
+  "assertionPass": true
+}

@@ -1,0 +1,23 @@
+{
+  "testName": "47b_idempotency_test",
+  "executedAt": "2026-09-10T04:55:45.521Z",
+  "dryRun1Summary": {
+    "semanticCreates": 12,
+    "semanticUpdates": 0,
+    "semanticNoOps": 9,
+    "totalMutationsPlanned": 12
+  },
+  "dryRun2Summary": {
+    "semanticCreates": 0,
+    "semanticUpdates": 0,
+    "semanticNoOps": 21,
+    "totalMutationsPlanned": 0
+  },
+  "verification": {
+    "semanticCreatesOnReRun": 0,
+    "semanticUpdatesOnReRun": 0,
+    "semanticDeletesOnReRun": 0,
+    "unconditionalUpdatedAtChanges": 0,
+    "idempotenceVerified": true
+  }
+}

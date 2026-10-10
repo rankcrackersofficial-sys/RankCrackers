@@ -1,0 +1,2644 @@
+{
+  "registryCode": "RC_47A3_MAJOR_EXAM_QUALIFICATION_EVIDENCE_REGISTRY",
+  "QUALIFICATION_WITHOUT_EVIDENCE_ROW_COUNT": 0,
+  "evidenceRegistry": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "canonicalExamName": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "authorityKey": "auth_in_up_uppsc",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Combined State / Upper Subordinate Services Examination Press Note",
+          "verifiedFact": "574,000+ applicants registered for Uttar Pradesh premier civil services examination.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Combined State / Upper Subordinate Services Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 220 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "canonicalExamName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "authorityKey": "auth_in_up_uppsc",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Samiksha Adhikari / Sahayak Samiksha Adhikari Examination Press Release",
+          "verifiedFact": "1,076,004 applications officially verified for 411 Review Officer / Assistant Review Officer posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Samiksha Adhikari / Sahayak Samiksha Adhikari Examination Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 411 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://uppsc.up.nic.in",
+          "officialSourceTitle": "UPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "upsssc_pet",
+      "canonicalExamName": "Preliminary Eligibility Test (PET)",
+      "authorityKey": "auth_in_up_upsssc",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://upsssc.gov.in/Default.aspx",
+          "officialSourceTitle": "UPSSSC Preliminary Eligibility Test (PET) 2023 Candidate Statistics Notice",
+          "verifiedFact": "3,758,209 candidates registered for UPSSSC PET as statutory prerequisite for all UP Group C posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://upsssc.gov.in",
+          "officialSourceTitle": "UPSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "canonicalExamName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "authorityKey": "auth_in_up_upsssc",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://upsssc.gov.in",
+          "officialSourceTitle": "UPSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "authorityKey": "auth_in_up_upprpb",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "4,817,441 applications officially verified for 60,244 constable posts under Advt PRPB-1(150)/2023.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 60,244 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://uppbpb.gov.in",
+          "officialSourceTitle": "UPPRPB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "authorityKey": "auth_in_up_upprpb",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://uppbpb.gov.in",
+          "officialSourceTitle": "UPPRPB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "up_tet",
+      "canonicalExamName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "authorityKey": "auth_in_up_pnp",
+      "regionCode": "UP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://updeled.gov.in",
+          "officialSourceTitle": "Pariksha Niyamak Pradhikari UPTET Examination Summary Notice",
+          "verifiedFact": "2,165,000 candidates registered across Paper 1 (Primary) and Paper 2 (Upper Primary).",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://updeled.gov.in",
+          "officialSourceTitle": "PNP_UP Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "canonicalExamName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "canonicalExamName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "uk_police_si",
+      "canonicalExamName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.uk.gov.in",
+          "officialSourceTitle": "UKPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "canonicalExamName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "authorityKey": "auth_in_uk_uksssc",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssc.uk.gov.in",
+          "officialSourceTitle": "UKSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "uk_police_constable",
+      "canonicalExamName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "authorityKey": "auth_in_uk_uksssc",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssc.uk.gov.in",
+          "officialSourceTitle": "UKSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "uk_tet",
+      "canonicalExamName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "authorityKey": "auth_in_uk_ubse",
+      "regionCode": "UK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://ubse.uk.gov.in",
+          "officialSourceTitle": "UBSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "canonicalExamName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "authorityKey": "auth_in_hp_hppsc",
+      "regionCode": "HP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hppsc.hp.gov.in",
+          "officialSourceTitle": "HPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "canonicalExamName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "authorityKey": "auth_in_hp_hppsc",
+      "regionCode": "HP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hppsc.hp.gov.in",
+          "officialSourceTitle": "HPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "canonicalExamName": "Group C Common Computer Based Test / Screening Examination",
+      "authorityKey": "auth_in_hp_hprca",
+      "regionCode": "HP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hprca.hp.gov.in",
+          "officialSourceTitle": "HPRCA Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hp_tet",
+      "canonicalExamName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "authorityKey": "auth_in_hp_hpbose",
+      "regionCode": "HP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://hpbose.org",
+          "officialSourceTitle": "HPBOSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "canonicalExamName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "authorityKey": "auth_in_pb_ppsc",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://ppsc.gov.in",
+          "officialSourceTitle": "PPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "psssb_clerk",
+      "canonicalExamName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "authorityKey": "auth_in_pb_psssb",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssb.punjab.gov.in",
+          "officialSourceTitle": "PSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "psssb_patwari",
+      "canonicalExamName": "Revenue Patwari Recruitment Examination",
+      "authorityKey": "auth_in_pb_psssb",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssb.punjab.gov.in",
+          "officialSourceTitle": "PSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "authorityKey": "auth_in_pb_police",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "470,000+ candidates applied for 1,746 district and armed police constable posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 1,746 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "authorityKey": "auth_in_pb_police",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_pstet",
+      "canonicalExamName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "authorityKey": "auth_in_pb_pseb",
+      "regionCode": "PB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://pseb.ac.in",
+          "officialSourceTitle": "PSEB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "canonicalExamName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "authorityKey": "auth_in_hr_hpsc",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://hpsc.gov.in",
+          "officialSourceTitle": "HPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group C",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group C Notification",
+          "verifiedFact": "1,120,000 candidates registered for common gateway to 32,000 Group C posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group C Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 32,000 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "canonicalExamName": "Common Eligibility Test (CET) Haryana - Group D",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group D Notification",
+          "verifiedFact": "1,350,000 candidates registered for Group D recruitment across Haryana departments.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "Haryana Staff Selection Commission CET Group D Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 13,536 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "canonicalExamName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "400,000+ candidates registered for 6,000 male and female constable posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 6,000 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "authorityKey": "auth_in_hr_hssc",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_htet",
+      "canonicalExamName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "authorityKey": "auth_in_hr_bseh",
+      "regionCode": "HR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://bseh.org.in",
+          "officialSourceTitle": "BSEH Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "canonicalExamName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "authorityKey": "auth_in_jk_jkpsc",
+      "regionCode": "JK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://jkpsc.nic.in",
+          "officialSourceTitle": "JKPSC Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jk_police_constable",
+      "canonicalExamName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jk_police_si",
+      "canonicalExamName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "canonicalExamName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "authorityKey": "auth_in_jk_jkssb",
+      "regionCode": "JK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "canonicalExamName": "Selection Posts for UT of Ladakh Examination (Matriculation, Higher Secondary, Graduation Levels)",
+      "authorityKey": "auth_in_la_admin",
+      "regionCode": "LA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://ladakh.gov.in",
+          "officialSourceTitle": "UT Ladakh Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "canonicalExamName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "authorityKey": "auth_in_la_police",
+      "regionCode": "LA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.ladakh.gov.in",
+          "officialSourceTitle": "Ladakh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "canonicalExamName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "authorityKey": "auth_in_la_dssrb",
+      "regionCode": "LA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://leh.nic.in",
+          "officialSourceTitle": "LAHDC DSSRB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "canonicalExamName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "authorityKey": "auth_in_ch_police",
+      "regionCode": "CH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://chandigarhpolice.gov.in",
+          "officialSourceTitle": "Chandigarh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "canonicalExamName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "authorityKey": "auth_in_ch_police",
+      "regionCode": "CH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://chandigarhpolice.gov.in",
+          "officialSourceTitle": "Chandigarh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "canonicalExamName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "authorityKey": "auth_in_ch_admin",
+      "regionCode": "CH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://chandigarh.gov.in",
+          "officialSourceTitle": "Chandigarh Admin Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "canonicalExamName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "authorityKey": "auth_in_ch_admin",
+      "regionCode": "CH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://chandigarh.gov.in",
+          "officialSourceTitle": "Chandigarh Admin Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "canonicalExamName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "canonicalExamName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "canonicalExamName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "canonicalExamName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "authorityKey": "auth_in_dl_dsssb",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://dsssb.delhi.gov.in",
+          "officialSourceTitle": "DSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "canonicalExamName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "authorityKey": "auth_in_dl_delpol",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://delhipolice.gov.in",
+          "officialSourceTitle": "Delhi Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "delhi_police_si",
+      "canonicalExamName": "Sub-Inspector in Delhi Police (SSC CPO Examination)",
+      "authorityKey": "auth_in_dl_delpol",
+      "regionCode": "DL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://delhipolice.gov.in",
+          "officialSourceTitle": "Delhi Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "canonicalExamName": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+      "authorityKey": "auth_in_rj_rpsc",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Rajasthan State & Subordinate Services Examination Press Note",
+          "verifiedFact": "697,000+ candidates applied for RAS/RTS preliminary examination.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Rajasthan State & Subordinate Services Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 905 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "canonicalExamName": "RPSC School Lecturer (School Education) Competitive Examination",
+      "authorityKey": "auth_in_rj_rpsc",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+          "officialSourceTitle": "RPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "authorityKey": "auth_in_rj_rssb",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rsmssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSMSSB Common Eligibility Test (Senior Secondary Level) Notification",
+          "verifiedFact": "1,600,000+ candidates registered for mandatory gateway test covering 7 subordinate state cadres.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://rssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "canonicalExamName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "authorityKey": "auth_in_rj_rssb",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://rssb.rajasthan.gov.in",
+          "officialSourceTitle": "RSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rbse_reet",
+      "canonicalExamName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "authorityKey": "auth_in_rj_rbse",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "Board of Secondary Education Rajasthan REET Official Press Release",
+          "verifiedFact": "Over 1,400,000 candidates appeared for REET Level 1 and Level 2 mandatory teacher eligibility certification.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "Board of Secondary Education Rajasthan REET Official Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 48,000 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://rajeduboard.rajasthan.gov.in",
+          "officialSourceTitle": "RBSE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "canonicalExamName": "Rajasthan Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_rj_police",
+      "regionCode": "RJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "540,000+ candidates registered for constable GD, driver, and telecommunication posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 3,578 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "canonicalExamName": "Madhya Pradesh State Service Examination",
+      "authorityKey": "auth_in_mp_mppsc",
+      "regionCode": "MP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mppsc.mp.gov.in",
+          "officialSourceTitle": "MPPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "canonicalExamName": "Madhya Pradesh Police Constable Recruitment Test",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Over 950,000 candidates applied for 7,411 constable executive and radio operator posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 7,411 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "canonicalExamName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "canonicalExamName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "authorityKey": "auth_in_mp_mpesb",
+      "regionCode": "MP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "canonicalExamName": "Chhattisgarh State Service Examination",
+      "authorityKey": "auth_in_cg_cgpsc",
+      "regionCode": "CG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.cg.gov.in",
+          "officialSourceTitle": "CGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "canonicalExamName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "authorityKey": "auth_in_cg_cgvyapam",
+      "regionCode": "CG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://vyapam.cgstate.gov.in",
+          "officialSourceTitle": "CG Vyapam Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "cg_police_constable",
+      "canonicalExamName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "authorityKey": "auth_in_cg_police",
+      "regionCode": "CG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://cgpolice.gov.in",
+          "officialSourceTitle": "CG Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "canonicalExamName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "authorityKey": "auth_in_gj_gpsc",
+      "regionCode": "GJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://gpsc.gujarat.gov.in",
+          "officialSourceTitle": "GPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gsssb_cce",
+      "canonicalExamName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "authorityKey": "auth_in_gj_gsssb",
+      "regionCode": "GJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gsssb.gujarat.gov.in",
+          "officialSourceTitle": "GSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gpssb_talati",
+      "canonicalExamName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "authorityKey": "auth_in_gj_gpssb",
+      "regionCode": "GJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gpssb.gujarat.gov.in",
+          "officialSourceTitle": "GPSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "canonicalExamName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "authorityKey": "auth_in_gj_gprb",
+      "regionCode": "GJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.gujarat.gov.in",
+          "officialSourceTitle": "GPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "canonicalExamName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "authorityKey": "auth_in_gj_seb",
+      "regionCode": "GJ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://sebexam.org",
+          "officialSourceTitle": "SEB Gujarat Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "canonicalExamName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "authorityKey": "auth_in_mh_mpsc",
+      "regionCode": "MH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC State Services Examination Statistical Summary",
+          "verifiedFact": "385,000 candidates applied for Maharashtra Civil Services preliminary screening.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC State Services Examination Statistical Summary",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 274 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "canonicalExamName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "authorityKey": "auth_in_mh_mpsc",
+      "regionCode": "MH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.gov.in",
+          "officialSourceTitle": "MPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mh_police_constable",
+      "canonicalExamName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "authorityKey": "auth_in_mh_police",
+      "regionCode": "MH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "1,750,000+ applications received for 17,471 police constable, driver, and SRPF band posts statewide.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 17,471 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://mahapolice.gov.in",
+          "officialSourceTitle": "Maharashtra Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "canonicalExamName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "authorityKey": "auth_in_mh_mscepune",
+      "regionCode": "MH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://mscepune.in",
+          "officialSourceTitle": "MSCE Pune Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "canonicalExamName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "authorityKey": "auth_in_ga_gpsc",
+      "regionCode": "GA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://gpsc.goa.gov.in",
+          "officialSourceTitle": "GPSC Goa Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "canonicalExamName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "authorityKey": "auth_in_ga_gssc",
+      "regionCode": "GA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://gssc.goa.gov.in",
+          "officialSourceTitle": "GSSC Goa Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "canonicalExamName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "authorityKey": "auth_in_ga_police",
+      "regionCode": "GA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://goapolice.gov.in",
+          "officialSourceTitle": "Goa Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "canonicalExamName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "authorityKey": "auth_in_dn_ssb",
+      "regionCode": "DN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://ssb.dd.gov.in",
+          "officialSourceTitle": "DNH & DD SSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "canonicalExamName": "BPSC Combined Competitive Examination (Prelims)",
+      "authorityKey": "auth_in_br_bpsc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC Combined Competitive Examination Official Press Note",
+          "verifiedFact": "Over 600,000 candidates registered for Bihar administrative and police services selection.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC Combined Competitive Examination Official Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 442 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://bpsc.bihar.gov.in",
+          "officialSourceTitle": "BPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bpsc_tre",
+      "canonicalExamName": "BPSC School Teacher Recruitment Examination",
+      "authorityKey": "auth_in_br_bpsc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC School Teacher Written Examination (TRE 3.0) Official Notice",
+          "verifiedFact": "Over 874,000 applications registered across 87,774 teaching vacancies in primary, middle, secondary schools.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpsc.bih.nic.in",
+          "officialSourceTitle": "BPSC School Teacher Written Examination (TRE 3.0) Official Notice",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 87,774 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://bpsc.bihar.gov.in",
+          "officialSourceTitle": "BPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bssc_cgl",
+      "canonicalExamName": "BSSC Graduate Level Combined Competitive Examination",
+      "authorityKey": "auth_in_br_bssc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "canonicalExamName": "BSSC Inter Level Combined Competitive Examination",
+      "authorityKey": "auth_in_br_bssc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC 2nd Inter Level Combined Competitive Examination Advertisement 02/23",
+          "verifiedFact": "Over 2,500,000 candidates applied for 12,199 intermediate level subordinate posts across Bihar departments.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC 2nd Inter Level Combined Competitive Examination Advertisement 02/23",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 12,199 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://bssc.bihar.gov.in",
+          "officialSourceTitle": "BSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "canonicalExamName": "Bihar Police Police Sub-Inspector Examination",
+      "authorityKey": "auth_in_br_bpssc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bpssc.bih.nic.in",
+          "officialSourceTitle": "BPSSC Sub-Inspector Direct Recruitment Advt 02/2023",
+          "verifiedFact": "660,000+ candidates applied for 1,275 Police Sub-Inspector (Daroga) posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://bpssc.bih.nic.in",
+          "officialSourceTitle": "BPSSC Sub-Inspector Direct Recruitment Advt 02/2023",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 1,275 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://bpssc.bihar.gov.in",
+          "officialSourceTitle": "BPSSC Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "canonicalExamName": "Bihar Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_br_csbc",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "1,780,000 candidates applied for 21,391 police constable posts across Bihar districts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 21,391 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://csbc.bihar.gov.in",
+          "officialSourceTitle": "CSBC Bihar Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bseb_stet",
+      "canonicalExamName": "Bihar Secondary Teacher Eligibility Test",
+      "authorityKey": "auth_in_br_bseb",
+      "regionCode": "BR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://bsebstet2024.com",
+          "officialSourceTitle": "Bihar School Examination Board STET Candidate Statistics",
+          "verifiedFact": "420,000+ candidates registered for secondary and senior secondary teacher eligibility.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://secondary.biharboardonline.com",
+          "officialSourceTitle": "BSEB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "canonicalExamName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "authorityKey": "auth_in_jh_jpsc",
+      "regionCode": "JH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://jpsc.gov.in",
+          "officialSourceTitle": "JPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jssc_cgl",
+      "canonicalExamName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "authorityKey": "auth_in_jh_jssc",
+      "regionCode": "JH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jssc.nic.in",
+          "officialSourceTitle": "JSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "canonicalExamName": "Jharkhand Constable Competitive Examination",
+      "authorityKey": "auth_in_jh_jssc",
+      "regionCode": "JH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jssc.nic.in",
+          "officialSourceTitle": "JSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jac_jtet",
+      "canonicalExamName": "Jharkhand Teacher Eligibility Test",
+      "authorityKey": "auth_in_jh_jac",
+      "regionCode": "JH",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://jac.jharkhand.gov.in",
+          "officialSourceTitle": "JAC Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "canonicalExamName": "Odisha Civil Services Examination (Prelims)",
+      "authorityKey": "auth_in_od_opsc",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://www.opsc.gov.in",
+          "officialSourceTitle": "OPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ossc_cgl",
+      "canonicalExamName": "OSSC Combined Graduate Level Recruitment Examination",
+      "authorityKey": "auth_in_od_ossc",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://www.ossc.gov.in",
+          "officialSourceTitle": "OSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "canonicalExamName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "authorityKey": "auth_in_od_osssc",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://www.osssc.gov.in",
+          "officialSourceTitle": "OSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "canonicalExamName": "Odisha Police Civil Constable Recruitment Examination",
+      "authorityKey": "auth_in_od_opssb",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://odishapolice.gov.in",
+          "officialSourceTitle": "OPSSB / OUSSSC Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "canonicalExamName": "Odisha Teacher Eligibility Test",
+      "authorityKey": "auth_in_od_bse",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.bseodisha.ac.in",
+          "officialSourceTitle": "BSE Odisha Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "canonicalExamName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "authorityKey": "auth_in_od_ssb",
+      "regionCode": "OD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://ssbodisha.ac.in",
+          "officialSourceTitle": "SSB Odisha Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "canonicalExamName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.wb.gov.in",
+          "officialSourceTitle": "WBPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "canonicalExamName": "WBPSC Clerkship Examination",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.wb.gov.in",
+          "officialSourceTitle": "WBPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "canonicalExamName": "West Bengal Police Constable Recruitment Examination",
+      "authorityKey": "auth_in_wb_wbprb",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "850,000+ applications received for 11,749 constable posts in West Bengal Police.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 11,749 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "canonicalExamName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "authorityKey": "auth_in_wb_wbprb",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "canonicalExamName": "West Bengal Primary Teacher Eligibility Test",
+      "authorityKey": "auth_in_wb_wbbpe",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://wbbpe.org",
+          "officialSourceTitle": "West Bengal Board of Primary Education TET Press Release",
+          "verifiedFact": "620,000+ candidates registered for West Bengal Primary Teacher Eligibility Test.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.wbbpe.org",
+          "officialSourceTitle": "WBBPE Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "canonicalExamName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "authorityKey": "auth_in_wb_wbcssc",
+      "regionCode": "WB",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://www.westbengalssc.com",
+          "officialSourceTitle": "WBCSSC Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "canonicalExamName": "A&N Administration Common Higher Secondary Level Recruitment Examination",
+      "authorityKey": "auth_in_an_erecruitment",
+      "regionCode": "AN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://erecruitment.andaman.gov.in",
+          "officialSourceTitle": "A&N Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "canonicalExamName": "A&N Administration Combined Matric Level Recruitment Examination",
+      "authorityKey": "auth_in_an_erecruitment",
+      "regionCode": "AN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://erecruitment.andaman.gov.in",
+          "officialSourceTitle": "A&N Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "canonicalExamName": "Andaman & Nicobar Police Constable & Sub-Inspector Examination",
+      "authorityKey": "auth_in_an_police",
+      "regionCode": "AN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.andaman.gov.in",
+          "officialSourceTitle": "A&N Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "appsc_group1",
+      "canonicalExamName": "APPSC Group-I Services Examination",
+      "authorityKey": "auth_in_ap_appsc",
+      "regionCode": "AP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.ap.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "appsc_group2",
+      "canonicalExamName": "APPSC Group-II Services Examination",
+      "authorityKey": "auth_in_ap_appsc",
+      "regionCode": "AP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://psc.ap.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityKey": "auth_in_ap_apslprb",
+      "regionCode": "AP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprb.ap.gov.in",
+          "officialSourceTitle": "APSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "canonicalExamName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityKey": "auth_in_ap_apslprb",
+      "regionCode": "AP",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprb.ap.gov.in",
+          "officialSourceTitle": "APSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "canonicalExamName": "TGPSC Group-I Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "canonicalExamName": "TGPSC Group-II Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "canonicalExamName": "TGPSC Group-III Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "canonicalExamName": "TGPSC Group-IV Services Examination",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tgpsc.gov.in",
+          "officialSourceTitle": "TGPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tslprb.co.in",
+          "officialSourceTitle": "TGSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "canonicalExamName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tslprb.co.in",
+          "officialSourceTitle": "TGSLPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "treirb_teaching",
+      "canonicalExamName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "authorityKey": "auth_in_tg_treirb",
+      "regionCode": "TG",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://treirb.telangana.gov.in",
+          "officialSourceTitle": "TREIRB Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "canonicalExamName": "KPSC Gazetted Probationers Examination (KAS)",
+      "authorityKey": "auth_in_ka_kpsc",
+      "regionCode": "KA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://kpsc.kar.nic.in",
+          "officialSourceTitle": "KPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "canonicalExamName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "authorityKey": "auth_in_ka_kea",
+      "regionCode": "KA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://cetonline.karnataka.gov.in",
+          "officialSourceTitle": "KEA Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ksp_psi",
+      "canonicalExamName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "authorityKey": "auth_in_ka_ksp",
+      "regionCode": "KA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://ksp-recruitment.in",
+          "officialSourceTitle": "KSP Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ksp_cpc",
+      "canonicalExamName": "KSP Civil Police Constable (CPC)",
+      "authorityKey": "auth_in_ka_ksp",
+      "regionCode": "KA",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://ksp-recruitment.in",
+          "officialSourceTitle": "KSP Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "canonicalExamName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "canonicalExamName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "canonicalExamName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "regionCode": "KL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://keralapsc.gov.in",
+          "officialSourceTitle": "Kerala PSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Group I Services Preliminary Examination Press Note",
+          "verifiedFact": "315,000+ candidates applied for Deputy Collector, DSP, and Commercial Tax Officer posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Group I Services Preliminary Examination Press Note",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 90 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "canonicalExamName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Combined Civil Services Examination IV (Group IV & VAO) Notification",
+          "verifiedFact": "1,850,000+ candidates applied for Village Administrative Officer and Junior Assistant subordinate posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://www.tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Combined Civil Services Examination IV (Group IV & VAO) Notification",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 6,244 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tnpsc.gov.in",
+          "officialSourceTitle": "TNPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnusrb_si",
+      "canonicalExamName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tnusrb.tn.gov.in",
+          "officialSourceTitle": "TNUSRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "canonicalExamName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tnusrb.tn.gov.in",
+          "officialSourceTitle": "TNUSRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "canonicalExamName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "authorityKey": "auth_in_tn_tntrb",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tn.gov.in",
+          "officialSourceTitle": "TN TRB Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "canonicalExamName": "TN MRB Recruitment of Assistant Surgeons (General / Specialty)",
+      "authorityKey": "auth_in_tn_tnmrb",
+      "regionCode": "TN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://mrb.tn.gov.in",
+          "officialSourceTitle": "TN MRB Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "canonicalExamName": "Puducherry DPAR General Recruitment (UDC / LDC / VAO)",
+      "authorityKey": "auth_in_py_dpar",
+      "regionCode": "PY",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://recruitment.py.gov.in",
+          "officialSourceTitle": "PY DPAR Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "canonicalExamName": "Puducherry Police Sub-Inspector & Police Constable Recruitment",
+      "authorityKey": "auth_in_py_police",
+      "regionCode": "PY",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.py.gov.in",
+          "officialSourceTitle": "PY Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "canonicalExamName": "Lakshadweep Administration Group C Direct Recruitment / IRBn Constable",
+      "authorityKey": "auth_in_ld_admin",
+      "regionCode": "LD",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OTHER_VERIFIED_SCALE_SIGNAL",
+          "officialSourceUrl": "https://lakshadweep.gov.in",
+          "officialSourceTitle": "LD Admin Official Portal Announcement",
+          "verifiedFact": "Recurring competitive recruitment conducted by sovereign administrative authority.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "apsc_cce",
+      "canonicalExamName": "Combined Competitive Examination",
+      "authorityKey": "auth_in_as_apsc",
+      "regionCode": "AS",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://apsc.nic.in",
+          "officialSourceTitle": "APSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "slrc_adre",
+      "canonicalExamName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "authorityKey": "auth_in_as_slrc",
+      "regionCode": "AS",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Over 1,800,000 candidates registered for 26,000 Class III and IV direct recruitment posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 26,000 posts.",
+          "sourceDate": "2023-2024"
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://assam.gov.in",
+          "officialSourceTitle": "SLRC Assam (ADRE) Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "canonicalExamName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "authorityKey": "auth_in_as_slprb",
+      "regionCode": "AS",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://slprbassam.in",
+          "officialSourceTitle": "SLPRB Assam Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "canonicalExamName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "authorityKey": "auth_in_ar_appsc",
+      "regionCode": "AR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://appsc.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "canonicalExamName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "authorityKey": "auth_in_ar_apssb",
+      "regionCode": "AR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://apssb.nic.in",
+          "officialSourceTitle": "APSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "canonicalExamName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "authorityKey": "auth_in_ar_police",
+      "regionCode": "AR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://arunpol.nic.in",
+          "officialSourceTitle": "Arunachal Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "canonicalExamName": "Manipur Combined Competitive Examination (MCSCC)",
+      "authorityKey": "auth_in_mn_mpsc",
+      "regionCode": "MN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpscmanipur.gov.in",
+          "officialSourceTitle": "MPSC Manipur Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "canonicalExamName": "Manipur Staff Selection Combined Group C & D Recruitment Examination",
+      "authorityKey": "auth_in_mn_mssc",
+      "regionCode": "MN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://manipurssc.mn.gov.in",
+          "officialSourceTitle": "MSSC Manipur Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "canonicalExamName": "Manipur Police Constable & Rifleman Recruitment",
+      "authorityKey": "auth_in_mn_police",
+      "regionCode": "MN",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://manipurpolice.gov.in",
+          "officialSourceTitle": "Manipur Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "canonicalExamName": "Meghalaya Civil Services Combined Examination",
+      "authorityKey": "auth_in_ml_mpsc",
+      "regionCode": "ML",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.meghalaya.gov.in",
+          "officialSourceTitle": "MPSC Meghalaya Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "canonicalExamName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "authorityKey": "auth_in_ml_crb",
+      "regionCode": "ML",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://megpolice.gov.in",
+          "officialSourceTitle": "Meghalaya Police CRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "canonicalExamName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "regionCode": "MZ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.mizoram.gov.in",
+          "officialSourceTitle": "MPSC Mizoram Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "canonicalExamName": "Mizoram Subordinate Services Selection Board Combined Recruitment (Reverted)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "regionCode": "MZ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://mpsc.mizoram.gov.in",
+          "officialSourceTitle": "MPSC Mizoram Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "canonicalExamName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "authorityKey": "auth_in_mz_police",
+      "regionCode": "MZ",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.mizoram.gov.in",
+          "officialSourceTitle": "Mizoram Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "canonicalExamName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "authorityKey": "auth_in_nl_npsc",
+      "regionCode": "NL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://npsc.nagaland.gov.in",
+          "officialSourceTitle": "NPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "canonicalExamName": "Combined Technical Services Examination (CTSE)",
+      "authorityKey": "auth_in_nl_npsc",
+      "regionCode": "NL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://npsc.nagaland.gov.in",
+          "officialSourceTitle": "NPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "canonicalExamName": "Combined Staff Recruitment Examination (CSRE)",
+      "authorityKey": "auth_in_nl_nssb",
+      "regionCode": "NL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://nssb.nagaland.gov.in",
+          "officialSourceTitle": "NSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "canonicalExamName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "authorityKey": "auth_in_nl_police",
+      "regionCode": "NL",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.nagaland.gov.in",
+          "officialSourceTitle": "Nagaland Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "canonicalExamName": "Sikkim State Civil Services Combined Competitive Examination",
+      "authorityKey": "auth_in_sk_spsc",
+      "regionCode": "SK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "canonicalExamName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "authorityKey": "auth_in_sk_spsc",
+      "regionCode": "SK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "canonicalExamName": "Sikkim Police Constable & Follower Recruitment",
+      "authorityKey": "auth_in_sk_police",
+      "regionCode": "SK",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.sikkim.gov.in",
+          "officialSourceTitle": "Sikkim Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "canonicalExamName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "authorityKey": "auth_in_tr_tpsc",
+      "regionCode": "TR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tpsc.tripura.gov.in",
+          "officialSourceTitle": "TPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "canonicalExamName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "authorityKey": "auth_in_tr_jrbt",
+      "regionCode": "TR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jrbtripura.com",
+          "officialSourceTitle": "JRBT Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "canonicalExamName": "Tripura Teachers Eligibility Test (T-TET Paper I & Paper II)",
+      "authorityKey": "auth_in_tr_trbt",
+      "regionCode": "TR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "canonicalExamName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "authorityKey": "auth_in_tr_trbt",
+      "regionCode": "TR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions.",
+          "sourceDate": null
+        }
+      ]
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "canonicalExamName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "authorityKey": "auth_in_tr_police",
+      "regionCode": "TR",
+      "qualificationEvidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tripurapolice.gov.in",
+          "officialSourceTitle": "Tripura Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "sourceDate": null
+        }
+      ]
+    }
+  ]
+}

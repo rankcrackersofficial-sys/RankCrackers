@@ -1,0 +1,243 @@
+{
+  "gate": "GATE_48B2_BATCH0_EXACT_MUTATION_PLAN",
+  "generatedAt": "2026-09-10T11:21:55.068Z",
+  "lane": "AGENT-3_BACKEND_MATERIALIZER",
+  "mode": "STRICT_DRY_RUN_ZERO_WRITES",
+  "totalOperations": 24,
+  "governanceGuarantees": {
+    "PRODUCTION_WRITE_COUNT": 0,
+    "MISSION_CREATE_COUNT": 0,
+    "MISSION_DELETE_COUNT": 0,
+    "GOVERNANCE_FIELDS_OVERWRITTEN": 0,
+    "IMMUTABLE_PROVENANCE_PRESERVED": [
+      "createdAt",
+      "created_at",
+      "createdBy",
+      "publishedAt",
+      "publishedBy",
+      "provenance",
+      "source",
+      "sourceMissionId",
+      "sourceWorkbenchPath",
+      "id"
+    ]
+  },
+  "mutations": [
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examCategory",
+      "beforeValue": "category_pending",
+      "afterValue": "medical_entrance",
+      "reason": "Eliminate category_pending to prevent client category filter bypass.",
+      "sourceAuthority": "NTA_GOVERNED_EXAM_BLUEPRINT"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examFamily",
+      "beforeValue": null,
+      "afterValue": "MEDICAL_ENTRANCE",
+      "reason": "Set first-class exam family dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "scopeType",
+      "beforeValue": null,
+      "afterValue": "ALL_INDIA",
+      "reason": "Set first-class scope dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "jurisdictionType",
+      "beforeValue": null,
+      "afterValue": "CENTRAL",
+      "reason": "Set first-class jurisdiction dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "fieldPath": "displayCategory",
+      "beforeValue": null,
+      "afterValue": "Medical Entrance",
+      "reason": "Set standardized user display category.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "state",
+      "beforeValue": "Rajasthan",
+      "afterValue": "Central",
+      "reason": "Eliminate false Rajasthan state drift on All-India NEET.",
+      "sourceAuthority": "NTA_AUTHORITY_BINDING"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "org",
+      "beforeValue": "Rajasthan",
+      "afterValue": "National Testing Agency",
+      "reason": "Bind official central conducting agency.",
+      "sourceAuthority": "NTA_AUTHORITY_BINDING"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "examCategory",
+      "beforeValue": "competitive",
+      "afterValue": "medical_entrance",
+      "reason": "Standardize examCategory to medical_entrance.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "fieldPath": "examFamily",
+      "beforeValue": null,
+      "afterValue": "MEDICAL_ENTRANCE",
+      "reason": "Set first-class exam family dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "fieldPath": "organization",
+      "beforeValue": "Rajasthan",
+      "afterValue": "National Testing Agency",
+      "reason": "Align canonical workbench organization with NTA.",
+      "sourceAuthority": "NTA_AUTHORITY_BINDING"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "fieldPath": "exam_category",
+      "beforeValue": "competitive",
+      "afterValue": "medical_entrance",
+      "reason": "Align workbench exam_category.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "state",
+      "beforeValue": null,
+      "afterValue": "Rajasthan",
+      "reason": "Populate missing state field for state civil services exam.",
+      "sourceAuthority": "RPSC_AUTHORITY_BINDING"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "stateCode",
+      "beforeValue": "RJ",
+      "afterValue": "RJ",
+      "reason": "Confirm standard ISO state code.",
+      "sourceAuthority": "RPSC_AUTHORITY_BINDING"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "jurisdictionType",
+      "beforeValue": null,
+      "afterValue": "STATE",
+      "reason": "Set first-class jurisdiction dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "regionCode",
+      "beforeValue": null,
+      "afterValue": "RJ",
+      "reason": "Set first-class region dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "scopeType",
+      "beforeValue": null,
+      "afterValue": "STATE_SPECIFIC",
+      "reason": "Set first-class scope dimension without collapsing into examCategory.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "examFamily",
+      "beforeValue": null,
+      "afterValue": "CIVIL_SERVICES",
+      "reason": "Set first-class exam family dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "fieldPath": "displayCategory",
+      "beforeValue": null,
+      "afterValue": "State Civil Services",
+      "reason": "Set display category.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "fieldPath": "scopeType",
+      "beforeValue": null,
+      "afterValue": "STATE_SPECIFIC",
+      "reason": "Set scope dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "collection": "recruitments",
+      "fieldPath": "examFamily",
+      "beforeValue": null,
+      "afterValue": "CIVIL_SERVICES",
+      "reason": "Set exam family dimension.",
+      "sourceAuthority": "CANONICAL_TAXONOMY_2026"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.smartEntryEnabled",
+      "beforeValue": true,
+      "afterValue": false,
+      "reason": "Neutralize false smart entry while syllabus/crucible is unready.",
+      "sourceAuthority": "ACADEMIC_READINESS_GOVERNANCE"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.quickEntryEnabled",
+      "beforeValue": true,
+      "afterValue": false,
+      "reason": "Neutralize false quick entry while syllabus/crucible is unready.",
+      "sourceAuthority": "ACADEMIC_READINESS_GOVERNANCE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.smartEntryEnabled",
+      "beforeValue": true,
+      "afterValue": false,
+      "reason": "Neutralize false smart entry on unready 0-digibook catalog mission.",
+      "sourceAuthority": "ACADEMIC_READINESS_GOVERNANCE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "fieldPath": "visibility.quickEntryEnabled",
+      "beforeValue": true,
+      "afterValue": false,
+      "reason": "Neutralize false quick entry on unready 0-digibook catalog mission.",
+      "sourceAuthority": "ACADEMIC_READINESS_GOVERNANCE"
+    }
+  ]
+}

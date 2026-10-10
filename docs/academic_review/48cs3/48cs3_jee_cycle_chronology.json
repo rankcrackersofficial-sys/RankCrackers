@@ -1,0 +1,57 @@
+{
+  "state": {
+    "missionId": "jee_main_2026",
+    "cycle": "JEE Main 2026",
+    "currentCycleStatus": "RESULT_DECLARED_CYCLE_CONCLUDED",
+    "latestOfficialEvent": "Paper 2 final scores published",
+    "HAS_EXAM_OCCURRED": "YES",
+    "HAS_RESULT_OCCURRED": "YES",
+    "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+    "IS_PROCESS_UPDATE_STILL_ACTIVE": "NO",
+    "opportunitySignalActive": "NO",
+    "processUpdateSignalActive": "NO",
+    "fullCurrentStateResolved": true
+  },
+  "events": [
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "jee_main_2026",
+      "officialCycleIdentity": "JEE Main 2026 Sessions 1 and 2",
+      "eventType": "RESULT",
+      "officialTitle": "Declaration of Result/NTA Scores for JEE Main 2026 Session 2 Paper 1",
+      "officialListingPage": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "exactDocumentUrl": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "pageOrSection": "current events listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "missionId": "jee_main_2026",
+      "officialCycleIdentity": "JEE Main 2026 Sessions 1 and 2",
+      "eventType": "FINAL_ANSWER_KEY",
+      "officialTitle": "Final Answer Keys JEE Main 2026 Session II",
+      "officialListingPage": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "exactDocumentUrl": "https://jeemain.nta.nic.in/document-category/current-events/",
+      "publicationDate": null,
+      "effectiveDate": null,
+      "pageOrSection": "current events listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    }
+  ]
+}

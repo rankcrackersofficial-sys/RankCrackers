@@ -1,0 +1,57 @@
+{
+  "verificationCode": "RC_47C8V_INPUT_HANDOFF_HASH_VERIFICATION",
+  "executedAt": "2026-09-10T08:22:05.299Z",
+  "metrics": {
+    "HANDOFF_FILE_COUNT": 6,
+    "HANDOFF_HASH_VERIFIED_COUNT": 6,
+    "HANDOFF_HASH_MISMATCH_COUNT": 0,
+    "HANDOFF_MISSING_FILE_COUNT": 0,
+    "HANDOFF_PATH_ESCAPE_COUNT": 0,
+    "PENDING_GENERATION_HASH_COUNT": 0
+  },
+  "details": [
+    {
+      "file": "authority_registry.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_national_authority_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 7114,
+      "sha256": "4adbded1044043133c210c8885ce938d78e5e6f07729050b8eaad5dec3dc49fd"
+    },
+    {
+      "file": "national_materialization_readiness.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_national_materialization_readiness.json",
+      "status": "VERIFIED",
+      "byteLength": 24428,
+      "sha256": "b655d6115924dbe215ea85eef06ac71c764b6bfe549d4ae9de88f35c8955e71d"
+    },
+    {
+      "file": "national_mission_manifest.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_national_mission_manifest.json",
+      "status": "VERIFIED",
+      "byteLength": 103673,
+      "sha256": "b1c5a8502472e853542193e6411728179bf459fa5039afb960e4370dabcd4989"
+    },
+    {
+      "file": "nta_document_bindings.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_nta_shared_host_document_binding_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 1367,
+      "sha256": "1b14b0f02eda5526d5c6ec691c327e1bf7aa8f6e00132f1d5c91930fcc84f0b6"
+    },
+    {
+      "file": "source_platform_classification_registry.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_source_platform_classification_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 1682,
+      "sha256": "35d0ac134306782098fe55a17c645fc0f56fd706e39c4458b00ab2a797664298"
+    },
+    {
+      "file": "state_national_overlap_reconciliation.json",
+      "resolvedPath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47c8\\47c8_state_national_overlap_reconciliation.json",
+      "status": "VERIFIED",
+      "byteLength": 1324,
+      "sha256": "d865d456b1879b04f74816c01398cec134e409ee2ebe000d283a28b8abd217d4"
+    }
+  ],
+  "verificationPass": true
+}

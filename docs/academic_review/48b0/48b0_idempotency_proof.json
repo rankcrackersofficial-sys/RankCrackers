@@ -1,0 +1,16 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "IDEMPOTENCY_PROOF",
+  "generatedAt": "2026-09-10T10:39:12.895Z",
+  "pass1Summary": {
+    "mode": "DRY_RUN_PASS_1",
+    "plannedMutationsCount": 4
+  },
+  "pass2Summary": {
+    "mode": "DRY_RUN_PASS_2_AGAINST_SIMULATED_POST_REPAIR_STATE",
+    "DRY_RUN_2_CREATE_COUNT": 0,
+    "DRY_RUN_2_UPDATE_COUNT": 0,
+    "DRY_RUN_2_DELETE_COUNT": 0,
+    "idempotencyCertified": true
+  }
+}

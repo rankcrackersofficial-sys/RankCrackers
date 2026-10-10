@@ -1,0 +1,14 @@
+{
+  "gate": "47UI5",
+  "surface": "Syllabus Tree",
+  "audit": "Dynamic subject discovery and node resolution",
+  "findings": {
+    "static_hardcoded_subjects_removed": true,
+    "dynamic_subject_discovery": "Discovers all subjects present in Firestore syllabus nodes",
+    "empty_or_loading_state": "Distinct CircularProgressIndicator during fetch; Preparing/Empty state when no nodes exist"
+  },
+  "metrics": {
+    "STUDENT_VISIBLE_SYLLABUS_FAKE_ROW_COUNT": 0
+  },
+  "status": "PASSED"
+}

@@ -1,0 +1,14 @@
+{
+  "gate": "47UI5",
+  "device_serial": "RZCW12FBFXZ",
+  "flow": [
+    "User authenticated -> Mission Realm loaded 12 Central Exams, 2 State Exams",
+    "Tapped Logout button -> SessionManager signed out -> Login screen rendered",
+    "Logged back in with same credentials -> Mission Realm loaded immediately without hot restart"
+  ],
+  "metrics": {
+    "SAME_UID_RELOGIN_ZERO_CATALOG_COUNT": 0,
+    "HOT_RESTART_REQUIRED_COUNT": 0
+  },
+  "status": "VERIFIED_ON_PHYSICAL_SAMSUNG_DEVICE"
+}

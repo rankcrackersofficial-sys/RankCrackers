@@ -1,0 +1,30 @@
+{
+  "gate": "47UI5",
+  "metrics": [
+    {
+      "name": "READINESS",
+      "source": "ReadinessEngine.calculate()",
+      "firestore_path": "users/{uid}/academic_state/readiness",
+      "fallback_behavior": "Returns 0.0 + 'Pending Evidence' when unmeasured"
+    },
+    {
+      "name": "COVERAGE",
+      "source": "CoverageEngine.calculate()",
+      "firestore_path": "users/{uid}/academic_state/coverage",
+      "fallback_behavior": "Returns 0.0 + 'Pending Evidence' when unmeasured"
+    },
+    {
+      "name": "STREAK",
+      "source": "StreakEngine.calculate()",
+      "firestore_path": "users/{uid}/academic_state/streak",
+      "fallback_behavior": "Returns 0 + '0 Days' when unmeasured"
+    },
+    {
+      "name": "RISK",
+      "source": "RiskEngine.calculate()",
+      "firestore_path": "users/{uid}/academic_state/risk",
+      "fallback_behavior": "Returns 'Pending Evidence' when unmeasured"
+    }
+  ],
+  "status": "PASSED"
+}

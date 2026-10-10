@@ -1,0 +1,59 @@
+{
+  "contractName": "47b_schema_mapping_contract",
+  "logicalHierarchy": "JURISDICTION -> REGION / SECTOR -> AUTHORITY -> PERMANENT MAJOR EXAM MISSION -> VARIANT",
+  "projections": {
+    "mission_realms": {
+      "path": "mission_realms/{missionId}",
+      "purpose": "Root authority, academic structure, Crucible, official documents",
+      "mappedFields": {
+        "id": "string (matches missionId)",
+        "title": "string",
+        "authorityGroupKey": "string (e.g. nta, upsc, ssc, rpsc, uppsc)",
+        "authorityDisplayName": "string",
+        "jurisdictionLevel": "CENTRAL | STATE | UT",
+        "stateCode": "string | null",
+        "stateName": "string | null",
+        "region": "string (e.g. NATIONAL, NORTH, WEST)",
+        "sector": "string | null (e.g. ENGINEERING, MEDICAL, CIVIL_SERVICES)",
+        "examCategory": "competitive | qualifying | category_pending",
+        "examScope": "PUBLIC_STUDENT_ELIGIBLE | RESTRICTED",
+        "studentHierarchyPath": "string (e.g. CENTRAL/NATIONAL/NTA/JEE_MAIN)",
+        "variants": "array of variant objects",
+        "latestOfficialSource": "object (effective notification, syllabus, scheme, corrigendum)",
+        "pyqArchiveReference": "object (unbounded archive path, provenance)",
+        "readiness": "object (independent truthful readiness flags)",
+        "status": "ACTIVE | PREPARING"
+      }
+    },
+    "recruitments": {
+      "path": "recruitments/{missionId}",
+      "purpose": "Recruitment specification & Founder UI mirror",
+      "mappedFields": {
+        "id": "string (matches missionId)",
+        "title": "string",
+        "organization": "string (authorityDisplayName)",
+        "authorityGroupKey": "string",
+        "jurisdictionLevel": "CENTRAL | STATE | UT",
+        "stateCode": "string | null",
+        "stateName": "string | null",
+        "status": "published | draft",
+        "nature": "ACTIVE | PASSIVE"
+      }
+    },
+    "student_mission_catalog": {
+      "path": "student_mission_catalog/{missionId}",
+      "purpose": "Student client discovery, visibility, and catalog readiness",
+      "mappedFields": {
+        "id": "string (matches missionId)",
+        "title": "string",
+        "authorityGroupKey": "string",
+        "authorityDisplayName": "string",
+        "jurisdictionLevel": "CENTRAL | STATE | UT",
+        "state": "string (stateName or Central)",
+        "catalogStatus": "LIVE | PREPARING | COMING_SOON",
+        "studentMessage": "string",
+        "visibility": "object (studentVisible, catalogVisible, userPanelVisible, etc.)"
+      }
+    }
+  }
+}

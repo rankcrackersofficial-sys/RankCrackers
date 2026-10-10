@@ -1,0 +1,25 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "RuleType Classification vs String Heuristics Match Dimension Audit",
+  "evaluationMethods": {
+    "academicMatch": {
+      "oldMethod": "ruleId.toLowerCase().includes(\"discipline\") || ruleId.toLowerCase().includes(\"subject\")",
+      "newMethod": "res.ruleType === \"DISCIPLINE_REQUIRED\" || res.ruleType === \"ACADEMIC_SUBJECT\"",
+      "guarantee": "Zero reliance on arbitrary naming conventions in ruleId."
+    },
+    "qualificationMatch": {
+      "oldMethod": "ruleId.toLowerCase().includes(\"qualification\") || ruleId.toLowerCase().includes(\"degree\")",
+      "newMethod": "res.ruleType === \"QUALIFICATION_MIN\" || res.ruleType === \"AGE_MIN\" || res.ruleType === \"AGE_MAX\"",
+      "guarantee": "Accurately groups core statutory qualification and age rules."
+    },
+    "locationMatch": {
+      "oldMethod": "profile.domicileState ? true : null",
+      "newMethod": "res.ruleType === \"DOMICILE_REQUIRED\" || res.ruleType === \"LOCATION_REQUIRED\"",
+      "guarantee": "Merely possessing a domicile state does NOT automatically match. Must be evaluated against an explicit official domicile rule."
+    }
+  },
+  "verificationMetrics": {
+    "RULE_ID_STRING_HEURISTIC_MATCH_COUNT": 0,
+    "LOCATION_PRESENT_AUTO_MATCH_COUNT": 0
+  }
+}

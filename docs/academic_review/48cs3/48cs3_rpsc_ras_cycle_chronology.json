@@ -1,0 +1,57 @@
+{
+  "state": {
+    "missionId": "rpsc_ras_prelims",
+    "cycle": "RAS 2024",
+    "currentCycleStatus": "MAINS_OCCURRED_LATER_STAGE_UNRESOLVED",
+    "latestOfficialEvent": "Mains papers published 19 Jun 2025",
+    "HAS_EXAM_OCCURRED": "YES",
+    "HAS_RESULT_OCCURRED": "YES",
+    "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+    "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+    "opportunitySignalActive": "NO",
+    "processUpdateSignalActive": "UNRESOLVED",
+    "fullCurrentStateResolved": false
+  },
+  "events": [
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "rpsc_ras_prelims",
+      "officialCycleIdentity": "RAS Combined Competitive Examination 2024",
+      "eventType": "PRELIM_RESULT",
+      "officialTitle": "Result Preamble and Cut-Off Marks, RAS Pre 2024",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/Result.aspx",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/Result.aspx",
+      "publicationDate": "2025-02-20",
+      "effectiveDate": "2025-02-20",
+      "pageOrSection": "result listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    },
+    {
+      "authorityId": "auth_in_rj_rpsc",
+      "missionId": "rpsc_ras_prelims",
+      "officialCycleIdentity": "RAS Combined Competitive Examination 2024",
+      "eventType": "MAIN_QUESTION_PAPERS",
+      "officialTitle": "RAS Mains 2024 Papers I-IV",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/previousquestionpapers.aspx",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/previousquestionpapers.aspx",
+      "publicationDate": "2025-06-19",
+      "effectiveDate": "2025-06-19",
+      "pageOrSection": "question-paper listing",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    }
+  ]
+}

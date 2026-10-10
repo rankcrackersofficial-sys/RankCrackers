@@ -1,0 +1,87 @@
+{
+  "gate": "GATE_48B2_NEET_EXACT_REPAIR",
+  "targetMissionId": "neet_(ug)-2027",
+  "displayName": "NEET (UG)",
+  "defectsResolved": [
+    "Removed category_pending from student_mission_catalog",
+    "Removed state: \"Rajasthan\" contamination from recruitments",
+    "Removed org: \"Rajasthan\" contamination from recruitments",
+    "Separated jurisdictionType (CENTRAL), scopeType (ALL_INDIA), examFamily (MEDICAL_ENTRANCE), and displayCategory (Medical Entrance)",
+    "Bound canonical National Testing Agency (NTA) authority metadata"
+  ],
+  "projections": {
+    "student_mission_catalog": {
+      "beforeSha256": "fd680f4b81eff479b1df92494f803748f09971e8450c5d00ab14281f408b3747",
+      "afterSha256": "aeda716a2f733d710b7841c2af2dfb9b60f53d8343c7135125e6281f14586dd9",
+      "mutatedFields": {
+        "examCategory": {
+          "before": "category_pending",
+          "after": "medical_entrance"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "MEDICAL_ENTRANCE"
+        },
+        "scopeType": {
+          "before": null,
+          "after": "ALL_INDIA"
+        },
+        "jurisdictionType": {
+          "before": null,
+          "after": "CENTRAL"
+        },
+        "conductingBody": {
+          "before": null,
+          "after": "National Testing Agency"
+        }
+      }
+    },
+    "recruitments": {
+      "beforeSha256": "968a369bfdd73a03f1ca50e4b89ef327ae74e5923ac01335126ea82800a730a9",
+      "afterSha256": "d8bbf06a0e99f573221eae7a7b839e9d2f85bd028f1cc9ca40c475d96319d7f5",
+      "mutatedFields": {
+        "state": {
+          "before": "Rajasthan",
+          "after": "Central"
+        },
+        "org": {
+          "before": "Rajasthan",
+          "after": "National Testing Agency"
+        },
+        "examCategory": {
+          "before": "competitive",
+          "after": "medical_entrance"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "MEDICAL_ENTRANCE"
+        },
+        "scopeType": {
+          "before": null,
+          "after": "ALL_INDIA"
+        }
+      }
+    },
+    "mission_realms": {
+      "beforeSha256": "00161ee61767903f59ed578dfee25f342102985a4e38c7d17d91c9cf1620138e",
+      "afterSha256": "6fe080a0cefe9008bcd56ff9e65a7331ee02f68a3de462773a2a40ddbeb3c9b3",
+      "mutatedFields": {
+        "organization": {
+          "before": "Rajasthan",
+          "after": "National Testing Agency"
+        },
+        "exam_category": {
+          "before": "competitive",
+          "after": "medical_entrance"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "MEDICAL_ENTRANCE"
+        }
+      }
+    }
+  },
+  "governancePreservation": {
+    "OVERWRITE_COUNT": 0
+  }
+}

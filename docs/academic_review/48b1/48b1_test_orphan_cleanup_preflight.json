@@ -1,0 +1,56 @@
+{
+  "gate": "GATE_48B1_TEST_ORPHAN_CLEANUP_PREFLIGHT",
+  "generatedAt": "2026-09-10T11:03:34.015Z",
+  "targetId": "test_mission_catalog_bridge",
+  "currentState": {
+    "mission_realms": {
+      "exists": false
+    },
+    "recruitments": {
+      "exists": true,
+      "data": {
+        "examCategory": "competitive",
+        "nature": "recruitment",
+        "org": "Rajasthan",
+        "year": 2026,
+        "missionPlan": {
+          "totalDays": 100
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            "Paper 1"
+          ]
+        },
+        "title": "TEST Mission Catalog Bridge",
+        "version": "1.0.0",
+        "createdAt": "2026-07-10T10:57:38.864Z",
+        "variantCode": "universal",
+        "examId": "test_mission_catalog_bridge",
+        "titleHindi": "टेस्ट मिशन कैटलॉग ब्रिज",
+        "id": "test_mission_catalog_bridge",
+        "state": "Rajasthan",
+        "examScope": "STATE_LEVEL",
+        "missionStructureType": "SINGLE_STAGE",
+        "status": "draft"
+      }
+    },
+    "student_mission_catalog": {
+      "exists": false
+    }
+  },
+  "classification": "TEST_ORPHAN_SINGLETON",
+  "actionStatus": "HELD_NO_PRODUCTION_DELETE",
+  "rationale": "Zero production writes rule strictly observed in Gate 48B1. Orphan deletion is encapsulated in standalone script.",
+  "cleanupScript": {
+    "scriptPath": "scripts/cleanup_test_mission_catalog_bridge.js",
+    "commandDryRun": "node scripts/cleanup_test_mission_catalog_bridge.js",
+    "commandApply": "node scripts/cleanup_test_mission_catalog_bridge.js --apply",
+    "safetyGuarantees": [
+      "Checks document existence across all 3 collections before deletion",
+      "Targeted exclusively to document ID test_mission_catalog_bridge",
+      "Requires explicit --apply flag to execute writes",
+      "Zero impact on legitimate production missions"
+    ]
+  }
+}

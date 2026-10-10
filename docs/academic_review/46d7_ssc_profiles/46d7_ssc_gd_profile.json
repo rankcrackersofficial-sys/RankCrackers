@@ -1,0 +1,46 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_gd",
+  "canonicalDisplayName": "SSC GD Constable",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["COMPUTER_BASED_EXAMINATION_MCQ"],
+    "unsupportedStages": [
+      { "stageName": "Physical Efficiency Test (PET) / Physical Standard Test (PST)", "reason": "Physical Endurance Screening" },
+      { "stageName": "Detailed Medical Examination (DME) & Review Medical Examination (RME)", "reason": "Medical Board Assessment" }
+    ]
+  },
+  "examinationStructure": {
+    "examType": "COMPUTER_BASED_EXAMINATION",
+    "totalQuestions": 80,
+    "totalMarks": 160,
+    "durationMinutes": 60,
+    "negativeMarkingPerQuestion": 0.25,
+    "sections": [
+      { "sectionId": "gi_reasoning", "sectionName": "Part-A: General Intelligence and Reasoning", "questions": 20, "marks": 40 },
+      { "sectionId": "general_knowledge_awareness", "sectionName": "Part-B: General Knowledge and General Awareness", "questions": 20, "marks": 40 },
+      { "sectionId": "elementary_mathematics", "sectionName": "Part-C: Elementary Mathematics", "questions": 20, "marks": 40 },
+      { "sectionId": "language_english_or_hindi", "sectionName": "Part-D: English OR Hindi (Choice)", "questions": 20, "marks": 40, "isLanguageChoice": true }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "SINGLE_ACADEMIC_TRACK",
+    "variants": [
+      { "variantKey": "gd_constable_common", "variantName": "Constable (GD) in BSF, CISF, CRPF, SSB, ITBP, AR, SSF" }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "warningCode": "RC_47A4R1_IBPS_CROSS_LANE_WARNING",
+  "executedAt": "2026-09-10T07:36:25.924Z",
+  "stateSideIbpsRrbIdentity": [
+    "ibps_crp_rrb_officers",
+    "ibps_crp_rrb_office_assistant"
+  ],
+  "nationalSideIdentityIfAvailable": [
+    "ibps_rrb_po",
+    "ibps_rrb_clerk"
+  ],
+  "IDENTITY_MATCH": false,
+  "CROSS_LANE_RECONCILIATION_REQUIRED": true,
+  "recommendation": "Flag IBPS RRB identities for cross-lane reconciliation before final Master Manifest merge."
+}

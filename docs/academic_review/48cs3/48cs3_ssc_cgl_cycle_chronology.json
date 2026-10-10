@@ -1,0 +1,57 @@
+{
+  "state": {
+    "missionId": "ssc_cgl",
+    "cycle": "CGL 2026",
+    "currentCycleStatus": "APPLICATION_CLOSED_EXAM_RESULT_UNRESOLVED",
+    "latestOfficialEvent": "Application reopening notice, 23 Jun 2026",
+    "HAS_EXAM_OCCURRED": "UNRESOLVED",
+    "HAS_RESULT_OCCURRED": "UNRESOLVED",
+    "IS_APPLICATION_OPPORTUNITY_CURRENTLY_ACTIVE": "NO",
+    "IS_PROCESS_UPDATE_STILL_ACTIVE": "UNRESOLVED",
+    "opportunitySignalActive": "NO",
+    "processUpdateSignalActive": "UNRESOLVED",
+    "fullCurrentStateResolved": false
+  },
+  "events": [
+    {
+      "authorityId": "auth_in_ssc",
+      "missionId": "ssc_cgl",
+      "officialCycleIdentity": "Combined Graduate Level Examination 2026",
+      "eventType": "NOTIFICATION",
+      "officialTitle": "Notice of Combined Graduate Level Examination 2026",
+      "officialListingPage": "https://ssc.gov.in/",
+      "exactDocumentUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2025.pdf",
+      "publicationDate": "2026-05-21",
+      "effectiveDate": "2026-05-21",
+      "pageOrSection": "notice; p.71 application instructions",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    },
+    {
+      "authorityId": "auth_in_ssc",
+      "missionId": "ssc_cgl",
+      "officialCycleIdentity": "Combined Graduate Level Examination 2026",
+      "eventType": "APPLICATION_REOPENING",
+      "officialTitle": "Reopening of Online Application Form Window for CGL 2026",
+      "officialListingPage": "https://ssc.gov.in/",
+      "exactDocumentUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/CGLE_Reopen_23062026.pdf",
+      "publicationDate": "2026-06-23",
+      "effectiveDate": "2026-06-23",
+      "pageOrSection": "opening paragraphs; prior window 21 May-22 Jun",
+      "retrievalStatus": "WEB_CONTENT_RETRIEVED",
+      "byteLength": null,
+      "sha256": null,
+      "verificationState": "URL_CONTENT_VERIFIED",
+      "affectsMissionTruth": false,
+      "affectsCareerSignal": true,
+      "affectsAcademicTruth": false,
+      "affectsPyqPattern": false
+    }
+  ]
+}

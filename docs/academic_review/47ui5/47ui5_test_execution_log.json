@@ -1,0 +1,10 @@
+{
+  "gate": "47UI5",
+  "command": "flutter test test/features/auth/student_professional_auth_profile_route_test.dart",
+  "exit_code": 0,
+  "total_tests": 37,
+  "passed_tests": 37,
+  "failed_tests": 0,
+  "TEST_EXIT_CODE": 0,
+  "status": "ALL_TESTS_PASSED"
+}

@@ -1,0 +1,10 @@
+{
+  "testCode": "RC_47B2_VARIANT_VALIDATION_TEST",
+  "executedAt": "2026-09-10T06:00:00.758Z",
+  "metrics": {
+    "duplicateVariantRejected": true,
+    "hasPlaceholderDefaultVariant": false,
+    "PLACEHOLDER_VARIANT_COUNT": 0,
+    "pass": true
+  }
+}

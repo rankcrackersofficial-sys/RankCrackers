@@ -1,0 +1,63 @@
+{
+  "oracleCode": "RC_47C7V2_AFCAT_ROUTE_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.273Z",
+  "metrics": {
+    "AFCAT_ORACLE_ROUTE_COUNT": 5,
+    "EXEMPT_ENTRY_ROUTE_COUNT": 2,
+    "WRITTEN_EXAM_PARTICIPATING_ROUTE_COUNT": 3
+  },
+  "routes": [
+    {
+      "routeId": "flying",
+      "displayName": "Flying Branch",
+      "usesAfcatWrittenExam": true,
+      "officialNotification": "AFCAT Cycle 02/2026 Notification",
+      "notificationClause": "Para 1 & Para 8(a): Scheme of Online Examination for Flying Branch (100 Qs, 300 marks, 2 hours)",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#para-8-a"
+    },
+    {
+      "routeId": "ground_duty_technical",
+      "displayName": "Ground Duty Technical",
+      "usesAfcatWrittenExam": true,
+      "officialNotification": "AFCAT Cycle 02/2026 Notification",
+      "notificationClause": "Para 1 & Para 8(a): Scheme of Online Examination for Ground Duty (Technical)",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#para-8-a"
+    },
+    {
+      "routeId": "ground_duty_non_technical",
+      "displayName": "Ground Duty Non-Technical",
+      "usesAfcatWrittenExam": true,
+      "officialNotification": "AFCAT Cycle 02/2026 Notification",
+      "notificationClause": "Para 1 & Para 8(a): Scheme of Online Examination for Ground Duty (Non-Technical)",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#para-8-a"
+    },
+    {
+      "routeId": "ncc_special_entry",
+      "displayName": "NCC Special Entry",
+      "usesAfcatWrittenExam": false,
+      "officialNotification": "AFCAT Cycle 02/2026 Notification",
+      "notificationClause": "Para 3(e) & Para 6(b): NCC Air Wing Senior Division 'C' Certificate holders are exempted from AFCAT online written examination and shortlisted directly for AFSB testing.",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#para-3-e"
+    },
+    {
+      "routeId": "gate_entry",
+      "displayName": "GATE Score Entry",
+      "usesAfcatWrittenExam": false,
+      "officialNotification": "AFCAT Cycle 02/2026 Notification",
+      "notificationClause": "Para 3(f) & Para 6(c): Candidates apply based on valid GATE score (minimum qualifying cut-off) in designated engineering disciplines and are exempted from AFCAT online written examination.",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#para-3-f"
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_AFCAT_ROUTE_TRACEABILITY",
+      "assertion": "Every declared recruitment route in AFCAT must have an explicit, resolvable sourceEvidenceRef.",
+      "failCondition": "Any route lacks sourceEvidenceRef."
+    },
+    {
+      "ruleId": "ORACLE_AFCAT_NON_ACADEMIC_VARIANT_ISOLATION",
+      "assertion": "academicVariants array in afcat mission must be empty ([]); branch/entry routes must be modeled as recruitment routes, not academic variants.",
+      "failCondition": "academicVariants contains recruitment routes or branches."
+    }
+  ]
+}

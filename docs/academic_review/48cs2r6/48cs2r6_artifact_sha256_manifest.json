@@ -1,0 +1,44 @@
+{
+  "gate": "48CS2R6",
+  "contract": "RC_48CS2R6_REAL_PACKAGE_SCHEMA_NORMALIZATION_AND_BYTE_AUTHORITY_BARRIER",
+  "timestamp": "2026-09-10T13:05:58.654Z",
+  "sealedLast": true,
+  "artifactCount": 7,
+  "artifacts": [
+    {
+      "filename": "48cs2r6_evidence_state_contract.json",
+      "byteLength": 3364,
+      "sha256": "8237a26fb4ce58629fe369ede7802a43924506bd29af12ecf1007c4e9f4d5619"
+    },
+    {
+      "filename": "48cs2r6_rule_type_normalization.json",
+      "byteLength": 3085,
+      "sha256": "c070dcbbada62165ce277a8969da986e740ac32dfd936f36c12dfdb632c4030e"
+    },
+    {
+      "filename": "48cs2r6_fact_verification_levels.json",
+      "byteLength": 1897,
+      "sha256": "0030e3cf0083f275934c040348b6f24c982b15468df760055481e00de06fffd6"
+    },
+    {
+      "filename": "48cs2r6_real_package_barrier_tests.json",
+      "byteLength": 3395,
+      "sha256": "55ebfce062550eb074903af8c99733fdeff15a3816553d61acd7b59be33d8cc8"
+    },
+    {
+      "filename": "48cs2r6_rpsc_scan_safety.json",
+      "byteLength": 1552,
+      "sha256": "e6c2892338435e801fa5295798c80cbd329c65f2772d9381e053a3f28c734b3c"
+    },
+    {
+      "filename": "48cs2r6_neet_year_safety.json",
+      "byteLength": 1236,
+      "sha256": "fc8dd90c7bdb2fe54354fe408957a99885186eb0a3110fc138f0dca21c895fec"
+    },
+    {
+      "filename": "48cs2r6_final_report.md",
+      "byteLength": 4452,
+      "sha256": "68da18c5b7d1cfad092b170d18803e97b5d2faf357bca721d2da2302c2ecd6c4"
+    }
+  ]
+}

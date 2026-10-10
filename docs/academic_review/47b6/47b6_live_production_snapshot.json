@@ -1,0 +1,4221 @@
+{
+  "snapshotCode": "RC_47B6_LIVE_PRODUCTION_SNAPSHOT",
+  "executedAt": "2026-09-10T07:08:16.160Z",
+  "projectId": "rankcrackers-55",
+  "LIVE_FIRESTORE_READ_SUCCESS": "YES",
+  "metrics": {
+    "MISSION_REALMS_LIVE_COUNT": 15,
+    "RECRUITMENTS_LIVE_COUNT": 16,
+    "STUDENT_MISSION_CATALOG_LIVE_COUNT": 15
+  },
+  "snapshotData": {
+    "mission_realms": {
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realm_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_name": "RPSC 1st Grade",
+        "recruitment_name": "RPSC 1st Grade",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2026,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "STATE",
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 77000000
+        },
+        "stateName": "Rajasthan",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission"
+      },
+      "jee_main_2026": {
+        "id": "jee_main_2026",
+        "realm_id": "jee_main_2026",
+        "exam_category": "qualifying",
+        "organization": "INDIA",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "CENTRAL",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 357000000
+        },
+        "stateName": null,
+        "stateCode": null,
+        "exam_name": "JEE Main",
+        "authorityGroupKey": "nta",
+        "recruitment_name": "JEE Main",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "neet_(ug)-2027": {
+        "id": "neet_(ug)-2027",
+        "realm_id": "neet_(ug)-2027",
+        "exam_category": "competitive",
+        "organization": "Rajasthan",
+        "exam_year": 2027,
+        "status": "STAGED",
+        "manifestedAt": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "created_at": {
+          "_seconds": 1788958752,
+          "_nanoseconds": 348000000
+        },
+        "jurisdictionLevel": "CENTRAL",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 721000000
+        },
+        "stateName": null,
+        "stateCode": null,
+        "exam_name": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "recruitment_name": "NEET (UG)",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "rpsc_ras_prelims": {
+        "id": "rpsc_ras_prelims",
+        "realm_id": "rpsc_ras_prelims",
+        "exam_name": "RPSC RAS – Prelims",
+        "recruitment_name": "RPSC RAS – Prelims",
+        "exam_category": "civil_services",
+        "organization": "Rajasthan",
+        "status": "STAGED",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "created_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      },
+      "ssc_cgl": {
+        "id": "ssc_cgl",
+        "realm_id": "ssc_cgl",
+        "exam_name": "SSC CGL",
+        "recruitment_name": "SSC CGL",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "created_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      },
+      "ssc_chsl": {
+        "id": "ssc_chsl",
+        "realm_id": "ssc_chsl",
+        "exam_name": "SSC CHSL",
+        "recruitment_name": "SSC CHSL",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      },
+      "ssc_cpo": {
+        "id": "ssc_cpo",
+        "realm_id": "ssc_cpo",
+        "exam_name": "SSC CPO",
+        "recruitment_name": "SSC CPO",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "created_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      },
+      "ssc_gd": {
+        "id": "ssc_gd",
+        "realm_id": "ssc_gd",
+        "exam_name": "SSC GD",
+        "recruitment_name": "SSC GD",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "created_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      },
+      "ssc_hindi_translators": {
+        "id": "ssc_hindi_translators",
+        "realm_id": "ssc_hindi_translators",
+        "exam_name": "SSC Combined Hindi Translators",
+        "recruitment_name": "SSC Combined Hindi Translators",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      },
+      "ssc_je": {
+        "id": "ssc_je",
+        "realm_id": "ssc_je",
+        "exam_name": "SSC JE",
+        "recruitment_name": "SSC JE",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "created_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      },
+      "ssc_mts_havaldar": {
+        "id": "ssc_mts_havaldar",
+        "realm_id": "ssc_mts_havaldar",
+        "exam_name": "SSC MTS & Havaldar",
+        "recruitment_name": "SSC MTS & Havaldar",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      },
+      "ssc_selection_post": {
+        "id": "ssc_selection_post",
+        "realm_id": "ssc_selection_post",
+        "exam_name": "SSC Selection Post",
+        "recruitment_name": "SSC Selection Post",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      },
+      "ssc_stenographer": {
+        "id": "ssc_stenographer",
+        "realm_id": "ssc_stenographer",
+        "exam_name": "SSC Stenographer",
+        "recruitment_name": "SSC Stenographer",
+        "exam_category": "staff_selection",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      },
+      "uppsc_pcs_prelims": {
+        "id": "uppsc_pcs_prelims",
+        "realm_id": "uppsc_pcs_prelims",
+        "exam_name": "UPPSC PCS – Prelims",
+        "recruitment_name": "UPPSC PCS – Prelims",
+        "exam_category": "civil_services",
+        "organization": "Uttar Pradesh",
+        "status": "STAGED",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "created_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      },
+      "upsc_cse_prelims": {
+        "id": "upsc_cse_prelims",
+        "realm_id": "upsc_cse_prelims",
+        "exam_name": "UPSC Civil Services – Prelims",
+        "recruitment_name": "UPSC Civil Services – Prelims",
+        "exam_category": "civil_services",
+        "organization": "INDIA",
+        "status": "STAGED",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "manifestedAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "created_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      }
+    },
+    "recruitments": {
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "examCategory": "competitive",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "nature": "ACTIVE_MISSION",
+        "org": "Rajasthan",
+        "year": 2026,
+        "title": "RPSC 1st Grade",
+        "titleHindi": "",
+        "missionRealmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "status": "draft",
+        "jurisdictionLevel": "STATE",
+        "stateName": "Rajasthan",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "updatedAt": {
+          "_seconds": 1788968642,
+          "_nanoseconds": 110000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "OMR",
+          "paperFamilies": [
+            {
+              "familyId": "ACADEMIC_LECTURER_FAMILY",
+              "familyName": "Academic School Lecturer Family (प्राध्यापक - सामान्य विषय)",
+              "variantCount": 21,
+              "paper1": {
+                "paperId": "rpsc_paper_1_gk_gs_academic",
+                "paperCode": "PAPER_1_ACADEMIC",
+                "paperName": "Paper-I: General Awareness and General Studies (Academic Family)",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 90,
+                "totalQuestions": 75,
+                "totalMarks": 150,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              },
+              "paper2": {
+                "paperId": "rpsc_paper_2_academic",
+                "paperCode": "PAPER_2_ACADEMIC",
+                "paperName": "Paper-II: Subject Concerned (Academic Disciplines)",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 180,
+                "totalQuestions": 150,
+                "totalMarks": 300,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              }
+            },
+            {
+              "familyId": "PHYSICAL_EDUCATION_FAMILY",
+              "familyName": "Physical Education Lecturer Family (प्राध्यापक - शारीरिक शिक्षा)",
+              "variantCount": 1,
+              "paper1": {
+                "paperId": "rpsc_paper_1_physical_education",
+                "paperCode": "PAPER_1_PHY_EDU",
+                "paperName": "Paper-I: General Awareness & Physical Education GS",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 120,
+                "totalQuestions": 100,
+                "totalMarks": 200,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              },
+              "paper2": {
+                "paperId": "rpsc_paper_2_phy_edu",
+                "paperCode": "PAPER_2_PHY_EDU",
+                "paperName": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 180,
+                "totalQuestions": 150,
+                "totalMarks": 300,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              }
+            },
+            {
+              "familyId": "COACH_FAMILY",
+              "familyName": "Sports Coach Family (प्रशिक्षक - विभिन्न खेल)",
+              "variantCount": 6,
+              "paper1": {
+                "paperId": "rpsc_paper_1_coach",
+                "paperCode": "PAPER_1_COACH",
+                "paperName": "Paper-I: General Studies of Physical Education & Sports",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 120,
+                "totalQuestions": 100,
+                "totalMarks": 200,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              },
+              "paper2": {
+                "paperId": "rpsc_paper_2_coach",
+                "paperCode": "PAPER_2_COACH",
+                "paperName": "Paper-II: Coach Specialization Discipline",
+                "mode": "OMR_PEN_PAPER",
+                "durationMinutes": 180,
+                "totalQuestions": 150,
+                "totalMarks": 300,
+                "scope": "VARIABLE_SPECIFIC",
+                "variantDimension": "SUBJECT_VARIANT"
+              }
+            }
+          ],
+          "totalPapers": 6,
+          "papers": [
+            {
+              "paperId": "rpsc_paper_1_gk_gs_academic",
+              "paperCode": "PAPER_1_ACADEMIC",
+              "code": "PAPER_1_ACADEMIC",
+              "paperName": "Paper-I: General Awareness and General Studies (Academic Family)",
+              "name": "Paper-I: General Awareness and General Studies (Academic Family)",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 90,
+              "totalQuestions": 75,
+              "totalMarks": 150,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "paperId": "rpsc_paper_2_academic",
+              "paperCode": "PAPER_2_ACADEMIC",
+              "code": "PAPER_2_ACADEMIC",
+              "paperName": "Paper-II: Subject Concerned (Academic Disciplines)",
+              "name": "Paper-II: Subject Concerned (Academic Disciplines)",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 180,
+              "totalQuestions": 150,
+              "totalMarks": 300,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "paperId": "rpsc_paper_1_physical_education",
+              "paperCode": "PAPER_1_PHY_EDU",
+              "code": "PAPER_1_PHY_EDU",
+              "paperName": "Paper-I: General Awareness & Physical Education GS",
+              "name": "Paper-I: General Awareness & Physical Education GS",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 120,
+              "totalQuestions": 100,
+              "totalMarks": 200,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "PHYSICAL_EDUCATION_FAMILY"
+            },
+            {
+              "paperId": "rpsc_paper_2_phy_edu",
+              "paperCode": "PAPER_2_PHY_EDU",
+              "code": "PAPER_2_PHY_EDU",
+              "paperName": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+              "name": "Paper-II: Physical Education Subject (Theory & Pedagogy)",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 180,
+              "totalQuestions": 150,
+              "totalMarks": 300,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "PHYSICAL_EDUCATION_FAMILY"
+            },
+            {
+              "paperId": "rpsc_paper_1_coach",
+              "paperCode": "PAPER_1_COACH",
+              "code": "PAPER_1_COACH",
+              "paperName": "Paper-I: General Studies of Physical Education & Sports",
+              "name": "Paper-I: General Studies of Physical Education & Sports",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 120,
+              "totalQuestions": 100,
+              "totalMarks": 200,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "COACH_FAMILY"
+            },
+            {
+              "paperId": "rpsc_paper_2_coach",
+              "paperCode": "PAPER_2_COACH",
+              "code": "PAPER_2_COACH",
+              "paperName": "Paper-II: Coach Specialization Discipline",
+              "name": "Paper-II: Coach Specialization Discipline",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 180,
+              "totalQuestions": 150,
+              "totalMarks": 300,
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "SUBJECT_VARIANT",
+              "familyId": "COACH_FAMILY"
+            }
+          ]
+        }
+      },
+      "jee_main_2026": {
+        "examCategory": "qualifying",
+        "nature": "ACTIVE_MISSION",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 649000000
+        },
+        "variantCode": "universal",
+        "examId": "jee_main_2026",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "status": "draft",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "year": 2027,
+        "missionRealmId": "jee_main_2026",
+        "org": "INDIA",
+        "state": null,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "JEE Main",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968638,
+          "_nanoseconds": 780000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "CBT",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "B.E./B.Tech Examination (Paper 1)",
+              "name": "B.E./B.Tech Examination (Paper 1)",
+              "mode": "CBT",
+              "durationMinutes": 180,
+              "totalQuestions": 75,
+              "totalMarks": 300,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "subjectStructure": [
+                {
+                  "subject": "Mathematics",
+                  "mcqQuestions": 20,
+                  "numericalQuestions": 5,
+                  "totalQuestions": 25,
+                  "marks": 100
+                },
+                {
+                  "subject": "Physics",
+                  "mcqQuestions": 20,
+                  "numericalQuestions": 5,
+                  "totalQuestions": 25,
+                  "marks": 100
+                },
+                {
+                  "subject": "Chemistry",
+                  "mcqQuestions": 20,
+                  "numericalQuestions": 5,
+                  "totalQuestions": 25,
+                  "marks": 100
+                }
+              ],
+              "markingScheme": "+4 for correct response, -1 for incorrect response (applicable to both MCQs and Numerical Value Questions), 0 for unattempted"
+            }
+          ]
+        }
+      },
+      "neet_(ug)-2027": {
+        "examCategory": "competitive",
+        "nature": "ACTIVE_MISSION",
+        "year": 2026,
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783351586,
+          "_nanoseconds": 781000000
+        },
+        "variantCode": "universal",
+        "examId": "neet_(ug)-2027",
+        "titleHindi": "",
+        "id": "neet_(ug)-2027",
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "VARIABLE_BASED",
+        "status": "draft",
+        "org": "Rajasthan",
+        "sortOrder": 0,
+        "displayOrder": 0,
+        "state": "Rajasthan",
+        "priority": 0,
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968640,
+          "_nanoseconds": 467000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "OMR",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "National Eligibility Cum Entrance Test (UG)",
+              "name": "National Eligibility Cum Entrance Test (UG)",
+              "mode": "OMR_PEN_PAPER",
+              "durationMinutes": 180,
+              "totalQuestions": 180,
+              "totalMarks": 720,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "subjectStructure": [
+                {
+                  "subject": "Physics",
+                  "totalQuestions": 45,
+                  "marks": 180
+                },
+                {
+                  "subject": "Chemistry",
+                  "totalQuestions": 45,
+                  "marks": 180
+                },
+                {
+                  "subject": "Biology",
+                  "subDisciplines": [
+                    "Botany",
+                    "Zoology"
+                  ],
+                  "totalQuestions": 90,
+                  "marks": 360
+                }
+              ],
+              "markingScheme": "+4 for correct response, -1 for incorrect response, 0 for unattempted"
+            }
+          ]
+        }
+      },
+      "rpsc_ras_prelims": {
+        "id": "rpsc_ras_prelims",
+        "examId": "rpsc_ras_prelims",
+        "missionRealmId": "rpsc_ras_prelims",
+        "title": "RPSC RAS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Rajasthan",
+        "state": "Rajasthan",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "OMR",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I: General Knowledge and General Science",
+              "name": "Paper-I: General Knowledge and General Science",
+              "mode": "OMR_PEN_PAPER",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 180,
+              "totalQuestions": 150
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968651,
+          "_nanoseconds": 340000000
+        }
+      },
+      "ssc_cgl": {
+        "id": "ssc_cgl",
+        "examId": "ssc_cgl",
+        "missionRealmId": "ssc_cgl",
+        "title": "SSC CGL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 3,
+          "mode": "CBT",
+          "totalPapers": 3,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperCode": "TIER_1",
+              "code": "TIER_1",
+              "paperName": "Tier-I Computer Based Examination",
+              "name": "Tier-I Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 60,
+              "totalQuestions": 100
+            },
+            {
+              "paperId": "tier_2_p1",
+              "paperCode": "TIER_2_P1",
+              "code": "TIER_2_P1",
+              "paperName": "Tier-II Paper-I (Compulsory for All Posts)",
+              "name": "Tier-II Paper-I (Compulsory for All Posts)",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 150,
+              "totalQuestions": 150
+            },
+            {
+              "paperId": "tier_2_p2",
+              "paperCode": "TIER_2_P2",
+              "code": "TIER_2_P2",
+              "paperName": "Tier-II Paper-II (Statistics / Specialized)",
+              "name": "Tier-II Paper-II (Statistics / Specialized)",
+              "mode": "CBT",
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "POST_TRACK",
+              "durationMinutes": 120,
+              "totalQuestions": 100
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968644,
+          "_nanoseconds": 126000000
+        }
+      },
+      "ssc_chsl": {
+        "id": "ssc_chsl",
+        "examId": "ssc_chsl",
+        "missionRealmId": "ssc_chsl",
+        "title": "SSC CHSL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "CBT",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperCode": "TIER_1",
+              "code": "TIER_1",
+              "paperName": "Tier-I Computer Based Examination",
+              "name": "Tier-I Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 60,
+              "totalQuestions": 100
+            },
+            {
+              "paperId": "tier_2",
+              "paperCode": "TIER_2",
+              "code": "TIER_2",
+              "paperName": "Tier-II Computer Based Examination",
+              "name": "Tier-II Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 135,
+              "totalQuestions": 135
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968646,
+          "_nanoseconds": 388000000
+        }
+      },
+      "ssc_cpo": {
+        "id": "ssc_cpo",
+        "examId": "ssc_cpo",
+        "missionRealmId": "ssc_cpo",
+        "title": "SSC CPO",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "CBT",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I Computer Based Examination",
+              "name": "Paper-I Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            },
+            {
+              "paperId": "paper_2",
+              "paperCode": "PAPER_2",
+              "code": "PAPER_2",
+              "paperName": "Paper-II English Language and Comprehension CBT",
+              "name": "Paper-II English Language and Comprehension CBT",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968649,
+          "_nanoseconds": 284000000
+        }
+      },
+      "ssc_gd": {
+        "id": "ssc_gd",
+        "examId": "ssc_gd",
+        "missionRealmId": "ssc_gd",
+        "title": "SSC GD",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "CBT",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperCode": "CBE_PAPER",
+              "code": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "name": "Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 60,
+              "totalQuestions": 80
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968649,
+          "_nanoseconds": 969000000
+        }
+      },
+      "ssc_hindi_translators": {
+        "id": "ssc_hindi_translators",
+        "examId": "ssc_hindi_translators",
+        "missionRealmId": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "HYBRID",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I Computer Based Examination",
+              "name": "Paper-I Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            },
+            {
+              "paperId": "paper_2",
+              "paperCode": "PAPER_2",
+              "code": "PAPER_2",
+              "paperName": "Paper-II Translation & Essay Descriptive Paper",
+              "name": "Paper-II Translation & Essay Descriptive Paper",
+              "mode": "PEN_PAPER_DESCRIPTIVE",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968647,
+          "_nanoseconds": 835000000
+        }
+      },
+      "ssc_je": {
+        "id": "ssc_je",
+        "examId": "ssc_je",
+        "missionRealmId": "ssc_je",
+        "title": "SSC JE",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "CBT",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I Computer Based Examination",
+              "name": "Paper-I Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            },
+            {
+              "paperId": "paper_2",
+              "paperCode": "PAPER_2",
+              "code": "PAPER_2",
+              "paperName": "Paper-II Technical Discipline CBT",
+              "name": "Paper-II Technical Discipline CBT",
+              "mode": "CBT",
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "ENGINEERING_DISCIPLINE",
+              "durationMinutes": 120,
+              "totalQuestions": 100
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968644,
+          "_nanoseconds": 787000000
+        }
+      },
+      "ssc_mts_havaldar": {
+        "id": "ssc_mts_havaldar",
+        "examId": "ssc_mts_havaldar",
+        "missionRealmId": "ssc_mts_havaldar",
+        "title": "SSC MTS & Havaldar",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "CBT",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperCode": "CBE_PAPER",
+              "code": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "name": "Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 90,
+              "totalQuestions": 90
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968648,
+          "_nanoseconds": 638000000
+        }
+      },
+      "ssc_selection_post": {
+        "id": "ssc_selection_post",
+        "examId": "ssc_selection_post",
+        "missionRealmId": "ssc_selection_post",
+        "title": "SSC Selection Post",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "CBT",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperCode": "CBE_PAPER",
+              "code": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "name": "Computer Based Examination",
+              "mode": "CBT",
+              "scope": "VARIABLE_SPECIFIC",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "appliesToAllVariables": false,
+              "variantDimension": "EDUCATIONAL_LEVEL",
+              "durationMinutes": 60,
+              "totalQuestions": 100
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968645,
+          "_nanoseconds": 717000000
+        }
+      },
+      "ssc_stenographer": {
+        "id": "ssc_stenographer",
+        "examId": "ssc_stenographer",
+        "missionRealmId": "ssc_stenographer",
+        "title": "SSC Stenographer",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "mode": "CBT",
+          "totalPapers": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperCode": "CBE_PAPER",
+              "code": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "name": "Computer Based Examination",
+              "mode": "CBT",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 200
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968647,
+          "_nanoseconds": 61000000
+        }
+      },
+      "test_mission_catalog_bridge": {
+        "examCategory": "competitive",
+        "nature": "recruitment",
+        "org": "Rajasthan",
+        "year": 2026,
+        "missionPlan": {
+          "totalDays": 100
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            "Paper 1"
+          ]
+        },
+        "title": "TEST Mission Catalog Bridge",
+        "version": "1.0.0",
+        "createdAt": "2026-07-10T10:57:38.864Z",
+        "variantCode": "universal",
+        "examId": "test_mission_catalog_bridge",
+        "titleHindi": "टेस्ट मिशन कैटलॉग ब्रिज",
+        "id": "test_mission_catalog_bridge",
+        "state": "Rajasthan",
+        "examScope": "STATE_LEVEL",
+        "missionStructureType": "SINGLE_STAGE",
+        "status": "draft"
+      },
+      "uppsc_pcs_prelims": {
+        "id": "uppsc_pcs_prelims",
+        "examId": "uppsc_pcs_prelims",
+        "missionRealmId": "uppsc_pcs_prelims",
+        "title": "UPPSC PCS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "OMR",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I: General Studies-I",
+              "name": "Paper-I: General Studies-I",
+              "mode": "OMR_PEN_PAPER",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 150
+            },
+            {
+              "paperId": "paper_2",
+              "paperCode": "PAPER_2",
+              "code": "PAPER_2",
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "name": "Paper-II: General Studies-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 100
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968650,
+          "_nanoseconds": 669000000
+        }
+      },
+      "upsc_cse_prelims": {
+        "id": "upsc_cse_prelims",
+        "examId": "upsc_cse_prelims",
+        "missionRealmId": "upsc_cse_prelims",
+        "title": "UPSC Civil Services – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false,
+          "mode": "CONTINUOUS_ROTATING_ORBIT",
+          "phases": [
+            {
+              "phaseNumber": 1,
+              "name": "Phase 1 - Initial Foundation & Core Syntax",
+              "startDay": 1,
+              "endDay": 14,
+              "durationDays": 14,
+              "type": "FOUNDATION"
+            },
+            {
+              "phaseNumber": 2,
+              "name": "Phase 2 - Core Mechanics & Concept Integration",
+              "startDay": 15,
+              "endDay": 28,
+              "durationDays": 14,
+              "type": "CORE_CONCEPTS"
+            },
+            {
+              "phaseNumber": 3,
+              "name": "Phase 3 - Analytical Depth & Intermediate Synthesis",
+              "startDay": 29,
+              "endDay": 42,
+              "durationDays": 14,
+              "type": "INTERMEDIATE_SYNTHESIS"
+            },
+            {
+              "phaseNumber": 4,
+              "name": "Phase 4 - Advanced Mastery & Multi-Topic Fusion",
+              "startDay": 43,
+              "endDay": 56,
+              "durationDays": 14,
+              "type": "ADVANCED_MASTERY"
+            },
+            {
+              "phaseNumber": 5,
+              "name": "Phase 5 - Precision Drills & Velocity Conditioning",
+              "startDay": 57,
+              "endDay": 70,
+              "durationDays": 14,
+              "type": "VELOCITY_CONDITIONING"
+            },
+            {
+              "phaseNumber": 6,
+              "name": "Phase 6 - High-Yield Refinement & Error Elimination",
+              "startDay": 71,
+              "endDay": 84,
+              "durationDays": 14,
+              "type": "ERROR_ELIMINATION"
+            },
+            {
+              "phaseNumber": 7,
+              "name": "Phase 7 - Full Orbit Consolidation & Synthesis",
+              "startDay": 85,
+              "endDay": 98,
+              "durationDays": 14,
+              "type": "SYNTHESIS_CONSOLIDATION"
+            }
+          ]
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "mode": "OMR",
+          "totalPapers": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperCode": "PAPER_1",
+              "code": "PAPER_1",
+              "paperName": "Paper-I: General Studies-I",
+              "name": "Paper-I: General Studies-I",
+              "mode": "OMR_PEN_PAPER",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 100
+            },
+            {
+              "paperId": "paper_2",
+              "paperCode": "PAPER_2",
+              "code": "PAPER_2",
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "name": "Paper-II: General Studies-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "appliesToAllVariables": true,
+              "variantDimension": null,
+              "durationMinutes": 120,
+              "totalQuestions": 80
+            }
+          ]
+        },
+        "updatedAt": {
+          "_seconds": 1788968643,
+          "_nanoseconds": 148000000
+        }
+      }
+    },
+    "student_mission_catalog": {
+      "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+        "code": "RPSC_FIRST_GRADE_2026",
+        "year": 2026,
+        "mission_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "created_at": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "contentReadiness": {
+          "notification": "uploaded",
+          "syllabus": "not_ready",
+          "tests": "not_ready",
+          "crucible": "not_ready",
+          "digibook": "not_ready"
+        },
+        "recruitmentGroupId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC 1st Grade",
+        "createdAt": {
+          "_seconds": 1782713236,
+          "_nanoseconds": 227000000
+        },
+        "recruitment_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "exam_category": "competitive",
+        "titleHindi": "",
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "exam_id": "RPSC_FIRST_GRADE_2026",
+        "exam_year": 2026,
+        "examCategory": "competitive",
+        "target_year": 2026,
+        "userPanelVisible": true,
+        "organizationCode": "RPSC",
+        "name": "RPSC 1st Grade",
+        "boardId": "RPSC",
+        "cardVisible": true,
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "source": {
+          "missionRealmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "examYear": 2026,
+        "archived": false,
+        "displayTitle": "RPSC 1st Grade",
+        "missionType": "competitive",
+        "sourceMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "studentPublicationState": "PREPARING",
+        "missionStructureType": "SINGLE_TRACK",
+        "sourcePath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "examName": "RPSC 1st Grade",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "priority": 5,
+        "catalogStatus": "PREPARING",
+        "sourceMissionVersion": "1",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "subtitle": "RPSC 1st Grade",
+        "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+        "missionVariables": {},
+        "status": "PREPARING",
+        "updatedAt": "2026-08-19T11:28:36.405Z",
+        "jurisdictionLevel": "STATE",
+        "stateName": "Rajasthan",
+        "displayName": "RPSC 1st Grade",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "variables": [
+          {
+            "id": "var_HINDI_1782713551600",
+            "name": "Hindi / हिन्दी",
+            "code": "HINDI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_ENGLISH_2026_1782736222410",
+            "name": "English / अंग्रेजी",
+            "code": "ENGLISH_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_sanskrit_2026",
+            "name": "Sanskrit / संस्कृत",
+            "code": "SANSKRIT_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_rajasthani_2026",
+            "name": "Rajasthani / राजस्थानी",
+            "code": "RAJASTHANI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_punjabi_2026",
+            "name": "Punjabi / पंजाबी",
+            "code": "PUNJABI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_urdu_2026",
+            "name": "Urdu / उर्दू",
+            "code": "URDU_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_history_2026",
+            "name": "History / इतिहास",
+            "code": "HISTORY_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_geography_2026",
+            "name": "Geography / भूगोल",
+            "code": "GEOGRAPHY_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_polscience_2026",
+            "name": "Political Science / राजनीति विज्ञान",
+            "code": "POLSCIENCE_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_economics_2026",
+            "name": "Economics / अर्थशास्त्र",
+            "code": "ECONOMICS_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_sociology_2026",
+            "name": "Sociology / समाजशास्त्र",
+            "code": "SOCIOLOGY_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_pubadmin_2026",
+            "name": "Public Administration / लोक प्रशासन",
+            "code": "PUBADMIN_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_physics_2026",
+            "name": "Physics / भौतिक विज्ञान",
+            "code": "PHYSICS_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_chemistry_2026",
+            "name": "Chemistry / रसायन विज्ञान",
+            "code": "CHEMISTRY_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_biology_2026",
+            "name": "Biology / जीव विज्ञान",
+            "code": "BIOLOGY_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_mathematics_2026",
+            "name": "Mathematics / गणित",
+            "code": "MATHEMATICS_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_commerce_2026",
+            "name": "Commerce / वाणिज्य",
+            "code": "COMMERCE_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_music_2026",
+            "name": "Music / संगीत",
+            "code": "MUSIC_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_drawing_2026",
+            "name": "Drawing / चित्रकला",
+            "code": "DRAWING_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_homescience_2026",
+            "name": "Home Science / गृह विज्ञान",
+            "code": "HOMESCIENCE_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_agriculture_2026",
+            "name": "Agriculture / कृषि",
+            "code": "AGRICULTURE_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "ACADEMIC_LECTURER_FAMILY"
+          },
+          {
+            "id": "var_physical_education_2026",
+            "name": "Physical Education / शारीरिक शिक्षा",
+            "code": "PHYSED_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "PHYSICAL_EDUCATION_FAMILY"
+          },
+          {
+            "id": "var_coach_athletics_2026",
+            "name": "Coach Athletics / कोच एथलेटिक्स",
+            "code": "COACH_ATHLETICS_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          },
+          {
+            "id": "var_coach_basketball_2026",
+            "name": "Coach Basketball / कोच बास्केटबॉल",
+            "code": "COACH_BASKETBALL_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          },
+          {
+            "id": "var_coach_handball_2026",
+            "name": "Coach Handball / कोच हैंडबॉल",
+            "code": "COACH_HANDBALL_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          },
+          {
+            "id": "var_coach_kabaddi_2026",
+            "name": "Coach Kabaddi / कोच कबड्डी",
+            "code": "COACH_KABADDI_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          },
+          {
+            "id": "var_coach_table_tennis_2026",
+            "name": "Coach Table Tennis / कोच टेबल टेनिस",
+            "code": "COACH_TABLE_TENNIS_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          },
+          {
+            "id": "var_coach_volleyball_2026",
+            "name": "Coach Volleyball / कोच वॉलीबॉल",
+            "code": "COACH_VOLLEYBALL_2026",
+            "status": "ACTIVE",
+            "paperType": "Paper 2",
+            "family": "COACH_FAMILY"
+          }
+        ],
+        "updated_at": {
+          "_seconds": 1788966452,
+          "_nanoseconds": 624000000
+        }
+      },
+      "jee_main_2026": {
+        "year": 2027,
+        "mission_id": "jee_main_2026",
+        "created_at": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "recruitmentGroupId": "jee_main_2026",
+        "recruitment_id": "jee_main_2026",
+        "exam_category": "qualifying",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "exam_year": 2027,
+        "variables": [],
+        "examCategory": "qualifying",
+        "target_year": 2027,
+        "catalogStatus": "PREPARING",
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "status": "PREPARING",
+        "supportedMediums": [
+          "ENGLISH"
+        ],
+        "country": "INDIA",
+        "publishedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "artifactType": "mission",
+        "missionId": "jee_main_2026",
+        "examCode": "jee_main_2026",
+        "mediumPolicy": "ENGLISH_ONLY",
+        "publishedAt": {
+          "_seconds": 1783927453,
+          "_nanoseconds": 154000000
+        },
+        "counts": {
+          "digibookUnits": 0,
+          "downloads": 0,
+          "topicNodes": 0,
+          "questionPool": 0,
+          "examRules": 0,
+          "crucibleBlocks": 0
+        },
+        "contentReadiness": {
+          "notification": "not_ready",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "deliveryPaths": {
+          "digibookUnits": "student_mission_catalog/jee_main_2026/digibook_units",
+          "mission": "student_mission_catalog/jee_main_2026",
+          "downloads": "student_mission_catalog/jee_main_2026/downloads",
+          "topicNodes": "student_mission_catalog/jee_main_2026/topic_nodes",
+          "questionPool": "student_mission_catalog/jee_main_2026/question_pool",
+          "crucibleSchedule": "student_mission_catalog/jee_main_2026/crucible_schedule",
+          "examRules": "student_mission_catalog/jee_main_2026/exam_rules"
+        },
+        "version": "1.0.0",
+        "provenance": {
+          "sourceWorkbenchPath": "mission_realms/jee_main_2026",
+          "promotedAt": "2026-07-13T07:24:12.971Z",
+          "promotedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+          "sourceDocumentId": "jee_main_2026"
+        },
+        "isUserVisible": true,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "publishStatus": "published",
+        "deliveryStatus": "published",
+        "realmId": "jee_main_2026",
+        "visibility": {
+          "catalogVisible": true,
+          "smartEntryEnabled": true,
+          "quickEntryEnabled": true,
+          "studentVisible": true,
+          "userPanelVisible": true
+        },
+        "defaultMedium": "ENGLISH",
+        "contentLocks": {
+          "topicNodesPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false,
+          "syllabusPublished": false,
+          "digibookPublished": false
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/jee_main_2026",
+          "mirroredBy": "backfill_student_mission_catalog",
+          "backfillMode": true,
+          "mirrorPhase": "FUP_2C_MIRROR2_AUTHMERGE1"
+        },
+        "priority": 5,
+        "examYear": 2027,
+        "archived": false,
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 275000000
+        },
+        "sourceMissionVersion": "1",
+        "missionType": "qualifying",
+        "sourceMissionId": "jee_main_2026",
+        "organizationCode": "",
+        "sourceType": "mission_realms",
+        "sortOrder": 5,
+        "studentMessage": "Mission is visible to eligible students and awaiting final Founder verification.",
+        "boardId": "",
+        "studentPublicationState": "PREPARING",
+        "sourcePath": "mission_realms/jee_main_2026",
+        "missionVariables": {
+          "supportedMediums": [
+            "ENGLISH"
+          ],
+          "defaultMedium": "ENGLISH",
+          "mediumPolicy": "ENGLISH_ONLY"
+        },
+        "state": "Central",
+        "updatedAt": "2026-08-19T11:28:36.405Z",
+        "examId": "jee_main_2026",
+        "exam_id": "jee_main_2026",
+        "code": "JEE Main",
+        "jurisdictionLevel": "CENTRAL",
+        "displayName": "JEE Main",
+        "examName": "JEE Main",
+        "title": "JEE Main",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "displayTitle": "JEE Main",
+        "updated_at": {
+          "_seconds": 1788965740,
+          "_nanoseconds": 357000000
+        },
+        "stateName": null,
+        "subtitle": "JEE Main",
+        "missionName": "JEE Main",
+        "name": "JEE Main",
+        "stateCode": null
+      },
+      "neet_(ug)-2027": {
+        "id": "neet_(ug)-2027",
+        "boardId": "NTA",
+        "examId": "neet_(ug)-2027",
+        "examBlueprintId": "neet_(ug)-2027_blueprint",
+        "year": 2027,
+        "state": "Central",
+        "examCategory": "category_pending",
+        "status": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE",
+        "examDifficulty": 0.6,
+        "variantCode": "neet_(ug)-2027",
+        "version": "ONE_TIME_PRODUCTION_EXPORT_DERIVED_EMULATOR_ONLY",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "recruitmentGroupId": "neet_(ug)-2027",
+        "displayTitle": "NEET (UG)",
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "displayName": "NEET (UG)",
+        "examName": "NEET (UG)",
+        "name": "NEET (UG)",
+        "titleHindi": "NEET (UG)",
+        "stateCode": null,
+        "title": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency"
+      },
+      "rpsc_ras_prelims": {
+        "id": "rpsc_ras_prelims",
+        "missionId": "rpsc_ras_prelims",
+        "realmId": "rpsc_ras_prelims",
+        "recruitment_id": "rpsc_ras_prelims",
+        "recruitmentGroupId": "rpsc_ras_prelims",
+        "title": "RPSC RAS – Prelims",
+        "displayName": "RPSC RAS – Prelims",
+        "displayTitle": "RPSC RAS – Prelims",
+        "name": "RPSC RAS – Prelims",
+        "examName": "RPSC RAS – Prelims",
+        "code": "RPSC RAS – Prelims",
+        "subtitle": "RPSC RAS – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/rpsc_ras_prelims",
+          "topicNodes": "student_mission_catalog/rpsc_ras_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/rpsc_ras_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/rpsc_ras_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/rpsc_ras_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/rpsc_ras_prelims/downloads",
+          "examRules": "student_mission_catalog/rpsc_ras_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/rpsc_ras_prelims",
+          "sourceDocumentId": "rpsc_ras_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "updated_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "created_at": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        }
+      },
+      "ssc_cgl": {
+        "id": "ssc_cgl",
+        "missionId": "ssc_cgl",
+        "realmId": "ssc_cgl",
+        "recruitment_id": "ssc_cgl",
+        "recruitmentGroupId": "ssc_cgl",
+        "title": "SSC CGL",
+        "displayName": "SSC CGL",
+        "displayTitle": "SSC CGL",
+        "name": "SSC CGL",
+        "examName": "SSC CGL",
+        "code": "SSC CGL",
+        "subtitle": "SSC CGL",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "cgl_all_posts",
+            "name": "All Posts (General Track)",
+            "code": "cgl_all_posts",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "cgl_jso",
+            "name": "Junior Statistical Officer (JSO)",
+            "code": "cgl_jso",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_cgl",
+          "topicNodes": "student_mission_catalog/ssc_cgl/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_cgl/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_cgl/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_cgl/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_cgl/downloads",
+          "examRules": "student_mission_catalog/ssc_cgl/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_cgl",
+          "sourceDocumentId": "ssc_cgl",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "updated_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "created_at": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        }
+      },
+      "ssc_chsl": {
+        "id": "ssc_chsl",
+        "missionId": "ssc_chsl",
+        "realmId": "ssc_chsl",
+        "recruitment_id": "ssc_chsl",
+        "recruitmentGroupId": "ssc_chsl",
+        "title": "SSC CHSL",
+        "displayName": "SSC CHSL",
+        "displayTitle": "SSC CHSL",
+        "name": "SSC CHSL",
+        "examName": "SSC CHSL",
+        "code": "SSC CHSL",
+        "subtitle": "SSC CHSL",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_chsl",
+          "topicNodes": "student_mission_catalog/ssc_chsl/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_chsl/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_chsl/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_chsl/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_chsl/downloads",
+          "examRules": "student_mission_catalog/ssc_chsl/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_chsl",
+          "sourceDocumentId": "ssc_chsl",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        }
+      },
+      "ssc_cpo": {
+        "id": "ssc_cpo",
+        "missionId": "ssc_cpo",
+        "realmId": "ssc_cpo",
+        "recruitment_id": "ssc_cpo",
+        "recruitmentGroupId": "ssc_cpo",
+        "title": "SSC CPO",
+        "displayName": "SSC CPO",
+        "displayTitle": "SSC CPO",
+        "name": "SSC CPO",
+        "examName": "SSC CPO",
+        "code": "SSC CPO",
+        "subtitle": "SSC CPO",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_cpo",
+          "topicNodes": "student_mission_catalog/ssc_cpo/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_cpo/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_cpo/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_cpo/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_cpo/downloads",
+          "examRules": "student_mission_catalog/ssc_cpo/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_cpo",
+          "sourceDocumentId": "ssc_cpo",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "updated_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "created_at": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        }
+      },
+      "ssc_gd": {
+        "id": "ssc_gd",
+        "missionId": "ssc_gd",
+        "realmId": "ssc_gd",
+        "recruitment_id": "ssc_gd",
+        "recruitmentGroupId": "ssc_gd",
+        "title": "SSC GD",
+        "displayName": "SSC GD",
+        "displayTitle": "SSC GD",
+        "name": "SSC GD",
+        "examName": "SSC GD",
+        "code": "SSC GD",
+        "subtitle": "SSC GD",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_gd",
+          "topicNodes": "student_mission_catalog/ssc_gd/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_gd/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_gd/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_gd/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_gd/downloads",
+          "examRules": "student_mission_catalog/ssc_gd/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_gd",
+          "sourceDocumentId": "ssc_gd",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "updated_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "created_at": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        }
+      },
+      "ssc_hindi_translators": {
+        "id": "ssc_hindi_translators",
+        "missionId": "ssc_hindi_translators",
+        "realmId": "ssc_hindi_translators",
+        "recruitment_id": "ssc_hindi_translators",
+        "recruitmentGroupId": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators",
+        "displayName": "SSC Combined Hindi Translators",
+        "displayTitle": "SSC Combined Hindi Translators",
+        "name": "SSC Combined Hindi Translators",
+        "examName": "SSC Combined Hindi Translators",
+        "code": "SSC Combined Hindi Translators",
+        "subtitle": "SSC Combined Hindi Translators",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_hindi_translators",
+          "topicNodes": "student_mission_catalog/ssc_hindi_translators/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_hindi_translators/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_hindi_translators/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_hindi_translators/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_hindi_translators/downloads",
+          "examRules": "student_mission_catalog/ssc_hindi_translators/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_hindi_translators",
+          "sourceDocumentId": "ssc_hindi_translators",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        }
+      },
+      "ssc_je": {
+        "id": "ssc_je",
+        "missionId": "ssc_je",
+        "realmId": "ssc_je",
+        "recruitment_id": "ssc_je",
+        "recruitmentGroupId": "ssc_je",
+        "title": "SSC JE",
+        "displayName": "SSC JE",
+        "displayTitle": "SSC JE",
+        "name": "SSC JE",
+        "examName": "SSC JE",
+        "code": "SSC JE",
+        "subtitle": "SSC JE",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "je_civil",
+            "name": "Civil Engineering",
+            "code": "je_civil",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "je_electrical",
+            "name": "Electrical Engineering",
+            "code": "je_electrical",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "je_mechanical",
+            "name": "Mechanical Engineering",
+            "code": "je_mechanical",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_je",
+          "topicNodes": "student_mission_catalog/ssc_je/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_je/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_je/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_je/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_je/downloads",
+          "examRules": "student_mission_catalog/ssc_je/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_je",
+          "sourceDocumentId": "ssc_je",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "updated_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "created_at": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        }
+      },
+      "ssc_mts_havaldar": {
+        "id": "ssc_mts_havaldar",
+        "missionId": "ssc_mts_havaldar",
+        "realmId": "ssc_mts_havaldar",
+        "recruitment_id": "ssc_mts_havaldar",
+        "recruitmentGroupId": "ssc_mts_havaldar",
+        "title": "SSC MTS & Havaldar",
+        "displayName": "SSC MTS & Havaldar",
+        "displayTitle": "SSC MTS & Havaldar",
+        "name": "SSC MTS & Havaldar",
+        "examName": "SSC MTS & Havaldar",
+        "code": "SSC MTS & Havaldar",
+        "subtitle": "SSC MTS & Havaldar",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_mts_havaldar",
+          "topicNodes": "student_mission_catalog/ssc_mts_havaldar/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_mts_havaldar/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_mts_havaldar/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_mts_havaldar/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_mts_havaldar/downloads",
+          "examRules": "student_mission_catalog/ssc_mts_havaldar/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_mts_havaldar",
+          "sourceDocumentId": "ssc_mts_havaldar",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "updated_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "created_at": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        }
+      },
+      "ssc_selection_post": {
+        "id": "ssc_selection_post",
+        "missionId": "ssc_selection_post",
+        "realmId": "ssc_selection_post",
+        "recruitment_id": "ssc_selection_post",
+        "recruitmentGroupId": "ssc_selection_post",
+        "title": "SSC Selection Post",
+        "displayName": "SSC Selection Post",
+        "displayTitle": "SSC Selection Post",
+        "name": "SSC Selection Post",
+        "examName": "SSC Selection Post",
+        "code": "SSC Selection Post",
+        "subtitle": "SSC Selection Post",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "selpost_matric",
+            "name": "Matriculation Level",
+            "code": "selpost_matric",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "selpost_higher_sec",
+            "name": "Higher Secondary (10+2) Level",
+            "code": "selpost_higher_sec",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "selpost_grad",
+            "name": "Graduation & Above Level",
+            "code": "selpost_grad",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_selection_post",
+          "topicNodes": "student_mission_catalog/ssc_selection_post/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_selection_post/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_selection_post/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_selection_post/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_selection_post/downloads",
+          "examRules": "student_mission_catalog/ssc_selection_post/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_selection_post",
+          "sourceDocumentId": "ssc_selection_post",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "updated_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "created_at": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        }
+      },
+      "ssc_stenographer": {
+        "id": "ssc_stenographer",
+        "missionId": "ssc_stenographer",
+        "realmId": "ssc_stenographer",
+        "recruitment_id": "ssc_stenographer",
+        "recruitmentGroupId": "ssc_stenographer",
+        "title": "SSC Stenographer",
+        "displayName": "SSC Stenographer",
+        "displayTitle": "SSC Stenographer",
+        "name": "SSC Stenographer",
+        "examName": "SSC Stenographer",
+        "code": "SSC Stenographer",
+        "subtitle": "SSC Stenographer",
+        "titleHindi": "",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [
+          {
+            "id": "steno_c",
+            "name": "Stenographer Grade C",
+            "code": "steno_c",
+            "status": "ACTIVE"
+          },
+          {
+            "id": "steno_d",
+            "name": "Stenographer Grade D",
+            "code": "steno_d",
+            "status": "ACTIVE"
+          }
+        ],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/ssc_stenographer",
+          "topicNodes": "student_mission_catalog/ssc_stenographer/topic_nodes",
+          "digibookUnits": "student_mission_catalog/ssc_stenographer/digibook_units",
+          "questionPool": "student_mission_catalog/ssc_stenographer/question_pool",
+          "crucibleSchedule": "student_mission_catalog/ssc_stenographer/crucible_schedule",
+          "downloads": "student_mission_catalog/ssc_stenographer/downloads",
+          "examRules": "student_mission_catalog/ssc_stenographer/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/ssc_stenographer",
+          "sourceDocumentId": "ssc_stenographer",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "updated_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "created_at": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        }
+      },
+      "uppsc_pcs_prelims": {
+        "id": "uppsc_pcs_prelims",
+        "missionId": "uppsc_pcs_prelims",
+        "realmId": "uppsc_pcs_prelims",
+        "recruitment_id": "uppsc_pcs_prelims",
+        "recruitmentGroupId": "uppsc_pcs_prelims",
+        "title": "UPPSC PCS – Prelims",
+        "displayName": "UPPSC PCS – Prelims",
+        "displayTitle": "UPPSC PCS – Prelims",
+        "name": "UPPSC PCS – Prelims",
+        "examName": "UPPSC PCS – Prelims",
+        "code": "UPPSC PCS – Prelims",
+        "subtitle": "UPPSC PCS – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/uppsc_pcs_prelims",
+          "topicNodes": "student_mission_catalog/uppsc_pcs_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/uppsc_pcs_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/uppsc_pcs_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/uppsc_pcs_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/uppsc_pcs_prelims/downloads",
+          "examRules": "student_mission_catalog/uppsc_pcs_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/uppsc_pcs_prelims",
+          "sourceDocumentId": "uppsc_pcs_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "updated_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "created_at": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        }
+      },
+      "upsc_cse_prelims": {
+        "id": "upsc_cse_prelims",
+        "missionId": "upsc_cse_prelims",
+        "realmId": "upsc_cse_prelims",
+        "recruitment_id": "upsc_cse_prelims",
+        "recruitmentGroupId": "upsc_cse_prelims",
+        "title": "UPSC Civil Services – Prelims",
+        "displayName": "UPSC Civil Services – Prelims",
+        "displayTitle": "UPSC Civil Services – Prelims",
+        "name": "UPSC Civil Services – Prelims",
+        "examName": "UPSC Civil Services – Prelims",
+        "code": "UPSC Civil Services – Prelims",
+        "subtitle": "UPSC Civil Services – Prelims",
+        "titleHindi": "",
+        "examCategory": "civil_services",
+        "examScope": "ALL_INDIA",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "priority": 5,
+        "sortOrder": 5,
+        "supportedMediums": [
+          "ENGLISH",
+          "HINDI"
+        ],
+        "defaultMedium": "ENGLISH",
+        "mediumPolicy": "BILINGUAL_ALLOWED",
+        "variables": [],
+        "contentReadiness": {
+          "notification": "preparing",
+          "syllabus": "preparing",
+          "tests": "preparing",
+          "downloads": "preparing",
+          "crucible": "preparing",
+          "examRules": "preparing",
+          "digibook": "preparing"
+        },
+        "contentLocks": {
+          "syllabusPublished": false,
+          "topicNodesPublished": false,
+          "digibookPublished": false,
+          "cruciblePublished": false,
+          "questionCellsPublished": false,
+          "pyqPublished": false
+        },
+        "deliveryPaths": {
+          "mission": "student_mission_catalog/upsc_cse_prelims",
+          "topicNodes": "student_mission_catalog/upsc_cse_prelims/topic_nodes",
+          "digibookUnits": "student_mission_catalog/upsc_cse_prelims/digibook_units",
+          "questionPool": "student_mission_catalog/upsc_cse_prelims/question_pool",
+          "crucibleSchedule": "student_mission_catalog/upsc_cse_prelims/crucible_schedule",
+          "downloads": "student_mission_catalog/upsc_cse_prelims/downloads",
+          "examRules": "student_mission_catalog/upsc_cse_prelims/exam_rules"
+        },
+        "source": {
+          "missionRealmPath": "mission_realms/upsc_cse_prelims",
+          "sourceDocumentId": "upsc_cse_prelims",
+          "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+        },
+        "studentMessage": "Mission is staged in governed preparation status.",
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "updated_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "created_at": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        }
+      }
+    }
+  }
+}

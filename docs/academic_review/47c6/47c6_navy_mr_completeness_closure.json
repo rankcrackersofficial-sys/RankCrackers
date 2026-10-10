@@ -1,0 +1,54 @@
+{
+  "classification": "SEPARATE_MAJOR_MISSION",
+  "reason": "Distinct matriculation eligibility and 50-question INET structure from SSR.",
+  "mission": {
+    "missionId": "navy_agniveer_mr",
+    "permanentExamKey": "navy_agniveer_mr",
+    "title": "Indian Navy Agniveer MR / INET",
+    "canonicalAuthorityKey": "auth_in_indian_navy",
+    "authorityGroupKey": "indian_navy",
+    "jurisdictionLevel": "CENTRAL",
+    "region": "NATIONAL",
+    "stateCode": null,
+    "stateName": null,
+    "sector": "DEFENCE",
+    "examCategory": "competitive",
+    "examScope": "NATIONAL_OBJECTIVE_EXAM",
+    "examPurpose": "NAVY_AGNIVEER_RECRUITMENT",
+    "variantRequired": false,
+    "variants": [],
+    "officialSourceLocator": {
+      "authorityKey": "auth_in_indian_navy",
+      "officialDomain": "joinindiannavy.gov.in",
+      "officialListingPageUrl": null,
+      "exactDocumentUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+      "documentType": "CURRENT_RECRUITMENT_NOTIFICATION",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "effectiveStatus": "LATEST_VERIFIED"
+    },
+    "latestEffectiveSource": {
+      "url": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+      "title": "Indian Navy Agniveer MR 02/2025, 01/2026 and 02/2026"
+    },
+    "sourceSurfaceRefs": [
+      "https://www.joinindiannavy.gov.in/"
+    ],
+    "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+    "regionalDiscovery": null,
+    "readiness": {
+      "missionIdentityReady": true,
+      "authorityOwnerReady": true,
+      "sourceSurfaceResolved": true,
+      "latestNotificationReady": true,
+      "exactNotificationDocumentReady": true,
+      "syllabusOrSchemeReady": true,
+      "variantModelReady": true,
+      "pyqStateResolved": true,
+      "shellRecordReady": true,
+      "catalogPreparingDiscoverable": true,
+      "missionSelectionReady": true,
+      "academicStartReady": false
+    },
+    "materializationState": "SHELL_READY_PREPARING"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_stenographer",
+  "canonicalDisplayName": "SSC Stenographer Grade C & D",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["COMPUTER_BASED_EXAMINATION_MCQ"],
+    "unsupportedStages": [
+      { "stageName": "Skill Test in Stenography (Transcription)", "reason": "Shorthand Dictation & Typing Test" }
+    ]
+  },
+  "examinationStructure": {
+    "examType": "COMPUTER_BASED_EXAMINATION",
+    "totalQuestions": 200,
+    "totalMarks": 200,
+    "durationMinutes": 120,
+    "negativeMarkingPerQuestion": 0.25,
+    "sections": [
+      { "sectionId": "gi_reasoning", "sectionName": "General Intelligence & Reasoning", "questions": 50, "marks": 50 },
+      { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 50, "marks": 50 },
+      { "sectionId": "english_language_comprehension", "sectionName": "English Language & Comprehension", "questions": 100, "marks": 100 }
+    ],
+    "structuralNotice": "Quantitative Aptitude is NOT part of the SSC Stenographer CBE syllabus."
+  },
+  "variantContext": {
+    "variantDistinctionType": "POST_TRACK",
+    "variants": [
+      { "variantKey": "steno_grade_c", "variantName": "Stenographer Grade 'C' (Higher Cutoff & 100 WPM Skill)", "examSyllabus": "Common CBE Paper" },
+      { "variantKey": "steno_grade_d", "variantName": "Stenographer Grade 'D' (80 WPM Skill)", "examSyllabus": "Common CBE Paper" }
+    ]
+  }
+}

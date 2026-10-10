@@ -1,0 +1,9 @@
+{
+  "auditCode": "RC_47C8V_AUTHORITY_SECURITY_AUDIT",
+  "executedAt": "2026-09-10T08:22:06.050Z",
+  "totalAuthoritiesValidated": 13,
+  "metrics": {
+    "SOURCE_DOMAIN_WITHOUT_OWNER_BINDING_COUNT": 0
+  },
+  "auditPass": true
+}

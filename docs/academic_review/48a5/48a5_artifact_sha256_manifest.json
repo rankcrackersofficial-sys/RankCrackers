@@ -1,0 +1,51 @@
+{
+  "gate": "GATE 48A5 — PRODUCTION MISSION MATERIALIZATION HANDOFF",
+  "generatedAt": "2026-09-10T12:30:28.132Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a5_materialization_field_audit.json",
+      "byteLength": 70496,
+      "sha256": "e701616ac7180c4ebc6d5e480bc6bd87c8bda2ebb1edca5f9e1529614e8ca272"
+    },
+    {
+      "fileName": "48a5_existing_live_bindings.json",
+      "byteLength": 4070,
+      "sha256": "b213a38e4b163b5edaf3e06d09303ad69a510c254c802d8e0a95436b6cb10cb6"
+    },
+    {
+      "fileName": "48a5_shell_ready_set.json",
+      "byteLength": 84107,
+      "sha256": "ce147f5566edcd346070dbfc0544f7a069e12156a5930be86fc07801658ecbb7"
+    },
+    {
+      "fileName": "48a5_shell_hold_set.json",
+      "byteLength": 65,
+      "sha256": "79915495586068bab493eeddc5f7c77d527985c26bb550d4336b2781ee34c641"
+    },
+    {
+      "fileName": "48a5_tripura_identity_pattern_separation.json",
+      "byteLength": 565,
+      "sha256": "e31e14deb3a5edc6554c51bd117e163263bc9c6180b4f0514075eeb8140eb101"
+    },
+    {
+      "fileName": "48a5_career_signal_source_status.json",
+      "byteLength": 41337,
+      "sha256": "f631f60d5b7caf1e730b7b245e5f9da9f621673999196ed011ac2433c2d9d485"
+    },
+    {
+      "fileName": "48a5_controlled_batch_plan.json",
+      "byteLength": 6670,
+      "sha256": "9dde64f8b71ca02b8b47261fdfea87013fa87545f5e662f4c729507f3abcef00"
+    },
+    {
+      "fileName": "48a5_final_materializer_handoff.json",
+      "byteLength": 662,
+      "sha256": "8dd937a78205caccc0ac4952fccc4f7712d63512dfc20b040dce57cea34bae2c"
+    },
+    {
+      "fileName": "48a5_final_report.md",
+      "byteLength": 1925,
+      "sha256": "982d54b794e044dbcbf49bbb82aeec9be2671b7e14f1ce1ebd906cbfe6c5e034"
+    }
+  ]
+}

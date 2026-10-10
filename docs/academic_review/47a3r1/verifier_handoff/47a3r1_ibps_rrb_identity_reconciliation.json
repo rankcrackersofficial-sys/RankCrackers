@@ -1,0 +1,41 @@
+{
+  "reconciliationCode": "RC_47A3R1_IBPS_RRB_IDENTITY_RECONCILIATION",
+  "generatedAt": "2026-09-10T07:00:05.927Z",
+  "metrics": {
+    "COLLOQUIAL_IBPS_ID_USED_AS_UNPROVEN_CANONICAL_COUNT": 0,
+    "OFFICIAL_IBPS_RECRUITMENT_PROCESS": "Common Recruitment Process for Regional Rural Banks (CRP RRBs)"
+  },
+  "officialExamNomenclatureAudit": {
+    "statutoryFramework": "Regional Rural Banks Act, 1976 & NABARD / Ministry of Finance recruitment guidelines.",
+    "officialNotificationTitle": "Common Recruitment Process for Recruitment of Officers (Scale-I, II & III) and Office Assistants (Multipurpose) in Regional Rural Banks (RRBs) - CRP RRBs",
+    "cadreSeparation": "The official process strictly distinguishes Officer Cadre (Scale-I, Scale-II, Scale-III) from Clerical Cadre (Office Assistant Multipurpose)."
+  },
+  "canonicalMissionsEstablished": [
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "officialExamName": "Common Recruitment Process for Recruitment of Officers (Scale-I, II & III) in Regional Rural Banks",
+      "primaryTargetCadre": "Officer Scale-I (Assistant Manager / Probationary Officer)",
+      "studentDisplayAlias": "IBPS RRB PO (Officer Scale I)",
+      "colloquialCandidateId": "ibps_rrb_po",
+      "colloquialStatus": "RESERVED_FOR_DISPLAY_ALIAS_ONLY",
+      "examinationStructure": {
+        "officerScale1": "Two-Tier Online Examination (Preliminary Examination 80 Qs, 45 mins + Main Examination 200 Qs) followed by Interview",
+        "officerScale2": "Single Online Examination (General Banking / Specialist) + Interview (Lateral Entry)",
+        "officerScale3": "Single Online Examination (Senior Manager) + Interview (Lateral Entry)"
+      },
+      "rankCrackersRecommendation": "Materialize ibps_crp_rrb_officers as the canonical permanent mission targeting Officer Scale-I syllabus; Scale II/III treated as lateral specialized tracks."
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "officialExamName": "Common Recruitment Process for Recruitment of Office Assistants (Multipurpose) in Regional Rural Banks",
+      "primaryTargetCadre": "Office Assistant (Multipurpose)",
+      "studentDisplayAlias": "IBPS RRB Clerk (Office Assistant)",
+      "colloquialCandidateId": "ibps_rrb_clerk",
+      "colloquialStatus": "RESERVED_FOR_DISPLAY_ALIAS_ONLY",
+      "examinationStructure": {
+        "officeAssistant": "Two-Tier Online Examination (Preliminary Examination 80 Qs, 45 mins + Main Examination 200 Qs). No interview."
+      },
+      "rankCrackersRecommendation": "Materialize ibps_crp_rrb_office_assistant as the dedicated canonical permanent mission for RRB clerical recruitment."
+    }
+  ]
+}

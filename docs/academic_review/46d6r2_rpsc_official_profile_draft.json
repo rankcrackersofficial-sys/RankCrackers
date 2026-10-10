@@ -1,0 +1,141 @@
+{
+  "profileSchemaVersion": "2.0.0",
+  "draftStatus": "CORRECTED_OFFICIAL_PROFILE_DRAFT_46D6R2",
+  "supersedes": "docs/academic_review/46d6r_rpsc_official_profile_draft.json",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "canonicalExamName": "RPSC School Lecturer (School Education)",
+  "canonicalDisplayName": "RPSC 1st Grade",
+  "missionTargetYear": 2026,
+  "sourceRecruitmentCycle": 2025,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "targetYearReconciliationNote": "Under Founder authority and source baseline rules, missionTargetYear is preserved at 2026. The source recruitment cycle is Advt. No. 06/2025-26 + Advt. No. 09/2025-26 (Cycle 2025), canonically mapped via PRIOR_OFFICIAL_BASELINE.",
+  "authority": {
+    "organization": "Rajasthan Public Service Commission (RPSC), Ajmer",
+    "department": "Secondary Education Department, Govt. of Rajasthan",
+    "officialPortals": [
+      "https://rpsc.rajasthan.gov.in"
+    ],
+    "recruitmentFamily": "School Lecturer (School Education) Competitive Exam / प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा",
+    "familyIntegrityNote": "Strictly limited to School Education Department. Sanskrit Education, Special Education, and Sr. Teacher (2nd Grade) are excluded from this family.",
+    "primaryAdvertisementReference": "Advt. No. 06/2025-26",
+    "supplementalAdvertisementReference": "Advt. No. 09/2025-26 (Agriculture)",
+    "applicableCorrigenda": ["Corrigendum No. 01/2025-26", "Corrigendum No. 02/2025-26"],
+    "officialNotificationTitle": "Detailed Advertisement for School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "State of Rajasthan",
+    "serviceCadre": "Rajasthan Educational State Service",
+    "payScale": "Pay Matrix Level L-12 (Grade Pay 4800)",
+    "eligibilityRules": "Post-Graduate degree in relevant subject with minimum required percentage + B.Ed. / Recognized equivalent degree in education / Diploma in Coaching/NIS for Coach cadre",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperFamilyArchitecture": {
+    "model": "THREE_TIER_PAPER_FAMILY_ARCHITECTURE",
+    "paperFamiliesCount": 3,
+    "paperFamilies": [
+      {
+        "familyKey": "ACADEMIC_LECTURER_FAMILY",
+        "name": "Academic School Lecturer Family (21 Subjects)",
+        "paper1": {
+          "paperId": "rpsc_paper_1_gk_gs_academic",
+          "title": "Paper-I: General Awareness and General Studies (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        },
+        "paper2": {
+          "pattern": "Subject Concerned (150 Qs / 300 Marks / 180 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        }
+      },
+      {
+        "familyKey": "PHYSICAL_EDUCATION_FAMILY",
+        "name": "Physical Education Lecturer Family (1 Cadre Entity)",
+        "paper1": {
+          "paperId": "rpsc_paper_1_physical_education",
+          "title": "Paper-I: General Awareness & General Studies related to Physical Education (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        },
+        "paper2": {
+          "pattern": "Physical Education Subject (150 Qs / 300 Marks / 180 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        }
+      },
+      {
+        "familyKey": "COACH_FAMILY",
+        "name": "Sports Coach Family (1 Parent Post with 6 Active Sport Specializations)",
+        "paper1": {
+          "paperId": "rpsc_paper_1_coach",
+          "title": "Paper-I: General Awareness & Sports Science (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        },
+        "paper2": {
+          "pattern": "Sport-Specific Discipline Paper (150 Qs / 300 Marks / 180 Mins / 1/3 negative)",
+          "provenanceTag": "SOURCE_VERIFIED"
+        }
+      }
+    ]
+  },
+  "variantInventorySummary": {
+    "totalAcademicDisciplines": 21,
+    "totalPhysicalEducationEntities": 1,
+    "totalCoachParents": 1,
+    "totalCoachActiveSpecializations": 6,
+    "totalDistinctParentEntities": 23,
+    "totalStudentSelectableVariants": 28,
+    "coachModel": "PARENT_POST_WITH_OFFICIAL_SPECIALIZATIONS",
+    "activeCoachSpecializations": [
+      "Athletics", "Basketball", "Handball", "Kabaddi", "Table Tennis", "Volleyball"
+    ],
+    "historicalCoachSpecializationsExcluded": [
+      "Football", "Gymnastics", "Hockey", "Kho-Kho", "Wrestling"
+    ],
+    "agricultureSourceChain": "Advt. No. 09/2025-26 (Supplemental Advertisement) + 13-Oct-2025 Syllabus",
+    "currentBackendVariants": ["English", "Hindi"],
+    "missingSelectableVariantsCount": 26,
+    "inventoryFiles": [
+      "docs/academic_review/46d6r2_rpsc_paper_family_matrix.json",
+      "docs/academic_review/46d6r2_rpsc_current_variant_inventory.json",
+      "docs/academic_review/46d6r2_rpsc_coach_cycle_reconciliation.json",
+      "docs/academic_review/46d6r2_rpsc_source_chain.json"
+    ]
+  },
+  "s2DocumentProfile": {
+    "multiFamilyArchitecture": true,
+    "familyResolutionRule": "S2 determines expected Paper-I and Paper-II by looking up selectedVariant in paperFamilyMatrix.",
+    "academicFamilyProfile": {
+      "expectedPaper1": "Paper-I: General Awareness and General Studies",
+      "expectedPaper1Aliases": ["Paper-I", "Paper 1", "General Awareness", "GK & GS", "General Studies"],
+      "expectedPaper2Pattern": "Paper-II: Subject Concerned",
+      "expectedPaper2Aliases": ["Paper-II", "Paper 2", "Subject Paper"]
+    },
+    "physicalEducationFamilyProfile": {
+      "expectedPaper1": "Paper-I: General Awareness and General Studies (Physical Education)",
+      "expectedPaper1Aliases": ["Paper-I Phy Edu", "Paper 1 Physical Education", "GK Physical Education"],
+      "expectedPaper2": "Paper-II: Physical Education",
+      "expectedPaper2Aliases": ["Paper-II Physical Education", "Paper 2 Physical Education"]
+    },
+    "coachFamilyProfile": {
+      "expectedPaper1": "Paper-I: General Awareness and General Studies (Coach)",
+      "expectedPaper1Aliases": ["Paper-I Coach", "Paper 1 Coach", "GK Coach", "Sports Science"],
+      "expectedPaper2": "Paper-II: Coach [Sport Specialization]",
+      "expectedPaper2Aliases": ["Paper-II Coach", "Paper 2 Coach"]
+    },
+    "languageScripts": ["Devanagari", "Latin", "Gurmukhi", "Urdu"],
+    "preferredOcrLanguages": ["hin", "eng", "pan", "urd"],
+    "sourceYearPolicy": "USE_2025_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "sourceRecruitmentCycle": "SOURCE_VERIFIED",
+    "cycleRelation": "SOURCE_VERIFIED",
+    "recruitmentFamily": "SOURCE_VERIFIED",
+    "paperFamilyArchitecture": "SOURCE_VERIFIED",
+    "variantModel": "SOURCE_VERIFIED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

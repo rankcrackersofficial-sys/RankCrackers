@@ -1,0 +1,13 @@
+{
+  "auditCode": "RC_47A4R2_IBPS_47C6_CROSS_LANE_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.925Z",
+  "national47C6Exists": true,
+  "stateSideIbpsRrbIdentity": [
+    "ibps_crp_rrb_officers",
+    "ibps_crp_rrb_office_assistant"
+  ],
+  "metrics": {
+    "IBPS_STATE_NATIONAL_IDENTITY_CONFLICT_COUNT": 0
+  },
+  "auditPass": true
+}

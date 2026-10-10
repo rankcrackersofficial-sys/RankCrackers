@@ -1,0 +1,16 @@
+{
+  "safetyCode": "RC_47B6_GOVERNANCE_FIELD_SAFETY",
+  "executedAt": "2026-09-10T07:08:16.398Z",
+  "scannedFields": [
+    "archived",
+    "founderHold",
+    "manualGovernanceLock",
+    "manualVisibilityOverride",
+    "lifecycleStatus",
+    "publicationApproval"
+  ],
+  "metrics": {
+    "GOVERNANCE_OWNED_FIELD_OVERWRITE_COUNT": 0
+  },
+  "safetyPass": true
+}

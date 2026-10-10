@@ -1,0 +1,113 @@
+{
+  "reconciliationCode": "RC_47A3R1_JUDICIAL_AUTHORITY_RECONCILIATION",
+  "generatedAt": "2026-09-10T07:00:05.923Z",
+  "metrics": {
+    "GENERIC_HIGH_COURTS_AUTHORITY_COUNT": 0,
+    "CROSS_STATE_JUDICIAL_MISSION_COLLAPSE_COUNT": 0,
+    "AUDITED_STATE_JUDICIAL_SERVICES_COUNT": 8
+  },
+  "rejectionVerdictOn47A3RRow": {
+    "rejectedMissionId": "subordinate_judicial_service_prelims",
+    "rejectedAuthorityKey": "auth_in_high_courts",
+    "reason": "Article 214 establishes High Courts as distinct constitutional entities for each State or shared between specific States. Subordinate judiciary recruitment is conducted either by the respective State PSC or directly by the designated High Court under state-specific judicial service rules. No generic national 'High Courts' authority exists."
+  },
+  "stateJudicialServiceCatalog": [
+    {
+      "stateCode": "DL",
+      "stateName": "Delhi",
+      "officialExamIdentity": "Delhi Judicial Service Examination (DJSE)",
+      "proposedCanonicalMissionKey": "delhi_judicial_service_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_dl_delhc",
+      "actualRecruitingAuthorityName": "High Court of Delhi",
+      "officialDomain": "https://delhihighcourt.nic.in",
+      "constitutionalBasis": "Article 233, 234 & 235 of the Constitution of India; Delhi Judicial Service Rules, 1970",
+      "examPatternSummary": "Preliminary Examination (Objective Type with 25% negative marking) followed by Main Examination (Written) and Viva Voce",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "UP",
+      "stateName": "Uttar Pradesh",
+      "officialExamIdentity": "Combined State / Upper Subordinate Services (Judicial) Examination (PCS-J)",
+      "proposedCanonicalMissionKey": "uppsc_pcs_j_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_up_uppsc",
+      "actualRecruitingAuthorityName": "Uttar Pradesh Public Service Commission (in consultation with High Court of Judicature at Allahabad)",
+      "officialDomain": "https://uppsc.up.nic.in",
+      "constitutionalBasis": "Article 234 of the Constitution of India; UP Nyayik Sewa Niyamavali",
+      "examPatternSummary": "Two objective papers (Paper I: General Knowledge 150m, Paper II: Law 300m) with 0.33 negative marking",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "BR",
+      "stateName": "Bihar",
+      "officialExamIdentity": "Bihar Judicial Service Competitive Examination (Civil Judge Junior Division)",
+      "proposedCanonicalMissionKey": "bpsc_judicial_service_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_br_bpsc",
+      "actualRecruitingAuthorityName": "Bihar Public Service Commission (in consultation with High Court of Judicature at Patna)",
+      "officialDomain": "https://bpsc.bih.nic.in",
+      "constitutionalBasis": "Article 234 of the Constitution of India; Bihar Civil Services (Judicial Branch) Recruitment Rules",
+      "examPatternSummary": "Two objective papers (Paper I: General Studies 100m, Paper II: Law 150m)",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "officialExamIdentity": "Rajasthan Judicial Service (Civil Judge Cadre) Preliminary Examination",
+      "proposedCanonicalMissionKey": "rhc_civil_judge_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_rj_rhc",
+      "actualRecruitingAuthorityName": "Rajasthan High Court, Jodhpur",
+      "officialDomain": "https://hcraj.nic.in",
+      "constitutionalBasis": "Article 233-235 of Constitution of India; Rajasthan Judicial Service Rules, 2010",
+      "examPatternSummary": "Preliminary Examination: 100 MCQs (70% Law, 30% Hindi & English proficiency), 2 hours duration",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "MP",
+      "stateName": "Madhya Pradesh",
+      "officialExamIdentity": "Madhya Pradesh Civil Judge Junior Division (Entry Level) Preliminary Examination",
+      "proposedCanonicalMissionKey": "mphc_civil_judge_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_mp_mphc",
+      "actualRecruitingAuthorityName": "High Court of Madhya Pradesh, Jabalpur",
+      "officialDomain": "https://mphc.gov.in",
+      "constitutionalBasis": "MP Lower Judicial Service (Recruitment and Conditions of Service) Rules",
+      "examPatternSummary": "Online Preliminary Screening Test: 150 MCQs across 15 law subjects and General Knowledge / Computer / English",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "PB",
+      "stateName": "Punjab",
+      "officialExamIdentity": "Punjab Civil Service (Judicial Branch) Preliminary Examination",
+      "proposedCanonicalMissionKey": "ppsc_pcs_j_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_pb_ppsc",
+      "actualRecruitingAuthorityName": "Punjab Public Service Commission (jointly with High Court of Punjab & Haryana)",
+      "officialDomain": "https://ppsc.gov.in",
+      "constitutionalBasis": "Punjab Civil Services (Judicial Branch) Rules",
+      "examPatternSummary": "125 objective questions (500 marks, -1 deduction for wrong answers)",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "HR",
+      "stateName": "Haryana",
+      "officialExamIdentity": "Haryana Civil Service (Judicial Branch) Preliminary Examination",
+      "proposedCanonicalMissionKey": "hpsc_hcs_j_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_hr_hpsc",
+      "actualRecruitingAuthorityName": "Haryana Public Service Commission (jointly with High Court of Punjab & Haryana)",
+      "officialDomain": "https://hpsc.gov.in",
+      "constitutionalBasis": "Haryana Civil Services (Judicial Branch) Rules",
+      "examPatternSummary": "125 objective questions (500 marks, -0.80 deduction for wrong answers)",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    },
+    {
+      "stateCode": "AS",
+      "stateName": "Assam",
+      "officialExamIdentity": "Assam Judicial Service Grade-III Preliminary Examination",
+      "proposedCanonicalMissionKey": "gauhc_ajs_grade3_prelims",
+      "actualRecruitingAuthorityKey": "auth_in_as_gauhc",
+      "actualRecruitingAuthorityName": "Gauhati High Court (Principal Seat, Guwahati)",
+      "officialDomain": "https://ghconline.gov.in",
+      "constitutionalBasis": "Assam Judicial Service Rules, 2007",
+      "examPatternSummary": "Preliminary Screening Examination: 100 MCQs (General Knowledge, Aptitude, English, and Law)",
+      "missionEligibilityForRankCrackers": "ELIGIBLE_STANDALONE_MISSION"
+    }
+  ],
+  "architecturalRule": "State judicial service examinations must be materialized as state-specific missions owned by the authentic recruiting High Court or State PSC, never collapsed into a generic cross-state shell."
+}

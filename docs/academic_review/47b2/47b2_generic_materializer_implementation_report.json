@@ -1,0 +1,20 @@
+{
+  "reportCode": "RC_47B2_GENERIC_MATERIALIZER_IMPLEMENTATION",
+  "executedAt": "2026-09-10T06:00:00.735Z",
+  "implementationPath": "functions/services/generic_mission_materializer.js",
+  "activeGenericMaterializerImplemented": true,
+  "supportedExecutionModes": [
+    "VALIDATE_ONLY",
+    "DRY_RUN",
+    "APPLY"
+  ],
+  "applyModeStateInThisGate": "HARD_DISABLED",
+  "exportedFunctions": [
+    "validateManifest",
+    "buildMissionProjections",
+    "runGenericMissionMaterializer",
+    "applyToSimulatorState",
+    "computeSemanticHash",
+    "buildHierarchyPath"
+  ]
+}

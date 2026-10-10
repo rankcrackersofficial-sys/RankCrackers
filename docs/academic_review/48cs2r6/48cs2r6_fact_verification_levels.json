@@ -1,0 +1,51 @@
+{
+  "gate": "48CS2R6",
+  "contractName": "FACT_VERIFICATION_LEVEL_CONTRACT",
+  "contractVersion": "1.0.0",
+  "description": "Discrete 4-tier fact verification model preventing premature verification labeling.",
+  "tiers": [
+    {
+      "level": "SOURCE_LOCATED",
+      "order": 1,
+      "prerequisites": "officialSourceUrl or portal listing resolved",
+      "guarantee": "Source URL is located; bytes are unverified.",
+      "prohibitedConclusions": [
+        "RULE_VERIFIED",
+        "TEXT_VERIFIED",
+        "BYTE_VERIFIED",
+        "ELIGIBLE"
+      ]
+    },
+    {
+      "level": "BYTE_VERIFIED",
+      "order": 2,
+      "prerequisites": "documentSha256 hex verified + bytes acquired",
+      "guarantee": "Official document bytes are cryptographically intact.",
+      "prohibitedConclusions": [
+        "RULE_VERIFIED (if scan text unparsed)",
+        "ELIGIBLE (if text unextracted)"
+      ]
+    },
+    {
+      "level": "TEXT_VERIFIED",
+      "order": 3,
+      "prerequisites": "BYTE_VERIFIED + machine-readable text extracted with page bindings",
+      "guarantee": "Official document text is machine-readable and searchable.",
+      "prohibitedConclusions": [
+        "RULE_VERIFIED (until extracted text is mapped to formal ruleType)"
+      ]
+    },
+    {
+      "level": "RULE_VERIFIED",
+      "order": 4,
+      "prerequisites": "TEXT_VERIFIED + mapped to canonical ruleType + backed by paragraphOrTableRef",
+      "guarantee": "Specific eligibility or reservation criterion is fully verified against official source.",
+      "prohibitedConclusions": []
+    }
+  ],
+  "strictTransitionRules": [
+    "RULE_VERIFIED requires TEXT_VERIFIED which requires BYTE_VERIFIED which requires SOURCE_LOCATED.",
+    "No tier skipping allowed: URL_FOUND can never yield RULE_VERIFIED.",
+    "Scanned PDF with verified SHA256 stops at BYTE_VERIFIED until OCR/transcription is cryptographically bound."
+  ]
+}

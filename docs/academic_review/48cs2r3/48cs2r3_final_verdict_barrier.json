@@ -1,0 +1,20 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Eligible & Not-Eligible Final Verdict Barrier Contract",
+  "eligibleBarrier": {
+    "rule": "ELIGIBLE verdict is strictly prohibited unless all mandatory rules pass AND rulebookCompleteness.isComplete is true AND amendmentChain.amendmentSearchStatus is CURRENT_CHAIN_VERIFIED.",
+    "fallbackState": "NOT_EVALUATED",
+    "reasonTemplate": "Recruitment rulebook is incomplete. Unresolved rule families: {unresolvedFamilies}. Final eligibility verdict is prohibited.",
+    "complianceMetric": {
+      "ELIGIBLE_WITH_INCOMPLETE_RULEBOOK_COUNT": 0
+    }
+  },
+  "notEligibleSafetyBarrier": {
+    "rule": "Candidate cannot be disqualified under a base rule (e.g. base age max) if a potential override rule family (e.g. AGE_RELAXATION) is UNRESOLVED for their category.",
+    "fallbackState": "NOT_EVALUATED (or UNRESOLVED rule diagnostic)",
+    "reasonTemplate": "Age ({age}) exceeds base maximum limit ({baseMax}), but official age relaxation rulebook is UNRESOLVED for category {category}. Disqualification prohibited until relaxation truth is verified.",
+    "complianceMetric": {
+      "NOT_ELIGIBLE_WITH_UNRESOLVED_OVERRIDE_RULE_COUNT": 0
+    }
+  }
+}

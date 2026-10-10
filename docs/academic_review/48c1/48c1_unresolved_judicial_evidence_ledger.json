@@ -1,0 +1,63 @@
+{
+  "retrievedOn": "2026-09-10",
+  "JUDICIAL_RESIDUAL_TARGET_COUNT": 4,
+  "confirmed48cProvenancePackagedSeparately": false,
+  "rows": [
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "officialAuthorityPage": "https://uppsc.up.nic.in",
+      "exactNotificationSource": null,
+      "objectivePreliminaryProof": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "Exact official notification plus objective preliminary-stage source pair not verified; third-party copies were not accepted."
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "officialAuthorityPage": "https://bpsc.bih.nic.in",
+      "exactNotificationSource": null,
+      "objectivePreliminaryProof": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "Exact official notification plus objective preliminary-stage source pair not verified; third-party copies were not accepted."
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "officialAuthorityPage": "https://ppsc.gov.in",
+      "exactNotificationSource": null,
+      "objectivePreliminaryProof": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "Exact official notification plus objective preliminary-stage source pair not verified; third-party copies were not accepted."
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "officialAuthorityPage": "https://hpsc.gov.in",
+      "exactNotificationSource": null,
+      "objectivePreliminaryProof": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "Exact official notification plus objective preliminary-stage source pair not verified; third-party copies were not accepted."
+    }
+  ]
+}

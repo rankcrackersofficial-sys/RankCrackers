@@ -1,0 +1,54 @@
+{
+  "resultSurfaceKnownCount": 6,
+  "currentCycleResultFoundCount": 4,
+  "rows": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "officialResultSurface": "https://rpsc.rajasthan.gov.in/Result.aspx",
+      "currentCycleResultFound": false,
+      "eventIds": [
+        null
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "officialResultSurface": null,
+      "currentCycleResultFound": true,
+      "eventIds": [
+        "RPSC-RAS-PRELIM-RESULT-2025-02-20"
+      ]
+    },
+    {
+      "missionId": "jee_main_2026",
+      "officialResultSurface": null,
+      "currentCycleResultFound": true,
+      "eventIds": [
+        "JEE-MAIN-2026-RESULT"
+      ]
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "officialResultSurface": null,
+      "currentCycleResultFound": true,
+      "eventIds": [
+        "NEET-UG-2026-RESULT"
+      ]
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "officialResultSurface": null,
+      "currentCycleResultFound": true,
+      "eventIds": [
+        "UPSC-CSE-PRELIM-2026-RESULT"
+      ]
+    },
+    {
+      "missionId": "ssc_cgl",
+      "officialResultSurface": null,
+      "currentCycleResultFound": false,
+      "eventIds": [
+        null
+      ]
+    }
+  ]
+}

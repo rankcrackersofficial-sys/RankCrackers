@@ -1,0 +1,189 @@
+{
+  "profileSchemaVersion": "1.0.0",
+  "draftStatus": "CORRECTED_OFFICIAL_PROFILE_DRAFT",
+  "supersedes": "docs/academic_review/46d6_neet_official_profile_draft.json",
+  "missionId": "neet_(ug)-2027",
+  "canonicalExamName": "NEET (UG)",
+  "canonicalDisplayName": "NEET (UG)-2027",
+  "missionTargetYear": 2027,
+  "recruitmentObservedYear": 2026,
+  "studentCatalogObservedYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "targetYearReconciliationNote": "Under Chief Architect guidance, missionTargetYear is canonically locked to 2027. The recruitment document year=2026 observed in backend reflects the prior cycle creation seed and does not constitute a mission conflict when mapped via PRIOR_OFFICIAL_BASELINE.",
+  "correctionSummary": {
+    "stalePatternRemoved": "200 total questions / 180 to attempt / 200 minutes / 35+15 Section A/B structure",
+    "correctOfficialPattern": "180 compulsory questions / 180 minutes / 720 marks (Physics 45 Qs / 180 Marks, Chemistry 45 Qs / 180 Marks, Biology (Botany & Zoology) 90 Qs / 360 Marks)",
+    "officialSourceBinding": "NTA NEET (UG) - 2026 Information Bulletin Chapter 3 Table 1"
+  },
+  "authority": {
+    "organization": "National Testing Agency (NTA) & National Medical Commission (NMC)",
+    "officialPortals": [
+      "https://neet.nta.nic.in",
+      "https://exams.nta.ac.in/NEET",
+      "https://nta.ac.in",
+      "https://www.nmc.org.in"
+    ],
+    "sourceDocumentType": "Information Bulletin & NMC Core Syllabus for NEET (UG)",
+    "officialNotificationTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin",
+    "officialPdfUrl": "https://exams.nta.ac.in/NEET/assets/files/NEET_UG_2026_Information_Bulletin.pdf",
+    "officialLocator": "Chapter 3: Pattern of Examination, Section 3.1 & Table 1 (Test Pattern)",
+    "sha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "National / All India (MBBS/BDS/BAMS/BHMS/BUMS/BSMS/B.Sc. Nursing Admissions)",
+    "administeringBody": "NTA under guidance of Ministry of Health & Family Welfare (MoHFW) and NMC",
+    "participatingInstitutes": ["All AIIMS", "JIPMER", "Central Universities", "State Medical & Dental Colleges"],
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "supportedScope": {
+    "supportedPapers": ["NEET (UG) Unified Question Paper"],
+    "scopeBoundaryReason": "RankCrackers covers the complete 720-mark official medical entrance syllabus across Physics, Chemistry, and Biology (Botany & Zoology).",
+    "scopeDepthStatus": "NOT_COMPUTED",
+    "provenanceTag": "FOUNDER_DECLARED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "neet_ug_unified_paper",
+        "paperName": "National Eligibility Cum Entrance Test (UG)",
+        "mode": "Pen and Paper (OMR based)",
+        "durationMinutes": 180,
+        "totalQuestions": 180,
+        "totalQuestionsToAttempt": 180,
+        "totalMarks": 720,
+        "markingScheme": {
+          "correct": 4,
+          "incorrect": -1,
+          "unattempted": 0
+        },
+        "structure": [
+          {
+            "subject": "Physics",
+            "questionCount": 45,
+            "mandatory": 45,
+            "marks": 180,
+            "type": "MCQ",
+            "provenanceTag": "SOURCE_VERIFIED"
+          },
+          {
+            "subject": "Chemistry",
+            "questionCount": 45,
+            "mandatory": 45,
+            "marks": 180,
+            "type": "MCQ",
+            "provenanceTag": "SOURCE_VERIFIED"
+          },
+          {
+            "subject": "Biology (Botany & Zoology)",
+            "questionCount": 90,
+            "mandatory": 90,
+            "marks": 360,
+            "type": "MCQ",
+            "provenanceTag": "SOURCE_VERIFIED"
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "subjectModel": {
+    "officialPaperStructure": [
+      {
+        "subjectId": "physics",
+        "subjectName": "Physics",
+        "canonicalKey": "neet_physics",
+        "officialQuestionCount": 45,
+        "officialMarks": 180,
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "chemistry",
+        "subjectName": "Chemistry",
+        "canonicalKey": "neet_chemistry",
+        "officialQuestionCount": 45,
+        "officialMarks": 180,
+        "subdisciplines": ["Physical Chemistry", "Inorganic Chemistry", "Organic Chemistry"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "biology",
+        "subjectName": "Biology (Botany & Zoology)",
+        "canonicalKey": "neet_biology",
+        "officialQuestionCount": 90,
+        "officialMarks": 360,
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ],
+    "systemDerivedTaxonomy": {
+      "note": "For granular RankCrackers academic tagging and digibook indexing, Biology is partitioned into Botany and Zoology child subdivisions. This is an internal system taxonomy and NOT a four-section paper division in the official test.",
+      "childDisciplines": [
+        {
+          "disciplineId": "botany",
+          "disciplineName": "Botany",
+          "canonicalKey": "neet_botany",
+          "derivedQuestionCount": 45,
+          "derivedMarks": 180,
+          "superdiscipline": "Biology",
+          "provenanceTag": "SYSTEM_DERIVED"
+        },
+        {
+          "disciplineId": "zoology",
+          "disciplineName": "Zoology",
+          "canonicalKey": "neet_zoology",
+          "derivedQuestionCount": 45,
+          "derivedMarks": 180,
+          "superdiscipline": "Biology",
+          "provenanceTag": "SYSTEM_DERIVED"
+        }
+      ]
+    }
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English", "Hindi", "Assamese", "Bengali", "Gujarati",
+      "Kannada", "Malayalam", "Marathi", "Odia", "Punjabi",
+      "Tamil", "Telugu", "Urdu"
+    ],
+    "mediumCount": 13,
+    "officialLocator": "Chapter 3: Medium of Question Papers",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": ["NEET Unified Paper"],
+    "paperAliases": {
+      "NEET Unified Paper": ["NEET (UG)", "NEET Paper", "Question Paper", "Medical Entrance"]
+    },
+    "expectedSubjects": ["Physics", "Chemistry", "Biology", "Botany", "Zoology"],
+    "subjectAliases": {
+      "Physics": ["Physics", "PHYSICS", "Section - Physics", "Physics (Part 1)"],
+      "Chemistry": ["Chemistry", "CHEMISTRY", "Section - Chemistry", "Chemistry (Part 2)"],
+      "Biology": ["Biology", "BIOLOGY", "Biology (Botany & Zoology)", "Botany & Zoology", "Section - Biology"]
+    },
+    "languageScripts": ["Latin", "Devanagari"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "sourceYearPolicy": "USE_2026_AS_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "localDocumentBinding": {
+    "documentId": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+    "extractedPagesRange": "67-80",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "recruitmentObservedYear": "SYSTEM_DERIVED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "paperStructure": "SOURCE_VERIFIED",
+    "markingScheme": "SOURCE_VERIFIED",
+    "officialSubjectModel": "SOURCE_VERIFIED",
+    "systemDerivedTaxonomy": "SYSTEM_DERIVED",
+    "supportedScope": "FOUNDER_DECLARED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

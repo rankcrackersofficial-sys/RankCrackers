@@ -1,0 +1,29 @@
+{
+  "gate": "GATE_48CS2R1_PARTICIPATION_STATE_MODEL",
+  "generatedAt": "2026-09-10T11:26:52.329Z",
+  "states": [
+    "DISCOVERED",
+    "INTERESTED",
+    "APPLIED",
+    "APPLICATION_SUBMITTED",
+    "EXAM_APPEARED",
+    "WAITING_RESULT",
+    "NOT_INTERESTED"
+  ],
+  "userCycleDecoupling": {
+    "principle": "USER_STATE_INDEPENDENCE",
+    "rule": "RecruitmentParticipation records user-specific interaction (e.g. EXAM_APPEARED) and never mutates the official RecruitmentCycle state."
+  },
+  "processPriorityRouting": {
+    "onResultStage": {
+      "EXAM_APPEARED": {
+        "priority": "HIGH_PRIORITY_PERSONALIZED",
+        "wording": "High-Priority: Official examination results released for your participating exam session."
+      },
+      "NON_PARTICIPANT": {
+        "priority": "STANDARD_PUBLIC_UPDATE",
+        "wording": "Public Update: Examination results have been announced by the commission."
+      }
+    }
+  }
+}

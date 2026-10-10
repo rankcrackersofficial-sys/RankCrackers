@@ -1,0 +1,97 @@
+{
+  "authorities": [
+    {
+      "authorityKey": "auth_in_upsc",
+      "authorityName": "Union Public Service Commission",
+      "officialPrimaryDomains": [
+        "upsc.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ssc",
+      "authorityName": "Staff Selection Commission",
+      "officialPrimaryDomains": [
+        "ssc.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_cbse",
+      "authorityName": "Central Board of Secondary Education",
+      "officialPrimaryDomains": [
+        "cbse.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nta",
+      "authorityName": "National Testing Agency",
+      "officialPrimaryDomains": [
+        "nta.ac.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rrb",
+      "authorityName": "Railway Recruitment Boards",
+      "officialPrimaryDomains": [
+        "rrbcdg.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rpf_rrb",
+      "authorityName": "Railway Protection Force recruitment via RRB",
+      "officialPrimaryDomains": [
+        "indianrailways.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ibps",
+      "authorityName": "Institute of Banking Personnel Selection",
+      "officialPrimaryDomains": [
+        "ibps.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_sbi",
+      "authorityName": "State Bank of India",
+      "officialPrimaryDomains": [
+        "sbi.co.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rbi",
+      "authorityName": "Reserve Bank of India",
+      "officialPrimaryDomains": [
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nabard",
+      "authorityName": "NABARD",
+      "officialPrimaryDomains": [
+        "nabard.org"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_army",
+      "authorityName": "Indian Army",
+      "officialPrimaryDomains": [
+        "joinindianarmy.nic.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_navy",
+      "authorityName": "Indian Navy",
+      "officialPrimaryDomains": [
+        "joinindiannavy.gov.in"
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_air_force",
+      "authorityName": "Indian Air Force",
+      "officialPrimaryDomains": [
+        "careerairforce.gov.in",
+        "iafrecruitment.edcil.co.in"
+      ]
+    }
+  ]
+}

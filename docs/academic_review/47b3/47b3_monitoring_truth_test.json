@@ -1,0 +1,11 @@
+{
+  "testCode": "RC_47B3_MONITORING_TRUTH_TEST",
+  "executedAt": "2026-09-10T06:11:50.522Z",
+  "monitorConfigured": false,
+  "monitorRuntimeProven": false,
+  "metrics": {
+    "FAKE_MONITOR_CONFIGURED_COUNT": 0,
+    "FAKE_MONITOR_RUNTIME_COUNT": 0
+  },
+  "assertionPass": true
+}

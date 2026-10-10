@@ -1,0 +1,13 @@
+{
+  "testCode": "RC_47B2_DUPLICATE_IDENTITY_TEST",
+  "executedAt": "2026-09-10T06:00:00.765Z",
+  "metrics": {
+    "yearwiseNewMissionRejected": true,
+    "unknownAuthorityRejected": true,
+    "clonedCentralAuthorityRejected": true,
+    "UNKNOWN_AUTHORITY_ACCEPTED_COUNT": 0,
+    "YEARWISE_NEW_MISSION_ACCEPTED_COUNT": 0,
+    "CENTRAL_AUTHORITY_CLONE_ACCEPTED_COUNT": 0,
+    "pass": true
+  }
+}

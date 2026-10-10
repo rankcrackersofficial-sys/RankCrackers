@@ -1,0 +1,120 @@
+{
+  "sscRuleFamiliesVerified": 8,
+  "sscRuleFamiliesUnresolved": 3,
+  "jeeRuleFamiliesVerified": 10,
+  "jeeRuleFamiliesUnresolved": 1,
+  "rows": [
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "CYCLE_IDENTITY",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "APPLICATION_WINDOW",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "CORRECTION_WINDOW",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "POST_AGE_LIMITS",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "AGE_RELAXATION",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "QUALIFICATION",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "CATEGORY_RESERVATION",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "VACANCY_SUMMARY",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "VACANCY_MATRIX",
+      "status": "UNRESOLVED"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "ANSWER_KEY_LIFECYCLE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "ruleFamily": "RESULT_LIFECYCLE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "CYCLE_IDENTITY",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "AGE_RULE",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "QUALIFICATION_PASSING_YEAR",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "STATE_OF_ELIGIBILITY",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "SESSION_ATTEMPT_RULE",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "SESSION1_APPLICATION_WINDOW",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "EXAM_LIFECYCLE",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "ANSWER_KEY_LIFECYCLE",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "RESULT_LIFECYCLE",
+      "status": "VERIFIED_COMPLETE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "JOB_VACANCY_MATRIX",
+      "status": "NOT_APPLICABLE_VERIFIED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "ruleFamily": "SESSION2_EXACT_APPLICATION_CORRECTION_DATES",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "sscVacancyMatrixComplete": "NO",
+  "jeeJobVacancySemanticCount": 0
+}

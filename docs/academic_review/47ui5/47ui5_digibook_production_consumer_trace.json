@@ -1,0 +1,15 @@
+{
+  "gate": "47UI5",
+  "surface": "DigiBook",
+  "audit": "Verification of zero fake / mock data in production consumer lanes",
+  "findings": {
+    "fake_fixtures_in_production": 0,
+    "unbacked_chapters_rendered": 0,
+    "state_when_governed_content_absent": "Truthful Preparing state rendered via _buildPreparingState()"
+  },
+  "metrics": {
+    "DIGIBOOK_FAKE_DATA_SOURCE_COUNT": 0,
+    "STUDENT_VISIBLE_DIGIBOOK_FAKE_ROW_COUNT": 0
+  },
+  "status": "PASSED"
+}

@@ -1,0 +1,61 @@
+{
+  "gate": "GATE 48CS2R5",
+  "invariant": "ADMISSION_FORCED_TO_JOB_VACANCY_COUNT = 0",
+  "metrics": {
+    "ADMISSION_FORCED_TO_JOB_VACANCY_COUNT": 0
+  },
+  "rulesEnforced": {
+    "admissionIsolation": "JEE Main and NEET UG are classified strictly as ADMISSION_ENTRANCE and are not evaluated against job vacancy matrices.",
+    "recruitmentIsolation": "SSC CGL, UPSC CSE, RPSC RAS, and RPSC School Lecturer are classified as JOB_RECRUITMENT and do not inherit admission entrance semantics."
+  },
+  "pilots": [
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "authorityId": "RPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "isAdmission": false,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "CADRE_JOB_VACANCY_RECRUITMENT"
+    },
+    {
+      "cycleId": "RPSC-RAS-2024",
+      "authorityId": "RPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "isAdmission": false,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "CADRE_JOB_VACANCY_RECRUITMENT"
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "authorityId": "NTA",
+      "opportunityKind": "ADMISSION_ENTRANCE",
+      "isAdmission": true,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "ENTRANCE_SEAT_INTAKE_VIA_COUNSELING"
+    },
+    {
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "authorityId": "NTA",
+      "opportunityKind": "ADMISSION_ENTRANCE",
+      "isAdmission": true,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "ENTRANCE_SEAT_INTAKE_VIA_COUNSELING"
+    },
+    {
+      "cycleId": "UPSC-CSE-2026",
+      "authorityId": "UPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "isAdmission": false,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "CADRE_JOB_VACANCY_RECRUITMENT"
+    },
+    {
+      "cycleId": "SSC-CGL-2026",
+      "authorityId": "SSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "isAdmission": false,
+      "forcedIntoJobVacancyMatrix": false,
+      "capacityModel": "CADRE_JOB_VACANCY_RECRUITMENT"
+    }
+  ]
+}

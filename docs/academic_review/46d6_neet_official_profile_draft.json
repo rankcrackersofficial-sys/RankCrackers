@@ -1,0 +1,165 @@
+{
+  "profileSchemaVersion": "1.0.0",
+  "missionId": "neet_(ug)-2027",
+  "canonicalExamName": "NEET (UG)",
+  "canonicalDisplayName": "NEET (UG)-2027",
+  "missionTargetYear": 2027,
+  "recruitmentObservedYear": 2026,
+  "studentCatalogObservedYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "targetYearReconciliationNote": "Under Chief Architect guidance, missionTargetYear is canonically locked to 2027. The recruitment document year=2026 observed in backend reflects the prior cycle creation seed and does not constitute a mission conflict when mapped via PRIOR_OFFICIAL_BASELINE.",
+  "authority": {
+    "organization": "National Testing Agency (NTA) & National Medical Commission (NMC)",
+    "officialPortals": [
+      "https://neet.nta.nic.in",
+      "https://exams.nta.ac.in/NEET",
+      "https://nta.ac.in",
+      "https://www.nmc.org.in"
+    ],
+    "sourceDocumentType": "Information Bulletin & NMC Core Syllabus for NEET (UG)",
+    "officialNotificationTitle": "National Eligibility Cum Entrance Test (UG) - Information Bulletin",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "National / All India (MBBS/BDS/BAMS/BHMS/BUMS/BSMS/B.Sc. Nursing Admissions)",
+    "administeringBody": "NTA under guidance of Ministry of Health & Family Welfare (MoHFW) and NMC",
+    "participatingInstitutes": ["All AIIMS", "JIPMER", "Central Universities", "State Medical & Dental Colleges"],
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "supportedScope": {
+    "supportedPapers": ["NEET (UG) Unified Question Paper"],
+    "scopeBoundaryReason": "RankCrackers covers the complete 720-mark official medical entrance syllabus across Physics, Chemistry, Botany, and Zoology.",
+    "scopeDepthStatus": "NOT_COMPUTED",
+    "provenanceTag": "FOUNDER_DECLARED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "neet_ug_unified_paper",
+        "paperName": "National Eligibility Cum Entrance Test (UG)",
+        "mode": "Pen & Paper (OMR based)",
+        "durationMinutes": 200,
+        "totalQuestions": 200,
+        "totalQuestionsToAttempt": 180,
+        "totalMarks": 720,
+        "markingScheme": {
+          "correct": 4,
+          "incorrect": -1,
+          "unattempted": 0
+        },
+        "structure": [
+          {
+            "subject": "Physics",
+            "sectionA": { "questionCount": 35, "mandatory": 35, "marks": 140, "type": "MCQ" },
+            "sectionB": { "questionCount": 15, "mandatory": 10, "marks": 40, "type": "MCQ" },
+            "subjectTotalQuestions": 45,
+            "subjectTotalMarks": 180
+          },
+          {
+            "subject": "Chemistry",
+            "sectionA": { "questionCount": 35, "mandatory": 35, "marks": 140, "type": "MCQ" },
+            "sectionB": { "questionCount": 15, "mandatory": 10, "marks": 40, "type": "MCQ" },
+            "subjectTotalQuestions": 45,
+            "subjectTotalMarks": 180
+          },
+          {
+            "subject": "Botany",
+            "sectionA": { "questionCount": 35, "mandatory": 35, "marks": 140, "type": "MCQ" },
+            "sectionB": { "questionCount": 15, "mandatory": 10, "marks": 40, "type": "MCQ" },
+            "subjectTotalQuestions": 45,
+            "subjectTotalMarks": 180
+          },
+          {
+            "subject": "Zoology",
+            "sectionA": { "questionCount": 35, "mandatory": 35, "marks": 140, "type": "MCQ" },
+            "sectionB": { "questionCount": 15, "mandatory": 10, "marks": 40, "type": "MCQ" },
+            "subjectTotalQuestions": 45,
+            "subjectTotalMarks": 180
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "physics",
+        "subjectName": "Physics",
+        "canonicalKey": "neet_physics",
+        "officialSections": ["Section A (35 Qs)", "Section B (15 Qs, Attempt 10)"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "chemistry",
+        "subjectName": "Chemistry",
+        "canonicalKey": "neet_chemistry",
+        "officialSections": ["Section A (35 Qs)", "Section B (15 Qs, Attempt 10)"],
+        "subdisciplines": ["Physical Chemistry", "Inorganic Chemistry", "Organic Chemistry"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "botany",
+        "subjectName": "Botany",
+        "canonicalKey": "neet_botany",
+        "officialSections": ["Section A (35 Qs)", "Section B (15 Qs, Attempt 10)"],
+        "superdiscipline": "Biology",
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "zoology",
+        "subjectName": "Zoology",
+        "canonicalKey": "neet_zoology",
+        "officialSections": ["Section A (35 Qs)", "Section B (15 Qs, Attempt 10)"],
+        "superdiscipline": "Biology",
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English", "Hindi", "Assamese", "Bengali", "Gujarati",
+      "Kannada", "Malayalam", "Marathi", "Odia", "Punjabi",
+      "Tamil", "Telugu", "Urdu"
+    ],
+    "mediumCount": 13,
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": ["NEET Unified Paper"],
+    "paperAliases": {
+      "NEET Unified Paper": ["NEET (UG)", "NEET Paper", "Question Paper", "Medical Entrance"]
+    },
+    "expectedSubjects": ["Physics", "Chemistry", "Botany", "Zoology", "Biology"],
+    "subjectAliases": {
+      "Physics": ["Physics", "PHYSICS", "Section A - Physics", "Section B - Physics"],
+      "Chemistry": ["Chemistry", "CHEMISTRY", "Section A - Chemistry", "Section B - Chemistry"],
+      "Botany": ["Botany", "BOTANY", "Biology: Botany", "Section A - Botany", "Section B - Botany"],
+      "Zoology": ["Zoology", "ZOOLOGY", "Biology: Zoology", "Section A - Zoology", "Section B - Zoology"]
+    },
+    "languageScripts": ["Latin", "Devanagari"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "sourceYearPolicy": "USE_2026_AS_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "localDocumentBinding": {
+    "documentId": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+    "extractedPagesRange": "67-80",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "recruitmentObservedYear": "SYSTEM_DERIVED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "paperStructure": "SOURCE_VERIFIED",
+    "markingScheme": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED",
+    "supportedScope": "FOUNDER_DECLARED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

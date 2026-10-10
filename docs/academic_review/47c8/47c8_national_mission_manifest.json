@@ -1,0 +1,2727 @@
+{
+  "manifestVersion": "1.0.0-47c8",
+  "manifestId": "manifest_national_canonical_47c8",
+  "schemaVersion": "47C8.1",
+  "generatedAt": "2026-09-10T08:02:35.053Z",
+  "fixtureOnly": false,
+  "missions": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "title": "Civil Services Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CIVIL_SERVICES",
+      "examCategory": "CIVIL_SERVICES",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_ifos",
+      "title": "Indian Forest Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CIVIL_SERVICES",
+      "examCategory": "CIVIL_SERVICES",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_REVIEW_REQUIRED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": false,
+        "catalogPreparingDiscoverable": false,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "REVIEW_REQUIRED",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_cds",
+      "title": "Combined Defence Services Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_nda_na",
+      "title": "National Defence Academy and Naval Academy Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_capf_ac",
+      "title": "Central Armed Police Forces (ACs) Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_ese",
+      "title": "Engineering Services Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENGINEERING",
+      "examCategory": "ENGINEERING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_cms",
+      "title": "Combined Medical Services Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "MEDICAL",
+      "examCategory": "MEDICAL",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "title": "Indian Economic Service / Indian Statistical Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ECONOMICS_STATISTICS",
+      "examCategory": "ECONOMICS_STATISTICS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_REVIEW_REQUIRED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": false,
+        "catalogPreparingDiscoverable": false,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "REVIEW_REQUIRED",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "upsc_geo_scientist",
+      "title": "Combined Geo-Scientist Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "SCIENCE",
+      "examCategory": "SCIENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_upsc",
+        "officialDomain": "www.upsc.gov.in",
+        "officialListingPageUrl": "https://www.upsc.gov.in/examinations/active-exams",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.upsc.gov.in/examinations/active-exams",
+        "title": "UPSC active examinations",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.upsc.gov.in/examinations/active-exams"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "title": "SSC Combined Graduate Level Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "title": "SSC Combined Higher Secondary Level Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "title": "SSC MTS / Havaldar Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_gd",
+      "title": "SSC Constable GD Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "title": "SSC Sub-Inspector CPO Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_je",
+      "title": "SSC Junior Engineer Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENGINEERING",
+      "examCategory": "ENGINEERING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "title": "SSC Stenographer Grade C and D Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "title": "SSC Combined Hindi Translators Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "LANGUAGE",
+      "examCategory": "LANGUAGE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "title": "SSC Selection Post Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "CENTRAL_STAFFING",
+      "examCategory": "CENTRAL_STAFFING",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ssc",
+        "officialDomain": "ssc.gov.in",
+        "officialListingPageUrl": "https://ssc.gov.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ssc.gov.in/",
+        "title": "SSC examination and candidate resources",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://ssc.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "title": "Joint Entrance Examination Main",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENTRANCE",
+      "examCategory": "ENTRANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "permanentExamKey": "jee_main",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "title": "NEET UG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENTRANCE",
+      "examCategory": "ENTRANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "permanentExamKey": "neet_ug",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_cuet_ug",
+      "title": "CUET UG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENTRANCE",
+      "examCategory": "ENTRANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_cuet_pg",
+      "title": "CUET PG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "ENTRANCE",
+      "examCategory": "ENTRANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_ugc_net",
+      "title": "UGC NET",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "TEACHING_FELLOWSHIP",
+      "examCategory": "TEACHING_FELLOWSHIP",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_csir_ugc_net",
+      "title": "Joint CSIR UGC NET",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "SCIENCE_FELLOWSHIP",
+      "examCategory": "SCIENCE_FELLOWSHIP",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "title": "ICAR AIEEA PG / AICE JRF-SRF",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "AGRICULTURE",
+      "examCategory": "AGRICULTURE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_REVIEW_REQUIRED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": false,
+        "catalogPreparingDiscoverable": false,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "REVIEW_REQUIRED",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "title": "NCHM JEE",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "HOSPITALITY",
+      "examCategory": "HOSPITALITY",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_REVIEW_REQUIRED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nta",
+        "officialDomain": "nta.ac.in",
+        "officialListingPageUrl": "https://nta.ac.in/NoticeBoardArchive",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_ARCHIVE_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://nta.ac.in/NoticeBoardArchive",
+        "title": "NTA notice-board archive",
+        "verification": "OFFICIAL_ARCHIVE_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://nta.ac.in/NoticeBoardArchive"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": false,
+        "catalogPreparingDiscoverable": false,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "REVIEW_REQUIRED",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rrb_ntpc",
+      "title": "RRB NTPC",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": true,
+      "variants": [
+        {
+          "variantId": "graduate",
+          "displayName": "Graduate Posts",
+          "variantDimension": "LEVEL",
+          "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php"
+        },
+        {
+          "variantId": "undergraduate",
+          "displayName": "Undergraduate Posts",
+          "variantDimension": "LEVEL",
+          "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php"
+        }
+      ],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rrb",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": {
+        "regionIsDiscoveryContext": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rrb_level_1",
+      "title": "RRB Level 1",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rrb",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": {
+        "regionIsDiscoveryContext": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rrb_alp",
+      "title": "RRB Assistant Loco Pilot",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rrb",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": {
+        "regionIsDiscoveryContext": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rrb_technician",
+      "title": "RRB Technician",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rrb",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": {
+        "regionIsDiscoveryContext": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rrb_je",
+      "title": "RRB Junior Engineer",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rrb",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": {
+        "regionIsDiscoveryContext": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rpf_si",
+      "title": "RPF Sub-Inspector",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "authorityGroupKey": "rpf",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rpf",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "crossAgencyRecruitment": true,
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0"
+    },
+    {
+      "missionId": "rpf_constable",
+      "title": "RPF Constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "authorityGroupKey": "rpf",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "RAILWAYS",
+      "examCategory": "RAILWAYS",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rpf",
+        "officialDomain": "www.rrbcdg.gov.in",
+        "officialListingPageUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.rrbcdg.gov.in/employment-notices.php"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "crossAgencyRecruitment": true,
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0"
+    },
+    {
+      "missionId": "ibps_po_mt",
+      "title": "IBPS CRP PO/MT",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ibps",
+        "officialDomain": "www.ibps.in",
+        "officialListingPageUrl": "https://www.ibps.in/index.php/crp-updates/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.ibps.in/index.php/crp-updates/",
+        "title": "IBPS CRP updates",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.ibps.in/index.php/crp-updates/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ibps_csa",
+      "title": "IBPS CRP Customer Service Associate",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ibps",
+        "officialDomain": "www.ibps.in",
+        "officialListingPageUrl": "https://www.ibps.in/index.php/crp-updates/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.ibps.in/index.php/crp-updates/",
+        "title": "IBPS CRP updates",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.ibps.in/index.php/crp-updates/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ibps_so",
+      "title": "IBPS CRP Specialist Officer",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ibps",
+        "officialDomain": "www.ibps.in",
+        "officialListingPageUrl": "https://www.ibps.in/index.php/crp-updates/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.ibps.in/index.php/crp-updates/",
+        "title": "IBPS CRP updates",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.ibps.in/index.php/crp-updates/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "ibps_crp_rrb_officers",
+      "title": "IBPS RRB Officer Scale I/II/III",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": true,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ibps",
+        "officialDomain": "www.ibps.in",
+        "officialListingPageUrl": "https://www.ibps.in/index.php/crp-updates/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.ibps.in/index.php/crp-updates/",
+        "title": "IBPS CRP updates",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.ibps.in/index.php/crp-updates/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": false,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false,
+        "quickEntryEnabled": false,
+        "smartEntryEnabled": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "displayAliases": [
+        "IBPS RRB Officer Scale I/II/III"
+      ],
+      "searchAliases": [
+        "ibps_rrb_officer",
+        "ibps_rrb_po"
+      ],
+      "historicalAliases": [
+        "ibps_rrb_officer"
+      ],
+      "aliasMaterializationAllowed": false,
+      "variantModelReady": false
+    },
+    {
+      "missionId": "ibps_crp_rrb_office_assistant",
+      "title": "IBPS RRB Office Assistant",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_ibps",
+        "officialDomain": "www.ibps.in",
+        "officialListingPageUrl": "https://www.ibps.in/index.php/crp-updates/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.ibps.in/index.php/crp-updates/",
+        "title": "IBPS CRP updates",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.ibps.in/index.php/crp-updates/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "searchAliases": [
+        "ibps_rrb_office_assistant",
+        "ibps_rrb_clerk"
+      ],
+      "historicalAliases": [
+        "ibps_rrb_office_assistant"
+      ],
+      "aliasMaterializationAllowed": false
+    },
+    {
+      "missionId": "sbi_po",
+      "title": "SBI Probationary Officer",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "authorityGroupKey": "sbi",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_sbi",
+        "officialDomain": "sbi.co.in",
+        "officialListingPageUrl": "https://sbi.co.in/web/careers",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://sbi.co.in/web/careers",
+        "title": "SBI careers",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://sbi.co.in/web/careers"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "sbi_ja",
+      "title": "SBI Junior Associate",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "authorityGroupKey": "sbi",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_sbi",
+        "officialDomain": "sbi.co.in",
+        "officialListingPageUrl": "https://sbi.co.in/web/careers",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://sbi.co.in/web/careers",
+        "title": "SBI careers",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://sbi.co.in/web/careers"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "title": "RBI Grade B",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "authorityGroupKey": "rbi",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": true,
+      "variants": [
+        {
+          "variantId": "general",
+          "displayName": "General",
+          "variantDimension": "DISCIPLINE",
+          "sourceEvidenceRef": "https://opportunities.rbi.org.in/"
+        },
+        {
+          "variantId": "depr",
+          "displayName": "DEPR",
+          "variantDimension": "DISCIPLINE",
+          "sourceEvidenceRef": "https://opportunities.rbi.org.in/"
+        },
+        {
+          "variantId": "dsim",
+          "displayName": "DSIM",
+          "variantDimension": "DISCIPLINE",
+          "sourceEvidenceRef": "https://opportunities.rbi.org.in/"
+        }
+      ],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rbi",
+        "officialDomain": "opportunities.rbi.org.in",
+        "officialListingPageUrl": "https://opportunities.rbi.org.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://opportunities.rbi.org.in/",
+        "title": "RBI opportunities",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://opportunities.rbi.org.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "title": "RBI Assistant",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "authorityGroupKey": "rbi",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_rbi",
+        "officialDomain": "opportunities.rbi.org.in",
+        "officialListingPageUrl": "https://opportunities.rbi.org.in/",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_PORTAL_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://opportunities.rbi.org.in/",
+        "title": "RBI opportunities",
+        "verification": "OFFICIAL_PORTAL_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://opportunities.rbi.org.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "title": "NABARD Grade A Assistant Manager",
+      "canonicalAuthorityKey": "auth_in_nabard",
+      "authorityGroupKey": "nabard",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "BANKING_FINANCE",
+      "examCategory": "BANKING_FINANCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_nabard",
+        "officialDomain": "www.nabard.org",
+        "officialListingPageUrl": "https://www.nabard.org/careers-notices1.aspx?cid=693&id=26",
+        "exactDocumentUrl": null,
+        "documentType": "OFFICIAL_SOURCE_SURFACE",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.nabard.org/careers-notices1.aspx?cid=693&id=26",
+        "title": "NABARD careers",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.nabard.org/careers-notices1.aspx?cid=693&id=26"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": false,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "afcat",
+      "title": "Air Force Common Admission Test",
+      "canonicalAuthorityKey": "auth_in_indian_air_force",
+      "authorityGroupKey": "indian_air_force",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_indian_air_force",
+        "officialDomain": "careerairforce.gov.in",
+        "officialListingPageUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+        "exactDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+        "documentType": "CURRENT_GOVERNING_DOCUMENT",
+        "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+        "title": "AFCAT Cycle 02/2026 Notification",
+        "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": true,
+        "syllabusOrSchemeReady": true,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": true,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "recruitmentRoutes": [
+        {
+          "routeId": "flying",
+          "displayName": "Flying Branch",
+          "usesAfcatWrittenExam": true,
+          "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(a)_and_Para_6(a)",
+          "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+          "officialDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+          "paragraphLocator": "Para 3(a) and Para 6(a)",
+          "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY"
+        },
+        {
+          "routeId": "ground_duty_technical",
+          "displayName": "Ground Duty (Technical) Branch",
+          "usesAfcatWrittenExam": true,
+          "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(b)_and_Para_6(a)",
+          "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+          "officialDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+          "paragraphLocator": "Para 3(b) and Para 6(a)",
+          "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY"
+        },
+        {
+          "routeId": "ground_duty_non_technical",
+          "displayName": "Ground Duty (Non-Technical) Branch",
+          "usesAfcatWrittenExam": true,
+          "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(c)_and_Para_6(a)",
+          "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+          "officialDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+          "paragraphLocator": "Para 3(c) and Para 6(a)",
+          "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY"
+        },
+        {
+          "routeId": "ncc_special_entry",
+          "displayName": "NCC Special Entry",
+          "usesAfcatWrittenExam": false,
+          "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(e)_and_Para_6(b)",
+          "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+          "officialDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+          "paragraphLocator": "Para 3(e) and Para 6(b)",
+          "evidenceStatementType": "WRITTEN_EXAM_EXEMPTION"
+        },
+        {
+          "routeId": "gate_entry",
+          "displayName": "GATE Score Entry",
+          "usesAfcatWrittenExam": false,
+          "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(f)_and_Para_6(c)",
+          "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+          "officialDocumentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+          "paragraphLocator": "Para 3(f) and Para 6(c)",
+          "evidenceStatementType": "WRITTEN_EXAM_EXEMPTION"
+        }
+      ],
+      "academicVariants": [],
+      "currentApplicationPortal": "https://afcat.edcil.co.in"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "title": "Indian Army Agniveer Online CEE",
+      "canonicalAuthorityKey": "auth_in_indian_army",
+      "authorityGroupKey": "indian_army",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": true,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_indian_army",
+        "officialDomain": "joinindianarmy.nic.in",
+        "officialListingPageUrl": "https://www.joinindianarmy.nic.in/",
+        "exactDocumentUrl": null,
+        "documentType": "RECRUITMENT_PORTAL",
+        "verificationClass": "OFFICIAL_SURFACE_VERIFIED",
+        "effectiveStatus": "CURRENT"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+        "title": "Indian Army Online CEE registration 2026-27",
+        "verification": "OFFICIAL_MOD_PIB_EVENT_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": false,
+        "variantModelReady": false,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": false,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL",
+      "variantCandidates": [
+        {
+          "variantId": "general_duty",
+          "displayName": "Agniveer General Duty",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "status": "REVIEW_REQUIRED"
+        },
+        {
+          "variantId": "technical",
+          "displayName": "Agniveer Technical",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "status": "REVIEW_REQUIRED"
+        },
+        {
+          "variantId": "office_assistant_skt",
+          "displayName": "Agniveer Office Assistant / Store Keeper Technical",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "status": "REVIEW_REQUIRED"
+        },
+        {
+          "variantId": "tradesman",
+          "displayName": "Agniveer Tradesman",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "status": "REVIEW_REQUIRED"
+        },
+        {
+          "variantId": "women_military_police",
+          "displayName": "Agniveer Women Military Police",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "status": "REVIEW_REQUIRED"
+        }
+      ],
+      "corroboratingOfficialSources": [
+        {
+          "sourcePublisher": "Press Information Bureau, Ministry of Defence",
+          "sourcePublisherType": "GOVERNMENT_PUBLIC_INFORMATION_AUTHORITY",
+          "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+          "evidenceRole": "CURRENT_CEE_EVENT_AND_CBT_EVIDENCE",
+          "missionAuthorityKey": "auth_in_indian_army",
+          "verificationClass": "OFFICIAL_CORROBORATING_SOURCE_VERIFIED"
+        }
+      ]
+    },
+    {
+      "missionId": "navy_agniveer_ssr",
+      "title": "Indian Navy Agniveer SSR / INET",
+      "canonicalAuthorityKey": "auth_in_indian_navy",
+      "authorityGroupKey": "indian_navy",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_indian_navy",
+        "officialDomain": "www.joinindiannavy.gov.in",
+        "officialListingPageUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+        "exactDocumentUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+        "documentType": "CURRENT_GOVERNING_DOCUMENT",
+        "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+        "title": "Indian Navy Agniveer SSR notice",
+        "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": true,
+        "syllabusOrSchemeReady": true,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": true,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "agniveervayu",
+      "title": "Indian Air Force Agniveervayu Selection Test",
+      "canonicalAuthorityKey": "auth_in_indian_air_force",
+      "authorityGroupKey": "indian_air_force",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "DEFENCE",
+      "examScope": "OBJECTIVE_MCQ_COMPATIBLE_STAGE",
+      "examPurpose": "RECRUITMENT_OR_ENTRANCE",
+      "qualification": "MAJOR_MISSION_ACCEPTED",
+      "variantRequired": true,
+      "variants": [
+        {
+          "variantId": "science",
+          "displayName": "Science Subjects",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+        },
+        {
+          "variantId": "other_than_science",
+          "displayName": "Other than Science Subjects",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+        },
+        {
+          "variantId": "combined",
+          "displayName": "Science and Other than Science Subjects",
+          "variantDimension": "TRACK",
+          "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+        }
+      ],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_indian_air_force",
+        "officialDomain": "iafrecruitment.edcil.co.in",
+        "officialListingPageUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+        "exactDocumentUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+        "documentType": "CURRENT_GOVERNING_DOCUMENT",
+        "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED_IN_47C4_47C5"
+      },
+      "latestEffectiveSource": {
+        "url": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+        "title": "Agniveervayu Intake 01/2027 advertisement",
+        "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+      },
+      "sourceSurfaceRefs": [
+        "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+      ],
+      "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": true,
+        "syllabusOrSchemeReady": true,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": true,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING",
+      "region": "NATIONAL"
+    },
+    {
+      "missionId": "cbse_ctet",
+      "permanentExamKey": "ctet",
+      "title": "Central Teacher Eligibility Test",
+      "canonicalAuthorityKey": "auth_in_cbse",
+      "authorityGroupKey": "cbse",
+      "jurisdictionLevel": "CENTRAL",
+      "region": "NATIONAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "TEACHING_AND_EDUCATION",
+      "examCategory": "eligibility_gateway",
+      "examScope": "NATIONAL_OBJECTIVE_EXAM",
+      "examPurpose": "TEACHER_ELIGIBILITY",
+      "variantRequired": true,
+      "variants": [
+        {
+          "variantId": "PRIMARY_CLASSES_I_V",
+          "displayName": "Primary Level (Classes I–V) — Paper I",
+          "variantDimension": "LEVEL",
+          "paperStructure": "Paper I",
+          "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+        },
+        {
+          "variantId": "UPPER_PRIMARY_CLASSES_VI_VIII",
+          "displayName": "Upper Primary Level (Classes VI–VIII) — Paper II",
+          "variantDimension": "LEVEL",
+          "paperStructure": "Paper II",
+          "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+        }
+      ],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_cbse",
+        "officialDomain": "ctet.nic.in",
+        "officialListingPageUrl": "https://ctet.nic.in/documents/",
+        "exactDocumentUrl": null,
+        "documentType": "CURRENT_INFORMATION_BULLETIN_LISTING",
+        "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+        "effectiveStatus": "LATEST_EFFECTIVE"
+      },
+      "latestEffectiveSource": {
+        "url": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/",
+        "title": "CTET September 2026 Information Bulletin"
+      },
+      "sourceSurfaceRefs": [
+        "https://ctet.nic.in/documents/",
+        "https://ctet.nic.in/archive/"
+      ],
+      "pyqSourceState": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "regionalDiscovery": {
+        "stateAndUtPointersAllowed": true,
+        "createsMissionClone": false
+      },
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": false,
+        "syllabusOrSchemeReady": true,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": true,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING"
+    },
+    {
+      "missionId": "navy_agniveer_mr",
+      "permanentExamKey": "navy_agniveer_mr",
+      "title": "Indian Navy Agniveer MR / INET",
+      "canonicalAuthorityKey": "auth_in_indian_navy",
+      "authorityGroupKey": "indian_navy",
+      "jurisdictionLevel": "CENTRAL",
+      "region": "NATIONAL",
+      "stateCode": null,
+      "stateName": null,
+      "sector": "DEFENCE",
+      "examCategory": "competitive",
+      "examScope": "NATIONAL_OBJECTIVE_EXAM",
+      "examPurpose": "NAVY_AGNIVEER_RECRUITMENT",
+      "variantRequired": false,
+      "variants": [],
+      "officialSourceLocator": {
+        "authorityKey": "auth_in_indian_navy",
+        "officialDomain": "joinindiannavy.gov.in",
+        "officialListingPageUrl": null,
+        "exactDocumentUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+        "documentType": "CURRENT_RECRUITMENT_NOTIFICATION",
+        "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+        "effectiveStatus": "LATEST_VERIFIED"
+      },
+      "latestEffectiveSource": {
+        "url": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+        "title": "Indian Navy Agniveer MR 02/2025, 01/2026 and 02/2026"
+      },
+      "sourceSurfaceRefs": [
+        "https://www.joinindiannavy.gov.in/"
+      ],
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY",
+      "regionalDiscovery": null,
+      "readiness": {
+        "missionIdentityReady": true,
+        "authorityOwnerReady": true,
+        "sourceSurfaceResolved": true,
+        "latestNotificationReady": true,
+        "exactNotificationDocumentReady": true,
+        "syllabusOrSchemeReady": true,
+        "variantModelReady": true,
+        "pyqStateResolved": true,
+        "shellRecordReady": true,
+        "catalogPreparingDiscoverable": true,
+        "missionSelectionReady": true,
+        "academicStartReady": false
+      },
+      "materializationState": "SHELL_READY_PREPARING"
+    }
+  ],
+  "missionCount": 49
+}

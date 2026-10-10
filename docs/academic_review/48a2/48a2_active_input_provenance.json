@@ -1,0 +1,14 @@
+{
+  "gate": "RC_48A1_REPORT_CODE_CONTRADICTION_AND_TRUE_INDIA_MASTER_RECOMPUTATION_48A2",
+  "executedAt": "2026-09-10T11:21:27.354Z",
+  "mode": "STRICT READ-ONLY",
+  "inputs": {
+    "national": "docs/academic_review/47c8/",
+    "stateUt1": "docs/academic_review/47a3r1/",
+    "stateUt2": "docs/academic_review/47a4r3/",
+    "stateUtResidual": "docs/academic_review/48c/",
+    "liveReference": "docs/academic_review/48b0/",
+    "historicalBase": "docs/academic_review/48a/"
+  },
+  "provenanceVerified": true
+}

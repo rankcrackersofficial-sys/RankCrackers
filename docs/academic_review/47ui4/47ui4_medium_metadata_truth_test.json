@@ -1,0 +1,6 @@
+{
+  "unverified_bilingual_badge_count": 0,
+  "rule": "Only display language badge when verified medium metadata exists in backend payload",
+  "unverified_badge_behavior": "Omitted cleanly without rendering fake Bilingual string",
+  "verdict": "ZERO_FAKE_METADATA"
+}

@@ -1,0 +1,775 @@
+{
+  "auditCode": "RC_47A4R2_MAJOR_EVIDENCE_ROW_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.907Z",
+  "metrics": {
+    "ACCEPTED_MAJOR_WITH_UNSUPPORTED_EVIDENCE_COUNT": 0,
+    "NON_NUMERIC_MAJOR_WITH_GENERIC_HOMEPAGE_ONLY_COUNT": 0
+  },
+  "ledger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_pet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "up_tet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_tet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hp_tet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_clerk",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_pstet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_htet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "basis": "Conducted by SSC NWR under the canonical SSC Selection Post examination framework (ssc_selection_post). Vacancies belong to UT of Ladakh; not an independent examination identity.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_si",
+      "basis": "Conducted centrally by Staff Selection Commission via SSC CPO Examination (ssc_cpo). Delhi regional pointer routes to ssc_cpo. Duplicate permanent mission suppressed.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rbse_reet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gsssb_cce",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gpssb_talati",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_tre",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_cgl",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bseb_stet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_cgl",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jac_jtet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ossc_cgl",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "basis": "Small Island UT sporadic administration recruitment with low preparation target demand.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_group1",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_group2",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "treirb_teaching",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_psi",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_cpc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_si",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "basis": "Specialist medical officer (MBBS/MD) recruitment; outside current RankCrackers general competitive examination scope.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "basis": "Small Island UT sporadic administration recruitment with low preparation target demand.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "apsc_cce",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "slrc_adre",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "basis": "Recruitment vehicle recurrence, administrative restructuring, or exam syllabus structure requires founder freeze review before mission shell materialization.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "basis": "Mizoram Subordinate Services Selection Board recruitment reverted / board restructured. Inactive recruitment vehicle.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "VALID_STATUTORY_GATEWAY_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "basis": "Specialist engineering/veterinary technical cadre examination; outside core general competitive scope.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "basis": "Premier state recruitment gateway with exact official syllabus or notification document isolated on sovereign domain.",
+      "auditedEvidenceClass": "EXACT_AUTHORITY_RULE_EVIDENCE"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "basis": "Premier statewide constitutional PSC gateway (Article 315), common eligibility prerequisite (CET/PET), large recurring police constabulary recruitment, or NCTE-mandated teacher eligibility gateway. Scale certified qualitatively; numerical claim withdrawn in read-only audit.",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_WITH_ALTERNATE_SCALE_EVIDENCE"
+    }
+  ]
+}

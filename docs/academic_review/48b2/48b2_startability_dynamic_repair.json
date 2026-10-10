@@ -1,0 +1,66 @@
+{
+  "gate": "GATE_48B2_STARTABILITY_DYNAMIC_REPAIR",
+  "generatedAt": "2026-09-10T11:21:55.065Z",
+  "academicTruth": {
+    "ACADEMIC_START_READY_COUNT": 0,
+    "explanation": "Zero missions currently possess certified production-ready Digibooks, Crucible blocks, and test question pools."
+  },
+  "liveScanFindings": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "smartEntryEnabledLive": true,
+      "quickEntryEnabledLive": true,
+      "contentReadiness": {
+        "notification": "uploaded",
+        "syllabus": "not_ready",
+        "tests": "not_ready",
+        "crucible": "not_ready",
+        "digibook": "not_ready"
+      },
+      "verdict": "FALSE_STARTABILITY_ACTIVE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "smartEntryEnabledLive": true,
+      "quickEntryEnabledLive": true,
+      "contentReadiness": {
+        "notification": "not_ready",
+        "syllabus": "preparing",
+        "tests": "preparing",
+        "downloads": "preparing",
+        "crucible": "preparing",
+        "examRules": "preparing",
+        "digibook": "preparing"
+      },
+      "verdict": "FALSE_STARTABILITY_ACTIVE"
+    }
+  ],
+  "disablePlan": [
+    {
+      "collection": "student_mission_catalog",
+      "docId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "patches": {
+        "visibility.smartEntryEnabled": false,
+        "visibility.quickEntryEnabled": false,
+        "smartEntryEnabled": false,
+        "quickEntryEnabled": false
+      },
+      "reason": "Neutralize false entry paths while academic contentReadiness is preparing/unready."
+    },
+    {
+      "collection": "student_mission_catalog",
+      "docId": "jee_main_2026",
+      "patches": {
+        "visibility.smartEntryEnabled": false,
+        "visibility.quickEntryEnabled": false,
+        "smartEntryEnabled": false,
+        "quickEntryEnabled": false
+      },
+      "reason": "Neutralize false entry paths while academic contentReadiness is preparing/unready."
+    }
+  ],
+  "simulationResult": {
+    "FALSE_STARTABILITY_AFTER_SIMULATION_COUNT": 0,
+    "totalMissionsSecured": 2
+  }
+}

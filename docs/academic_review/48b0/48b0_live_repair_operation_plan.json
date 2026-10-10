@@ -1,0 +1,128 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "LIVE_REPAIR_OPERATION_PLAN",
+  "generatedAt": "2026-09-10T10:39:12.889Z",
+  "executionMode": "STRICT_DRY_RUN",
+  "productionWritesAllowed": false,
+  "operationsSummary": {
+    "CREATE_MISSING_PROJECTION": 0,
+    "UPDATE_METADATA": 2,
+    "UPDATE_VARIANT_BINDING": 1,
+    "DISABLE_FALSE_STARTABILITY": 1,
+    "NO_OP": 11,
+    "HOLD": 1,
+    "DELETE": 0,
+    "APPLY": 0
+  },
+  "operations": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "UPDATE_VARIANT_BINDING",
+      "reason": "Project 28 canonical variants array onto mission_realms and student_mission_catalog; Set variantRequired = true; DISABLE_FALSE_STARTABILITY: set smartEntryEnabled = false, quickEntryEnabled = false",
+      "changes": [
+        "Project 28 canonical variants array onto mission_realms and student_mission_catalog",
+        "Set variantRequired = true",
+        "DISABLE_FALSE_STARTABILITY: set smartEntryEnabled = false, quickEntryEnabled = false"
+      ]
+    },
+    {
+      "missionId": "jee_main_2026",
+      "operation": "DISABLE_FALSE_STARTABILITY",
+      "reason": "DISABLE_FALSE_STARTABILITY: set smartEntryEnabled = false, quickEntryEnabled = false",
+      "changes": [
+        "DISABLE_FALSE_STARTABILITY: set smartEntryEnabled = false, quickEntryEnabled = false"
+      ]
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "operation": "UPDATE_METADATA",
+      "reason": "Correct examCategory from category_pending to medical_entrance; Align organization and state metadata to Central / NTA; Align studentPublicationState to PREPARING",
+      "changes": [
+        "Correct examCategory from category_pending to medical_entrance",
+        "Align organization and state metadata to Central / NTA",
+        "Align studentPublicationState to PREPARING"
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "operation": "UPDATE_METADATA",
+      "reason": "Update scopeType/examScope to STATE_SPECIFIC; Add examFamily = CIVIL_SERVICES across all projections",
+      "changes": [
+        "Update scopeType/examScope to STATE_SPECIFIC",
+        "Add examFamily = CIVIL_SERVICES across all projections"
+      ]
+    },
+    {
+      "missionId": "ssc_cgl",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_chsl",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_cpo",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_gd",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_je",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "test_mission_catalog_bridge",
+      "operation": "HOLD",
+      "reason": "Legacy TEST_ORPHAN in recruitments collection. Held safely without mutating production.",
+      "changes": []
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "operation": "NO_OP",
+      "reason": "Document is fully canonical and compliant with 48B0 baseline; NO_OP",
+      "changes": []
+    }
+  ]
+}

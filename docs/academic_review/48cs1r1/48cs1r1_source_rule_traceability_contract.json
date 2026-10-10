@@ -1,0 +1,15 @@
+{
+  "requiredRuleFields": [
+    "ruleId",
+    "cycleId",
+    "postId",
+    "ruleType",
+    "operator",
+    "officialValue",
+    "sourceDocumentId",
+    "sourcePageOrSection",
+    "effectiveFrom",
+    "supersededBy"
+  ],
+  "PERSONAL_ELIGIBILITY_WITHOUT_RULE_EVIDENCE_COUNT": 0
+}

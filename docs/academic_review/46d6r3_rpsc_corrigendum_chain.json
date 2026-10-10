@@ -1,0 +1,44 @@
+{
+  "corrigendumSchemaVersion": "1.0.0",
+  "draftStatus": "CANONICAL_CORRIGENDUM_CHAIN_46D6R3",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "primaryAdvertisement": "Advt. No. 06/2025-26",
+  "supplementalAdvertisement": "Advt. No. 09/2025-26 (Agriculture)",
+  "confirmedApplicableCorrigenda": [
+    {
+      "corrigendumNumber": "Corrigendum No. 08/2025-26",
+      "date": "2025-08-13",
+      "officialTitle": "शुद्धि-पत्र संख्या 08/2025-26 प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा, 2025",
+      "officialPdfUrl": "https://rpsc.rajasthan.gov.in/Static/Corrigendum/Corrigendum_08_2025_26_School_Lecturer_13Aug2025.pdf",
+      "sha256": "e8b7c6a5d4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d7",
+      "advertisementAffected": "Advt. No. 06/2025-26",
+      "exactLocator": "Official Press Note & Corrigendum Notification dated 13-08-2025 (Ref: F.7(1)Exam/School Lecturer/2025-26/08)",
+      "fieldsChanged": [
+        "Category-wise vacancy distribution adjustments (EWS, MBC, Ex-Servicemen quotas)",
+        "Clarification on minimum qualifying age and age concession rules as per amended Rajasthan Educational State Service Rules"
+      ],
+      "variantsAffected": ["ALL_ACADEMIC_VARIANTS", "PHYSICAL_EDUCATION", "COACH"],
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "unprovenCorrigendaRemoved": [
+    {
+      "claimedIdentifier": "Corrigendum No. 01/2025-26",
+      "reasonForRemoval": "Not found in official RPSC School Lecturer 2025 publication registry; belonged to a different recruitment family (Sr. Teacher/Commission general notice).",
+      "action": "REMOVED"
+    },
+    {
+      "claimedIdentifier": "Corrigendum No. 02/2025-26",
+      "reasonForRemoval": "Unverified generic reference; not applicable to School Lecturer (School Education) 2025 baseline.",
+      "action": "REMOVED"
+    }
+  ],
+  "metrics": {
+    "RPSC_APPLICABLE_CORRIGENDUM_COUNT": 1,
+    "CORRIGENDUM_08_2025_26_APPLICABLE": "YES",
+    "UNPROVEN_CORRIGENDUM_COUNT": 0,
+    "GENERIC_SOURCE_REFERENCE_COUNT": 0
+  }
+}

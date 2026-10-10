@@ -1,0 +1,1268 @@
+{
+  "validationRows": [
+    {
+      "canonicalMissionId": "afcat",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "missionRealmsValid": true,
+      "recruitmentsValid": true,
+      "studentCatalogValid": true,
+      "failClosedPublicationEnforced": true,
+      "payloadCompatibilityCertified": true
+    }
+  ]
+}

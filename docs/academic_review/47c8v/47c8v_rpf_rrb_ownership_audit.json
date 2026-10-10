@@ -1,0 +1,26 @@
+{
+  "auditCode": "RC_47C8V_RPF_RRB_OWNERSHIP_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.340Z",
+  "metrics": {
+    "RPF_SOURCE_DOMAIN_WITHOUT_STRUCTURED_OWNER_COUNT": 0,
+    "RPF_CROSS_AGENCY_STRUCTURED_COUNT": 2,
+    "PER_RRB_REGION_DUPLICATE_MISSION_COUNT": 0
+  },
+  "structuredContracts": [
+    {
+      "missionId": "rpf_si",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "clientAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "validation": "STRUCTURED_CROSS_AGENCY_CONTRACT_SATISFIED"
+    },
+    {
+      "missionId": "rpf_constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "clientAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "validation": "STRUCTURED_CROSS_AGENCY_CONTRACT_SATISFIED"
+    }
+  ],
+  "verdict": "PASS (RPF recruitments published on RRB domains governed via structured agency contracts, not blanket domain whitelisting)"
+}

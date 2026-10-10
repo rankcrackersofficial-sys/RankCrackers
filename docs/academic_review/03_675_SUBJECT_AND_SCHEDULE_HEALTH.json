@@ -1,0 +1,127 @@
+{
+  "subjectHealth": {
+    "Physics": {
+      "total": 625,
+      "consistent": 623,
+      "defective": 2,
+      "ambiguous": 0,
+      "sme_review": 2,
+      "false_qa_pass": 2,
+      "micro": 600,
+      "major": 25
+    },
+    "Chemistry": {
+      "total": 25,
+      "consistent": 25,
+      "defective": 0,
+      "ambiguous": 0,
+      "sme_review": 0,
+      "false_qa_pass": 0,
+      "micro": 0,
+      "major": 25
+    },
+    "Mathematics": {
+      "total": 25,
+      "consistent": 25,
+      "defective": 0,
+      "ambiguous": 0,
+      "sme_review": 0,
+      "false_qa_pass": 0,
+      "micro": 0,
+      "major": 25
+    }
+  },
+  "scheduleHealth": {
+    "sch_jee_main_2026_1": {
+      "total": 50,
+      "consistent": 48,
+      "defective": 2,
+      "ambiguous": 0,
+      "false_qa_pass": 2
+    },
+    "sch_jee_main_2026_2": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_3": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_4": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_5": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_6": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_7": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_8": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_9": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_10": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_11": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "sch_jee_main_2026_12": {
+      "total": 50,
+      "consistent": 50,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    },
+    "test_arena_major_01": {
+      "total": 75,
+      "consistent": 75,
+      "defective": 0,
+      "ambiguous": 0,
+      "false_qa_pass": 0
+    }
+  }
+}

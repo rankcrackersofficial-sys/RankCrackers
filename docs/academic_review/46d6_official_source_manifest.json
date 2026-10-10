@@ -1,0 +1,81 @@
+{
+  "manifestSchemaVersion": "1.0.0",
+  "manifestName": "RC_THREE_MISSION_OFFICIAL_SOURCE_MANIFEST_46D6",
+  "agent": "AGENT-3 — OFFICIAL SOURCE / MISSION INTELLIGENCE TAKEOVER",
+  "generatedAt": "2026-09-09T18:21:00.000Z",
+  "safetyPolicy": {
+    "NO_UNSOURCED_OFFICIAL_CLAIMS": true,
+    "OFFICIAL_AUTHORITY_DOMAINS_ONLY": true,
+    "ZERO_PRODUCTION_WRITES": true
+  },
+  "sources": [
+    {
+      "missionId": "jee_main_2026",
+      "missionTargetYear": 2027,
+      "sourceYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA), Department of Higher Education, Ministry of Education, Govt. of India",
+      "officialDomains": [
+        "https://jeemain.nta.ac.in",
+        "https://nta.ac.in"
+      ],
+      "documentType": "Information Bulletin & Official Syllabus",
+      "bulletinNumber": "NTA/JEE(Main)/2026/IB-01",
+      "officialTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin & Syllabus",
+      "publicationDate": "2025-10-28",
+      "localBinding": {
+        "documentId": "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+        "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+        "pageCount": 140,
+        "verifiedExtractionStatus": "VERIFIED_ATOMS_BOUND"
+      },
+      "sourceVerificationState": "SOURCE_VERIFIED"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "missionTargetYear": 2027,
+      "recruitmentObservedYear": 2026,
+      "studentCatalogObservedYear": 2027,
+      "sourceYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA) & National Medical Commission (NMC), Under Ministry of Health & Family Welfare",
+      "officialDomains": [
+        "https://neet.nta.nic.in",
+        "https://exams.nta.ac.in/NEET",
+        "https://nta.ac.in",
+        "https://www.nmc.org.in"
+      ],
+      "documentType": "Information Bulletin & Core Syllabus for NEET (UG)",
+      "bulletinNumber": "NTA/NEET(UG)/2026/IB-01",
+      "officialTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin & Syllabus",
+      "publicationDate": "2026-02-09",
+      "localBinding": {
+        "documentId": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+        "sha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+        "pageCount": 14,
+        "verifiedExtractionStatus": "PAGES_67_80_VERIFIED"
+      },
+      "sourceVerificationState": "SOURCE_VERIFIED"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "missionTargetYear": 2026,
+      "sourceYear": 2026,
+      "cycleRelation": "CANONICAL_CYCLE_MATCH",
+      "officialAuthority": "Rajasthan Public Service Commission (RPSC), Ajmer, Govt. of Rajasthan",
+      "officialDomains": [
+        "https://rpsc.rajasthan.gov.in"
+      ],
+      "documentType": "Official Recruitment Detailed Advertisement & Scheme of Examination",
+      "advertisementNumber": "Advt. No. 01/Exam/School Lecturer (School Edu.)/2024-26",
+      "officialTitle": "Detailed Advertisement & Scheme of Examination for School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+      "publicationDate": "2024-10-25",
+      "localBinding": {
+        "documentId": "mission_RPSC_FIRST_GRADE2026_2026_1782713222215_notification_a461e1f65845dd0a",
+        "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+        "verifiedExtractionStatus": "NOTIFICATION_RECORD_BOUND"
+      },
+      "sourceVerificationState": "SOURCE_VERIFIED"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "testName": "47b_student_visibility_gate_test",
+  "executedAt": "2026-09-10T04:55:45.565Z",
+  "cases": [
+    {
+      "scenario": "Fully source-grounded mission with locator and authority",
+      "input": {
+        "officialSourceLocator": {
+          "url": "https://upsc.gov.in/notice.pdf"
+        },
+        "authorityGroupKey": "upsc",
+        "jurisdictionLevel": "CENTRAL",
+        "examCategory": "competitive"
+      },
+      "result": {
+        "studentVisible": true,
+        "catalogVisible": true,
+        "userPanelVisible": true,
+        "quickEntryEnabled": true,
+        "smartEntryEnabled": true,
+        "gateStatus": "PASSED",
+        "blockers": []
+      }
+    },
+    {
+      "scenario": "Mission missing official source locator",
+      "input": {
+        "officialSourceLocator": null,
+        "authorityGroupKey": "upsc",
+        "jurisdictionLevel": "CENTRAL",
+        "examCategory": "competitive"
+      },
+      "result": {
+        "studentVisible": false,
+        "catalogVisible": false,
+        "userPanelVisible": false,
+        "quickEntryEnabled": false,
+        "smartEntryEnabled": false,
+        "gateStatus": "HELD_PREPARING",
+        "blockers": [
+          "VISIBILITY_BLOCKED_NO_OFFICIAL_SOURCE_LOCATOR"
+        ]
+      }
+    },
+    {
+      "scenario": "Mission with unresolved authorityGroupKey",
+      "input": {
+        "officialSourceLocator": {
+          "url": "https://upsc.gov.in/notice.pdf"
+        },
+        "authorityGroupKey": "",
+        "jurisdictionLevel": "CENTRAL",
+        "examCategory": "competitive"
+      },
+      "result": {
+        "studentVisible": false,
+        "catalogVisible": false,
+        "userPanelVisible": false,
+        "quickEntryEnabled": false,
+        "smartEntryEnabled": false,
+        "gateStatus": "HELD_PREPARING",
+        "blockers": [
+          "VISIBILITY_BLOCKED_UNRESOLVED_AUTHORITY"
+        ]
+      }
+    }
+  ]
+}

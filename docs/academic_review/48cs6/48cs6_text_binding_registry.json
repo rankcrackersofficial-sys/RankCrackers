@@ -1,0 +1,1465 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "documents": [
+    {
+      "documentTitle": "jee_ib_2026",
+      "documentSha256": "b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e",
+      "textExtractedAndBound": true,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "ba0513582b9c7abe7eec3dabd11b04a856ced4bb63ab0fbb897858af520ed0d6",
+          "charCount": 214
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": "ba0513582b9c7abe7eec3dabd11b04a856ced4bb63ab0fbb897858af520ed0d6",
+          "charCount": 214
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": "7e1d886b9a92941c4a7a3054c5b52d5641ac2696a37765ff1ebbba0d480dded8",
+          "charCount": 1090
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": "7f87f7aa2335c4e186a8d5bff1050ffe09df3e22c35ecf9382d3b3b6436a9e4e",
+          "charCount": 1427
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": "3d9c98e3ca5d3d53b561bd21012080aefe84d70542bdaec87be2c6ee88b994c5",
+          "charCount": 1526
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": "4b2a205ed97c63ebad97ac48bd5523cf110513c6a3b250535b05818cfbed405b",
+          "charCount": 1059
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": "862a94df4f4784a66b35ee60c76362b71d29327f4a99ceef8f48004d9dfe0a3b",
+          "charCount": 1712
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": "174c3d7c78e4037f6408c06aefcc7c91783db74d59814cfbf3dc5da3921033d2",
+          "charCount": 2241
+        },
+        {
+          "pageNumber": 9,
+          "textSha256": "657f628ecb169984800a752f4a59b53c59e0230672efddda5ac114d2948caf1c",
+          "charCount": 3328
+        },
+        {
+          "pageNumber": 10,
+          "textSha256": "57b96615c22d0dd26f58ee13687d0df6b2fdc4eec63537ab10e7afe1f8446a36",
+          "charCount": 3777
+        },
+        {
+          "pageNumber": 11,
+          "textSha256": "04f9bb3dd2f9f6c8d5c4d9c3e08c9a5645946f9438d6d27dc031fe4875004fbb",
+          "charCount": 3366
+        },
+        {
+          "pageNumber": 12,
+          "textSha256": "d8b9dfa3d0f68efd1af34db9c7a6686653f305e82109c0c506787d74dd9c2a31",
+          "charCount": 302
+        },
+        {
+          "pageNumber": 13,
+          "textSha256": "566add611ae1909adefc6bf0c8045cbb35bef6be93fd622d27389bc90cb7b079",
+          "charCount": 3478
+        },
+        {
+          "pageNumber": 14,
+          "textSha256": "38fc20636eb2c9b5852f343add0dc19d8c2b135631237c534e2c81b2f3687a2d",
+          "charCount": 970
+        },
+        {
+          "pageNumber": 15,
+          "textSha256": "40a0baa1993e15399ae3ead3e5d5599062011410cb093b1916cd146709326db9",
+          "charCount": 382
+        },
+        {
+          "pageNumber": 16,
+          "textSha256": "8ce3490c78518f721ec3f026019ed83c343889c45125b76ae3c6bebeb11e7aad",
+          "charCount": 2549
+        },
+        {
+          "pageNumber": 17,
+          "textSha256": "68ea099e90cb236bf4311196f7b18bd3124f3e22da695236592fda961669889c",
+          "charCount": 2358
+        },
+        {
+          "pageNumber": 18,
+          "textSha256": "f60448ffe87a99dbb15fd1fdf9cba8b5179e765f949afa3515ad7945ea46791d",
+          "charCount": 2784
+        },
+        {
+          "pageNumber": 19,
+          "textSha256": "fb3020074f334b933d30f19ca7ec89722b2ad99847d76187ba80df9656783776",
+          "charCount": 2735
+        },
+        {
+          "pageNumber": 20,
+          "textSha256": "8db400376ac2a07ac552b7c9b2b916b6382b4bba39a019a12d60524a040022a2",
+          "charCount": 1936
+        },
+        {
+          "pageNumber": 21,
+          "textSha256": "473b24d85b30b6d989204e6a86f0f7470e0cc43221a8402b4c75bd9f4fd0c3db",
+          "charCount": 2230
+        },
+        {
+          "pageNumber": 22,
+          "textSha256": "b38a9692a2fb5e37fc896697e80a1e3152371b6de9e06e4ee16fd6080d5fa4a7",
+          "charCount": 1175
+        },
+        {
+          "pageNumber": 23,
+          "textSha256": "5cb8404db4cf4d3c1b06e445480ed58648655752e292258deb2840f4a076d538",
+          "charCount": 292
+        },
+        {
+          "pageNumber": 24,
+          "textSha256": "b5200f9731028d11d0cd0ccaa1421f2d500737d261a039bab7e7542ca7cefc29",
+          "charCount": 2952
+        },
+        {
+          "pageNumber": 25,
+          "textSha256": "dbb781a06b24e3a9fbf39063c5870f7e0c8f1d4c96c84e2b49fc0036847f6b34",
+          "charCount": 3265
+        },
+        {
+          "pageNumber": 26,
+          "textSha256": "ab352dadbd6a744ef33feffee7b122fd242b7f92c7a8488af07b977255ee4dbf",
+          "charCount": 293
+        },
+        {
+          "pageNumber": 27,
+          "textSha256": "6165330905f4569cfe687176e492e241b7dfa29b66bd104f9924a64b162d904a",
+          "charCount": 3031
+        },
+        {
+          "pageNumber": 28,
+          "textSha256": "35a582d61494e39d94ace057fce06c9a7a386f725e84fd42c307dac790f0636b",
+          "charCount": 3318
+        },
+        {
+          "pageNumber": 29,
+          "textSha256": "2c12f572e5a76e0d0622235adcf206e1d09016dbec239e5ed9f36bd2a7685076",
+          "charCount": 3197
+        },
+        {
+          "pageNumber": 30,
+          "textSha256": "cefe9953637ef1ebab41aa672963abacb5f68c6e63f116a79209fb01d886ec51",
+          "charCount": 2167
+        },
+        {
+          "pageNumber": 31,
+          "textSha256": "212756d56c4219a3db9546c5387f0253ce54bd6168344eaf61c42c0739e0c012",
+          "charCount": 285
+        },
+        {
+          "pageNumber": 32,
+          "textSha256": "6f00a9578da0386d6b72fa17cca55c8b2ef52a201ef28066821a6b5a68782123",
+          "charCount": 2564
+        },
+        {
+          "pageNumber": 33,
+          "textSha256": "d114dba4a275f22c76fb72b478b03f576b89daea5cbb82cb55f875cfadfcfd5e",
+          "charCount": 2937
+        },
+        {
+          "pageNumber": 34,
+          "textSha256": "ffaac25fa57a19e1f997eb85837bb0dacee4a50c634494483b50020c87404788",
+          "charCount": 1949
+        },
+        {
+          "pageNumber": 35,
+          "textSha256": "dd9ff59b7b61f1a056fef28436b63a3f79aa4698046f55631b91806ed32a18a2",
+          "charCount": 4440
+        },
+        {
+          "pageNumber": 36,
+          "textSha256": "501ddb94238baf554b4293030b19669c5b3a82b1820c6eefd2bd1225bce8f4b4",
+          "charCount": 2692
+        },
+        {
+          "pageNumber": 37,
+          "textSha256": "8d460135e06290d60770e68cc821d599446a0a5e88e7d4e00c6e29a301fed0c8",
+          "charCount": 3520
+        },
+        {
+          "pageNumber": 38,
+          "textSha256": "67fd6f78c2218a2b0da3e25694258b0e6455ea633b9b49469cebec2378a44df1",
+          "charCount": 3348
+        },
+        {
+          "pageNumber": 39,
+          "textSha256": "bde615cf1313d7a539ba677cd5b43212afef0a3b6d9375d317beec869ac7a79b",
+          "charCount": 927
+        },
+        {
+          "pageNumber": 40,
+          "textSha256": "4bda19cc67f6fc0ef9cf9a3e6ae9ed2e9f4dba712dc5c8687dd48cb389c0b4d4",
+          "charCount": 3357
+        },
+        {
+          "pageNumber": 41,
+          "textSha256": "4f6aa9274b34f1b8704bb633d5c228016f36ab246f62677049c11fc82dccf341",
+          "charCount": 3317
+        },
+        {
+          "pageNumber": 42,
+          "textSha256": "20dc73f202695f7c2200e309e671e95b4ac438525820ff01d6d778225592f06f",
+          "charCount": 3399
+        },
+        {
+          "pageNumber": 43,
+          "textSha256": "a5031811a461568e0d4a00265d548cd79351494f65d49d9c5a45d70f53dd473a",
+          "charCount": 1974
+        },
+        {
+          "pageNumber": 44,
+          "textSha256": "ec20bbcd732dc93885f23aedf62175f45d270a4e1436ab0fcf6df714171bcc00",
+          "charCount": 2930
+        },
+        {
+          "pageNumber": 45,
+          "textSha256": "b61bb70d597bc3fa4bb2d8d52890c89fea8a78577aa764849ab39c219235e709",
+          "charCount": 747
+        },
+        {
+          "pageNumber": 46,
+          "textSha256": "407b0eb419d69d76be0911cdc522bdb6c0b072b49a0f8486434894ae5d5a885e",
+          "charCount": 2743
+        },
+        {
+          "pageNumber": 47,
+          "textSha256": "2f020338fd445f44290720e717b5c9612878bd78b2f7a9659f85d9631990a0a4",
+          "charCount": 269
+        },
+        {
+          "pageNumber": 48,
+          "textSha256": "3b60e1ff742f6fc2a5e403cfdafc7e6a63b2756a1428d1d19ebb726963201866",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 49,
+          "textSha256": "2b7daf9aa0578bb6e68641a44bbc95e3aa54f4f3c46cd30a5324b45b3edab5aa",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 50,
+          "textSha256": "178356994c2648e5d0821d5d89e810db31e2ec7b20f5dd849558ca8b8c4d80f4",
+          "charCount": 1231
+        },
+        {
+          "pageNumber": 51,
+          "textSha256": "cbda4f89435d481140ac1ea5ffc732eec6cafd4002374057fe5558c861cb4564",
+          "charCount": 2173
+        },
+        {
+          "pageNumber": 52,
+          "textSha256": "4ad1bab7b03d0e86cf9b0bd73ee8355d8329fbddccc938ce996ccf98007ca962",
+          "charCount": 1329
+        },
+        {
+          "pageNumber": 53,
+          "textSha256": "27481a5f5bb76011b534c2a4442cdf29e9bc7df595eaf2c5e3d1fdc067ac13db",
+          "charCount": 1611
+        },
+        {
+          "pageNumber": 54,
+          "textSha256": "feb92193a0e6a526750aa8cc33cf946eb372bec82762902f5a790089b5355fe4",
+          "charCount": 1388
+        },
+        {
+          "pageNumber": 55,
+          "textSha256": "7b13fa8d4b4e29333cedd6eb9e2698034a0705fc254cf8cfa9a0d606bb92b98f",
+          "charCount": 1383
+        },
+        {
+          "pageNumber": 56,
+          "textSha256": "eb544483b39f03387e98d3bc2d76395c77f02349d0ec400ab2df99b2d01d7248",
+          "charCount": 1403
+        },
+        {
+          "pageNumber": 57,
+          "textSha256": "1f2a642dbf16c6fd3f702492b6259eb3c73debe300f6a6bb0f6bd706ad3845fb",
+          "charCount": 1321
+        },
+        {
+          "pageNumber": 58,
+          "textSha256": "83fc1477b49c34ed20e2cc72ad832880ff46ad7f7faf1282b5754379e287849b",
+          "charCount": 1389
+        },
+        {
+          "pageNumber": 59,
+          "textSha256": "74c5be962b939109d101511b00707cd644dce0b7aa0f0667899389851ee5a5e2",
+          "charCount": 1496
+        },
+        {
+          "pageNumber": 60,
+          "textSha256": "1d7ea6ad3c5f601c9889e1b1d8a2f80cda5d4fd2bef64e55a22840c4d9ba375e",
+          "charCount": 963
+        },
+        {
+          "pageNumber": 61,
+          "textSha256": "91d48d6227a9abb6668fef8fb199cdab624edc0639f540d9fbb1a4a0a64ff5e6",
+          "charCount": 3317
+        },
+        {
+          "pageNumber": 62,
+          "textSha256": "31307e4f08820f1711d89f368e2b9c4ffacba3190885df732949071e6f17de11",
+          "charCount": 1663
+        },
+        {
+          "pageNumber": 63,
+          "textSha256": "1c5b901227581c320a200ae16f51afa9c37a53013345370f109233a30706be32",
+          "charCount": 2442
+        },
+        {
+          "pageNumber": 64,
+          "textSha256": "b0d82ee018412ab2c766f6e49f563ce5a4f8c10378175fd4997e7128b499b522",
+          "charCount": 2644
+        },
+        {
+          "pageNumber": 65,
+          "textSha256": "57255cfa057f62f8cb878c584ce4938c3818511e268318619caea88d556e72a9",
+          "charCount": 2023
+        },
+        {
+          "pageNumber": 66,
+          "textSha256": "69f9e43583a8fc949a87e7f7a8e1ca0bdcb9c2ee12858e18f9ff3fac77987417",
+          "charCount": 1926
+        },
+        {
+          "pageNumber": 67,
+          "textSha256": "cc98072ebd8524f6e4cfa9b4232a58a72bb3b9739f5b5508bc0b213fd92aac13",
+          "charCount": 2218
+        },
+        {
+          "pageNumber": 68,
+          "textSha256": "5f21e603bf5a1bec01a0f42dacf0a0df154dd4c5731ff24e813e82d328711125",
+          "charCount": 2783
+        },
+        {
+          "pageNumber": 69,
+          "textSha256": "53751408e9ff888cf603c504bc8ba4efb30117d78aabcd5b0c732e3ccf69145b",
+          "charCount": 1412
+        },
+        {
+          "pageNumber": 70,
+          "textSha256": "13c32c3e51818b41678ea7882c166ea3585c59450c43f372890f17e4c352584f",
+          "charCount": 492
+        },
+        {
+          "pageNumber": 71,
+          "textSha256": "7113bb800e59d7ca158df47bb96077fbe63764ae7427cf138de3a7d68105a875",
+          "charCount": 336
+        },
+        {
+          "pageNumber": 72,
+          "textSha256": "ab0be12bee543db1fbde0af6eae7203af5cc10bacc2d6640b7a8bc484a98c4cf",
+          "charCount": 299
+        },
+        {
+          "pageNumber": 73,
+          "textSha256": "845ae4fa09d2877e3c4d1cfce56b232aa15c82b0b90e05c87b1263cec75dfb41",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 74,
+          "textSha256": "d261c314f8e703d1a93a9e6b482a12181d30a4ae9c4a10dc4d736fd5defee3cf",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 75,
+          "textSha256": "4d84a22764591060ac54655e1adf507bb9e56ff618c902f094ba3a9c0a52fd0b",
+          "charCount": 246
+        },
+        {
+          "pageNumber": 76,
+          "textSha256": "3089114c252a863933625e72c037de7ecf13048cf872aec5dfe5e2bee5ad3c11",
+          "charCount": 270
+        },
+        {
+          "pageNumber": 77,
+          "textSha256": "4443e5ef550aad0bd2f7bffc70eb790c73e71c0900a811dcc878d2fe14e10e89",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 78,
+          "textSha256": "da7427af92492436b225bb710a19e10891c9ff2fd3837c1478141a8158a89e78",
+          "charCount": 283
+        },
+        {
+          "pageNumber": 79,
+          "textSha256": "5673aeb4ecb3cd4e806e143eea37e81bbbe0b39b7016aa0ca0d1f10aa50b9de8",
+          "charCount": 276
+        },
+        {
+          "pageNumber": 80,
+          "textSha256": "81031eed5d797b79c9e4856e2d25a8e6538e6c9afec406a4fa236c728e769589",
+          "charCount": 336
+        },
+        {
+          "pageNumber": 81,
+          "textSha256": "6da4ca21acf71863514a0cd94e5b92e2a28fa0d64aa98b84247b73cb77eea6ce",
+          "charCount": 350
+        },
+        {
+          "pageNumber": 82,
+          "textSha256": "9efafe7cce21956a51a31a8c964412304e7443368cda405ebdbc58292ee76d3b",
+          "charCount": 282
+        },
+        {
+          "pageNumber": 83,
+          "textSha256": "b027f489f21d30ae70a85800876a0ccd9f2707ed74aeb3b7eea7559083b36cdb",
+          "charCount": 290
+        },
+        {
+          "pageNumber": 84,
+          "textSha256": "1786af41eb43120beed909e2f074cb67d3109fb34e5959fa512ad0cb3f96bef5",
+          "charCount": 305
+        },
+        {
+          "pageNumber": 85,
+          "textSha256": "af0b971c471b2afd8a08442fa7c9a014c2f015e653e994ad695ab94c3b0bcc82",
+          "charCount": 259
+        },
+        {
+          "pageNumber": 86,
+          "textSha256": "6098f3f7dea36a60f32c36e7b9d8d43a91a69fae99f1f427f8f5c4c33484c402",
+          "charCount": 351
+        },
+        {
+          "pageNumber": 87,
+          "textSha256": "9cd9da6351187060bbfc453e35b125b0c874fa447696acaef43dba9382345c97",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 88,
+          "textSha256": "e7f4d45144f1e7472b1cbd3beb02ebb044b655523d538f71d169064e64022712",
+          "charCount": 270
+        },
+        {
+          "pageNumber": 89,
+          "textSha256": "3ba8902a416e0ce5e26b804bf250a35da060e01ded915c11d32584b013c12c78",
+          "charCount": 249
+        },
+        {
+          "pageNumber": 90,
+          "textSha256": "6fb4485bd3f93a5fb8e33d8accd3d7b4425105a87979e1b3ad7eb26e2910b4c1",
+          "charCount": 224
+        },
+        {
+          "pageNumber": 91,
+          "textSha256": "364c01f6a32c6433d88045968a4e2bb0643fc41a383df9a08e22a803d1c0dab1",
+          "charCount": 224
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s1_application",
+      "documentSha256": "2d82abd73e066c9fe41950e75a4075ff684df284d6f5c9de913be667d66b6f5c",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s1_correction",
+      "documentSha256": "f966bf85a74601b1ed82e8663c3492231138bacb31774f4b34e550542f2f6884",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s2_application",
+      "documentSha256": "f12bcf6cc1c6b65294c5f538c837af9498d7f3088d83b6dc7321963fe7b4bcd0",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s2_correction",
+      "documentSha256": "01470c40d79684c61763aabc7df21d2524b18bb3aa900829381dbefa50d87558",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s2_final_answer_key",
+      "documentSha256": "07c89e20741c17f14a000501d6f79055d09834692de0dcb792bf237b77e1c7f9",
+      "textExtractedAndBound": true,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "b2058e6b12e46cee9edb38c02317011cce5de18a1c7e9a353aab1396ec46d1d8",
+          "charCount": 1611
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": "e596b8c972f0e415826b34c41d7fe27e68389b08165ef03c668a19675ee0f04f",
+          "charCount": 1718
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": "f62f4dead4129adfd8ba58466767d073aa01dbd9758d53c9a61420c1a1a88852",
+          "charCount": 1716
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": "1e38ee7c65a08db4f72056e21074dd43bebdde1e4ddde78731e2d7a5f3ff6f20",
+          "charCount": 1780
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": "eb295c4825b4d9659f68f79c45b828c973517ad8f148a3bbadcddb2b662cf6c1",
+          "charCount": 1812
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": "764c061b92bcfac861cf8cd66dc352a48fbda56a5ba1dbfa0f6d75b3254f0702",
+          "charCount": 1779
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": "70c420f887f2dc41cf9bcc366f0208a58db6bf7695f02817312dab2ae24c4d60",
+          "charCount": 1853
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": "deefa5a9a844e2c871eeb2148bc18b1e4cacda0a47daad91d5eff201bb9788a9",
+          "charCount": 1861
+        },
+        {
+          "pageNumber": 9,
+          "textSha256": "0fd9e44af36a93853d1849d71d9a2c8c8e3abe9fe0172f0d1c1ee5e790a632fb",
+          "charCount": 1788
+        },
+        {
+          "pageNumber": 10,
+          "textSha256": "3ea254c633c0a99b5203dddf66396c46c9da16586a76a816a8edf2563b289666",
+          "charCount": 1786
+        },
+        {
+          "pageNumber": 11,
+          "textSha256": "18a3b3bb0f79a9ae067253116bd784c67172e84dc8824586e8204d8a773d5708",
+          "charCount": 1784
+        },
+        {
+          "pageNumber": 12,
+          "textSha256": "6329c6c894eaef417a7699f953d4fa500d1b9c978dc3af022d69d9eb0b07645f",
+          "charCount": 1852
+        },
+        {
+          "pageNumber": 13,
+          "textSha256": "58a4f8f6c88841c034744438f45168bba48096d3722ce8788de4a0f5306941b4",
+          "charCount": 1861
+        },
+        {
+          "pageNumber": 14,
+          "textSha256": "445f3979ad2ff719242ec5d85b47b687951cf8c4048edccbde45397fc7eab3e3",
+          "charCount": 1893
+        },
+        {
+          "pageNumber": 15,
+          "textSha256": "f412734e48b4f655a18da978dddae0bca4dcddc91f03c3a8633796aa3035acc6",
+          "charCount": 1860
+        },
+        {
+          "pageNumber": 16,
+          "textSha256": "7323664f1183e61db093c3c3eb8982ac91a405932e4145c8c9522f4d06de8e0c",
+          "charCount": 1859
+        },
+        {
+          "pageNumber": 17,
+          "textSha256": "f3c5f55c91968db49aaa2c9da01e69d44b05d9571ed843221a583bfdaecafaab",
+          "charCount": 1867
+        },
+        {
+          "pageNumber": 18,
+          "textSha256": "0a67cc34faa2d840dc98535c5bb7a404029906c76d55285ccf42d596841d98be",
+          "charCount": 1869
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s2_reopening",
+      "documentSha256": "212751776ae7d98f8337f92fdc53255130e6257a16eb6ed8a03228a26e50de66",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "jee_s2_result_notice",
+      "documentSha256": "be8dad15367dac355775a6df891b2307cbd89190a5c2448d45042335b9b306dd",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 9,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 10,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 11,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 12,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 13,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 14,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "ssc_cgl_2026_base_notice_exact_url",
+      "documentSha256": "54a01dda220cb8836f19983908e1f3fd14ddba8286781765a02765728a89e070",
+      "textExtractedAndBound": true,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "32ec0b3b4e63f7efa4c030cf32d88fc8e58b369107babbedfab21d26d74ea059",
+          "charCount": 1410
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": "9bb1aa6ac6d83ea6c1012e9774372df473c08638c9542577949a70a1007278bf",
+          "charCount": 2041
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": "985a16c3c05723796de1f9d6c717bc0fd30df45d18ad648c0143f02e974ff8dc",
+          "charCount": 1550
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": "3d84761ce679911f1a3249a254a965527b166eeca9e8da228503955f8078d1c5",
+          "charCount": 2446
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": "2cc8600184ca1e67ba539bb5e9ec9c573943b5bf67bca8f73b873184a6866b23",
+          "charCount": 3129
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": "3ff34e98ccc9896249f710204bb366c622eed8e095c23aa7a1786bba5fe8eebd",
+          "charCount": 2413
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": "78ff54af3895f5ac8412e088cfb6272b3bc777c21c6869e79e0d2bf176784d2c",
+          "charCount": 1381
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": "ffaff1fe05f199be2bf8217fb95098f326d46036d8013c65c0421d1f3954775b",
+          "charCount": 2512
+        },
+        {
+          "pageNumber": 9,
+          "textSha256": "95b02413ab016c593b5bdf44f449a001460a5b04586c40f57eaea32e16cc1fd6",
+          "charCount": 2330
+        },
+        {
+          "pageNumber": 10,
+          "textSha256": "ad13a0c1eeabf3be7ac17491f7499a30af4ae85dc94cca581f4d6a38931e4ad7",
+          "charCount": 3232
+        },
+        {
+          "pageNumber": 11,
+          "textSha256": "b807c7cd3a14feb7393b42c1aedf5738ebcb87c0edf64308a4dd4dcfea051126",
+          "charCount": 3029
+        },
+        {
+          "pageNumber": 12,
+          "textSha256": "7294f224a2a0a4b497c53c96aeb70c5380bd741fdac6f89d782c92bb0c405807",
+          "charCount": 2709
+        },
+        {
+          "pageNumber": 13,
+          "textSha256": "bd251fd558825524ac66f706c57941fe93598c93e0efbd37d8d6f687b86e6766",
+          "charCount": 2805
+        },
+        {
+          "pageNumber": 14,
+          "textSha256": "89821021d1d7209d70f5dd01567a777302bd3981777298f87e05a9a54d4d4ce2",
+          "charCount": 2494
+        },
+        {
+          "pageNumber": 15,
+          "textSha256": "c33424dddea7baf0622936777675eecbae32db9dcd147a9afa6d7a6a69196406",
+          "charCount": 1976
+        },
+        {
+          "pageNumber": 16,
+          "textSha256": "4750c88baa86d3d31ff190d8a8c4a2dbdab1855761ee7ff8d052ef793788a800",
+          "charCount": 2352
+        },
+        {
+          "pageNumber": 17,
+          "textSha256": "f682cae7e65d00d6ed6aa86249be3b968c0ee5bd859bf1b4a2758b0f8515d2e8",
+          "charCount": 3055
+        },
+        {
+          "pageNumber": 18,
+          "textSha256": "dd8de86bf28d95ee1770ceceaa82ff925e7889b814eaca427876e087fa853477",
+          "charCount": 2971
+        },
+        {
+          "pageNumber": 19,
+          "textSha256": "cf703d0fe78e5e113b104d003e7dd422cdddd2b561850b30f7ce2db44926fa3f",
+          "charCount": 2625
+        },
+        {
+          "pageNumber": 20,
+          "textSha256": "1baa344f027c4b283307015c9f71ad945fa980853706a93f07de81083d00215c",
+          "charCount": 2527
+        },
+        {
+          "pageNumber": 21,
+          "textSha256": "cefea5d7251e95148d6812abf25b580b5376bb3233f965a5453083ba8b9c2eed",
+          "charCount": 2573
+        },
+        {
+          "pageNumber": 22,
+          "textSha256": "ebaea3482bdf3b0c4dcef97be64d86ec3898ccc5c1b367fffebddcb269cc3502",
+          "charCount": 2369
+        },
+        {
+          "pageNumber": 23,
+          "textSha256": "17dd09b3543b2be01d7bdfdbc5607000f600b0c0cb2bd1ea0ccbf7a1a57ceb2f",
+          "charCount": 2416
+        },
+        {
+          "pageNumber": 24,
+          "textSha256": "fc4d183499a585b8240d292198438187b8c54dd387bf696ae548180b9383ea99",
+          "charCount": 2445
+        },
+        {
+          "pageNumber": 25,
+          "textSha256": "1f93f666e56965a437da341e59cd6fa6a10b04571600d099a7a646402fc0369a",
+          "charCount": 1339
+        },
+        {
+          "pageNumber": 26,
+          "textSha256": "6447e8e9e61273bda583904743d275cee61a08b9ebfd3a4a67a6b4c8702ee674",
+          "charCount": 730
+        },
+        {
+          "pageNumber": 27,
+          "textSha256": "90de08fc8b3860c5e17281738b637646511407e4ca6d207887abe376e94d0a3c",
+          "charCount": 1602
+        },
+        {
+          "pageNumber": 28,
+          "textSha256": "1e362773dcf852b4c2fc588484dee5c3d55272278f309802e9cdb0d88f167216",
+          "charCount": 2015
+        },
+        {
+          "pageNumber": 29,
+          "textSha256": "16cac252a08f04eacf8754aaa26708e333aa6fd6ea0a64ed61faae20feb3b6dc",
+          "charCount": 2356
+        },
+        {
+          "pageNumber": 30,
+          "textSha256": "e05b520ba767c6c9bb14b723add219896608f1998f4b89b298dcfed5670b8a42",
+          "charCount": 2851
+        },
+        {
+          "pageNumber": 31,
+          "textSha256": "25f1873734c2681c9f876f834fb4ef7f016cee47a1b19e75cda1b588dc68b604",
+          "charCount": 2556
+        },
+        {
+          "pageNumber": 32,
+          "textSha256": "16a9ddaf9025aff043d1284fd26dec2f7970ea768464a13ecca78ef539f3419c",
+          "charCount": 2341
+        },
+        {
+          "pageNumber": 33,
+          "textSha256": "9c53d697e594f4b77c8d919986ff5b55c036e186137b79fcfe4d25eb2fff1eb8",
+          "charCount": 2191
+        },
+        {
+          "pageNumber": 34,
+          "textSha256": "1061edfebea3f4b078932396b73708eecff07235fe85df9dc8192844dd85d775",
+          "charCount": 2361
+        },
+        {
+          "pageNumber": 35,
+          "textSha256": "499c9455bc2f6d43e89b48eb88210d2d31d4ed78e65e75401227129776d6b6c0",
+          "charCount": 2026
+        },
+        {
+          "pageNumber": 36,
+          "textSha256": "51deb160ecf08fee9fba00a7f07943a062aef1ed21a55207647e9cee891bc3ed",
+          "charCount": 1785
+        },
+        {
+          "pageNumber": 37,
+          "textSha256": "cc7a91d08b25673122624f85126f0d7eb92c1bab90f49d21f45cd81d87191f4c",
+          "charCount": 3130
+        },
+        {
+          "pageNumber": 38,
+          "textSha256": "224c47ccbddd2a2969b6bc4cea09d815a9efd8e44c4f6ff7b4dddabf8c3959fc",
+          "charCount": 2376
+        },
+        {
+          "pageNumber": 39,
+          "textSha256": "0eecff7bd4ea4a1dcda087296987a057a64d4174403877140e61f3d978277232",
+          "charCount": 2575
+        },
+        {
+          "pageNumber": 40,
+          "textSha256": "15dd6f2beee5bfab86b1b4309b237bfa82ef5c29f5ba3d85887b5cefd7499669",
+          "charCount": 2279
+        },
+        {
+          "pageNumber": 41,
+          "textSha256": "057e496e5367b0a63b1e5a3700f5173bc1ca0a4e2832ce6c009a0a54f013604b",
+          "charCount": 2420
+        },
+        {
+          "pageNumber": 42,
+          "textSha256": "da6d24d75dfe8d0f61234cbfba5f3e7c52d58a953a19e08c88f43c7f9db8ba53",
+          "charCount": 3055
+        },
+        {
+          "pageNumber": 43,
+          "textSha256": "f02cacb2466d82aa94f58c616f2d11a182c1645a65ad4c2dcf819cb86c00c93e",
+          "charCount": 3047
+        },
+        {
+          "pageNumber": 44,
+          "textSha256": "bf2a9fc4196f00b3d47b751f0e2b145288d5a505e94993688aa1c5a04e244800",
+          "charCount": 2921
+        },
+        {
+          "pageNumber": 45,
+          "textSha256": "ea9f1b1d29000217b426780f87fde9ee98919268b76765a79de7cfbe2af2ad3a",
+          "charCount": 2110
+        },
+        {
+          "pageNumber": 46,
+          "textSha256": "35097efd36ab3fef1e551821912a688719d2fc3bcf100c67e095139edbf450e6",
+          "charCount": 2372
+        },
+        {
+          "pageNumber": 47,
+          "textSha256": "6b681369e95aaf7b756cb3d62620be186228fa2a5e3efc1f133da43e9d002c72",
+          "charCount": 2159
+        },
+        {
+          "pageNumber": 48,
+          "textSha256": "eeb756427ad6b48497b2136efd8abd434c70ae0f1e4138bac2cb67ff0ab8a559",
+          "charCount": 2824
+        },
+        {
+          "pageNumber": 49,
+          "textSha256": "2085795e8964c4fc6176633b02dd5bb04ef87376430881418502dbe45b2f2750",
+          "charCount": 2665
+        },
+        {
+          "pageNumber": 50,
+          "textSha256": "c33adb8315c5447fc70dc4a1b9769c1dc5ebb7b13699d3cc493aa69835dd3c3e",
+          "charCount": 3202
+        },
+        {
+          "pageNumber": 51,
+          "textSha256": "00302396b4d6887c8dc45a1bbc5a57fb35cb8ba77218726874419b2a7831d7e9",
+          "charCount": 2972
+        },
+        {
+          "pageNumber": 52,
+          "textSha256": "5aa73b9d09014a0a0f68264e436f298e4b42e8022b1c93cf4a462d7f52258015",
+          "charCount": 2777
+        },
+        {
+          "pageNumber": 53,
+          "textSha256": "5a568d0176521c2ddc3036093c3135f6716d98fa5418b610f191c787a15b1a18",
+          "charCount": 2998
+        },
+        {
+          "pageNumber": 54,
+          "textSha256": "da9ac5519ce71c48f1a61d8db2c98df5537897547a292c956373b103e264f9fc",
+          "charCount": 2300
+        },
+        {
+          "pageNumber": 55,
+          "textSha256": "e6a342534d339766cfadad8b2f6830f8bd4eedb61cf3d625c17ea9a5d4f90622",
+          "charCount": 999
+        },
+        {
+          "pageNumber": 56,
+          "textSha256": "c5f43d0237e128e6b5193c8060a4887bc60ebc2b075db77d861886bf6747ae04",
+          "charCount": 1854
+        },
+        {
+          "pageNumber": 57,
+          "textSha256": "6942f906340c594deea1b6817301122803c6210c151db07d1a0b3edf1d8fed4f",
+          "charCount": 1058
+        },
+        {
+          "pageNumber": 58,
+          "textSha256": "bc7eccf6f875b110966f0a9280399b9158eb4540d863ff8fedbb4663f2eb196f",
+          "charCount": 1345
+        },
+        {
+          "pageNumber": 59,
+          "textSha256": "eeecc3cbfa99ba9a17a6ec2e7dd404eda50e1851417ca25bb6caa29880a03bb7",
+          "charCount": 1855
+        },
+        {
+          "pageNumber": 60,
+          "textSha256": "f71097e071998bff74d6db67e9cf1688bb6af8868e9253688dcb032ad0727938",
+          "charCount": 2122
+        },
+        {
+          "pageNumber": 61,
+          "textSha256": "10e43bf0b4c2cb566df63571f63f8a274a4af731f47d906e5cce4c1119f4166f",
+          "charCount": 2717
+        },
+        {
+          "pageNumber": 62,
+          "textSha256": "6c262777648ed701dc9d5091960d9810429b158dde2f1a0a62974fd2d51131ad",
+          "charCount": 998
+        },
+        {
+          "pageNumber": 63,
+          "textSha256": "c06cf5b22718bd7e704645c48a2711eed09bb7689ca619e84e26ac04a732deab",
+          "charCount": 70
+        },
+        {
+          "pageNumber": 64,
+          "textSha256": "4cd0ef4b3059bdfefcf6a3b2ce026dd80fed83821b0ab911870e761ca55e50a8",
+          "charCount": 485
+        },
+        {
+          "pageNumber": 65,
+          "textSha256": "8b4846dbb8cedf1089235ca0a03e583af4c1670f50e4682fb582c06403605bf8",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 66,
+          "textSha256": "7ec47545a4a990bab08ce1054f839e4fa4a44770b17f33ba2a28093814fcfbdb",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 67,
+          "textSha256": "2e752369bc067b890a90feefba3b4e2c03188e713c5daf3e7d69c1eb29b5dd2c",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 68,
+          "textSha256": "10f261a0ad043561c34e085ae267cc8ab6029bd5338521789ebd9793d6bc81a7",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 69,
+          "textSha256": "c12ea1a4ad6bd98612afe24098c42e541ab900e6bc0ef80b7b812f50b98b3436",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 70,
+          "textSha256": "16ee86694addac0bc0d759e7a52f77e9ab611541020630d5a25835ae5b1fb8c7",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 71,
+          "textSha256": "c536589e6b695e7265efb9f65b184c2ec9b78b2e4fb54c0edba59141a18b3562",
+          "charCount": 2522
+        },
+        {
+          "pageNumber": 72,
+          "textSha256": "509363118fd4f7ce374f8eee00b3aad9908e028192182282de3a6898d3a2db16",
+          "charCount": 2984
+        },
+        {
+          "pageNumber": 73,
+          "textSha256": "8ee959f866af8f7e3f5b084db5c23d9e324c7b561f8f40333bb6a033681b4105",
+          "charCount": 2154
+        },
+        {
+          "pageNumber": 74,
+          "textSha256": "a697e7cc659fc29329e9b6253d18c295ea51e4be4a2e67d9ee907a7aa92b4601",
+          "charCount": 319
+        },
+        {
+          "pageNumber": 75,
+          "textSha256": "6bb34ebdf4826ec3b1c6e866550a862031c338e99fe6072e79309fde7af6e75b",
+          "charCount": 109
+        },
+        {
+          "pageNumber": 76,
+          "textSha256": "999065c8266b3f5caf8d43185407fd737e3ca41558132341b1f10479474ebc42",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 77,
+          "textSha256": "830ef7f3c1ab0348c5651a6282fea5c5fc89d4e65f2206bfc434995e7c3843eb",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 78,
+          "textSha256": "856e9f2f363b47e03425b340688166a802d40333261dab7c55b3071c014547c9",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 79,
+          "textSha256": "4cd9e5ea24960e2d7cddd3ac31c92fb3db5e9087e306b88faa92ff2b0bebac99",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 80,
+          "textSha256": "a1f9b10245c9d46fb3525d8e877cd13843f2cc455c32eec682f278ace70ca1bc",
+          "charCount": 14
+        },
+        {
+          "pageNumber": 81,
+          "textSha256": "bcdf00282ed249f93ed7eb18dbd7b1dfac5c54b44b7635e26262435621d138b9",
+          "charCount": 1514
+        },
+        {
+          "pageNumber": 82,
+          "textSha256": "b63bc13ba9bb2f933b301b9a7ecaef1ace950aaa9a779ff82dd572b83829f510",
+          "charCount": 810
+        },
+        {
+          "pageNumber": 83,
+          "textSha256": "9febc00c75c227709d404d513e498cb8c7929d470aab4de444cdf8ad94b891ba",
+          "charCount": 1109
+        },
+        {
+          "pageNumber": 84,
+          "textSha256": "d084592aabd470d7a6a67c9c19b2716a59a99c6f0c81d5a64defaf5e08c35b71",
+          "charCount": 842
+        },
+        {
+          "pageNumber": 85,
+          "textSha256": "b1fbf42155302cf4c41e4e6aad3ee2d2b75be89f582d07358a791eba3550f282",
+          "charCount": 1101
+        },
+        {
+          "pageNumber": 86,
+          "textSha256": "ce2e4dd7ca5e39eddf0b046972d47589e9a6f5e63eb08e2e3239b093a9f4a18c",
+          "charCount": 907
+        },
+        {
+          "pageNumber": 87,
+          "textSha256": "38c00ada562b685456df822761a4861f38b2a059b7fe48a7d21f2e75b80f3468",
+          "charCount": 685
+        },
+        {
+          "pageNumber": 88,
+          "textSha256": "f7fbac6a055ba1d0fb48aaed8cd8216bc0a6319ae17d0a79cd412e267c951d85",
+          "charCount": 950
+        },
+        {
+          "pageNumber": 89,
+          "textSha256": "ac769687b7339d674bd591d8483b504067c7c4f3513b66bdc789fa4acdaa1806",
+          "charCount": 1064
+        },
+        {
+          "pageNumber": 90,
+          "textSha256": "cc7604b720cdad85b47ba86e4fd4f13fe7fb339988163fe39383cc81d45057d1",
+          "charCount": 1062
+        },
+        {
+          "pageNumber": 91,
+          "textSha256": "0b546ac5ed02b1566bd84aae58b776854229be3f64c86c789640ce25a6935a80",
+          "charCount": 1172
+        },
+        {
+          "pageNumber": 92,
+          "textSha256": "ce753b17e573e382b1ea3518b41d35581b296bbaed214f4ffb74da27b46c0741",
+          "charCount": 877
+        },
+        {
+          "pageNumber": 93,
+          "textSha256": "968d7a57853b66b094f2fafd0c6dd1539ba8fc015d079d91fb44debc9294a81f",
+          "charCount": 938
+        },
+        {
+          "pageNumber": 94,
+          "textSha256": "7de5e5a737bfa885f8a0947fd36d531a0239bd2d403fa328f88f4211f7e4d8cc",
+          "charCount": 839
+        },
+        {
+          "pageNumber": 95,
+          "textSha256": "82a4919537c71ed3651add87118703bcfa79449e416be0fa9df11d45990abf9e",
+          "charCount": 916
+        },
+        {
+          "pageNumber": 96,
+          "textSha256": "8b359957b671f99f87bfbc8f7623c2dba0b14e411ca114bfdbf0f26168410048",
+          "charCount": 1084
+        },
+        {
+          "pageNumber": 97,
+          "textSha256": "a643687cc6d2e9c9dc099a834bf9a554f8bc8e42e411fb42a66201d9194b10b6",
+          "charCount": 1040
+        },
+        {
+          "pageNumber": 98,
+          "textSha256": "d32f7d6c936f741cc3b05c326ed5fdf95417fd9944d9f94f06fad1d666edcf2d",
+          "charCount": 1128
+        },
+        {
+          "pageNumber": 99,
+          "textSha256": "5258ffd91b1b98d0a780be624304c7021fa1acc079ceec2b1ff2afc2bb4bb8f4",
+          "charCount": 1014
+        },
+        {
+          "pageNumber": 100,
+          "textSha256": "fac6d67cab8f95fd94dad913e68b5c1a402501e662b783972a0768b9eb8ec3de",
+          "charCount": 1247
+        },
+        {
+          "pageNumber": 101,
+          "textSha256": "74fa6525e0a0a657c7c03803749c5e016e2f3e9bccfcbed593a205ec1af3ec6d",
+          "charCount": 1401
+        },
+        {
+          "pageNumber": 102,
+          "textSha256": "b807e4093dfcc51bde5bc187b40898bb7ac6e20cb2805e3dc5f8271de885e6c5",
+          "charCount": 864
+        },
+        {
+          "pageNumber": 103,
+          "textSha256": "5d6b06d6260e49e5b0de16c87548a497c55258fd7111c315ac14e5cc3aad34b8",
+          "charCount": 584
+        },
+        {
+          "pageNumber": 104,
+          "textSha256": "dfef4395f6df485c791881abd3cdde4702e84ca59db7916f408ddeb39ae922c6",
+          "charCount": 1926
+        },
+        {
+          "pageNumber": 105,
+          "textSha256": "a7872fc00cacaa51e8b3d40c66ffd7c5d101ba0e7594adf84ae64c1c22a0a2e5",
+          "charCount": 2646
+        },
+        {
+          "pageNumber": 106,
+          "textSha256": "f0849894acb20b4d87eb5a29e3558f8cc379017c88e5c9ae4c6e4fcd22116a5f",
+          "charCount": 2306
+        },
+        {
+          "pageNumber": 107,
+          "textSha256": "6e1865caa57ca560c878549edceee38fb2fa63368417e44beea85f94e2e61af8",
+          "charCount": 1089
+        },
+        {
+          "pageNumber": 108,
+          "textSha256": "c559a1e9a91aa74ff900a1b14a472d2e36cd96de90429259752c236888a71de9",
+          "charCount": 1608
+        },
+        {
+          "pageNumber": 109,
+          "textSha256": "5778ea4a22949378f10e981dcc2fa989e43522752a2015741ace95dcb4065985",
+          "charCount": 1633
+        },
+        {
+          "pageNumber": 110,
+          "textSha256": "c717a211e0bad82c5d115ba83a2e1d4743a1e45a17bcf7d9e1a29372ae818ae9",
+          "charCount": 588
+        },
+        {
+          "pageNumber": 111,
+          "textSha256": "2e8693c40bdd23e2f8ef4f72142f29194b7420179f0dc5205f8446db2e555e06",
+          "charCount": 1272
+        },
+        {
+          "pageNumber": 112,
+          "textSha256": "81e0ae07b80c615dfef4ebcbc4f387f997f47fddfbb896c7f2531726897a0c42",
+          "charCount": 824
+        },
+        {
+          "pageNumber": 113,
+          "textSha256": "414415435fb7fc733984a26d71ee59aa6620100a6109ab615f57664c669f704e",
+          "charCount": 1410
+        },
+        {
+          "pageNumber": 114,
+          "textSha256": "aaee879bf895830ca2748d7ebe9a7417e201323ee7fe9e23577a3bacd4bcc6ec",
+          "charCount": 910
+        },
+        {
+          "pageNumber": 115,
+          "textSha256": "4dd74028c2a6692b42a86d1f3bb2d9dffb17ffc268c82b222382ab0af4774d97",
+          "charCount": 1123
+        },
+        {
+          "pageNumber": 116,
+          "textSha256": "04998446e7168741a83d5fdc40e3a185f745059a8dbf5c38da510f36acd9f5c1",
+          "charCount": 1522
+        },
+        {
+          "pageNumber": 117,
+          "textSha256": "7cfec65daad92966f571b2ae47b53079c886ccef598e1ec6c8ffffe056fbf814",
+          "charCount": 1549
+        },
+        {
+          "pageNumber": 118,
+          "textSha256": "949e0d0baff807d6414c5bd0a507f5e3009a6f79fced75844d65dff71e983f74",
+          "charCount": 1291
+        },
+        {
+          "pageNumber": 119,
+          "textSha256": "653866ac85268fd446b55906fb170bdcae1c9938a7b799785b08dd99174ad448",
+          "charCount": 2069
+        },
+        {
+          "pageNumber": 120,
+          "textSha256": "a6ab9712c3e7187f06ad7ba59ba2fdad32568965602b5f1be8f67398d0d83adf",
+          "charCount": 2782
+        },
+        {
+          "pageNumber": 121,
+          "textSha256": "70ee9e57f8db88091fda2d0398d3dfdcbeb4899cc0744ad1709d8e342ab1cbbe",
+          "charCount": 3040
+        },
+        {
+          "pageNumber": 122,
+          "textSha256": "41604e756d32101b1471938e41e68bbc3a4a759341cf8a73b65fade2f23be158",
+          "charCount": 2442
+        },
+        {
+          "pageNumber": 123,
+          "textSha256": "bb1dc18808bd17984a3aabcb0e2ec2cc2eebf034d07eea92eed2c0b8f87a1773",
+          "charCount": 963
+        },
+        {
+          "pageNumber": 124,
+          "textSha256": "d082ddf02e226cda7bfadd6dbcd3bd746c3db63df4be2c0aedbaf1e068eb943f",
+          "charCount": 462
+        },
+        {
+          "pageNumber": 125,
+          "textSha256": "022a76760fadfac6865d930fadf4a0093b4955c271863b94147c64272322cd00",
+          "charCount": 1093
+        },
+        {
+          "pageNumber": 126,
+          "textSha256": "3b02058fcc1509bcbf1961a1787a4aa78ce94016e088405d54f63a5804c56c90",
+          "charCount": 652
+        },
+        {
+          "pageNumber": 127,
+          "textSha256": "f863e83b4ae2fb5a4087cde1b7943c8bd672b19c6bac5bb59aca00fc0bdefc8b",
+          "charCount": 2692
+        },
+        {
+          "pageNumber": 128,
+          "textSha256": "d70c839f20d55f5029b9cd239b98a841a8c7946e012b775ee9f8256ff10e4cf5",
+          "charCount": 2025
+        },
+        {
+          "pageNumber": 129,
+          "textSha256": "626f3ae544a789ce9eb5a27022fb9e5465b1dff7916ce58e80aa15544b9a1c80",
+          "charCount": 1361
+        },
+        {
+          "pageNumber": 130,
+          "textSha256": "ba327a54705f05ae8af536c2a26304b274133c933cac788f7cc2ae0d87a7c2fe",
+          "charCount": 1310
+        },
+        {
+          "pageNumber": 131,
+          "textSha256": "85cc809bae514c9f53b4865b61210ced298ad8b0fd85a467190ee56cd3f6e70a",
+          "charCount": 1538
+        },
+        {
+          "pageNumber": 132,
+          "textSha256": "0930d6eef2b8d7d960f6eba951363d2ce1cb4d567699ad07f58ca7000b6cc95b",
+          "charCount": 1678
+        }
+      ]
+    },
+    {
+      "documentTitle": "ssc_cgl_2026_reopening",
+      "documentSha256": "6a9f0cd5b4ecd3f027835567ab6a9a2a35a4b2446997b6ce4382d8bd6fcba563",
+      "textExtractedAndBound": true,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "c95e5881a3fa6daf80fe36ecaf407e455c50caed1081d4a1bbc2e45285bc480d",
+          "charCount": 2021
+        }
+      ]
+    },
+    {
+      "documentTitle": "rpsc_first_grade_advt_06_2025_26",
+      "documentSha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+      "textExtractedAndBound": false,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentTitle": "rpsc_first_grade_amendment",
+      "documentSha256": "9a53cdf39c9426c99b52000995692db78772f6db3a18660bbfb85e682cb3b099",
+      "textExtractedAndBound": true,
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "009eb32eb99ea58a271aaa8ecb754ee8894e099e3d48d8ec0c362b161a64053e",
+          "charCount": 1040
+        }
+      ]
+    }
+  ]
+}

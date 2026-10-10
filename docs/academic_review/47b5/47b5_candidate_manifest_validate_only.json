@@ -1,0 +1,931 @@
+{
+  "preflightCode": "RC_47B5_CANDIDATE_MANIFEST_VALIDATE_ONLY",
+  "executedAt": "2026-09-10T06:57:27.782Z",
+  "executionLabel": "UNFROZEN_INTEGRATION_PREFLIGHT",
+  "metrics": {
+    "TOTAL_CANDIDATE_MISSIONS": 153,
+    "VALIDATION_PASS_COUNT": 124,
+    "VALIDATION_HOLD_COUNT": 29,
+    "VALIDATION_REJECT_COUNT": 0
+  },
+  "ledger": [
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "title": "UPPSC PCS – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "title": "UPPSC RO/ARO – Prelims",
+      "authorityKey": "auth_in_up_uppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "upsssc_pet",
+      "title": "UPSSSC PET",
+      "authorityKey": "auth_in_up_upsssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "title": "UPSSSC VDO / Gram Panchayat Adhikari",
+      "authorityKey": "auth_in_up_upsssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "title": "UP Police Constable",
+      "authorityKey": "auth_in_up_upprpb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "title": "UP Police SI",
+      "authorityKey": "auth_in_up_upprpb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "up_tet",
+      "title": "UPTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_up_pnp",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "title": "UKPSC PCS – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "title": "UKPSC Lower Subordinate – Prelims",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "uk_police_si",
+      "title": "Uttarakhand Police SI",
+      "authorityKey": "auth_in_uk_ukpsc",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "title": "UKSSSC Group C Combined",
+      "authorityKey": "auth_in_uk_uksssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "title": "Uttarakhand Police Constable",
+      "authorityKey": "auth_in_uk_uksssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "uk_tet",
+      "title": "UTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_uk_ubse",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "title": "HPPSC HPAS – Prelims",
+      "authorityKey": "auth_in_hp_hppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "title": "HP Police Constable",
+      "authorityKey": "auth_in_hp_hppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "title": "HPRCA Group C Common",
+      "authorityKey": "auth_in_hp_hprca",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "hp_tet",
+      "title": "HP TET",
+      "authorityKey": "auth_in_hp_hpbose",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "title": "PPSC PSCSCCE – Prelims",
+      "authorityKey": "auth_in_pb_ppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "psssb_clerk",
+      "title": "PSSSB Clerk Combined",
+      "authorityKey": "auth_in_pb_psssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "title": "PSSSB Revenue Patwari",
+      "authorityKey": "auth_in_pb_psssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "title": "Punjab Police Constable",
+      "authorityKey": "auth_in_pb_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "punjab_police_si",
+      "title": "Punjab Police SI",
+      "authorityKey": "auth_in_pb_police",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "punjab_pstet",
+      "title": "PSTET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_pb_pseb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "title": "HPSC HCS – Prelims",
+      "authorityKey": "auth_in_hr_hpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "title": "HSSC CET Group C",
+      "authorityKey": "auth_in_hr_hssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "title": "HSSC CET Group D",
+      "authorityKey": "auth_in_hr_hssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "title": "Haryana Police Constable",
+      "authorityKey": "auth_in_hr_hssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "haryana_police_si",
+      "title": "Haryana Police SI",
+      "authorityKey": "auth_in_hr_hssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "haryana_htet",
+      "title": "HTET (PRT / TGT / PGT)",
+      "authorityKey": "auth_in_hr_bseh",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "title": "JKPSC CCE – Prelims",
+      "authorityKey": "auth_in_jk_jkpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "title": "J&K Police Constable",
+      "authorityKey": "auth_in_jk_jkssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jk_police_si",
+      "title": "J&K Police SI",
+      "authorityKey": "auth_in_jk_jkssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "title": "JKSSB Graduate Combined",
+      "authorityKey": "auth_in_jk_jkssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "title": "SSC Selection Posts Ladakh",
+      "authorityKey": "auth_in_la_admin",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "title": "Ladakh Police Constable",
+      "authorityKey": "auth_in_la_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "title": "LAHDC DSSRB District Cadre",
+      "authorityKey": "auth_in_la_dssrb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "title": "Chandigarh Police Constable",
+      "authorityKey": "auth_in_ch_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "title": "Chandigarh Police ASI",
+      "authorityKey": "auth_in_ch_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "title": "Chandigarh JBT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "title": "Chandigarh TGT Teacher",
+      "authorityKey": "auth_in_ch_admin",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "title": "DSSSB TGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "title": "DSSSB PRT Assistant Teacher",
+      "authorityKey": "auth_in_dl_dsssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "title": "DSSSB PGT Combined",
+      "authorityKey": "auth_in_dl_dsssb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "title": "DSSSB Junior Assistant / LDC",
+      "authorityKey": "auth_in_dl_dsssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "title": "Delhi Police Constable (Executive)",
+      "authorityKey": "auth_in_dl_delpol",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "delhi_police_si",
+      "title": "Delhi Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_dl_delpol",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "title": "RPSC RAS / RTS (Prelims)",
+      "authorityKey": "auth_in_rj_rpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "title": "RPSC 1st Grade Teacher / School Lecturer",
+      "authorityKey": "auth_in_rj_rpsc",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "title": "Rajasthan CET 12th Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "title": "Rajasthan CET Graduate Level",
+      "authorityKey": "auth_in_rj_rssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "rbse_reet",
+      "title": "REET (Level 1 & Level 2)",
+      "authorityKey": "auth_in_rj_rbse",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "title": "Rajasthan Police Constable",
+      "authorityKey": "auth_in_rj_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "title": "MPPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_mp_mppsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "title": "MP Police Constable",
+      "authorityKey": "auth_in_mp_mpesb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "title": "MP Patwari / Group 2 Sub Group 4",
+      "authorityKey": "auth_in_mp_mpesb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "title": "MP TET (Varg 1, Varg 2, Varg 3)",
+      "authorityKey": "auth_in_mp_mpesb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "title": "CGPSC State Service Exam (Prelims)",
+      "authorityKey": "auth_in_cg_cgpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "title": "CG TET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_cg_cgvyapam",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "title": "CG Police Constable",
+      "authorityKey": "auth_in_cg_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "title": "GPSC Class 1-2 (Gujarat Civil Services)",
+      "authorityKey": "auth_in_gj_gpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "gsssb_cce",
+      "title": "GSSSB CCE (Clerk / Head Clerk / Office Assistant)",
+      "authorityKey": "auth_in_gj_gsssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "gpssb_talati",
+      "title": "GPSSB Talati cum Mantri",
+      "authorityKey": "auth_in_gj_gpssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "title": "Gujarat Police Constable / Lokrakshak",
+      "authorityKey": "auth_in_gj_gprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "title": "Gujarat TET (TET-1 / TET-2)",
+      "authorityKey": "auth_in_gj_seb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "title": "MPSC Rajyaseva / Civil Services Combined Prelims",
+      "authorityKey": "auth_in_mh_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "title": "MPSC Group B & C Combined Prelims (PSI / STI / ASO / Clerk)",
+      "authorityKey": "auth_in_mh_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "title": "Maharashtra Police Constable (Police Bharti)",
+      "authorityKey": "auth_in_mh_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "title": "MAHATET (Paper 1 & Paper 2)",
+      "authorityKey": "auth_in_mh_mscepune",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "title": "Goa Civil Service (JSO / GPSC)",
+      "authorityKey": "auth_in_ga_gpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "title": "GSSC Goa Group C (LDC / Junior Stenographer / MTS)",
+      "authorityKey": "auth_in_ga_gssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "title": "Goa Police PSI & Constable",
+      "authorityKey": "auth_in_ga_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "title": "DNH & DD SSB Group B & Group C (LDC / Assistant / JE / Police Constable)",
+      "authorityKey": "auth_in_dn_ssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "title": "BPSC CCE Prelims",
+      "authorityKey": "auth_in_br_bpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bpsc_tre",
+      "title": "BPSC TRE (School Teacher)",
+      "authorityKey": "auth_in_br_bpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bssc_cgl",
+      "title": "BSSC CGL (Graduate Level)",
+      "authorityKey": "auth_in_br_bssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "title": "BSSC Inter Level (10+2)",
+      "authorityKey": "auth_in_br_bssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "title": "Bihar Police SI (Daroga)",
+      "authorityKey": "auth_in_br_bpssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "title": "Bihar Police Constable",
+      "authorityKey": "auth_in_br_csbc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bseb_stet",
+      "title": "Bihar STET",
+      "authorityKey": "auth_in_br_bseb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "title": "JPSC CCE Prelims",
+      "authorityKey": "auth_in_jh_jpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jssc_cgl",
+      "title": "JSSC CGL (JGGLCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "title": "Jharkhand Police Constable (JCCE)",
+      "authorityKey": "auth_in_jh_jssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jac_jtet",
+      "title": "Jharkhand TET (JTET)",
+      "authorityKey": "auth_in_jh_jac",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "title": "OPSC OCS Prelims (OAS / OFS)",
+      "authorityKey": "auth_in_od_opsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ossc_cgl",
+      "title": "OSSC CGL (CGLRE)",
+      "authorityKey": "auth_in_od_ossc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "title": "OSSSC Combined Exam (RI / ARI / AMIN)",
+      "authorityKey": "auth_in_od_osssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "title": "Odisha Police Constable",
+      "authorityKey": "auth_in_od_opssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "title": "Odisha TET (OTET)",
+      "authorityKey": "auth_in_od_bse",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "title": "SSB Odisha Lecturer / PGT Recruitment",
+      "authorityKey": "auth_in_od_ssb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "title": "WBCS Prelims",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "title": "WBPSC Clerkship",
+      "authorityKey": "auth_in_wb_wbpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "title": "WB Police Constable",
+      "authorityKey": "auth_in_wb_wbprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "title": "WB Police SI",
+      "authorityKey": "auth_in_wb_wbprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "title": "WB Primary TET",
+      "authorityKey": "auth_in_wb_wbbpe",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "title": "WB School Service Commission SLST (Assistant Teacher)",
+      "authorityKey": "auth_in_wb_wbcssc",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "title": "A&N Administration CHSL",
+      "authorityKey": "auth_in_an_erecruitment",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "title": "A&N Administration Matric Level (CML)",
+      "authorityKey": "auth_in_an_erecruitment",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "title": "A&N Police Constable / SI",
+      "authorityKey": "auth_in_an_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "appsc_group1",
+      "title": "APPSC Group 1",
+      "authorityKey": "auth_in_ap_appsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "appsc_group2",
+      "title": "APPSC Group 2",
+      "authorityKey": "auth_in_ap_appsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "title": "AP Police SI",
+      "authorityKey": "auth_in_ap_apslprb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "title": "AP Police Constable",
+      "authorityKey": "auth_in_ap_apslprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "title": "TGPSC Group 1",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "title": "TGPSC Group 2",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "title": "TGPSC Group 3",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "title": "TGPSC Group 4",
+      "authorityKey": "auth_in_tg_tgpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "title": "Telangana Police SI",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "title": "Telangana Police Constable",
+      "authorityKey": "auth_in_tg_tgslprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "treirb_teaching",
+      "title": "Telangana Gurukulam Teachers",
+      "authorityKey": "auth_in_tg_treirb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "title": "Karnataka KAS (Gazetted Probationers)",
+      "authorityKey": "auth_in_ka_kpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "title": "Karnataka FDA / SDA & Village Administrative Officer",
+      "authorityKey": "auth_in_ka_kea",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ksp_psi",
+      "title": "Karnataka Police Sub-Inspector (PSI)",
+      "authorityKey": "auth_in_ka_ksp",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "ksp_cpc",
+      "title": "Karnataka Civil Police Constable",
+      "authorityKey": "auth_in_ka_ksp",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "title": "Kerala Administrative Service (KAS)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "title": "Kerala PSC Degree Level Prelims",
+      "authorityKey": "auth_in_kl_kpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "title": "Kerala PSC 10th & Plus Two Prelims (LDC / Fireman / Excise)",
+      "authorityKey": "auth_in_kl_kpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "title": "Kerala Police Constable",
+      "authorityKey": "auth_in_kl_kpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "title": "TNPSC Group 1",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "title": "TNPSC Group 2 / 2A",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "title": "TNPSC Group 4 & VAO",
+      "authorityKey": "auth_in_tn_tnpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tnusrb_si",
+      "title": "TNUSRB Police SI",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "title": "TNUSRB Police Constable",
+      "authorityKey": "auth_in_tn_tnusrb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "title": "TN TRB PG Assistant & TNTET",
+      "authorityKey": "auth_in_tn_tntrb",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "title": "TN MRB Assistant Surgeon",
+      "authorityKey": "auth_in_tn_tnmrb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "title": "Puducherry UDC, LDC & VAO",
+      "authorityKey": "auth_in_py_dpar",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "title": "Puducherry Police SI & Constable",
+      "authorityKey": "auth_in_py_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "title": "Lakshadweep Administration Group C & Police Constable",
+      "authorityKey": "auth_in_ld_admin",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "apsc_cce",
+      "title": "APSC CCE (Assam Civil Services)",
+      "authorityKey": "auth_in_as_apsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "slrc_adre",
+      "title": "ADRE Grade 3 & Grade 4 (Assam Direct Recruitment)",
+      "authorityKey": "auth_in_as_slrc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "title": "Assam Police SI & Constable Recruitment",
+      "authorityKey": "auth_in_as_slprb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "title": "APPSC APPSCCE (Arunachal Civil Services)",
+      "authorityKey": "auth_in_ar_appsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "title": "APSSB CGL & CSLE (Combined Secondary Level)",
+      "authorityKey": "auth_in_ar_apssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "title": "Arunachal Police Constable & Specialist Recruitment",
+      "authorityKey": "auth_in_ar_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "title": "MPSC Manipur MCSCCE (Manipur Civil Services)",
+      "authorityKey": "auth_in_mn_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "title": "Manipur SSC Group C & MTS Recruitment",
+      "authorityKey": "auth_in_mn_mssc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "title": "Manipur Police Rifleman / Constable Recruitment",
+      "authorityKey": "auth_in_mn_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "title": "MPSC Meghalaya Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_ml_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "title": "Meghalaya Police SI & Constable Recruitment (CRB)",
+      "authorityKey": "auth_in_ml_crb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "title": "MPSC Mizoram Civil Services (MCS / MPS)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "title": "Mizoram Subordinate Services (Group B Non-Gazetted via MPSC)",
+      "authorityKey": "auth_in_mz_mpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "title": "Mizoram Police Constable Recruitment",
+      "authorityKey": "auth_in_mz_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "title": "NPSC NCS & NPS (Nagaland Civil Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "title": "NPSC CTSE (Technical & Engineering Services)",
+      "authorityKey": "auth_in_nl_npsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "title": "NSSB CSRE (Nagaland Combined Staff Recruitment)",
+      "authorityKey": "auth_in_nl_nssb",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "title": "Nagaland Police Constable (GD) Recruitment",
+      "authorityKey": "auth_in_nl_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "title": "SPSC Sikkim Civil Services (Under Secretary / DSP)",
+      "authorityKey": "auth_in_sk_spsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "title": "SPSC Sikkim Police Sub-Inspector (SI)",
+      "authorityKey": "auth_in_sk_spsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "title": "Sikkim Police Constable Recruitment",
+      "authorityKey": "auth_in_sk_police",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "title": "TPSC Combined Competitive Exam (TCS & TPS)",
+      "authorityKey": "auth_in_tr_tpsc",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "title": "JRBT Group C & Group D Recruitment",
+      "authorityKey": "auth_in_tr_jrbt",
+      "validationStatus": "VALIDATION_PASS"
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "title": "Tripura TET (T-TET Paper 1 & 2)",
+      "authorityKey": "auth_in_tr_trbt",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "title": "TRBT STGT & STPGT (Secondary Teachers)",
+      "authorityKey": "auth_in_tr_trbt",
+      "validationStatus": "VALIDATION_HOLD"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "title": "Tripura Police Constable & TSR Rifleman Recruitment",
+      "authorityKey": "auth_in_tr_police",
+      "validationStatus": "VALIDATION_PASS"
+    }
+  ]
+}

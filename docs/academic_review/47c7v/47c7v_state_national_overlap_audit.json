@@ -1,0 +1,35 @@
+{
+  "auditCode": "RC_47C7V_STATE_NATIONAL_OVERLAP_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.823Z",
+  "metrics": {
+    "UNRESOLVED_STATE_NATIONAL_CANONICAL_COLLISION_COUNT": 1
+  },
+  "crossLaneAudits": [
+    {
+      "subject": "CTET vs State TETs",
+      "status": "RESOLVED",
+      "details": "Central CTET operates as central gateway with regional discovery pointers allowed; state TETs maintained as distinct state authorities."
+    },
+    {
+      "subject": "Delhi Police SI",
+      "status": "RESOLVED",
+      "details": "Correctly mapped as discovery pointer to central mission ssc_cpo."
+    },
+    {
+      "subject": "Ladakh Selection Post",
+      "status": "RESOLVED",
+      "details": "Correctly mapped as discovery pointer to central mission ssc_selection_post."
+    },
+    {
+      "subject": "UPSC Civil Services Prelims in UTs",
+      "status": "RESOLVED",
+      "details": "Single sovereign upsc_cse_prelims serves DANICS/DANIPS without state mission duplication."
+    },
+    {
+      "subject": "IBPS RRB Officer Nomenclature",
+      "status": "COLLISION_DEFECT",
+      "details": "Cross-lane canonical key divergence: 47A3R1 registered ibps_crp_rrb_officers while 47C6 registered ibps_rrb_officer."
+    }
+  ],
+  "verdict": "DEFECT_BLOCKER"
+}

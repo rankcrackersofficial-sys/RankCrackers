@@ -1,0 +1,49 @@
+{
+  "auditCode": "RC_47C8V_IB_COMPLETENESS_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.306Z",
+  "family": "Intelligence Bureau major objective recruitment",
+  "metrics": {
+    "IB_CANDIDATE_COUNT": 2,
+    "IB_EXPLICIT_DISPOSITION_COUNT": 2,
+    "IB_MATERIALIZATION_ELIGIBLE_COUNT": 0,
+    "IB_SILENTLY_DROPPED_COUNT": 0
+  },
+  "candidates": [
+    {
+      "candidateId": "ib_acio_ii_executive",
+      "displayName": "IB ACIO-II/Executive",
+      "authorityOwner": "Intelligence Bureau / Ministry of Home Affairs",
+      "conductingAuthority": "Ministry of Home Affairs recruitment process",
+      "recurrenceEvidence": [
+        "ACIO-II/Exe 2020",
+        "ACIO-II/Exe 2023",
+        "ACIO-II/Exe 2025"
+      ],
+      "objectiveMcqCompatibility": "SUPPORTED_BY_TIER_I_OBJECTIVE_EXAM_HISTORY",
+      "majorPreparationSignificance": "HIGH",
+      "currentOfficialSource": "https://www.mha.gov.in/en/media/whats-new/whats-new-archive",
+      "latestStructuralSource": "https://www.mha.gov.in/en/notifications/vacancies/archive-vacancies?page=18&title_1=",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "reason": "Current cycle result evidence and recurrence are official, but a complete current governing advertisement/syllabus binding is not yet captured."
+    },
+    {
+      "candidateId": "ib_security_assistant_executive",
+      "displayName": "IB Security Assistant/Executive",
+      "authorityOwner": "Intelligence Bureau / Ministry of Home Affairs",
+      "conductingAuthority": "Ministry of Home Affairs recruitment process",
+      "recurrenceEvidence": [
+        "Security Assistant/Executive 2018",
+        "Security Assistant/Executive 2025"
+      ],
+      "objectiveMcqCompatibility": "SUPPORTED_BY_OFFICIAL_TIER_I_OBJECTIVE_RESULT_AND_CURRENT_CYCLE",
+      "majorPreparationSignificance": "HIGH",
+      "currentOfficialSource": "https://www.mha.gov.in/sites/default/files/IBSA_08082025.pdf",
+      "latestStructuralSource": "https://www.mha.gov.in/sites/default/files/VacanciesSecurityAssistant_18102018_0.pdf",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "reason": "Current 2025 corrigendum and final-result trail exist; current full advertisement and exact scheme binding remain incomplete."
+    }
+  ],
+  "verdict": "PASS"
+}

@@ -1,0 +1,839 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "productionWrites": 0,
+  "scope": [
+    "jee_main_2026",
+    "ssc_cgl"
+  ],
+  "sourceDocuments": [
+    {
+      "documentId": "JEE_IB_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_ib_2026.pdf",
+      "byteLength": 6092568,
+      "sha256": "b18d5d608dda0a274eaa1bcaa4127e0ab7e49d2fd0e78840bd9c96707400960e",
+      "documentIdentity": "jee_ib_2026",
+      "issueOrEffectiveDate": "2025-10-31",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": true
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": "ba0513582b9c7abe7eec3dabd11b04a856ced4bb63ab0fbb897858af520ed0d6",
+          "charCount": 214
+        },
+        {
+          "page": 2,
+          "textSha256": "ba0513582b9c7abe7eec3dabd11b04a856ced4bb63ab0fbb897858af520ed0d6",
+          "charCount": 214
+        },
+        {
+          "page": 3,
+          "textSha256": "7e1d886b9a92941c4a7a3054c5b52d5641ac2696a37765ff1ebbba0d480dded8",
+          "charCount": 1090
+        },
+        {
+          "page": 4,
+          "textSha256": "7f87f7aa2335c4e186a8d5bff1050ffe09df3e22c35ecf9382d3b3b6436a9e4e",
+          "charCount": 1427
+        },
+        {
+          "page": 5,
+          "textSha256": "3d9c98e3ca5d3d53b561bd21012080aefe84d70542bdaec87be2c6ee88b994c5",
+          "charCount": 1526
+        },
+        {
+          "page": 6,
+          "textSha256": "4b2a205ed97c63ebad97ac48bd5523cf110513c6a3b250535b05818cfbed405b",
+          "charCount": 1059
+        },
+        {
+          "page": 7,
+          "textSha256": "862a94df4f4784a66b35ee60c76362b71d29327f4a99ceef8f48004d9dfe0a3b",
+          "charCount": 1712
+        },
+        {
+          "page": 8,
+          "textSha256": "174c3d7c78e4037f6408c06aefcc7c91783db74d59814cfbf3dc5da3921033d2",
+          "charCount": 2241
+        },
+        {
+          "page": 9,
+          "textSha256": "657f628ecb169984800a752f4a59b53c59e0230672efddda5ac114d2948caf1c",
+          "charCount": 3328
+        },
+        {
+          "page": 10,
+          "textSha256": "57b96615c22d0dd26f58ee13687d0df6b2fdc4eec63537ab10e7afe1f8446a36",
+          "charCount": 3777
+        },
+        {
+          "page": 11,
+          "textSha256": "04f9bb3dd2f9f6c8d5c4d9c3e08c9a5645946f9438d6d27dc031fe4875004fbb",
+          "charCount": 3366
+        },
+        {
+          "page": 12,
+          "textSha256": "d8b9dfa3d0f68efd1af34db9c7a6686653f305e82109c0c506787d74dd9c2a31",
+          "charCount": 302
+        },
+        {
+          "page": 13,
+          "textSha256": "566add611ae1909adefc6bf0c8045cbb35bef6be93fd622d27389bc90cb7b079",
+          "charCount": 3478
+        },
+        {
+          "page": 14,
+          "textSha256": "38fc20636eb2c9b5852f343add0dc19d8c2b135631237c534e2c81b2f3687a2d",
+          "charCount": 970
+        },
+        {
+          "page": 15,
+          "textSha256": "40a0baa1993e15399ae3ead3e5d5599062011410cb093b1916cd146709326db9",
+          "charCount": 382
+        },
+        {
+          "page": 16,
+          "textSha256": "8ce3490c78518f721ec3f026019ed83c343889c45125b76ae3c6bebeb11e7aad",
+          "charCount": 2549
+        },
+        {
+          "page": 17,
+          "textSha256": "68ea099e90cb236bf4311196f7b18bd3124f3e22da695236592fda961669889c",
+          "charCount": 2358
+        },
+        {
+          "page": 18,
+          "textSha256": "f60448ffe87a99dbb15fd1fdf9cba8b5179e765f949afa3515ad7945ea46791d",
+          "charCount": 2784
+        },
+        {
+          "page": 19,
+          "textSha256": "fb3020074f334b933d30f19ca7ec89722b2ad99847d76187ba80df9656783776",
+          "charCount": 2735
+        },
+        {
+          "page": 20,
+          "textSha256": "8db400376ac2a07ac552b7c9b2b916b6382b4bba39a019a12d60524a040022a2",
+          "charCount": 1936
+        },
+        {
+          "page": 21,
+          "textSha256": "473b24d85b30b6d989204e6a86f0f7470e0cc43221a8402b4c75bd9f4fd0c3db",
+          "charCount": 2230
+        },
+        {
+          "page": 22,
+          "textSha256": "b38a9692a2fb5e37fc896697e80a1e3152371b6de9e06e4ee16fd6080d5fa4a7",
+          "charCount": 1175
+        },
+        {
+          "page": 23,
+          "textSha256": "5cb8404db4cf4d3c1b06e445480ed58648655752e292258deb2840f4a076d538",
+          "charCount": 292
+        },
+        {
+          "page": 24,
+          "textSha256": "b5200f9731028d11d0cd0ccaa1421f2d500737d261a039bab7e7542ca7cefc29",
+          "charCount": 2952
+        },
+        {
+          "page": 25,
+          "textSha256": "dbb781a06b24e3a9fbf39063c5870f7e0c8f1d4c96c84e2b49fc0036847f6b34",
+          "charCount": 3265
+        },
+        {
+          "page": 26,
+          "textSha256": "ab352dadbd6a744ef33feffee7b122fd242b7f92c7a8488af07b977255ee4dbf",
+          "charCount": 293
+        },
+        {
+          "page": 27,
+          "textSha256": "6165330905f4569cfe687176e492e241b7dfa29b66bd104f9924a64b162d904a",
+          "charCount": 3031
+        },
+        {
+          "page": 28,
+          "textSha256": "35a582d61494e39d94ace057fce06c9a7a386f725e84fd42c307dac790f0636b",
+          "charCount": 3318
+        },
+        {
+          "page": 29,
+          "textSha256": "2c12f572e5a76e0d0622235adcf206e1d09016dbec239e5ed9f36bd2a7685076",
+          "charCount": 3197
+        },
+        {
+          "page": 30,
+          "textSha256": "cefe9953637ef1ebab41aa672963abacb5f68c6e63f116a79209fb01d886ec51",
+          "charCount": 2167
+        },
+        {
+          "page": 31,
+          "textSha256": "212756d56c4219a3db9546c5387f0253ce54bd6168344eaf61c42c0739e0c012",
+          "charCount": 285
+        },
+        {
+          "page": 32,
+          "textSha256": "6f00a9578da0386d6b72fa17cca55c8b2ef52a201ef28066821a6b5a68782123",
+          "charCount": 2564
+        },
+        {
+          "page": 33,
+          "textSha256": "d114dba4a275f22c76fb72b478b03f576b89daea5cbb82cb55f875cfadfcfd5e",
+          "charCount": 2937
+        },
+        {
+          "page": 34,
+          "textSha256": "ffaac25fa57a19e1f997eb85837bb0dacee4a50c634494483b50020c87404788",
+          "charCount": 1949
+        },
+        {
+          "page": 35,
+          "textSha256": "dd9ff59b7b61f1a056fef28436b63a3f79aa4698046f55631b91806ed32a18a2",
+          "charCount": 4440
+        },
+        {
+          "page": 36,
+          "textSha256": "501ddb94238baf554b4293030b19669c5b3a82b1820c6eefd2bd1225bce8f4b4",
+          "charCount": 2692
+        },
+        {
+          "page": 37,
+          "textSha256": "8d460135e06290d60770e68cc821d599446a0a5e88e7d4e00c6e29a301fed0c8",
+          "charCount": 3520
+        },
+        {
+          "page": 38,
+          "textSha256": "67fd6f78c2218a2b0da3e25694258b0e6455ea633b9b49469cebec2378a44df1",
+          "charCount": 3348
+        },
+        {
+          "page": 39,
+          "textSha256": "bde615cf1313d7a539ba677cd5b43212afef0a3b6d9375d317beec869ac7a79b",
+          "charCount": 927
+        },
+        {
+          "page": 40,
+          "textSha256": "4bda19cc67f6fc0ef9cf9a3e6ae9ed2e9f4dba712dc5c8687dd48cb389c0b4d4",
+          "charCount": 3357
+        },
+        {
+          "page": 41,
+          "textSha256": "4f6aa9274b34f1b8704bb633d5c228016f36ab246f62677049c11fc82dccf341",
+          "charCount": 3317
+        },
+        {
+          "page": 42,
+          "textSha256": "20dc73f202695f7c2200e309e671e95b4ac438525820ff01d6d778225592f06f",
+          "charCount": 3399
+        },
+        {
+          "page": 43,
+          "textSha256": "a5031811a461568e0d4a00265d548cd79351494f65d49d9c5a45d70f53dd473a",
+          "charCount": 1974
+        },
+        {
+          "page": 44,
+          "textSha256": "ec20bbcd732dc93885f23aedf62175f45d270a4e1436ab0fcf6df714171bcc00",
+          "charCount": 2930
+        },
+        {
+          "page": 45,
+          "textSha256": "b61bb70d597bc3fa4bb2d8d52890c89fea8a78577aa764849ab39c219235e709",
+          "charCount": 747
+        },
+        {
+          "page": 46,
+          "textSha256": "407b0eb419d69d76be0911cdc522bdb6c0b072b49a0f8486434894ae5d5a885e",
+          "charCount": 2743
+        },
+        {
+          "page": 47,
+          "textSha256": "2f020338fd445f44290720e717b5c9612878bd78b2f7a9659f85d9631990a0a4",
+          "charCount": 269
+        },
+        {
+          "page": 48,
+          "textSha256": "3b60e1ff742f6fc2a5e403cfdafc7e6a63b2756a1428d1d19ebb726963201866",
+          "charCount": 224
+        },
+        {
+          "page": 49,
+          "textSha256": "2b7daf9aa0578bb6e68641a44bbc95e3aa54f4f3c46cd30a5324b45b3edab5aa",
+          "charCount": 224
+        },
+        {
+          "page": 50,
+          "textSha256": "178356994c2648e5d0821d5d89e810db31e2ec7b20f5dd849558ca8b8c4d80f4",
+          "charCount": 1231
+        },
+        {
+          "page": 51,
+          "textSha256": "cbda4f89435d481140ac1ea5ffc732eec6cafd4002374057fe5558c861cb4564",
+          "charCount": 2173
+        },
+        {
+          "page": 52,
+          "textSha256": "4ad1bab7b03d0e86cf9b0bd73ee8355d8329fbddccc938ce996ccf98007ca962",
+          "charCount": 1329
+        },
+        {
+          "page": 53,
+          "textSha256": "27481a5f5bb76011b534c2a4442cdf29e9bc7df595eaf2c5e3d1fdc067ac13db",
+          "charCount": 1611
+        },
+        {
+          "page": 54,
+          "textSha256": "feb92193a0e6a526750aa8cc33cf946eb372bec82762902f5a790089b5355fe4",
+          "charCount": 1388
+        },
+        {
+          "page": 55,
+          "textSha256": "7b13fa8d4b4e29333cedd6eb9e2698034a0705fc254cf8cfa9a0d606bb92b98f",
+          "charCount": 1383
+        },
+        {
+          "page": 56,
+          "textSha256": "eb544483b39f03387e98d3bc2d76395c77f02349d0ec400ab2df99b2d01d7248",
+          "charCount": 1403
+        },
+        {
+          "page": 57,
+          "textSha256": "1f2a642dbf16c6fd3f702492b6259eb3c73debe300f6a6bb0f6bd706ad3845fb",
+          "charCount": 1321
+        },
+        {
+          "page": 58,
+          "textSha256": "83fc1477b49c34ed20e2cc72ad832880ff46ad7f7faf1282b5754379e287849b",
+          "charCount": 1389
+        },
+        {
+          "page": 59,
+          "textSha256": "74c5be962b939109d101511b00707cd644dce0b7aa0f0667899389851ee5a5e2",
+          "charCount": 1496
+        },
+        {
+          "page": 60,
+          "textSha256": "1d7ea6ad3c5f601c9889e1b1d8a2f80cda5d4fd2bef64e55a22840c4d9ba375e",
+          "charCount": 963
+        },
+        {
+          "page": 61,
+          "textSha256": "91d48d6227a9abb6668fef8fb199cdab624edc0639f540d9fbb1a4a0a64ff5e6",
+          "charCount": 3317
+        },
+        {
+          "page": 62,
+          "textSha256": "31307e4f08820f1711d89f368e2b9c4ffacba3190885df732949071e6f17de11",
+          "charCount": 1663
+        },
+        {
+          "page": 63,
+          "textSha256": "1c5b901227581c320a200ae16f51afa9c37a53013345370f109233a30706be32",
+          "charCount": 2442
+        },
+        {
+          "page": 64,
+          "textSha256": "b0d82ee018412ab2c766f6e49f563ce5a4f8c10378175fd4997e7128b499b522",
+          "charCount": 2644
+        },
+        {
+          "page": 65,
+          "textSha256": "57255cfa057f62f8cb878c584ce4938c3818511e268318619caea88d556e72a9",
+          "charCount": 2023
+        },
+        {
+          "page": 66,
+          "textSha256": "69f9e43583a8fc949a87e7f7a8e1ca0bdcb9c2ee12858e18f9ff3fac77987417",
+          "charCount": 1926
+        },
+        {
+          "page": 67,
+          "textSha256": "cc98072ebd8524f6e4cfa9b4232a58a72bb3b9739f5b5508bc0b213fd92aac13",
+          "charCount": 2218
+        },
+        {
+          "page": 68,
+          "textSha256": "5f21e603bf5a1bec01a0f42dacf0a0df154dd4c5731ff24e813e82d328711125",
+          "charCount": 2783
+        },
+        {
+          "page": 69,
+          "textSha256": "53751408e9ff888cf603c504bc8ba4efb30117d78aabcd5b0c732e3ccf69145b",
+          "charCount": 1412
+        },
+        {
+          "page": 70,
+          "textSha256": "13c32c3e51818b41678ea7882c166ea3585c59450c43f372890f17e4c352584f",
+          "charCount": 492
+        },
+        {
+          "page": 71,
+          "textSha256": "7113bb800e59d7ca158df47bb96077fbe63764ae7427cf138de3a7d68105a875",
+          "charCount": 336
+        },
+        {
+          "page": 72,
+          "textSha256": "ab0be12bee543db1fbde0af6eae7203af5cc10bacc2d6640b7a8bc484a98c4cf",
+          "charCount": 299
+        },
+        {
+          "page": 73,
+          "textSha256": "845ae4fa09d2877e3c4d1cfce56b232aa15c82b0b90e05c87b1263cec75dfb41",
+          "charCount": 224
+        },
+        {
+          "page": 74,
+          "textSha256": "d261c314f8e703d1a93a9e6b482a12181d30a4ae9c4a10dc4d736fd5defee3cf",
+          "charCount": 224
+        },
+        {
+          "page": 75,
+          "textSha256": "4d84a22764591060ac54655e1adf507bb9e56ff618c902f094ba3a9c0a52fd0b",
+          "charCount": 246
+        },
+        {
+          "page": 76,
+          "textSha256": "3089114c252a863933625e72c037de7ecf13048cf872aec5dfe5e2bee5ad3c11",
+          "charCount": 270
+        },
+        {
+          "page": 77,
+          "textSha256": "4443e5ef550aad0bd2f7bffc70eb790c73e71c0900a811dcc878d2fe14e10e89",
+          "charCount": 224
+        },
+        {
+          "page": 78,
+          "textSha256": "da7427af92492436b225bb710a19e10891c9ff2fd3837c1478141a8158a89e78",
+          "charCount": 283
+        },
+        {
+          "page": 79,
+          "textSha256": "5673aeb4ecb3cd4e806e143eea37e81bbbe0b39b7016aa0ca0d1f10aa50b9de8",
+          "charCount": 276
+        },
+        {
+          "page": 80,
+          "textSha256": "81031eed5d797b79c9e4856e2d25a8e6538e6c9afec406a4fa236c728e769589",
+          "charCount": 336
+        },
+        {
+          "page": 81,
+          "textSha256": "6da4ca21acf71863514a0cd94e5b92e2a28fa0d64aa98b84247b73cb77eea6ce",
+          "charCount": 350
+        },
+        {
+          "page": 82,
+          "textSha256": "9efafe7cce21956a51a31a8c964412304e7443368cda405ebdbc58292ee76d3b",
+          "charCount": 282
+        },
+        {
+          "page": 83,
+          "textSha256": "b027f489f21d30ae70a85800876a0ccd9f2707ed74aeb3b7eea7559083b36cdb",
+          "charCount": 290
+        },
+        {
+          "page": 84,
+          "textSha256": "1786af41eb43120beed909e2f074cb67d3109fb34e5959fa512ad0cb3f96bef5",
+          "charCount": 305
+        },
+        {
+          "page": 85,
+          "textSha256": "af0b971c471b2afd8a08442fa7c9a014c2f015e653e994ad695ab94c3b0bcc82",
+          "charCount": 259
+        },
+        {
+          "page": 86,
+          "textSha256": "6098f3f7dea36a60f32c36e7b9d8d43a91a69fae99f1f427f8f5c4c33484c402",
+          "charCount": 351
+        },
+        {
+          "page": 87,
+          "textSha256": "9cd9da6351187060bbfc453e35b125b0c874fa447696acaef43dba9382345c97",
+          "charCount": 224
+        },
+        {
+          "page": 88,
+          "textSha256": "e7f4d45144f1e7472b1cbd3beb02ebb044b655523d538f71d169064e64022712",
+          "charCount": 270
+        },
+        {
+          "page": 89,
+          "textSha256": "3ba8902a416e0ce5e26b804bf250a35da060e01ded915c11d32584b013c12c78",
+          "charCount": 249
+        },
+        {
+          "page": 90,
+          "textSha256": "6fb4485bd3f93a5fb8e33d8accd3d7b4425105a87979e1b3ad7eb26e2910b4c1",
+          "charCount": 224
+        },
+        {
+          "page": 91,
+          "textSha256": "364c01f6a32c6433d88045968a4e2bb0643fc41a383df9a08e22a803d1c0dab1",
+          "charCount": 224
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S1_APPLICATION",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/10/202510311966017361.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s1_application.pdf",
+      "byteLength": 1136459,
+      "sha256": "2d82abd73e066c9fe41950e75a4075ff684df284d6f5c9de913be667d66b6f5c",
+      "documentIdentity": "jee_s1_application",
+      "issueOrEffectiveDate": "2025-10-31",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S1_CORRECTION",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/20251120574269616.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s1_correction.pdf",
+      "byteLength": 238173,
+      "sha256": "f966bf85a74601b1ed82e8663c3492231138bacb31774f4b34e550542f2f6884",
+      "documentIdentity": "jee_s1_correction",
+      "issueOrEffectiveDate": "2025-11-20",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S2_APPLICATION",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/20260201612425163.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_application.pdf",
+      "byteLength": 963033,
+      "sha256": "f12bcf6cc1c6b65294c5f538c837af9498d7f3088d83b6dc7321963fe7b4bcd0",
+      "documentIdentity": "jee_s2_application",
+      "issueOrEffectiveDate": "2026-02-01",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S2_CORRECTION",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/202602211726839591.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_correction.pdf",
+      "byteLength": 1073878,
+      "sha256": "01470c40d79684c61763aabc7df21d2524b18bb3aa900829381dbefa50d87558",
+      "documentIdentity": "jee_s2_correction",
+      "issueOrEffectiveDate": "2026-02-21",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 2,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S2_FINAL_ANSWER_KEY",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_final_answer_key.pdf",
+      "byteLength": 33395,
+      "sha256": "07c89e20741c17f14a000501d6f79055d09834692de0dcb792bf237b77e1c7f9",
+      "documentIdentity": "jee_s2_final_answer_key",
+      "issueOrEffectiveDate": "2026-04-20",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": true
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": "b2058e6b12e46cee9edb38c02317011cce5de18a1c7e9a353aab1396ec46d1d8",
+          "charCount": 1611
+        },
+        {
+          "page": 2,
+          "textSha256": "e596b8c972f0e415826b34c41d7fe27e68389b08165ef03c668a19675ee0f04f",
+          "charCount": 1718
+        },
+        {
+          "page": 3,
+          "textSha256": "f62f4dead4129adfd8ba58466767d073aa01dbd9758d53c9a61420c1a1a88852",
+          "charCount": 1716
+        },
+        {
+          "page": 4,
+          "textSha256": "1e38ee7c65a08db4f72056e21074dd43bebdde1e4ddde78731e2d7a5f3ff6f20",
+          "charCount": 1780
+        },
+        {
+          "page": 5,
+          "textSha256": "eb295c4825b4d9659f68f79c45b828c973517ad8f148a3bbadcddb2b662cf6c1",
+          "charCount": 1812
+        },
+        {
+          "page": 6,
+          "textSha256": "764c061b92bcfac861cf8cd66dc352a48fbda56a5ba1dbfa0f6d75b3254f0702",
+          "charCount": 1779
+        },
+        {
+          "page": 7,
+          "textSha256": "70c420f887f2dc41cf9bcc366f0208a58db6bf7695f02817312dab2ae24c4d60",
+          "charCount": 1853
+        },
+        {
+          "page": 8,
+          "textSha256": "deefa5a9a844e2c871eeb2148bc18b1e4cacda0a47daad91d5eff201bb9788a9",
+          "charCount": 1861
+        },
+        {
+          "page": 9,
+          "textSha256": "0fd9e44af36a93853d1849d71d9a2c8c8e3abe9fe0172f0d1c1ee5e790a632fb",
+          "charCount": 1788
+        },
+        {
+          "page": 10,
+          "textSha256": "3ea254c633c0a99b5203dddf66396c46c9da16586a76a816a8edf2563b289666",
+          "charCount": 1786
+        },
+        {
+          "page": 11,
+          "textSha256": "18a3b3bb0f79a9ae067253116bd784c67172e84dc8824586e8204d8a773d5708",
+          "charCount": 1784
+        },
+        {
+          "page": 12,
+          "textSha256": "6329c6c894eaef417a7699f953d4fa500d1b9c978dc3af022d69d9eb0b07645f",
+          "charCount": 1852
+        },
+        {
+          "page": 13,
+          "textSha256": "58a4f8f6c88841c034744438f45168bba48096d3722ce8788de4a0f5306941b4",
+          "charCount": 1861
+        },
+        {
+          "page": 14,
+          "textSha256": "445f3979ad2ff719242ec5d85b47b687951cf8c4048edccbde45397fc7eab3e3",
+          "charCount": 1893
+        },
+        {
+          "page": 15,
+          "textSha256": "f412734e48b4f655a18da978dddae0bca4dcddc91f03c3a8633796aa3035acc6",
+          "charCount": 1860
+        },
+        {
+          "page": 16,
+          "textSha256": "7323664f1183e61db093c3c3eb8982ac91a405932e4145c8c9522f4d06de8e0c",
+          "charCount": 1859
+        },
+        {
+          "page": 17,
+          "textSha256": "f3c5f55c91968db49aaa2c9da01e69d44b05d9571ed843221a583bfdaecafaab",
+          "charCount": 1867
+        },
+        {
+          "page": 18,
+          "textSha256": "0a67cc34faa2d840dc98535c5bb7a404029906c76d55285ccf42d596841d98be",
+          "charCount": 1869
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S2_REOPENING",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/03/20260312579267972.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_reopening.pdf",
+      "byteLength": 557407,
+      "sha256": "212751776ae7d98f8337f92fdc53255130e6257a16eb6ed8a03228a26e50de66",
+      "documentIdentity": "jee_s2_reopening",
+      "issueOrEffectiveDate": "2026-03-12",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "documentId": "JEE_S2_RESULT_NOTICE",
+      "cycleId": "JEE-MAIN-2026",
+      "officialPage": "https://jeemain.nta.nic.in/documents/",
+      "exactUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420809492136.pdf",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/jee/jee_s2_result_notice.pdf",
+      "byteLength": 7102530,
+      "sha256": "be8dad15367dac355775a6df891b2307cbd89190a5c2448d45042335b9b306dd",
+      "documentIdentity": "jee_s2_result_notice",
+      "issueOrEffectiveDate": "2026-04-20",
+      "cycleBinding": "EXACT_CURRENT_CYCLE",
+      "evidenceLevels": {
+        "URL_FOUND": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageTextBindings": [
+        {
+          "page": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 2,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 3,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 4,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 5,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 6,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 7,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 8,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 9,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 10,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 11,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 12,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 13,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "page": 14,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    }
+  ]
+}

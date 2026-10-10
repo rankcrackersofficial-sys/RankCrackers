@@ -1,0 +1,59 @@
+{
+  "version": "1.0.0-48cs1",
+  "generatedAt": "2026-09-10T12:00:00.000Z",
+  "states": [
+    {
+      "state": "ANNOUNCED",
+      "description": "Official notification or advance advertisement released by examination authority."
+    },
+    {
+      "state": "APPLICATION_OPEN",
+      "description": "Online/offline application window is actively open for registration."
+    },
+    {
+      "state": "APPLICATION_CLOSED",
+      "description": "Application window has closed; awaiting exam scheduling."
+    },
+    {
+      "state": "EXAM_SCHEDULED",
+      "description": "Official exam dates or admit card release schedule officially announced."
+    },
+    {
+      "state": "EXAM_COMPLETED",
+      "description": "Written/CBT examination completed; awaiting answer key or results."
+    },
+    {
+      "state": "ANSWER_KEY_STAGE",
+      "description": "Provisional/final OMR answer keys published; objection window open."
+    },
+    {
+      "state": "RESULT_STAGE",
+      "description": "Written/preliminary results declared; merit list or cutoff released."
+    },
+    {
+      "state": "INTERVIEW_OR_DV_STAGE",
+      "description": "Interview, Document Verification (DV), or Physical Test (PET/PST) scheduled or ongoing."
+    },
+    {
+      "state": "FINAL_RESULT_DECLARED",
+      "description": "Final select list published by authority."
+    },
+    {
+      "state": "CYCLE_CLOSED",
+      "description": "Recruitment cycle fully concluded; all appointments processed."
+    },
+    {
+      "state": "CANCELLED",
+      "description": "Recruitment officially cancelled or withdrawn by commission/government."
+    },
+    {
+      "state": "STATUS_UNRESOLVED",
+      "description": "Insufficient official evidence to determine exact lifecycle state."
+    }
+  ],
+  "rules": [
+    "State MUST derive strictly from ordered official events.",
+    "Upload date alone is NOT lifecycle proof.",
+    "State transitions are monotonic based on official event timestamps."
+  ]
+}

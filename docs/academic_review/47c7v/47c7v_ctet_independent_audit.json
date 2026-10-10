@@ -1,0 +1,43 @@
+{
+  "auditCode": "RC_47C7V_CTET_INDEPENDENT_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.792Z",
+  "authorityDetails": {
+    "authorityId": "auth_in_cbse",
+    "officialDomains": [
+      "cbse.gov.in",
+      "cbse.nic.in",
+      "ctet.nic.in"
+    ],
+    "conductingBody": "Central Board of Secondary Education (CBSE)"
+  },
+  "sourceEvidence": {
+    "officialPortal": "https://ctet.nic.in/",
+    "officialArchive": "https://ctet.nic.in/archive/",
+    "pyqCoverage": "Official historical question papers and final answer keys exposed from 2018 through February 2026 cycle",
+    "informationBulletin": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+  },
+  "variantModel": {
+    "variantRequired": true,
+    "variantDimension": "LEVEL",
+    "variants": [
+      {
+        "variantId": "primary",
+        "displayName": "Paper I — Primary Stage (Classes I–V)",
+        "variantDimension": "LEVEL",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      },
+      {
+        "variantId": "upper_primary",
+        "displayName": "Paper II — Upper Primary Stage (Classes VI–VIII)",
+        "variantDimension": "LEVEL",
+        "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+      }
+    ]
+  },
+  "metrics": {
+    "CTET_CLASSIFICATION": "MAJOR_MISSION_ACCEPTED",
+    "CTET_LEVEL_VARIANT_COUNT": 2,
+    "SEPARATE_ANNUAL_MISSION_SPAWN_COUNT": 0
+  },
+  "verdict": "PASS (CTET correctly established as permanent single canonical mission with legitimate LEVEL variant dimension)"
+}

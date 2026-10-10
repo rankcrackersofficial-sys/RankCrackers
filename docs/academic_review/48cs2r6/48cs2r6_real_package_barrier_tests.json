@@ -1,0 +1,82 @@
+{
+  "gate": "48CS2R6",
+  "testSuite": "test_48cs2r6_barrier_hardening.js",
+  "executionTimestamp": "2026-09-10T13:05:28.803Z",
+  "totalTests": 10,
+  "passedTests": 10,
+  "failedTests": 0,
+  "status": "ALL_TESTS_PASSED",
+  "tests": [
+    {
+      "id": 1,
+      "name": "URL_FOUND => RULE_VERIFIED forbidden",
+      "verdict": "PASS",
+      "assertion": "validateSourceDocumentState returns evidenceLevel: URL_FOUND, factVerificationLevel: SOURCE_LOCATED; deriveRulebookCompleteness drops rule families to UNRESOLVED; personalization strictly yields NOT_EVALUATED."
+    },
+    {
+      "id": 2,
+      "name": "SHA bytes but unresolved scan => ELIGIBLE forbidden (RPSC First Grade safety)",
+      "verdict": "PASS",
+      "assertion": "Scanned PDF with verified SHA256 yields BYTE_VERIFIED but scanTextUnresolved: true; rule families remain UNRESOLVED; personalization yields NOT_EVALUATED."
+    },
+    {
+      "id": 3,
+      "name": "Prior-cycle => current-cycle forbidden (NEET 2026 vs 2027)",
+      "verdict": "PASS",
+      "assertion": "Adversarial promotion of NEET 2026 to 2027 rejected with CYCLE_MISMATCH; lawful adapter preserves isPriorCycleReference: true."
+    },
+    {
+      "id": 4,
+      "name": "Unknown ruleType => fail closed (strictly UNRESOLVED / NOT_EVALUATED)",
+      "verdict": "PASS",
+      "assertion": "Unrecognized ruleType evaluates to status: UNRESOLVED with isSourceGap: true; personalization fails closed to NOT_EVALUATED."
+    },
+    {
+      "id": 5,
+      "name": "Partial amendment chain => final eligibility forbidden",
+      "verdict": "PASS",
+      "assertion": "Corrigendum at URL_FOUND causes amendmentSearchStatus: CHAIN_PARTIAL; package validates as PARTIAL_SOURCE_PACKAGE; personalization yields NOT_EVALUATED."
+    },
+    {
+      "id": 6,
+      "name": "5-Tier Document Evidence Levels strictly uncollapsed",
+      "verdict": "PASS",
+      "assertion": "Exact 5 distinct enum members; normalizeSourceProvenance preserves discrete flags without tier collapse."
+    },
+    {
+      "id": 7,
+      "name": "4-Tier Fact Verification Levels strictly enforced",
+      "verdict": "PASS",
+      "assertion": "Exact 4 distinct enum members; URL_FOUND yields SOURCE_LOCATED; scanned PDF with SHA yields BYTE_VERIFIED."
+    },
+    {
+      "id": 8,
+      "name": "Real Rule Types evaluated without substring heuristics",
+      "verdict": "PASS",
+      "assertion": "QUALIFYING_EXAM_YEAR, QUALIFYING_SUBJECTS, and STATE_ELIGIBILITY evaluated purely through explicit rules without string heuristics."
+    },
+    {
+      "id": 9,
+      "name": "ADMISSION_ENTRANCE isolated from job vacancy matrix",
+      "verdict": "PASS",
+      "assertion": "JEE Main 2026 opportunityKind is ADMISSION_ENTRANCE; vacancy matrix derives as NOT_APPLICABLE_VERIFIED with totalVacancies: null."
+    },
+    {
+      "id": 10,
+      "name": "Zero Production Writes & Invariants Verified",
+      "verdict": "PASS",
+      "assertion": "Both 48CS5 packages fail closed to PARTIAL_SOURCE_PACKAGE; PRODUCTION_WRITE_COUNT = 0; CLIENT_UI_MODIFIED_COUNT = 0; S2_JOB_COUNT = 0."
+    }
+  ],
+  "regressionSuite": {
+    "test_48cs2": "11/11 PASS",
+    "test_48cs2r2": "20/20 PASS",
+    "test_48cs2r3": "10/10 PASS",
+    "test_48cs2r4": "12/12 PASS",
+    "test_48cs2r5": "10/10 PASS",
+    "test_48cs2r6": "10/10 PASS",
+    "totalPassedTests": 73,
+    "totalFailedTests": 0,
+    "regressionsDetected": 0
+  }
+}

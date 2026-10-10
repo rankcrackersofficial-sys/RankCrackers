@@ -1,0 +1,170 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.700Z",
+  "summary": {
+    "TOTAL_LIVE_SYLLABUS_ATOMS": 649,
+    "JEE_MAIN_SYLLABUS_ATOMS": 430,
+    "NEET_UG_SYLLABUS_ATOMS": 219,
+    "OTHER_MISSIONS_SYLLABUS_ATOMS": 0
+  },
+  "breakdownByMission": {
+    "jee_main_2026": {
+      "total": 430,
+      "active": 0,
+      "verified": 28,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 404,
+      "rawStatuses": {
+        "verified": 26,
+        "needs_review": 354,
+        "VERIFIED": 2,
+        "REJECTED": 1,
+        "NEEDS_REVIEW": 47
+      }
+    },
+    "neet_(ug)-2027": {
+      "total": 219,
+      "active": 0,
+      "verified": 219,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 219,
+      "rawStatuses": {
+        "verified": 219
+      }
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "upsc_cse_prelims": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_cgl": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_je": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_selection_post": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_chsl": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_stenographer": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_hindi_translators": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_mts_havaldar": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_cpo": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "ssc_gd": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "uppsc_pcs_prelims": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    },
+    "rpsc_ras_prelims": {
+      "total": 0,
+      "active": 0,
+      "verified": 0,
+      "held": 0,
+      "duplicate": 0,
+      "conflict": 0,
+      "sourceBound": 0,
+      "rawStatuses": {}
+    }
+  }
+}

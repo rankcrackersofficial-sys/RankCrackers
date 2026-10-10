@@ -1,0 +1,32 @@
+{
+  "gate": "GATE 48CS2R5",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+  "auditFindings": {
+    "lawfulExactDocument": {
+      "documentIdentity": "DOC-RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "sourceState": "SHA_VERIFIED",
+      "documentSha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "explanation": "Advt. 06/2025-26 bytes are SHA_VERIFIED (3f23...), but scan text is unresolved. Correctly yields PARTIAL_SOURCE_PACKAGE without manual PASS."
+    },
+    "quarantined2022PdfCheck": {
+      "quarantinedUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+      "observedDate": "2022-04-28",
+      "decision": "REJECTED_AS_CURRENT_CYCLE_EVIDENCE",
+      "adversarialValidationResult": "REJECTED_SOURCE_PACKAGE",
+      "adversarialErrors": [
+        "IDENTITY_CONTRADICTION: Document is rejected as current cycle evidence (contradicted identity or quarantined document)."
+      ],
+      "explanation": "Attempt to use quarantined 2022 PDF for current 2025-26 cycle is rejected as IDENTITY_CONTRADICTION."
+    }
+  },
+  "verdict": "RPSC First Grade 2025-26 safely maintained on PARTIAL_SOURCE_PACKAGE without premature manual certification."
+}

@@ -1,0 +1,27 @@
+{
+  "handoffCode": "RC_47A3_47B_CONTRACT_HANDOFF",
+  "sourceLane": "Agent-2 / EID Official Source Research Lane",
+  "consumerLane": "47B Backend Materializer Lane",
+  "status": "HANDOFF_SPECIFIED_NO_MATERIALIZATION_EXECUTED",
+  "governingDirectives": [
+    "Strict Read-Only Enforcement: 47A3 performed zero Firestore writes, zero mission creation, zero deployment.",
+    "Central Authority Reference Law: Downstream materializer must NOT clone Central Authorities as State PSCs. Regional discoverability pointers must be used.",
+    "Variant Dependency Gate: Missions with VARIANT_REVIEW_REQUIRED must NOT be set as student selectable until founder variant taxonomy freeze.",
+    "Academic Readiness Lock: Downstream systems must keep academicStartReady = false until question banks and syllabus taxonomies are authorized.",
+    "Exact Locator Standard: Only real exact document URLs may be ingested into asset downloading pipelines."
+  ],
+  "materializationGapsIdentified": [
+    {
+      "gapId": "GAP_EXACT_PYQ_HARVESTING",
+      "description": "While authority archive listing pages are verified, exact child paper PDFs have not been individually scraped. Downstream ingestion must perform per-paper harvesting."
+    },
+    {
+      "gapId": "GAP_SUBJECT_VARIANT_TAXONOMY",
+      "description": "14 teacher subject and police cadre missions require variant models (Subject / Cadre). Variant enumeration must be frozen before selection is opened to students."
+    },
+    {
+      "gapId": "GAP_CENTRAL_MISSION_POINTERS",
+      "description": "delhi_police_si must be mapped to central ssc_cpo rather than materialized as a duplicate mission."
+    }
+  ]
+}

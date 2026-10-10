@@ -1,0 +1,52 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "SMART START FAIL-CLOSED DIAGNOSTIC GATE AUDIT",
+  "gate_contract": {
+    "action": "ElevatedButton('SMART START')",
+    "target_route": "/diagnostic-test",
+    "required_conditions": [
+      "canEnterMissionShell == true",
+      "smartEntryEnabled == true",
+      "status in ['AVAILABLE', 'LIVE', 'PUBLISHED', 'ACTIVE', 'CATALOG_VISIBLE', 'MISSION_COMPLETE', 'MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE']"
+    ],
+    "fail_closed_behavior": "When smartEntryEnabled == false or status is PREPARING/COMING_SOON/HOLD/DRAFT/BLOCKED, Smart Start button is disabled with onPressed == null."
+  },
+  "evaluated_scenarios": [
+    {
+      "missionId": "jee_main_2026",
+      "status": "PREPARING",
+      "smartEntryEnabled": false,
+      "expected_button_state": "DISABLED",
+      "canSmartStart": false,
+      "verified": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "status": "PREPARING",
+      "smartEntryEnabled": false,
+      "expected_button_state": "DISABLED",
+      "canSmartStart": false,
+      "verified": true
+    },
+    {
+      "missionId": "held_mission",
+      "status": "HOLD",
+      "smartEntryEnabled": true,
+      "expected_button_state": "DISABLED",
+      "canSmartStart": false,
+      "verified": true
+    },
+    {
+      "missionId": "archived_mission",
+      "status": "ARCHIVED",
+      "smartEntryEnabled": true,
+      "expected_button_state": "DISABLED",
+      "canSmartStart": false,
+      "verified": true
+    }
+  ],
+  "metrics": {
+    "SMART_START_WITHOUT_DIAGNOSTIC_PROOF_COUNT": 0
+  },
+  "verdict": "SMART_START_FAIL_CLOSED_VERIFIED"
+}

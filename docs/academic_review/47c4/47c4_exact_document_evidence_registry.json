@@ -1,0 +1,74 @@
+{
+  "documents": [
+    {
+      "url": "https://careerairforce.gov.in/notification",
+      "title": "Indian Air Force notifications",
+      "role": "OFFICIAL_LISTING",
+      "verificationClass": "OFFICIAL_LISTING_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": false,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://careerairforce.gov.in/node/386",
+      "title": "AFCAT 02/2026 notice node",
+      "role": "NOTIFICATION_PAGE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "title": "AFCAT Cycle 02/2026 Notification",
+      "role": "NOTIFICATION_AND_SYLLABUS",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "title": "Agniveervayu Intake 01/2027 advertisement",
+      "role": "NOTIFICATION_SCHEME_SYLLABUS_PYQ_POLICY",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "title": "Indian Army Online CEE registration 2026-27",
+      "role": "MOD_PIB_CURRENT_BREADCRUMB",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48",
+      "title": "Indian Army Online CEE 2027 dates",
+      "role": "MOD_PIB_SCHEDULE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    },
+    {
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48",
+      "title": "Indian Army CEE results and categories",
+      "role": "MOD_PIB_CATEGORY_EVIDENCE",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "identityCode": "RC_47C8V_ENGINE_IDENTITY",
+  "executedAt": "2026-09-10T08:22:06.032Z",
+  "enginePath": "functions/services/generic_mission_materializer.js",
+  "byteLength": 43995,
+  "sha256": "7c8627e27a674fc6f8373a5f27b5404e5d5741c990303fa6abd170edbbd1c7a5",
+  "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "gitStatus": "DIRTY",
+  "metrics": {
+    "SOURCE_VERSION_DRIFT": "NO"
+  }
+}

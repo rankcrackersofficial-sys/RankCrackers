@@ -1,0 +1,16 @@
+{
+  "mission_id": "neet_(ug)-2027",
+  "mission_year": 2027,
+  "document_id": "hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+  "source_filename": "NEET (UG)-2026.pdf",
+  "source_year": 2026,
+  "source_sha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+  "source_type": "PDF",
+  "issuing_authority": "National Testing Agency (NTA)",
+  "authority_mode": "LATEST_AVAILABLE_OFFICIAL_BASELINE",
+  "founder_decision": "AUTHORIZED_BASELINE_ROLLOVER",
+  "founder_decision_timestamp": "2026-08-24T18:18:57Z",
+  "reason": "Official NEET 2027 notification/syllabus has not yet been released. Students must begin preparation using the latest available official NEET source. Therefore the official NEET 2026 source is intentionally authorized as the provisional/current baseline source for the NEET 2027 mission.",
+  "supersession_policy": "FUTURE_2027_OFFICIAL_INGESTION_AND_RECONCILIATION",
+  "status": "AUTHORIZED_BASELINE_PENDING_FUTURE_OFFICIAL_2027_SOURCE"
+}

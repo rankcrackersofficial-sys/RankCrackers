@@ -1,0 +1,9 @@
+{
+  "testMissionId": "afcat",
+  "smartEntryEnabled": false,
+  "smartEntryReady": false,
+  "action": "User taps Smart Start on newly published AFCAT mission",
+  "result": "SMART_START_BLOCKED_FAIL_CLOSED",
+  "quickStartReusedAsSmartStart": false,
+  "failClosedVerified": true
+}

@@ -1,0 +1,15 @@
+{
+  "testMissionId": "afcat",
+  "academicStartReady": false,
+  "quickEntryEnabled": true,
+  "action": "User taps Quick Start on newly published AFCAT mission",
+  "sessionStateSaved": {
+    "examId": "afcat",
+    "examName": "Air Force Common Admission Test",
+    "recruitmentId": "afcat",
+    "userStateCode": "IN"
+  },
+  "navigationTarget": "/dashboard",
+  "shellAccessGranted": true,
+  "ACADEMIC_NOT_READY_BLOCKS_MISSION_SHELL_COUNT": 0
+}

@@ -1,0 +1,169 @@
+{
+  "gate": "GATE 48CS2R5",
+  "totalEvaluations": 18,
+  "syntheticProfilesUsed": 3,
+  "realUserDataUsed": 0,
+  "metrics": {
+    "PARTIAL_PACKAGE_PRODUCED_FINAL_ELIGIBLE_COUNT": 0,
+    "REAL_USER_DATA_USED_COUNT": 0
+  },
+  "findings": "Every single synthetic profile evaluated against all 6 real partial packages strictly received NOT_EVALUATED. Zero false ELIGIBLE determinations were made.",
+  "dryRunMatrix": [
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        }
+      ]
+    },
+    {
+      "cycleId": "RPSC-RAS-2024",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        }
+      ]
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type AGE_LIMIT is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type AGE_LIMIT is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type AGE_LIMIT is not supported by rule matching engine."
+        }
+      ]
+    },
+    {
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type MINIMUM_AGE is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type MINIMUM_AGE is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type MINIMUM_AGE is not supported by rule matching engine."
+        }
+      ]
+    },
+    {
+      "cycleId": "UPSC-CSE-2026",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rulebook package is PARTIAL_SOURCE_PACKAGE. Personalized eligibility verdict is strictly prohibited until all mandatory rule families and amendment surfaces are verified."
+        }
+      ]
+    },
+    {
+      "cycleId": "SSC-CGL-2026",
+      "dryRuns": [
+        {
+          "userId": "syn_profile_ur_grad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type EDUCATION_CUTOFF_DATE is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_sc_postgrad",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type EDUCATION_CUTOFF_DATE is not supported by rule matching engine."
+        },
+        {
+          "userId": "syn_profile_obc_12th",
+          "eligibilityStatus": "NOT_EVALUATED",
+          "relevanceScore": 0,
+          "priority": "STANDARD_PUBLIC_UPDATE",
+          "reasonCode": "! Rule type EDUCATION_CUTOFF_DATE is not supported by rule matching engine."
+        }
+      ]
+    }
+  ]
+}

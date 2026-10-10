@@ -1,0 +1,109 @@
+{
+  "bindings": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "upstreamMissionId": "rpsc_school_lecturer",
+      "liveDocumentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "classification": "VERIFIED_ALIAS_TO_LIVE",
+      "note": "Producer ID rpsc_school_lecturer bound to live immutable ID RPSC_FIRST_GRADE2026_2026_1782713222215."
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "upstreamMissionId": "jee_main_2026",
+      "liveDocumentId": "jee_main_2026",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "upstreamMissionId": "neet_(ug)-2027",
+      "liveDocumentId": "neet_(ug)-2027",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "upstreamMissionId": "rpsc_ras_prelims",
+      "liveDocumentId": "rpsc_ras_prelims",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "upstreamMissionId": "ssc_cgl",
+      "liveDocumentId": "ssc_cgl",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "upstreamMissionId": "ssc_chsl",
+      "liveDocumentId": "ssc_chsl",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "upstreamMissionId": "ssc_cpo",
+      "liveDocumentId": "ssc_cpo",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "upstreamMissionId": "ssc_gd",
+      "liveDocumentId": "ssc_gd",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "upstreamMissionId": "ssc_hindi_translators",
+      "liveDocumentId": "ssc_hindi_translators",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "upstreamMissionId": "ssc_je",
+      "liveDocumentId": "ssc_je",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "upstreamMissionId": "ssc_mts_havaldar",
+      "liveDocumentId": "ssc_mts_havaldar",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "upstreamMissionId": "ssc_selection_post",
+      "liveDocumentId": "ssc_selection_post",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "upstreamMissionId": "ssc_stenographer",
+      "liveDocumentId": "ssc_stenographer",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "upstreamMissionId": "uppsc_pcs_prelims",
+      "liveDocumentId": "uppsc_pcs_prelims",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "upstreamMissionId": "upsc_cse_prelims",
+      "liveDocumentId": "upsc_cse_prelims",
+      "classification": "ALREADY_LIVE",
+      "note": "Exact match with active live Firestore mission_realms document."
+    }
+  ]
+}

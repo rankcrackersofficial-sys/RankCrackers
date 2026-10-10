@@ -1,0 +1,53 @@
+{
+  "rows": [
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "notificationDate": "2025-07-17",
+      "applicationOpen": "2025-08-14",
+      "applicationClose": "2025-09-12",
+      "examDate": null,
+      "resultDate": null
+    },
+    {
+      "cycleId": "RPSC-RAS-2024",
+      "notificationDate": null,
+      "applicationOpen": null,
+      "applicationClose": null,
+      "examDate": null,
+      "resultDate": "2025-02-20"
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "notificationDate": "2025-11-01",
+      "applicationOpen": "2025-10-31",
+      "applicationClose": "2025-11-27",
+      "examDate": "2026-01-21/2026-04-02",
+      "resultDate": "2026-04-20"
+    },
+    {
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "notificationDate": "2026-02-08",
+      "applicationOpen": "2026-02-08",
+      "applicationClose": "2026-03-11",
+      "examDate": "2026-05-03",
+      "resultDate": "2026-06-21"
+    },
+    {
+      "cycleId": "UPSC-CSE-2026",
+      "notificationDate": "2026-02-04",
+      "applicationOpen": "2026-02-04",
+      "applicationClose": "2026-02-27",
+      "examDate": "2026-05-24",
+      "resultDate": "2026-06-15"
+    },
+    {
+      "cycleId": "SSC-CGL-2026",
+      "notificationDate": "2026-05-21",
+      "applicationOpen": "2026-05-21",
+      "applicationClose": "2026-06-22",
+      "examDate": null,
+      "resultDate": null
+    }
+  ],
+  "exactApplicationWindowCount": 5
+}

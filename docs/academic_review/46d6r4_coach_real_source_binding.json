@@ -1,0 +1,107 @@
+{
+  "coachBindingSchemaVersion": "4.0.0",
+  "draftStatus": "COACH_REAL_SOURCE_BINDING_46D6R4",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "cadreArchitecture": {
+    "parentPostKey": "rpsc_lecturer_coach_parent",
+    "parentPostTitle": "Coach (School Education) / प्रशिक्षक (माध्यमिक शिक्षा विभाग)",
+    "structuralModel": "PARENT_POST_WITH_OFFICIAL_SPECIALIZATIONS",
+    "paperFamily": "COACH_FAMILY",
+    "paper1Authority": {
+      "paperId": "rpsc_paper_1_coach",
+      "officialTitle": "Paper-I: General Awareness and Sports Science (Coach)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "publicationDate": "2025-09-15",
+      "actualDownloadHref": null,
+      "actualFileSha256": null
+    }
+  },
+  "currentActiveSpecializations": [
+    {
+      "sport": "Athletics",
+      "officialDisciplineTitle": "Athletics (एथलेटिक्स)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: एथलेटिक्स)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Athletics (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Basketball",
+      "officialDisciplineTitle": "Basketball (बास्केटबॉल)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: बास्केटबॉल)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Basketball (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Handball",
+      "officialDisciplineTitle": "Handball (हैंडबॉल)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: हैंडबॉल)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Handball (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Kabaddi",
+      "officialDisciplineTitle": "Kabaddi (कबड्डी)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: कबड्डी)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Kabaddi (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Table Tennis",
+      "officialDisciplineTitle": "Table Tennis (टेबल टेनिस)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: टेबल टेनिस)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Table Tennis (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "sport": "Volleyball",
+      "officialDisciplineTitle": "Volleyball (वॉलीबॉल)",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "advertisementLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (Row: वॉलीबॉल)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "paper2Structure": "Paper-II: Coach - Volleyball (Rules, Techniques & Coaching Pedagogy)",
+      "actualDownloadHref": null,
+      "actualFileSha256": null,
+      "provenanceStatus": "FULLY_SOURCE_BOUND",
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "historicalExclusions": [
+    "Football",
+    "Gymnastics",
+    "Hockey",
+    "Kho-Kho",
+    "Wrestling"
+  ],
+  "metrics": {
+    "ACTIVE_COACH_SPECIALIZATION_COUNT": 6,
+    "CURRENT_COACH_SPECIALIZATION_WITHOUT_2025_AD_LOCATOR_COUNT": 0,
+    "COACH_SPECIALIZATION_FAKE_DOCUMENT_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "protocol": "RC_47UI4_AND_SPLASH_REPORT_REJECTION_DYNAMIC_MISSION_ACCESS_AND_PHYSICAL_SPLASH_CLOSURE_47UI4",
+  "git_head": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "git_status_clean": false,
+  "timestamp_utc": "2026-09-10T07:37:13.666934Z",
+  "critical_sources": {
+    "lib/features/auth/presentation/screens/mission_realm_screen.dart": {
+      "path": "lib/features/auth/presentation/screens/mission_realm_screen.dart",
+      "size_bytes": 42091,
+      "sha256": "16699066aa0c3adc7796f821cd174b3b9e86646ca1a12438f07316c896cb4e27",
+      "exists": true
+    },
+    "lib/features/onboarding/presentation/screens/splash_screen.dart": {
+      "path": "lib/features/onboarding/presentation/screens/splash_screen.dart",
+      "size_bytes": 16307,
+      "sha256": "c2151725e4f1f5e55563c6bb2820eff8eff5e95d2531b8904503f187dd80592c",
+      "exists": true
+    },
+    "lib/shared/session/session_manager.dart": {
+      "path": "lib/shared/session/session_manager.dart",
+      "size_bytes": 26326,
+      "sha256": "9d5ee3f9c3dfd348debfe187a61564e22930fe140fbf32768d3338ef72a5eef8",
+      "exists": true
+    },
+    "lib/features/auth/presentation/providers/mission_realm_provider.dart": {
+      "path": "lib/features/auth/presentation/providers/mission_realm_provider.dart",
+      "size_bytes": 1743,
+      "sha256": "147d49e040b9b65f7ec3cfdbb3cf3086170adfcfa016470527b7e2069ec1e875",
+      "exists": true
+    },
+    "lib/core/models/recruitment.dart": {
+      "path": "lib/core/models/recruitment.dart",
+      "size_bytes": 12073,
+      "sha256": "6d97140a1b2487227e63537622f8b886354fb9d72c556ea29fde2cf155971177",
+      "exists": true
+    },
+    "lib/core/backend/recruitment_repository.dart": {
+      "path": "lib/core/backend/recruitment_repository.dart",
+      "size_bytes": 4540,
+      "sha256": "9810aae9dac58aefdb0540e4ae03b997b0763467be0a6d2e5964276d9a9b45fb",
+      "exists": true
+    }
+  },
+  "source_consistency_verdict": "CONSISTENT_VERIFIED"
+}

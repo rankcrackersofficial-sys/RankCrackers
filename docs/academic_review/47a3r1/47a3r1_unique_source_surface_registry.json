@@ -1,0 +1,4687 @@
+{
+  "registryCode": "RC_47A3R1_UNIQUE_SOURCE_SURFACE_REGISTRY",
+  "generatedAt": "2026-09-10T07:00:05.948Z",
+  "metrics": {
+    "RAW_SURFACE_ROW_COUNT": 551,
+    "UNIQUE_CANONICAL_SURFACE_COUNT": 234,
+    "DUPLICATE_SURFACE_REFERENCE_COUNT": 317,
+    "TOTAL_AUTHORITIES_SERVED": 115
+  },
+  "canonicalSurfaces": [
+    {
+      "canonicalSurfaceId": "canon_surf_1",
+      "officialUrl": "https://uppsc.up.nic.in/AllNotifications.aspx",
+      "parsedHostname": "uppsc.up.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_uppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "uppsc_pcs_prelims",
+        "uppsc_ro_aro_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_2",
+      "officialUrl": "https://uppsc.up.nic.in/View_Syllabus.aspx",
+      "parsedHostname": "uppsc.up.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_uppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "uppsc_pcs_prelims",
+        "uppsc_ro_aro_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_3",
+      "officialUrl": "https://uppsc.up.nic.in/CandidateCorner.aspx",
+      "parsedHostname": "uppsc.up.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_uppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "uppsc_pcs_prelims",
+        "uppsc_ro_aro_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_4",
+      "officialUrl": "https://uppsc.up.nic.in/ViewAnswerKey.aspx",
+      "parsedHostname": "uppsc.up.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_uppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "uppsc_pcs_prelims",
+        "uppsc_ro_aro_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_5",
+      "officialUrl": "https://uppsc.up.nic.in/",
+      "parsedHostname": "uppsc.up.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_uppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "uppsc_pcs_prelims",
+        "uppsc_ro_aro_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_6",
+      "officialUrl": "https://upsssc.gov.in/Default.aspx",
+      "parsedHostname": "upsssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_upsssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "upsssc_pet",
+        "upsssc_vdo"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_7",
+      "officialUrl": "https://upsssc.gov.in/",
+      "parsedHostname": "upsssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_upsssc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "upsssc_pet",
+        "upsssc_vdo"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_8",
+      "officialUrl": "https://upsssc.gov.in/AllNotifications.aspx",
+      "parsedHostname": "upsssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_upsssc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "upsssc_pet",
+        "upsssc_vdo"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_9",
+      "officialUrl": "https://uppbpb.gov.in/Notice",
+      "parsedHostname": "uppbpb.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_upprpb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "upprpb_police_constable",
+        "upprpb_police_si"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_10",
+      "officialUrl": "https://uppbpb.gov.in/Syllabus",
+      "parsedHostname": "uppbpb.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_upprpb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "upprpb_police_constable",
+        "upprpb_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_11",
+      "officialUrl": "https://upessc.up.gov.in/Notices",
+      "parsedHostname": "upessc.up.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_upessc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_12",
+      "officialUrl": "https://upessc.up.gov.in/Syllabus",
+      "parsedHostname": "upessc.up.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_up_upessc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_13",
+      "officialUrl": "https://updeled.gov.in/Registration/Tet/DTetHome.aspx",
+      "parsedHostname": "updeled.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_up_pnp"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "up_tet"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_14",
+      "officialUrl": "https://psc.uk.gov.in/candidate-corner/recruitment",
+      "parsedHostname": "psc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ukpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ukpsc_pcs_prelims",
+        "ukpsc_lower_subordinate_prelims",
+        "uk_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_15",
+      "officialUrl": "https://psc.uk.gov.in/candidate-corner/syllabus",
+      "parsedHostname": "psc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ukpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ukpsc_pcs_prelims",
+        "ukpsc_lower_subordinate_prelims",
+        "uk_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_16",
+      "officialUrl": "https://psc.uk.gov.in/candidate-corner/previous-year-question-papers",
+      "parsedHostname": "psc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ukpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ukpsc_pcs_prelims",
+        "ukpsc_lower_subordinate_prelims",
+        "uk_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_17",
+      "officialUrl": "https://psc.uk.gov.in/candidate-corner/answer-key",
+      "parsedHostname": "psc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ukpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ukpsc_pcs_prelims",
+        "ukpsc_lower_subordinate_prelims",
+        "uk_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_18",
+      "officialUrl": "https://psc.uk.gov.in/candidate-corner/exam-calendar",
+      "parsedHostname": "psc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ukpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ukpsc_pcs_prelims",
+        "ukpsc_lower_subordinate_prelims",
+        "uk_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_19",
+      "officialUrl": "https://sssc.uk.gov.in/",
+      "parsedHostname": "sssc.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_uksssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "uksssc_group_c_combined",
+        "uk_police_constable"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_20",
+      "officialUrl": "https://ubse.uk.gov.in",
+      "parsedHostname": "ubse.uk.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ubse"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "uk_tet"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_21",
+      "officialUrl": "https://ukutet.com",
+      "parsedHostname": "ukutet.com",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_uk_ubse"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "uk_tet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_22",
+      "officialUrl": "https://hppsc.hp.gov.in/hppsc/AllNotifications",
+      "parsedHostname": "hppsc.hp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hp_hppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "hppsc_hpas_prelims",
+        "hppsc_police_constable"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_23",
+      "officialUrl": "https://hppsc.hp.gov.in/hppsc/Page?ID=Syllabi_Previous_Question_Papers",
+      "parsedHostname": "hppsc.hp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hp_hppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "hppsc_hpas_prelims",
+        "hppsc_police_constable"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_24",
+      "officialUrl": "https://hppsc.hp.gov.in/hppsc/",
+      "parsedHostname": "hppsc.hp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hp_hppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "hppsc_hpas_prelims",
+        "hppsc_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_25",
+      "officialUrl": "https://hprca.hp.gov.in/",
+      "parsedHostname": "hprca.hp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hp_hprca"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "hprca_group_c_common"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_26",
+      "officialUrl": "https://hpbose.org/Notification.aspx",
+      "parsedHostname": "hpbose.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_hp_hpbose"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "hp_tet"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_27",
+      "officialUrl": "https://hpbose.org/",
+      "parsedHostname": "hpbose.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hp_hpbose"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "hp_tet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_28",
+      "officialUrl": "https://hpbose.org/ModelPaper.aspx",
+      "parsedHostname": "hpbose.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_hp_hpbose"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "hp_tet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_29",
+      "officialUrl": "https://hpbose.org/OnlineServices/CET/TET/Instructions.aspx",
+      "parsedHostname": "hpbose.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_hp_hpbose"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "hp_tet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_30",
+      "officialUrl": "https://ppsc.gov.in/OpenAdv.aspx",
+      "parsedHostname": "ppsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_pb_ppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ppsc_pscce_prelims",
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_31",
+      "officialUrl": "https://ppsc.gov.in/",
+      "parsedHostname": "ppsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_ppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ppsc_pscce_prelims",
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_32",
+      "officialUrl": "https://ppsc.gov.in/PreviousQuestionPapers.aspx",
+      "parsedHostname": "ppsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_pb_ppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ppsc_pscce_prelims",
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_33",
+      "officialUrl": "https://ppsc.gov.in/ClosedAdv.aspx",
+      "parsedHostname": "ppsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_pb_ppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ppsc_pscce_prelims",
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_34",
+      "officialUrl": "https://sssb.punjab.gov.in/Advertisements.html",
+      "parsedHostname": "sssb.punjab.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_psssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "psssb_clerk",
+        "psssb_patwari"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_35",
+      "officialUrl": "https://sssb.punjab.gov.in/",
+      "parsedHostname": "sssb.punjab.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_psssb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "psssb_clerk",
+        "psssb_patwari"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_36",
+      "officialUrl": "https://sssb.punjab.gov.in/Results.html",
+      "parsedHostname": "sssb.punjab.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_psssb"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "psssb_clerk",
+        "psssb_patwari"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_37",
+      "officialUrl": "https://punjabpolice.gov.in/Recruitments.aspx",
+      "parsedHostname": "punjabpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_pb_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "punjab_police_constable",
+        "punjab_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_38",
+      "officialUrl": "https://recruitment.punjabpolice.gov.in/",
+      "parsedHostname": "recruitment.punjabpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_police"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "punjab_police_constable",
+        "punjab_police_si"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_39",
+      "officialUrl": "https://pseb.ac.in",
+      "parsedHostname": "pseb.ac.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_pseb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "punjab_pstet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_40",
+      "officialUrl": "https://pstet.pseb.ac.in",
+      "parsedHostname": "pstet.pseb.ac.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_pb_pseb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "punjab_pstet"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_41",
+      "officialUrl": "https://hpsc.gov.in/en-us/Announcements",
+      "parsedHostname": "hpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "hpsc_hcs_prelims"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_42",
+      "officialUrl": "https://hpsc.gov.in/en-us/Instructions-Syllabus",
+      "parsedHostname": "hpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "hpsc_hcs_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_43",
+      "officialUrl": "https://hpsc.gov.in/en-us/Previous-Years-Question-Papers",
+      "parsedHostname": "hpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "hpsc_hcs_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_44",
+      "officialUrl": "https://hpsc.gov.in/en-us/",
+      "parsedHostname": "hpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "hpsc_hcs_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_45",
+      "officialUrl": "https://hpsc.gov.in/en-us/Advertisements",
+      "parsedHostname": "hpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "hpsc_hcs_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_46",
+      "officialUrl": "https://hssc.gov.in/public-notices",
+      "parsedHostname": "hssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "hssc_cet_group_c",
+        "hssc_cet_group_d",
+        "haryana_police_constable",
+        "haryana_police_si"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_47",
+      "officialUrl": "https://hssc.gov.in/",
+      "parsedHostname": "hssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hssc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "hssc_cet_group_c",
+        "hssc_cet_group_d",
+        "haryana_police_constable",
+        "haryana_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_48",
+      "officialUrl": "https://hssc.gov.in/advertisements",
+      "parsedHostname": "hssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_hssc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "hssc_cet_group_c",
+        "hssc_cet_group_d",
+        "haryana_police_constable",
+        "haryana_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_49",
+      "officialUrl": "https://bseh.org.in/announcements",
+      "parsedHostname": "bseh.org.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_bseh"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "haryana_htet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_50",
+      "officialUrl": "https://bseh.org.in/htet-syllabus",
+      "parsedHostname": "bseh.org.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_bseh"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "haryana_htet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_51",
+      "officialUrl": "https://bseh.org.in/old-question-papers",
+      "parsedHostname": "bseh.org.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_bseh"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "haryana_htet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_52",
+      "officialUrl": "https://bseh.org.in/htet",
+      "parsedHostname": "bseh.org.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_hr_bseh"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "haryana_htet"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_53",
+      "officialUrl": "https://jkpsc.nic.in/Notifications.html",
+      "parsedHostname": "jkpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "jkpsc_cce_prelims"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_54",
+      "officialUrl": "https://jkpsc.nic.in/Syllabus.html",
+      "parsedHostname": "jkpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "jkpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_55",
+      "officialUrl": "https://jkpsc.nic.in/OldQuestionPapers.html",
+      "parsedHostname": "jkpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "jkpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_56",
+      "officialUrl": "https://jkpsc.nic.in/ExaminationCalendar.html",
+      "parsedHostname": "jkpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "jkpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_57",
+      "officialUrl": "https://jkpsc.nic.in/DirectRecruitment.html",
+      "parsedHostname": "jkpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "jkpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_58",
+      "officialUrl": "https://jkssb.nic.in/",
+      "parsedHostname": "jkssb.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "jk_police_constable",
+        "jk_police_si",
+        "jkssb_graduate_level"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_59",
+      "officialUrl": "https://jkssb.nic.in/Pages/Applicant/Jobs.aspx",
+      "parsedHostname": "jkssb.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_jk_jkssb"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "jk_police_constable",
+        "jk_police_si",
+        "jkssb_graduate_level"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_60",
+      "officialUrl": "https://ladakh.gov.in/notices/recruitment/",
+      "parsedHostname": "ladakh.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_la_admin",
+        "auth_in_la_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "ladakh_police_constable"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_61",
+      "officialUrl": "https://ladakh.gov.in/",
+      "parsedHostname": "ladakh.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_la_admin"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "ladakh_police_constable"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_62",
+      "officialUrl": "https://police.ladakh.gov.in",
+      "parsedHostname": "police.ladakh.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_la_police"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ladakh_police_constable"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_63",
+      "officialUrl": "https://chandigarh.gov.in/public-notices",
+      "parsedHostname": "chandigarh.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ch_admin"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "chandigarh_jbt_teacher",
+        "chandigarh_tgt_teacher"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_64",
+      "officialUrl": "https://chandigarh.gov.in/",
+      "parsedHostname": "chandigarh.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ch_admin"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "chandigarh_jbt_teacher",
+        "chandigarh_tgt_teacher"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_65",
+      "officialUrl": "https://chandigarhpolice.gov.in/",
+      "parsedHostname": "chandigarhpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ch_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "chandigarh_police_constable",
+        "chandigarh_police_asi"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_66",
+      "officialUrl": "https://dsssb.delhi.gov.in/current-vacancies",
+      "parsedHostname": "dsssb.delhi.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_67",
+      "officialUrl": "https://dsssb.delhi.gov.in/scheme-syllabus",
+      "parsedHostname": "dsssb.delhi.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_68",
+      "officialUrl": "https://dsssb.delhi.gov.in/previous-question-papers",
+      "parsedHostname": "dsssb.delhi.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_69",
+      "officialUrl": "https://dsssb.delhi.gov.in/display-draft-answer-keys",
+      "parsedHostname": "dsssb.delhi.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_70",
+      "officialUrl": "https://dsssb.delhi.gov.in/exam-calendar",
+      "parsedHostname": "dsssb.delhi.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_71",
+      "officialUrl": "https://dsssbonline.nic.in",
+      "parsedHostname": "dsssbonline.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_dsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "dsssb_delhi_tgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_pgt",
+        "dsssb_junior_assistant_ldc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_72",
+      "officialUrl": "https://delhipolice.gov.in/recruitment",
+      "parsedHostname": "delhipolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_delpol"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_73",
+      "officialUrl": "https://ssc.gov.in",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dl_delpol"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_74",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/news",
+      "parsedHostname": "rpsc.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "rpsc_ras_prelims",
+        "rpsc_school_lecturer"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_75",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "parsedHostname": "rpsc.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "rpsc_ras_prelims",
+        "rpsc_school_lecturer"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_76",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/questionpapers",
+      "parsedHostname": "rpsc.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "rpsc_ras_prelims",
+        "rpsc_school_lecturer"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_77",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/answerkeys",
+      "parsedHostname": "rpsc.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "rpsc_ras_prelims",
+        "rpsc_school_lecturer"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_78",
+      "officialUrl": "https://rpsc.rajasthan.gov.in/",
+      "parsedHostname": "rpsc.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "rpsc_ras_prelims",
+        "rpsc_school_lecturer"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_79",
+      "officialUrl": "https://rssb.rajasthan.gov.in/",
+      "parsedHostname": "rssb.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "rssb_cet_senior_secondary",
+        "rssb_cet_graduate"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_80",
+      "officialUrl": "https://police.rajasthan.gov.in/portal/recruitment",
+      "parsedHostname": "police.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "JAVASCRIPT_PORTAL",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_rj_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "rj_police_constable"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_81",
+      "officialUrl": "https://police.rajasthan.gov.in/",
+      "parsedHostname": "police.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_police"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "rj_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_82",
+      "officialUrl": "https://rajeduboard.rajasthan.gov.in/news.htm",
+      "parsedHostname": "rajeduboard.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rbse"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "rbse_reet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_83",
+      "officialUrl": "https://rajeduboard.rajasthan.gov.in/",
+      "parsedHostname": "rajeduboard.rajasthan.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_rj_rbse"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "rbse_reet"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_84",
+      "officialUrl": "https://mppsc.mp.gov.in/advertisement",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_85",
+      "officialUrl": "https://mppsc.mp.gov.in/syllabus",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_86",
+      "officialUrl": "https://mppsc.mp.gov.in/previous-question-papers",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_87",
+      "officialUrl": "https://mppsc.mp.gov.in/model-answer",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_88",
+      "officialUrl": "https://mppsc.mp.gov.in/calendar",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_89",
+      "officialUrl": "https://mppsc.mp.gov.in/",
+      "parsedHostname": "mppsc.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mppsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mppsc_state_service"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_90",
+      "officialUrl": "https://esb.mp.gov.in/e_default.html",
+      "parsedHostname": "esb.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mpesb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mpesb_police_constable",
+        "mpesb_group2_subgroup4",
+        "mpesb_mptet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_91",
+      "officialUrl": "https://esb.mp.gov.in/",
+      "parsedHostname": "esb.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mpesb",
+        "auth_in_mp_police"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mpesb_police_constable",
+        "mpesb_group2_subgroup4",
+        "mpesb_mptet",
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 7
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_92",
+      "officialUrl": "https://esb.mp.gov.in/e_exam_schedule.html",
+      "parsedHostname": "esb.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_mpesb"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mpesb_police_constable",
+        "mpesb_group2_subgroup4",
+        "mpesb_mptet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_93",
+      "officialUrl": "https://police.mp.gov.in/",
+      "parsedHostname": "police.mp.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mp_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_94",
+      "officialUrl": "https://psc.cg.gov.in/",
+      "parsedHostname": "psc.cg.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cg_cgpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "cgpsc_state_service"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_95",
+      "officialUrl": "https://vyapam.cgstate.gov.in/",
+      "parsedHostname": "vyapam.cgstate.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cg_cgvyapam"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "cgvyapam_cgtet"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_96",
+      "officialUrl": "https://cgpolice.gov.in/",
+      "parsedHostname": "cgpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cg_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "cg_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_97",
+      "officialUrl": "https://gpsc.gujarat.gov.in/",
+      "parsedHostname": "gpsc.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gpsc_class_1_2"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_98",
+      "officialUrl": "https://gpsc-ojas.gujarat.gov.in/",
+      "parsedHostname": "gpsc-ojas.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "gpsc_class_1_2"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_99",
+      "officialUrl": "https://gsssb.gujarat.gov.in/",
+      "parsedHostname": "gsssb.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gsssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gsssb_cce"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_100",
+      "officialUrl": "https://gpssb.gujarat.gov.in/",
+      "parsedHostname": "gpssb.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gpssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gpssb_talati"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_101",
+      "officialUrl": "https://ojas.gujarat.gov.in/",
+      "parsedHostname": "ojas.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gprb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "gprb_lokrakshak"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_102",
+      "officialUrl": "https://gprb.gujarat.gov.in/",
+      "parsedHostname": "gprb.gujarat.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_gprb"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gprb_lokrakshak"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_103",
+      "officialUrl": "https://sebexam.org/Notice",
+      "parsedHostname": "sebexam.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_seb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "seb_gujarattet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_104",
+      "officialUrl": "https://sebexam.org/",
+      "parsedHostname": "sebexam.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_gj_seb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "seb_gujarattet"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_105",
+      "officialUrl": "https://mpsc.gov.in/",
+      "parsedHostname": "mpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mh_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mpsc_rajyaseva",
+        "mpsc_group_bc_combined"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_106",
+      "officialUrl": "https://mahapolice.gov.in/",
+      "parsedHostname": "mahapolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mh_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mh_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_107",
+      "officialUrl": "https://mahatet.in/",
+      "parsedHostname": "mahatet.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mh_mscepune"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "mscepune_mahatet"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_108",
+      "officialUrl": "https://www.mscepune.in/",
+      "parsedHostname": "www.mscepune.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mh_mscepune"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mscepune_mahatet"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_109",
+      "officialUrl": "https://gpsc.goa.gov.in/",
+      "parsedHostname": "gpsc.goa.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ga_gpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gpsc_goa_civil_service"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_110",
+      "officialUrl": "https://gssc.goa.gov.in/",
+      "parsedHostname": "gssc.goa.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ga_gssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "gssc_goa_group_c"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_111",
+      "officialUrl": "https://citizen.goapolice.gov.in/Recruitment_New/",
+      "parsedHostname": "citizen.goapolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ga_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ga_police_recruitment"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_112",
+      "officialUrl": "https://ssb.dd.gov.in/",
+      "parsedHostname": "ssb.dd.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_ssb",
+        "auth_in_dn_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "dnhdd_ssb_group_bc",
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 10
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_113",
+      "officialUrl": "https://upsc.gov.in/examinations/active-examinations",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc",
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS",
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_114",
+      "officialUrl": "https://upsc.gov.in/examinations/revised-syllabus-scheme",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc",
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS",
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_115",
+      "officialUrl": "https://upsc.gov.in/examinations/previous-question-papers",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc",
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS",
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_116",
+      "officialUrl": "https://upsc.gov.in/examinations/answer-keys",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc",
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS",
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_117",
+      "officialUrl": "https://upsc.gov.in/examinations/exam-calendar",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc",
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS",
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_118",
+      "officialUrl": "https://upsc.gov.in/",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_dn_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_119",
+      "officialUrl": "https://bpsc.bihar.gov.in",
+      "parsedHostname": "bpsc.bihar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "bpsc_cce_prelims",
+        "bpsc_tre"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_120",
+      "officialUrl": "https://bssc.bihar.gov.in/noticeboard.htm",
+      "parsedHostname": "bssc.bihar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "bssc_cgl",
+        "bssc_inter_level"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_121",
+      "officialUrl": "https://bssc.bihar.gov.in",
+      "parsedHostname": "bssc.bihar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bssc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "bssc_cgl",
+        "bssc_inter_level"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_122",
+      "officialUrl": "https://bpssc.bihar.gov.in",
+      "parsedHostname": "bpssc.bihar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bpssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "bpssc_police_si"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_123",
+      "officialUrl": "https://csbc.bihar.gov.in",
+      "parsedHostname": "csbc.bihar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_csbc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "csbc_bihar_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_124",
+      "officialUrl": "https://bsebstet.org",
+      "parsedHostname": "bsebstet.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bseb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "bseb_stet"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_125",
+      "officialUrl": "https://secondary.biharboardonline.com",
+      "parsedHostname": "secondary.biharboardonline.com",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_br_bseb"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "bseb_stet"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_126",
+      "officialUrl": "https://jpsc.gov.in/recent-notices.php",
+      "parsedHostname": "jpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jh_jpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "jpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_127",
+      "officialUrl": "https://jpsc.gov.in/syllabus.php",
+      "parsedHostname": "jpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jh_jpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "jpsc_cce_prelims"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_128",
+      "officialUrl": "https://jpsc.gov.in",
+      "parsedHostname": "jpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jh_jpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "jpsc_cce_prelims"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_129",
+      "officialUrl": "https://jssc.nic.in",
+      "parsedHostname": "jssc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jh_jssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "jssc_cgl",
+        "jssc_police_constable"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_130",
+      "officialUrl": "https://jac.jharkhand.gov.in",
+      "parsedHostname": "jac.jharkhand.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_jh_jac"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "jac_jtet"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_131",
+      "officialUrl": "https://www.opsc.gov.in",
+      "parsedHostname": "www.opsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_opsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "opsc_ocs_prelims"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_132",
+      "officialUrl": "https://www.ossc.gov.in",
+      "parsedHostname": "www.ossc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_ossc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ossc_cgl"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_133",
+      "officialUrl": "https://www.ossc.gov.in/Public/OSSC/Default.aspx",
+      "parsedHostname": "www.ossc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "ASP_NET_SESSION",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_od_ossc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ossc_cgl"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_134",
+      "officialUrl": "https://www.osssc.gov.in",
+      "parsedHostname": "www.osssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_osssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "osssc_cre_combined"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_135",
+      "officialUrl": "https://odishapolice.gov.in",
+      "parsedHostname": "odishapolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_opssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "odisha_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_136",
+      "officialUrl": "https://ssbodisha.ac.in",
+      "parsedHostname": "ssbodisha.ac.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_ssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ssb_odisha_lecturer"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_137",
+      "officialUrl": "https://www.bseodisha.ac.in",
+      "parsedHostname": "www.bseodisha.ac.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_od_bse"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "bse_odisha_otet"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_138",
+      "officialUrl": "https://psc.wb.gov.in",
+      "parsedHostname": "psc.wb.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_wb_wbpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "wbpsc_wbcs_prelims",
+        "wbpsc_clerkship"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_139",
+      "officialUrl": "https://prb.wb.gov.in",
+      "parsedHostname": "prb.wb.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_wb_wbprb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "wbprb_police_constable",
+        "wbprb_police_si"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_140",
+      "officialUrl": "https://www.wbbpe.org",
+      "parsedHostname": "www.wbbpe.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_wb_wbbpe"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "wbbpe_primary_tet"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_141",
+      "officialUrl": "https://www.westbengalssc.com",
+      "parsedHostname": "www.westbengalssc.com",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_wb_wbcssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "wbcssc_slst_teacher"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_142",
+      "officialUrl": "https://wbssc.gov.in",
+      "parsedHostname": "wbssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_wb_wbssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_143",
+      "officialUrl": "https://erecruitment.andaman.gov.in",
+      "parsedHostname": "erecruitment.andaman.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_an_erecruitment",
+        "auth_in_an_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "an_erecruitment_chsl",
+        "an_erecruitment_cml",
+        "an_police_constable_si"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_144",
+      "officialUrl": "https://erecruitment.andamannicobar.gov.in",
+      "parsedHostname": "erecruitment.andamannicobar.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_an_erecruitment",
+        "auth_in_an_police"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "an_erecruitment_chsl",
+        "an_erecruitment_cml",
+        "an_police_constable_si"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_145",
+      "officialUrl": "https://police.andaman.gov.in",
+      "parsedHostname": "police.andaman.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_an_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "an_police_constable_si"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_146",
+      "officialUrl": "https://psc.ap.gov.in",
+      "parsedHostname": "psc.ap.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ap_appsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "appsc_group1",
+        "appsc_group2"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_147",
+      "officialUrl": "https://slprb.ap.gov.in",
+      "parsedHostname": "slprb.ap.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ap_apslprb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "apslprb_sct_si",
+        "apslprb_sct_pc"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_148",
+      "officialUrl": "https://dsc.apcfss.in",
+      "parsedHostname": "dsc.apcfss.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ap_dsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ALL_AUTHORITY_EXAMS"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_149",
+      "officialUrl": "https://www.tgpsc.gov.in",
+      "parsedHostname": "www.tgpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tg_tgpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tgpsc_group1",
+        "tgpsc_group2",
+        "tgpsc_group3",
+        "tgpsc_group4"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_150",
+      "officialUrl": "https://www.tslprb.co.in",
+      "parsedHostname": "www.tslprb.co.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tg_tgslprb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tgslprb_sct_si",
+        "tgslprb_sct_pc"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_151",
+      "officialUrl": "https://treirb.telangana.gov.in",
+      "parsedHostname": "treirb.telangana.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tg_treirb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "treirb_teaching"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_152",
+      "officialUrl": "https://kpsc.kar.nic.in",
+      "parsedHostname": "kpsc.kar.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ka_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "kpsc_kas_gp"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_153",
+      "officialUrl": "https://cetonline.karnataka.gov.in/kea/",
+      "parsedHostname": "cetonline.karnataka.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ka_kea"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "kea_fda_sda"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_154",
+      "officialUrl": "https://ksp-recruitment.in",
+      "parsedHostname": "ksp-recruitment.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ka_ksp"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ksp_psi",
+        "ksp_cpc"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_155",
+      "officialUrl": "https://www.keralapsc.gov.in/notifications",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_156",
+      "officialUrl": "https://www.keralapsc.gov.in/syllabus",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_157",
+      "officialUrl": "https://www.keralapsc.gov.in/previous-question-paper",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_158",
+      "officialUrl": "https://www.keralapsc.gov.in/omr-answer-key",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_159",
+      "officialUrl": "https://www.keralapsc.gov.in/examinations",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_160",
+      "officialUrl": "https://www.keralapsc.gov.in",
+      "parsedHostname": "www.keralapsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_kl_kpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "kpsc_kl_kas",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_161",
+      "officialUrl": "https://www.tnpsc.gov.in",
+      "parsedHostname": "www.tnpsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tn_tnpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tnpsc_group1",
+        "tnpsc_group2_2a",
+        "tnpsc_group4_vao"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_162",
+      "officialUrl": "https://www.tnusrb.tn.gov.in",
+      "parsedHostname": "www.tnusrb.tn.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tn_tnusrb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tnusrb_si",
+        "tnusrb_pc"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_163",
+      "officialUrl": "https://trb.tn.gov.in",
+      "parsedHostname": "trb.tn.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tn_tntrb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tntrb_pg_assistant_tet"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_164",
+      "officialUrl": "https://www.mrb.tn.gov.in",
+      "parsedHostname": "www.mrb.tn.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tn_tnmrb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tnmrb_assistant_surgeon"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_165",
+      "officialUrl": "https://recruitment.py.gov.in/",
+      "parsedHostname": "recruitment.py.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_py_dpar"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "py_dpar_clerk_vao"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_166",
+      "officialUrl": "https://dpar.py.gov.in",
+      "parsedHostname": "dpar.py.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_py_dpar"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "py_dpar_clerk_vao"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_167",
+      "officialUrl": "https://police.py.gov.in",
+      "parsedHostname": "police.py.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_py_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "py_police_si_pc"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_168",
+      "officialUrl": "https://lakshadweep.gov.in/notice_category/recruitment/",
+      "parsedHostname": "lakshadweep.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ld_admin"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ld_admin_group_c"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_169",
+      "officialUrl": "https://lakshadweep.gov.in/recruitments/",
+      "parsedHostname": "lakshadweep.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ld_admin"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ld_admin_group_c"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_170",
+      "officialUrl": "https://apsc.nic.in",
+      "parsedHostname": "apsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_as_apsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "apsc_cce"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_171",
+      "officialUrl": "https://apscrecruitment.in",
+      "parsedHostname": "apscrecruitment.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_as_apsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "apsc_cce"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_172",
+      "officialUrl": "https://site.sebaonline.org",
+      "parsedHostname": "site.sebaonline.org",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_as_slrc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "slrc_adre"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_173",
+      "officialUrl": "https://assam.gov.in",
+      "parsedHostname": "assam.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_as_slrc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "slrc_adre"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_174",
+      "officialUrl": "https://slprbassam.in",
+      "parsedHostname": "slprbassam.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_as_slprb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "slprb_assam_police"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_175",
+      "officialUrl": "https://appsc.gov.in",
+      "parsedHostname": "appsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "JAVASCRIPT_PORTAL",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_ar_appsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_176",
+      "officialUrl": "https://appsc.gov.in/syllabus",
+      "parsedHostname": "appsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "JAVASCRIPT_PORTAL",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_ar_appsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "appsc_arunachal_cce"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_177",
+      "officialUrl": "https://apssb.nic.in",
+      "parsedHostname": "apssb.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ar_apssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "apssb_cgl_csle"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_178",
+      "officialUrl": "https://apssb.nic.in/syllabus",
+      "parsedHostname": "apssb.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ar_apssb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "apssb_cgl_csle"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_179",
+      "officialUrl": "https://arunpol.nic.in/recruitment.html",
+      "parsedHostname": "arunpol.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ar_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "arunachal_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_180",
+      "officialUrl": "https://arunpol.nic.in",
+      "parsedHostname": "arunpol.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ar_police"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "arunachal_police_constable"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_181",
+      "officialUrl": "https://mpscmanipur.gov.in/notifications.html",
+      "parsedHostname": "mpscmanipur.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_manipur_mcscc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_182",
+      "officialUrl": "https://mpscmanipur.gov.in/syllabus.html",
+      "parsedHostname": "mpscmanipur.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_manipur_mcscc"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_183",
+      "officialUrl": "https://mpscmanipur.gov.in",
+      "parsedHostname": "mpscmanipur.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mpsc_manipur_mcscc"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_184",
+      "officialUrl": "https://manipurssc.mn.gov.in/notifications",
+      "parsedHostname": "manipurssc.mn.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_mssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mssc_manipur_group_cd"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_185",
+      "officialUrl": "https://manipurssc.mn.gov.in",
+      "parsedHostname": "manipurssc.mn.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_mssc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mssc_manipur_group_cd"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_186",
+      "officialUrl": "https://manipurpolice.gov.in",
+      "parsedHostname": "manipurpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "manipur_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_187",
+      "officialUrl": "https://manipurpolice.gov.in/recruitment.html",
+      "parsedHostname": "manipurpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mn_police"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "manipur_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_188",
+      "officialUrl": "https://mpsc.nic.in/advt.asp",
+      "parsedHostname": "mpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_meghalaya_mcs"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_189",
+      "officialUrl": "https://mpsc.meghalaya.gov.in/syllabus.html",
+      "parsedHostname": "mpsc.meghalaya.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_meghalaya_mcs"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_190",
+      "officialUrl": "https://mpsc.meghalaya.gov.in",
+      "parsedHostname": "mpsc.meghalaya.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mpsc_meghalaya_mcs"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_191",
+      "officialUrl": "https://mpsc.nic.in",
+      "parsedHostname": "mpsc.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mpsc_meghalaya_mcs"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_192",
+      "officialUrl": "https://megpolice.gov.in/recruitment",
+      "parsedHostname": "megpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_crb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "meghalaya_crb_police"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_193",
+      "officialUrl": "https://megpolice.gov.in",
+      "parsedHostname": "megpolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ml_crb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "meghalaya_crb_police"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_194",
+      "officialUrl": "https://mpsc.mizoram.gov.in/notifications",
+      "parsedHostname": "mpsc.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_mizoram_mcs",
+        "mizoram_subordinate_services"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_195",
+      "officialUrl": "https://mpsc.mizoram.gov.in/page/direct-syllabus",
+      "parsedHostname": "mpsc.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_mpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_mizoram_mcs",
+        "mizoram_subordinate_services"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_196",
+      "officialUrl": "https://mpsc.mizoram.gov.in",
+      "parsedHostname": "mpsc.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_mpsc",
+        "auth_in_mz_msssb"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mpsc_mizoram_mcs",
+        "mizoram_subordinate_services"
+      ],
+      "totalReferences": 7
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_197",
+      "officialUrl": "https://dpar.mizoram.gov.in",
+      "parsedHostname": "dpar.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_msssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_mizoram_mcs",
+        "mizoram_subordinate_services"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_198",
+      "officialUrl": "https://mpsc.mizoram.gov.in/page/direct-syllabus-ng",
+      "parsedHostname": "mpsc.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_msssb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "mpsc_mizoram_mcs",
+        "mizoram_subordinate_services"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_199",
+      "officialUrl": "https://police.mizoram.gov.in",
+      "parsedHostname": "police.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "mizoram_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_200",
+      "officialUrl": "https://police.mizoram.gov.in/post/category/notice-board",
+      "parsedHostname": "police.mizoram.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_mz_police"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "mizoram_police_constable"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_201",
+      "officialUrl": "https://npsc.nagaland.gov.in/advertisements",
+      "parsedHostname": "npsc.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_npsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "npsc_nagaland_ncs",
+        "npsc_nagaland_ctse"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_202",
+      "officialUrl": "https://npsc.nagaland.gov.in/syllabus",
+      "parsedHostname": "npsc.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_npsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "npsc_nagaland_ncs",
+        "npsc_nagaland_ctse"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_203",
+      "officialUrl": "https://npsc.nagaland.gov.in",
+      "parsedHostname": "npsc.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_npsc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "npsc_nagaland_ncs",
+        "npsc_nagaland_ctse"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_204",
+      "officialUrl": "https://nssb.nagaland.gov.in",
+      "parsedHostname": "nssb.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_nssb"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "nssb_nagaland_csre"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_205",
+      "officialUrl": "https://nssb.nagaland.gov.in/syllabus",
+      "parsedHostname": "nssb.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_nssb"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "nssb_nagaland_csre"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_206",
+      "officialUrl": "https://police.nagaland.gov.in",
+      "parsedHostname": "police.nagaland.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "nagaland_police_constable"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_207",
+      "officialUrl": "https://nagalandpolicerecruitment.in",
+      "parsedHostname": "nagalandpolicerecruitment.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_nl_police"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "nagaland_police_constable"
+      ],
+      "totalReferences": 2
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_208",
+      "officialUrl": "https://spsc.sikkim.gov.in/notifications",
+      "parsedHostname": "spsc.sikkim.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_sk_spsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "spsc_sikkim_cce",
+        "spsc_sikkim_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_209",
+      "officialUrl": "https://spsc.sikkim.gov.in/syllabus",
+      "parsedHostname": "spsc.sikkim.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_sk_spsc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "spsc_sikkim_cce",
+        "spsc_sikkim_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_210",
+      "officialUrl": "https://spsc.sikkim.gov.in",
+      "parsedHostname": "spsc.sikkim.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_sk_spsc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR",
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "spsc_sikkim_cce",
+        "spsc_sikkim_police_si"
+      ],
+      "totalReferences": 3
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_211",
+      "officialUrl": "https://police.sikkim.gov.in",
+      "parsedHostname": "police.sikkim.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_sk_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "sikkim_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_212",
+      "officialUrl": "https://tpsc.tripura.gov.in",
+      "parsedHostname": "tpsc.tripura.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tr_tpsc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tpsc_tripura_tcs_tps"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_213",
+      "officialUrl": "https://jrbtripura.com",
+      "parsedHostname": "jrbtripura.com",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tr_jrbt"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "jrbt_tripura_group_cd"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_214",
+      "officialUrl": "https://trb.tripura.gov.in",
+      "parsedHostname": "trb.tripura.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tr_trbt"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "PYQ_ARCHIVE",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "trbt_tripura_ttet",
+        "trbt_tripura_stgt_stpgt"
+      ],
+      "totalReferences": 5
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_215",
+      "officialUrl": "https://tripurapolice.gov.in",
+      "parsedHostname": "tripurapolice.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_tr_police"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING",
+        "SYLLABUS_LISTING",
+        "ANSWER_KEY_LISTING",
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "tripura_police_constable"
+      ],
+      "totalReferences": 4
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_216",
+      "officialUrl": "https://upsc.gov.in/recruitment",
+      "parsedHostname": "upsc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_upsc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_217",
+      "officialUrl": "https://ssc.gov.in/notices",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_218",
+      "officialUrl": "https://ssc.gov.in/tentative-syllabus",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_219",
+      "officialUrl": "https://ssc.gov.in/candidate-corner",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_220",
+      "officialUrl": "https://ssc.gov.in/answer-key",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_221",
+      "officialUrl": "https://ssc.gov.in/examination-calendar",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_222",
+      "officialUrl": "https://ssc.gov.in/candidate-portal",
+      "parsedHostname": "ssc.gov.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "JAVASCRIPT_PORTAL",
+      "verificationClass": "OFFICIAL_SURFACE_CONFIRMED_BUT_DYNAMIC",
+      "referencedByAuthorities": [
+        "auth_in_ssc"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ssc_ladakh_selection_post",
+        "delhi_police_constable",
+        "delhi_police_si"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_223",
+      "officialUrl": "https://ctet.nic.in/information-bulletin",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_224",
+      "officialUrl": "https://ctet.nic.in/syllabus",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_225",
+      "officialUrl": "https://ctet.nic.in/previous-year-question-papers",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_226",
+      "officialUrl": "https://ctet.nic.in/answer-keys",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_227",
+      "officialUrl": "https://ctet.nic.in/schedule",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_228",
+      "officialUrl": "https://ctet.nic.in",
+      "parsedHostname": "ctet.nic.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_cbse"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_229",
+      "officialUrl": "https://ibps.in/crp-rrb-notices",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "NOTIFICATION_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_230",
+      "officialUrl": "https://ibps.in/crp-rrb-syllabus",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "SYLLABUS_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_231",
+      "officialUrl": "https://ibps.in/candidate-corner",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "PYQ_ARCHIVE"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_232",
+      "officialUrl": "https://ibps.in/scores",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "ANSWER_KEY_LISTING"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_233",
+      "officialUrl": "https://ibps.in/tentative-calendar",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "EXAM_CALENDAR"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    },
+    {
+      "canonicalSurfaceId": "canon_surf_234",
+      "officialUrl": "https://ibps.in/crp-rrb",
+      "parsedHostname": "ibps.in",
+      "ownershipStatus": "SOVEREIGN_GOVERNMENT_DOMAIN",
+      "accessMode": "STATIC_HTML",
+      "verificationClass": "OFFICIAL_SURFACE_REACHABLE",
+      "referencedByAuthorities": [
+        "auth_in_ibps"
+      ],
+      "referencedSurfaceTypes": [
+        "RECRUITMENT_PORTAL"
+      ],
+      "missionScopes": [
+        "ALL_CENTRAL_EXAMS"
+      ],
+      "totalReferences": 1
+    }
+  ]
+}

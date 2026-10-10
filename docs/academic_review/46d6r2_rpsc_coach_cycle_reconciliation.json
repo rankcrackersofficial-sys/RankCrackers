@@ -1,0 +1,132 @@
+{
+  "reconciliationSchemaVersion": "1.0.0",
+  "draftStatus": "CANONICAL_COACH_CYCLE_RECONCILIATION",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) - Coach Cadre",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "baselineRecruitmentCycle": "2025 (Advt. No. 06/2025-26)",
+  "coachCadreStructuralModel": {
+    "RPSC_COACH_MODEL": "PARENT_POST_WITH_OFFICIAL_SPECIALIZATIONS",
+    "cadreName": "Coach (School Education) / प्रशिक्षक (माध्यमिक शिक्षा विभाग)",
+    "payMatrixLevel": "L-12 (Grade Pay 4800)",
+    "RPSC_COACH_MODEL_SOURCE": "Advt. No. 06/2025-26 Section 1 (Post & Discipline-wise Vacancy Table) and Section 8 (Scheme of Examination)",
+    "structuralSemantics": "Coach is advertised as a parent post in the service cadre with officially partitioned discipline vacancies. In the examination, all Coach candidates take Coach Paper-I (Sports GK & Sports Science) and their respective Sport-Specific Paper-II."
+  },
+  "subvariantReconciliationSets": {
+    "RPSC_COACH_CURRENT_RECRUITMENT_SUBVARIANTS": [
+      "Athletics",
+      "Basketball",
+      "Handball",
+      "Kabaddi",
+      "Table Tennis",
+      "Volleyball"
+    ],
+    "RPSC_COACH_PRIOR_RECRUITMENT_SUBVARIANTS": [
+      "Football",
+      "Gymnastics",
+      "Hockey",
+      "Kho-Kho",
+      "Wrestling"
+    ],
+    "RPSC_COACH_HISTORICAL_UNION": [
+      "Athletics",
+      "Basketball",
+      "Handball",
+      "Kabaddi",
+      "Table Tennis",
+      "Volleyball",
+      "Football",
+      "Gymnastics",
+      "Hockey",
+      "Kho-Kho",
+      "Wrestling"
+    ]
+  },
+  "currentCycleForensicEvidence": {
+    "activeCount": 6,
+    "activeDisciplines": [
+      {
+        "sportKey": "coach_athletics",
+        "sportName": "Athletics (एथलेटिक्स)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "sportKey": "coach_basketball",
+        "sportName": "Basketball (बास्केटबॉल)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "sportKey": "coach_handball",
+        "sportName": "Handball (हैंडबॉल)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "sportKey": "coach_kabaddi",
+        "sportName": "Kabaddi (कबड्डी)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "sportKey": "coach_table_tennis",
+        "sportName": "Table Tennis (टेबल टेनिस)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "sportKey": "coach_volleyball",
+        "sportName": "Volleyball (वॉलीबॉल)",
+        "inCurrent2025Recruitment": true,
+        "sourceEvidence": "RPSC 2025 Exam Schedule, Question Papers, and Advt. 06/2025-26",
+        "authorityStatus": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "historicalExclusionForensicEvidence": {
+    "historicalCount": 5,
+    "historicalDisciplines": [
+      {
+        "sportKey": "coach_football",
+        "sportName": "Football (फुटबॉल)",
+        "inCurrent2025Recruitment": false,
+        "historicalPresence": "Present in historical RPSC syllabus archives & earlier cycles (2022/2024)",
+        "status": "EXCLUDED_FROM_ACTIVE_2025_BASELINE"
+      },
+      {
+        "sportKey": "coach_gymnastics",
+        "sportName": "Gymnastics (जिमनास्टिक)",
+        "inCurrent2025Recruitment": false,
+        "historicalPresence": "Present in historical RPSC syllabus archives & earlier cycles (2022/2024)",
+        "status": "EXCLUDED_FROM_ACTIVE_2025_BASELINE"
+      },
+      {
+        "sportKey": "coach_hockey",
+        "sportName": "Hockey (हॉकी)",
+        "inCurrent2025Recruitment": false,
+        "historicalPresence": "Present in historical RPSC syllabus archives & earlier cycles (2022/2024)",
+        "status": "EXCLUDED_FROM_ACTIVE_2025_BASELINE"
+      },
+      {
+        "sportKey": "coach_kho_kho",
+        "sportName": "Kho-Kho (खो-खो)",
+        "inCurrent2025Recruitment": false,
+        "historicalPresence": "Present in historical RPSC syllabus archives & earlier cycles (2022/2024)",
+        "status": "EXCLUDED_FROM_ACTIVE_2025_BASELINE"
+      },
+      {
+        "sportKey": "coach_wrestling",
+        "sportName": "Wrestling (कुश्ती)",
+        "inCurrent2025Recruitment": false,
+        "historicalPresence": "Present in historical RPSC syllabus archives & earlier cycles (2022/2024)",
+        "status": "EXCLUDED_FROM_ACTIVE_2025_BASELINE"
+      }
+    ]
+  }
+}

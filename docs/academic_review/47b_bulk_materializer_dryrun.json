@@ -1,0 +1,2045 @@
+{
+  "dryRunTimestamp": "2026-09-10T04:55:45.382Z",
+  "manifestVersion": "1.0.0",
+  "totalMissionsEvaluated": 7,
+  "totalProjectionsEvaluated": 21,
+  "summary": {
+    "semanticCreates": 12,
+    "semanticUpdates": 0,
+    "semanticNoOps": 9,
+    "totalMutationsPlanned": 12
+  },
+  "plannedOperations": [
+    {
+      "targetPath": "mission_realms/jee_main_2026",
+      "collection": "mission_realms",
+      "documentId": "jee_main_2026",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "187b6da9e0417fc22a4fd599e3aa40138e1e1acd8aeab96549ed41d4f9a17a09",
+      "diff": {
+        "before": {
+          "id": "jee_main_2026",
+          "realm_id": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "canonicalMissionIdentity": "jee_main_2026",
+          "title": "JEE Main 2026",
+          "name": "JEE Main 2026",
+          "exam_name": "JEE Main 2026",
+          "displayTitle": "JEE Main 2026",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Admission to UG Engineering Programs",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "ENGINEERING",
+            "authorityGroupKey": "nta"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_btech",
+              "name": "Paper 1 (B.E./B.Tech)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://jeemain.nta.nic.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://jeemain.nta.nic.in/doc2026.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 4200,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/jee_main_2026/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "jee_main_2026",
+          "realm_id": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "canonicalMissionIdentity": "jee_main_2026",
+          "title": "JEE Main 2026",
+          "name": "JEE Main 2026",
+          "exam_name": "JEE Main 2026",
+          "displayTitle": "JEE Main 2026",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Admission to UG Engineering Programs",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "ENGINEERING",
+            "authorityGroupKey": "nta"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_btech",
+              "name": "Paper 1 (B.E./B.Tech)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://jeemain.nta.nic.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://jeemain.nta.nic.in/doc2026.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 4200,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/jee_main_2026/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/jee_main_2026",
+      "collection": "recruitments",
+      "documentId": "jee_main_2026",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "c202bf8ece95a9f70a65ac524cc89ca51ce6e436be1a9a6381b5bb2158ad5d59",
+      "diff": {
+        "before": {
+          "id": "jee_main_2026",
+          "recruitmentId": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "title": "JEE Main 2026",
+          "examName": "JEE Main 2026",
+          "organization": "National Testing Agency",
+          "organizationCode": "NTA",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "jee_main_2026",
+          "recruitmentId": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "title": "JEE Main 2026",
+          "examName": "JEE Main 2026",
+          "organization": "National Testing Agency",
+          "organizationCode": "NTA",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/jee_main_2026",
+      "collection": "student_mission_catalog",
+      "documentId": "jee_main_2026",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "01f639f7c15b17ae5fbba51231bf30b51f6dcf93ac07a58a65e9069c735b854a",
+      "diff": {
+        "before": {
+          "id": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "realmId": "jee_main_2026",
+          "sourceMissionId": "jee_main_2026",
+          "sourcePath": "mission_realms/jee_main_2026",
+          "sourceType": "mission_realms",
+          "title": "JEE Main 2026",
+          "name": "JEE Main 2026",
+          "displayTitle": "JEE Main 2026",
+          "examName": "JEE Main 2026",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "boardId": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/jee_main_2026",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "jee_main_2026",
+          "missionId": "jee_main_2026",
+          "realmId": "jee_main_2026",
+          "sourceMissionId": "jee_main_2026",
+          "sourcePath": "mission_realms/jee_main_2026",
+          "sourceType": "mission_realms",
+          "title": "JEE Main 2026",
+          "name": "JEE Main 2026",
+          "displayTitle": "JEE Main 2026",
+          "examName": "JEE Main 2026",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "boardId": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "ENGINEERING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/JEE_MAIN_2026",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "ready",
+            "digibookReady": "ready",
+            "questionBankReady": "ready",
+            "crucibleReady": "ready"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/jee_main_2026",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/neet_(ug)-2027",
+      "collection": "mission_realms",
+      "documentId": "neet_(ug)-2027",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "41d05e209a19bcf089df471548d60a3e43755057a0df6b7ec9b75c1b41b6b55a",
+      "diff": {
+        "before": {
+          "id": "neet_(ug)-2027",
+          "realm_id": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "canonicalMissionIdentity": "neet_(ug)-2027",
+          "title": "NEET (UG) 2027",
+          "name": "NEET (UG) 2027",
+          "exam_name": "NEET (UG) 2027",
+          "displayTitle": "NEET (UG) 2027",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Admission to UG Medical Programs",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "MEDICAL",
+            "authorityGroupKey": "nta"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_mbbs",
+              "name": "Paper 1 (MBBS/BDS)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://neet.nta.nic.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://neet.nta.nic.in/doc2027.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 3800,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/neet_(ug)-2027/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "neet_(ug)-2027",
+          "realm_id": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "canonicalMissionIdentity": "neet_(ug)-2027",
+          "title": "NEET (UG) 2027",
+          "name": "NEET (UG) 2027",
+          "exam_name": "NEET (UG) 2027",
+          "displayTitle": "NEET (UG) 2027",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Admission to UG Medical Programs",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "MEDICAL",
+            "authorityGroupKey": "nta"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_mbbs",
+              "name": "Paper 1 (MBBS/BDS)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://neet.nta.nic.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://neet.nta.nic.in/doc2027.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 3800,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/neet_(ug)-2027/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/neet_(ug)-2027",
+      "collection": "recruitments",
+      "documentId": "neet_(ug)-2027",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "8aaae3b478f67258083398ff141fd5f9031effbbaab908d7492998bd1181874a",
+      "diff": {
+        "before": {
+          "id": "neet_(ug)-2027",
+          "recruitmentId": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "title": "NEET (UG) 2027",
+          "examName": "NEET (UG) 2027",
+          "organization": "National Testing Agency",
+          "organizationCode": "NTA",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "neet_(ug)-2027",
+          "recruitmentId": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "title": "NEET (UG) 2027",
+          "examName": "NEET (UG) 2027",
+          "organization": "National Testing Agency",
+          "organizationCode": "NTA",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "documentId": "neet_(ug)-2027",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "07f54706ecdb4cbd7e0d49314ce7e243327c72743452812e08132e2bbaee8404",
+      "diff": {
+        "before": {
+          "id": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "realmId": "neet_(ug)-2027",
+          "sourceMissionId": "neet_(ug)-2027",
+          "sourcePath": "mission_realms/neet_(ug)-2027",
+          "sourceType": "mission_realms",
+          "title": "NEET (UG) 2027",
+          "name": "NEET (UG) 2027",
+          "displayTitle": "NEET (UG) 2027",
+          "examName": "NEET (UG) 2027",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "boardId": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/neet_(ug)-2027",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "neet_(ug)-2027",
+          "missionId": "neet_(ug)-2027",
+          "realmId": "neet_(ug)-2027",
+          "sourceMissionId": "neet_(ug)-2027",
+          "sourcePath": "mission_realms/neet_(ug)-2027",
+          "sourceType": "mission_realms",
+          "title": "NEET (UG) 2027",
+          "name": "NEET (UG) 2027",
+          "displayTitle": "NEET (UG) 2027",
+          "examName": "NEET (UG) 2027",
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency",
+          "organizationCode": "NTA",
+          "boardId": "NTA",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "MEDICAL",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/NTA/NEET_(UG)-2027",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/neet_(ug)-2027",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "d58003ef90ed0cb5cd29f639da3c4be32fde0862cfdad151b5abb131325d0af9",
+      "diff": {
+        "before": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "realm_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "canonicalMissionIdentity": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "name": "RPSC 1st Grade Teacher 2026",
+          "exam_name": "RPSC 1st Grade Teacher 2026",
+          "displayTitle": "RPSC 1st Grade Teacher 2026",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment of School Lecturers",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "hierarchyPlacement": {
+            "jurisdiction": "STATE",
+            "stateCode": "RJ",
+            "region": "WEST",
+            "sector": "TEACHING",
+            "authorityGroupKey": "rpsc"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_gk",
+              "name": "Paper I (General Awareness)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://rpsc.rajasthan.gov.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://rpsc.rajasthan.gov.in/notif.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 1200,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "realm_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "canonicalMissionIdentity": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "name": "RPSC 1st Grade Teacher 2026",
+          "exam_name": "RPSC 1st Grade Teacher 2026",
+          "displayTitle": "RPSC 1st Grade Teacher 2026",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment of School Lecturers",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "hierarchyPlacement": {
+            "jurisdiction": "STATE",
+            "stateCode": "RJ",
+            "region": "WEST",
+            "sector": "TEACHING",
+            "authorityGroupKey": "rpsc"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_gk",
+              "name": "Paper I (General Awareness)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://rpsc.rajasthan.gov.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": "https://rpsc.rajasthan.gov.in/notif.pdf"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 1200,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "recruitments",
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "f04a9ca28ba5a1ad2ea3a5f44489d810187fd7c3a3ccd81b87c9109a48ee5e73",
+      "diff": {
+        "before": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "recruitmentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "examName": "RPSC 1st Grade Teacher 2026",
+          "organization": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "recruitmentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "examName": "RPSC 1st Grade Teacher 2026",
+          "organization": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "documentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "NO_CHANGE",
+      "semanticDigest": "47221993125df34e6e9ffeb005fd2299c17f4d4f47381911c6fab1a956504f82",
+      "diff": {
+        "before": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourceMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourcePath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourceType": "mission_realms",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "name": "RPSC 1st Grade Teacher 2026",
+          "displayTitle": "RPSC 1st Grade Teacher 2026",
+          "examName": "RPSC 1st Grade Teacher 2026",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "boardId": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "state": "Rajasthan",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        },
+        "after": {
+          "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourceMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourcePath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "sourceType": "mission_realms",
+          "title": "RPSC 1st Grade Teacher 2026",
+          "name": "RPSC 1st Grade Teacher 2026",
+          "displayTitle": "RPSC 1st Grade Teacher 2026",
+          "examName": "RPSC 1st Grade Teacher 2026",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "boardId": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "state": "Rajasthan",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "TEACHING",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.357Z",
+          "updatedAt": "2026-09-10T04:55:45.357Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/upsc_cse_prelims",
+      "collection": "mission_realms",
+      "documentId": "upsc_cse_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "287bfa0ea6f6b2b9ca6653b0b1786f9ce4058d4a74bd9e1b8eaf601807b12c91",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "upsc_cse_prelims",
+          "realm_id": "upsc_cse_prelims",
+          "missionId": "upsc_cse_prelims",
+          "canonicalMissionIdentity": "upsc_cse_prelims",
+          "title": "UPSC Civil Services Prelims",
+          "name": "UPSC Civil Services Prelims",
+          "exam_name": "UPSC Civil Services Prelims",
+          "displayTitle": "UPSC Civil Services Prelims",
+          "authorityGroupKey": "upsc",
+          "authorityDisplayName": "Union Public Service Commission",
+          "organizationCode": "UPSC",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment to All India and Central Civil Services",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/UPSC/UPSC_CSE_PRELIMS",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "CIVIL_SERVICES",
+            "authorityGroupKey": "upsc"
+          },
+          "variants": [
+            {
+              "variantId": "gs_paper_1",
+              "name": "General Studies Paper I"
+            },
+            {
+              "variantId": "csat_paper_2",
+              "name": "CSAT Paper II"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://upsc.gov.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": null,
+            "effectiveSyllabus": null,
+            "effectiveExamScheme": null,
+            "effectiveCorrigendum": null,
+            "lastVerifiedDate": "2026-09-10T04:55:45.382Z"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 2500,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/upsc_cse_prelims/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/upsc_cse_prelims",
+      "collection": "recruitments",
+      "documentId": "upsc_cse_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "ad5f39a42865603819fff511caeca132f6b856d9643bdd5f656c042de10005d4",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "upsc_cse_prelims",
+          "recruitmentId": "upsc_cse_prelims",
+          "missionId": "upsc_cse_prelims",
+          "title": "UPSC Civil Services Prelims",
+          "examName": "UPSC Civil Services Prelims",
+          "organization": "Union Public Service Commission",
+          "organizationCode": "UPSC",
+          "authorityGroupKey": "upsc",
+          "authorityDisplayName": "Union Public Service Commission",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/UPSC/UPSC_CSE_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/upsc_cse_prelims",
+      "collection": "student_mission_catalog",
+      "documentId": "upsc_cse_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "7abe570278593438365b4a1bc789f75289c0f883df6c67145b1c0c9be346422a",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "upsc_cse_prelims",
+          "missionId": "upsc_cse_prelims",
+          "realmId": "upsc_cse_prelims",
+          "sourceMissionId": "upsc_cse_prelims",
+          "sourcePath": "mission_realms/upsc_cse_prelims",
+          "sourceType": "mission_realms",
+          "title": "UPSC Civil Services Prelims",
+          "name": "UPSC Civil Services Prelims",
+          "displayTitle": "UPSC Civil Services Prelims",
+          "examName": "UPSC Civil Services Prelims",
+          "authorityGroupKey": "upsc",
+          "authorityDisplayName": "Union Public Service Commission",
+          "organizationCode": "UPSC",
+          "boardId": "UPSC",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/UPSC/UPSC_CSE_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/upsc_cse_prelims",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/ssc_cgl",
+      "collection": "mission_realms",
+      "documentId": "ssc_cgl",
+      "operation": "CREATE",
+      "semanticDigest": "fea73c3c1dc51aef0eccc3a615570000f04b5c2762d4c565e09eed02a5d26523",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "ssc_cgl",
+          "realm_id": "ssc_cgl",
+          "missionId": "ssc_cgl",
+          "canonicalMissionIdentity": "ssc_cgl",
+          "title": "SSC Combined Graduate Level",
+          "name": "SSC Combined Graduate Level",
+          "exam_name": "SSC Combined Graduate Level",
+          "displayTitle": "SSC Combined Graduate Level",
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission",
+          "organizationCode": "SSC",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "STAFF_SELECTION",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment to Group B and C Posts in Central Government",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/SSC/SSC_CGL",
+          "hierarchyPlacement": {
+            "jurisdiction": "CENTRAL",
+            "stateCode": null,
+            "region": "NATIONAL",
+            "sector": "STAFF_SELECTION",
+            "authorityGroupKey": "ssc"
+          },
+          "variants": [
+            {
+              "variantId": "tier_1",
+              "name": "Tier I Computer Based Exam"
+            },
+            {
+              "variantId": "tier_2",
+              "name": "Tier II Computer Based Exam"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://ssc.gov.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": null,
+            "effectiveSyllabus": null,
+            "effectiveExamScheme": null,
+            "effectiveCorrigendum": null,
+            "lastVerifiedDate": "2026-09-10T04:55:45.382Z"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 5000,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/ssc_cgl/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/ssc_cgl",
+      "collection": "recruitments",
+      "documentId": "ssc_cgl",
+      "operation": "CREATE",
+      "semanticDigest": "33d0b8447259c6a7d06a1a0be1ad00a01d0217996bdf18d5b31150fff4d57182",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "ssc_cgl",
+          "recruitmentId": "ssc_cgl",
+          "missionId": "ssc_cgl",
+          "title": "SSC Combined Graduate Level",
+          "examName": "SSC Combined Graduate Level",
+          "organization": "Staff Selection Commission",
+          "organizationCode": "SSC",
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission",
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "STAFF_SELECTION",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/SSC/SSC_CGL",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/ssc_cgl",
+      "collection": "student_mission_catalog",
+      "documentId": "ssc_cgl",
+      "operation": "CREATE",
+      "semanticDigest": "8908a5488719fdbb6e8fba29ec862ad1f448e9c431f55e063920abcc1eaef3c7",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "ssc_cgl",
+          "missionId": "ssc_cgl",
+          "realmId": "ssc_cgl",
+          "sourceMissionId": "ssc_cgl",
+          "sourcePath": "mission_realms/ssc_cgl",
+          "sourceType": "mission_realms",
+          "title": "SSC Combined Graduate Level",
+          "name": "SSC Combined Graduate Level",
+          "displayTitle": "SSC Combined Graduate Level",
+          "examName": "SSC Combined Graduate Level",
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission",
+          "organizationCode": "SSC",
+          "boardId": "SSC",
+          "jurisdictionLevel": "CENTRAL",
+          "state": "Central",
+          "stateCode": null,
+          "stateName": null,
+          "region": "NATIONAL",
+          "sector": "STAFF_SELECTION",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "CENTRAL/NATIONAL/SSC/SSC_CGL",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/ssc_cgl",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/rpsc_ras_prelims",
+      "collection": "mission_realms",
+      "documentId": "rpsc_ras_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "eb73d40ed90a07f9451e7676bef9634e73f427e9a2b58a09b35746b562ca68fd",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "rpsc_ras_prelims",
+          "realm_id": "rpsc_ras_prelims",
+          "missionId": "rpsc_ras_prelims",
+          "canonicalMissionIdentity": "rpsc_ras_prelims",
+          "title": "RPSC RAS / RTS Combined Competitive Exam",
+          "name": "RPSC RAS / RTS Combined Competitive Exam",
+          "exam_name": "RPSC RAS / RTS Combined Competitive Exam",
+          "displayTitle": "RPSC RAS / RTS Combined Competitive Exam",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment to Rajasthan Administrative Service",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_RAS_PRELIMS",
+          "hierarchyPlacement": {
+            "jurisdiction": "STATE",
+            "stateCode": "RJ",
+            "region": "WEST",
+            "sector": "CIVIL_SERVICES",
+            "authorityGroupKey": "rpsc"
+          },
+          "variants": [
+            {
+              "variantId": "prelims_gs",
+              "name": "General Knowledge & General Science"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://rpsc.rajasthan.gov.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": null,
+            "effectiveSyllabus": null,
+            "effectiveExamScheme": null,
+            "effectiveCorrigendum": null,
+            "lastVerifiedDate": "2026-09-10T04:55:45.382Z"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 1500,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/rpsc_ras_prelims/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/rpsc_ras_prelims",
+      "collection": "recruitments",
+      "documentId": "rpsc_ras_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "a7bd67f9504ba1b6bc69d1c2c3c35d8b232f17cd66481b69dc8a31dfd59fec8e",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "rpsc_ras_prelims",
+          "recruitmentId": "rpsc_ras_prelims",
+          "missionId": "rpsc_ras_prelims",
+          "title": "RPSC RAS / RTS Combined Competitive Exam",
+          "examName": "RPSC RAS / RTS Combined Competitive Exam",
+          "organization": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_RAS_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/rpsc_ras_prelims",
+      "collection": "student_mission_catalog",
+      "documentId": "rpsc_ras_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "e9c3faf47e817eebe9ad8cde137e1038f312be026eaf214d17490de1a2c929c5",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "rpsc_ras_prelims",
+          "missionId": "rpsc_ras_prelims",
+          "realmId": "rpsc_ras_prelims",
+          "sourceMissionId": "rpsc_ras_prelims",
+          "sourcePath": "mission_realms/rpsc_ras_prelims",
+          "sourceType": "mission_realms",
+          "title": "RPSC RAS / RTS Combined Competitive Exam",
+          "name": "RPSC RAS / RTS Combined Competitive Exam",
+          "displayTitle": "RPSC RAS / RTS Combined Competitive Exam",
+          "examName": "RPSC RAS / RTS Combined Competitive Exam",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission",
+          "organizationCode": "RPSC",
+          "boardId": "RPSC",
+          "jurisdictionLevel": "STATE",
+          "state": "Rajasthan",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "region": "WEST",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/RJ/RPSC/RPSC_RAS_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/rpsc_ras_prelims",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "mission_realms/uppsc_pcs_prelims",
+      "collection": "mission_realms",
+      "documentId": "uppsc_pcs_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "175cf37a48a390cedcae21f514e84528b66d1b6c1f4a14cd26970b519987d97c",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "uppsc_pcs_prelims",
+          "realm_id": "uppsc_pcs_prelims",
+          "missionId": "uppsc_pcs_prelims",
+          "canonicalMissionIdentity": "uppsc_pcs_prelims",
+          "title": "UPPSC Combined State / Upper Subordinate Services",
+          "name": "UPPSC Combined State / Upper Subordinate Services",
+          "exam_name": "UPPSC Combined State / Upper Subordinate Services",
+          "displayTitle": "UPPSC Combined State / Upper Subordinate Services",
+          "authorityGroupKey": "uppsc",
+          "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+          "organizationCode": "UPPSC",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "UP",
+          "stateName": "Uttar Pradesh",
+          "region": "NORTH",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "examPurpose": "Recruitment to Uttar Pradesh State Civil Services",
+          "studentHierarchyPath": "STATE/UP/UPPSC/UPPSC_PCS_PRELIMS",
+          "hierarchyPlacement": {
+            "jurisdiction": "STATE",
+            "stateCode": "UP",
+            "region": "NORTH",
+            "sector": "CIVIL_SERVICES",
+            "authorityGroupKey": "uppsc"
+          },
+          "variants": [
+            {
+              "variantId": "paper_1_gs",
+              "name": "General Studies I"
+            },
+            {
+              "variantId": "paper_2_csat",
+              "name": "General Studies II (CSAT)"
+            }
+          ],
+          "sourceLocators": [
+            {
+              "url": "https://uppsc.up.nic.in/",
+              "documentType": "NOTIFICATION",
+              "bytesAvailable": true
+            }
+          ],
+          "latestOfficialSource": {
+            "effectiveNotification": null,
+            "effectiveSyllabus": null,
+            "effectiveExamScheme": null,
+            "effectiveCorrigendum": null,
+            "lastVerifiedDate": "2026-09-10T04:55:45.382Z"
+          },
+          "pyqArchiveReference": {
+            "totalRecords": 1800,
+            "unboundedSupport": true
+          },
+          "monitoringRef": {
+            "monitoringRegistryPath": "mission_realms/uppsc_pcs_prelims/source_monitoring_registry",
+            "activeMonitoring": true
+          },
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "contentReadiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "visibilityGate": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true,
+            "gateStatus": "PASSED",
+            "blockers": []
+          },
+          "userPanelVisible": true,
+          "status": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "recruitments/uppsc_pcs_prelims",
+      "collection": "recruitments",
+      "documentId": "uppsc_pcs_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "29c6e320bce0ef43bd55d8501a76e032fdbcc5163a4b34685fe1ff10fe6768ff",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "uppsc_pcs_prelims",
+          "recruitmentId": "uppsc_pcs_prelims",
+          "missionId": "uppsc_pcs_prelims",
+          "title": "UPPSC Combined State / Upper Subordinate Services",
+          "examName": "UPPSC Combined State / Upper Subordinate Services",
+          "organization": "Uttar Pradesh Public Service Commission",
+          "organizationCode": "UPPSC",
+          "authorityGroupKey": "uppsc",
+          "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+          "jurisdictionLevel": "STATE",
+          "stateCode": "UP",
+          "stateName": "Uttar Pradesh",
+          "region": "NORTH",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/UP/UPPSC/UPPSC_PCS_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "published",
+          "nature": "ACTIVE",
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    },
+    {
+      "targetPath": "student_mission_catalog/uppsc_pcs_prelims",
+      "collection": "student_mission_catalog",
+      "documentId": "uppsc_pcs_prelims",
+      "operation": "CREATE",
+      "semanticDigest": "8af8ad11c63b3be3de178181946ae8bddedd54a5f916ef1131cf9774ce69e4ab",
+      "diff": {
+        "before": null,
+        "after": {
+          "id": "uppsc_pcs_prelims",
+          "missionId": "uppsc_pcs_prelims",
+          "realmId": "uppsc_pcs_prelims",
+          "sourceMissionId": "uppsc_pcs_prelims",
+          "sourcePath": "mission_realms/uppsc_pcs_prelims",
+          "sourceType": "mission_realms",
+          "title": "UPPSC Combined State / Upper Subordinate Services",
+          "name": "UPPSC Combined State / Upper Subordinate Services",
+          "displayTitle": "UPPSC Combined State / Upper Subordinate Services",
+          "examName": "UPPSC Combined State / Upper Subordinate Services",
+          "authorityGroupKey": "uppsc",
+          "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+          "organizationCode": "UPPSC",
+          "boardId": "UPPSC",
+          "jurisdictionLevel": "STATE",
+          "state": "Uttar Pradesh",
+          "stateCode": "UP",
+          "stateName": "Uttar Pradesh",
+          "region": "NORTH",
+          "sector": "CIVIL_SERVICES",
+          "examCategory": "competitive",
+          "exam_category": "competitive",
+          "missionType": "competitive",
+          "missionStructureType": "SINGLE_TRACK",
+          "examScope": "PUBLIC_STUDENT_ELIGIBLE",
+          "studentHierarchyPath": "STATE/UP/UPPSC/UPPSC_PCS_PRELIMS",
+          "readiness": {
+            "missionExists": true,
+            "sourceMetadataAvailable": true,
+            "sourceBytesAvailable": true,
+            "syllabusReady": "PREPARING",
+            "digibookReady": "PREPARING",
+            "questionBankReady": "PREPARING",
+            "crucibleReady": "PREPARING"
+          },
+          "status": "LIVE",
+          "catalogStatus": "LIVE",
+          "studentPublicationState": "LIVE",
+          "studentMessage": "Mission is live and accessible!",
+          "userPanelVisible": true,
+          "visibility": {
+            "studentVisible": true,
+            "catalogVisible": true,
+            "userPanelVisible": true,
+            "quickEntryEnabled": true,
+            "smartEntryEnabled": true
+          },
+          "archived": false,
+          "source": {
+            "missionRealmPath": "mission_realms/uppsc_pcs_prelims",
+            "mirroredBy": "generic_authority_mission_materializer",
+            "materializerPhase": "47B_GENERIC_INDIA_FACTORY"
+          },
+          "createdAt": "2026-09-10T04:55:45.382Z",
+          "updatedAt": "2026-09-10T04:55:45.382Z"
+        }
+      }
+    }
+  ],
+  "mutationManifest": [
+    {
+      "path": "mission_realms/upsc_cse_prelims",
+      "op": "CREATE",
+      "digest": "287bfa0ea6f6b2b9ca6653b0b1786f9ce4058d4a74bd9e1b8eaf601807b12c91"
+    },
+    {
+      "path": "recruitments/upsc_cse_prelims",
+      "op": "CREATE",
+      "digest": "ad5f39a42865603819fff511caeca132f6b856d9643bdd5f656c042de10005d4"
+    },
+    {
+      "path": "student_mission_catalog/upsc_cse_prelims",
+      "op": "CREATE",
+      "digest": "7abe570278593438365b4a1bc789f75289c0f883df6c67145b1c0c9be346422a"
+    },
+    {
+      "path": "mission_realms/ssc_cgl",
+      "op": "CREATE",
+      "digest": "fea73c3c1dc51aef0eccc3a615570000f04b5c2762d4c565e09eed02a5d26523"
+    },
+    {
+      "path": "recruitments/ssc_cgl",
+      "op": "CREATE",
+      "digest": "33d0b8447259c6a7d06a1a0be1ad00a01d0217996bdf18d5b31150fff4d57182"
+    },
+    {
+      "path": "student_mission_catalog/ssc_cgl",
+      "op": "CREATE",
+      "digest": "8908a5488719fdbb6e8fba29ec862ad1f448e9c431f55e063920abcc1eaef3c7"
+    },
+    {
+      "path": "mission_realms/rpsc_ras_prelims",
+      "op": "CREATE",
+      "digest": "eb73d40ed90a07f9451e7676bef9634e73f427e9a2b58a09b35746b562ca68fd"
+    },
+    {
+      "path": "recruitments/rpsc_ras_prelims",
+      "op": "CREATE",
+      "digest": "a7bd67f9504ba1b6bc69d1c2c3c35d8b232f17cd66481b69dc8a31dfd59fec8e"
+    },
+    {
+      "path": "student_mission_catalog/rpsc_ras_prelims",
+      "op": "CREATE",
+      "digest": "e9c3faf47e817eebe9ad8cde137e1038f312be026eaf214d17490de1a2c929c5"
+    },
+    {
+      "path": "mission_realms/uppsc_pcs_prelims",
+      "op": "CREATE",
+      "digest": "175cf37a48a390cedcae21f514e84528b66d1b6c1f4a14cd26970b519987d97c"
+    },
+    {
+      "path": "recruitments/uppsc_pcs_prelims",
+      "op": "CREATE",
+      "digest": "29c6e320bce0ef43bd55d8501a76e032fdbcc5163a4b34685fe1ff10fe6768ff"
+    },
+    {
+      "path": "student_mission_catalog/uppsc_pcs_prelims",
+      "op": "CREATE",
+      "digest": "8af8ad11c63b3be3de178181946ae8bddedd54a5f916ef1131cf9774ce69e4ab"
+    }
+  ]
+}

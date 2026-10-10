@@ -1,0 +1,26 @@
+{
+  "compatibilityCode": "RC_47B5_FOUNDER_CONSUMER_COMPATIBILITY",
+  "executedAt": "2026-09-10T06:57:27.982Z",
+  "founderDiscoveryPath": "lib/founder_mission_inventory.dart",
+  "requiredFounderFields": [
+    "id",
+    "title",
+    "organization",
+    "status",
+    "nature",
+    "authorityGroupKey"
+  ],
+  "materializerProvidedFields": [
+    "id",
+    "title",
+    "organization",
+    "status",
+    "nature",
+    "authorityGroupKey"
+  ],
+  "missingFields": [],
+  "metrics": {
+    "FOUNDER_CONSUMER_SCHEMA_BLOCKER_COUNT": 0
+  },
+  "compatibilityPass": true
+}

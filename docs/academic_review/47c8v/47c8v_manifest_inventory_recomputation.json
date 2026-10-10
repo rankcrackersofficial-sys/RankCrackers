@@ -1,0 +1,422 @@
+{
+  "inventoryCode": "RC_47C8V_MANIFEST_INVENTORY_RECOMPUTATION",
+  "executedAt": "2026-09-10T08:12:42.348Z",
+  "metrics": {
+    "NATIONAL_CANDIDATE_COUNT_RECOMPUTED": 49,
+    "DUPLICATE_MISSION_ID_COUNT": 0,
+    "MAJOR_ACCEPTED_COUNT_RECOMPUTED": 45,
+    "REVIEW_REQUIRED_COUNT_RECOMPUTED": 4,
+    "NOT_MAJOR_COUNT_RECOMPUTED": 0,
+    "DUPLICATE_POINTER_COUNT_RECOMPUTED": 0
+  },
+  "breakdownByAuthority": {
+    "auth_in_upsc": 9,
+    "auth_in_ssc": 9,
+    "auth_in_nta": 8,
+    "auth_in_rrb": 5,
+    "auth_in_rpf": 2,
+    "auth_in_ibps": 5,
+    "auth_in_sbi": 2,
+    "auth_in_rbi": 2,
+    "auth_in_nabard": 1,
+    "auth_in_indian_air_force": 2,
+    "auth_in_indian_army": 1,
+    "auth_in_indian_navy": 2,
+    "auth_in_cbse": 1
+  },
+  "missions": [
+    {
+      "index": 1,
+      "missionId": "upsc_cse_prelims",
+      "title": "Civil Services Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 2,
+      "missionId": "upsc_ifos",
+      "title": "Indian Forest Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "index": 3,
+      "missionId": "upsc_cds",
+      "title": "Combined Defence Services Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 4,
+      "missionId": "upsc_nda_na",
+      "title": "National Defence Academy and Naval Academy Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 5,
+      "missionId": "upsc_capf_ac",
+      "title": "Central Armed Police Forces (ACs) Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 6,
+      "missionId": "upsc_ese",
+      "title": "Engineering Services Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 7,
+      "missionId": "upsc_cms",
+      "title": "Combined Medical Services Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 8,
+      "missionId": "upsc_ies_iss",
+      "title": "Indian Economic Service / Indian Statistical Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "index": 9,
+      "missionId": "upsc_geo_scientist",
+      "title": "Combined Geo-Scientist Preliminary Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 10,
+      "missionId": "ssc_cgl",
+      "title": "SSC Combined Graduate Level Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 11,
+      "missionId": "ssc_chsl",
+      "title": "SSC Combined Higher Secondary Level Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 12,
+      "missionId": "ssc_mts_havaldar",
+      "title": "SSC MTS / Havaldar Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 13,
+      "missionId": "ssc_gd",
+      "title": "SSC Constable GD Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 14,
+      "missionId": "ssc_cpo",
+      "title": "SSC Sub-Inspector CPO Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 15,
+      "missionId": "ssc_je",
+      "title": "SSC Junior Engineer Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 16,
+      "missionId": "ssc_stenographer",
+      "title": "SSC Stenographer Grade C and D Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 17,
+      "missionId": "ssc_hindi_translators",
+      "title": "SSC Combined Hindi Translators Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 18,
+      "missionId": "ssc_selection_post",
+      "title": "SSC Selection Post Examination",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 19,
+      "missionId": "jee_main_2026",
+      "title": "Joint Entrance Examination Main",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 20,
+      "missionId": "neet_(ug)-2027",
+      "title": "NEET UG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 21,
+      "missionId": "nta_cuet_ug",
+      "title": "CUET UG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 22,
+      "missionId": "nta_cuet_pg",
+      "title": "CUET PG",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 23,
+      "missionId": "nta_ugc_net",
+      "title": "UGC NET",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 24,
+      "missionId": "nta_csir_ugc_net",
+      "title": "Joint CSIR UGC NET",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 25,
+      "missionId": "nta_icar_aieea_pg",
+      "title": "ICAR AIEEA PG / AICE JRF-SRF",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "index": 26,
+      "missionId": "nta_nchm_jee",
+      "title": "NCHM JEE",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_REVIEW_REQUIRED"
+    },
+    {
+      "index": 27,
+      "missionId": "rrb_ntpc",
+      "title": "RRB NTPC",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 28,
+      "missionId": "rrb_level_1",
+      "title": "RRB Level 1",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 29,
+      "missionId": "rrb_alp",
+      "title": "RRB Assistant Loco Pilot",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 30,
+      "missionId": "rrb_technician",
+      "title": "RRB Technician",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 31,
+      "missionId": "rrb_je",
+      "title": "RRB Junior Engineer",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 32,
+      "missionId": "rpf_si",
+      "title": "RPF Sub-Inspector",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 33,
+      "missionId": "rpf_constable",
+      "title": "RPF Constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 34,
+      "missionId": "ibps_po_mt",
+      "title": "IBPS CRP PO/MT",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 35,
+      "missionId": "ibps_csa",
+      "title": "IBPS CRP Customer Service Associate",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 36,
+      "missionId": "ibps_so",
+      "title": "IBPS CRP Specialist Officer",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 37,
+      "missionId": "ibps_crp_rrb_officers",
+      "title": "IBPS RRB Officer Scale I/II/III",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 38,
+      "missionId": "ibps_crp_rrb_office_assistant",
+      "title": "IBPS RRB Office Assistant",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 39,
+      "missionId": "sbi_po",
+      "title": "SBI Probationary Officer",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 40,
+      "missionId": "sbi_ja",
+      "title": "SBI Junior Associate",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 41,
+      "missionId": "rbi_grade_b",
+      "title": "RBI Grade B",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 42,
+      "missionId": "rbi_assistant",
+      "title": "RBI Assistant",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 43,
+      "missionId": "nabard_grade_a",
+      "title": "NABARD Grade A Assistant Manager",
+      "canonicalAuthorityKey": "auth_in_nabard",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 44,
+      "missionId": "afcat",
+      "title": "Air Force Common Admission Test",
+      "canonicalAuthorityKey": "auth_in_indian_air_force",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 45,
+      "missionId": "army_agniveer_cee",
+      "title": "Indian Army Agniveer Online CEE",
+      "canonicalAuthorityKey": "auth_in_indian_army",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 46,
+      "missionId": "navy_agniveer_ssr",
+      "title": "Indian Navy Agniveer SSR / INET",
+      "canonicalAuthorityKey": "auth_in_indian_navy",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 47,
+      "missionId": "agniveervayu",
+      "title": "Indian Air Force Agniveervayu Selection Test",
+      "canonicalAuthorityKey": "auth_in_indian_air_force",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 48,
+      "missionId": "cbse_ctet",
+      "title": "Central Teacher Eligibility Test",
+      "canonicalAuthorityKey": "auth_in_cbse",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "index": 49,
+      "missionId": "navy_agniveer_mr",
+      "title": "Indian Navy Agniveer MR / INET",
+      "canonicalAuthorityKey": "auth_in_indian_navy",
+      "jurisdictionLevel": "CENTRAL",
+      "classification": "MAJOR_MISSION_ACCEPTED"
+    }
+  ],
+  "verdict": "PASS"
+}

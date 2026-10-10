@@ -1,0 +1,18 @@
+{
+  "missionId": "rrb_ntpc",
+  "decision": "RETAIN_LEVEL_VARIANTS_PENDING_FINAL_CEN_PARITY_REVIEW",
+  "variants": [
+    {
+      "variantId": "graduate",
+      "displayName": "Graduate Posts",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php"
+    },
+    {
+      "variantId": "undergraduate",
+      "displayName": "Undergraduate Posts",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php"
+    }
+  ]
+}

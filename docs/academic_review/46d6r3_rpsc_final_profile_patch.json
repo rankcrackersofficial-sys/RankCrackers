@@ -1,0 +1,91 @@
+{
+  "profileSchemaVersion": "3.0.0",
+  "draftStatus": "CANONICAL_FINAL_PROFILE_PATCH_46D6R3",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "canonicalExamName": "RPSC School Lecturer (School Education)",
+  "canonicalDisplayName": "RPSC 1st Grade",
+  "missionTargetYear": 2026,
+  "sourceRecruitmentCycle": 2025,
+  "sourceBaselineYear": 2025,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "Rajasthan Public Service Commission (RPSC), Ajmer",
+    "department": "Secondary Education Department, Govt. of Rajasthan",
+    "officialPortals": [
+      "https://rpsc.rajasthan.gov.in"
+    ],
+    "recruitmentFamily": "School Lecturer (School Education) Competitive Exam / प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा",
+    "primaryAdvertisement": "Advt. No. 06/2025-26",
+    "additionalAdvertisement": "Advt. No. 09/2025-26 (Agriculture)",
+    "confirmedCorrigenda": ["Corrigendum No. 08/2025-26"],
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperFamilyArchitecture": {
+    "model": "THREE_TIER_PAPER_FAMILY_ARCHITECTURE",
+    "families": [
+      {
+        "familyId": "ACADEMIC_LECTURER_FAMILY",
+        "name": "Academic School Lecturer Family (21 Subjects)",
+        "paper1": "Paper-I: General Awareness and General Studies (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+        "paper2": "Paper-II: Academic Subject Concerned (150 Qs / 300 Marks / 180 Mins / 1/3 negative)"
+      },
+      {
+        "familyId": "PHYSICAL_EDUCATION_FAMILY",
+        "name": "Physical Education Lecturer Family (1 Cadre Entity)",
+        "paper1": "Paper-I: General Awareness and General Studies - Physical Education (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+        "paper2": "Paper-II: Physical Education Subject (150 Qs / 300 Marks / 180 Mins / 1/3 negative)"
+      },
+      {
+        "familyId": "COACH_FAMILY",
+        "name": "Sports Coach Family (1 Parent Post with 6 Active Sport Specializations)",
+        "paper1": "Paper-I: General Awareness and Sports Science (75 Qs / 150 Marks / 90 Mins / 1/3 negative)",
+        "paper2": "Paper-II: Coach Sport Specialization Paper (150 Qs / 300 Marks / 180 Mins / 1/3 negative)"
+      }
+    ]
+  },
+  "variantStructureAndCounts": {
+    "parentCadreEntitiesCount": 23,
+    "academicVariantsCount": 21,
+    "physicalEducationEntityCount": 1,
+    "coachParentCount": 1,
+    "coachCurrentActiveSpecializationsCount": 6,
+    "studentSelectableVariantsCount": 28,
+    "activeCoachSpecializations": [
+      "Athletics", "Basketball", "Handball", "Kabaddi", "Table Tennis", "Volleyball"
+    ],
+    "historicalCoachSpecializationsExcluded": [
+      "Football", "Gymnastics", "Hockey", "Kho-Kho", "Wrestling"
+    ],
+    "currentBackendVariants": ["English", "Hindi"],
+    "missingSelectableVariantsCount": 26
+  },
+  "s2DocumentProfile": {
+    "s2ProfileDraftReady": true,
+    "contextualFamilyLookupEnabled": true,
+    "familyProfileMap": {
+      "ACADEMIC_LECTURER_FAMILY": {
+        "paper1": "rpsc_paper_1_gk_gs_academic",
+        "paper2Pattern": "rpsc_paper_2_[subject]"
+      },
+      "PHYSICAL_EDUCATION_FAMILY": {
+        "paper1": "rpsc_paper_1_physical_education",
+        "paper2": "rpsc_paper_2_physical_education"
+      },
+      "COACH_FAMILY": {
+        "paper1": "rpsc_paper_1_coach",
+        "paper2Pattern": "rpsc_paper_2_coach_[sport]"
+      }
+    },
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "sourceRecruitmentCycle": "SOURCE_VERIFIED",
+    "cycleRelation": "SOURCE_VERIFIED",
+    "recruitmentFamily": "SOURCE_VERIFIED",
+    "paperFamilyArchitecture": "SOURCE_VERIFIED",
+    "variantModel": "SOURCE_VERIFIED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

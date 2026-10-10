@@ -1,0 +1,10 @@
+{
+  "testCode": "RC_47B4_REGION_JURISDICTION_CONTRACT_TEST",
+  "executedAt": "2026-09-10T06:57:27.629Z",
+  "stateUtMismatchRejected": true,
+  "metrics": {
+    "TELANGANA_CANONICAL_CODE": "TG",
+    "REGION_JURISDICTION_MISMATCH_ACCEPTED_COUNT": 0
+  },
+  "assertionPass": true
+}

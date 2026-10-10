@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-48cs1",
+  "permanentMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "displayName": "RPSC 1st Grade Teacher / School Lecturer",
+  "preparationStatus": "PERMANENTLY_ACTIVE",
+  "scenarios": [
+    {
+      "phase": "Recruitment Exam Completed",
+      "opportunitySignalActive": false,
+      "processUpdateSignalActive": true,
+      "cycleStatus": "EXAM_COMPLETED",
+      "explanation": "Students can continue preparing and practicing. Opportunity badge is turned off; process updates remain active."
+    },
+    {
+      "phase": "Result and DV Concluded",
+      "opportunitySignalActive": false,
+      "processUpdateSignalActive": false,
+      "cycleStatus": "CYCLE_CLOSED",
+      "explanation": "The 2024/2026 cycle concludes. Permanent mission remains active for upcoming cycles."
+    },
+    {
+      "phase": "Future RPSC First Grade Notification Released",
+      "opportunitySignalActive": true,
+      "processUpdateSignalActive": true,
+      "cycleStatus": "ANNOUNCED",
+      "explanation": "Uses SAME permanent mission ID + NEW RecruitmentCycle (e.g. cycle_rpsc_1st_grade_2027_01) + NEW Career Signals. Zero new year-based missions created."
+    }
+  ]
+}

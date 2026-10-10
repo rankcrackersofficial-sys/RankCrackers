@@ -1,0 +1,137 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "CURRENT_LIVE_SEMANTIC_DEFECTS",
+  "generatedAt": "2026-09-10T10:39:12.875Z",
+  "metrics": {
+    "TOTAL_SEMANTIC_DEFECTS_MEASURED": 11,
+    "NEET_WRONG_CATEGORY_COUNT": 1,
+    "NEET_FALSE_SMART_START_COUNT": 0,
+    "RPSC_RAS_WRONG_JURISDICTION_COUNT": 0,
+    "RPSC_FIRST_GRADE_VARIANT_PROJECTION_GAP_COUNT": 1,
+    "LIVE_SMART_ENTRY_WITHOUT_ACADEMIC_PROOF_COUNT": 2,
+    "LIVE_QUICK_ENTRY_WITHOUT_DELIVERY_PROOF_COUNT": 2,
+    "JEE_IMMUTABLE_ID_EXACT": true,
+    "SSC_CANONICAL_IDS_EXACT": true
+  },
+  "defects": [
+    {
+      "target": "neet_(ug)-2027",
+      "collection": "student_mission_catalog",
+      "field": "examCategory",
+      "currentValue": "category_pending",
+      "expectedValue": "medical_entrance",
+      "severity": "HIGH",
+      "defectClass": "NEET_WRONG_CATEGORY",
+      "description": "NEET examCategory in student_mission_catalog is set to category_pending, which is an unresolved readiness stub rather than an authentic exam family/category."
+    },
+    {
+      "target": "neet_(ug)-2027",
+      "collection": "mission_realms",
+      "field": "organization",
+      "currentValue": "Rajasthan",
+      "expectedValue": "National Testing Agency",
+      "severity": "HIGH",
+      "defectClass": "NEET_WRONG_ORGANIZATION_METADATA",
+      "description": "NEET in mission_realms asserts organization = Rajasthan, violating central jurisdiction authority purity."
+    },
+    {
+      "target": "neet_(ug)-2027",
+      "collection": "recruitments",
+      "field": "state/org",
+      "currentValue": {
+        "state": "Rajasthan",
+        "org": "Rajasthan"
+      },
+      "expectedValue": {
+        "state": "Central",
+        "org": "National Testing Agency"
+      },
+      "severity": "HIGH",
+      "defectClass": "NEET_WRONG_RECRUITMENT_STATE",
+      "description": "NEET in recruitments declares state = Rajasthan and org = Rajasthan despite jurisdictionLevel = CENTRAL."
+    },
+    {
+      "target": "rpsc_ras_prelims",
+      "collection": "student_mission_catalog, recruitments",
+      "field": "examScope / scopeType",
+      "currentValue": "STATE_ELIGIBLE",
+      "expectedValue": "STATE_SPECIFIC",
+      "severity": "MEDIUM",
+      "defectClass": "RPSC_RAS_SCOPE_TYPE_DRIFT",
+      "description": "RAS scopeType/examScope uses legacy STATE_ELIGIBLE instead of canonical STATE_SPECIFIC."
+    },
+    {
+      "target": "rpsc_ras_prelims",
+      "collection": "all_projections",
+      "field": "examFamily",
+      "currentValue": null,
+      "expectedValue": "CIVIL_SERVICES",
+      "severity": "MEDIUM",
+      "defectClass": "RPSC_RAS_MISSING_EXAM_FAMILY",
+      "description": "RAS lacks explicit examFamily = CIVIL_SERVICES metadata across projections."
+    },
+    {
+      "target": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "field": "variants",
+      "currentValue": null,
+      "expectedValue": "Array(28) canonical variants",
+      "severity": "HIGH",
+      "defectClass": "RPSC_FIRST_GRADE_VARIANT_PROJECTION_GAP",
+      "description": "SMC has variables array with 28 items, but canonical variants array expected by materializer contract is missing."
+    },
+    {
+      "target": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "mission_realms",
+      "field": "variants / variantRequired",
+      "currentValue": {},
+      "expectedValue": {
+        "variants": "Array(28)",
+        "variantRequired": true
+      },
+      "severity": "HIGH",
+      "defectClass": "RPSC_FIRST_GRADE_REALM_VARIANT_METADATA_GAP",
+      "description": "MR lacks top-level variants array and variantRequired flag."
+    },
+    {
+      "target": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "field": "smartEntryEnabled",
+      "currentValue": true,
+      "expectedValue": false,
+      "severity": "CRITICAL",
+      "defectClass": "FALSE_SMART_START_WITHOUT_ACADEMIC_PROOF",
+      "description": "Mission RPSC_FIRST_GRADE2026_2026_1782713222215 asserts smartEntryEnabled = true without verified academic readiness (crucible, syllabus, questionBank, digibook are not ready)."
+    },
+    {
+      "target": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "collection": "student_mission_catalog",
+      "field": "quickEntryEnabled",
+      "currentValue": true,
+      "expectedValue": false,
+      "severity": "CRITICAL",
+      "defectClass": "FALSE_QUICK_ENTRY_WITHOUT_DELIVERY_PROOF",
+      "description": "Mission RPSC_FIRST_GRADE2026_2026_1782713222215 asserts quickEntryEnabled = true without verified delivery proof."
+    },
+    {
+      "target": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "field": "smartEntryEnabled",
+      "currentValue": true,
+      "expectedValue": false,
+      "severity": "CRITICAL",
+      "defectClass": "FALSE_SMART_START_WITHOUT_ACADEMIC_PROOF",
+      "description": "Mission jee_main_2026 asserts smartEntryEnabled = true without verified academic readiness (crucible, syllabus, questionBank, digibook are not ready)."
+    },
+    {
+      "target": "jee_main_2026",
+      "collection": "student_mission_catalog",
+      "field": "quickEntryEnabled",
+      "currentValue": true,
+      "expectedValue": false,
+      "severity": "CRITICAL",
+      "defectClass": "FALSE_QUICK_ENTRY_WITHOUT_DELIVERY_PROOF",
+      "description": "Mission jee_main_2026 asserts quickEntryEnabled = true without verified delivery proof."
+    }
+  ]
+}

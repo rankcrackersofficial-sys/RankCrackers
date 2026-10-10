@@ -1,0 +1,23 @@
+{
+  "gate": "RC_CAREER_SIGNAL_PERSONALIZATION_AND_RULE_MATCHING_CONTROL_48CS1R1",
+  "auditedAt": "2026-09-10T11:52:02.072Z",
+  "filesAudited": [
+    "lib/features/opportunities/services/career_signal_engine.dart",
+    "lib/features/opportunities/models/career_signal.dart",
+    "lib/features/opportunities/services/opportunity_matching_service.dart",
+    "lib/features/opportunities/models/opportunity.dart",
+    "lib/features/deep_profile/models/warrior_profile.dart"
+  ],
+  "defectsMeasured": {
+    "ARBITRARY_7_DAY_SIGNAL_EXPIRY_COUNT": 1,
+    "FALSE_INELIGIBLE_MAPPED_TO_INCOMPLETE_COUNT": 1,
+    "ACADEMIC_AND_QUALIFICATION_MATCH_COLLAPSE_COUNT": 1,
+    "TITLE_HEURISTIC_CAREER_FAMILY_COUNT": 1,
+    "REQUIRED_MISSION_ID_BLOCKING_ONE_OFF_SIGNAL_COUNT": 1,
+    "FAKE_DEFAULT_SOURCE_AUTHORITY_COUNT": 1,
+    "PROFILE_MISSING_FIELDS_NOT_PROPAGATED_COUNT": 1,
+    "LOCATION_MATCH_NOT_COMPUTED_COUNT": 1,
+    "PREFERENCE_MATCH_NOT_COMPUTED_COUNT": 1
+  },
+  "findings": "Current Dart implementation uses hardcoded 7-day expiry, maps all non-eligible states to Incomplete/More Info Needed, collapses academic and qualification matches, uses title substring heuristics for career family, requires non-null missionId blocking one-off signals, and fails to propagate missing profile fields."
+}

@@ -1,0 +1,41 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "QUICK START TO DASHBOARD ROUTE AUDIT",
+  "route_contract": {
+    "entry_point": "MissionRealmScreen -> OutlinedButton('QUICK START')",
+    "gate_condition": "recruitment.canQuickStart == true",
+    "execution_sequence": [
+      "1. SessionManager.registerAccessibleMissions([recruitment.examId], source: 'MISSION_REALM_START')",
+      "2. _saveMissionSelection(recruitment) -> SessionManager.saveMissionIdentity + state persistence",
+      "3. ref.invalidate(sessionUserProvider) -> rehydrates session user across UI",
+      "4. unawaited(KnowledgeEngine.instance.initialize(recruitment: recruitment, force: true)) -> non-blocking background knowledge engine init",
+      "5. context.go(AppRoutes.dashboard) -> immediate transition to Dashboard shell"
+    ],
+    "fail_safe_guarantee": "Academic engine errors or missing subject trees do NOT abort route transition or navigate back to Mission Realm."
+  },
+  "exact_mission_identity_verified": {
+    "jee_main_2026": {
+      "saved_exam_id": "jee_main_2026",
+      "saved_recruitment_id": "jee_main_2026",
+      "target_route": "/dashboard",
+      "verified": true
+    },
+    "neet_(ug)-2027": {
+      "saved_exam_id": "neet_(ug)-2027",
+      "saved_recruitment_id": "neet_(ug)-2027",
+      "target_route": "/dashboard",
+      "verified": true
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "saved_exam_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "saved_recruitment_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "target_route": "/dashboard",
+      "variant_required_satisfied": true,
+      "verified": true
+    }
+  },
+  "metrics": {
+    "ACADEMIC_NOT_READY_BLOCKS_DASHBOARD_COUNT": 0
+  },
+  "verdict": "QUICK_START_DASHBOARD_ROUTE_VERIFIED_AND_LOCKED"
+}

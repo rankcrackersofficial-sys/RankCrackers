@@ -1,0 +1,174 @@
+{
+  "gate": "GATE_48A1_CS1",
+  "generatedAt": "2026-09-10T10:58:41.799Z",
+  "article315_rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "48c_result": "SUPPORTED_MAJOR",
+      "48a1_status": "CLEAN_CANONICAL"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_EVIDENCE"
+    }
+  ],
+  "judicial_rows": [
+    {
+      "missionId": "delhi_judicial_service_prelims",
+      "48c_result": "STANDALONE_CONFIRMED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (PRODUCER_ROW_REQUIRED)"
+    },
+    {
+      "missionId": "rhc_civil_judge_prelims",
+      "48c_result": "STANDALONE_CONFIRMED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (PRODUCER_ROW_REQUIRED)"
+    },
+    {
+      "missionId": "mphc_civil_judge_prelims",
+      "48c_result": "STANDALONE_CONFIRMED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (PRODUCER_ROW_REQUIRED)"
+    },
+    {
+      "missionId": "gauhc_ajs_grade3_prelims",
+      "48c_result": "STANDALONE_CONFIRMED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (PRODUCER_ROW_REQUIRED)"
+    },
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (SOURCE_UNRESOLVED)"
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (SOURCE_UNRESOLVED)"
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (SOURCE_UNRESOLVED)"
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "48c_result": "SOURCE_UNRESOLVED",
+      "48a1_status": "HOLD_JUDICIAL_ROW (SOURCE_UNRESOLVED)"
+    }
+  ],
+  "tripura_tet": {
+    "missionId": "trbt_tripura_ttet",
+    "canonicalStatus": "CLEAN_CANONICAL",
+    "patternStatus": "HOLD_PATTERN",
+    "certified": false
+  }
+}

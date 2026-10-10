@@ -1,0 +1,56 @@
+{
+  "gate": "GATE 48A6R1 — PHYSICAL MATERIALIZATION READINESS CORRECTION",
+  "generatedAt": "2026-09-10T12:53:41.391Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a6r1_row_readiness_ledger.json",
+      "byteLength": 25497,
+      "sha256": "4e3a04adb40bcd95864b7ebdfbe7cab273b399f43013c1ee85486f43639d9cc4"
+    },
+    {
+      "fileName": "48a6r1_taxonomy_evidence_audit.json",
+      "byteLength": 40346,
+      "sha256": "632bbf86e0b61c0ae66175a2429ba9db8462e91efd09f910453bb72fc9abcb02"
+    },
+    {
+      "fileName": "48a6r1_three_projection_validator.json",
+      "byteLength": 91407,
+      "sha256": "b84c2879b8a64987b12131fbbab30b0db5733cf894811f85ae6da7267b0d962f"
+    },
+    {
+      "fileName": "48a6r1_corrected_batch0_plan.json",
+      "byteLength": 7818,
+      "sha256": "cd13f97aa7baa0d7263535603eebe2a82dadaf551db0dd028cccf6723ab0f7c9"
+    },
+    {
+      "fileName": "48a6r1_career_signal_status.json",
+      "byteLength": 36855,
+      "sha256": "2e5d1812cece5e633dda94cc9c5d9462721e10c0e489a356a47630f08b6bb959"
+    },
+    {
+      "fileName": "48a6r1_ready_set.json",
+      "byteLength": 53977,
+      "sha256": "3f01b472e6ea5af497c26e5d0d011086ef8ef57fc1cf326515f9098ec198aafb"
+    },
+    {
+      "fileName": "48a6r1_hold_set.json",
+      "byteLength": 46,
+      "sha256": "cd7325d153f36c30b48ce69006022cdcb48be1f0ed7d0fa1360cbec2c7c2cba1"
+    },
+    {
+      "fileName": "48a6r1_region_authority_batches.json",
+      "byteLength": 5637,
+      "sha256": "e600d41cc534639bac5a79110081f4129ef6a5444136b4474a27d689d3eb6832"
+    },
+    {
+      "fileName": "48a6r1_static_integrity.json",
+      "byteLength": 206,
+      "sha256": "4a4a607dff300342337f55b93782830812cdf38282a716ade54bdd7be744f0da"
+    },
+    {
+      "fileName": "48a6r1_final_report.md",
+      "byteLength": 2402,
+      "sha256": "d7d95c4f3c3f7e3c451c9f44aa152c2a0f013d44cac294f2d4314bd6f5559e55"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Fast-Forward FF06: Batch-04 Holds Resolved & Batch-05 Factory Scaling Report
+# Fast-Forward FF06: Batch-04 Holds Resolved & Batch-05 Factory Scaling Report (Sovereign NEET Edition)
 
 ## 1. Verdict
 **Verdict:** RC_AG_FF06_DIGIBOOK_FACTORY_FAST_FORWARDED_THROUGH_BATCH05_WITH_ZERO_UNKNOWN_RESIDUALS_PENDING_ONLY_EXTERNAL_AAF_ACCEPTANCE
@@ -19,15 +19,16 @@ All 30 items have been successfully promoted, bringing the total accepted count 
 
 ---
 
-## 3. Lane B: Batch-05 Assembly & Scaling
-- **BATCH_05_TARGET**: 1200
-- **BATCH_05_ELIGIBLE**: 1200
-- **BATCH_05_ASSEMBLED**: 1160
-- **BATCH_05_ACADEMIC_PASS**: 1160
-- **BATCH_05_EDITORIAL_PASS**: 1160
-- **BATCH_05_PERSONALIZATION_SAFE**: 1160
-- **BATCH_05_HELD**: 40
+## 3. Lane B: Batch-05 Assembly & Scaling (NEET-2027 Scoped)
+- **BATCH_05_TARGET**: 35
+- **BATCH_05_ELIGIBLE**: 35
+- **BATCH_05_ASSEMBLED**: 35
+- **BATCH_05_ACADEMIC_PASS**: 35
+- **BATCH_05_EDITORIAL_PASS**: 35
+- **BATCH_05_PERSONALIZATION_SAFE**: 35
+- **BATCH_05_HELD**: 0
 - **NEXT_BATCH_STATUS**: BATCH_06_READY
+- **STUDENT_VISIBLE_PROGRESSIVE_COVERAGE**: published: 35 / total: 35
 
 ---
 
@@ -37,7 +38,7 @@ All 30 items have been successfully promoted, bringing the total accepted count 
 - **CUMULATIVE_ACADEMIC_PASS**: 2920
 - **CUMULATIVE_EDITORIAL_PASS**: 2920
 - **CUMULATIVE_PERSONALIZATION_SAFE**: 2920
-- **CUMULATIVE_HELD**: 40
+- **CUMULATIVE_HELD**: 0
 - **HISTORICAL_FORCED_TEMPLATE_BLOCKS_REMOVED**: 320
 - **CURRENT_ACTIVE_FORCED_TEMPLATE_BLOCKS**: 0
 - **GENERIC_AI_PROSE_ACCEPTED**: 0

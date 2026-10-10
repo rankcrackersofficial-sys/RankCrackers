@@ -1,0 +1,111 @@
+{
+  "evidenceSchemaVersion": "6.0.0",
+  "draftStatus": "CANONICAL_DOWNLOAD_EVIDENCE_46D6R6",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "generatedAt": "2026-09-09T19:48:00.000Z",
+  "summary": {
+    "RPSC_UNIQUE_OFFICIAL_DOCUMENT_COUNT": 29,
+    "BYTE_VERIFIED_DOCUMENT_COUNT_AFTER": 1,
+    "PORTAL_TEXT_VERIFIED_DOCUMENT_COUNT_AFTER": 2,
+    "PORTAL_REGISTRY_VERIFIED_DOCUMENT_COUNT_AFTER": 26,
+    "CONTENT_LEVEL_VERIFIED_DOCUMENT_COUNT": 3,
+    "S2_REQUIRED_SYLLABUS_DOCUMENT_COUNT": 26,
+    "S2_REQUIRED_CONTENT_VERIFIED_COUNT": 0,
+    "S2_REQUIRED_REGISTRY_ONLY_COUNT": 26,
+    "DOWNLOAD_ATTEMPT_FAILURE_COUNT": 0,
+    "DYNAMIC_PORTAL_ONLY_COUNT": 26,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "byteVerifiedEvidence": [
+    {
+      "documentAuthorityKey": "doc_advt_06_2025_26",
+      "title": "Detailed Advertisement for School Lecturer (School Education) - 2025",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "actualDownloadHref": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+      "servedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+      "fileSizeBytes": 1824912,
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "evidenceStatus": "BYTE_VERIFIED",
+      "verificationMethod": "PHYSICAL_BYTE_DOWNLOAD_AND_HASH_COMPUTATION"
+    }
+  ],
+  "portalTextVerifiedEvidence": [
+    {
+      "documentAuthorityKey": "doc_advt_09_2025_26",
+      "title": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture / कृषि)",
+      "advertisementNumber": "Advt. No. 09/2025-26",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_rpsc_advt_09_2025_26_text_content",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "verificationMethod": "OFFICIAL_PORTAL_TEXT_INSPECTION"
+    },
+    {
+      "documentAuthorityKey": "doc_corrigendum_08_2025_26",
+      "title": "Corrigendum No. 08/2025-26 regarding School Lecturer (School Education) Exam 2025",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_rpsc_corrigendum_08_2025_26_text_content",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "verificationMethod": "OFFICIAL_PORTAL_TEXT_INSPECTION"
+    }
+  ],
+  "portalRegistryVerifiedEvidence": {
+    "officialRegistryUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+    "documentCount": 26,
+    "paper1Documents": [
+      {
+        "documentAuthorityKey": "doc_syllabus_p1_academic",
+        "title": "Paper-I: General Awareness and General Studies (Academic Lecturer Family)",
+        "publicationDate": "2025-09-15",
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED"
+      },
+      {
+        "documentAuthorityKey": "doc_syllabus_p1_phy_edu",
+        "title": "Paper-I: General Awareness and General Studies (Physical Education Family)",
+        "publicationDate": "2025-09-15",
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED"
+      },
+      {
+        "documentAuthorityKey": "doc_syllabus_p1_coach",
+        "title": "Paper-I: General Awareness and General Studies (Coach Family)",
+        "publicationDate": "2025-09-15",
+        "evidenceStatus": "PORTAL_REGISTRY_VERIFIED"
+      }
+    ],
+    "paper2Documents": [
+      { "documentAuthorityKey": "doc_syllabus_p2_hindi", "subject": "Hindi", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_english", "subject": "English", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_sanskrit", "subject": "Sanskrit", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_rajasthani", "subject": "Rajasthani", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_punjabi", "subject": "Punjabi", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_urdu", "subject": "Urdu", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_history", "subject": "History", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_geography", "subject": "Geography", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_political_science", "subject": "Political Science", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_economics", "subject": "Economics", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_sociology", "subject": "Sociology", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_public_administration", "subject": "Public Administration", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_physics", "subject": "Physics", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_chemistry", "subject": "Chemistry", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_biology", "subject": "Biology", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_mathematics", "subject": "Mathematics", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_commerce", "subject": "Commerce", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_music", "subject": "Music", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_drawing", "subject": "Drawing", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_home_science", "subject": "Home Science", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_agriculture", "subject": "Agriculture", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_phy_edu", "subject": "Physical Education", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" },
+      { "documentAuthorityKey": "doc_syllabus_p2_coach_shared", "subject": "Coach (Shared)", "evidenceStatus": "PORTAL_REGISTRY_VERIFIED" }
+    ]
+  }
+}

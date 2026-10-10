@@ -1,0 +1,39 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "chains": [
+    {
+      "cycleId": "SSC-CGL-2026",
+      "status": "CHAIN_PARTIAL",
+      "events": [
+        "BASE_NOTICE",
+        "APPLICATION_REOPENED"
+      ]
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "status": "CHAIN_PARTIAL",
+      "events": [
+        "BASE_NOTICE",
+        "APPLICATION_OPEN",
+        "CORRECTION_WINDOW",
+        "APPLICATION_REOPENED",
+        "ANSWER_KEY_RELEASED",
+        "RESULT_DECLARED"
+      ]
+    },
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "status": "CHAIN_PARTIAL",
+      "events": [
+        "BASE_NOTICE",
+        "CORRIGENDUM"
+      ]
+    }
+  ]
+}

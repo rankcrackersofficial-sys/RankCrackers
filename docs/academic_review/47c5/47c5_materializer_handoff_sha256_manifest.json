@@ -1,0 +1,45 @@
+{
+  "files": [
+    {
+      "relativePath": "materializer_handoff/authority_registry.json",
+      "byteLength": 3466,
+      "sha256": "0fb76aeda19b28444bd7556f85e7cdcece55520a1785a71afcf629c67b674aa2"
+    },
+    {
+      "relativePath": "materializer_handoff/cross_agency_registry.json",
+      "byteLength": 959,
+      "sha256": "f40c886c554e4bf6a0f1edf100e7301762f56af1ce12130e90f683d492bc2eed"
+    },
+    {
+      "relativePath": "materializer_handoff/mission_manifest.json",
+      "byteLength": 94179,
+      "sha256": "e9aa8ba4b26c2203c4a7478e95907879af231839a5766506fa2b769a7fda62b9"
+    },
+    {
+      "relativePath": "materializer_handoff/monitor_seed.json",
+      "byteLength": 13898,
+      "sha256": "db17ca85e4f37f8dabc37d119506327247a356101fa8813fc7fd2e25b61cd601"
+    },
+    {
+      "relativePath": "materializer_handoff/pyq_state_registry.json",
+      "byteLength": 4738,
+      "sha256": "5af688b5ccc5d6ed147282933a8ef67bcf50fc8920f3d3753b13b231949b6120"
+    },
+    {
+      "relativePath": "materializer_handoff/readiness_ledger.json",
+      "byteLength": 23213,
+      "sha256": "81ba250516f83da15730c932150a4224142529b04662abad1b752032a4f6e965"
+    },
+    {
+      "relativePath": "materializer_handoff/source_registry.json",
+      "byteLength": 2202,
+      "sha256": "1961e1b6ee294d61eb7310f8c6cd1e1839dfdcb146273b2baad3d12d1637045a"
+    },
+    {
+      "relativePath": "materializer_handoff/variant_registry.json",
+      "byteLength": 4953,
+      "sha256": "f7ece9ca986bc61da5774032f799278a65a16c63858fb6839410aa8c8a952bc8"
+    }
+  ],
+  "hashMismatchCount": 0
+}

@@ -1,0 +1,12 @@
+{
+  "states": [
+    "DISCOVERED",
+    "INTERESTED",
+    "APPLIED",
+    "APPLICATION_SUBMITTED",
+    "EXAM_APPEARED",
+    "WAITING_RESULT",
+    "NOT_INTERESTED"
+  ],
+  "officialCycleMutationAllowed": false
+}

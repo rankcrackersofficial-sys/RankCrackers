@@ -1,0 +1,10 @@
+{
+  "contractCode": "RC_47B3_DYNAMIC_AUTHORITY_REGISTRY_CONTRACT",
+  "executedAt": "2026-09-10T06:11:50.500Z",
+  "metrics": {
+    "HARDCODED_AUTHORITY_REGISTRY_LIMIT": false,
+    "DYNAMIC_AUTHORITY_REGISTRY_SUPPORTED": true
+  },
+  "policy": "Materializer accepts any governed authorityRegistry object/Map. Code requires zero modifications when new authorities are added.",
+  "assertionPass": true
+}

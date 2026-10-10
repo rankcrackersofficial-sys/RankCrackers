@@ -1,0 +1,28 @@
+{
+  "relationships": [
+    {
+      "missionId": "nta_ugc_net",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "conductingAuthorityKey": "auth_in_nta",
+      "clientAuthorityKey": "auth_in_ugc",
+      "sourceOwnerAuthorityKey": "auth_in_nta",
+      "officialOwnershipEvidenceRef": "https://nta.ac.in/NoticeBoardArchive"
+    },
+    {
+      "missionId": "nta_neet_ug",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "conductingAuthorityKey": "auth_in_nta",
+      "clientAuthorityKey": "auth_in_nmc",
+      "sourceOwnerAuthorityKey": "auth_in_nta",
+      "officialOwnershipEvidenceRef": "https://nta.ac.in/NoticeBoardArchive"
+    },
+    {
+      "missionId": "rpf_si",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "officialOwnershipEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "auditCode": "RC_47C8V_PYQ_TRUTH_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.390Z",
+  "metrics": {
+    "SYNTHETIC_PYQ_CHILD_COUNT": 0,
+    "PERSISTENT_PUBLIC_ARCHIVE_OVERCLAIM_COUNT": 0
+  },
+  "distribution": {
+    "OFFICIAL_ARCHIVE_LISTING_VERIFIED": 10,
+    "OFFICIAL_PYQ_ACCESS_RESTRICTED": 10,
+    "OFFICIAL_PORTAL_ONLY": 26,
+    "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY": 3
+  },
+  "verdict": "PASS (Zero synthetic PYQ records injected; authenticated and non-publishing authorities faithfully preserved)"
+}

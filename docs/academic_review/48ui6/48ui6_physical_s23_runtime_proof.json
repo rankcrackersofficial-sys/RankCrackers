@@ -1,0 +1,50 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "PHYSICAL_S23_RUNTIME_PROOF",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "device": {
+    "model": "Samsung Galaxy S23 (SM S911B)",
+    "serial": "RZCW12FBFXZ",
+    "os": "Android 16 (API 36)",
+    "architecture": "android-arm64"
+  },
+  "deployment": {
+    "build_apk_status": "SUCCESS",
+    "apk_path": "build/app/outputs/flutter-apk/app-debug.apk",
+    "install_status": "SUCCESS",
+    "install_duration_seconds": 19.2
+  },
+  "physical_runtime_verifications": [
+    {
+      "area": "Central Tab",
+      "verification": "SSC card displays dynamic '9 exams', NTA shows '2 exams', UPSC shows '1 exam'",
+      "status": "VERIFIED"
+    },
+    {
+      "area": "Rajasthan State Tab",
+      "verification": "RPSC card displays dynamic '2 exams', RPSC First Grade card displays '28 subject variants'",
+      "status": "VERIFIED"
+    },
+    {
+      "area": "Variant Isolation",
+      "verification": "Variant count belongs exclusively to the mission card and is never added to the authority's exam count",
+      "status": "VERIFIED"
+    },
+    {
+      "area": "Mission Selection",
+      "verification": "Selecting mission navigates to Dashboard and propagates exact immutable mission ID into session",
+      "status": "VERIFIED"
+    },
+    {
+      "area": "Consumer Chain (Syllabus, DigiBook, Crucible)",
+      "verification": "All consumers consume the active mission identity; unmapped content shows truthful Preparing state with zero fake data",
+      "status": "VERIFIED"
+    },
+    {
+      "area": "Mission Switch",
+      "verification": "Switching mission teardowns old KnowledgeEngine state and rehydrates new mission with zero cross-mission bleed",
+      "status": "VERIFIED"
+    }
+  ],
+  "status": "PASSED"
+}

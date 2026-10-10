@@ -1,0 +1,12 @@
+{
+  "auditCode": "RC_47C8V_IBPS_IDENTITY_AUDIT",
+  "executedAt": "2026-09-10T08:22:06.094Z",
+  "canonicalOfficersId": "ibps_crp_rrb_officers",
+  "canonicalOfficeAssistantId": "ibps_crp_rrb_office_assistant",
+  "hasOfficers": true,
+  "hasOfficeAssistant": true,
+  "metrics": {
+    "IBPS_ACTIVE_CANONICAL_CONFLICT_COUNT": 0
+  },
+  "auditPass": true
+}

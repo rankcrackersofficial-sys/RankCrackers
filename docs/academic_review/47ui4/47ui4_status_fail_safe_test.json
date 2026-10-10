@@ -1,0 +1,21 @@
+{
+  "unknown_status_rendered_available_count": 0,
+  "draft_rendered_available_count": 0,
+  "hold_rendered_available_count": 0,
+  "fail_safe_default_label": "Preparing",
+  "mapping_table": {
+    "LIVE": "Live",
+    "AVAILABLE": "Live",
+    "PREPARING": "Preparing",
+    "COMING_SOON": "Preparing",
+    "HOLD": "Paused",
+    "PAUSED": "Paused",
+    "DRAFT": "Preparing",
+    "ARCHIVED": "Archived",
+    "BLOCKED": "Paused",
+    "UNKNOWN_XYZ": "Preparing",
+    "": "Preparing",
+    "null": "Preparing"
+  },
+  "verdict": "FAIL_SAFE_STATUS_MAPPING_VERIFIED"
+}

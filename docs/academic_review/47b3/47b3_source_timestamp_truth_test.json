@@ -1,0 +1,11 @@
+{
+  "testCode": "RC_47B3_SOURCE_TIMESTAMP_TRUTH_TEST",
+  "executedAt": "2026-09-10T06:11:50.527Z",
+  "materializerExecutionTime": "2026-09-10T15:00:00.000Z",
+  "sourceEvidenceLastVerifiedDate": "2026-09-01T12:00:00.000Z",
+  "materializerOutputLastVerifiedDate": "2026-09-01T12:00:00.000Z",
+  "metrics": {
+    "FAKE_SOURCE_VERIFICATION_TIMESTAMP_COUNT": 0
+  },
+  "assertionPass": true
+}

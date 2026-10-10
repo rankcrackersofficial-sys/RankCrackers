@@ -1,0 +1,14 @@
+{
+  "registryCode": "RC_47A3_AUTHORITY_COUNT_RECONCILIATION",
+  "reconciliation": {
+    "RAW_47A_STATE_UT_AUTHORITY_RECORD_COUNT": 111,
+    "REMOVED_CLONED_CENTRAL_RECORD_COUNT": 1,
+    "RETAINED_ORIGINAL_STATE_UT_AUTHORITY_COUNT": 110,
+    "NEW_SUPPLEMENTAL_STATE_UT_AUTHORITY_COUNT": 1,
+    "FINAL_CANONICAL_STATE_UT_AUTHORITY_COUNT": 111,
+    "CENTRAL_AUTHORITY_COUNT": 4,
+    "TOTAL_CANONICAL_AUTHORITY_COUNT": 115,
+    "COUNT_RECONCILIATION_ERROR_COUNT": 0,
+    "auditExplanation": "47A2 final report mistakenly stated 110 State/UT authorities in its markdown text table while its registry had 111 (due to adding auth_in_la_dssrb). In 47A3, arithmetic reconciles exactly: 111 raw - 1 removed clone (auth_in_dn_upsc) + 1 supplemental (auth_in_la_dssrb) = 111 canonical State/UT authorities + 4 central authorities = 115 total."
+  }
+}

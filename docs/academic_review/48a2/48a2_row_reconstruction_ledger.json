@@ -1,0 +1,65 @@
+{
+  "totalMissionsTracked": 215,
+  "reconstructionMethod": "PHYSICAL_UPSTREAM_EVIDENCE_REBUILD",
+  "unresolvedDimensions": 0,
+  "heuristicClassificationCount": 0,
+  "defaultedAuthorityCount": 0,
+  "inventedAuthorityCount": 0,
+  "rows": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "jurisdictionType": "CENTRAL",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "CIVIL_SERVICES",
+      "sourceStatus": "CLEAN",
+      "variantStatus": "READY",
+      "patternStatus": "VERIFIED",
+      "selectionStatus": "READY",
+      "academicStatus": "GOVERNED"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "examFamily": "CIVIL_SERVICES",
+      "sourceStatus": "CLEAN",
+      "variantStatus": "READY",
+      "patternStatus": "VERIFIED",
+      "selectionStatus": "READY",
+      "academicStatus": "GOVERNED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "jurisdictionType": "CENTRAL",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENGINEERING_ENTRANCE",
+      "sourceStatus": "CLEAN",
+      "variantStatus": "READY",
+      "patternStatus": "VERIFIED",
+      "selectionStatus": "READY",
+      "academicStatus": "GOVERNED"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "jurisdictionType": "CENTRAL",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "MEDICAL_ENTRANCE",
+      "sourceStatus": "CLEAN",
+      "variantStatus": "READY",
+      "patternStatus": "VERIFIED",
+      "selectionStatus": "READY",
+      "academicStatus": "GOVERNED"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "sourceStatus": "CLEAN",
+      "variantStatus": "VERIFIED_VARIANTS_READY",
+      "patternStatus": "VERIFIED",
+      "selectionStatus": "READY",
+      "academicStatus": "GOVERNED"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "gate": "GATE_48CS2_SOURCE_IMPACT_ROUTER_CONTRACT",
+  "generatedAt": "2026-09-10T11:06:36.535Z",
+  "modulePath": "functions/services/source_impact_router.js",
+  "methodSignature": "routeSourceDocumentImpact(sourceDoc, options = {})",
+  "inputSchema": {
+    "type": "object",
+    "required": [
+      "provenance"
+    ],
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "documentType": {
+        "type": "string",
+        "enum": [
+          "ADVERTISEMENT",
+          "CORRIGENDUM",
+          "EXAM_SCHEDULE",
+          "RESULT",
+          "SYLLABUS"
+        ]
+      },
+      "permanentMissionId": {
+        "type": "string",
+        "description": "Optional permanent mission ID association"
+      },
+      "year": {
+        "type": "number",
+        "description": "Recruitment cycle year"
+      },
+      "provenance": {
+        "type": "object",
+        "required": [
+          "officialSourceIdentity",
+          "authorityBinding",
+          "documentIdentity",
+          "documentSha256",
+          "verificationState"
+        ],
+        "properties": {
+          "officialSourceIdentity": {
+            "type": "string"
+          },
+          "authorityBinding": {
+            "type": "string"
+          },
+          "documentIdentity": {
+            "type": "string"
+          },
+          "documentSha256": {
+            "type": "string"
+          },
+          "verificationState": {
+            "type": "string",
+            "enum": [
+              "VERIFIED_SOURCE",
+              "UNVERIFIED_STAGING",
+              "REJECTED"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "multiOutputSchema": {
+    "missionImpact": {
+      "operation": {
+        "type": "string",
+        "enum": [
+          "UPDATE_MISSION_SOURCE_LINKAGE",
+          "NO_OP"
+        ]
+      },
+      "permanentMissionId": {
+        "type": "string"
+      },
+      "authorityKey": {
+        "type": "string"
+      }
+    },
+    "careerSignalImpact": {
+      "operation": {
+        "type": "string",
+        "enum": [
+          "EMIT_CAREER_SIGNAL_EVENT",
+          "NO_OP"
+        ]
+      },
+      "event": {
+        "type": "object",
+        "description": "Canonical CareerSignalEvent instance"
+      },
+      "targetCycleId": {
+        "type": "string"
+      }
+    },
+    "academicImpactRef": {
+      "hasAcademicImpact": {
+        "type": "boolean"
+      },
+      "syllabusLinkage": {
+        "type": "object",
+        "nullable": true
+      }
+    },
+    "pyqPatternImpactRef": {
+      "hasPatternImpact": {
+        "type": "boolean"
+      },
+      "pyqLinkage": {
+        "type": "object",
+        "nullable": true
+      }
+    }
+  }
+}

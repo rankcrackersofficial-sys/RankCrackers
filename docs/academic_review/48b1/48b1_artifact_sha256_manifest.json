@@ -1,0 +1,14 @@
+{
+  "gate": "GATE_48B1_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T11:04:02.028Z",
+  "totalFiles": 7,
+  "files": {
+    "48b1_before_after_hashes.json": "e70e03f8008b1010f2f0cfae0d0658939bc89f6fa9a752d934680f942b10c04d",
+    "48b1_client_fallback_risk_audit.json": "0e1ed4135c6c5e7539168924bc5002b606e4fe78163a34fc046c4735cb4df5ee",
+    "48b1_final_report.md": "c746b506841bac1fd528e68b72337fd2a1c95d5fac2bc9b886d9ef4cec60fb50",
+    "48b1_governance_preservation.json": "5bad79aba764998c08558619f56a51f603acc937001a1f59301dd30f94ffd6ff",
+    "48b1_idempotency_proof.json": "dbe484e36c94fbb1f08978e5f92ea4dba4e32a4228d8c5392f2c2ff299d1b61e",
+    "48b1_live_batch0_mutation_manifest.json": "193cb8990b10d57d8dba8182f71f1bcce5e1258094c1c3ebaf381d76288f0b3a",
+    "48b1_test_orphan_cleanup_preflight.json": "f14bf2ca4a2fca911a4fe988bd8f5ca641d250c13fdc458d5d14bd269cef1b0c"
+  }
+}

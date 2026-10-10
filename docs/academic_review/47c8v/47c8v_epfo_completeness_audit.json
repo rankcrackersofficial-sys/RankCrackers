@@ -1,0 +1,48 @@
+{
+  "auditCode": "RC_47C8V_EPFO_COMPLETENESS_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.309Z",
+  "family": "EPFO recruitment-test family",
+  "metrics": {
+    "EPFO_CANDIDATE_COUNT": 2,
+    "EPFO_EXPLICIT_DISPOSITION_COUNT": 2,
+    "EPFO_MATERIALIZATION_ELIGIBLE_COUNT": 0,
+    "EPFO_SILENTLY_DROPPED_COUNT": 0
+  },
+  "candidates": [
+    {
+      "candidateId": "epfo_enforcement_officer_accounts_officer",
+      "displayName": "EPFO Enforcement Officer / Accounts Officer",
+      "clientAuthority": "Employees Provident Fund Organisation",
+      "canonicalMissionOwner": "EPFO recruitment family",
+      "conductingAuthority": "Union Public Service Commission",
+      "sourceOwner": "Union Public Service Commission",
+      "recurrenceEvidence": [
+        "UPSC EO/AO recruitment-test history",
+        "UPSC Special Advertisement 52/2025 recruitment test scheduled 2026"
+      ],
+      "objectiveExamStructure": "UPSC recruitment test; exact current scheme document requires final binding",
+      "currentOfficialSource": "https://www.upsc.gov.in/recruitment/recruitment-test/notices",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "crossAgency": true
+    },
+    {
+      "candidateId": "epfo_assistant_provident_fund_commissioner",
+      "displayName": "EPFO Assistant Provident Fund Commissioner",
+      "clientAuthority": "Employees Provident Fund Organisation",
+      "canonicalMissionOwner": "EPFO recruitment family",
+      "conductingAuthority": "Union Public Service Commission",
+      "sourceOwner": "Union Public Service Commission",
+      "recurrenceEvidence": [
+        "UPSC APFC recruitment test history",
+        "UPSC Special Advertisement 52/2025 recruitment test scheduled 2026"
+      ],
+      "objectiveExamStructure": "UPSC recruitment test; exact current scheme document requires final binding",
+      "currentOfficialSource": "https://www.upsc.gov.in/recruitment/recruitment-test/notices",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "materializationEligible": false,
+      "crossAgency": true
+    }
+  ],
+  "verdict": "PASS"
+}

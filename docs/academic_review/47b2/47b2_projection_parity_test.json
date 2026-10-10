@@ -1,0 +1,56 @@
+{
+  "testCode": "RC_47B2_PROJECTION_PARITY_TEST",
+  "executedAt": "2026-09-10T06:00:00.777Z",
+  "totalMissionsVerified": 4,
+  "parityCheckResults": [
+    {
+      "missionId": "jee_main_2026",
+      "realmPath": "mission_realms/jee_main_2026",
+      "recruitmentPath": "recruitments/jee_main_2026",
+      "catalogPath": "student_mission_catalog/jee_main_2026",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "realmPath": "mission_realms/upsc_cse_prelims",
+      "recruitmentPath": "recruitments/upsc_cse_prelims",
+      "catalogPath": "student_mission_catalog/upsc_cse_prelims",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "realmPath": "mission_realms/rpsc_ras_prelims",
+      "recruitmentPath": "recruitments/rpsc_ras_prelims",
+      "catalogPath": "student_mission_catalog/rpsc_ras_prelims",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "realmPath": "mission_realms/dsssb_delhi_tgt",
+      "recruitmentPath": "recruitments/dsssb_delhi_tgt",
+      "catalogPath": "student_mission_catalog/dsssb_delhi_tgt",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    }
+  ],
+  "overallParityPass": true
+}

@@ -1,0 +1,23 @@
+{
+  "rerunCode": "RC_47C7V_MATERIALIZER_VALIDATE_ONLY_RERUN",
+  "executedAt": "2026-09-10T07:42:50.789Z",
+  "materializerIdentity": {
+    "filePath": "functions/services/generic_mission_materializer.js",
+    "byteLength": 43995,
+    "sha256": "7c8627e27a674fc6f8373a5f27b5404e5d5741c990303fa6abd170edbbd1c7a5",
+    "SOURCE_VERSION_DRIFT": "NO"
+  },
+  "executionProof": {
+    "command": "materializer.validateManifest(manifestData, { context: \"ACCEPTED_MANIFEST\", authorityRegistry })",
+    "exitCode": 0,
+    "status": "PASS",
+    "errorMessage": null
+  },
+  "metrics": {
+    "MATERIALIZER_VALIDATE_ONLY_COUNT": 49,
+    "MATERIALIZER_REJECT_COUNT": 0
+  },
+  "schemaValidationScopeNote": "Schema validation proves structural syntactic compatibility only. It does NOT prove physical source truth, major-exam qualification, completeness, latest effective source, or variant truth.",
+  "warnings": [],
+  "errors": []
+}

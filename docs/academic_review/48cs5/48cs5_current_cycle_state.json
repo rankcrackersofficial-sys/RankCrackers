@@ -1,0 +1,41 @@
+{
+  "asOf": "2026-09-10T00:00:00+05:30",
+  "rows": [
+    {
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "UNRESOLVED",
+      "currentCycleStatus": "APPLICATION_CLOSED_EXACT_TIER_I_EXECUTION_STATE_UNRESOLVED",
+      "basis": [
+        {
+          "source": "SSC_CGL_NOTICE",
+          "fact": "Tier I only tentatively scheduled for August-September 2026"
+        },
+        {
+          "source": "SSC_CGL_REOPEN",
+          "fact": "Application and correction windows closed in June/July 2026"
+        }
+      ],
+      "safetyReason": "No exact official Tier-I execution, answer-key, or result notice recovered as of audit time."
+    },
+    {
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "opportunitySignalActive": "NO",
+      "processUpdateSignalActive": "NO",
+      "currentCycleStatus": "NTA_EXAM_CYCLE_RESULT_DECLARED_AND_FINAL_ANSWER_KEYS_RELEASED",
+      "basis": [
+        {
+          "source": "JEE_SESSION2_FINAL_KEY",
+          "fact": "Final answer key released"
+        },
+        {
+          "source": "JEE_SESSION2_RESULT",
+          "fact": "Result/NTA scores declared"
+        }
+      ],
+      "scopeNote": "Admission counselling/seat allocation is a separate domain and is not represented as an NTA exam-process signal."
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "auditCode": "RC_47C7V_LATEST_EFFECTIVE_SOURCE_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.817Z",
+  "metrics": {
+    "TOTAL_SOURCES_AUDITED": 49,
+    "CURRENT_EFFECTIVE_COUNT": 39,
+    "CURRENT_STRUCTURAL_SOURCE_COUNT": 6,
+    "HISTORICAL_PROVENANCE_COUNT": 4,
+    "SUPERSEDED_SOURCE_COUNT": 0,
+    "UNKNOWN_SOURCE_COUNT": 0
+  },
+  "sources": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_ifos",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "HISTORICAL_PROVENANCE"
+    },
+    {
+      "missionId": "upsc_cds",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_nda_na",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_capf_ac",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_ese",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_cms",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "HISTORICAL_PROVENANCE"
+    },
+    {
+      "missionId": "upsc_geo_scientist",
+      "authority": "auth_in_upsc",
+      "listingUrl": "https://www.upsc.gov.in/examinations/active-exams",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_gd",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_je",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authority": "auth_in_ssc",
+      "listingUrl": "https://ssc.gov.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nta_cuet_ug",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nta_cuet_pg",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nta_ugc_net",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nta_csir_ugc_net",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "HISTORICAL_PROVENANCE"
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "authority": "auth_in_nta",
+      "listingUrl": "https://nta.ac.in/NoticeBoardArchive",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "HISTORICAL_PROVENANCE"
+    },
+    {
+      "missionId": "rrb_ntpc",
+      "authority": "auth_in_rrb",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    },
+    {
+      "missionId": "rrb_level_1",
+      "authority": "auth_in_rrb",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    },
+    {
+      "missionId": "rrb_alp",
+      "authority": "auth_in_rrb",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    },
+    {
+      "missionId": "rrb_technician",
+      "authority": "auth_in_rrb",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    },
+    {
+      "missionId": "rrb_je",
+      "authority": "auth_in_rrb",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    },
+    {
+      "missionId": "rpf_si",
+      "authority": "auth_in_rpf",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "rpf_constable",
+      "authority": "auth_in_rpf",
+      "listingUrl": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ibps_po_mt",
+      "authority": "auth_in_ibps",
+      "listingUrl": "https://www.ibps.in/index.php/crp-updates/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ibps_csa",
+      "authority": "auth_in_ibps",
+      "listingUrl": "https://www.ibps.in/index.php/crp-updates/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ibps_so",
+      "authority": "auth_in_ibps",
+      "listingUrl": "https://www.ibps.in/index.php/crp-updates/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ibps_rrb_officer",
+      "authority": "auth_in_ibps",
+      "listingUrl": "https://www.ibps.in/index.php/crp-updates/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "ibps_rrb_office_assistant",
+      "authority": "auth_in_ibps",
+      "listingUrl": "https://www.ibps.in/index.php/crp-updates/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "sbi_po",
+      "authority": "auth_in_sbi",
+      "listingUrl": "https://sbi.co.in/web/careers",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "sbi_ja",
+      "authority": "auth_in_sbi",
+      "listingUrl": "https://sbi.co.in/web/careers",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "authority": "auth_in_rbi",
+      "listingUrl": "https://opportunities.rbi.org.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "authority": "auth_in_rbi",
+      "listingUrl": "https://opportunities.rbi.org.in/",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "authority": "auth_in_nabard",
+      "listingUrl": "https://www.nabard.org/careers-notices1.aspx?cid=693&id=26",
+      "documentUrl": null,
+      "documentType": "OFFICIAL_SOURCE_SURFACE",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "afcat",
+      "authority": "auth_in_indian_air_force",
+      "listingUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "documentUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "documentType": "CURRENT_GOVERNING_DOCUMENT",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "authority": "auth_in_indian_army",
+      "listingUrl": "https://www.joinindianarmy.nic.in/",
+      "documentUrl": null,
+      "documentType": "RECRUITMENT_PORTAL",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "navy_agniveer_ssr",
+      "authority": "auth_in_indian_navy",
+      "listingUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+      "documentUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_SSR_English.pdf",
+      "documentType": "CURRENT_GOVERNING_DOCUMENT",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "agniveervayu",
+      "authority": "auth_in_indian_air_force",
+      "listingUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "documentUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "documentType": "CURRENT_GOVERNING_DOCUMENT",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "cbse_ctet",
+      "authority": "auth_in_cbse",
+      "listingUrl": "https://ctet.nic.in/documents/",
+      "documentUrl": null,
+      "documentType": "CURRENT_INFORMATION_BULLETIN_LISTING",
+      "sourceClassification": "CURRENT_EFFECTIVE"
+    },
+    {
+      "missionId": "navy_agniveer_mr",
+      "authority": "auth_in_indian_navy",
+      "listingUrl": null,
+      "documentUrl": "https://www.joinindiannavy.gov.in/files/Advt_Agniveer_MR_English.pdf",
+      "documentType": "CURRENT_RECRUITMENT_NOTIFICATION",
+      "sourceClassification": "CURRENT_STRUCTURAL_SOURCE"
+    }
+  ]
+}

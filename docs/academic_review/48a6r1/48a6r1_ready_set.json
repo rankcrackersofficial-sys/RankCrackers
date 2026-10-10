@@ -1,0 +1,1585 @@
+{
+  "NET_NEW_READY_COUNT": 158,
+  "readySet": [
+    {
+      "canonicalMissionId": "afcat",
+      "displayName": "Air Force Common Admission Test",
+      "authorityId": "auth_in_indian_air_force",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "displayName": "Indian Air Force Agniveervayu Selection Test",
+      "authorityId": "auth_in_indian_air_force",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "displayName": "Arunachal Pradesh Public Service Combined Competitive Examination",
+      "authorityId": "auth_in_ar_appsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "displayName": "APPSC Group-I Services Examination",
+      "authorityId": "auth_in_ap_appsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "displayName": "APPSC Group-II Services Examination",
+      "authorityId": "auth_in_ap_appsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "displayName": "Combined Competitive Examination",
+      "authorityId": "auth_in_as_apsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "displayName": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityId": "auth_in_ap_apslprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "displayName": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityId": "auth_in_ap_apslprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "AP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "displayName": "Combined Graduate Level / Combined Secondary Level Examination",
+      "authorityId": "auth_in_ar_apssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "displayName": "Indian Army Agniveer Online CEE",
+      "authorityId": "auth_in_indian_army",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "displayName": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+      "authorityId": "auth_in_ar_police",
+      "jurisdictionType": "STATE",
+      "regionCode": "AR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "displayName": "BPSC Combined Competitive Examination (Prelims)",
+      "authorityId": "auth_in_br_bpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "displayName": "BPSC School Teacher Recruitment Examination",
+      "authorityId": "auth_in_br_bpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "displayName": "Bihar Police Police Sub-Inspector Examination",
+      "authorityId": "auth_in_br_bpssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "displayName": "Odisha Teacher Eligibility Test",
+      "authorityId": "auth_in_od_bse",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "displayName": "Bihar Secondary Teacher Eligibility Test",
+      "authorityId": "auth_in_br_bseb",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "displayName": "BSSC Graduate Level Combined Competitive Examination",
+      "authorityId": "auth_in_br_bssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "displayName": "BSSC Inter Level Combined Competitive Examination",
+      "authorityId": "auth_in_br_bssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "displayName": "Central Teacher Eligibility Test",
+      "authorityId": "auth_in_cbse",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "displayName": "Chhattisgarh State Service Examination",
+      "authorityId": "auth_in_cg_cgpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "CG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "displayName": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+      "authorityId": "auth_in_cg_cgvyapam",
+      "jurisdictionType": "STATE",
+      "regionCode": "CG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "displayName": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+      "authorityId": "auth_in_ch_admin",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "displayName": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+      "authorityId": "auth_in_ch_police",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "displayName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "authorityId": "auth_in_ch_police",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "displayName": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+      "authorityId": "auth_in_ch_admin",
+      "jurisdictionType": "UT",
+      "regionCode": "CH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "displayName": "Bihar Police Constable Recruitment Examination",
+      "authorityId": "auth_in_br_csbc",
+      "jurisdictionType": "STATE",
+      "regionCode": "BR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "displayName": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+      "authorityId": "auth_in_dn_ssb",
+      "jurisdictionType": "UT",
+      "regionCode": "DN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "displayName": "Combined Examination for Post Graduate Teachers (PGT)",
+      "authorityId": "auth_in_dl_dsssb",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "displayName": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+      "authorityId": "auth_in_dl_dsssb",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "displayName": "Combined Examination for Trained Graduate Teachers (TGT)",
+      "authorityId": "auth_in_dl_dsssb",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "displayName": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+      "authorityId": "auth_in_dl_dsssb",
+      "jurisdictionType": "UT",
+      "regionCode": "DL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "displayName": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+      "authorityId": "auth_in_ga_police",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "displayName": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+      "authorityId": "auth_in_gj_gprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "displayName": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+      "authorityId": "auth_in_gj_gpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "displayName": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+      "authorityId": "auth_in_ga_gpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "displayName": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+      "authorityId": "auth_in_gj_gpssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "displayName": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+      "authorityId": "auth_in_ga_gssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "GA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "displayName": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+      "authorityId": "auth_in_gj_gsssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "displayName": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+      "authorityId": "auth_in_hr_bseh",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "displayName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "authorityId": "auth_in_hr_hssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "displayName": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+      "authorityId": "auth_in_hr_hssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "displayName": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+      "authorityId": "auth_in_hp_hpbose",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "displayName": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+      "authorityId": "auth_in_hp_hppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "displayName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "authorityId": "auth_in_hp_hppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "displayName": "Group C Common Computer Based Test / Screening Examination",
+      "authorityId": "auth_in_hp_hprca",
+      "jurisdictionType": "STATE",
+      "regionCode": "HP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "displayName": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+      "authorityId": "auth_in_hr_hpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "displayName": "Common Eligibility Test (CET) Haryana - Group C",
+      "authorityId": "auth_in_hr_hssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "displayName": "Common Eligibility Test (CET) Haryana - Group D",
+      "authorityId": "auth_in_hr_hssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "HR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "displayName": "IBPS RRB Office Assistant",
+      "authorityId": "auth_in_ibps",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "displayName": "IBPS RRB Officer Scale I/II/III",
+      "authorityId": "auth_in_ibps",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "displayName": "IBPS CRP Customer Service Associate",
+      "authorityId": "auth_in_ibps",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "displayName": "IBPS CRP PO/MT",
+      "authorityId": "auth_in_ibps",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "displayName": "IBPS CRP Specialist Officer",
+      "authorityId": "auth_in_ibps",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "displayName": "Jharkhand Teacher Eligibility Test",
+      "authorityId": "auth_in_jh_jac",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "displayName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "authorityId": "auth_in_jk_jkssb",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "displayName": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+      "authorityId": "auth_in_jk_jkssb",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "displayName": "Combined Competitive Examination (CCE) - Preliminary Examination",
+      "authorityId": "auth_in_jk_jkpsc",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "displayName": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+      "authorityId": "auth_in_jk_jkssb",
+      "jurisdictionType": "UT",
+      "regionCode": "JK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "displayName": "Jharkhand Combined Civil Services Examination (Prelims)",
+      "authorityId": "auth_in_jh_jpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "displayName": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+      "authorityId": "auth_in_tr_jrbt",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "displayName": "Jharkhand General Graduate Level Combined Competitive Examination",
+      "authorityId": "auth_in_jh_jssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "JH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "displayName": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+      "authorityId": "auth_in_ka_kea",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "displayName": "KPSC Gazetted Probationers Examination (KAS)",
+      "authorityId": "auth_in_ka_kpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "displayName": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+      "authorityId": "auth_in_kl_kpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "displayName": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+      "authorityId": "auth_in_kl_kpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "displayName": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+      "authorityId": "auth_in_kl_kpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "displayName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "authorityId": "auth_in_kl_kpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "KL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "displayName": "KSP Civil Police Constable (CPC)",
+      "authorityId": "auth_in_ka_ksp",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "displayName": "KSP Police Sub-Inspector (PSI - Civil)",
+      "authorityId": "auth_in_ka_ksp",
+      "jurisdictionType": "STATE",
+      "regionCode": "KA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "displayName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "authorityId": "auth_in_la_police",
+      "jurisdictionType": "UT",
+      "regionCode": "LA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "displayName": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+      "authorityId": "auth_in_la_dssrb",
+      "jurisdictionType": "UT",
+      "regionCode": "LA",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "displayName": "Meghalaya Police Central Recruitment Board Combined Examination",
+      "authorityId": "auth_in_ml_crb",
+      "jurisdictionType": "STATE",
+      "regionCode": "ML",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "displayName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "authorityId": "auth_in_mz_police",
+      "jurisdictionType": "STATE",
+      "regionCode": "MZ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "displayName": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+      "authorityId": "auth_in_mp_mpesb",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "displayName": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+      "authorityId": "auth_in_mp_mpesb",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "displayName": "Madhya Pradesh Police Constable Recruitment Test",
+      "authorityId": "auth_in_mp_mpesb",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "displayName": "Madhya Pradesh State Service Examination",
+      "authorityId": "auth_in_mp_mppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "MP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "displayName": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+      "authorityId": "auth_in_mh_mpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "displayName": "Manipur Combined Competitive Examination (MCSCC)",
+      "authorityId": "auth_in_mn_mpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "MN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "displayName": "Meghalaya Civil Services Combined Examination",
+      "authorityId": "auth_in_ml_mpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "ML",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "displayName": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+      "authorityId": "auth_in_mz_mpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "MZ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "displayName": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+      "authorityId": "auth_in_mh_mpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "displayName": "Maharashtra Teacher Eligibility Test (MAHATET)",
+      "authorityId": "auth_in_mh_mscepune",
+      "jurisdictionType": "STATE",
+      "regionCode": "MH",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "displayName": "NABARD Grade A Assistant Manager",
+      "authorityId": "auth_in_nabard",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "displayName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "authorityId": "auth_in_nl_police",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "displayName": "Indian Navy Agniveer MR / INET",
+      "authorityId": "auth_in_indian_navy",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "displayName": "Indian Navy Agniveer SSR / INET",
+      "authorityId": "auth_in_indian_navy",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "displayName": "Nagaland Civil Services, Police Service & Allied Services Examination",
+      "authorityId": "auth_in_nl_npsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "displayName": "Combined Staff Recruitment Examination (CSRE)",
+      "authorityId": "auth_in_nl_nssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "NL",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "displayName": "Joint CSIR UGC NET",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "displayName": "CUET PG",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENTRANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "displayName": "CUET UG",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENTRANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "displayName": "UGC NET",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "TEACHING_FELLOWSHIP",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "displayName": "Odisha Civil Services Examination (Prelims)",
+      "authorityId": "auth_in_od_opsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "displayName": "OSSC Combined Graduate Level Recruitment Examination",
+      "authorityId": "auth_in_od_ossc",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "displayName": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+      "authorityId": "auth_in_od_osssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "displayName": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+      "authorityId": "auth_in_pb_ppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "displayName": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+      "authorityId": "auth_in_pb_psssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "displayName": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+      "authorityId": "auth_in_pb_police",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "displayName": "Punjab State Teacher Eligibility Test (PSTET)",
+      "authorityId": "auth_in_pb_pseb",
+      "jurisdictionType": "STATE",
+      "regionCode": "PB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "displayName": "RBI Assistant",
+      "authorityId": "auth_in_rbi",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "displayName": "RBI Grade B",
+      "authorityId": "auth_in_rbi",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "displayName": "Rajasthan Eligibility Examination for Teachers (REET)",
+      "authorityId": "auth_in_rj_rbse",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "displayName": "RPF Constable",
+      "authorityId": "auth_in_rpf",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "displayName": "RPF Sub-Inspector",
+      "authorityId": "auth_in_rpf",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "displayName": "RRB Assistant Loco Pilot",
+      "authorityId": "auth_in_rrb",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "displayName": "RRB Junior Engineer",
+      "authorityId": "auth_in_rrb",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "displayName": "RRB Level 1",
+      "authorityId": "auth_in_rrb",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "displayName": "RRB NTPC",
+      "authorityId": "auth_in_rrb",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "displayName": "RRB Technician",
+      "authorityId": "auth_in_rrb",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "RAILWAY_RECRUITMENT",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "displayName": "Rajasthan Common Eligibility Test (Graduate Level)",
+      "authorityId": "auth_in_rj_rssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "displayName": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+      "authorityId": "auth_in_rj_rssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "displayName": "SBI Junior Associate",
+      "authorityId": "auth_in_sbi",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "displayName": "SBI Probationary Officer",
+      "authorityId": "auth_in_sbi",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "displayName": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+      "authorityId": "auth_in_gj_seb",
+      "jurisdictionType": "STATE",
+      "regionCode": "GJ",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "displayName": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+      "authorityId": "auth_in_as_slprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "displayName": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+      "authorityId": "auth_in_as_slrc",
+      "jurisdictionType": "STATE",
+      "regionCode": "AS",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "displayName": "Sikkim State Civil Services Combined Competitive Examination",
+      "authorityId": "auth_in_sk_spsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "SK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "displayName": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+      "authorityId": "auth_in_sk_spsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "SK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "displayName": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+      "authorityId": "auth_in_od_ssb",
+      "jurisdictionType": "STATE",
+      "regionCode": "OD",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "displayName": "TGPSC Group-I Services Examination",
+      "authorityId": "auth_in_tg_tgpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "displayName": "TGPSC Group-II Services Examination",
+      "authorityId": "auth_in_tg_tgpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "displayName": "TGPSC Group-III Services Examination",
+      "authorityId": "auth_in_tg_tgpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "displayName": "TGPSC Group-IV Services Examination",
+      "authorityId": "auth_in_tg_tgpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "displayName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+      "authorityId": "auth_in_tg_tgslprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "displayName": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+      "authorityId": "auth_in_tg_tgslprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "displayName": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+      "authorityId": "auth_in_tn_tnpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "displayName": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+      "authorityId": "auth_in_tn_tnpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "displayName": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+      "authorityId": "auth_in_tn_tnpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "displayName": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+      "authorityId": "auth_in_tn_tntrb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "displayName": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+      "authorityId": "auth_in_tn_tnusrb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "displayName": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+      "authorityId": "auth_in_tn_tnusrb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TN",
+      "scopeType": "STATEWIDE",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "displayName": "Tripura Combined Competitive Examination (TCS & TPS)",
+      "authorityId": "auth_in_tr_tpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "displayName": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+      "authorityId": "auth_in_tr_trbt",
+      "jurisdictionType": "STATE",
+      "regionCode": "TR",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "displayName": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+      "authorityId": "auth_in_tg_treirb",
+      "jurisdictionType": "STATE",
+      "regionCode": "TG",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_AND_EDUCATION",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "displayName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "authorityId": "auth_in_uk_uksssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "displayName": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+      "authorityId": "auth_in_uk_ukpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "displayName": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+      "authorityId": "auth_in_uk_ubse",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "displayName": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+      "authorityId": "auth_in_uk_ukpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_ADMINISTRATIVE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "displayName": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+      "authorityId": "auth_in_uk_ukpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "displayName": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+      "authorityId": "auth_in_uk_uksssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UK",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "displayName": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+      "authorityId": "auth_in_up_pnp",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "displayName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "authorityId": "auth_in_up_upprpb",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "displayName": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+      "authorityId": "auth_in_up_upprpb",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "displayName": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+      "authorityId": "auth_in_up_uppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "displayName": "Central Armed Police Forces (ACs) Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "displayName": "Combined Defence Services Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "displayName": "Combined Medical Services Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "MEDICAL",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "displayName": "Engineering Services Preliminary Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENGINEERING",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "displayName": "Combined Geo-Scientist Preliminary Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "SCIENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "displayName": "National Defence Academy and Naval Academy Examination",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": "IN",
+      "scopeType": "ALL_INDIA",
+      "examFamily": "POLICE_AND_DEFENCE",
+      "lane": "NATIONAL"
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "displayName": "Preliminary Eligibility Test (PET)",
+      "authorityId": "auth_in_up_upsssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "displayName": "West Bengal Primary Teacher Eligibility Test",
+      "authorityId": "auth_in_wb_wbbpe",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "displayName": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+      "authorityId": "auth_in_wb_wbcssc",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "TEACHING_RECRUITMENT",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "displayName": "West Bengal Police Constable Recruitment Examination",
+      "authorityId": "auth_in_wb_wbprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "displayName": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+      "authorityId": "auth_in_wb_wbprb",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "BANKING_AND_FINANCE",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "displayName": "WBPSC Clerkship Examination",
+      "authorityId": "auth_in_wb_wbpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "SUBORDINATE_SERVICES",
+      "lane": "STATE_UT"
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "displayName": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+      "authorityId": "auth_in_wb_wbpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "WB",
+      "scopeType": "STATEWIDE",
+      "examFamily": "STATE_CIVIL_SERVICES",
+      "lane": "STATE_UT"
+    }
+  ]
+}

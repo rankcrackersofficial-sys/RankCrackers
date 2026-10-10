@@ -1,0 +1,83 @@
+{
+  "gate": "GATE_48B2_RPSC_RAS_EXACT_REPAIR",
+  "targetMissionId": "rpsc_ras_prelims",
+  "displayName": "RPSC RAS – Prelims",
+  "defectsResolved": [
+    "Populated missing state: \"Rajasthan\" in student_mission_catalog",
+    "Separated jurisdictionType (STATE), regionCode (RJ), scopeType (STATE_SPECIFIC), examFamily (CIVIL_SERVICES), and displayCategory (State Civil Services)",
+    "Eliminated 48B1 draft defect: did NOT overwrite examCategory with scope value \"STATE_SPECIFIC\"",
+    "Preserved legacy compatible examCategory: \"civil_services\""
+  ],
+  "projections": {
+    "student_mission_catalog": {
+      "beforeSha256": "da59e260d9cf1651726b8169d47897b2b76adefa9e878746cecefe90d9947872",
+      "afterSha256": "7e36dc48490ee6654a5ea5f64a08bc3b2501a7b31edba774bc0d9db8a37740bc",
+      "mutatedFields": {
+        "state": {
+          "before": null,
+          "after": "Rajasthan"
+        },
+        "scopeType": {
+          "before": null,
+          "after": "STATE_SPECIFIC"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "CIVIL_SERVICES"
+        },
+        "jurisdictionType": {
+          "before": null,
+          "after": "STATE"
+        }
+      }
+    },
+    "recruitments": {
+      "beforeSha256": "6948c5baa2188b82df5635e454c2f99db2f98baf5b46e75023a06f9e14911eb3",
+      "afterSha256": "86352f7dc001089270a1393b39434745614840ff0407083439e07070bc00363e",
+      "mutatedFields": {
+        "scopeType": {
+          "before": null,
+          "after": "STATE_SPECIFIC"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "CIVIL_SERVICES"
+        },
+        "jurisdictionType": {
+          "before": null,
+          "after": "STATE"
+        }
+      }
+    },
+    "mission_realms": {
+      "beforeSha256": "98a135e762526b889cc00b52a3c4a3aee902e917a9de5570b1461fe3391b6448",
+      "afterSha256": "fb5630540869642e7e7fe15827302523acb200229c79bbfd11a5a54a27f803e6",
+      "mutatedFields": {
+        "organization": {
+          "before": "Rajasthan",
+          "after": "Rajasthan Public Service Commission"
+        },
+        "scopeType": {
+          "before": null,
+          "after": "STATE_SPECIFIC"
+        },
+        "examFamily": {
+          "before": null,
+          "after": "CIVIL_SERVICES"
+        }
+      }
+    }
+  },
+  "governancePreservation": {
+    "createdAt": {
+      "_seconds": 1788965752,
+      "_nanoseconds": 375000000
+    },
+    "source": {
+      "missionRealmPath": "mission_realms/rpsc_ras_prelims",
+      "sourceDocumentId": "rpsc_ras_prelims",
+      "mirrorPhase": "GOVERNED_46D9_MATERIALIZATION"
+    },
+    "OVERWRITE_COUNT": 0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "gate": "GATE 48UI8 — DYNAMIC NET-NEW MISSION CLIENT COMPATIBILITY + DRAFT NON-LEAK",
+  "generatedAt": "2026-09-10T13:47:30.035Z",
+  "manifestFiles": [
+    {
+      "fileName": "48ui8_student_visibility_source_trace.json",
+      "byteLength": 609,
+      "sha256": "63c23a31a6845b45a73fbbc01351fb6204ba6eeae5769a5a93afa3d9f2ff4c9d"
+    },
+    {
+      "fileName": "48ui8_internal_draft_non_leak.json",
+      "byteLength": 495,
+      "sha256": "5bb9c13eb99d73179755e3aa91c6bc910413c55f6a86cfc9e24667925933101e"
+    },
+    {
+      "fileName": "48ui8_dynamic_net_new_fixture.json",
+      "byteLength": 636,
+      "sha256": "fb39872d0fe6b27823d0740bc9c9ee023fac63f3c108bf43bb02a85c40e8ca42"
+    },
+    {
+      "fileName": "48ui8_quick_start_shell_proof.json",
+      "byteLength": 440,
+      "sha256": "ef66830ff4d312af7ff4088f25afb0157d8e257cd46f1a04094ef8784d27c999"
+    },
+    {
+      "fileName": "48ui8_smart_start_fail_closed.json",
+      "byteLength": 276,
+      "sha256": "fffab16bc2b92b9af4f6d195dd93a0a08b2ae2fa1012968f4627fe5d6c44bc9e"
+    },
+    {
+      "fileName": "48ui8_authority_region_contract.json",
+      "byteLength": 456,
+      "sha256": "a9c2ba3516f32c23ab064f3009abbc471df6b3dc04b4533ce3a122dcd73eec0d"
+    },
+    {
+      "fileName": "48ui8_existing_mission_regression.json",
+      "byteLength": 807,
+      "sha256": "9dd2adbf666e77f3c71a395d5aea82dd5cf4673f42b5dbd6829babff580b2f2e"
+    },
+    {
+      "fileName": "48ui8_test_results.json",
+      "byteLength": 241,
+      "sha256": "eb2ec81945be143bb0daf5089871999b92f30470e74c3ef69b7a6dce787fe567"
+    },
+    {
+      "fileName": "48ui8_physical_s23_proof.json",
+      "byteLength": 728,
+      "sha256": "9cc40f821748a6e27d86537d5dbc6281f6166e3294a0c7f322e020cbfaf91dab"
+    },
+    {
+      "fileName": "48ui8_final_report.md",
+      "byteLength": 2565,
+      "sha256": "3b1a877ebbfcd83904e4e4f3acbedf8f985c22e255da4d54c9c842835c3eede7"
+    }
+  ]
+}

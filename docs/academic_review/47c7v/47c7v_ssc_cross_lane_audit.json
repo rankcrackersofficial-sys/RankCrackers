@@ -1,0 +1,33 @@
+{
+  "auditCode": "RC_47C7V_SSC_CROSS_LANE_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.807Z",
+  "metrics": {
+    "SSC_CANONICAL_MISSION_COUNT": 9,
+    "SSC_STATE_NATIONAL_COLLISION_COUNT": 0,
+    "SSC_GD_DUPLICATE_COUNT": 0
+  },
+  "verifiedMissions": [
+    "ssc_cgl",
+    "ssc_chsl",
+    "ssc_mts_havaldar",
+    "ssc_gd",
+    "ssc_cpo",
+    "ssc_je",
+    "ssc_stenographer",
+    "ssc_hindi_translators",
+    "ssc_selection_post"
+  ],
+  "stateUtPointerVerification": [
+    {
+      "stateUtCandidate": "Delhi Police Sub-Inspector",
+      "resolvedCanonicalTarget": "ssc_cpo",
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    },
+    {
+      "stateUtCandidate": "Ladakh Selection Post",
+      "resolvedCanonicalTarget": "ssc_selection_post",
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED"
+    }
+  ],
+  "verdict": "PASS (All 9 SSC missions verified; zero duplicate ssc_gd_constable; zero state collisions)"
+}

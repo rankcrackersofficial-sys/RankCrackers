@@ -1,0 +1,207 @@
+file	hunkCount	classification	isVisual	autoImportAllowed	note
+THE_CRUCIBLE_TEST_ARENA_CONSTITUTION_V3.md	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-hdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-hdpi/ic_launcher_foreground.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-hdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-mdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-mdpi/ic_launcher_foreground.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-mdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-hdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-hdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-mdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-mdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xxhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xxhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xxxhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-night-xxxhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xhdpi/ic_launcher_foreground.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxhdpi/ic_launcher_foreground.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxxhdpi/android12splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxxhdpi/ic_launcher_foreground.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable-xxxhdpi/splash.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/drawable/android12_splash_icon.xml	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/mipmap-hdpi/ic_launcher.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/mipmap-mdpi/ic_launcher.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/mipmap-xhdpi/ic_launcher.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/values-night-v31/styles.xml	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+android/app/src/main/res/values-v31/styles.xml	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+assets/data/digibook_runtime/digibook_manifest.json	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+assets/images/logo.png	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+docs/governance/audits/product_integration_06/CANONICAL_INTEGRATION_EXECUTION_REPORT.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/00_PREFLIGHT.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/01_CRUCIBLE_CONSTITUTION_AUDIT.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/02_S01_S42_CANONICAL_BLUEPRINT.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/03_FULL_1125_COVERAGE_AUDIT.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/04_SUBJECT_STARVATION_REPORT.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/05_STUDENT_LANGUAGE_AUDIT.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/06_NAVIGATION_AND_ROUTE_TRUTH.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/07_ASSESSMENT_RUNTIME_SECURITY.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/08_TEST_RESULTS.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/09_PHYSICAL_S23_PROOF.md	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_crucible_product_r10/CHECKLIST_MUTATION_RESULT.json	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/01_LESSON_LAUNCH_RUNTIME_FAILURE_TRACE.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/02_DIGIBOOK_ROUTE_TYPE_CONTRACT_AUDIT.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/03_ALL_56_LESSON_LAUNCH_MATRIX.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_lesson_launch_crash.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_library_returned.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_reader_chem_atom.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_reader_math_sets.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_reader_overview_apparatus.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_reader_si_units.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_reader_si_units_concepts.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_digibook_lesson_launch_14/s23_screen_start.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_integration_06r1/01_CRUCIBLE_TEST_AUTHORITY_MATRIX.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_integration_06r1/02_DIGIBOOK_51_VS_56_IDENTITY_RECONCILIATION.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/01_SYLLABUS_REGRESSION_GIT_AUDIT.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/02_DIGIBOOK_66_MAPPING_FORENSIC_AUDIT.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/03_APP_ICON_HASH_BASELINE.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/04_GARBAGE_FILE_CENSUS.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/05_APPROVED_GARBAGE_DELETION_MANIFEST.tsv	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/s23_digibook_library_56_lessons.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/s23_physics_atoms.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/s23_physics_topics.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/s23_physics_units.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+docs/patch_safety/rc_product_canonical_recovery_13/s23_syllabus.png	1	EVIDENCE_ONLY	NO	YES	Mission 14 audit evidence and defect register
+lib/core/backend/crucible_repository.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/engines/crucible_coverage_engine.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/firebase/firestore_service.dart	32	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/knowledge/hierarchical_aggregation_engine.dart	4	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/knowledge/knowledge_engine.dart	7	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/models/canonical_academic_ref.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/router/app_router.dart	3	REQUIRED_TYPED_ROUTE_FIX	NO	YES	Typed DigiBookLaunchArgs routing contract eliminating MicroTopicNode cast crash
+lib/core/utils/app_routes.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/core/utils/temporal_normalizer.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/battle_engine.dart	4	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/crucible_canonical_schedules.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/crucible_clock_engine.dart	17	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/crucible_engine.dart	5	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/crucible_master_engine.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/core/leaderboard_engine.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/engine/logic/tactical_schedule_engine.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/crucible_cluster.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/crucible_node.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/crucible_protocol_state.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/crucible_schedule.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/mission_crucible_blueprint.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/student_crucible_ledger.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/models/tactical_schedule.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/providers/crucible_state_provider.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/screens/battle_arena_screen.dart	4	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/screens/crucible_screen.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/battle_engine_card.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/blueprint_node.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/mission_blueprint_card.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/rebuild_zone_card.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/roadmap_day.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/sacred_micro_test_chamber.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/tactical_progress_bar.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/tactical_roadmap_card.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/crucible/presentation/widgets/tactical_schedule_card.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/dashboard/presentation/screens/dashboard_screen.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/dashboard/presentation/widgets/battle_tools/battle_tool_card.dart	10	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/dashboard/presentation/widgets/battle_tools/battle_tools_grid.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/data/subject_master.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/models/professional_credential.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/models/warrior_profile.dart	10	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/providers/warrior_profile_provider.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/screens/career_profile_screen.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/services/profile_completion_engine.dart	3	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/deep_profile/services/warrior_profile_service.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/core/digibook_engine.dart	5	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/core/digibook_worker_trigger.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/data/models/digibook_chapter.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/data/models/digibook_revision.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/data/models/digibook_unit.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/data/repositories/digibook_repository.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/domain/services/digibook_canonical_bridge_service.dart	2	SAFE_RUNTIME_FIX	NO	YES	Resolves canonical GU and physical lesson mapping
+lib/features/digibook/models/digibook_content.dart	2	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/models/digibook_session.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/digibook/presentation/screens/digi_book_node_adapter_screen.dart	2	SUPERSEDED	NO	NO	Dormant adapter shell superseded by direct typed routing
+lib/features/digibook/presentation/widgets/visual/digibook_visual_registry.dart	1	ACADEMIC_VISUAL_CHANGE_REQUIRES_REVIEW	YES	NO	Visual simulation hunk. MUST NOT be auto-imported to avoid Bohr atom cross-lesson contamination.
+lib/features/digibook/presentation/widgets/visual/interactive_bohr_atom_model_visual.dart	2	ACADEMIC_VISUAL_CHANGE_REQUIRES_REVIEW	YES	NO	Visual simulation hunk. MUST NOT be auto-imported to avoid Bohr atom cross-lesson contamination.
+lib/features/personalization/domain/engines/crucible_personalization_blueprint_engine.dart.master-pre-CRUCIBLE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/crucible_personalized_item_selector.dart.master-pre-CRUCIBLE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/digibook_personalization_route_engine.dart.master-pre-DIGIBOOK_REVALIDATION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_fluency_engine.dart.master-pre-CORE_STATE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_learning_state_engine.dart.master-pre-CORE_STATE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_mastery_engine.dart.master-pre-CORE_STATE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_prerequisite_state_engine.dart.master-pre-CORE_STATE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_retention_engine.dart.master-pre-CORE_STATE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_revision_queue_engine.dart.master-pre-REVISION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/student_treatment_decision_engine.dart.master-pre-TREATMENT.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/engines/syllabus_personalization_route_engine.dart.master-pre-SYLLABUS.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/crucible_personalization_blueprint.dart.master-pre-CRUCIBLE.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/digibook_personalization_route.dart.master-pre-DIGIBOOK_REVALIDATION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/student_evidence_event.dart.master-pre-FOUNDATION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/student_learning_state.dart.master-pre-FOUNDATION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/student_revision_queue.dart.master-pre-REVISION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/student_treatment_decision.dart.master-pre-TREATMENT.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/models/syllabus_personalization_route.dart.master-pre-SYLLABUS.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/personalization/domain/policies/student_evidence_policy.dart.master-pre-FOUNDATION.bak	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/features/syllabus/presentation/screens/syllabus_screen.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/shared/providers/session_provider.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/shared/session/session_manager.dart	9	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+lib/shared/widgets/formatted_math_text.dart	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+pubspec.yaml	1	SAFE_RUNTIME_FIX	NO	YES	Runtime helper or model update
+test/crucible_c1_runtime_test.dart	17	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/crucible_c2_micro_factory_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/crucible_c3_student_scoped_clock_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/auth/state_and_logout_authority_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_98day_ring_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_physical_preflight.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_r10_constitution_and_security_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_r10c_hardening_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_read_access_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_recovery_10b_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_screen_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/crucible/crucible_timestamp_deserialization_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/deep_profile/career_profile_education_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/digibook/digibook_canonical_bridge_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Resolves canonical GU and physical lesson mapping
+test/features/digibook/digibook_revision_pointer_switch_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/digibook/physics_unit1_digibook_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/digibook/rc_digibook_lesson_launch_test.dart	6	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/knowledge/digibook_ready_gate_fail_closed_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/knowledge/knowledge_engine_provider_isolation_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/notifications/g2_routing_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/opportunities/career_signals_logic_test.dart	4	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/opportunities/career_signals_matrix_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/opportunities/opportunities_loading_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/opportunities/opportunities_terminal_state_test.dart	4	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/cache_invalidation_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/coaching_runtime_scenario_driver_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/idempotency_dedup_test.dart	4	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/isolation_leakage_test.dart	5	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/pers_isolation_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/crucible_personalization_blueprint_engine_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/crucible_personalized_item_selector_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/digibook_personalization_integration_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/personalized_practice_route_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_coaching_support_engine_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_evidence_event_test.dart	4	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_evidence_policy_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_fluency_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_learning_state_engine_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_learning_state_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_mastery_engine_test.dart	5	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_personalization_analytics_engine_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_prerequisite_state_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_retention_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart	7	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_revision_queue_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_schedule_support_engine_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/student_treatment_decision_engine_test.dart	2	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/personalization/recovery/syllabus_personalization_route_engine_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/syllabus/right_practice_truth_and_drilldown_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/syllabus/syllabus_hierarchy_ux_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/syllabus/syllabus_knowledge_node_reachability_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/syllabus/syllabus_search_and_navigation_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/test_arena/test_arena_mission_adaptive_test.dart	3	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite
+test/features/test_arena/test_arena_runtime_test.dart	1	SAFE_RUNTIME_FIX	NO	YES	Mission 14 regression and verification test suite

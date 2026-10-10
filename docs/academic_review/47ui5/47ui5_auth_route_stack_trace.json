@@ -1,0 +1,19 @@
+{
+  "gate": "47UI5",
+  "route_law": {
+    "unauthenticated": "/login (UnifiedIdentityScreen - Login Mode)",
+    "authenticated_incomplete_profile": "/unified_identity (Profile Setup Mode)",
+    "authenticated_complete_profile_no_mission": "/mission_realm (Mission Realm Screen)",
+    "authenticated_complete_profile_valid_mission": "/dashboard (Dashboard Screen)"
+  },
+  "back_navigation_rules": {
+    "realm_as_root": "Back button pops nothing; system back does not reveal Login; header provides explicit Logout action",
+    "realm_from_dashboard": "System back returns to /dashboard via safe pop",
+    "login_in_backstack": "Cleared via context.go() replacement upon successful authentication"
+  },
+  "metrics": {
+    "AUTHENTICATED_REALM_BACK_TO_LOGIN_COUNT": 0,
+    "LOGIN_ROUTE_BELOW_AUTHENTICATED_ROOT_COUNT": 0
+  },
+  "status": "PASSED"
+}

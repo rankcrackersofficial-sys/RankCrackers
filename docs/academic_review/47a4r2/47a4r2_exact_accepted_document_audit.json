@@ -1,0 +1,155 @@
+{
+  "auditCode": "RC_47A4R2_EXACT_ACCEPTED_DOCUMENT_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.914Z",
+  "exactAcceptedCountRecomputed": 12,
+  "metrics": {
+    "EXACT_ACCEPTED_COUNT_RECOMPUTED": 12,
+    "FALSE_EXACT_ACCEPTED_COUNT": 0
+  },
+  "exactRows": [
+    {
+      "missionId": "apsc_cce",
+      "evidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://apsc.nic.in",
+          "officialSourceTitle": "APSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ]
+    },
+    {
+      "missionId": "slrc_adre",
+      "evidence": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Over 1,800,000 candidates registered for 26,000 Class III and IV direct recruitment posts."
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://site.sebaonline.org",
+          "officialSourceTitle": "Assam State Level Recruitment Commission ADRE Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 26,000 posts."
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://assam.gov.in",
+          "officialSourceTitle": "SLRC Assam (ADRE) Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ]
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "evidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://appsc.gov.in",
+          "officialSourceTitle": "APPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ]
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "evidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://arunpol.nic.in",
+          "officialSourceTitle": "Arunachal Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ]
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "evidence": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://megpolice.gov.in",
+          "officialSourceTitle": "Meghalaya Police CRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services."
+        }
+      ]
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "evidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://nssb.nagaland.gov.in",
+          "officialSourceTitle": "NSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "evidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ]
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "evidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://spsc.sikkim.gov.in",
+          "officialSourceTitle": "SPSC Sikkim Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ]
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "evidence": [
+        {
+          "evidenceType": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+          "officialSourceUrl": "https://tpsc.tripura.gov.in",
+          "officialSourceTitle": "TPSC Statutory Charter and Examination Rules",
+          "verifiedFact": "State/UT premier civil service and subordinate executive gateway conducted under Article 315 constitutional mandate."
+        }
+      ]
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "evidence": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jrbtripura.com",
+          "officialSourceTitle": "JRBT Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments."
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "evidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ]
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "evidence": [
+        {
+          "evidenceType": "STATEWIDE_TEACHER_ELIGIBILITY_GATEWAY",
+          "officialSourceUrl": "https://trb.tripura.gov.in",
+          "officialSourceTitle": "TRBT Teacher Eligibility & Recruitment Guidelines",
+          "verifiedFact": "Mandatory statutory qualification required for school teacher appointments across government institutions."
+        }
+      ]
+    }
+  ]
+}

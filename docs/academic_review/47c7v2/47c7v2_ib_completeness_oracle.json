@@ -1,0 +1,53 @@
+{
+  "oracleCode": "RC_47C7V2_IB_COMPLETENESS_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.279Z",
+  "targetAuthority": "Intelligence Bureau (IB), Ministry of Home Affairs",
+  "candidateCount": 2,
+  "candidates": [
+    {
+      "candidateId": "ib_acio_grade_2",
+      "officialRecruitmentTitle": "Assistant Central Intelligence Officer Grade-II/Executive Examination (ACIO-II/Exe)",
+      "clientAuthority": "Intelligence Bureau (IB)",
+      "administrativeMinistry": "Ministry of Home Affairs (MHA), Government of India",
+      "conductingBody": "Ministry of Home Affairs (MHA) / Intelligence Bureau Examination Cell",
+      "officialSourcePortal": "https://www.mha.gov.in/",
+      "examinationStructure": {
+        "tier1": "Online Objective MCQ Examination: 100 Questions, 100 Marks, 60 Minutes (Current Affairs 20, General Studies 20, Numerical Aptitude 20, Reasoning/Logical Aptitude 20, English 20), Negative marking: 1/4th (-0.25)",
+        "tier2": "Descriptive Paper: 50 Marks (Essay 30, English Comprehension & Précis 20), 60 Minutes",
+        "tier3": "Interview / Personality Test: 100 Marks"
+      },
+      "recurrenceEvidence": "Major recurring national recruitment conducted across cycles (2014, 2017, 2020-21, 2023-24) with over 500,000+ candidates.",
+      "currentStatus": "ACTIVE_RECURRING_CENTRAL_RECRUITMENT",
+      "possibleRankCrackersDisposition": "MAJOR_MISSION_ACCEPTED (or MAJOR_REVIEW_REQUIRED pending dedicated source monitor binding)"
+    },
+    {
+      "candidateId": "ib_security_assistant_mts",
+      "officialRecruitmentTitle": "Security Assistant/Executive & Multi-Tasking Staff (General) Examination (SA/Exe & MTS/Gen)",
+      "clientAuthority": "Intelligence Bureau (IB)",
+      "administrativeMinistry": "Ministry of Home Affairs (MHA), Government of India",
+      "conductingBody": "MHA / IB Examination Cell",
+      "officialSourcePortal": "https://www.mha.gov.in/",
+      "examinationStructure": {
+        "tier1": "Online Objective MCQ Examination: 100 Questions, 100 Marks, 60 Minutes (General Awareness 40, Quantitative Aptitude 20, Numerical/Analytical/Logical Ability & Reasoning 20, English 20), Negative marking: 1/4th",
+        "tier2": "Offline descriptive translation test (50 Marks) + Spoken ability (SA/Exe only, 10 Marks)",
+        "tier3": "Interview / Personality Test (SA/Exe only, 50 Marks)"
+      },
+      "recurrenceEvidence": "Regular recurring subordinate intelligence recruitment (cycles in 2018, 2022-23, 2023-24).",
+      "currentStatus": "ACTIVE_RECURRING_CENTRAL_RECRUITMENT",
+      "possibleRankCrackersDisposition": "MAJOR_MISSION_ACCEPTED (or MAJOR_REVIEW_REQUIRED)"
+    }
+  ],
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_IB_DISPOSITION_MANDATORY",
+      "assertion": "47C8 must declare an explicit disposition for the Intelligence Bureau recruitment family in its completeness ledger or manifest.",
+      "allowedDispositions": [
+        "MAJOR_MISSION_ACCEPTED",
+        "MAJOR_REVIEW_REQUIRED",
+        "NOT_MAJOR_CURRENT_SCOPE",
+        "DEFERRED_WITH_EXACT_SOURCE_BLOCKER"
+      ],
+      "failCondition": "Intelligence Bureau family silently omitted without disposition."
+    }
+  ]
+}

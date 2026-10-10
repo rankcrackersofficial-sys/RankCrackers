@@ -1,0 +1,96 @@
+{
+  "auditCode": "RC_47C7V_NATIONAL_COMPLETENESS_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.814Z",
+  "metrics": {
+    "TOTAL_NATIONAL_RECRUITING_AUTHORITIES": 13,
+    "TOTAL_CANDIDATE_MISSIONS": 49,
+    "ACCEPTED_MAJOR_MISSIONS": 45,
+    "REVIEW_REQUIRED_MISSIONS": 4,
+    "UNEXPLAINED_COMPLETENESS_GAP_COUNT": 2
+  },
+  "authorityCoverageLedger": [
+    {
+      "authority": "UPSC",
+      "missionCount": 9,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "SSC",
+      "missionCount": 9,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "NTA",
+      "missionCount": 8,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "RRB",
+      "missionCount": 5,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "RPF",
+      "missionCount": 2,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "IBPS",
+      "missionCount": 5,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "SBI",
+      "missionCount": 2,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "RBI",
+      "missionCount": 2,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "NABARD",
+      "missionCount": 1,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "Indian Air Force",
+      "missionCount": 2,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "Indian Army",
+      "missionCount": 1,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "Indian Navy",
+      "missionCount": 2,
+      "status": "COMPLETE"
+    },
+    {
+      "authority": "CBSE",
+      "missionCount": 1,
+      "status": "COMPLETE"
+    }
+  ],
+  "excludedCategories": [
+    {
+      "category": "UPSC CSE Mains",
+      "reason": "Written/descriptive subjective stage outside objective MCQ test engine scope."
+    },
+    {
+      "category": "Departmental Promotion Examinations",
+      "reason": "Internal non-public cadre advancement examinations."
+    },
+    {
+      "category": "Contractual / Ad-hoc recruitments",
+      "reason": "Non-recurring specialized vacancies."
+    }
+  ],
+  "unexplainedGaps": [
+    "Intelligence Bureau (MHA) major recruitment family silently dropped in 47C6.",
+    "EPFO (Employees Provident Fund Organisation) recruitment family silently dropped in 47C6."
+  ]
+}

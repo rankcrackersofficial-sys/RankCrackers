@@ -1,0 +1,29 @@
+RC_46D13_POST_46D12_BEFORE_DIGEST
+CapturedAt: 2026-09-09T15:55:29.207Z
+TotalMissions: 15
+=== MISSIONS SUMMARY ===
+Mission: jee_main_2026 | ProfExists: true | RecExists: true | CatExists: true | Docs: 3 | Atoms: 430
+Mission: neet_(ug)-2027 | ProfExists: true | RecExists: true | CatExists: true | Docs: 2 | Atoms: 219
+Mission: RPSC_FIRST_GRADE2026_2026_1782713222215 | ProfExists: true | RecExists: true | CatExists: true | Docs: 29 | Atoms: 0
+Mission: upsc_cse_prelims | ProfExists: true | RecExists: true | CatExists: true | Docs: 2 | Atoms: 0
+Mission: ssc_cgl | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_je | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_selection_post | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_chsl | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_stenographer | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_hindi_translators | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_mts_havaldar | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_cpo | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: ssc_gd | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: uppsc_pcs_prelims | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+Mission: rpsc_ras_prelims | ProfExists: true | RecExists: true | CatExists: true | Docs: 1 | Atoms: 0
+
+=== QUEUES SUMMARY ===
+Queue: ai_queue | Count: 575 | Statuses: {"reviewing":166,"approved":56,"leased":1,"waitingdependency":180,"queued":3,"failed":109,"completed":57,"processing":3}
+Queue: s2_jobs | Count: 0 | Statuses: {}
+Queue: academic_jobs | Count: 0 | Statuses: {}
+Queue: extraction_jobs | Count: 0 | Statuses: {}
+Queue: academic_factory_jobs | Count: 0 | Statuses: {}
+Queue: jobs | Count: 0 | Statuses: {}
+Queue: factory_jobs | Count: 0 | Statuses: {}
+Queue: academic_batches | Count: 0 | Statuses: {}

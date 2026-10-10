@@ -1,0 +1,55 @@
+{
+  "version": "1.0.0-48cs1",
+  "generatedAt": "2026-09-10T12:00:00.000Z",
+  "entities": {
+    "Mission": {
+      "definition": "Permanent exam / preparation identity. Mission is NOT a recruitment year. Remains active across multiple recruitment cycles.",
+      "examples": [
+        "RPSC First Grade",
+        "UPSC Civil Services",
+        "JEE Main",
+        "NEET UG"
+      ],
+      "lifecycle": "Permanent identity. A completed recruitment cycle does NOT archive or delete the permanent mission.",
+      "keyFields": [
+        "missionId",
+        "displayName",
+        "authorityId",
+        "jurisdictionType",
+        "regionCode",
+        "examFamily",
+        "canonicalStatus"
+      ]
+    },
+    "RecruitmentCycle": {
+      "definition": "Logical entity representing a specific official recruitment cycle instance over time for a mission (or one-off).",
+      "cardinality": "0, 1, or many per Mission over time.",
+      "keyFields": [
+        "cycleId",
+        "missionId",
+        "authorityId",
+        "officialAdvertisementIdentity",
+        "notificationDate",
+        "applicationWindow",
+        "examStatus",
+        "resultStatus",
+        "cycleStatus"
+      ],
+      "rule": "Do NOT use permanent mission ID itself as cycle ID. Cycle ID must be distinct (e.g. cycle_rpsc_1st_grade_2024_01)."
+    },
+    "CareerSignalEvent": {
+      "definition": "Time-bound official event derived from official notifications, corrigenda, exam schedules, answer keys, or result declarations.",
+      "keyFields": [
+        "eventId",
+        "cycleId",
+        "missionId",
+        "signalCategory",
+        "eventType",
+        "officialSourceUrl",
+        "eventTimestamp",
+        "effectiveDate",
+        "expiryDate"
+      ]
+    }
+  }
+}

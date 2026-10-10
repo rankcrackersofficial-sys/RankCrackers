@@ -1,0 +1,50 @@
+{
+  "snapshotCode": "RC_47C7V2_MATERIALIZER_CONTRACT_SNAPSHOT",
+  "executedAt": "2026-09-10T07:56:44.289Z",
+  "engineIdentity": {
+    "filePath": "functions/services/generic_mission_materializer.js",
+    "absolutePath": "c:\\RankCrackers\\RankCrackers-55\\functions\\services\\generic_mission_materializer.js",
+    "byteLength": 43995,
+    "sha256": "7c8627e27a674fc6f8373a5f27b5404e5d5741c990303fa6abd170edbbd1c7a5",
+    "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe"
+  },
+  "invariantsEnforcedByCurrentEngine": [
+    {
+      "invariant": "IMMUTABLE_PILOT_SAFETY",
+      "rule": "jee_main_2026, neet_(ug)-2027, and RPSC pilot are immutable in production."
+    },
+    {
+      "invariant": "FAIL_CLOSED_APPLY_MODE",
+      "rule": "runGenericMissionMaterializer with mode=APPLY throws APPLY_MODE_DISABLED."
+    },
+    {
+      "invariant": "DYNAMIC_AUTHORITY_PURITY",
+      "rule": "Governed contexts (ACCEPTED_MANIFEST, UNFROZEN_INTEGRATION_PREFLIGHT, LIVE_INTEGRATION_PREFLIGHT) forbid fixture seeding."
+    },
+    {
+      "invariant": "CENTRAL_ALIAS_REJECTION",
+      "rule": "auth_central_* aliases fail-closed in governed contexts."
+    },
+    {
+      "invariant": "AUTHORITY_GROUP_KEY_PURITY",
+      "rule": "authorityGroupKey must be read directly from authority.authorityGroupKey, never derived via string replacement."
+    },
+    {
+      "invariant": "DOMAIN_VALIDATION_STRICTNESS",
+      "rule": "URL hostname parsed and matched against authority.officialDomains or structured cross-agency recruitment."
+    },
+    {
+      "invariant": "VARIANT_SELECTION_GATE",
+      "rule": "variantRequired=true with empty/unresolved variants forces missionSelectionReady=false."
+    },
+    {
+      "invariant": "COMPULSORY_PAPER_EXCLUSION",
+      "rule": "Compulsory papers (paper_1_gs, csat_paper_2, etc.) cannot be modeled as selectable variants."
+    },
+    {
+      "invariant": "ZERO_TIMESTAMP_DRIFT",
+      "rule": "Semantic hashing excludes volatile timestamps; unchanged records produce NO_OP on second pass."
+    }
+  ],
+  "antiTamperAssertion": "The independent 47C8 verifier will execute against this exact materializer engine hash. Any attempt by producer to weaken validator rules will be detected as SOURCE_VERSION_DRIFT."
+}

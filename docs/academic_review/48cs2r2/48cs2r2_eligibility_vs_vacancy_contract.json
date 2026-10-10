@@ -1,0 +1,48 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Separation of Recruitment Eligibility and Vacancy Applicability Contract",
+  "problemStatement": "In 48CS2R1, having zero matching vacancies forced matchResultState to NOT_ELIGIBLE, falsely implying legal disqualification.",
+  "solutionArchitecture": {
+    "dimensions": [
+      {
+        "dimensionName": "eligibilityStatus",
+        "definition": "Evaluates statutory criteria (education, age, domicile, discipline).",
+        "possibleStates": [
+          "ELIGIBLE",
+          "LIKELY_ELIGIBLE",
+          "MORE_INFORMATION_NEEDED",
+          "NOT_ELIGIBLE",
+          "NOT_EVALUATED"
+        ]
+      },
+      {
+        "dimensionName": "vacancyApplicabilityStatus",
+        "definition": "Evaluates availability of vacancies for the candidate reservation/quota profile.",
+        "possibleStates": [
+          "VACANCIES_AVAILABLE",
+          "NO_APPLICABLE_VACANCIES",
+          "VACANCIES_UNSPECIFIED",
+          "VACANCIES_PENDING_RESERVATION_DATA"
+        ]
+      }
+    ]
+  },
+  "useCaseDemonstration": {
+    "scenario": "Candidate meets all educational, age, and domicile criteria, but current recruitment only advertises SC/ST special backlog vacancies.",
+    "candidateProfile": {
+      "category": "UR",
+      "age": 25,
+      "qualification": "GRADUATION"
+    },
+    "rulesOutcome": "All rules passed (AGE_MAX passed, QUALIFICATION_MIN passed).",
+    "vacanciesOutcome": "0 vacancies applicable for UR.",
+    "engineOutput": {
+      "eligibilityStatus": "ELIGIBLE",
+      "vacancyApplicabilityStatus": "NO_APPLICABLE_VACANCIES",
+      "userMessage": "You meet all eligibility requirements for this recruitment. However, no vacancies are currently advertised for your category quota bucket."
+    }
+  },
+  "verificationMetric": {
+    "VACANCY_ZERO_FORCED_LEGAL_INELIGIBILITY_COUNT": 0
+  }
+}

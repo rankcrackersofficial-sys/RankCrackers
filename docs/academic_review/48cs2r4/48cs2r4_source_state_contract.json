@@ -1,0 +1,17 @@
+{
+  "contractName": "Source Document Lifecycle & State Isolation Contract",
+  "gate": "GATE 48CS2R4",
+  "invariant": "URL_ONLY_TREATED_AS_SHA_VERIFIED_COUNT = 0",
+  "description": "Enforces strict cryptographic boundary between discovered URLs and verified ingested documents.",
+  "states": {
+    "URL_FOUND": "URL has been discovered from web/portal scrape. No file bytes or hash verified. Cannot back official rules.",
+    "METADATA_INDEXED": "HTTP headers or notice metadata indexed. File content unverified.",
+    "BYTES_INGESTED": "Raw binary stream downloaded and stored in staging buffer. Hash pending.",
+    "SHA_VERIFIED": "Cryptographic SHA-256 computed on bytes and matched against authority/immutable record. Only this state can back canonical events and rules."
+  },
+  "isolationRules": [
+    "A document with sourceState === URL_FOUND retains URL_FOUND even if caller supplies shaVerified: true.",
+    "documentSha256 is stripped to null if state is URL_FOUND or METADATA_INDEXED.",
+    "SHA_VERIFIED requires valid 64-character lowercase hex string matching /^[a-f0-9]{64}$/."
+  ]
+}

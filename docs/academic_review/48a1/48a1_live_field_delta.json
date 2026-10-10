@@ -1,0 +1,103 @@
+{
+  "gate": "GATE_48A1_CS1",
+  "generatedAt": "2026-09-10T10:58:41.801Z",
+  "live_union_count": 16,
+  "complete_3_projection_count": 15,
+  "orphan_count": 1,
+  "live_vs_master_field_comparison": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "live_projection_status": "COMPLETE",
+      "master_canonical_status": "CLEAN_CANONICAL",
+      "field_deltas": {
+        "smartEntryEnabled": {
+          "live": true,
+          "master": false,
+          "reason": "Disabled in Master pending academic/crucible readiness"
+        },
+        "quickEntryEnabled": {
+          "live": true,
+          "master": false,
+          "reason": "Disabled in Master pending academic readiness"
+        },
+        "variants": {
+          "live_in_SMC": "variables array (28 items)",
+          "master": "variantRequired = true, 28 governed variants bound"
+        }
+      }
+    },
+    {
+      "missionId": "jee_main_2026",
+      "live_projection_status": "COMPLETE",
+      "master_canonical_status": "CLEAN_CANONICAL",
+      "field_deltas": {
+        "smartEntryEnabled": {
+          "live": true,
+          "master": false,
+          "reason": "Disabled in Master pending crucible readiness"
+        },
+        "quickEntryEnabled": {
+          "live": true,
+          "master": false,
+          "reason": "Disabled in Master pending delivery readiness"
+        }
+      }
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "live_projection_status": "COMPLETE",
+      "master_canonical_status": "CLEAN_CANONICAL",
+      "field_deltas": {
+        "examCategory": {
+          "live": "category_pending",
+          "master": "medical_entrance",
+          "reason": "Category stub fixed"
+        },
+        "organization": {
+          "live": "Rajasthan",
+          "master": "National Testing Agency",
+          "reason": "State contamination cleansed"
+        },
+        "publicationStatus": {
+          "live": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE",
+          "master": "PREPARING",
+          "reason": "Lifecycle normalized"
+        }
+      }
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "live_projection_status": "COMPLETE",
+      "master_canonical_status": "CLEAN_CANONICAL",
+      "field_deltas": {
+        "examScope": {
+          "live": "STATE_ELIGIBLE",
+          "master": "STATE_SPECIFIC",
+          "reason": "Scope type normalized"
+        },
+        "examFamily": {
+          "live": "undefined",
+          "master": "CIVIL_SERVICES",
+          "reason": "Injected missing examFamily"
+        },
+        "studentHierarchyPath": {
+          "live": "undefined in MR",
+          "master": "STATE/RJ/RPSC/rpsc_ras_prelims",
+          "reason": "Hierarchy path injected"
+        }
+      }
+    },
+    {
+      "missionId": "test_mission_catalog_bridge",
+      "live_projection_status": "ORPHAN (recruitments only)",
+      "master_canonical_status": "EXCLUDED_LIVE_ORPHAN",
+      "field_deltas": {
+        "status": {
+          "live": "draft in recruitments",
+          "master": "NOT_IN_MASTER",
+          "reason": "Legacy test artifact held for maintenance script cleanup"
+        }
+      }
+    }
+  ]
+}

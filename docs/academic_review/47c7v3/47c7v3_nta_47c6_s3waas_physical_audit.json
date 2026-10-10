@@ -1,0 +1,13 @@
+{
+  "auditCode": "RC_47C7V3_NTA_S3WAAS_PHYSICAL_AUDIT",
+  "executedAt": "2026-09-10T08:22:34.776Z",
+  "metrics": {
+    "ACTIVE_NTA_MISSION_COUNT": 2,
+    "S3WAAS_SOURCE_REFERENCE_COUNT": 4,
+    "S3WAAS_UNIQUE_DOCUMENT_COUNT": 4,
+    "S3WAAS_BOUND_DOCUMENT_COUNT": 4,
+    "S3WAAS_UNBOUND_DOCUMENT_COUNT": 0
+  },
+  "s3waasHost": "cdnbbsr.s3waas.gov.in",
+  "bindingPolicy": "S3WAAS document URLs are permitted as document storage endpoints when bound to exact NTA mission locators."
+}

@@ -1,0 +1,61 @@
+{
+  "gate": "GATE 48A4 — FINAL CANONICAL OVERLAY + LIVE IDENTITY BINDING",
+  "generatedAt": "2026-09-10T12:16:44.455Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a4_article315_overlay_resolution.json",
+      "byteLength": 3778,
+      "sha256": "ef8c080822cb6efd3c76b39230ed0bbb54fe794d3e8d988d6ee33b9dd82cf977"
+    },
+    {
+      "fileName": "48a4_judicial_overlay_resolution.json",
+      "byteLength": 1243,
+      "sha256": "6b5734633798ca6e139da88fa0d64ca991861aad18a4f99a1d1fda22b1d8b30e"
+    },
+    {
+      "fileName": "48a4_tripura_identity_binding.json",
+      "byteLength": 397,
+      "sha256": "cf05030e4a2c56d79988787de03012d260af2f96d26cb949171df0e0e2d078f4"
+    },
+    {
+      "fileName": "48a4_rpsc_first_grade_live_binding.json",
+      "byteLength": 468,
+      "sha256": "dd7ba7919c0ac2be4c45a86eec4a47c6a6ab3e274c920b70ca133c220e3d3714"
+    },
+    {
+      "fileName": "48a4_all_live_identity_bindings.json",
+      "byteLength": 2066,
+      "sha256": "53c3aafc8500d6291e293ca2b3169467aab6faaaa632f83bb74645a579389026"
+    },
+    {
+      "fileName": "48a4_exclusive_top_level_sets.json",
+      "byteLength": 5838,
+      "sha256": "ded638bad8f1ab33e604d059e8cdaf302c5f963a9d30120deab8972f1ea751ee"
+    },
+    {
+      "fileName": "48a4_readiness_dimension_matrix.json",
+      "byteLength": 56391,
+      "sha256": "be9525a3a3f4a9696274e5e520400a1881059b9efb059d473e2924068c19fc29"
+    },
+    {
+      "fileName": "48a4_materialization_eligibility.json",
+      "byteLength": 53009,
+      "sha256": "44e0568ec438ebca3988f6897abec178db9c81e19efc967a632dcdceb01577a5"
+    },
+    {
+      "fileName": "48a4_count_reconciliation.json",
+      "byteLength": 257,
+      "sha256": "673655fde69f0a548d9c9f4d163cdf455c4a1bcbb445c2b5f9940dbb8e9417d2"
+    },
+    {
+      "fileName": "48a4_final_control_manifest.json",
+      "byteLength": 43544,
+      "sha256": "5777e0c5a2daae6bccf9c36b1f88594041b74d839ba2955bf276da17f6615010"
+    },
+    {
+      "fileName": "48a4_final_report.md",
+      "byteLength": 2155,
+      "sha256": "d4a3401be114c0d7ceabdfe2771a52d751bcd6fd5e05eec76bd064f622b13c6b"
+    }
+  ]
+}

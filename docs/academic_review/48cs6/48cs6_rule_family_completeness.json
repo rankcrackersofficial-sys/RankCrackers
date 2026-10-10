@@ -1,0 +1,124 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "pilots": {
+    "ssc_cgl": [
+      {
+        "family": "AGE",
+        "status": "VERIFIED_COMPLETE"
+      },
+      {
+        "family": "EDUCATION",
+        "status": "VERIFIED_COMPLETE"
+      },
+      {
+        "family": "DISCIPLINE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "DOMICILE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "EXPERIENCE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "REGISTRATION",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "PHYSICAL_STANDARD",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "CATEGORY_OR_RESERVATION",
+        "status": "VERIFIED_COMPLETE"
+      },
+      {
+        "family": "SPECIAL_CERTIFICATE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "OTHER_OFFICIAL_CONDITION",
+        "status": "VERIFIED_COMPLETE"
+      }
+    ],
+    "jee_main_2026": [
+      {
+        "family": "AGE",
+        "status": "NOT_APPLICABLE_VERIFIED",
+        "evidenceRuleId": "JEE26-AGE-01"
+      },
+      {
+        "family": "EDUCATION",
+        "status": "RULE_PRESENT_VERIFIED",
+        "evidenceRuleIds": [
+          "JEE26-QE-01",
+          "JEE26-YEAR-01"
+        ]
+      },
+      {
+        "family": "DISCIPLINE",
+        "status": "RULE_PRESENT_VERIFIED",
+        "evidenceRuleId": "JEE26-SUBJECT-01"
+      },
+      {
+        "family": "QUALIFYING_STATE",
+        "status": "RULE_PRESENT_VERIFIED",
+        "evidenceRuleId": "JEE26-STATE-01"
+      },
+      {
+        "family": "ADMISSION_CAPACITY",
+        "status": "SEPARATE_COUNSELLING_DOMAIN"
+      }
+    ],
+    "rpsc_first_grade": [
+      {
+        "family": "AGE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "EDUCATION",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "DISCIPLINE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "DOMICILE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "EXPERIENCE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "REGISTRATION",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "PHYSICAL_STANDARD",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "CATEGORY_OR_RESERVATION",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "SPECIAL_CERTIFICATE",
+        "status": "UNRESOLVED"
+      },
+      {
+        "family": "OTHER_OFFICIAL_CONDITION",
+        "status": "UNRESOLVED"
+      }
+    ]
+  }
+}

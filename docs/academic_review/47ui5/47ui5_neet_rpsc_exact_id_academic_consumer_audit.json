@@ -1,0 +1,17 @@
+{
+  "gate": "47UI5",
+  "exact_immutable_ids": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215"
+  ],
+  "preservation_rules": {
+    "case_preservation": "All IDs stored and queried with exact casing without mutation",
+    "punctuation_preservation": "Parentheses and underscores preserved exactly",
+    "consumer_compatibility": "All providers and repositories use exact ID matching"
+  },
+  "metrics": {
+    "MISSION_ID_CASE_OR_PUNCTUATION_MUTATION_COUNT": 0
+  },
+  "status": "PASSED"
+}

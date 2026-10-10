@@ -1,0 +1,44 @@
+{
+  "rows": [
+    {
+      "missionId": "delhi_judicial_service_prelims",
+      "judicialStatus": "STANDALONE_CONFIRMED",
+      "canonicalAction": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "judicialStatus": "SOURCE_UNRESOLVED",
+      "canonicalAction": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "judicialStatus": "SOURCE_UNRESOLVED",
+      "canonicalAction": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "rhc_civil_judge_prelims",
+      "judicialStatus": "STANDALONE_CONFIRMED",
+      "canonicalAction": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "missionId": "mphc_civil_judge_prelims",
+      "judicialStatus": "STANDALONE_CONFIRMED",
+      "canonicalAction": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "judicialStatus": "SOURCE_UNRESOLVED",
+      "canonicalAction": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "judicialStatus": "SOURCE_UNRESOLVED",
+      "canonicalAction": "HOLD_EVIDENCE"
+    },
+    {
+      "missionId": "gauhc_ajs_grade3_prelims",
+      "judicialStatus": "STANDALONE_CONFIRMED",
+      "canonicalAction": "HOLD_PRODUCER_ROW_REQUIRED"
+    }
+  ]
+}

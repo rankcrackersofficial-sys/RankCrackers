@@ -1,0 +1,111 @@
+{
+  "missionId": "tripura_tet",
+  "fields": [
+    {
+      "fieldName": "paper1TotalQuestions",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper1TotalMarks",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper1Duration",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2TotalQuestions",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2TotalMarks",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "paper2Duration",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "negativeMarking",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "primaryStageClasses",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "upperPrimaryStageClasses",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "mathScienceChoiceStructure",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    },
+    {
+      "fieldName": "socialStudiesChoiceStructure",
+      "officialValue": null,
+      "exactOfficialSource": "https://trb.tripura.gov.in/",
+      "documentTitle": null,
+      "pageNumber": null,
+      "section": null,
+      "verificationState": "SOURCE_UNRESOLVED"
+    }
+  ],
+  "metrics": {
+    "TRIPURA_PATTERN_FIELD_COUNT": 11,
+    "TRIPURA_PATTERN_VERIFIED_COUNT": 0,
+    "TRIPURA_PATTERN_FALSE_COUNT": 0,
+    "TRIPURA_PATTERN_UNRESOLVED_COUNT": 11,
+    "TRIPURA_PATTERN_CERTIFIED": "NO"
+  }
+}

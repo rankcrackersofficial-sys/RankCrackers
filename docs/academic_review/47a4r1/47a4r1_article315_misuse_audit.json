@@ -1,0 +1,25 @@
+{
+  "auditCode": "RC_47A4R1_ARTICLE315_MISUSE_AUDIT",
+  "executedAt": "2026-09-10T07:36:25.904Z",
+  "findingsNote": "Article 315 establishes constitutional PSC authority, but does not prove every PSC subordinate/clerical recruitment is a premier civil-service gateway.",
+  "metrics": {
+    "PSC_EXISTENCE_MISUSED_AS_MISSION_SCALE_EVIDENCE_COUNT": 3
+  },
+  "misusedMissions": [
+    {
+      "missionId": "hppsc_police_constable",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "basis": "STATUTORY_PREMIER_SERVICE_GATEWAY",
+      "auditedEvidenceClass": "STATUTORY_MISUSE_FOR_SUBORDINATE_CLERICAL"
+    }
+  ]
+}

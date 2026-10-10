@@ -1,0 +1,49 @@
+{
+  "handoffCode": "RC_47A2_MATERIALIZER_CONTRACT_GAP_HANDOFF",
+  "executedAt": "2026-09-10T05:36:15.545Z",
+  "status": "BLOCKER_FOR_PRODUCTION_MATERIALIZATION",
+  "detectedIncompatibilities": [
+    {
+      "gapId": "GAP_01_LOCATOR_FIELD_SCHEMA_MISMATCH",
+      "producerSchema": "officialListingPageUrl / exactDocumentUrl",
+      "consumerExpectation": "47B materializer checks url / noticeUrl / documentUrl",
+      "remediationRequired": "Gate 47B1 materializer must update evaluateStudentVisibilityGate to check officialListingPageUrl and exactDocumentUrl."
+    },
+    {
+      "gapId": "GAP_02_CARD_VISIBLE_RETURN_MISMATCH",
+      "producerSchema": "Expects cardVisible in visibility object",
+      "consumerExpectation": "47B evaluateStudentVisibilityGate does not return cardVisible in its gate object",
+      "remediationRequired": "Gate 47B1 materializer must return cardVisible explicitly in evaluateStudentVisibilityGate."
+    },
+    {
+      "gapId": "GAP_03_LADAKH_REGION_MAP_DRIFT",
+      "producerSchema": "LA = Ladakh, LD = Lakshadweep",
+      "consumerExpectation": "Legacy state map in materializer mapped LA to Lakshadweep",
+      "remediationRequired": "Gate 47B1 state map must map LA -> Ladakh and LD -> Lakshadweep."
+    },
+    {
+      "gapId": "GAP_04_UT_HIERARCHY_PATH_SYNTAX",
+      "producerSchema": "UT/DL/DSSSB/MISSION",
+      "consumerExpectation": "Materializer generated STATE/DL/DSSSB/MISSION for UTs",
+      "remediationRequired": "Gate 47B1 hierarchy path builder must format UT paths as UT/{code}/{auth}/{mission}."
+    },
+    {
+      "gapId": "GAP_05_SOURCE_BYTES_AVAILABLE_SEMANTICS",
+      "producerSchema": "sourceBytesAvailable = false when only URL is verified without physical byte download",
+      "consumerExpectation": "Materializer inferred sourceBytesAvailable = true from URL existence",
+      "remediationRequired": "Gate 47B1 materializer must not infer bytesAvailable from exactDocumentUrl."
+    },
+    {
+      "gapId": "GAP_06_PRECOMPUTED_VISIBILITY_OVERRIDE",
+      "producerSchema": "visibility computed based on source-grounding & qualification",
+      "consumerExpectation": "Materializer recomputed visibilityGate",
+      "remediationRequired": "Gate 47B1 materializer must respect pre-computed visibility gate status."
+    },
+    {
+      "gapId": "GAP_07_AUTHORITY_ID_NAMING_DRIFT",
+      "producerSchema": "auth_in_ssc, auth_in_upsc",
+      "consumerExpectation": "auth_central_ssc in legacy draft tests",
+      "remediationRequired": "Normalize all authority keys to auth_in_{key} in 47B1."
+    }
+  ]
+}

@@ -1,0 +1,1247 @@
+{
+  "MATERIALIZATION_ELIGIBLE_NOW_COUNT": 173,
+  "eligibility": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "MATERIALIZATION_ELIGIBLE_NOW": "YES",
+      "reason": "Sufficient producer identity and authority metadata available for safe shell materialization."
+    },
+    {
+      "canonicalMissionId": "an_erecruitment_chsl",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "an_police_constable_si",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "bpsc_judicial_service_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "cg_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "delhi_judicial_service_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "delhi_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "epfo_assistant_provident_fund_commissioner",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "epfo_enforcement_officer_accounts_officer",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "gauhc_ajs_grade3_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_j_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "ib_acio_ii_executive",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "ib_security_assistant_executive",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "jssc_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "manipur_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "mh_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "mphc_civil_judge_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "mssc_manipur_group_cd",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "nta_icar_aieea_pg",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "nta_nchm_jee",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "odisha_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "ppsc_pcs_j_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "psssb_patwari",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "punjab_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "py_dpar_clerk_vao",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "py_police_si_pc",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "rhc_civil_judge_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "rj_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "sikkim_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_ttet",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_IDENTITY_ALIAS_DISCREPANCY"
+    },
+    {
+      "canonicalMissionId": "tripura_police_constable",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_j_prelims",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    },
+    {
+      "canonicalMissionId": "upsc_ies_iss",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "upsc_ifos",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "canonicalMissionId": "upsssc_vdo",
+      "topLevelDisposition": "HOLD",
+      "MATERIALIZATION_ELIGIBLE_NOW": "NO",
+      "reason": "Blocked by hold state: HOLD_EVIDENCE"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "retrievedOn": "2026-09-10",
+  "ARTICLE315_RESIDUAL_TARGET_COUNT": 11,
+  "rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "psssb_patwari",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "rj_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "cg_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "mh_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "boundedAttempts": [
+        "official current page",
+        "official notice/archive",
+        "exact exam query",
+        "historical official fallback"
+      ],
+      "newExactOfficialSource": null,
+      "result": "SOURCE_UNRESOLVED",
+      "reason": "No new mission-specific official source meeting the 48C evidence bar was verified. Third-party discoveries were rejected."
+    }
+  ]
+}

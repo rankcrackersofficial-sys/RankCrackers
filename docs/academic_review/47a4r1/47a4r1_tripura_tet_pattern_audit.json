@@ -1,0 +1,18 @@
+{
+  "auditCode": "RC_47A4R1_TRIPURA_TET_PATTERN_AUDIT",
+  "executedAt": "2026-09-10T07:36:25.931Z",
+  "tripuraMissionFound": true,
+  "patternFound": {
+    "totalQuestions": 150,
+    "totalMarks": 200,
+    "durationMinutes": 120,
+    "markingScheme": "+1.33 for correct, -NO_NEGATIVE_MARKING deduction for incorrect",
+    "negativeMarking": "NO_NEGATIVE_MARKING",
+    "testMode": "OFFLINE_OMR",
+    "stagesSummary": "Objective Preliminary Screening / Selection Examination"
+  },
+  "metrics": {
+    "TRIPURA_PATTERN_FALSE_FIELD_COUNT": 1
+  },
+  "auditNotes": "Variant structure is verified for TRBT T-TET (Paper I & Paper II), but exam pattern negative marking fields must be kept uncertified until exact prospectus scrape."
+}

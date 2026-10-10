@@ -1,0 +1,22 @@
+{
+  "manifestCode": "RC_48A_ARTIFACT_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T10:34:36.423Z",
+  "fileCount": 15,
+  "hashes": {
+    "48a_india_master_manifest_v1.json": "5d4bfd3c305935434d99337dd918621d1832466db0e0d36f09dbf9d1144bd31d",
+    "48a_national_clean_and_hold_sets.json": "7d14dbe7fea5e5d43922fdf7c6e22fc682c9055abfbadc5ded5d42e895cd9323",
+    "48a_state_ut_clean_and_hold_sets.json": "590e274ad8733ec8ff01cc60f12c509238a17529ca0f78f1e0747aa197eb04d5",
+    "48a_india_clean_set.json": "20acb19346c3ac85b089cf18079a22d72c43595ebc6aac152e8d331cf3677bc9",
+    "48a_india_hold_set.json": "4b7b20e9284202bf994ce01564d2a26bf48e158401a19267a53871baec6c0236",
+    "48a_india_pointer_set.json": "5ae3c159f092cf07cf9eb2eb58b1903df94afc6ef1ee45aa2b1f2e4ac0d03e8c",
+    "48a_india_excluded_set.json": "9069bafc87686224ae4e7a7039fea7384d6f08090885df5ae04eed6b8a2072f0",
+    "48a_current_live_semantic_delta.json": "a823f158d36383532ae61cddf18561e738d6eefbbd6dfcf1284e60a01814ff0b",
+    "48a_rpsc_first_grade_variant_control.json": "463176b08ba7cbc918756ffe37a630d2723f175099bfafb16bdb887fdd633dd4",
+    "48a_rpsc_ras_semantic_control.json": "9094d3099be409999cdd87f5b4dca0b448e10f699045fd0e154913a30d9c6a0e",
+    "48a_cross_lane_collision_audit.json": "32909040c0b47b006fc7e1bcb042b43fdc29f247d3585895614dfc29ac01c851",
+    "48a_india_coverage_matrix.json": "5445b8392058a78d166c28371b298353425de101363b0c9d87edeb6e03fc20e3",
+    "48a_india_master_count_reconciliation.json": "41139f69f5adba01a15a6137bcc9ca356fae4162e7b49c7406dad86570c52fdb",
+    "48a_no_production_mutation_proof.json": "5e3dbbdd3e78cc3556539190d84542cdc9a2c018fa0277f01dd2db9c70721dec",
+    "48a_final_report.md": "d7c3ec070b34d69974ebbfac1184a8eec20ec1eeb16f765e5ec3623b15e7aa09"
+  }
+}

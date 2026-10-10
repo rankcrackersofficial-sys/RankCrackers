@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0-48cs1",
+  "missionIdLaw": "missionId = null is valid when an official opportunity exists but does NOT meet permanent major-mission criteria.",
+  "useCases": [
+    "Localized district court clerk openings",
+    "Short-term PSU apprenticeship or contract posts",
+    "Standalone municipal corporation recruitment"
+  ],
+  "protection": "Prevents Mission Realm catalog pollution with short-lived or non-recurring vacancies."
+}

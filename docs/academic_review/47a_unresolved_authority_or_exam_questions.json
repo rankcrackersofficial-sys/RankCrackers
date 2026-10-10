@@ -1,0 +1,79 @@
+{
+  "censusCode": "RC_INDIA_WIDE_STATE_UT_OFFICIAL_AUTHORITY_AND_MAJOR_EXAM_CENSUS_47A",
+  "censusTitle": "India-wide State / Union Territory Official Exam & Recruitment Authority Census",
+  "censusVersion": "1.0.0",
+  "academicReviewLane": "Agent-2 / EID Official Source Research Lane",
+  "censusDate": "2026-09-10",
+  "jurisdictionScope": {
+    "totalEntitiesCovered": 36,
+    "stateCount": 28,
+    "utCount": 8
+  },
+  "totalQuestions": 8,
+  "questions": [
+    {
+      "questionId": "unres_mz_msssb_dissolution",
+      "regionCode": "MZ",
+      "regionName": "Mizoram",
+      "authorityAffected": "Mizoram Subordinate Services Selection Board (MSSSB)",
+      "issueDescription": "The Government of Mizoram dissolved MSSSB w.e.f. 29 February 2024 via official DP&AR notification. Recruitment for Group B (Non-Gazetted) and Group C posts has reverted to MPSC Mizoram and departmental committees.",
+      "architecturalResolution": "Mark `auth_in_mz_msssb` as `DISSOLVED`. In Mission Realm, route Mizoram non-gazetted exams (`mizoram_subordinate_services`) under `auth_in_mz_mpsc` while preserving historical MSSSB PYQs under MPSC's archival link."
+    },
+    {
+      "questionId": "unres_hp_hpssc_to_hprca_transition",
+      "regionCode": "HP",
+      "regionName": "Himachal Pradesh",
+      "authorityAffected": "Himachal Pradesh Staff Selection Commission (HPSSC Hamirpur) / Himachal Pradesh Rajya Chayan Aayog (HPRCA)",
+      "issueDescription": "HPSSC Hamirpur was scrapped following paper leak investigations and replaced by Himachal Pradesh Rajya Chayan Aayog (HPRCA, `hprca.hp.gov.in`). During the transition, pending examinations and Police Constable recruitments were entrusted to HPPSC (`hppsc.hp.gov.in`).",
+      "architecturalResolution": "Register `auth_in_hp_hprca` as the active subordinate authority (`hprca.hp.gov.in`), flag HPSSC as `DISSOLVED_LEGACY`, and track HP Police Constable under HPPSC during the transitional mandate."
+    },
+    {
+      "questionId": "unres_wb_wbssc_general_dormancy",
+      "regionCode": "WB",
+      "regionName": "West Bengal",
+      "authorityAffected": "West Bengal Staff Selection Commission (WBSSC General)",
+      "issueDescription": "WBSSC (General) was established under the 2011 Act and repealed in 2017 with functions shifting to WBPSC. Although a revival bill was passed in 2019, operational subordinate recruitments remain conducted by WBPSC (`wbpsc_clerkship`) and WBPRB.",
+      "architecturalResolution": "Mark `auth_in_wb_wbssc` as `DORMANT`. Keep `monitoringCandidate: NO`. All subordinate clerical exams are owned by `auth_in_wb_wbpsc` (`wbpsc_clerkship`)."
+    },
+    {
+      "questionId": "unres_la_psc_absence",
+      "regionCode": "LA",
+      "regionName": "Ladakh",
+      "authorityAffected": "UT Ladakh Public Service Authority",
+      "issueDescription": "UT Ladakh was carved out under the J&K Reorganisation Act, 2019, without a legislative assembly or State Public Service Commission. Gazetted recruitments are handled by UPSC, while non-gazetted recruitments are partitioned between central SSC (Selection Posts Ladakh) and Autonomous Hill Councils (LAHDC DSSRB Leh and Kargil).",
+      "architecturalResolution": "Model Ladakh without a State PSC. Represent subordinate selection through `auth_in_la_dssrb` (LAHDC DSSRB Leh/Kargil) and central SSC Ladakh Selection Posts."
+    },
+    {
+      "questionId": "unres_br_police_non_archival_policy",
+      "regionCode": "BR",
+      "regionName": "Bihar",
+      "authorityAffected": "CSBC Bihar & BPSSC Bihar",
+      "issueDescription": "Central Selection Board of Constable (CSBC) and Bihar Police Sub-ordinate Services Commission (BPSSC) strictly collect all physical question booklets and OMR carbon copies at the conclusion of exams, and do not publish permanent historical question archives on their websites.",
+      "architecturalResolution": "Classify archive status as `NOT_FOUND_ON_OFFICIAL_SOURCE` for persistent question paper archives. Source authentic questions only through official provisional objection key notices or high-court judicial filings where booklets are appended as exhibits."
+    },
+    {
+      "questionId": "unres_jh_jssc_cgl_reconduct_cycle",
+      "regionCode": "JH",
+      "regionName": "Jharkhand",
+      "authorityAffected": "Jharkhand Staff Selection Commission (JSSC)",
+      "issueDescription": "JSSC JGGLCCE (General Graduate Level) has faced repeated exam cancellations, paper leak litigations, and re-examinations over 2023-2026, leading to high volatility in exam pattern execution and test schedules.",
+      "architecturalResolution": "Maintain `jssc_cgl` as `ACTIVE_SELECTION` with `HIGH` source confidence anchored strictly to `https://jssc.nic.in` official public notices, disregarding unauthorized media speculations."
+    },
+    {
+      "questionId": "unres_ga_state_tet_absence",
+      "regionCode": "GA",
+      "regionName": "Goa",
+      "authorityAffected": "Goa Directorate of Education / GSSC",
+      "issueDescription": "Goa is one of the few states in India that does not conduct its own State TET, relying completely on CBSE CTET for teacher eligibility.",
+      "architecturalResolution": "Document in coverage matrix that Goa operates with 0 state TET authorities; teacher missions in Goa should map eligibility prerequisites to `cbse_ctet`."
+    },
+    {
+      "questionId": "unres_py_ld_psc_absence",
+      "regionCode": "PY & LD",
+      "regionName": "Puducherry & Lakshadweep",
+      "authorityAffected": "Puducherry DPAR & Lakshadweep Administration",
+      "issueDescription": "Neither Puducherry nor Lakshadweep has an independent State/UT PSC under Article 315. Premier civil services (PCS, PPS, DANICS, DANIPS) are recruited via UPSC Civil Services Examination.",
+      "architecturalResolution": "Explicitly record in coverage matrix: PSC authority for PY and LD is centrally provided by UPSC, while local administrative recruitments are handled by DP&AR Puducherry and Lakshadweep Administration."
+    }
+  ]
+}

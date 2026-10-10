@@ -1,0 +1,32 @@
+{
+  "missionId": "afcat",
+  "academicVariants": [],
+  "recruitmentRoutes": [
+    {
+      "routeId": "flying",
+      "displayName": "Flying Branch",
+      "usesAfcatWrittenExam": true
+    },
+    {
+      "routeId": "ground_duty_technical",
+      "displayName": "Ground Duty Technical",
+      "usesAfcatWrittenExam": true
+    },
+    {
+      "routeId": "ground_duty_non_technical",
+      "displayName": "Ground Duty Non-Technical",
+      "usesAfcatWrittenExam": true
+    },
+    {
+      "routeId": "ncc_special_entry",
+      "displayName": "NCC Special Entry",
+      "usesAfcatWrittenExam": false
+    },
+    {
+      "routeId": "gate_entry",
+      "displayName": "GATE-based entry",
+      "usesAfcatWrittenExam": false
+    }
+  ],
+  "nonAcademicBranchAsVariantCount": 0
+}

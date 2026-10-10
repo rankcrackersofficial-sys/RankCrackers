@@ -1,0 +1,44 @@
+{
+  "auditCode": "RC_47C7V_AGNIVEERVAYU_VARIANT_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.798Z",
+  "missionId": "agniveervayu",
+  "metrics": {
+    "AGNIVEERVAYU_FALSE_VARIANT_COUNT": 0,
+    "AGNIVEERVAYU_TRACK_VARIANT_COUNT": 3
+  },
+  "officialTrackValidation": [
+    {
+      "variantId": "science",
+      "displayName": "Science Subjects",
+      "variantDimension": "TRACK",
+      "composition": "English (20 Qs), Physics (25 Qs), Mathematics (25 Qs) = 70 Qs",
+      "durationMinutes": 60,
+      "negativeMarking": -0.25,
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    },
+    {
+      "variantId": "other_than_science",
+      "displayName": "Other than Science Subjects",
+      "variantDimension": "TRACK",
+      "composition": "English (20 Qs), Reasoning & General Awareness (30 Qs) = 50 Qs",
+      "durationMinutes": 45,
+      "negativeMarking": -0.25,
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    },
+    {
+      "variantId": "combined",
+      "displayName": "Science and Other than Science Subjects",
+      "variantDimension": "TRACK",
+      "composition": "English (20 Qs), Mathematics (25 Qs), Physics (25 Qs), RAGA (30 Qs) = 100 Qs",
+      "durationMinutes": 85,
+      "negativeMarking": -0.25,
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    }
+  ],
+  "pyqRetentionTruth": {
+    "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+    "persistentPublicArchive": false,
+    "accessWindow": "3-day authenticated objection window post-examination only; zero persistent public paper repository"
+  },
+  "verdict": "PASS (Agniveervayu variants represent genuine student exam-track choices with differing durations and exam patterns)"
+}

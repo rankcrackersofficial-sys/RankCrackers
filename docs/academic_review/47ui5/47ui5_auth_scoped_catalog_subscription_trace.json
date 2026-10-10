@@ -1,0 +1,24 @@
+{
+  "gate": "47UI5",
+  "data_path": [
+    "FirebaseAuth.instance.authStateChanges()",
+    "authStateChangesProvider",
+    "recruitmentsProvider.autoDispose (watches authStateChangesProvider)",
+    "RecruitmentRepository.streamPublishedRecruitments()",
+    "publishedRecruitmentsProvider.autoDispose",
+    "MissionRealmScreen (watches publishedRecruitmentsProvider)"
+  ],
+  "lifecycle_events": {
+    "AUTH_LOGIN_UID_A": "Stream listener attached -> catalog hydrated -> snapshotReady -> render missions",
+    "AUTH_LOGOUT": "autoDispose cancels Firestore stream listener -> state cleared -> no stale snapshot",
+    "AUTH_RELOGIN_UID_A": "New stream listener created -> catalog rehydrated immediately without hot restart",
+    "AUTH_LOGIN_UID_B": "Isolated UID-B subscription created -> zero UID-A leakage"
+  },
+  "metrics": {
+    "RELOGIN_REQUIRES_HOT_RESTART_COUNT": 0,
+    "STALE_PROVIDER_AFTER_LOGOUT_COUNT": 0,
+    "STALE_SUBSCRIPTION_REUSE_COUNT": 0,
+    "CROSS_USER_MISSION_STATE_LEAK_COUNT": 0
+  },
+  "status": "PASSED"
+}

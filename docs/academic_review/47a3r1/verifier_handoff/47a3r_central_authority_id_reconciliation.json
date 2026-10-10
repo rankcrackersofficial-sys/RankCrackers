@@ -1,0 +1,143 @@
+{
+  "reconciliationCode": "RC_47A3R_CENTRAL_AUTHORITY_ID_RECONCILIATION",
+  "generatedAt": "2026-09-10T06:27:19.341Z",
+  "metrics": {
+    "CENTRAL_AUTHORITY_ID_DRIFT_COUNT": 0,
+    "HISTORICAL_ALIAS_COUNT": 4,
+    "RESOLVED_CANONICAL_IDENTITY_COUNT": 4,
+    "AFFECTED_47A3_ARTIFACTS_AUDITED": 4
+  },
+  "canonicalCentralAuthorities": [
+    {
+      "canonicalAuthorityId": "auth_in_upsc",
+      "authorityOfficialName": "Union Public Service Commission",
+      "authorityShortName": "UPSC",
+      "authorityType": "CENTRAL_CONSTITUTIONAL_BODY",
+      "officialPrimaryDomain": "https://upsc.gov.in",
+      "officialRecruitmentPage": "https://upsc.gov.in/recruitment",
+      "officialNotificationPage": "https://upsc.gov.in/examinations/active-examinations",
+      "officialSyllabusPage": "https://upsc.gov.in/examinations/revised-syllabus-scheme",
+      "officialPYQPage": "https://upsc.gov.in/examinations/previous-question-papers",
+      "officialAnswerKeyPage": "https://upsc.gov.in/examinations/answer-keys",
+      "officialCalendarPage": "https://upsc.gov.in/examinations/exam-calendar",
+      "historicalAliases": [
+        "auth_central_upsc"
+      ],
+      "downstreamStatus": "NORMALIZED_CANONICAL",
+      "mandateNotes": "Conducts Civil Services Examination (including DANICS/DANIPS for DL, AN, LD, DN) and central recruitments under Article 315."
+    },
+    {
+      "canonicalAuthorityId": "auth_in_ssc",
+      "authorityOfficialName": "Staff Selection Commission",
+      "authorityShortName": "SSC",
+      "authorityType": "CENTRAL_SUBORDINATE_COMMISSION",
+      "officialPrimaryDomain": "https://ssc.gov.in",
+      "officialRecruitmentPage": "https://ssc.gov.in/candidate-portal",
+      "officialNotificationPage": "https://ssc.gov.in/notices",
+      "officialSyllabusPage": "https://ssc.gov.in/tentative-syllabus",
+      "officialPYQPage": "https://ssc.gov.in/candidate-corner",
+      "officialAnswerKeyPage": "https://ssc.gov.in/answer-key",
+      "officialCalendarPage": "https://ssc.gov.in/examination-calendar",
+      "historicalAliases": [
+        "auth_central_ssc"
+      ],
+      "downstreamStatus": "NORMALIZED_CANONICAL",
+      "mandateNotes": "Conducts SSC CPO (SI in Delhi Police & CAPFs), Delhi Police Constable (Executive), SSC Selection Posts Ladakh, and central Group B/C examinations."
+    },
+    {
+      "canonicalAuthorityId": "auth_in_cbse",
+      "authorityOfficialName": "Central Board of Secondary Education",
+      "authorityShortName": "CBSE",
+      "authorityType": "CENTRAL_EXAMINATION_BODY",
+      "officialPrimaryDomain": "https://cbse.gov.in",
+      "officialRecruitmentPage": "https://ctet.nic.in",
+      "officialNotificationPage": "https://ctet.nic.in/information-bulletin",
+      "officialSyllabusPage": "https://ctet.nic.in/syllabus",
+      "officialPYQPage": "https://ctet.nic.in/previous-year-question-papers",
+      "officialAnswerKeyPage": "https://ctet.nic.in/answer-keys",
+      "officialCalendarPage": "https://ctet.nic.in/schedule",
+      "historicalAliases": [
+        "auth_central_cbse"
+      ],
+      "downstreamStatus": "NORMALIZED_CANONICAL",
+      "mandateNotes": "Conducts Central Teacher Eligibility Test (CTET) applicable across Union Territories and states without independent state TET."
+    },
+    {
+      "canonicalAuthorityId": "auth_in_ibps",
+      "authorityOfficialName": "Institute of Banking Personnel Selection",
+      "authorityShortName": "IBPS",
+      "authorityType": "AUTONOMOUS_BANKING_SELECTION_BODY",
+      "officialPrimaryDomain": "https://ibps.in",
+      "officialRecruitmentPage": "https://ibps.in/crp-rrb",
+      "officialNotificationPage": "https://ibps.in/crp-rrb-notices",
+      "officialSyllabusPage": "https://ibps.in/crp-rrb-syllabus",
+      "officialPYQPage": "https://ibps.in/candidate-corner",
+      "officialAnswerKeyPage": "https://ibps.in/scores",
+      "officialCalendarPage": "https://ibps.in/tentative-calendar",
+      "historicalAliases": [
+        "auth_central_ibps"
+      ],
+      "downstreamStatus": "NORMALIZED_CANONICAL",
+      "mandateNotes": "Conducts Common Recruitment Process for Regional Rural Banks (CRP RRBs) Officers Scale I/II/III and Office Assistants across all participating state RRBs."
+    }
+  ],
+  "auditOccurrencesIn47A3": [
+    {
+      "sourceFile": "47a3_authority_registry.json",
+      "path": "canonicalCentralAuthorities[].authorityKey",
+      "historicalValues": [
+        "auth_central_upsc",
+        "auth_central_ssc",
+        "auth_central_cbse",
+        "auth_central_ibps"
+      ],
+      "reconciledCanonicalValues": [
+        "auth_in_upsc",
+        "auth_in_ssc",
+        "auth_in_cbse",
+        "auth_in_ibps"
+      ],
+      "action": "NORMALIZED_TO_AUTH_IN"
+    },
+    {
+      "sourceFile": "47a3_authority_reference_registry.json",
+      "path": "references[].conductingCentralAgency",
+      "historicalValues": [
+        "auth_central_ssc (3 missions: ssc_ladakh_selection_post, delhi_police_constable, delhi_police_si)"
+      ],
+      "reconciledCanonicalValues": [
+        "auth_in_ssc"
+      ],
+      "action": "NORMALIZED_TO_AUTH_IN"
+    },
+    {
+      "sourceFile": "47a3_candidate_manifest.json",
+      "path": "missions[].conductingCentralAgency",
+      "historicalValues": [
+        "auth_central_ssc (3 missions: ssc_ladakh_selection_post, delhi_police_constable, delhi_police_si)"
+      ],
+      "reconciledCanonicalValues": [
+        "auth_in_ssc"
+      ],
+      "action": "NORMALIZED_TO_AUTH_IN"
+    },
+    {
+      "sourceFile": "47a3_duplicate_ownership_registry.json",
+      "path": "duplicates[].canonicalAuthorityKey, conductingAuthorityKey",
+      "historicalValues": [
+        "auth_central_upsc",
+        "auth_central_ssc",
+        "auth_central_cbse",
+        "auth_central_ibps"
+      ],
+      "reconciledCanonicalValues": [
+        "auth_in_upsc",
+        "auth_in_ssc",
+        "auth_in_cbse",
+        "auth_in_ibps"
+      ],
+      "action": "NORMALIZED_TO_AUTH_IN"
+    }
+  ],
+  "driftAuditRule": "All downstream systems must use auth_in_* exclusively. Historical auth_central_* is preserved strictly as reference alias."
+}

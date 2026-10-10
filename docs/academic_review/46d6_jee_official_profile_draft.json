@@ -1,0 +1,144 @@
+{
+  "profileSchemaVersion": "1.0.0",
+  "missionId": "jee_main_2026",
+  "canonicalExamName": "JEE Main",
+  "canonicalDisplayName": "JEE Main 2027",
+  "missionTargetYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Testing Agency (NTA)",
+    "officialPortals": [
+      "https://jeemain.nta.ac.in",
+      "https://nta.ac.in"
+    ],
+    "sourceDocumentType": "Information Bulletin & Official Syllabus",
+    "officialNotificationTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "National / All India",
+    "administeringBody": "NTA / Ministry of Education, Govt. of India",
+    "participatingInstitutes": ["NITs", "IIITs", "CFTIs", "State Engineering Colleges", "JEE Advanced Eligibility"],
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "supportedScope": {
+    "supportedPapers": ["Paper 1 (B.E. / B.Tech)"],
+    "unsupportedOfficialPapers": ["Paper 2A (B.Arch)", "Paper 2B (B.Planning)"],
+    "scopeBoundaryReason": "RankCrackers core focus is high-yield Engineering entrance preparation (PCM).",
+    "scopeDepthStatus": "NOT_COMPUTED",
+    "provenanceTag": "FOUNDER_DECLARED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "jee_main_paper_1",
+        "paperName": "Paper 1 (B.E. / B.Tech)",
+        "mode": "Computer Based Test (CBT)",
+        "durationMinutes": 180,
+        "totalQuestions": 90,
+        "totalQuestionsToAttempt": 75,
+        "totalMarks": 300,
+        "markingScheme": {
+          "correct": 4,
+          "incorrect": -1,
+          "unattempted": 0
+        },
+        "structure": [
+          {
+            "subject": "Physics",
+            "sectionA": { "questionCount": 20, "mandatory": 20, "type": "MCQ" },
+            "sectionB": { "questionCount": 10, "mandatory": 5, "type": "Numerical" },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          },
+          {
+            "subject": "Chemistry",
+            "sectionA": { "questionCount": 20, "mandatory": 20, "type": "MCQ" },
+            "sectionB": { "questionCount": 10, "mandatory": 5, "type": "Numerical" },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          },
+          {
+            "subject": "Mathematics",
+            "sectionA": { "questionCount": 20, "mandatory": 20, "type": "MCQ" },
+            "sectionB": { "questionCount": 10, "mandatory": 5, "type": "Numerical" },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "physics",
+        "subjectName": "Physics",
+        "canonicalKey": "jee_physics",
+        "officialSections": ["Section A (MCQs)", "Section B (Numerical Value Questions)"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "chemistry",
+        "subjectName": "Chemistry",
+        "canonicalKey": "jee_chemistry",
+        "officialSections": ["Section A (MCQs)", "Section B (Numerical Value Questions)"],
+        "subdisciplines": ["Physical Chemistry", "Inorganic Chemistry", "Organic Chemistry"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "mathematics",
+        "subjectName": "Mathematics",
+        "canonicalKey": "jee_mathematics",
+        "officialSections": ["Section A (MCQs)", "Section B (Numerical Value Questions)"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English", "Hindi", "Assamese", "Bengali", "Gujarati",
+      "Kannada", "Malayalam", "Marathi", "Odia", "Punjabi",
+      "Tamil", "Telugu", "Urdu"
+    ],
+    "mediumCount": 13,
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": ["Paper 1"],
+    "paperAliases": {
+      "Paper 1": ["Paper 1", "Paper-1", "B.E./B.Tech", "Paper 1 (B.E./B.Tech)", "BE/BTech"]
+    },
+    "expectedSubjects": ["Physics", "Chemistry", "Mathematics"],
+    "subjectAliases": {
+      "Physics": ["Physics", "PHYSICS", "Part I - Physics", "Section A - Physics"],
+      "Chemistry": ["Chemistry", "CHEMISTRY", "Part II - Chemistry", "Section A - Chemistry"],
+      "Mathematics": ["Mathematics", "MATHEMATICS", "Part III - Mathematics", "Section A - Mathematics"]
+    },
+    "languageScripts": ["Latin", "Devanagari"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "sourceYearPolicy": "USE_2026_AS_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "localDocumentBinding": {
+    "documentId": "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "pageCount": 140,
+    "verifiedAtomsCount": 211,
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "paperStructure": "SOURCE_VERIFIED",
+    "markingScheme": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED",
+    "supportedScope": "FOUNDER_DECLARED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

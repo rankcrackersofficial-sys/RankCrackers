@@ -1,0 +1,194 @@
+{
+  "gate": "GATE_48B1_MISSION_REPAIR_PACKAGE_PREFLIGHT",
+  "generatedAt": "2026-09-10T11:03:33.901Z",
+  "lane": "AGENT-3_BACKEND_MATERIALIZER",
+  "mode": "DRY_RUN_ZERO_WRITES",
+  "summary": {
+    "TOTAL_TARGET_MISSIONS": 5,
+    "TOTAL_PROJECTIONS_TOUCHED": 4,
+    "ORPHAN_ACTIONS_HELD": 1,
+    "PRODUCTION_WRITES_PERFORMED": 0,
+    "GOVERNANCE_FIELD_OVERWRITE_COUNT": 0
+  },
+  "mutations": [
+    {
+      "targetId": "neet_(ug)-2027",
+      "targetName": "NEET (UG)",
+      "collections": {
+        "student_mission_catalog": {
+          "current": {
+            "state": "Central",
+            "examCategory": "category_pending"
+          },
+          "repaired": {
+            "state": "Central",
+            "examCategory": "medical",
+            "exam_category": "medical",
+            "missionType": "medical",
+            "authorityScope": "ALL_INDIA",
+            "jurisdictionLevel": "CENTRAL",
+            "authorityGroupKey": "nta",
+            "authorityDisplayName": "National Testing Agency",
+            "conductingBody": "National Testing Agency"
+          },
+          "rationale": "Correct authority drift: eliminate category_pending; set ALL_INDIA scope and National Testing Agency conducting body."
+        },
+        "recruitments": {
+          "current": {
+            "state": "Rajasthan",
+            "examCategory": "competitive",
+            "org": "Rajasthan"
+          },
+          "repaired": {
+            "state": "Central",
+            "examCategory": "medical",
+            "jurisdictionLevel": "CENTRAL",
+            "org": "National Testing Agency",
+            "authorityGroupKey": "nta",
+            "authorityDisplayName": "National Testing Agency"
+          },
+          "rationale": "Remove Rajasthan state drift on All-India NEET medical entrance; align with NTA central conducting body."
+        },
+        "mission_realms": {
+          "current": {
+            "exam_category": "competitive",
+            "organization": "Rajasthan"
+          },
+          "repaired": {
+            "exam_category": "medical",
+            "organization": "National Testing Agency",
+            "jurisdictionLevel": "CENTRAL",
+            "authorityGroupKey": "nta",
+            "authorityDisplayName": "National Testing Agency"
+          },
+          "rationale": "Align canonical realm workbench projection with All-India NTA parameters."
+        }
+      }
+    },
+    {
+      "targetId": "rpsc_ras_prelims",
+      "targetName": "RPSC RAS – Prelims",
+      "collections": {
+        "student_mission_catalog": {
+          "current": {
+            "examCategory": "civil_services"
+          },
+          "repaired": {
+            "state": "Rajasthan",
+            "stateCode": "RJ",
+            "stateName": "Rajasthan",
+            "authorityScope": "STATE",
+            "jurisdictionLevel": "STATE",
+            "examCategory": "STATE_SPECIFIC",
+            "examSubCategory": "CIVIL_SERVICES",
+            "authorityGroupKey": "rpsc",
+            "authorityDisplayName": "Rajasthan Public Service Commission"
+          },
+          "rationale": "Populate missing state field; set canonical STATE authorityScope, RJ stateCode, STATE_SPECIFIC examCategory, and CIVIL_SERVICES subCategory."
+        },
+        "recruitments": {
+          "current": {
+            "state": "Rajasthan",
+            "examCategory": "civil_services"
+          },
+          "repaired": {
+            "state": "Rajasthan",
+            "stateCode": "RJ",
+            "stateName": "Rajasthan",
+            "jurisdictionLevel": "STATE",
+            "examCategory": "STATE_SPECIFIC",
+            "examSubCategory": "CIVIL_SERVICES",
+            "org": "Rajasthan Public Service Commission",
+            "authorityGroupKey": "rpsc",
+            "authorityDisplayName": "Rajasthan Public Service Commission"
+          },
+          "rationale": "Standardize recruitment state taxonomy to STATE_SPECIFIC and CIVIL_SERVICES."
+        },
+        "mission_realms": {
+          "current": {
+            "exam_category": "civil_services"
+          },
+          "repaired": {
+            "state": "Rajasthan",
+            "stateCode": "RJ",
+            "stateName": "Rajasthan",
+            "jurisdictionLevel": "STATE",
+            "exam_category": "STATE_SPECIFIC",
+            "exam_sub_category": "CIVIL_SERVICES",
+            "organization": "Rajasthan Public Service Commission",
+            "authorityGroupKey": "rpsc",
+            "authorityDisplayName": "Rajasthan Public Service Commission"
+          },
+          "rationale": "Harmonize mission realm workbench with state-specific civil services taxonomy."
+        }
+      }
+    },
+    {
+      "targetId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "targetName": "RPSC School Lecturer (First Grade) 2026",
+      "collections": {
+        "student_mission_catalog": {
+          "current": {
+            "smartEntryEnabled": true,
+            "quickEntryEnabled": true,
+            "variablesCount": 28
+          },
+          "repaired": {
+            "visibility.smartEntryEnabled": false,
+            "visibility.quickEntryEnabled": false,
+            "governedVariantsCount": 28,
+            "variablesCount": 28
+          },
+          "rationale": "Disable premature student startability flags; certify preservation of 28 governed academic variants."
+        },
+        "recruitments": {
+          "current": {},
+          "repaired": {
+            "smartEntryEnabled": false,
+            "quickEntryEnabled": false
+          },
+          "rationale": "Harmonize recruitment entry flags to false."
+        },
+        "mission_realms": {
+          "current": {},
+          "repaired": {
+            "smartEntryEnabled": false,
+            "quickEntryEnabled": false
+          },
+          "rationale": "Harmonize workbench entry flags to false."
+        }
+      }
+    },
+    {
+      "targetId": "jee_main_2026",
+      "targetName": "JEE Main 2026",
+      "collections": {
+        "student_mission_catalog": {
+          "current": {
+            "smartEntryEnabled": true,
+            "quickEntryEnabled": true
+          },
+          "repaired": {
+            "visibility.smartEntryEnabled": false,
+            "visibility.quickEntryEnabled": false
+          },
+          "rationale": "Disable premature student entry flags while mission content is PREPARING (contentReadiness: 0 digibook, 0 crucible)."
+        }
+      }
+    },
+    {
+      "targetId": "test_mission_catalog_bridge",
+      "targetName": "TEST Mission Catalog Bridge",
+      "collections": {
+        "recruitments": {
+          "current": {
+            "status": "draft",
+            "exists": true
+          },
+          "repaired": "HOLD_FOR_SEPARATE_CLEANUP_SCRIPT",
+          "rationale": "Identified as TEST_ORPHAN (exists only in recruitments). Preserved in Batch-0 dry-run; deletion deferred to scripts/cleanup_test_mission_catalog_bridge.js."
+        }
+      }
+    }
+  ]
+}

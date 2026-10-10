@@ -1,0 +1,69 @@
+{
+  "reconciliationCode": "RC_47A2_AUTHORITY_REFERENCE_RECONCILIATION",
+  "executedAt": "2026-09-10T05:36:15.436Z",
+  "metrics": {
+    "totalMissionsAudited": 153,
+    "unresolvedAuthorityReferenceCount": 0,
+    "duplicateCanonicalAuthorityIdCount": 0,
+    "reconciliationPass": true
+  },
+  "reconciliationMap": {
+    "auth_in_pb_punjab_police": "auth_in_pb_police",
+    "auth_in_ch_chandigarh_police": "auth_in_ch_police",
+    "auth_in_la_ladakh_police": "auth_in_la_police",
+    "auth_in_la_ut_ladakh": "auth_in_la_dssrb",
+    "auth_in_la_ssc_ladakh": "auth_in_ssc",
+    "auth_in_dl_ssc__central_partner_": "auth_in_ssc",
+    "auth_in_ch_chd_education": "auth_in_ch_admin",
+    "auth_in_ch_education": "auth_in_ch_admin",
+    "auth_in_dn_upsc": "auth_in_upsc"
+  },
+  "reconciledMappings": [
+    {
+      "originalKeyIn47a": "auth_in_pb_punjab_police",
+      "canonicalKeyIn47a2": "auth_in_pb_police",
+      "authorityOfficialName": "Punjab Police Recruitment Board"
+    },
+    {
+      "originalKeyIn47a": "auth_in_ch_chandigarh_police",
+      "canonicalKeyIn47a2": "auth_in_ch_police",
+      "authorityOfficialName": "Chandigarh Police Department"
+    },
+    {
+      "originalKeyIn47a": "auth_in_la_ladakh_police",
+      "canonicalKeyIn47a2": "auth_in_la_police",
+      "authorityOfficialName": "Ladakh Police Department"
+    },
+    {
+      "originalKeyIn47a": "auth_in_la_ut_ladakh",
+      "canonicalKeyIn47a2": "auth_in_la_dssrb",
+      "authorityOfficialName": "LAHDC District Selection Services Recruitment Board (Leh & Kargil)"
+    },
+    {
+      "originalKeyIn47a": "auth_in_la_ssc_ladakh",
+      "canonicalKeyIn47a2": "auth_in_ssc",
+      "authorityOfficialName": "Staff Selection Commission"
+    },
+    {
+      "originalKeyIn47a": "auth_in_dl_ssc__central_partner_",
+      "canonicalKeyIn47a2": "auth_in_ssc",
+      "authorityOfficialName": "Staff Selection Commission"
+    },
+    {
+      "originalKeyIn47a": "auth_in_ch_chd_education",
+      "canonicalKeyIn47a2": "auth_in_ch_admin",
+      "authorityOfficialName": "Chandigarh Administration (Department of Personnel & Administrative Reforms)"
+    },
+    {
+      "originalKeyIn47a": "auth_in_ch_education",
+      "canonicalKeyIn47a2": "auth_in_ch_admin",
+      "authorityOfficialName": "Chandigarh Administration (Department of Personnel & Administrative Reforms)"
+    },
+    {
+      "originalKeyIn47a": "auth_in_dn_upsc",
+      "canonicalKeyIn47a2": "auth_in_upsc",
+      "authorityOfficialName": "Union Public Service Commission"
+    }
+  ],
+  "unresolvedBlockers": []
+}

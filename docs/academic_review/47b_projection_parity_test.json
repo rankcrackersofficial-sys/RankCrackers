@@ -1,0 +1,91 @@
+{
+  "testName": "47b_projection_parity_test",
+  "executedAt": "2026-09-10T04:55:45.405Z",
+  "totalMissionsVerified": 7,
+  "parityCheckResults": [
+    {
+      "missionId": "jee_main_2026",
+      "realmPath": "mission_realms/jee_main_2026",
+      "recruitmentPath": "recruitments/jee_main_2026",
+      "catalogPath": "student_mission_catalog/jee_main_2026",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "realmPath": "mission_realms/neet_(ug)-2027",
+      "recruitmentPath": "recruitments/neet_(ug)-2027",
+      "catalogPath": "student_mission_catalog/neet_(ug)-2027",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "realmPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "recruitmentPath": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "catalogPath": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "realmPath": "mission_realms/upsc_cse_prelims",
+      "recruitmentPath": "recruitments/upsc_cse_prelims",
+      "catalogPath": "student_mission_catalog/upsc_cse_prelims",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "ssc_cgl",
+      "realmPath": "mission_realms/ssc_cgl",
+      "recruitmentPath": "recruitments/ssc_cgl",
+      "catalogPath": "student_mission_catalog/ssc_cgl",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "realmPath": "mission_realms/rpsc_ras_prelims",
+      "recruitmentPath": "recruitments/rpsc_ras_prelims",
+      "catalogPath": "student_mission_catalog/rpsc_ras_prelims",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "realmPath": "mission_realms/uppsc_pcs_prelims",
+      "recruitmentPath": "recruitments/uppsc_pcs_prelims",
+      "catalogPath": "student_mission_catalog/uppsc_pcs_prelims",
+      "identityParity": true,
+      "authorityParity": true,
+      "jurisdictionParity": true,
+      "readinessParity": true,
+      "visibilityParity": true,
+      "overallParityPass": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "testCode": "RC_47B3_PREPARING_PUBLICATION_SEMANTICS_TEST",
+  "executedAt": "2026-09-10T06:11:50.516Z",
+  "scenario": "Academically unready mission (readiness = PREPARING)",
+  "realmStatus": "PREPARING",
+  "catalogStatus": "PREPARING",
+  "studentPublicationState": "PREPARING",
+  "studentMessage": "Mission is being prepared. Content will unlock soon.",
+  "quickEntryEnabled": false,
+  "smartEntryEnabled": false,
+  "metrics": {
+    "PREPARING_MARKED_LIVE_COUNT": 0,
+    "PREPARING_QUICK_ENTRY_ENABLED_COUNT": 0,
+    "PREPARING_SMART_ENTRY_ENABLED_COUNT": 0
+  },
+  "assertionPass": true
+}

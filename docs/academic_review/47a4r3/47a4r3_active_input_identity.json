@@ -1,0 +1,90 @@
+{
+  "activeInput": "47A3R1",
+  "activeDirectory": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff",
+  "wrongHandoffDirectoryUsageCount": 0,
+  "files": [
+    {
+      "relativePath": "47a3r1_materializer_candidate_manifest.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_materializer_candidate_manifest.json",
+      "exists": true,
+      "byteLength": 193085,
+      "expectedSha256": "f005911a660392ecb884e9fac44e782eb2afcecc9cbdcd954188a98f63046d96",
+      "actualSha256": "f005911a660392ecb884e9fac44e782eb2afcecc9cbdcd954188a98f63046d96",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_major_mission_filter_ledger.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_major_mission_filter_ledger.json",
+      "exists": true,
+      "byteLength": 184069,
+      "expectedSha256": "1ba16f0f2f9e91434e11612025c5842d0bbe81d66f1c771d5b86b88420a91ff8",
+      "actualSha256": "1ba16f0f2f9e91434e11612025c5842d0bbe81d66f1c771d5b86b88420a91ff8",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_materialization_readiness.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_materialization_readiness.json",
+      "exists": true,
+      "byteLength": 83719,
+      "expectedSha256": "42dfaa81865f28353aed312525919d75f09a3ddc18329232c725f212ee1bd769",
+      "actualSha256": "42dfaa81865f28353aed312525919d75f09a3ddc18329232c725f212ee1bd769",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_variant_evidence_registry.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_variant_evidence_registry.json",
+      "exists": true,
+      "byteLength": 14457,
+      "expectedSha256": "39262fa7225e2f1a6ca763be47501cd62142853edc2e0e1f4bbde2ce900e73c4",
+      "actualSha256": "39262fa7225e2f1a6ca763be47501cd62142853edc2e0e1f4bbde2ce900e73c4",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_judicial_authority_reconciliation.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_judicial_authority_reconciliation.json",
+      "exists": true,
+      "byteLength": 6948,
+      "expectedSha256": "d9de0449b96a439bbdc0d3f44dca934586be3f37c0e40b3c0ab4193b4064adca",
+      "actualSha256": "d9de0449b96a439bbdc0d3f44dca934586be3f37c0e40b3c0ab4193b4064adca",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_source_monitor_surface_integrity.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_source_monitor_surface_integrity.json",
+      "exists": true,
+      "byteLength": 418775,
+      "expectedSha256": "5c0e16bdead0e8270e7b7042fdb875b3a81817850a4e2f33ca3b3ebb4b9c31f0",
+      "actualSha256": "5c0e16bdead0e8270e7b7042fdb875b3a81817850a4e2f33ca3b3ebb4b9c31f0",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_unique_source_surface_registry.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_unique_source_surface_registry.json",
+      "exists": true,
+      "byteLength": 139931,
+      "expectedSha256": "54c040aba565f1e6933649433aef953bf06605ceb2fe590204d05c9a9187adcb",
+      "actualSha256": "54c040aba565f1e6933649433aef953bf06605ceb2fe590204d05c9a9187adcb",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r1_ibps_rrb_identity_reconciliation.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r1_ibps_rrb_identity_reconciliation.json",
+      "exists": true,
+      "byteLength": 2684,
+      "expectedSha256": "432fa0a9f4474e6299d08d8e176fe0c6176297cdee719fdd284576a1c539ebed",
+      "actualSha256": "432fa0a9f4474e6299d08d8e176fe0c6176297cdee719fdd284576a1c539ebed",
+      "hashMatch": true
+    },
+    {
+      "relativePath": "47a3r_state_ut_source_monitor_seed_registry.json",
+      "resolvedAbsolutePath": "C:\\RankCrackers\\RankCrackers-55\\docs\\academic_review\\47a3r1\\verifier_handoff\\47a3r_state_ut_source_monitor_seed_registry.json",
+      "exists": true,
+      "byteLength": 443689,
+      "expectedSha256": "649dcd0abf0c4e83e61c5abbba533f1e60edaacf50c417c3a32b7bf82f461139",
+      "actualSha256": "649dcd0abf0c4e83e61c5abbba533f1e60edaacf50c417c3a32b7bf82f461139",
+      "hashMatch": true
+    }
+  ],
+  "active47A3R1HashMismatchCount": 0,
+  "active47A3R1MissingFileCount": 0
+}

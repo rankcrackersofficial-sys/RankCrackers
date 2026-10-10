@@ -1,0 +1,18 @@
+{
+  "policy": "48UI7 Product Law: MISSION SHELL ACCESS != SMART ENTRY READINESS",
+  "SUPERSEDED_48B2_QUICK_ENTRY_OPERATIONS_COUNT": 2,
+  "operations": [
+    {
+      "missionId": "jee_main_2026",
+      "stale48B2Operation": "quickEntry = false",
+      "action": "SUPERSEDED_DO_NOT_APPLY",
+      "reason": "48UI7 Product Law: Quick Start allows entering Dashboard shell. Smart Start remains separate fail-closed diagnostic gate."
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "stale48B2Operation": "quickEntry = false",
+      "action": "SUPERSEDED_DO_NOT_APPLY",
+      "reason": "48UI7 Product Law: Quick Start allows entering Dashboard shell. Smart Start remains separate fail-closed diagnostic gate."
+    }
+  ]
+}

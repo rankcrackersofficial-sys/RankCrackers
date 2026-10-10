@@ -1,0 +1,30 @@
+{
+  "gate": "RC_46D12_REJECTION_AND_NON_CIRCULAR_SOURCE_RECERTIFICATION_46D13",
+  "generatedAt": "2026-09-09T16:00:18.172Z",
+  "missionId": "neet_(ug)-2027",
+  "officialAuthority": "National Testing Agency (NTA)",
+  "sourceDocument": "doc_nta_neet_ug_2026_bulletin",
+  "reconciledPattern": {
+    "missionTargetYear": 2027,
+    "sourceBaselineYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "mode": "OMR_PEN_PAPER",
+    "durationMinutes": 180,
+    "totalQuestions": 180,
+    "totalMarks": 720,
+    "physicsQuestions": 45,
+    "chemistryQuestions": 45,
+    "biologyQuestions": 90,
+    "primarySubjectModel": [
+      "Physics",
+      "Chemistry",
+      "Biology"
+    ],
+    "childDisciplines": [
+      "Botany",
+      "Zoology"
+    ],
+    "marking": "+4 / -1 / 0",
+    "rejectedPattern": "200 Questions / 200 Minutes"
+  }
+}

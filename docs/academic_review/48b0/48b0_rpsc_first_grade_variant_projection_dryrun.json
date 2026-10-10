@@ -1,0 +1,574 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "governedVariantSource": "docs/academic_review/46d13_rpsc_source_derived_variant_set.json",
+  "governedVariantCount": 28,
+  "variantAudit": {
+    "backendCanonicalVariantRowsExist": "PARTIAL (2 rows exist in variables subcollection: var_HINDI_1782713551600, var_ENGLISH_2026_1782736222410; 26 rows missing)",
+    "studentCatalogVariantRefsExist": "PARTIAL (variables array contains 28 items in student_mission_catalog, but canonical variants array expected by materializer is undefined)",
+    "missionRealmVariantMetadataExists": "MISSING (variants array undefined, variantRequired undefined on mission_realms parent document)"
+  },
+  "minimalProjectionDelta": {
+    "mission_realms": {
+      "path": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "patches": {
+        "variantRequired": true,
+        "variants": [
+          {
+            "code": "HINDI_2026",
+            "name": "Hindi / हिन्दी",
+            "id": "var_HINDI_1782713551600",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "ENGLISH_2026",
+            "name": "English / अंग्रेजी",
+            "id": "var_ENGLISH_2026_1782736222410",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "SANSKRIT_2026",
+            "name": "Sanskrit / संस्कृत",
+            "id": "var_sanskrit_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "RAJASTHANI_2026",
+            "name": "Rajasthani / राजस्थानी",
+            "id": "var_rajasthani_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PUNJABI_2026",
+            "name": "Punjabi / पंजाबी",
+            "id": "var_punjabi_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "URDU_2026",
+            "name": "Urdu / उर्दू",
+            "id": "var_urdu_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "HISTORY_2026",
+            "name": "History / इतिहास",
+            "id": "var_history_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "GEOGRAPHY_2026",
+            "name": "Geography / भूगोल",
+            "id": "var_geography_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "POLSCIENCE_2026",
+            "name": "Political Science / राजनीति विज्ञान",
+            "id": "var_polscience_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "ECONOMICS_2026",
+            "name": "Economics / अर्थशास्त्र",
+            "id": "var_economics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "SOCIOLOGY_2026",
+            "name": "Sociology / समाजशास्त्र",
+            "id": "var_sociology_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PUBADMIN_2026",
+            "name": "Public Administration / लोक प्रशासन",
+            "id": "var_pubadmin_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PHYSICS_2026",
+            "name": "Physics / भौतिक विज्ञान",
+            "id": "var_physics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "CHEMISTRY_2026",
+            "name": "Chemistry / रसायन विज्ञान",
+            "id": "var_chemistry_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "BIOLOGY_2026",
+            "name": "Biology / जीव विज्ञान",
+            "id": "var_biology_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "MATHEMATICS_2026",
+            "name": "Mathematics / गणित",
+            "id": "var_mathematics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "COMMERCE_2026",
+            "name": "Commerce / वाणिज्य",
+            "id": "var_commerce_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "MUSIC_2026",
+            "name": "Music / संगीत",
+            "id": "var_music_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "DRAWING_2026",
+            "name": "Drawing / चित्रकला",
+            "id": "var_drawing_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "HOMESCIENCE_2026",
+            "name": "Home Science / गृह विज्ञान",
+            "id": "var_homescience_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "AGRICULTURE_2026",
+            "name": "Agriculture / कृषि",
+            "id": "var_agriculture_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PHYSED_2026",
+            "name": "Physical Education / शारीरिक शिक्षा",
+            "id": "var_physical_education_2026",
+            "family": "PHYSICAL_EDUCATION_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_physical_education",
+            "paper2Id": "rpsc_paper_2_phy_edu"
+          },
+          {
+            "code": "COACH_ATHLETICS_2026",
+            "name": "Coach Athletics / कोच एथलेटिक्स",
+            "id": "var_coach_athletics_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_BASKETBALL_2026",
+            "name": "Coach Basketball / कोच बास्केटबॉल",
+            "id": "var_coach_basketball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_HANDBALL_2026",
+            "name": "Coach Handball / कोच हैंडबॉल",
+            "id": "var_coach_handball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_KABADDI_2026",
+            "name": "Coach Kabaddi / कोच कबड्डी",
+            "id": "var_coach_kabaddi_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_TABLE_TENNIS_2026",
+            "name": "Coach Table Tennis / कोच टेबल टेनिस",
+            "id": "var_coach_table_tennis_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_VOLLEYBALL_2026",
+            "name": "Coach Volleyball / कोच वॉलीबॉल",
+            "id": "var_coach_volleyball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          }
+        ],
+        "visibilityGate.quickEntryEnabled": false,
+        "visibilityGate.smartEntryEnabled": false
+      }
+    },
+    "student_mission_catalog": {
+      "path": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "patches": {
+        "variantRequired": true,
+        "variantStatus": "CONFIGURED",
+        "variants": [
+          {
+            "code": "HINDI_2026",
+            "name": "Hindi / हिन्दी",
+            "id": "var_HINDI_1782713551600",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "ENGLISH_2026",
+            "name": "English / अंग्रेजी",
+            "id": "var_ENGLISH_2026_1782736222410",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "SANSKRIT_2026",
+            "name": "Sanskrit / संस्कृत",
+            "id": "var_sanskrit_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "RAJASTHANI_2026",
+            "name": "Rajasthani / राजस्थानी",
+            "id": "var_rajasthani_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PUNJABI_2026",
+            "name": "Punjabi / पंजाबी",
+            "id": "var_punjabi_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "URDU_2026",
+            "name": "Urdu / उर्दू",
+            "id": "var_urdu_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "HISTORY_2026",
+            "name": "History / इतिहास",
+            "id": "var_history_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "GEOGRAPHY_2026",
+            "name": "Geography / भूगोल",
+            "id": "var_geography_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "POLSCIENCE_2026",
+            "name": "Political Science / राजनीति विज्ञान",
+            "id": "var_polscience_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "ECONOMICS_2026",
+            "name": "Economics / अर्थशास्त्र",
+            "id": "var_economics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "SOCIOLOGY_2026",
+            "name": "Sociology / समाजशास्त्र",
+            "id": "var_sociology_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PUBADMIN_2026",
+            "name": "Public Administration / लोक प्रशासन",
+            "id": "var_pubadmin_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PHYSICS_2026",
+            "name": "Physics / भौतिक विज्ञान",
+            "id": "var_physics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "CHEMISTRY_2026",
+            "name": "Chemistry / रसायन विज्ञान",
+            "id": "var_chemistry_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "BIOLOGY_2026",
+            "name": "Biology / जीव विज्ञान",
+            "id": "var_biology_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "MATHEMATICS_2026",
+            "name": "Mathematics / गणित",
+            "id": "var_mathematics_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "COMMERCE_2026",
+            "name": "Commerce / वाणिज्य",
+            "id": "var_commerce_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "MUSIC_2026",
+            "name": "Music / संगीत",
+            "id": "var_music_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "DRAWING_2026",
+            "name": "Drawing / चित्रकला",
+            "id": "var_drawing_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "HOMESCIENCE_2026",
+            "name": "Home Science / गृह विज्ञान",
+            "id": "var_homescience_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "AGRICULTURE_2026",
+            "name": "Agriculture / कृषि",
+            "id": "var_agriculture_2026",
+            "family": "ACADEMIC_LECTURER_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_gk_gs_academic",
+            "paper2Id": "rpsc_paper_2_academic"
+          },
+          {
+            "code": "PHYSED_2026",
+            "name": "Physical Education / शारीरिक शिक्षा",
+            "id": "var_physical_education_2026",
+            "family": "PHYSICAL_EDUCATION_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_physical_education",
+            "paper2Id": "rpsc_paper_2_phy_edu"
+          },
+          {
+            "code": "COACH_ATHLETICS_2026",
+            "name": "Coach Athletics / कोच एथलेटिक्स",
+            "id": "var_coach_athletics_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_BASKETBALL_2026",
+            "name": "Coach Basketball / कोच बास्केटबॉल",
+            "id": "var_coach_basketball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_HANDBALL_2026",
+            "name": "Coach Handball / कोच हैंडबॉल",
+            "id": "var_coach_handball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_KABADDI_2026",
+            "name": "Coach Kabaddi / कोच कबड्डी",
+            "id": "var_coach_kabaddi_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_TABLE_TENNIS_2026",
+            "name": "Coach Table Tennis / कोच टेबल टेनिस",
+            "id": "var_coach_table_tennis_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          },
+          {
+            "code": "COACH_VOLLEYBALL_2026",
+            "name": "Coach Volleyball / कोच वॉलीबॉल",
+            "id": "var_coach_volleyball_2026",
+            "family": "COACH_FAMILY",
+            "variantDimension": "SUBJECT_VARIANT",
+            "paper1Id": "rpsc_paper_1_coach",
+            "paper2Id": "rpsc_paper_2_coach"
+          }
+        ],
+        "quickEntryEnabled": false,
+        "smartEntryEnabled": false,
+        "visibility.quickEntryEnabled": false,
+        "visibility.smartEntryEnabled": false
+      }
+    },
+    "subcollectionRepairsPlannedInDryRunOnly": {
+      "collectionPath": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/variables",
+      "existingSubcollectionCount": 2,
+      "missingSubcollectionCount": 26,
+      "missingVariantIds": [
+        "var_sanskrit_2026",
+        "var_rajasthani_2026",
+        "var_punjabi_2026",
+        "var_urdu_2026",
+        "var_history_2026",
+        "var_geography_2026",
+        "var_polscience_2026",
+        "var_economics_2026",
+        "var_sociology_2026",
+        "var_pubadmin_2026",
+        "var_physics_2026",
+        "var_chemistry_2026",
+        "var_biology_2026",
+        "var_mathematics_2026",
+        "var_commerce_2026",
+        "var_music_2026",
+        "var_drawing_2026",
+        "var_homescience_2026",
+        "var_agriculture_2026",
+        "var_physical_education_2026",
+        "var_coach_athletics_2026",
+        "var_coach_basketball_2026",
+        "var_coach_handball_2026",
+        "var_coach_kabaddi_2026",
+        "var_coach_table_tennis_2026",
+        "var_coach_volleyball_2026"
+      ]
+    }
+  },
+  "productionMutationStatus": "ZERO_PRODUCTION_WRITES (STRICT DRY-RUN ONLY)"
+}

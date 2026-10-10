@@ -1,0 +1,46 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "COMPREHENSIVE AUTOMATED TEST EXECUTION REPORT",
+  "test_suites": [
+    {
+      "file": "test/features/auth/gate_48ui7_mission_realm_quick_start_test.dart",
+      "status": "PASSED",
+      "total_tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "tests": [
+        "1. Three Separate Gates: canEnterMissionShell, canQuickStart, canSmartStart semantics",
+        "2. Firestore flag schema audit: nested visibility vs top-level compatibility",
+        "3. Quick Start tap persists exact jee_main_2026 identity and navigates to Dashboard",
+        "4. Smart Start remains fail-closed when diagnostic readiness is unproven",
+        "5. Non-canonical test mission aliases eliminated",
+        "6. Authority & Region fallback audit: backend truth preferred, TS alias removed"
+      ]
+    },
+    {
+      "file": "test/features/auth/gate_48ui6_authority_and_academic_reattachment_test.dart",
+      "status": "PASSED",
+      "total_tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "tests": [
+        "1. Universal Authority summary: SSC shows '9 exams', UPSC shows '1 exam', NTA shows '2 exams'",
+        "2. State tab: RPSC authority shows '2 exams' dynamically, and RPSC 1st Grade shows '28 subject variants'",
+        "3. Startability fail-safe: missing backend values default to false",
+        "4. Exact mission ID propagation without alias drift",
+        "5. Mission switch clears old engine state and eliminates cross-mission bleed",
+        "6. Student status label fails safe to Preparing on unknown or empty status"
+      ]
+    }
+  ],
+  "metrics": {
+    "ACADEMIC_NOT_READY_BLOCKS_DASHBOARD_COUNT": 0,
+    "SMART_START_WITHOUT_DIAGNOSTIC_PROOF_COUNT": 0,
+    "NON_CANONICAL_TEST_MISSION_ALIAS_COUNT": 0,
+    "TITLE_OR_ID_HEURISTIC_CANONICAL_AUTHORITY_COUNT": 0,
+    "TS_REGION_ALIAS_RUNTIME_COUNT": 0,
+    "CROSS_MISSION_RUNTIME_STATE_BLEED_COUNT": 0,
+    "FAKE_ACADEMIC_READINESS_COUNT": 0
+  },
+  "verdict": "48UI7_ALL_TARGETED_TESTS_PASS"
+}

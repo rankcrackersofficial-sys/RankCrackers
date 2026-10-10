@@ -1,0 +1,157 @@
+{
+  "normalizationSchemaVersion": "9.0.0",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "generatedAt": "2026-09-09T14:57:58.799Z",
+  "governingLaw": "PERMANENT MISSION IDENTITY LAW: Permanent Mission Family + Separate Cycle Context",
+  "summary": {
+    "TOTAL_NORMALIZED_MISSIONS": 3,
+    "YEAR_BEARING_STUDENT_DISPLAY_TITLE_COUNT_AFTER": 0,
+    "IMMUTABLE_MISSION_ID_MUTATIONS": 0,
+    "UNAUTHORIZED_SEMANTIC_MUTATIONS": 0
+  },
+  "missions": [
+    {
+      "missionId": "jee_main_2026",
+      "immutableIdPreserved": "jee_main_2026",
+      "realmIdPreserved": "jee_main_2026",
+      "recruitmentGroupIdPreserved": "jee_main_2026",
+      "displayNormalization": {
+        "studentCatalogTitle": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "studentCatalogDisplayName": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "studentCatalogDisplayTitle": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "studentCatalogName": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "studentCatalogExamName": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "studentCatalogSubtitle": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "recruitmentTitle": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "realmExamName": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        },
+        "realmRecruitmentName": {
+          "before": "JEE Main 2027",
+          "after": "JEE Main"
+        }
+      },
+      "cycleContextPreserved": {
+        "preparationTargetCycle": 2027,
+        "sourceBaselineCycle": 2026,
+        "officialCycle": 2027
+      }
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "immutableIdPreserved": "neet_(ug)-2027",
+      "realmIdPreserved": "neet_(ug)-2027",
+      "recruitmentGroupIdPreserved": "neet_(ug)-2027",
+      "displayNormalization": {
+        "studentCatalogTitle": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "studentCatalogTitleHindi": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "studentCatalogDisplayName": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "studentCatalogDisplayTitle": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "studentCatalogName": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "studentCatalogExamName": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "recruitmentTitle": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "realmExamName": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        },
+        "realmRecruitmentName": {
+          "before": "NEET (UG)-2027",
+          "after": "NEET (UG)"
+        }
+      },
+      "cycleContextPreserved": {
+        "preparationTargetCycle": 2027,
+        "sourceBaselineCycle": 2026,
+        "officialCycle": 2027
+      }
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "immutableIdPreserved": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "realmIdPreserved": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "recruitmentGroupIdPreserved": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayNormalization": {
+        "studentCatalogTitle": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "studentCatalogDisplayName": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "studentCatalogDisplayTitle": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "studentCatalogName": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "studentCatalogExamName": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "recruitmentTitle": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "realmExamName": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        },
+        "realmRecruitmentName": {
+          "before": "RPSC 1st Grade",
+          "after": "RPSC 1st Grade"
+        }
+      },
+      "cycleContextPreserved": {
+        "preparationTargetCycle": 2026,
+        "sourceBaselineCycle": 2025,
+        "officialCycle": "2025-2026"
+      }
+    }
+  ]
+}

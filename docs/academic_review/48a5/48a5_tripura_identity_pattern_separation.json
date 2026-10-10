@@ -1,0 +1,10 @@
+{
+  "canonicalMissionId": "trbt_tripura_ttet",
+  "aliasMissionId": "tripura_tet",
+  "identityBindingStatus": "VERIFIED_ALIAS_UNBOUND_DISCREPANCY",
+  "patternStatus": "SOURCE_ACCESS_BLOCKED_UNRESOLVED",
+  "sourceStatus": "OFFICIAL_PROSPECTUS_BYTES_NOT_ACQUIRED",
+  "topLevelDisposition": "HOLD",
+  "holdReason": "Missing official syllabus/prospectus bytes in 48C; identity alias bound but pattern remains uncertified.",
+  "publicationSafetyNote": "Identity alias proof sufficient to bind alias, but pattern/prospectus unacquired state keeps mission in HOLD batch."
+}

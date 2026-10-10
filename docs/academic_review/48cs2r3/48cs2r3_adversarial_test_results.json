@@ -1,0 +1,82 @@
+{
+  "gate": "GATE_48CS2R3",
+  "primarySuite": {
+    "file": "functions/test/test_48cs2r3_completeness_safety.js",
+    "totalTests": 10,
+    "passedTests": 10,
+    "failedTests": 0,
+    "results": [
+      {
+        "id": 1,
+        "scenario": "SC candidate above base age + relaxation rule unresolved => NOT final NOT_ELIGIBLE (yields NOT_EVALUATED)",
+        "status": "PASS"
+      },
+      {
+        "id": 2,
+        "scenario": "SC candidate above base age + RELAXATION_NONE_VERIFIED => strictly NOT_ELIGIBLE",
+        "status": "PASS"
+      },
+      {
+        "id": 3,
+        "scenario": "SC candidate + verified relaxation rule => rule applied exactly",
+        "status": "PASS"
+      },
+      {
+        "id": 4,
+        "scenario": "All extracted rules pass but EXPERIENCE family unresolved => ELIGIBLE verdict strictly prohibited",
+        "status": "PASS"
+      },
+      {
+        "id": 5,
+        "scenario": "User DOB missing with complete age rule => MORE_INFORMATION_NEEDED (user profile gap)",
+        "status": "PASS"
+      },
+      {
+        "id": 6,
+        "scenario": "Official age rule missing / unverified => NOT_EVALUATED (official source gap)",
+        "status": "PASS"
+      },
+      {
+        "id": 7,
+        "scenario": "Partial vacancy matrix with zero matching rows => VACANCIES_PENDING_RESERVATION_DATA",
+        "status": "PASS"
+      },
+      {
+        "id": 8,
+        "scenario": "Complete vacancy matrix with zero applicable rows => NO_APPLICABLE_VACANCIES",
+        "status": "PASS"
+      },
+      {
+        "id": 9,
+        "scenario": "Base notification verified but amendment chain partial => affected field remains unresolved",
+        "status": "PASS"
+      },
+      {
+        "id": 10,
+        "scenario": "Complete rulebook + complete amendments + all mandatory rules pass => ELIGIBLE permitted",
+        "status": "PASS"
+      }
+    ]
+  },
+  "companionSuites": [
+    {
+      "file": "functions/test/test_48cs2r2_adversarial_hardening.js",
+      "totalTests": 20,
+      "passedTests": 20,
+      "failedTests": 0,
+      "status": "PASS"
+    },
+    {
+      "file": "functions/test/test_48cs2_source_impact_and_career_signal.js",
+      "totalTests": 11,
+      "passedTests": 11,
+      "failedTests": 0,
+      "status": "PASS"
+    }
+  ],
+  "totalTestsAcrossSuites": 41,
+  "totalPassedAcrossSuites": 41,
+  "complianceMetric": {
+    "TEST_FAILURE_COUNT": 0
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "gate": "48CS2R6R1",
+  "auditTitle": "Elimination of Hardcoded Source Facts and Numerical Constants Audit",
+  "targetFile": "functions/services/real_source_adapter.js",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "auditor": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "hardcodedConstantsEliminated": [
+    {
+      "fact": "totalSeats: 3225 (RPSC First Grade)",
+      "status": "ELIMINATED_FROM_CODE",
+      "sourceProvenance": "48cs4_vacancy_matrix_registry.json & 48cs4_amendment_chain_registry.json",
+      "derivationMethod": "Dynamically parsed from vacRow.totalSeats/normalizedValue, or extracted from verified amendment effect text."
+    },
+    {
+      "fact": "totalSeats: 12256 (SSC CGL 2026)",
+      "status": "ELIMINATED_FROM_CODE",
+      "sourceProvenance": "48cs5_ssc_cgl_rulebook_package.json (rawSsc.verifiedApproximateVacancyTotal)",
+      "derivationMethod": "Read directly from verifiedApproximateVacancyTotal in physical artifact."
+    },
+    {
+      "fact": "JEE Main 2026 Eligibility Rules Array",
+      "status": "ELIMINATED_FROM_CODE",
+      "sourceProvenance": "48cs5_jee_main_2026_rulebook_package.json (rawJee.rules)",
+      "derivationMethod": "Dynamically mapped from rawJee.rules via CS5_FAMILY_TO_RULE_TYPE_MAP; zero hardcoded rule definitions."
+    },
+    {
+      "fact": "SSC CGL 2026 Eligibility Rules Array",
+      "status": "ELIMINATED_FROM_CODE",
+      "sourceProvenance": "48cs5_ssc_cgl_rulebook_package.json (rawSsc.rules)",
+      "derivationMethod": "Dynamically mapped from rawSsc.rules via CS5_FAMILY_TO_RULE_TYPE_MAP; zero hardcoded rule definitions."
+    },
+    {
+      "fact": "Application Window and Exam Dates",
+      "status": "ELIMINATED_FROM_CODE",
+      "sourceProvenance": "48cs4_cycle_lifecycle_ledger.json & 48cs5_amendment_chain.json",
+      "derivationMethod": "Read directly from lifecycleRow and physical amendment chain records."
+    }
+  ],
+  "hardcodedConstantCount": 0,
+  "verdict": "ZERO_HARDCODED_FACTS_VERIFIED"
+}

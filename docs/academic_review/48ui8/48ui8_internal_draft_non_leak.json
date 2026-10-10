@@ -1,0 +1,13 @@
+{
+  "rule": "A document present in student_mission_catalog or mission_realms with studentPublicationState='INTERNAL_DRAFT' or cardVisible=false must NEVER be visible to student client.",
+  "testFixture": {
+    "id": "afcat",
+    "studentPublicationState": "INTERNAL_DRAFT",
+    "cardVisible": false,
+    "userPanelVisible": false,
+    "catalogDiscoverable": false
+  },
+  "clientQueryFilterResult": "INVISIBLE_TO_STUDENT",
+  "INTERNAL_DRAFT_VISIBLE_TO_STUDENT_COUNT": 0,
+  "leakDetected": false
+}

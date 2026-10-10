@@ -1,0 +1,45 @@
+{
+  "gate": "GATE_48CS2_CAREER_BACKEND_ARCHITECTURE_AUDIT",
+  "generatedAt": "2026-09-10T11:06:36.531Z",
+  "lane": "AGENT-3_BACKEND_MATERIALIZER",
+  "currentCollectionsAudited": [
+    {
+      "collection": "recruitments",
+      "roleInSystem": "One of three synchronized projections of permanent academic missions (along with mission_realms and student_mission_catalog).",
+      "findings": "Currently stores 16 documents keyed by permanent mission ID (e.g., upsc_cse_prelims, rpsc_ras_prelims). Historically labelled \"recruitments\", but semantically represents permanent exam architectures and blueprints.",
+      "separationRequirement": "Must NOT be overwritten or repurposed as transient yearly recruitment cycles. Transient cycles require a distinct model and decoupled lifecycle."
+    },
+    {
+      "collection": "notification_candidates",
+      "roleInSystem": "Student-specific push delivery layer keyed by nc_${uid}_${opportunityId}.",
+      "findings": "Coupled with sentinel_drafts and notification_history. Designed for personalized alert delivery and user read-state tracking, not canonical recruitment lifecycle state.",
+      "separationRequirement": "Remains the downstream delivery pipeline. It should consume reduced RecruitmentCycle career signals rather than storing monolithic recruitment cycle state."
+    },
+    {
+      "collection": "sentinel_drafts",
+      "roleInSystem": "Draft notification staging pipeline for human review or automated worker broadcast.",
+      "findings": "Transitional buffer before notification dispatch.",
+      "separationRequirement": "Can be triggered when a verified CareerSignalEvent is reduced into an active opportunity or process update signal."
+    }
+  ],
+  "architecturalDecouplingBoundary": {
+    "permanentMissions": {
+      "storage": [
+        "mission_realms",
+        "recruitments",
+        "student_mission_catalog"
+      ],
+      "lifecycle": "Permanent, multi-year, syllabus-driven. Survives indefinitely across yearly cycles.",
+      "invariants": "DigiBook units, topic nodes, and Crucible orbits are never deleted upon cycle termination."
+    },
+    "recruitmentCycles": {
+      "storage": "recruitment_cycles (decoupled collection)",
+      "lifecycle": "Time-bounded, event-driven (e.g. upsc_cse_2026). Active during notification, application, exam, and result stages.",
+      "invariants": "Reaches terminal state (CLOSED / CANCELLED) without altering permanent mission."
+    },
+    "careerSignalEvents": {
+      "storage": "career_signal_events (append-only ledger)",
+      "lifecycle": "Immutable audit log of official government notifications, corrigenda, and schedules."
+    }
+  }
+}

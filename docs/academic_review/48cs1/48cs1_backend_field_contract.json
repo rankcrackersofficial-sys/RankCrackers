@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0-48cs1",
+  "collections": {
+    "recruitment_cycles": {
+      "cycleId": "string (PK)",
+      "missionId": "string | null",
+      "authorityId": "string",
+      "officialAdvertisementIdentity": "string",
+      "notificationDate": "ISO8601 string",
+      "applicationWindow": {
+        "start": "ISO8601 string",
+        "end": "ISO8601 string"
+      },
+      "examStatus": "string",
+      "resultStatus": "string",
+      "cycleStatus": "string (ANNOUNCED | APPLICATION_OPEN | ... | CYCLE_CLOSED)",
+      "createdAt": "timestamp",
+      "updatedAt": "timestamp"
+    },
+    "career_signal_events": {
+      "eventId": "string (PK)",
+      "cycleId": "string",
+      "missionId": "string | null",
+      "signalCategory": "string (OPPORTUNITY_SIGNAL | PROCESS_UPDATE_SIGNAL)",
+      "eventType": "string",
+      "officialSourceUrl": "string",
+      "eventTimestamp": "ISO8601 string",
+      "effectiveDate": "ISO8601 string",
+      "expiryDate": "ISO8601 string | null",
+      "title": "string",
+      "summary": "string"
+    }
+  }
+}

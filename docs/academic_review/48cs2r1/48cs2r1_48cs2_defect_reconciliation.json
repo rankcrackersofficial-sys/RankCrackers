@@ -1,0 +1,47 @@
+{
+  "gate": "GATE_48CS2R1_DEFECT_RECONCILIATION",
+  "generatedAt": "2026-09-10T11:26:52.315Z",
+  "defectsAuditedAndRemediated": [
+    {
+      "defectId": "DEFECT_01_NOTIFICATION_CANDIDATES_ROLE",
+      "auditFinding": "48CS2 repurposed notification_candidates as canonical per-user delivery queue.",
+      "remediation": "De-coupled into 4 distinct entities: NotificationCandidate (source/discovery staging), CareerSignalEvent (canonical official event), CareerSignalView (user-specific interpretation), and NotificationEvent (user delivery alert transport).",
+      "metric": "NOTIFICATION_CANDIDATE_AS_CANONICAL_DELIVERY_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_02_COMPETING_STATE_TAXONOMIES",
+      "auditFinding": "48CS2 reducer mixed UPCOMING/ACTIVE states with canonical 12-state vocabulary.",
+      "remediation": "Standardized on ONE canonical 12-state recruitment cycle vocabulary (ANNOUNCED, APPLICATION_OPEN, APPLICATION_CLOSED, EXAM_SCHEDULED, EXAM_COMPLETED, ANSWER_KEY_STAGE, RESULT_STAGE, INTERVIEW_OR_DV_STAGE, FINAL_RESULT_DECLARED, CYCLE_CLOSED, CANCELLED, STATUS_UNRESOLVED). UPCOMING and ACTIVE are derived helpers only.",
+      "metric": "COMPETING_CANONICAL_CYCLE_STATE_TAXONOMY_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_03_ARBITRARY_BUSINESS_EXPIRY",
+      "auditFinding": "Prior design relied on arbitrary now + 7 days signal expiry.",
+      "remediation": "Signal active state is derived strictly from application deadline, official amendments, cycle stage, and process stage. Zero arbitrary expiry offsets.",
+      "metric": "ARBITRARY_BUSINESS_EXPIRY_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_04_FALSE_INELIGIBLE_INCOMPLETE_COLLAPSE",
+      "auditFinding": "When evaluation.eligible was false, system blindly collapsed state into Incomplete / More Information Needed.",
+      "remediation": "Differentiated: known failed rule -> strictly NOT_ELIGIBLE; missing profile field -> MORE_INFORMATION_NEEDED; missing official rule -> NOT_EVALUATED.",
+      "metric": "KNOWN_INELIGIBLE_MAPPED_TO_INCOMPLETE_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_05_COLLAPSED_MATCH_DIMENSIONS",
+      "auditFinding": "academicMatch and qualificationMatch were both set to evaluation.eligible.",
+      "remediation": "Separated dimensions: academicMatch evaluates stream/discipline, qualificationMatch evaluates degree level, locationMatch evaluates domicile constraints.",
+      "metric": "COLLAPSED_MATCH_DIMENSION_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_06_TITLE_HEURISTIC_FOR_CAREER_FAMILY",
+      "auditFinding": "title.contains(\"mbbs\") was used to derive career family.",
+      "remediation": "Binds canonical careerFamily from official source taxonomy. String heuristics demoted to SUGGESTED_ONLY.",
+      "metric": "TITLE_HEURISTIC_AS_CANONICAL_FAMILY_COUNT = 0"
+    },
+    {
+      "defectId": "DEFECT_07_OPPORTUNITY_KIND_SEMANTICS",
+      "auditFinding": "Assumed all opportunities were job vacancies.",
+      "remediation": "Introduced explicit opportunityKind: JOB_RECRUITMENT, ADMISSION_ENTRANCE, OTHER_OFFICIAL_OPPORTUNITY. JEE/NEET typed as ADMISSION_ENTRANCE."
+    }
+  ]
+}

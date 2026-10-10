@@ -1,0 +1,42 @@
+{
+  "auditCode": "RC_47B6_COMPUTED_COLLISION_AUDIT",
+  "executedAt": "2026-09-10T07:08:16.247Z",
+  "metrics": {
+    "HARDCODED_COLLISION_RESOLUTION_COUNT": 0,
+    "UNRESOLVED_CANONICAL_ID_COLLISION_COUNT": 0
+  },
+  "computedCollisions": [
+    {
+      "pair": [
+        "ssc_gd",
+        "ssc_gd_constable"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED",
+      "resolutionOwner": "AGENT-2_47A3R"
+    },
+    {
+      "pair": [
+        "ssc_selection_post",
+        "ssc_ladakh_selection_post"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED",
+      "resolutionOwner": "AGENT-2_47A3R"
+    },
+    {
+      "pair": [
+        "ibps_rrb_po",
+        "ibps_rrb_officer_scale_1"
+      ],
+      "status": "CANONICAL_IDENTITY_RESOLVED",
+      "resolutionOwner": "AGENT-2_47A3R"
+    },
+    {
+      "pair": [
+        "ssc_cpo",
+        "delhi_police_si"
+      ],
+      "status": "REGIONAL_DISCOVERY_POINTER_RESOLVED",
+      "resolutionOwner": "AGENT-2_47A3R"
+    }
+  ]
+}

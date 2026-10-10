@@ -1,0 +1,30 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.721Z",
+  "canonicalArchitecture": "CRUCIBLE = 98-DAY CONTINUOUS ROTATING CYCLE (Major Test decoupled to Test Arena)",
+  "summary": {
+    "STALE_100_DAY_MISSION_COUNT_BEFORE": 15,
+    "STALE_100_DAY_MISSION_COUNT_AFTER": 0,
+    "CRUCIBLE_MAJOR_EMBEDDED_COUNT_BEFORE": 15,
+    "CRUCIBLE_MAJOR_EMBEDDED_COUNT_AFTER": 0,
+    "GENERIC_MISSION_TEMPLATE_98_DAY_READY": "YES",
+    "FUTURE_NEW_MISSION_STALE_DEFAULT_RISK": "ZERO"
+  },
+  "repairedMissions": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215",
+    "upsc_cse_prelims",
+    "ssc_cgl",
+    "ssc_je",
+    "ssc_selection_post",
+    "ssc_chsl",
+    "ssc_stenographer",
+    "ssc_hindi_translators",
+    "ssc_mts_havaldar",
+    "ssc_cpo",
+    "ssc_gd",
+    "uppsc_pcs_prelims",
+    "rpsc_ras_prelims"
+  ]
+}

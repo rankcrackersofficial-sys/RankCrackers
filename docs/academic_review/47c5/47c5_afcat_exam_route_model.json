@@ -1,0 +1,26 @@
+{
+  "missionId": "afcat",
+  "writtenExamParticipatingRoutes": [
+    "Flying Branch",
+    "Ground Duty Technical",
+    "Ground Duty Non-Technical"
+  ],
+  "specialEntryRoutes": [
+    {
+      "name": "NCC Special Entry",
+      "usesAfcatWrittenExam": false,
+      "modelDecision": "NOT_AFCAT_VARIANT"
+    },
+    {
+      "name": "GATE-based entry",
+      "usesAfcatWrittenExam": false,
+      "modelDecision": "NOT_AFCAT_VARIANT"
+    }
+  ],
+  "source": {
+    "url": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+    "title": "AFCAT Cycle 02/2026 Notification",
+    "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+  },
+  "variantModelReady": true
+}

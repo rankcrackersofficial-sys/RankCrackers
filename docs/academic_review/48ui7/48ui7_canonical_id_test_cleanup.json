@@ -1,0 +1,61 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "CANONICAL PRODUCTION MISSION ID TEST CLEANUP",
+  "canonical_production_ids": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "upsc_cse_prelims",
+    "rpsc_ras_prelims",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215",
+    "ssc_cgl",
+    "ssc_chsl",
+    "ssc_cpo",
+    "ssc_gd",
+    "ssc_hindi_translators",
+    "ssc_je",
+    "ssc_mts_havaldar",
+    "ssc_selection_post",
+    "ssc_stenographer"
+  ],
+  "eliminated_non_canonical_test_aliases": [
+    {
+      "test_alias": "ssc_cgl_2026",
+      "canonical_replacement": "ssc_cgl",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "upsc_cse_2026",
+      "canonical_replacement": "upsc_cse_prelims",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "rpsc_ras_prelims_2026",
+      "canonical_replacement": "rpsc_ras_prelims",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "ssc_mts_2026",
+      "canonical_replacement": "ssc_mts_havaldar",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "ssc_steno_2026",
+      "canonical_replacement": "ssc_stenographer",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "ssc_jht_2026",
+      "canonical_replacement": "ssc_hindi_translators",
+      "status": "ELIMINATED"
+    },
+    {
+      "test_alias": "ssc_sp_2026",
+      "canonical_replacement": "ssc_selection_post",
+      "status": "ELIMINATED"
+    }
+  ],
+  "metrics": {
+    "NON_CANONICAL_TEST_MISSION_ALIAS_COUNT": 0
+  },
+  "verdict": "CANONICAL_IDS_LOCKED_AND_VERIFIED"
+}

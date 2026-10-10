@@ -1,0 +1,38 @@
+{
+  "gate": "GATE_48B2_TEST_ORPHAN_CLEANUP_SCRIPT_AUDIT",
+  "targetOrphanId": "test_mission_catalog_bridge",
+  "currentState": {
+    "inMissionRealms": false,
+    "inRecruitments": true,
+    "inStudentMissionCatalog": false,
+    "status": "ORPHAN_HELD_ZERO_PRODUCTION_DELETIONS"
+  },
+  "scriptPath": "scripts/cleanup_test_mission_catalog_bridge.js",
+  "safetyVerification": {
+    "exactIdConfirmation": {
+      "verified": true,
+      "rule": "Hardcoded targetId = \"test_mission_catalog_bridge\"; no wildcard or pattern matching."
+    },
+    "dryRunDefault": {
+      "verified": true,
+      "rule": "Defaults to DRY-RUN mode. Live delete executes ONLY when explicit --apply argument is present."
+    },
+    "projectIdGuard": {
+      "verified": true,
+      "rule": "Checks Firebase project binding against \"rankcrackers-55\"."
+    },
+    "dependencyPreflight": {
+      "verified": true,
+      "rule": "Audits presence across all 3 collections before attempting doc delete."
+    },
+    "zeroWildcardDeletion": {
+      "verified": true,
+      "rule": "Strictly document-level targeted delete; zero collection/subcollection drops."
+    },
+    "idempotentSecondRun": {
+      "verified": true,
+      "rule": "Subsequent runs evaluate exists=false and perform zero operations."
+    }
+  },
+  "actionStatus": "HOLD_DO_NOT_DELETE_IN_GATE_48B2"
+}

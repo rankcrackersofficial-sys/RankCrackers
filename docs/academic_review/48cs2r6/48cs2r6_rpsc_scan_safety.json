@@ -1,0 +1,23 @@
+{
+  "gate": "48CS2R6",
+  "contractName": "RPSC_SCANNED_NOTIFICATION_SAFETY_AUDIT",
+  "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+  "officialNoticeNumber": "06/2025-26",
+  "sourceDocument": {
+    "documentIdentity": "DOC-RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+    "officialSourceUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/2025/Advt06_2025_26_School_Lecturer.pdf",
+    "documentSha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+    "byteLength": 4892110,
+    "isScannedPdf": true,
+    "scanTextState": "SCAN_ONLY_TEXT_UNRESOLVED"
+  },
+  "evidenceLevel": "SHA256_VERIFIED",
+  "factVerificationLevel": "BYTE_VERIFIED",
+  "scanSafetyGuarantees": [
+    "1. BYTE INTEGRITY VERIFIED: PDF binary digest 3f230660... matches official RPSC server download.",
+    "2. TEXT UNRESOLVED SAFEGUARD: Because the PDF is a scanned bitmap without machine-readable font text, textExtractedAndBound is strictly FALSE.",
+    "3. RULE EXTRACTION BARRIER: Unextracted scan text prohibits ruleFamilyCoverage from claiming EXHAUSTIVE or VERIFIED_COMPLETE.",
+    "4. PERSONALIZATION SAFETY: Personalization engine strictly blocks ELIGIBLE verdict, outputting NOT_EVALUATED with reason: \"! Scan-Safety Barrier: Scanned source document bytes are verified, but extracted text is unresolved. Final eligibility verdict is prohibited.\"",
+    "5. QUARANTINED 2022 PDF BARRIER: The legacy 2022 PDF (Advt 02/2022-23) discovered in old folders remains permanently QUARANTINED and cannot contaminate 2025-26 cycle authority."
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "profileSchemaVersion": "1.0.0",
+  "draftStatus": "CORRECTED_OFFICIAL_PROFILE_DRAFT",
+  "supersedes": "docs/academic_review/46d6_jee_official_profile_draft.json",
+  "missionId": "jee_main_2026",
+  "canonicalExamName": "JEE Main",
+  "canonicalDisplayName": "JEE Main 2027",
+  "missionTargetYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "correctionSummary": {
+    "stalePatternRemoved": "90 total questions / 10 numerical questions per subject (attempt any 5)",
+    "correctOfficialPattern": "75 total questions / 300 marks / 180 minutes (Physics 25, Chemistry 25, Mathematics 25; each having 20 MCQs in Section A + 5 Numerical in Section B, all compulsory)",
+    "officialSourceBinding": "NTA JEE (Main) - 2026 Information Bulletin Chapter 3 Table 3.1"
+  },
+  "authority": {
+    "organization": "National Testing Agency (NTA)",
+    "officialPortals": [
+      "https://jeemain.nta.ac.in",
+      "https://nta.ac.in"
+    ],
+    "sourceDocumentType": "Information Bulletin & Official Syllabus",
+    "officialNotificationTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin",
+    "officialPdfUrl": "https://jeemain.nta.ac.in/assets/files/JEE_Main_2026_Information_Bulletin.pdf",
+    "officialLocator": "Chapter 3: Scheme of Examination, Section 3.1 & Table 3.1 (Pattern of Paper 1)",
+    "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "National / All India",
+    "administeringBody": "NTA / Ministry of Education, Govt. of India",
+    "participatingInstitutes": ["NITs", "IIITs", "CFTIs", "State Engineering Colleges", "JEE Advanced Eligibility"],
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "supportedScope": {
+    "supportedPapers": ["Paper 1 (B.E. / B.Tech)"],
+    "unsupportedOfficialPapers": ["Paper 2A (B.Arch)", "Paper 2B (B.Planning)"],
+    "scopeBoundaryReason": "RankCrackers core focus is high-yield Engineering entrance preparation (PCM).",
+    "scopeDepthStatus": "NOT_COMPUTED",
+    "provenanceTag": "FOUNDER_DECLARED"
+  },
+  "paperModel": {
+    "paperCount": 1,
+    "papers": [
+      {
+        "paperId": "jee_main_paper_1",
+        "paperName": "Paper 1 (B.E. / B.Tech)",
+        "mode": "Computer Based Test (CBT)",
+        "durationMinutes": 180,
+        "totalQuestions": 75,
+        "totalQuestionsToAttempt": 75,
+        "totalMarks": 300,
+        "markingScheme": {
+          "correct": 4,
+          "incorrect": -1,
+          "unattempted": 0
+        },
+        "structure": [
+          {
+            "subject": "Mathematics",
+            "sectionA": {
+              "questionCount": 20,
+              "mandatory": 20,
+              "marks": 80,
+              "type": "MCQ"
+            },
+            "sectionB": {
+              "questionCount": 5,
+              "mandatory": 5,
+              "marks": 20,
+              "type": "Numerical"
+            },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          },
+          {
+            "subject": "Physics",
+            "sectionA": {
+              "questionCount": 20,
+              "mandatory": 20,
+              "marks": 80,
+              "type": "MCQ"
+            },
+            "sectionB": {
+              "questionCount": 5,
+              "mandatory": 5,
+              "marks": 20,
+              "type": "Numerical"
+            },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          },
+          {
+            "subject": "Chemistry",
+            "sectionA": {
+              "questionCount": 20,
+              "mandatory": 20,
+              "marks": 80,
+              "type": "MCQ"
+            },
+            "sectionB": {
+              "questionCount": 5,
+              "mandatory": 5,
+              "marks": 20,
+              "type": "Numerical"
+            },
+            "subjectTotalQuestions": 25,
+            "subjectTotalMarks": 100
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "subjectModel": {
+    "subjects": [
+      {
+        "subjectId": "mathematics",
+        "subjectName": "Mathematics",
+        "canonicalKey": "jee_mathematics",
+        "officialSections": ["Section A (20 MCQs)", "Section B (5 Numerical Value Questions)"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "physics",
+        "subjectName": "Physics",
+        "canonicalKey": "jee_physics",
+        "officialSections": ["Section A (20 MCQs)", "Section B (5 Numerical Value Questions)"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "subjectId": "chemistry",
+        "subjectName": "Chemistry",
+        "canonicalKey": "jee_chemistry",
+        "officialSections": ["Section A (20 MCQs)", "Section B (5 Numerical Value Questions)"],
+        "subdisciplines": ["Physical Chemistry", "Inorganic Chemistry", "Organic Chemistry"],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "languageModel": {
+    "defaultLanguage": "en",
+    "supportedLanguages": [
+      "English", "Hindi", "Assamese", "Bengali", "Gujarati",
+      "Kannada", "Malayalam", "Marathi", "Odia", "Punjabi",
+      "Tamil", "Telugu", "Urdu"
+    ],
+    "mediumCount": 13,
+    "officialLocator": "Chapter 3: Medium of Question Papers",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": ["Paper 1"],
+    "paperAliases": {
+      "Paper 1": ["Paper 1", "Paper-1", "B.E./B.Tech", "Paper 1 (B.E./B.Tech)", "BE/BTech"]
+    },
+    "expectedSubjects": ["Mathematics", "Physics", "Chemistry"],
+    "subjectAliases": {
+      "Mathematics": ["Mathematics", "MATHEMATICS", "Part I - Mathematics", "Section A - Mathematics", "Section B - Mathematics"],
+      "Physics": ["Physics", "PHYSICS", "Part II - Physics", "Section A - Physics", "Section B - Physics"],
+      "Chemistry": ["Chemistry", "CHEMISTRY", "Part III - Chemistry", "Section A - Chemistry", "Section B - Chemistry"]
+    },
+    "languageScripts": ["Latin", "Devanagari"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "sourceYearPolicy": "USE_2026_AS_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "localDocumentBinding": {
+    "documentId": "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+    "pageCount": 140,
+    "verifiedAtomsCount": 211,
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "paperStructure": "SOURCE_VERIFIED",
+    "markingScheme": "SOURCE_VERIFIED",
+    "subjectModel": "SOURCE_VERIFIED",
+    "supportedScope": "FOUNDER_DECLARED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

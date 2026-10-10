@@ -1,0 +1,17 @@
+{
+  "contractName": "Amendment Chain Trust Contract",
+  "gate": "GATE 48CS2R4",
+  "invariant": "CURRENT_CHAIN_SELF_DECLARED_COUNT = 0",
+  "description": "Recruitment cycles cannot declare amendment surface complete without verified monitoring audit and cryptographically verified corrigenda.",
+  "requirementsForChainVerified": {
+    "baseNotificationVerified": "baseNotification must have sourceState === SHA_VERIFIED and valid 64-hex SHA-256.",
+    "auditScopeDefined": "amendmentAudit.auditScope must specify audited portal surface.",
+    "auditWindowCurrent": "amendmentAudit.auditWindowThrough must record timestamp up to which corrigenda portal was audited.",
+    "corrigendaShaVerified": "Every document in applicableCorrigenda must have sourceState === SHA_VERIFIED and valid SHA-256."
+  },
+  "derivationStates": {
+    "CURRENT_CHAIN_VERIFIED": "Base notice verified + audit scope recorded + audit window recorded + all corrigenda SHA_VERIFIED.",
+    "CHAIN_PARTIAL": "Audit scope missing OR audit window missing OR one or more corrigenda only URL_FOUND / METADATA_INDEXED.",
+    "CHAIN_UNRESOLVED": "Base notification is unverified or amendment surface has not been audited."
+  }
+}

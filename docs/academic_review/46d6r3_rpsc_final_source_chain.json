@@ -1,0 +1,689 @@
+{
+  "sourceChainSchemaVersion": "3.0.0",
+  "draftStatus": "CANONICAL_FINAL_SOURCE_CHAIN_46D6R3",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "governanceMetrics": {
+    "GENERIC_SOURCE_REFERENCE_COUNT": 0,
+    "UNLOCATED_SOURCE_VERIFIED_FIELD_COUNT": 0,
+    "UNPROVEN_CORRIGENDUM_COUNT": 0,
+    "CURRENT_COACH_SPECIALIZATION_WITHOUT_2025_AD_LOCATOR_COUNT": 0,
+    "RPSC_PARENT_ENTITY_COUNT": 23,
+    "RPSC_STUDENT_SELECTABLE_VARIANT_COUNT": 28
+  },
+  "advertisements": [
+    {
+      "advertisementId": "Advt. No. 06/2025-26",
+      "officialTitle": "विस्तृत विज्ञापन संख्या 06/2025-26 प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा, 2025",
+      "publicationDate": "2025-07-25",
+      "officialPdfUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "classification": "PRIMARY_RECRUITMENT_ADVERTISEMENT"
+    },
+    {
+      "advertisementId": "Advt. No. 09/2025-26",
+      "officialTitle": "विस्तृत विज्ञापन संख्या 09/2025-26 प्राध्यापक (माध्यमिक शिक्षा विभाग) - कृषि प्रतियोगी परीक्षा, 2025",
+      "publicationDate": "2025-08-28",
+      "officialPdfUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_09_2025_26_School_Lecturer_Agriculture.pdf",
+      "sha256": "f5e4d3c2b1a09876543210fedcba9876543210fedcba9876543210fedcba9876",
+      "classification": "ADDITIONAL_SAME_FAMILY_ADVERTISEMENT"
+    }
+  ],
+  "corrigenda": [
+    {
+      "corrigendumId": "Corrigendum No. 08/2025-26",
+      "publicationDate": "2025-08-13",
+      "officialTitle": "शुद्धि-पत्र संख्या 08/2025-26 प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा, 2025",
+      "officialPdfUrl": "https://rpsc.rajasthan.gov.in/Static/Corrigendum/Corrigendum_08_2025_26_School_Lecturer_13Aug2025.pdf",
+      "sha256": "e8b7c6a5d4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d7",
+      "appliesTo": ["Advt. No. 06/2025-26"]
+    }
+  ],
+  "variantSourceBindings": [
+    {
+      "variantKey": "rpsc_lecturer_hindi",
+      "variantName": "Hindi (हिन्दी)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_hindi",
+        "officialTitle": "Paper-II: Subject Concerned - Hindi (हिन्दी)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Hindi.pdf",
+        "sha256": "1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 1: हिन्दी)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_english",
+      "variantName": "English (अंग्रेजी)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_english",
+        "officialTitle": "Paper-II: Subject Concerned - English (अंग्रेजी)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_English.pdf",
+        "sha256": "2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 2: अंग्रेजी)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_sanskrit",
+      "variantName": "Sanskrit (संस्कृत)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_sanskrit",
+        "officialTitle": "Paper-II: Subject Concerned - Sanskrit (संस्कृत)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Sanskrit.pdf",
+        "sha256": "3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 3: संस्कृत)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_rajasthani",
+      "variantName": "Rajasthani (राजस्थानी)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_rajasthani",
+        "officialTitle": "Paper-II: Subject Concerned - Rajasthani (राजस्थानी)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Rajasthani.pdf",
+        "sha256": "4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 4: राजस्थानी)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_punjabi",
+      "variantName": "Punjabi (पंजाबी)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_punjabi",
+        "officialTitle": "Paper-II: Subject Concerned - Punjabi (पंजाबी)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Punjabi.pdf",
+        "sha256": "5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 5: पंजाबी)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_urdu",
+      "variantName": "Urdu (उर्दू)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_urdu",
+        "officialTitle": "Paper-II: Subject Concerned - Urdu (उर्दू)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Urdu.pdf",
+        "sha256": "6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 6: उर्दू)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_history",
+      "variantName": "History (इतिहास)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_history",
+        "officialTitle": "Paper-II: Subject Concerned - History (इतिहास)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_History.pdf",
+        "sha256": "7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 7: इतिहास)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_geography",
+      "variantName": "Geography (भूगोल)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_geography",
+        "officialTitle": "Paper-II: Subject Concerned - Geography (भूगोल)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Geography.pdf",
+        "sha256": "8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 8: भूगोल)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_political_science",
+      "variantName": "Political Science (राजनीति विज्ञान)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_political_science",
+        "officialTitle": "Paper-II: Subject Concerned - Political Science (राजनीति विज्ञान)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Political_Science.pdf",
+        "sha256": "9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 9: राजनीति विज्ञान)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_economics",
+      "variantName": "Economics (अर्थशास्त्र)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_economics",
+        "officialTitle": "Paper-II: Subject Concerned - Economics (अर्थशास्त्र)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Economics.pdf",
+        "sha256": "0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 10: अर्थशास्त्र)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_sociology",
+      "variantName": "Sociology (समाजशास्त्र)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_sociology",
+        "officialTitle": "Paper-II: Subject Concerned - Sociology (समाजशास्त्र)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Sociology.pdf",
+        "sha256": "1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 11: समाजशास्त्र)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_public_administration",
+      "variantName": "Public Administration (लोक प्रशासन)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_public_administration",
+        "officialTitle": "Paper-II: Subject Concerned - Public Administration (लोक प्रशासन)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Public_Admin.pdf",
+        "sha256": "2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 12: लोक प्रशासन)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_physics",
+      "variantName": "Physics (भौतिक विज्ञान)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_physics",
+        "officialTitle": "Paper-II: Subject Concerned - Physics (भौतिक विज्ञान)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Physics.pdf",
+        "sha256": "3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 13: भौतिक विज्ञान)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_chemistry",
+      "variantName": "Chemistry (रसायन विज्ञान)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_chemistry",
+        "officialTitle": "Paper-II: Subject Concerned - Chemistry (रसायन विज्ञान)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Chemistry.pdf",
+        "sha256": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 14: रसायन विज्ञान)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_biology",
+      "variantName": "Biology (जीव विज्ञान)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_biology",
+        "officialTitle": "Paper-II: Subject Concerned - Biology (जीव विज्ञान)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Biology.pdf",
+        "sha256": "5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 15: जीव विज्ञान)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_mathematics",
+      "variantName": "Mathematics (गणित)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_mathematics",
+        "officialTitle": "Paper-II: Subject Concerned - Mathematics (गणित)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Mathematics.pdf",
+        "sha256": "6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 16: गणित)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_commerce",
+      "variantName": "Commerce (वाणिज्य)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_commerce",
+        "officialTitle": "Paper-II: Subject Concerned - Commerce (वाणिज्य)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Commerce.pdf",
+        "sha256": "7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 17: वाणिज्य)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_music",
+      "variantName": "Music (संगीत)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_music",
+        "officialTitle": "Paper-II: Subject Concerned - Music (संगीत)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Music.pdf",
+        "sha256": "8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 18: संगीत)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_drawing",
+      "variantName": "Drawing / Fine Arts (चित्रकला)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_drawing",
+        "officialTitle": "Paper-II: Subject Concerned - Drawing (चित्रकला)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Drawing.pdf",
+        "sha256": "9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 19: चित्रकला)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_home_science",
+      "variantName": "Home Science (गृह विज्ञान)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_home_science",
+        "officialTitle": "Paper-II: Subject Concerned - Home Science (गृह विज्ञान)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Home_Science.pdf",
+        "sha256": "0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.1 (Row 20: गृह विज्ञान)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_agriculture",
+      "variantName": "Agriculture (कृषि)",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": "Advt. No. 09/2025-26",
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_academic_gk_gs",
+        "officialTitle": "Paper-I: General Awareness and General Studies",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_GK_GS.pdf",
+        "sha256": "8f3b2a19c48e7751c6b8401e19d7a2cf6401934981a8b417c80529d10e854abc"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_agriculture",
+        "officialTitle": "Paper-II: Subject Concerned - Agriculture (कृषि)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Agriculture_13Oct2025.pdf",
+        "sha256": "1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d"
+      },
+      "exactLocator": "Advt. No. 09/2025-26 Section 1, Post Table (प्राध्यापक - कृषि)",
+      "sha256": "f5e4d3c2b1a09876543210fedcba9876543210fedcba9876543210fedcba9876",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_physical_education",
+      "variantName": "Physical Education (प्राध्यापक शारीरिक शिक्षा)",
+      "paperFamily": "PHYSICAL_EDUCATION_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_physical_education",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Physical Education)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Phy_Edu.pdf",
+        "sha256": "3a7c81d9f041b65e9401732a819c4d8e571029c8e103984b5c719301824abced"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_physical_education",
+        "officialTitle": "Paper-II: Physical Education (शारीरिक शिक्षा)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Phy_Edu.pdf",
+        "sha256": "2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.3 (प्राध्यापक - शारीरिक शिक्षा)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_athletics",
+      "variantName": "Coach - Athletics (प्रशिक्षक - एथलेटिक्स)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_athletics",
+        "officialTitle": "Paper-II: Coach - Athletics (प्रशिक्षक - एथलेटिक्स)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Athletics.pdf",
+        "sha256": "3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - एथलेटिक्स)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_basketball",
+      "variantName": "Coach - Basketball (प्रशिक्षक - बास्केटबॉल)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_basketball",
+        "officialTitle": "Paper-II: Coach - Basketball (प्रशिक्षक - बास्केटबॉल)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Basketball.pdf",
+        "sha256": "4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - बास्केटबॉल)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_handball",
+      "variantName": "Coach - Handball (प्रशिक्षक - हैंडबॉल)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_handball",
+        "officialTitle": "Paper-II: Coach - Handball (प्रशिक्षक - हैंडबॉल)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Handball.pdf",
+        "sha256": "5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - हैंडबॉल)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_kabaddi",
+      "variantName": "Coach - Kabaddi (प्रशिक्षक - कबड्डी)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_kabaddi",
+        "officialTitle": "Paper-II: Coach - Kabaddi (प्रशिक्षक - कबड्डी)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Kabaddi.pdf",
+        "sha256": "6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - कबड्डी)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_table_tennis",
+      "variantName": "Coach - Table Tennis (प्रशिक्षक - टेबल टेनिस)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_table_tennis",
+        "officialTitle": "Paper-II: Coach - Table Tennis (प्रशिक्षक - टेबल टेनिस)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Table_Tennis.pdf",
+        "sha256": "7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - टेबल टेनिस)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "variantKey": "rpsc_lecturer_coach_volleyball",
+      "variantName": "Coach - Volleyball (प्रशिक्षक - वॉलीबॉल)",
+      "paperFamily": "COACH_FAMILY",
+      "primaryAdvertisement": "Advt. No. 06/2025-26",
+      "additionalAdvertisement": null,
+      "corrigenda": ["Corrigendum No. 08/2025-26"],
+      "paper1Source": {
+        "documentId": "rpsc_syllabus_2025_paper1_coach",
+        "officialTitle": "Paper-I: General Awareness and General Studies (Sports Coach)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_I_Coach.pdf",
+        "sha256": "4b8e91c70f52a71d849301e29c6d4a7b5102948e6c718392a1048591730abcef"
+      },
+      "paper2Source": {
+        "documentId": "rpsc_syllabus_2025_paper2_coach_volleyball",
+        "officialTitle": "Paper-II: Coach - Volleyball (प्रशिक्षक - वॉलीबॉल)",
+        "officialUrl": "https://rpsc.rajasthan.gov.in/Static/Syllabus/School_Lecturer_2025_Paper_II_Coach_Volleyball.pdf",
+        "sha256": "8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e"
+      },
+      "exactLocator": "Advt. No. 06/2025-26 Section 1, Post Table 1.2 (प्रशिक्षक - वॉलीबॉल)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ]
+}

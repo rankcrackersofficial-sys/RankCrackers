@@ -1,0 +1,648 @@
+{
+  "rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "examName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "stateCode": "UP",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://upsssc.gov.in",
+          "officialSourceTitle": "UPSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "examName": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+      "stateCode": "UP",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": "https://uppbpb.gov.in/Notice",
+      "alternateEvidenceDocumentTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+      "alternateEvidenceType": "OTHER_EXACT_OFFICIAL_EVIDENCE",
+      "alternateEvidenceMissionMatch": true,
+      "alternateEvidenceMajorScaleSupport": true,
+      "verificationState": "VERIFIED_ROW_SPECIFIC",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "4,817,441 applications officially verified for 60,244 constable posts under Advt PRPB-1(150)/2023.",
+          "acceptedAsRowSpecificAlternate": true
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://uppbpb.gov.in/Notice",
+          "officialSourceTitle": "UPPRPB Direct Recruitment for Constable Civil Police 2023 Official Press Release",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 60,244 posts.",
+          "acceptedAsRowSpecificAlternate": true
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://uppbpb.gov.in",
+          "officialSourceTitle": "UPPRPB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "uk_police_constable",
+      "examName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "stateCode": "UK",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssc.uk.gov.in",
+          "officialSourceTitle": "UKSSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "examName": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+      "stateCode": "HP",
+      "originalArticle315EvidenceRef": "https://hppsc.hp.gov.in",
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": []
+    },
+    {
+      "missionId": "psssb_patwari",
+      "examName": "Revenue Patwari Recruitment Examination",
+      "stateCode": "PB",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://sssb.punjab.gov.in",
+          "officialSourceTitle": "PSSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "examName": "Direct Recruitment for Constables in District and Armed Cadres of Punjab Police",
+      "stateCode": "PB",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "470,000+ candidates applied for 1,746 district and armed police constable posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Recruitment Board Constable Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 1,746 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://punjabpolice.gov.in",
+          "officialSourceTitle": "Punjab Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "examName": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+      "stateCode": "HR",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "400,000+ candidates registered for 6,000 male and female constable posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Police Constable Advt 01/2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 6,000 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://hssc.gov.in",
+          "officialSourceTitle": "HSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "jk_police_constable",
+      "examName": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+      "stateCode": "JK",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jkssb.nic.in",
+          "officialSourceTitle": "JKSSB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "examName": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+      "stateCode": "LA",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.ladakh.gov.in",
+          "officialSourceTitle": "Ladakh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "examName": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+      "stateCode": "CH",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://chandigarhpolice.gov.in",
+          "officialSourceTitle": "Chandigarh Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "examName": "Constable (Executive) Male and Female in Delhi Police Examination",
+      "stateCode": "DL",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://delhipolice.gov.in",
+          "officialSourceTitle": "Delhi Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "examName": "Rajasthan Police Constable Recruitment Examination",
+      "stateCode": "RJ",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "540,000+ candidates registered for constable GD, driver, and telecommunication posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Standing Order & Constable Recruitment Notice",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 3,578 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.rajasthan.gov.in",
+          "officialSourceTitle": "Rajasthan Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "examName": "Madhya Pradesh Police Constable Recruitment Test",
+      "stateCode": "MP",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Over 950,000 candidates applied for 7,411 constable executive and radio operator posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Police Constable Recruitment Test 2023 Result Bulletin",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 7,411 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://esb.mp.gov.in",
+          "officialSourceTitle": "MPESB Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "cg_police_constable",
+      "examName": "Chhattisgarh Police Constable (Arakshak - GD/Trade/Driver) Recruitment Examination",
+      "stateCode": "CG",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://cgpolice.gov.in",
+          "officialSourceTitle": "CG Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "mh_police_constable",
+      "examName": "Maharashtra Police Constable (Police Sipahi / Driver / SRPF Armed Constable) Recruitment Examination",
+      "stateCode": "MH",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "1,750,000+ applications received for 17,471 police constable, driver, and SRPF band posts statewide.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://policerecruitment2024.mahait.org",
+          "officialSourceTitle": "Maharashtra State Police Constable Recruitment Official Press Release 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 17,471 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://mahapolice.gov.in",
+          "officialSourceTitle": "Maharashtra Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "examName": "Bihar Police Constable Recruitment Examination",
+      "stateCode": "BR",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "1,780,000 candidates applied for 21,391 police constable posts across Bihar districts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://csbc.bih.nic.in",
+          "officialSourceTitle": "CSBC Bihar Police Constable Advt No 01/2023",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 21,391 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://csbc.bihar.gov.in",
+          "officialSourceTitle": "CSBC Bihar Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "examName": "Jharkhand Constable Competitive Examination",
+      "stateCode": "JH",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "MULTI_DEPARTMENT_COMMON_RECRUITMENT",
+          "officialSourceUrl": "https://jssc.nic.in",
+          "officialSourceTitle": "JSSC Official Recruitment Mandate",
+          "verifiedFact": "Centralized statutory recruitment combining vacancies across multiple state government administrative departments.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "examName": "Odisha Police Civil Constable Recruitment Examination",
+      "stateCode": "OD",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://odishapolice.gov.in",
+          "officialSourceTitle": "OPSSB / OUSSSC Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "examName": "WBPSC Clerkship Examination",
+      "stateCode": "WB",
+      "originalArticle315EvidenceRef": "https://psc.wb.gov.in",
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": []
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "examName": "West Bengal Police Constable Recruitment Examination",
+      "stateCode": "WB",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "OFFICIAL_APPLICATION_COUNT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "850,000+ applications received for 11,749 constable posts in West Bengal Police.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "OFFICIAL_VACANCY_SCALE",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Constable Recruitment Notice 2024",
+          "verifiedFact": "Official sanctioned vacancy scale declared at 11,749 posts.",
+          "acceptedAsRowSpecificAlternate": false
+        },
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://prb.wb.gov.in",
+          "officialSourceTitle": "WBPRB Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "examName": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+      "stateCode": "KL",
+      "originalArticle315EvidenceRef": "https://keralapsc.gov.in",
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": []
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "examName": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+      "stateCode": "MZ",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.mizoram.gov.in",
+          "officialSourceTitle": "Mizoram Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "examName": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+      "stateCode": "NL",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.nagaland.gov.in",
+          "officialSourceTitle": "Nagaland Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "examName": "Sikkim Police Constable & Follower Recruitment",
+      "stateCode": "SK",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://police.sikkim.gov.in",
+          "officialSourceTitle": "Sikkim Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "examName": "Tripura Police Constable, TSR Rifleman & Special Executive Recruitment",
+      "stateCode": "TR",
+      "originalArticle315EvidenceRef": null,
+      "whyArticle315IsInsufficient": "Article 315 or a generic commission mandate proves institutional authority, not this mission's scale or recurrence.",
+      "alternateOfficialEvidenceRef": null,
+      "alternateEvidenceDocumentTitle": null,
+      "alternateEvidenceType": null,
+      "alternateEvidenceMissionMatch": false,
+      "alternateEvidenceMajorScaleSupport": false,
+      "verificationState": "MISSING_ROW_SPECIFIC_EXACT_EVIDENCE",
+      "allCandidateAlternatives": [
+        {
+          "evidenceType": "STATEWIDE_POLICE_RECRUITMENT",
+          "officialSourceUrl": "https://tripurapolice.gov.in",
+          "officialSourceTitle": "Tripura Police Police Recruitment Framework",
+          "verifiedFact": "Statewide uniformed law enforcement cadre recruitment for civil police, armed forces, and emergency services.",
+          "acceptedAsRowSpecificAlternate": false
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "ARTICLE315_AFFECTED_ROW_COUNT": 25,
+    "ARTICLE315_ROW_SPECIFIC_ALTERNATE_EVIDENCE_COUNT": 1,
+    "ARTICLE315_GENERIC_ASSERTION_ONLY_COUNT": 24,
+    "ARTICLE315_ALTERNATE_EVIDENCE_MISSING_COUNT": 24
+  }
+}

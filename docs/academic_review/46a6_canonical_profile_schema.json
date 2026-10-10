@@ -1,0 +1,400 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CanonicalMissionProfile",
+  "description": "Generic canonical mission profile contract governing authority, academic structure, variants, papers, subjects, S2 extraction profile, and student projections.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "profileStatus",
+    "identity",
+    "missionTargetYear",
+    "sourceBaselineYear",
+    "cycleRelation",
+    "authority",
+    "paperModel",
+    "variantModel",
+    "subjectModel",
+    "languageModel",
+    "s2DocumentProfile",
+    "fieldAuthorityMap",
+    "profileHash"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "enum": ["1.0.0"]
+    },
+    "profileStatus": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "READY_FOR_REVIEW",
+        "HOLD_FOR_REVIEW",
+        "SOURCE_VERIFIED",
+        "MATERIALIZATION_READY",
+        "SUPERSEDED"
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "required": ["missionId", "canonicalExamName", "canonicalDisplayName"],
+      "properties": {
+        "missionId": { "type": "string", "pattern": "^[a-zA-Z0-9_().-]+$" },
+        "canonicalExamName": { "type": "string", "minLength": 2 },
+        "canonicalDisplayName": { "type": "string", "minLength": 2 }
+      },
+      "additionalProperties": false
+    },
+    "missionTargetYear": {
+      "type": "integer",
+      "minimum": 2000,
+      "maximum": 2100
+    },
+    "sourceBaselineYear": {
+      "type": "integer",
+      "minimum": 2000,
+      "maximum": 2100
+    },
+    "cycleRelation": {
+      "type": "string",
+      "enum": [
+        "SAME_YEAR_OFFICIAL_CYCLE",
+        "PRIOR_OFFICIAL_BASELINE",
+        "SUBSEQUENT_OFFICIAL_CYCLE",
+        "INTERIM_AMENDMENT"
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "organization",
+        "officialPortals",
+        "sourceDocumentType",
+        "officialNotificationTitle",
+        "evidenceClass",
+        "provenanceTag"
+      ],
+      "properties": {
+        "organization": { "type": "string", "minLength": 2 },
+        "department": { "type": "string" },
+        "officialPortals": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" },
+          "minItems": 1
+        },
+        "sourceDocumentType": { "type": "string", "minLength": 2 },
+        "officialAdvertisementReference": { "type": "string" },
+        "officialNotificationTitle": { "type": "string", "minLength": 2 },
+        "officialPdfUrl": { "type": "string" },
+        "officialLocator": { "type": "string" },
+        "sha256": {
+          "type": ["string", "null"],
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidenceClass": {
+          "type": "string",
+          "enum": [
+            "BYTE_VERIFIED",
+            "PORTAL_TEXT_VERIFIED",
+            "PORTAL_REGISTRY_VERIFIED",
+            "ADVERTISEMENT_ROW_VERIFIED",
+            "REFERENCE_ONLY",
+            "UNVERIFIED"
+          ]
+        },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "jurisdiction": {
+      "type": "object",
+      "properties": {
+        "scope": { "type": "string" },
+        "administeringBody": { "type": "string" },
+        "participatingInstitutes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      }
+    },
+    "supportedScope": {
+      "type": "object",
+      "properties": {
+        "supportedPapers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unsupportedOfficialPapers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "scopeBoundaryReason": { "type": "string" },
+        "scopeDepthStatus": { "type": "string" },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      }
+    },
+    "paperModel": {
+      "type": "object",
+      "required": ["paperCount", "papers"],
+      "properties": {
+        "paperCount": { "type": "integer", "minimum": 1 },
+        "paperFamilies": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["familyId", "applicableVariants", "paperIds"],
+            "properties": {
+              "familyId": { "type": "string" },
+              "familyName": { "type": "string" },
+              "applicableVariants": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "paperIds": {
+                "type": "array",
+                "items": { "type": "string" },
+                "minItems": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "papers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["paperId", "paperName", "mode", "durationMinutes", "totalQuestions", "totalMarks"],
+            "properties": {
+              "paperId": { "type": "string" },
+              "paperNumber": { "type": "integer" },
+              "paperName": { "type": "string" },
+              "isCommonPaper": { "type": "boolean" },
+              "isVariantSpecific": { "type": "boolean" },
+              "mode": { "type": "string" },
+              "durationMinutes": { "type": "integer", "minimum": 1 },
+              "totalQuestions": { "type": "integer", "minimum": 1 },
+              "totalQuestionsToAttempt": { "type": "integer" },
+              "totalMarks": { "type": "number", "minimum": 1 },
+              "marksPerQuestion": { "type": "number" },
+              "markingScheme": { "type": "object" },
+              "sections": {
+                "type": "array",
+                "items": { "type": "object" }
+              },
+              "structure": {
+                "type": "array",
+                "items": { "type": "object" }
+              },
+              "provenanceTag": {
+                "type": "string",
+                "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "variantModel": {
+      "type": "object",
+      "required": ["hasVariants"],
+      "properties": {
+        "hasVariants": { "type": "boolean" },
+        "variantDimension": { "type": "string" },
+        "commonPaperIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "variantPaperIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "paperVariantMappings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["variantId", "paperFamilyId", "paperIds"],
+            "properties": {
+              "variantId": { "type": "string" },
+              "paperFamilyId": { "type": "string" },
+              "paperIds": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["variantId", "variantName"],
+            "properties": {
+              "variantId": { "type": "string" },
+              "variantName": { "type": "string" },
+              "code": { "type": "string" },
+              "category": { "type": "string" },
+              "parentVariantId": { "type": ["string", "null"] },
+              "subvariants": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["subvariantId", "subvariantName"],
+                  "properties": {
+                    "subvariantId": { "type": "string" },
+                    "subvariantName": { "type": "string" },
+                    "code": { "type": "string" }
+                  }
+                }
+              },
+              "applicablePaperFamilyId": { "type": "string" },
+              "status": { "type": "string" }
+            }
+          }
+        },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "subjectModel": {
+      "type": "object",
+      "required": ["subjects"],
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["subjectId", "subjectName", "canonicalKey"],
+            "properties": {
+              "subjectId": { "type": "string" },
+              "subjectName": { "type": "string" },
+              "canonicalKey": { "type": "string" },
+              "officialSections": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "subdisciplines": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "provenanceTag": {
+                "type": "string",
+                "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "languageModel": {
+      "type": "object",
+      "required": ["defaultLanguage", "supportedLanguages", "mediumPolicy"],
+      "properties": {
+        "defaultLanguage": { "type": "string" },
+        "supportedLanguages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "mediumPolicy": { "type": "string" },
+        "mediumCount": { "type": "integer" },
+        "officialLocator": { "type": "string" },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "s2DocumentProfile": {
+      "type": "object",
+      "required": ["expectedPapers", "expectedSubjects", "languageScripts", "preferredOcrLanguages", "sourceYearPolicy", "cycleRelation"],
+      "properties": {
+        "expectedPapers": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "paperAliases": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "expectedSubjects": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "subjectAliases": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "variantContext": { "type": "string" },
+        "languageScripts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "preferredOcrLanguages": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "sourceYearPolicy": { "type": "string" },
+        "cycleRelation": { "type": "string" },
+        "paperFamilies": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "provenanceTag": {
+          "type": "string",
+          "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "fieldAuthorityMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": ["SOURCE_VERIFIED", "FOUNDER_DECLARED", "SYSTEM_DERIVED", "UNKNOWN"]
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "createdBy": { "type": "string" },
+        "createdVia": { "type": "string" },
+        "verifiedBy": { "type": "string" },
+        "sourceAuditRef": { "type": "string" },
+        "timestamp": { "type": "string" }
+      }
+    },
+    "profileHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

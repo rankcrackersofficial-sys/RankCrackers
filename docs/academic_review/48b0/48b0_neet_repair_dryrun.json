@@ -1,0 +1,131 @@
+{
+  "missionId": "neet_(ug)-2027",
+  "action": "UPDATE_METADATA",
+  "targetProjections": {
+    "student_mission_catalog": {
+      "path": "student_mission_catalog/neet_(ug)-2027",
+      "before": {
+        "examCategory": "category_pending",
+        "status": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "authorityGroupKey": "nta"
+      },
+      "after": {
+        "examCategory": "medical_entrance",
+        "missionType": "medical_entrance",
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "jurisdictionLevel": "CENTRAL",
+        "state": "Central",
+        "stateCode": null,
+        "stateName": null,
+        "examScope": "ALL_INDIA",
+        "examFamily": "MEDICAL_ENTRANCE",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "visibility": {
+          "studentVisible": true,
+          "catalogVisible": true,
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "quickEntryEnabled": false,
+          "smartEntryEnabled": false
+        }
+      },
+      "fieldsModified": [
+        "examCategory",
+        "missionType",
+        "status",
+        "catalogStatus",
+        "studentPublicationState",
+        "examScope",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "visibility"
+      ]
+    },
+    "mission_realms": {
+      "path": "mission_realms/neet_(ug)-2027",
+      "before": {
+        "organization": "Rajasthan",
+        "exam_category": "competitive",
+        "jurisdictionLevel": "CENTRAL"
+      },
+      "after": {
+        "organization": "National Testing Agency",
+        "examCategory": "medical_entrance",
+        "exam_category": "medical_entrance",
+        "examScope": "ALL_INDIA",
+        "examFamily": "MEDICAL_ENTRANCE",
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "canonicalAuthorityKey": "auth_in_nta",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "visibilityGate": {
+          "studentVisible": true,
+          "catalogVisible": true,
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "quickEntryEnabled": false,
+          "smartEntryEnabled": false,
+          "gateStatus": "PREPARING",
+          "blockers": []
+        }
+      },
+      "fieldsModified": [
+        "organization",
+        "examCategory",
+        "examScope",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "visibilityGate"
+      ]
+    },
+    "recruitments": {
+      "path": "recruitments/neet_(ug)-2027",
+      "before": {
+        "org": "Rajasthan",
+        "state": "Rajasthan",
+        "examCategory": "competitive"
+      },
+      "after": {
+        "org": "National Testing Agency",
+        "organization": "National Testing Agency",
+        "state": "Central",
+        "stateCode": null,
+        "stateName": null,
+        "examCategory": "medical_entrance",
+        "examScope": "ALL_INDIA",
+        "examFamily": "MEDICAL_ENTRANCE",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "status": "draft",
+        "nature": "PASSIVE"
+      },
+      "fieldsModified": [
+        "org",
+        "organization",
+        "state",
+        "examCategory",
+        "examFamily",
+        "canonicalAuthorityKey",
+        "nature"
+      ]
+    }
+  },
+  "complianceVerification": {
+    "jurisdictionType": "CENTRAL",
+    "scopeType": "ALL_INDIA",
+    "examFamily": "MEDICAL_ENTRANCE",
+    "categoryNotPending": true,
+    "smartEntryBlocked": true
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "readinessSchemaVersion": "6.0.0",
+  "draftStatus": "CANONICAL_S2_SOURCE_READINESS_46D6R6",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "generatedAt": "2026-09-09T19:46:00.000Z",
+  "gateEvaluation": {
+    "RPSC_PROFILE_IDENTITY_MATERIALIZATION_READY": "YES",
+    "RPSC_VARIANT_MATERIALIZATION_READY": "YES",
+    "RPSC_PAPER_FAMILY_METADATA_READY": "YES",
+    "RPSC_S2_ACADEMIC_CONTENT_EXTRACTION_READY": "NO",
+    "RPSC_FULL_OFFICIAL_DOCUMENT_UPLOAD_COMPLETE": "NO"
+  },
+  "metrics": {
+    "RPSC_SELECTABLE_VARIANT_COUNT": 28,
+    "RPSC_VARIANT_S2_SOURCE_READY_COUNT": 0,
+    "RPSC_VARIANT_S2_SOURCE_BLOCKED_COUNT": 28,
+    "S2_REQUIRED_SYLLABUS_DOCUMENT_COUNT": 26,
+    "S2_REQUIRED_CONTENT_VERIFIED_COUNT": 0,
+    "S2_REQUIRED_REGISTRY_ONLY_COUNT": 26,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "executionPolicy": {
+    "S2_SYLLABUS_ATOMIC_DECOMPOSITION_ALLOWED": false,
+    "DIGIBOOK_GENERATION_ALLOWED": false,
+    "QUESTION_GENERATION_ALLOWED": false,
+    "FOUNDER_INVENTORY_PRESENTATION_ALLOWED": true,
+    "MISSION_PROFILE_METADATA_MATERIALIZATION_ALLOWED": true
+  },
+  "byFamilyReadiness": {
+    "academicLecturerFamily": {
+      "variantCount": 21,
+      "s2SourceReadyCount": 0,
+      "s2SourceBlockedCount": 21,
+      "paper1Status": "PORTAL_REGISTRY_VERIFIED",
+      "paper2Status": "PORTAL_REGISTRY_VERIFIED",
+      "status": "BLOCKED_ON_PHYSICAL_SYLLABUS_BYTE_ACQUISITION",
+      "blockerDescription": "21 academic subject Paper-II syllabi and 1 Paper-I syllabus exist on official RPSC portal registry but require physical byte download/text extraction before atomic decomposition."
+    },
+    "physicalEducationFamily": {
+      "variantCount": 1,
+      "s2SourceReadyCount": 0,
+      "s2SourceBlockedCount": 1,
+      "paper1Status": "PORTAL_REGISTRY_VERIFIED",
+      "paper2Status": "PORTAL_REGISTRY_VERIFIED",
+      "status": "BLOCKED_ON_PHYSICAL_SYLLABUS_BYTE_ACQUISITION",
+      "blockerDescription": "Physical Education Paper-I & Paper-II syllabi exist on official RPSC portal registry but require physical byte download/text extraction."
+    },
+    "coachFamily": {
+      "variantCount": 6,
+      "s2SourceReadyCount": 0,
+      "s2SourceBlockedCount": 6,
+      "paper1Status": "PORTAL_REGISTRY_VERIFIED",
+      "paper2Status": "PORTAL_REGISTRY_VERIFIED",
+      "status": "BLOCKED_ON_PHYSICAL_SYLLABUS_BYTE_ACQUISITION",
+      "blockerDescription": "Coach Paper-I and Coach Paper-II shared syllabus exist on official RPSC portal registry but require physical byte download/text extraction."
+    }
+  },
+  "remediationPlanForS2": {
+    "step1": "Complete 46A6 Profile & Variant metadata materialization (Agent-2).",
+    "step2": "Acquire physical PDF bytes or structured portal text stream for the 26 unique syllabus documents from official RPSC portal endpoints.",
+    "step3": "Compute genuine cryptographic SHA-256 digests for all 26 syllabus files in local byte store.",
+    "step4": "Upgrade evidence levels from PORTAL_REGISTRY_VERIFIED to BYTE_VERIFIED / PORTAL_TEXT_VERIFIED.",
+    "step5": "Unlock S2 syllabus atomic decomposition gate."
+  }
+}

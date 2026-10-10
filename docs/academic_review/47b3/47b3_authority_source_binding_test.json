@@ -1,0 +1,11 @@
+{
+  "testCode": "RC_47B3_AUTHORITY_SOURCE_BINDING_TEST",
+  "executedAt": "2026-09-10T06:11:50.504Z",
+  "scenario": "Mission official source URL does not match authority official domain",
+  "domainMismatchRejected": true,
+  "metrics": {
+    "AUTHORITY_SOURCE_MISMATCH_ACCEPTED_COUNT": 0,
+    "CENTRAL_AUTHORITY_ALIAS_DRIFT_COUNT": 0
+  },
+  "assertionPass": true
+}

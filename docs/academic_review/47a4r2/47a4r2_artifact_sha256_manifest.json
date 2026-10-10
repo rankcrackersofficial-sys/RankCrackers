@@ -1,0 +1,111 @@
+{
+  "manifestCode": "RC_47A4R2_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T07:49:51.021Z",
+  "totalArtifactsTracked": 20,
+  "metrics": {
+    "PENDING_GENERATION_HASH_COUNT": 0,
+    "UNHASHED_REQUIRED_ARTIFACT_COUNT": 0
+  },
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_correct_handoff_identity.json",
+      "byteLength": 2059,
+      "sha256": "a77131da8913d4d47458057a60e37d6bf954628c4019236527cf5ea17b5316ce"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_handoff_hash_verification.json",
+      "byteLength": 7361,
+      "sha256": "f4dca29d73d93e8cb5470f515ccfe3bcbd0491f174969d4ab50e0de70fd682c5"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_actual_generator_forensic_audit.json",
+      "byteLength": 589,
+      "sha256": "172488938519d1033af2f1a2fa8ce6a5113706f5ba5f9dd321f12022161f5ecc"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_classification_recomputation.json",
+      "byteLength": 31382,
+      "sha256": "eee2afb8ee6800362d2bc913f3a9302e26633746b2e3d3c32194f6b09301c460"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_major_evidence_row_audit.json",
+      "byteLength": 59756,
+      "sha256": "b48d5348ed78c24e9c68166dfbbd7834875b341df4974470515eb5e1a9138fee"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_article315_reconciliation.json",
+      "byteLength": 11048,
+      "sha256": "a0e1783dc9ee18e37295025781e7c8b12b141dd1dd8ef8ec89a7d1b56e441035"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_exact_accepted_document_audit.json",
+      "byteLength": 6309,
+      "sha256": "fcf5ff11c4c7a285fc8c3690954455104a143f2ddddaaea8941bdc497dfd6043"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_judicial_row_audit.json",
+      "byteLength": 355,
+      "sha256": "3480a553fb4a4701a3ad974ac62c1526c754cfe492d993229d566b9b57cf8f10"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_ssc_overlap_evidence_audit.json",
+      "byteLength": 225,
+      "sha256": "ded3f16f784c40222c12c969c8c69956e9e455d309aa76c10ba09031b2149e13"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_ibps_47c6_cross_lane_audit.json",
+      "byteLength": 327,
+      "sha256": "9cd3c6c0202ff27673b057a5e401fe6fc5850edb48ab71341ce7065ff943a620"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_variant_evidence_recomputation.json",
+      "byteLength": 261,
+      "sha256": "2db72adbb2b7ad77f83b1d44528b1a8eddced17db8a4318ed48f731ce3525f5e"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_tripura_tet_exact_pattern_audit.json",
+      "byteLength": 463,
+      "sha256": "39b02831bc723311b953561568da3bb82de470de20f73ee6571975b26268b1e3"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_selection_ready_set_recomputation.json",
+      "byteLength": 456,
+      "sha256": "cb695e954924f204a5ca7b961e9e9f1d49dce5ba38930eda922c1bab581c66f4"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_shell_readiness_recomputation.json",
+      "byteLength": 258,
+      "sha256": "7bc1fa8a236ee434111ba4a5b56a695f003fd16e0af7cd943e337ddb85c9b16a"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_source_count_recomputation.json",
+      "byteLength": 445,
+      "sha256": "305e4e72be08e639aa159d9f37689084dc5b9e3a82737958e0a6d392fdfba765"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_source_reachability_measurement.json",
+      "byteLength": 200,
+      "sha256": "01a2967d77f2bd424d6a9d7d7e9f3ab8288b4b7048dacae9e9144164def362ae"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_source_owner_binding_measurement.json",
+      "byteLength": 211,
+      "sha256": "f96a74d29dc30e8bf7a67832524e403600f0d851f2971995bae697cc6868c7b9"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_verifier_static_pass_audit.json",
+      "byteLength": 381,
+      "sha256": "c283200810b9feb51bd6a5164649cfecf180bc7e79aa377f247cd391f893f89e"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_no_production_mutation_proof.json",
+      "byteLength": 230,
+      "sha256": "072a6084cd404b574f1f0e62387bff2a0f31a6a5aab99a9710311934245b007f"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r2/47a4r2_final_report.md",
+      "byteLength": 7535,
+      "sha256": "d4e9e31019185eb4e5392d446421d0e56f3e01fa3a004439540e3948f2926d12"
+    }
+  ]
+}

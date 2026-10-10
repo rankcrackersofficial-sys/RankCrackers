@@ -1,0 +1,64 @@
+{
+  "missions": [
+    {
+      "missionId": "ibps_po_mt",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "officialIdentity": "IBPS CRP PO/MT",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_csa",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "officialIdentity": "IBPS CRP Customer Service Associate",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_so",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "officialIdentity": "IBPS CRP Specialist Officer",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_rrb_officer",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "officialIdentity": "IBPS RRB Officer Scale I/II/III",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "ibps_rrb_office_assistant",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "officialIdentity": "IBPS RRB Office Assistant",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "sbi_po",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "officialIdentity": "SBI Probationary Officer",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "sbi_ja",
+      "canonicalAuthorityKey": "auth_in_sbi",
+      "officialIdentity": "SBI Junior Associate",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "officialIdentity": "RBI Grade B",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "canonicalAuthorityKey": "auth_in_rbi",
+      "officialIdentity": "RBI Assistant",
+      "pyqSourceState": "OFFICIAL_PYQ_NOT_PUBLISHED_BY_AUTHORITY"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "canonicalAuthorityKey": "auth_in_nabard",
+      "officialIdentity": "NABARD Grade A Assistant Manager",
+      "pyqSourceState": "OFFICIAL_PORTAL_ONLY"
+    }
+  ]
+}

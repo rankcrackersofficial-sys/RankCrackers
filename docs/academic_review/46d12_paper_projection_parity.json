@@ -1,0 +1,267 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.695Z",
+  "summary": {
+    "PAPER_PROJECTION_MISMATCH_COUNT": 0,
+    "TOTAL_MISSIONS_ALIGNED": 15,
+    "SSC_JE_PAPER2_SCOPE": "VARIABLE_SPECIFIC",
+    "SSC_JE_PAPER2_DIMENSION": "ENGINEERING_DISCIPLINE",
+    "SSC_SELECTION_POST_SCOPE": "VARIABLE_SPECIFIC",
+    "SSC_SELECTION_POST_DIMENSION": "EDUCATIONAL_LEVEL",
+    "SSC_CGL_TIER2_PAPER2_SCOPE": "VARIABLE_SPECIFIC",
+    "SSC_CGL_TIER2_PAPER2_DIMENSION": "POST_TRACK",
+    "RPSC_LECTURER_PAPER2_SCOPE": "VARIABLE_SPECIFIC",
+    "RPSC_LECTURER_PAPER2_DIMENSION": "SUBJECT_VARIANT"
+  },
+  "parityAudit": [
+    {
+      "missionId": "jee_main_2026",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "SUBJECT_VARIANT"
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_cgl",
+      "paperCount": 3,
+      "examStructurePapers": [
+        {
+          "code": "TIER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "TIER_2_P1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "TIER_2_P2",
+          "mode": "CBT",
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "POST_TRACK"
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_je",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "CBT",
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "ENGINEERING_DISCIPLINE"
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "CBE_PAPER",
+          "mode": "CBT",
+          "scope": "VARIABLE_SPECIFIC",
+          "variantDimension": "EDUCATIONAL_LEVEL"
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_chsl",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "TIER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "TIER_2",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "CBE_PAPER",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "PEN_PAPER_DESCRIPTIVE",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "CBE_PAPER",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_cpo",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "ssc_gd",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "CBE_PAPER",
+          "mode": "CBT",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "paperCount": 2,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        },
+        {
+          "code": "PAPER_2",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "paperCount": 1,
+      "examStructurePapers": [
+        {
+          "code": "PAPER_1",
+          "mode": "OMR_PEN_PAPER",
+          "scope": "COMMON_TO_ALL_VARIABLES",
+          "variantDimension": null
+        }
+      ],
+      "parityMatched": true
+    }
+  ]
+}

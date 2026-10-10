@@ -1,0 +1,69 @@
+{
+  "surfaces": [
+    {
+      "surfaceId": "auth_in_upsc_primary",
+      "authorityKey": "auth_in_upsc",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_ssc_primary",
+      "authorityKey": "auth_in_ssc",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_cbse_primary",
+      "authorityKey": "auth_in_cbse",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_nta_primary",
+      "authorityKey": "auth_in_nta",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_rrb_primary",
+      "authorityKey": "auth_in_rrb",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_rpf_rrb_primary",
+      "authorityKey": "auth_in_rpf_rrb",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_ibps_primary",
+      "authorityKey": "auth_in_ibps",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_sbi_primary",
+      "authorityKey": "auth_in_sbi",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_rbi_primary",
+      "authorityKey": "auth_in_rbi",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_nabard_primary",
+      "authorityKey": "auth_in_nabard",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_indian_army_primary",
+      "authorityKey": "auth_in_indian_army",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_indian_navy_primary",
+      "authorityKey": "auth_in_indian_navy",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    },
+    {
+      "surfaceId": "auth_in_indian_air_force_primary",
+      "authorityKey": "auth_in_indian_air_force",
+      "classification": "AUTOMATABLE_WITH_BROWSER_ADAPTER"
+    }
+  ]
+}

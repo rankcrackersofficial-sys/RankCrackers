@@ -1,0 +1,182 @@
+{
+  "structuredReservationCount": 3,
+  "pilotMissionIds": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "ssc_cgl"
+  ],
+  "unsupportedReservationInferenceCount": 0,
+  "rows": [
+    {
+      "ruleId": "JEE26-RES-EWS",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "postId": null,
+      "ruleType": "VERTICAL_RESERVATION",
+      "officialValue": "GEN-EWS: 10% of seats in every course, subject to cited Government of India conditions.",
+      "normalizedValue": {
+        "category": "GEN_EWS",
+        "percent": 10
+      },
+      "officialDocumentId": "JEE-MAIN-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "officialListingPage": "https://jeemain.nta.nic.in/information-bulletin/",
+      "page": 21,
+      "section": "4.1 Reservations",
+      "paragraphOrTableRef": "PDF P26 lines 909-916",
+      "publicationDate": "2025-11-01",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "JEE26-RES-OBC",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "postId": null,
+      "ruleType": "VERTICAL_RESERVATION",
+      "officialValue": "OBC-NCL: 27% of seats in every course; only current Central List; creamy layer is treated as General/OPEN.",
+      "normalizedValue": {
+        "category": "OBC_NCL",
+        "percent": 27
+      },
+      "officialDocumentId": "JEE-MAIN-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "officialListingPage": "https://jeemain.nta.nic.in/information-bulletin/",
+      "page": 21,
+      "section": "4.1 Reservations",
+      "paragraphOrTableRef": "PDF P26 lines 917-926",
+      "publicationDate": "2025-11-01",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "JEE26-RES-SCST",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "postId": null,
+      "ruleType": "VERTICAL_RESERVATION",
+      "officialValue": "SC: 15%; ST: 7.5% of seats in every course.",
+      "normalizedValue": {
+        "SC": 15,
+        "ST": 7.5
+      },
+      "officialDocumentId": "JEE-MAIN-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "officialListingPage": "https://jeemain.nta.nic.in/information-bulletin/",
+      "page": 21,
+      "section": "4.1 Reservations",
+      "paragraphOrTableRef": "PDF P26 lines 927-928",
+      "publicationDate": "2025-11-01",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "JEE26-RES-PWBD",
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "postId": null,
+      "ruleType": "HORIZONTAL_RESERVATION",
+      "officialValue": "PwBD: 5% seats within each GENERAL, GEN-EWS, OBC-NCL, SC and ST category.",
+      "normalizedValue": {
+        "category": "PWBD",
+        "percent": 5,
+        "horizontal": true
+      },
+      "officialDocumentId": "JEE-MAIN-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf",
+      "officialListingPage": "https://jeemain.nta.nic.in/information-bulletin/",
+      "page": 21,
+      "section": "4.1 Reservations",
+      "paragraphOrTableRef": "PDF P26 lines 929-930",
+      "publicationDate": "2025-11-01",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "NEET26-RES-AIQ",
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "postId": null,
+      "ruleType": "VERTICAL_RESERVATION",
+      "officialValue": "For MCC/DGHS admissions: GEN-EWS 10%, OBC-NCL 27%, SC 15%, ST 7.5%; State quota follows concerned State policy.",
+      "normalizedValue": {
+        "GEN_EWS": 10,
+        "OBC_NCL": 27,
+        "SC": 15,
+        "ST": 7.5,
+        "scope": "MCC_DGHS"
+      },
+      "officialDocumentId": "NEET-UG-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s37bc1ec1d9c3426357e69acd5bf320061/uploads/2026/02/202602231394640855.pdf",
+      "officialListingPage": "https://neet.nta.nic.in/documents/page/4/",
+      "page": 32,
+      "section": "Chapter 7.4",
+      "paragraphOrTableRef": "PDF P36 lines 1545-1578",
+      "publicationDate": "2026-02-08",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED_CYCLE_MISMATCH_DISCLOSED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "NEET26-RES-PWBD",
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "postId": null,
+      "ruleType": "HORIZONTAL_RESERVATION",
+      "officialValue": "PwBD: 5% within GEN, GEN-EWS, OBC-NCL, SC and ST category seats.",
+      "normalizedValue": {
+        "category": "PWBD",
+        "percent": 5,
+        "horizontal": true,
+        "scope": "MCC_DGHS"
+      },
+      "officialDocumentId": "NEET-UG-IB-2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s37bc1ec1d9c3426357e69acd5bf320061/uploads/2026/02/202602231394640855.pdf",
+      "officialListingPage": "https://neet.nta.nic.in/documents/page/4/",
+      "page": 32,
+      "section": "Chapter 7.4",
+      "paragraphOrTableRef": "PDF P36 lines 1568-1573",
+      "publicationDate": "2026-02-08",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED_CYCLE_MISMATCH_DISCLOSED",
+      "byteLength": null,
+      "sha256": null
+    },
+    {
+      "ruleId": "SSCCGL26-RES-AGE",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "postId": null,
+      "ruleType": "AGE_RELAXATION",
+      "officialValue": "SC/ST 5 years; OBC 3; PwBD 10; PwBD(OBC) 13; PwBD(SC/ST) 15; ESM 3 years after deduction of military service, as on 01.08.2026.",
+      "normalizedValue": {
+        "SC_ST": 5,
+        "OBC": 3,
+        "PwBD": 10,
+        "PwBD_OBC": 13,
+        "PwBD_SC_ST": 15,
+        "ESM": "3_AFTER_SERVICE_DEDUCTION"
+      },
+      "officialDocumentId": "SSC-CGL-NOTICE-2026",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "officialListingPage": "https://ssc.gov.in/home/noticeboard",
+      "page": 7,
+      "section": "5.2 Age relaxation",
+      "paragraphOrTableRef": "PDF page 7",
+      "publicationDate": "2026-05-21",
+      "effectiveDate": null,
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED",
+      "byteLength": null,
+      "sha256": null
+    }
+  ]
+}

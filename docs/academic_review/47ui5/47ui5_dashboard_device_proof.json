@@ -1,0 +1,11 @@
+{
+  "gate": "47UI5",
+  "device_serial": "RZCW12FBFXZ",
+  "verified_elements": {
+    "metric_card_titles": "Prominent, bold, gold-tinted (READINESS, COVERAGE, STREAK, RISK)",
+    "status_badges": "Muted, subtle secondary (Pending Evidence, 0 Days)",
+    "fake_readiness_presence": "Zero fake numeric percentages; truthful 'Pending Evidence'",
+    "renderflex_overflow": "Zero overflow on 1080x2340 physical display"
+  },
+  "status": "VERIFIED_ON_PHYSICAL_SAMSUNG_DEVICE"
+}

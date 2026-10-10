@@ -1,0 +1,31 @@
+{
+  "oracleCode": "RC_47C7V2_NTA_S3WAAS_BINDING_ORACLE",
+  "executedAt": "2026-09-10T07:56:44.275Z",
+  "hostClassification": {
+    "host": "cdnbbsr.s3waas.gov.in",
+    "classification": "SHARED_GOVERNMENT_HOST",
+    "owner": "National Informatics Centre (NIC) — Secure, Scalable and Sugamya Website as a Service (S3WaaS) Bhubaneswar Cloud Edge",
+    "tenancyModel": "MULTI_TENANT_GOVERNMENT_CLOUD",
+    "governanceContractRule": "cdnbbsr.s3waas.gov.in MUST NOT appear as unrestricted blanket auth_in_nta authority-owned official domain. It must only be referenced through SHARED_GOVERNMENT_DOCUMENT_HOST_WITH_NTA_BINDING on a per-document basis with exact NTA referrer proof."
+  },
+  "manifestAudit": {
+    "totalActiveNtaMissionsInManifest": 8,
+    "activeNtaMissionsUsingS3waasUrls": [],
+    "metrics": {
+      "ORACLE_S3WAAS_DOCUMENT_ROWS": 0,
+      "ORACLE_S3WAAS_UNBOUND_ROW_COUNT": 0
+    }
+  },
+  "oracleRulesFor47C8": [
+    {
+      "ruleId": "ORACLE_NTA_REGISTRY_NO_BLANKET_S3WAAS",
+      "assertion": "cdnbbsr.s3waas.gov.in MUST be removed from auth_in_nta.officialDomains array.",
+      "failCondition": "cdnbbsr.s3waas.gov.in present in auth_in_nta.officialDomains."
+    },
+    {
+      "ruleId": "ORACLE_S3WAAS_DOCUMENT_BINDING_VERIFIED",
+      "assertion": "If an individual NTA document URL resides on S3WaaS, it must possess an official NTA listing/referrer URL verifying authentic NTA issuance.",
+      "failCondition": "S3WaaS URL used without verified official NTA referrer."
+    }
+  ]
+}

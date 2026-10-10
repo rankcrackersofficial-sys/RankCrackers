@@ -1,0 +1,35 @@
+{
+  "gate": "RC_46D10_SOURCE_TRUTH_AND_PRODUCTION_CERTIFICATION_REPAIR_46D11",
+  "generatedAt": "2026-09-09T15:27:05.107Z",
+  "summary": {
+    "TOTAL_LIVE_SYLLABUS_ATOMS": 649,
+    "S2_JOB_ENQUEUE_COUNT_THIS_GATE": 0,
+    "TOTAL_EXISTING_JOBS_IN_QUEUES": 0
+  },
+  "syllabusAtomsByMission": {
+    "jee_main_2026": 430,
+    "neet_(ug)-2027": 219,
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": 0,
+    "upsc_cse_prelims": 0,
+    "ssc_cgl": 0,
+    "ssc_je": 0,
+    "ssc_selection_post": 0,
+    "ssc_chsl": 0,
+    "ssc_stenographer": 0,
+    "ssc_hindi_translators": 0,
+    "ssc_mts_havaldar": 0,
+    "ssc_cpo": 0,
+    "ssc_gd": 0,
+    "uppsc_pcs_prelims": 0,
+    "rpsc_ras_prelims": 0
+  },
+  "jobQueues": {
+    "s2_jobs": 0,
+    "academic_jobs": 0,
+    "extraction_jobs": 0,
+    "academic_factory_jobs": 0,
+    "jobs": 0,
+    "factory_jobs": 0,
+    "academic_batches": 0
+  }
+}

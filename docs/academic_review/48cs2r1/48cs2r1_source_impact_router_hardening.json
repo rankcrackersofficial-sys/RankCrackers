@@ -1,0 +1,11 @@
+{
+  "gate": "GATE_48CS2R1_SOURCE_IMPACT_ROUTER_HARDENING",
+  "generatedAt": "2026-09-10T11:26:52.331Z",
+  "module": "functions/services/source_impact_router.js",
+  "invariantsEnforced": [
+    "One verified official source document independently evaluates MissionImpact, CareerSignalImpact, AcademicImpactRef, PyqPatternImpactRef.",
+    "Verification independence: No channel is verified merely because another channel is verified.",
+    "Idempotency: Same document SHA produces exact same eventId (evt_{sha16}) and produces NO_OP on second pass.",
+    "Supports permanentMissionId = null for one-off recruitments (ONE_OFF_FORCED_MISSION_ASSOCIATION_COUNT = 0)."
+  ]
+}

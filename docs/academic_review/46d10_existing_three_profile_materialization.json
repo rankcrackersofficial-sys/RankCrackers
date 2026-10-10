@@ -1,0 +1,26 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.719Z",
+  "summary": {
+    "EXISTING_MISSIONS_COUNT": 3,
+    "CANONICAL_PROFILES_CREATED_THIS_GATE": 3,
+    "CANONICAL_PROFILE_MISSING_COUNT_AFTER": 0
+  },
+  "materializedProfiles": [
+    {
+      "missionId": "jee_main_2026",
+      "path": "mission_realms/jee_main_2026/canonical_profile/current",
+      "status": "MATERIALIZATION_READY"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "path": "mission_realms/neet_(ug)-2027/canonical_profile/current",
+      "status": "MATERIALIZATION_READY"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "path": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215/canonical_profile/current",
+      "status": "MATERIALIZATION_READY"
+    }
+  ]
+}

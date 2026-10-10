@@ -1,0 +1,13 @@
+{
+  "observedIds": [
+    "tripura_tet",
+    "trbt_tripura_ttet"
+  ],
+  "canonicalMissionId": "tripura_tet",
+  "aliasStatus": "RESOLVED_CANONICAL_ALIAS",
+  "duplicateRisk": 0,
+  "tripuraUnresolvedCanonicalIdConflictCount": 0,
+  "patternCertified": "NO",
+  "patternFieldCountAudited": 11,
+  "note": "Tripura variant identity preserved while numeric pattern remains outside academic truth."
+}

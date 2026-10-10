@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "1.0.0",
+  "missionId": "neet_(ug)-2027",
+  "canonicalExamName": "NEET (UG)",
+  "canonicalDisplayName": "NEET (UG)-2027",
+  "missionTargetYear": 2027,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+  "authority": {
+    "organization": "National Testing Agency (NTA) & National Medical Commission (NMC)",
+    "officialPortals": [
+      "https://neet.nta.nic.in",
+      "https://exams.nta.ac.in/NEET",
+      "https://nta.ac.in",
+      "https://www.nmc.org.in"
+    ],
+    "officialNotificationTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin",
+    "officialLocator": "Chapter 3: Pattern of Examination, Section 3.1 & Table 1",
+    "sha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperName": "NEET (UG) Unified Question Paper",
+    "mode": "Pen and Paper (OMR based)",
+    "durationMinutes": 180,
+    "totalQuestions": 180,
+    "totalMarks": 720,
+    "markingScheme": {
+      "correct": 4,
+      "incorrect": -1,
+      "unattempted": 0
+    }
+  },
+  "s2SubjectArchitecture": {
+    "officialPrimarySubjectCount": 3,
+    "officialPrimaryExpectedSubjects": [
+      "Physics",
+      "Chemistry",
+      "Biology"
+    ],
+    "primarySubjectDefinitions": [
+      {
+        "subjectKey": "neet_physics",
+        "officialSubjectName": "Physics",
+        "questionCount": 45,
+        "marks": 180,
+        "isCompulsory": true,
+        "provenanceTag": "SOURCE_VERIFIED",
+        "s2PrimaryAliases": [
+          "Physics",
+          "PHYSICS",
+          "Section - Physics",
+          "Physics (Part 1)",
+          "Part I: Physics"
+        ]
+      },
+      {
+        "subjectKey": "neet_chemistry",
+        "officialSubjectName": "Chemistry",
+        "questionCount": 45,
+        "marks": 180,
+        "isCompulsory": true,
+        "provenanceTag": "SOURCE_VERIFIED",
+        "s2PrimaryAliases": [
+          "Chemistry",
+          "CHEMISTRY",
+          "Section - Chemistry",
+          "Chemistry (Part 2)",
+          "Part II: Chemistry"
+        ]
+      },
+      {
+        "subjectKey": "neet_biology",
+        "officialSubjectName": "Biology",
+        "officialWording": "Biology (Botany & Zoology)",
+        "questionCount": 90,
+        "marks": 360,
+        "isCompulsory": true,
+        "provenanceTag": "SOURCE_VERIFIED",
+        "s2PrimaryAliases": [
+          "Biology",
+          "BIOLOGY",
+          "Biology (Botany & Zoology)",
+          "Botany & Zoology",
+          "Section - Biology",
+          "Part III: Biology"
+        ]
+      }
+    ],
+    "systemDerivedTaxonomy": {
+      "governanceNotice": "Botany and Zoology are SYSTEM_DERIVED child disciplines for RankCrackers granular academic taxonomy, digibook mapping, and question tagging. They are NOT separate official 4th or 5th examination subjects.",
+      "authority": "SYSTEM_DERIVED_CHILDREN",
+      "parentSubjectKey": "neet_biology",
+      "childDisciplines": [
+        {
+          "childDisciplineKey": "neet_botany",
+          "childDisciplineName": "Botany",
+          "derivedQuestionCount": 45,
+          "derivedMarks": 180,
+          "provenanceTag": "SYSTEM_DERIVED",
+          "s2ChildAliases": [
+            "Botany",
+            "BOTANY",
+            "Biology: Botany",
+            "Section - Botany",
+            "Botany Section"
+          ]
+        },
+        {
+          "childDisciplineKey": "neet_zoology",
+          "childDisciplineName": "Zoology",
+          "derivedQuestionCount": 45,
+          "derivedMarks": 180,
+          "provenanceTag": "SYSTEM_DERIVED",
+          "s2ChildAliases": [
+            "Zoology",
+            "ZOOLOGY",
+            "Biology: Zoology",
+            "Section - Zoology",
+            "Zoology Section"
+          ]
+        }
+      ]
+    }
+  },
+  "s2DocumentProfileBinding": {
+    "expectedPapers": ["NEET Unified Paper"],
+    "expectedPrimarySubjects": ["Physics", "Chemistry", "Biology"],
+    "languageScripts": ["Latin", "Devanagari"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "sourceYearPolicy": "USE_2026_AS_PRIOR_OFFICIAL_BASELINE",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "s2ProfileDraftReady": true
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "officialPrimarySubjects": "SOURCE_VERIFIED",
+    "systemDerivedTaxonomy": "SYSTEM_DERIVED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

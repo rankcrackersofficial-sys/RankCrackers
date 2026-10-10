@@ -1,0 +1,22 @@
+{
+  "gate": "RC_46D12_REJECTION_AND_NON_CIRCULAR_SOURCE_RECERTIFICATION_46D13",
+  "generatedAt": "2026-09-09T16:00:18.171Z",
+  "missionId": "jee_main_2026",
+  "officialAuthority": "National Testing Agency (NTA)",
+  "sourceDocument": "doc_nta_jee_main_2026_bulletin",
+  "reconciledPattern": {
+    "missionTargetYear": 2027,
+    "sourceBaselineYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "mode": "CBT",
+    "durationMinutes": 180,
+    "totalQuestions": 75,
+    "totalMarks": 300,
+    "mathematicsQuestions": 25,
+    "physicsQuestions": 25,
+    "chemistryQuestions": 25,
+    "allQuestionsCompulsory": true,
+    "marking": "+4 / -1 / 0 (Numerical questions included)",
+    "rejectedPattern": "90 Questions / 300 Marks"
+  }
+}

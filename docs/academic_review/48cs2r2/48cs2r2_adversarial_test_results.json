@@ -1,0 +1,117 @@
+{
+  "gate": "GATE_48CS2R2",
+  "testSuite": "functions/test/test_48cs2r2_adversarial_hardening.js",
+  "timestamp": "2026-09-10T11:43:38.081Z",
+  "totalTests": 20,
+  "passedTests": 20,
+  "failedTests": 0,
+  "testSummary": [
+    {
+      "id": 1,
+      "name": "SC user with no official relaxation rule gets NO automatic +5",
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "OBC user with no official relaxation rule gets NO automatic +3",
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "Official relaxation applied ONLY when explicit verified rule exists",
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "Missing category remains UNKNOWN / null, never defaulted to UR",
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "Missing PwBD remains null, never defaulted to false",
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "Missing experience remains null, never defaulted to 0",
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "OBC_CL does not consume OBC_NCL reserved quota by default",
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "WOMEN horizontal row strictly rejects male profile",
+      "status": "PASS"
+    },
+    {
+      "id": 9,
+      "name": "Same vacancy row is not double-counted",
+      "status": "PASS"
+    },
+    {
+      "id": 10,
+      "name": "Eligible user with zero applicable vacancy remains eligibility-eligible",
+      "status": "PASS"
+    },
+    {
+      "id": 11,
+      "name": "Two event types from same PDF produce distinct deterministic event IDs",
+      "status": "PASS"
+    },
+    {
+      "id": 12,
+      "name": "User view retains supplied canonical event ID (zero synthetic timestamp IDs)",
+      "status": "PASS"
+    },
+    {
+      "id": 13,
+      "name": "Legacy ACTIVE normalizes to APPLICATION_OPEN at boundary, not in canonical enum",
+      "status": "PASS"
+    },
+    {
+      "id": 14,
+      "name": "FINAL_RESULT_DECLARED remains a visible process event (processUpdate: true)",
+      "status": "PASS"
+    },
+    {
+      "id": 15,
+      "name": "CYCLE_CLOSED definitively terminates cycle (opportunity: false, process: false)",
+      "status": "PASS"
+    },
+    {
+      "id": 16,
+      "name": "Domicile present but mismatched rule yields locationMatch = false",
+      "status": "PASS"
+    },
+    {
+      "id": 17,
+      "name": "Domicile present with NO domicile rule yields locationMatch = null",
+      "status": "PASS"
+    },
+    {
+      "id": 18,
+      "name": "Rule without source evidence yields NOT_EVALUATED",
+      "status": "PASS"
+    },
+    {
+      "id": 19,
+      "name": "Match dimensions derive strictly from ruleType (zero ruleId substring heuristics)",
+      "status": "PASS"
+    },
+    {
+      "id": 20,
+      "name": "Cross-vertical category isolation (SC candidate cannot match ST or OBC)",
+      "status": "PASS"
+    }
+  ],
+  "companionSuite": {
+    "testSuite": "functions/test/test_48cs2_source_impact_and_career_signal.js",
+    "totalTests": 11,
+    "passedTests": 11,
+    "failedTests": 0,
+    "status": "PASS"
+  }
+}

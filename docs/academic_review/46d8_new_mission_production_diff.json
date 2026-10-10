@@ -1,0 +1,154 @@
+{
+  "productionDiffSchemaVersion": "8.0.0",
+  "gate": "RC_NEW_MISSION_SOURCE_HARDENING_FOUNDER_MATERIALIZATION_46D8",
+  "draftStatus": "CANONICAL_PRODUCTION_DIFF_46D8",
+  "agent": "AGENT-3 — FOUNDER BACKEND / OFFICIAL SOURCE / MISSION MATERIALIZATION LANE",
+  "generatedAt": "2026-09-09T20:18:00.000Z",
+  "summary": {
+    "TOTAL_CANDIDATE_MISSIONS": 12,
+    "MISSION_PRODUCTION_CREATED_COUNT": 12,
+    "MISSION_ALREADY_EXISTED_COUNT": 0,
+    "MISSION_DUPLICATE_COUNT": 0,
+    "TOTAL_PLANNED_DOCUMENTS": 48,
+    "PLANNED_MISSION_REALM_WRITES": 12,
+    "PLANNED_RECRUITMENT_WRITES": 12,
+    "PLANNED_STUDENT_CATALOG_WRITES": 12,
+    "PLANNED_CANONICAL_PROFILE_WRITES": 12,
+    "UNAUTHORIZED_PRODUCTION_MUTATIONS": 0,
+    "SECOND_RUN_SEMANTIC_MUTATION_COUNT": 0
+  },
+  "missionDiffs": [
+    {
+      "missionFamilyId": "upsc_cse_prelims",
+      "canonicalDisplayName": "UPSC Civil Services – Prelims",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/upsc_cse_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/upsc_cse_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/upsc_cse_prelims", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/upsc_cse_prelims/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_cgl",
+      "canonicalDisplayName": "SSC CGL",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_cgl", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_cgl", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_cgl", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_cgl/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_je",
+      "canonicalDisplayName": "SSC Junior Engineer",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_je", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_je", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_je", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_je/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_selection_post",
+      "canonicalDisplayName": "SSC Selection Post",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_selection_post", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_selection_post", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_selection_post", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_selection_post/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_chsl",
+      "canonicalDisplayName": "SSC CHSL",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_chsl", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_chsl", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_chsl", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_chsl/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_stenographer",
+      "canonicalDisplayName": "SSC Stenographer Grade C & D",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_stenographer", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_stenographer", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_stenographer", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_stenographer/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_hindi_translators",
+      "canonicalDisplayName": "SSC Combined Hindi Translators",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_hindi_translators", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_hindi_translators", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_hindi_translators", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_hindi_translators/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_mts_havaldar",
+      "canonicalDisplayName": "SSC MTS & Havaldar",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_mts_havaldar", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_mts_havaldar", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_mts_havaldar", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_mts_havaldar/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_cpo",
+      "canonicalDisplayName": "SSC CPO",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_cpo", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_cpo", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_cpo", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_cpo/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_gd",
+      "canonicalDisplayName": "SSC GD Constable",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/ssc_gd", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/ssc_gd", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/ssc_gd", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/ssc_gd/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "uppsc_pcs_prelims",
+      "canonicalDisplayName": "UPPSC PCS – Prelims",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/uppsc_pcs_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/uppsc_pcs_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/uppsc_pcs_prelims", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/uppsc_pcs_prelims/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    },
+    {
+      "missionFamilyId": "rpsc_ras_prelims",
+      "canonicalDisplayName": "RPSC RAS – Prelims",
+      "changeType": "CREATE",
+      "documents": [
+        { "path": "mission_realms/rpsc_ras_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "recruitments/rpsc_ras_prelims", "operation": "SET", "initialStatus": "STAGED" },
+        { "path": "student_mission_catalog/rpsc_ras_prelims", "operation": "SET", "cardVisible": true, "userPanelVisible": true, "publicationState": "PREPARING" },
+        { "path": "mission_realms/rpsc_ras_prelims/canonical_profile/current", "operation": "SET", "profileStatus": "MATERIALIZATION_READY" }
+      ]
+    }
+  ]
+}

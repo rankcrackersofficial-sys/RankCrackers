@@ -1,0 +1,41 @@
+{
+  "includedMajorAuthorities": [
+    "auth_in_upsc",
+    "auth_in_ssc",
+    "auth_in_cbse",
+    "auth_in_nta",
+    "auth_in_rrb",
+    "auth_in_rpf_rrb",
+    "auth_in_ibps",
+    "auth_in_sbi",
+    "auth_in_rbi",
+    "auth_in_nabard",
+    "auth_in_indian_army",
+    "auth_in_indian_navy",
+    "auth_in_indian_air_force"
+  ],
+  "consideredButExcluded": [
+    {
+      "candidate": "public-sector insurer exams",
+      "reason": "No single common canonical authority; mission-specific current-source review required."
+    },
+    {
+      "candidate": "minor PSU/contract recruitment",
+      "reason": "Irregular or below major recurring mission threshold."
+    },
+    {
+      "candidate": "departmental promotion examinations",
+      "reason": "Not an open independent student preparation target."
+    }
+  ],
+  "unresolvedMajorAuthorityCandidates": [
+    {
+      "candidate": "Intelligence Bureau recruitment",
+      "reason": "Current official recurring mission/source set not verified in this gate."
+    },
+    {
+      "candidate": "EPFO recruitment",
+      "reason": "Current recurrence and governing exam owner/source unresolved."
+    }
+  ]
+}

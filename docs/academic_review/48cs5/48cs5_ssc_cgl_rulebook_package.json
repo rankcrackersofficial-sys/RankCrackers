@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "48CS5-1",
+  "missionId": "ssc_cgl",
+  "cycleId": "SSC-CGL-2026",
+  "opportunityKind": "JOB_RECRUITMENT",
+  "capacityModelKind": "JOB_VACANCY_MATRIX",
+  "applicationState": "CLOSED",
+  "examState": "ANNOUNCED_TENTATIVE_AUGUST_SEPTEMBER_2026",
+  "answerKeyState": "UNRESOLVED",
+  "resultState": "UNRESOLVED",
+  "vacancyMatrixStatus": "UNRESOLVED",
+  "verifiedApproximateVacancyTotal": 12256,
+  "ruleFamiliesVerified": 8,
+  "ruleFamiliesUnresolved": 3,
+  "rules": [
+    {
+      "ruleId": "SSC-CGL26-CYCLE",
+      "family": "CYCLE_IDENTITY",
+      "officialValue": "Combined Graduate Level Examination, 2026; file HQ-C11018/1/2026-C-1",
+      "page": 1,
+      "section": "Notice heading",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-APPLICATION",
+      "family": "APPLICATION_WINDOW",
+      "officialValue": "21.05.2026 to 22.06.2026 23:00; reopened 23.06.2026 23:00 to 25.06.2026 23:00",
+      "page": 1,
+      "section": "Important dates + reopening notice",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-CORRECTION",
+      "family": "CORRECTION_WINDOW",
+      "officialValue": "Revised to 01.07.2026 through 03.07.2026 23:00",
+      "page": 1,
+      "section": "Reopening notice paragraph 4",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-AGE",
+      "family": "POST_AGE_LIMITS",
+      "officialValue": "Post-specific bands include 18-27, 18-30, 20-30 and 18-32 years, calculated as on 01.08.2026.",
+      "page": 6,
+      "section": "5 Age limit",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-AGE-RELAX",
+      "family": "AGE_RELAXATION",
+      "officialValue": "SC/ST 5 years; OBC 3; PwBD 10; PwBD(OBC) 13; PwBD(SC/ST) 15; ESM 3 years after military-service deduction.",
+      "page": 7,
+      "section": "5.2",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-EDU",
+      "family": "QUALIFICATION",
+      "officialValue": "Essential educational qualifications assessed as on 01.08.2026; post-specific qualifications apply. Assistant Audit Officer requires a Bachelor’s degree from a recognized University or Institute.",
+      "page": 14,
+      "section": "8",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-RESERVATION",
+      "family": "CATEGORY_RESERVATION",
+      "officialValue": "Reservation for SC, ST, OBC, EWS, ESM and PwBD is determined/communicated by indenting departments under extant Government orders; ESM reservation is for Group C posts only.",
+      "page": 5,
+      "section": "3.2-3.3",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    },
+    {
+      "ruleId": "SSC-CGL26-VAC-TOTAL",
+      "family": "VACANCY_SUMMARY",
+      "officialValue": "Approximately 12,256 tentative vacancies; updated post-wise/category-wise vacancies to be published separately.",
+      "page": 5,
+      "section": "3.1",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "officialDocumentId": "SSC_CGL_NOTICE",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+      "verificationState": "EXACT_DOCUMENT_TEXT_AND_BYTES_VERIFIED"
+    }
+  ],
+  "personalizationSafety": {
+    "eligibilityMayBeEvaluatedOnlyAgainstCompleteApplicablePostRules": true,
+    "categoryVacancyCountMayBeShown": false
+  },
+  "exactSourceDocumentCount": 2,
+  "opportunitySignalActive": "NO",
+  "processUpdateSignalActive": "UNRESOLVED",
+  "currentCycleStatus": "APPLICATION_CLOSED_EXACT_TIER_I_EXECUTION_STATE_UNRESOLVED",
+  "personalizedEligibilityReadiness": "PARTIAL_POST_RULES_REQUIRE_APPLICABLE_POST_SELECTION",
+  "personalizedVacancyReadiness": "NOT_READY_VACANCY_MATRIX_UNRESOLVED"
+}

@@ -1,0 +1,16 @@
+{
+  "repository": "rankcrackersofficial-sys/RankCrackers",
+  "branch": "safety/rc-g2-pre-notification-schema",
+  "last_scanned_commit": "bfee5c70814af5c2c2c3f3ba9fd9163361441d87",
+  "last_scanned_at": "2026-10-10T02:55:24Z",
+  "tracking_policy": "A remote document is tracked in the book only after its commit, path, semantic change set and local implementation-parity status are recorded.",
+  "tracked_sources": [
+    {
+      "path": "docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md",
+      "book_chapter": "23_github_tracked_canonical_syllabus_contract.md",
+      "latest_observed_commit": "bfee5c70814af5c2c2c3f3ba9fd9163361441d87",
+      "previous_observed_commit": "b5ef867206d350db527e964c391fc324221752fd",
+      "status": "REMOTE_CANONICAL_SOURCE__LOCAL_IMPLEMENTATION_PARITY_PENDING"
+    }
+  ]
+}

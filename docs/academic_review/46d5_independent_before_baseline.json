@@ -1,0 +1,359 @@
+{
+  "gate": "RC_CANONICAL_MISSION_AUTHORITY_INDEPENDENT_BASELINE_AND_REPAIR_GATE_46D5",
+  "agent": "AGENT-3 (INDEPENDENT RUNTIME / DATA BREAKER)",
+  "objective": "Prepare independent certification gate for Agent-2 mission: RC_CANONICAL_MISSION_REALM_PRESERVATION_REPAIR_46A5",
+  "baselineCaptured": "YES",
+  "capturedAt": "2026-09-09T18:10:00.000Z",
+  "projectId": "rankcrackers-55",
+  "safetyContract": {
+    "NO_AGENT2_REPAIR_IMPLEMENTATION": true,
+    "NO_PRODUCTION_DATA_MUTATION": true,
+    "NO_UI_MUTATION": true,
+    "NO_DEPLOY": true,
+    "NO_MUTATION_PATH": true,
+    "READ_ONLY_GATE": true
+  },
+  "targetMissionIds": [
+    "jee_main_2026",
+    "neet_(ug)-2027",
+    "RPSC_FIRST_GRADE2026_2026_1782713222215"
+  ],
+  "blockerReproduction": {
+    "missingRealmParentCount": {
+      "count": 3,
+      "status": "PROVEN",
+      "evidence": "In the baseline live state, root documents under mission_realms/ lack canonical authoritative schema or exist as unmaterialized/partial stubs while child subcollections (official_documents, syllabus_atoms, crucible_days) exist underneath. UI panels (FounderMissionInventory, MissionVariableAuthorityPanel, MainWeb DeliveryFact) evaluate realmDoc.exists == false, triggering 'AUTHORITY REPAIR REQUIRED' and 'VARIABLE CHANGES LOCKED — Authority repair required'."
+    },
+    "neetRecruitmentGroupIdDefect": {
+      "status": "PROVEN",
+      "defectiveDocument": "student_mission_catalog/neet_(ug)-2027",
+      "defectiveField": "recruitmentGroupId",
+      "defectiveValue": "student_mission_catalog",
+      "expectedValue": "neet_(ug)-2027",
+      "impact": "In functions/callable/handle_sentinel_action.js line 1078, mirrorMissionShellToStudentCatalog enforces checks.recruitmentGroupId === realmId. The literal value 'student_mission_catalog' triggers FAILED_PRECONDITION: Identity mismatch detected for immutable fields."
+    },
+    "manifestRealmMutesNonRepairFields": {
+      "status": "PROVEN",
+      "analysis": "The existing handle_sentinel_action.js 'manifest_realm' action performs non-isolated operations: (1) forcefully sets realm status to 'STAGED' (overwriting active/preparing state), (2) calls transaction.update(recRef, { status: 'MANIFESTED' }) on recruitments, (3) triggers auto-publish on sentinel_drafts (sourceDrafts.notification / syllabus), (4) invokes mirrorMissionShellToStudentCatalog which overwrites student_mission_catalog. Manifesting via manifest_realm violates zero-mutation preservation rules."
+    }
+  },
+  "missions": {
+    "jee_main_2026": {
+      "missionId": "jee_main_2026",
+      "displayName": "JEE Main 2027",
+      "targetYear": 2027,
+      "category": "engineering",
+      "organizationBoard": {
+        "organization": "NTA",
+        "boardId": "central"
+      },
+      "identityPointers": {
+        "realmId": "jee_main_2026",
+        "missionId": "jee_main_2026",
+        "canonicalRealmId": "jee_main_2026",
+        "recruitmentId": "jee_main_2026",
+        "recruitmentGroupId": "jee_main_2026"
+      },
+      "recruitmentRecord": {
+        "exists": true,
+        "path": "recruitments/jee_main_2026",
+        "fields": {
+          "title": "JEE Main 2027",
+          "year": 2027,
+          "status": "draft",
+          "createdAt": "2026-07-06T14:00:16.649Z",
+          "updatedAt": "2026-07-19T15:24:24.075Z"
+        },
+        "semanticHash": "a1f04b4c3e06f23e42998a44b82f8a84db349887754f9a0c0e86bfa332ef4f12"
+      },
+      "studentMissionCatalogRecord": {
+        "exists": true,
+        "path": "student_mission_catalog/jee_main_2026",
+        "fields": {
+          "missionId": "jee_main_2026",
+          "displayName": "JEE Main 2027",
+          "title": "JEE Main 2027",
+          "name": "JEE Main 2027",
+          "examName": "JEE Main 2027",
+          "year": 2027,
+          "status": "PREPARING",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "createdAt": "2026-07-13T07:24:13.154Z",
+          "updatedAt": "2026-07-19T15:24:24.677Z"
+        },
+        "semanticHash": "7ec9d4eb4501eb31a89c7923ba8681f21d3f4439c3e9860b777a28892d1ce79c"
+      },
+      "missionRealmsParent": {
+        "exists": false,
+        "authorityState": "AUTHORITY_REPAIR_REQUIRED",
+        "path": "mission_realms/jee_main_2026",
+        "preExistingFields": {
+          "title": "JEE Main 2027",
+          "name": "JEE Main 2027",
+          "status": "ACTIVE",
+          "updatedAt": "2026-07-19T15:24:23.701Z",
+          "visibility": "USER_VISIBLE",
+          "userPanelVisible": true
+        },
+        "semanticHash": "f86422d3e9114bca8bfce1994e63bb70d9a697746c5a5cc93bfd296316ef350e"
+      },
+      "missionVariables": {
+        "canonicalPackPresent": false,
+        "legacyVariables": []
+      },
+      "lifecycleState": {
+        "catalogStatus": "PREPARING",
+        "recruitmentStatus": "draft",
+        "realmStatus": "ACTIVE"
+      },
+      "visibility": {
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "visibility": "USER_VISIBLE",
+        "studentVisible": true
+      },
+      "publicationState": {
+        "studentPublicationState": "PREPARING",
+        "isPublished": false
+      },
+      "contentLocks": {
+        "syllabus": false,
+        "questions": false,
+        "examPattern": false
+      },
+      "subcollectionInventory": {
+        "official_documents": {
+          "count": 1,
+          "documentIds": ["hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"],
+          "nested": {
+            "page_extractions": 140
+          },
+          "semanticHash": "1bfd789025ce259d81d5966eb1f36402ec947dfd4b8e83344efb4dcf3a890453"
+        },
+        "syllabus_atoms": {
+          "count": 223,
+          "activeAtomsCount": 211,
+          "heldDuplicateAtomsCount": 12,
+          "semanticHash": "44a7f9a72175324707010419eb9e7f80dbba3bcae697843644f51bc7ea923d8c"
+        },
+        "crucible_days": {
+          "count": 1,
+          "crucibleId": "plan_jee_2026",
+          "semanticHash": "8bc49f85c13b2e59df010492cb71a398be846e4918731efc45d3c8fa176df240"
+        }
+      }
+    },
+    "neet_(ug)-2027": {
+      "missionId": "neet_(ug)-2027",
+      "displayName": "NEET (UG)-2027",
+      "targetYear": 2026,
+      "category": "medical",
+      "organizationBoard": {
+        "organization": "NTA",
+        "boardId": "central"
+      },
+      "identityPointers": {
+        "realmId": "neet_(ug)-2027",
+        "missionId": "neet_(ug)-2027",
+        "canonicalRealmId": "neet_(ug)-2027",
+        "recruitmentId": "neet_(ug)-2027",
+        "recruitmentGroupId": "student_mission_catalog"
+      },
+      "recruitmentRecord": {
+        "exists": true,
+        "path": "recruitments/neet_(ug)-2027",
+        "fields": {
+          "title": "NEET (UG)-2027",
+          "year": 2026,
+          "status": "draft",
+          "createdAt": "2026-07-06T15:26:26.781Z"
+        },
+        "semanticHash": "5849842a22be2fa8d390a8a6be96041ec6f4370c0c662bd8788a1042733b8691"
+      },
+      "studentMissionCatalogRecord": {
+        "exists": true,
+        "path": "student_mission_catalog/neet_(ug)-2027",
+        "fields": {
+          "title": "NEET (UG)-2027",
+          "name": "NEET (UG)-2027",
+          "year": 2026,
+          "status": "COMING_SOON",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "recruitmentGroupId": "student_mission_catalog",
+          "createdAt": "2026-07-06T15:26:26.419Z",
+          "updatedAt": "2026-07-10T11:52:24.441Z"
+        },
+        "semanticHash": "9369f6bbceaa42d453818e69c11867c4eeff7142436f5635fdb139b8bc14a7e6"
+      },
+      "missionRealmsParent": {
+        "exists": false,
+        "authorityState": "AUTHORITY_REPAIR_REQUIRED",
+        "path": "mission_realms/neet_(ug)-2027",
+        "preExistingFields": {
+          "title": "NEET (UG)-2027",
+          "name": "NEET (UG)-2027",
+          "status": "ACTIVE",
+          "visibility": "USER_VISIBLE",
+          "userPanelVisible": true
+        },
+        "semanticHash": "a17f2cc4032efcba491a56cf8a2fa4cfc815201460395353846e9dfd0bbca221"
+      },
+      "missionVariables": {
+        "canonicalPackPresent": false,
+        "legacyVariables": []
+      },
+      "lifecycleState": {
+        "catalogStatus": "COMING_SOON",
+        "recruitmentStatus": "draft",
+        "realmStatus": "ACTIVE"
+      },
+      "visibility": {
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "visibility": "USER_VISIBLE",
+        "studentVisible": true
+      },
+      "publicationState": {
+        "studentPublicationState": "COMING_SOON",
+        "isPublished": false
+      },
+      "contentLocks": {
+        "syllabus": false,
+        "questions": false,
+        "examPattern": false
+      },
+      "subcollectionInventory": {
+        "official_documents": {
+          "count": 1,
+          "documentIds": ["hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925"],
+          "nested": {
+            "page_extractions": 14
+          },
+          "semanticHash": "1a704e6cbebc5009f40c7ae728c31273934f2d7a2243d6c41b80261623910c06"
+        },
+        "syllabus_atoms": {
+          "count": 7,
+          "activeAtomsCount": 7,
+          "heldDuplicateAtomsCount": 0,
+          "semanticHash": "6b36a164d1f278b809d43501ef6bdfd888f4e2c65fe381df434e32049d52d9b6"
+        },
+        "crucible_days": {
+          "count": 0,
+          "semanticHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "displayName": "RPSC 1st Grade",
+      "targetYear": 2026,
+      "category": "teaching",
+      "organizationBoard": {
+        "organization": "RPSC",
+        "boardId": "rajasthan"
+      },
+      "identityPointers": {
+        "realmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "canonicalRealmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "recruitmentId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "recruitmentGroupId": "RPSC_FIRST_GRADE2026_2026_1782713222215"
+      },
+      "recruitmentRecord": {
+        "exists": true,
+        "path": "recruitments/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "fields": {
+          "title": "RPSC 1st Grade",
+          "year": 2026,
+          "status": "draft",
+          "updatedAt": "2026-07-04T08:15:55.154Z"
+        },
+        "semanticHash": "c2084c8a514d79ce7cfc6f4cf9fa1d5ee1e7b454924c5221ffc2f6d6ee48cf49"
+      },
+      "studentMissionCatalogRecord": {
+        "exists": true,
+        "path": "student_mission_catalog/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "fields": {
+          "title": "RPSC 1st Grade",
+          "name": "RPSC 1st Grade",
+          "year": 2026,
+          "status": "COMING_SOON",
+          "userPanelVisible": true,
+          "cardVisible": true,
+          "createdAt": "2026-06-29T06:07:16.227Z",
+          "updatedAt": "2026-07-10T11:52:26.218Z"
+        },
+        "semanticHash": "d80b7ff2384a86fca6e64db803eeefcf24bfa7f2fdfd885897669d6eeea79075"
+      },
+      "missionRealmsParent": {
+        "exists": false,
+        "authorityState": "AUTHORITY_REPAIR_REQUIRED",
+        "path": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "preExistingFields": {
+          "title": "RPSC 1st Grade",
+          "name": "RPSC 1st Grade",
+          "status": "ACTIVE",
+          "createdAt": "2026-06-29T06:07:16.227Z",
+          "updatedAt": "2026-07-04T08:15:54.764Z",
+          "visibility": "visible_to_users",
+          "userPanelVisible": false
+        },
+        "semanticHash": "f852be2c1cf4461ef2630cecf227fb6dc93cae1eeaf475143a41b59005ea5882"
+      },
+      "missionVariables": {
+        "canonicalPackPresent": false,
+        "legacyVariables": []
+      },
+      "lifecycleState": {
+        "catalogStatus": "COMING_SOON",
+        "recruitmentStatus": "draft",
+        "realmStatus": "ACTIVE"
+      },
+      "visibility": {
+        "userPanelVisible": true,
+        "cardVisible": true,
+        "visibility": "visible_to_users",
+        "studentVisible": true
+      },
+      "publicationState": {
+        "studentPublicationState": "COMING_SOON",
+        "isPublished": false
+      },
+      "contentLocks": {
+        "syllabus": false,
+        "questions": false,
+        "examPattern": false
+      },
+      "subcollectionInventory": {
+        "official_documents": {
+          "count": 1,
+          "semanticHash": "260c5a0dbd589d977e23fe05f573489cf5ad155799daecaa20df1ae8718918df"
+        },
+        "syllabus_atoms": {
+          "count": 0,
+          "semanticHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "crucible_days": {
+          "count": 0,
+          "semanticHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  },
+  "overallBaselineDigest": "38e9a25b2f81907fc9a59b34204481d4cf2f01eb0fce7c0932c02111dae01614",
+  "contractAssertions": {
+    "EXACT_MISSION_COUNT": 3,
+    "ALLOW_ONLY_NEET_IDENTITY_POINTER_DIFF": true,
+    "FORBID_RECRUITMENT_MUTATION": true,
+    "FORBID_CATALOG_UNAUTHORIZED_MUTATION": true,
+    "FORBID_LIFECYCLE_MUTATION": true,
+    "FORBID_VISIBILITY_MUTATION": true,
+    "FORBID_PUBLICATION_MUTATION": true,
+    "FORBID_CONTENT_LOCK_MUTATION": true,
+    "FORBID_SUBCOLLECTION_DELETION": true,
+    "FORBID_ACADEMIC_MUTATION": true,
+    "REQUIRE_IDEMPOTENCY_ON_SECOND_RUN": true
+  }
+}

@@ -1,0 +1,1671 @@
+{
+  "totalExtractedRows": 238,
+  "extractedRows": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ifos",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "upsc_cds",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_nda_na",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_capf_ac",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ese",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_cms",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "upsc_geo_scientist",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_gd",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_je",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_cuet_ug",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_cuet_pg",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_ugc_net",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_csir_ugc_net",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "rrb_ntpc",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_level_1",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_alp",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_technician",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rrb_je",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rpf_si",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rpf_constable",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_po_mt",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_csa",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_so",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_crp_rrb_officers",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ibps_crp_rrb_office_assistant",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "sbi_po",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "sbi_ja",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rbi_grade_b",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "rbi_assistant",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nabard_grade_a",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "afcat",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "navy_agniveer_ssr",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "agniveervayu",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "cbse_ctet",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "navy_agniveer_mr",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "ib_acio_ii_executive",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "ib_security_assistant_executive",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "epfo_enforcement_officer_accounts_officer",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "epfo_assistant_provident_fund_commissioner",
+      "sourceArtifact": "docs/academic_review/47c8/47c8_national_completeness_ledger.json",
+      "sourceLane": "NATIONAL",
+      "sourceDisposition": "NATIONAL_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uppsc_ro_aro_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_pet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upprpb_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "up_tet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_pcs_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ukpsc_lower_subordinate_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uksssc_group_c_combined",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "uk_tet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_hpas_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hprca_group_c_common",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hp_tet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ppsc_pscce_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_clerk",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "punjab_pstet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hpsc_hcs_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_c",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "hssc_cet_group_d",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "haryana_htet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jkpsc_cce_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jk_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jkssb_graduate_level",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ssc_ladakh_selection_post",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "POINTER",
+      "rawDisposition": "DUPLICATE_OF_EXISTING_CANONICAL_MISSION"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "lahdc_dssrb_district_cadre",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_police_asi",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_jbt_teacher",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "chandigarh_tgt_teacher",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_tgt",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_prt",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_delhi_pgt",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "dsssb_junior_assistant_ldc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "delhi_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "POINTER",
+      "rawDisposition": "DUPLICATE_OF_EXISTING_CANONICAL_MISSION"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "rpsc_school_lecturer",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_senior_secondary",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "rssb_cet_graduate",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "rbse_reet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mppsc_state_service",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_group2_subgroup4",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpesb_mptet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "cgpsc_state_service",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "cgvyapam_cgtet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_class_1_2",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gsssb_cce",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gpssb_talati",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gprb_lokrakshak",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "seb_gujarattet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_rajyaseva",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mpsc_group_bc_combined",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mscepune_mahatet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gpsc_goa_civil_service",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "gssc_goa_group_c",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ga_police_recruitment",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "dnhdd_ssb_group_bc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_cce_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bpsc_tre",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_cgl",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bssc_inter_level",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bpssc_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bseb_stet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jpsc_cce_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_cgl",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "jac_jtet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "opsc_ocs_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ossc_cgl",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "osssc_cre_combined",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "bse_odisha_otet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ssb_odisha_lecturer",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_wbcs_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbprb_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbbpe_primary_tet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "wbcssc_slst_teacher",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "an_erecruitment_chsl",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "an_erecruitment_cml",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "EXCLUDED",
+      "rawDisposition": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE"
+    },
+    {
+      "missionId": "an_police_constable_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "appsc_group1",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_group2",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "apslprb_sct_pc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group1",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group2",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group3",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgpsc_group4",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tgslprb_sct_pc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "treirb_teaching",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kas_gp",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kea_fda_sda",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_psi",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "ksp_cpc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_kas",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_degree_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_10th_plus2_prelims",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group1",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group2_2a",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnpsc_group4_vao",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnusrb_pc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tntrb_pg_assistant_tet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tnmrb_assistant_surgeon",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "EXCLUDED",
+      "rawDisposition": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE"
+    },
+    {
+      "missionId": "py_dpar_clerk_vao",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "py_police_si_pc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "ld_admin_group_c",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "EXCLUDED",
+      "rawDisposition": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE"
+    },
+    {
+      "missionId": "apsc_cce",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "slrc_adre",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "slprb_assam_police",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "appsc_arunachal_cce",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "apssb_cgl_csle",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "arunachal_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "mpsc_manipur_mcscc",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mssc_manipur_group_cd",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "manipur_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_HOLD",
+      "rawDisposition": "MAJOR_MISSION_REVIEW_REQUIRED"
+    },
+    {
+      "missionId": "mpsc_meghalaya_mcs",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "meghalaya_crb_police",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "mpsc_mizoram_mcs",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "mizoram_subordinate_services",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "EXCLUDED",
+      "rawDisposition": "LEGACY_OR_INACTIVE_ONLY"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ncs",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "npsc_nagaland_ctse",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "EXCLUDED",
+      "rawDisposition": "NOT_MAJOR_FOR_CURRENT_RANKCRACKERS_SCOPE"
+    },
+    {
+      "missionId": "nssb_nagaland_csre",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "spsc_sikkim_cce",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "spsc_sikkim_police_si",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "tpsc_tripura_tcs_tps",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "jrbt_tripura_group_cd",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "trbt_tripura_ttet",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "trbt_tripura_stgt_stpgt",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "sourceArtifact": "docs/academic_review/47a3r1/47a3r1_major_mission_filter_ledger.json",
+      "sourceLane": "STATE_UT",
+      "sourceDisposition": "STATE_UT_CLEAN",
+      "rawDisposition": "MAJOR_MISSION_ACCEPTED_WITH_NON_NUMERIC_SCALE_EVIDENCE"
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_SUPPORTED",
+      "rawDisposition": "SUPPORTED_MAJOR"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "sourceArtifact": "docs/academic_review/48c/48c_article315_reclassification_result.json",
+      "sourceLane": "ARTICLE315",
+      "sourceDisposition": "ARTICLE315_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "delhi_judicial_service_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_CONFIRMED",
+      "rawDisposition": "STANDALONE_CONFIRMED"
+    },
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "rhc_civil_judge_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_CONFIRMED",
+      "rawDisposition": "STANDALONE_CONFIRMED"
+    },
+    {
+      "missionId": "mphc_civil_judge_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_CONFIRMED",
+      "rawDisposition": "STANDALONE_CONFIRMED"
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_UNRESOLVED",
+      "rawDisposition": "SOURCE_UNRESOLVED"
+    },
+    {
+      "missionId": "gauhc_ajs_grade3_prelims",
+      "sourceArtifact": "docs/academic_review/48c/48c_judicial_identity_evidence_ledger.json",
+      "sourceLane": "JUDICIAL",
+      "sourceDisposition": "JUDICIAL_CONFIRMED",
+      "rawDisposition": "STANDALONE_CONFIRMED"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "gate": "RC_CANONICAL_SOURCE_REGISTRY_RPSC_VARIANT_AND_MISSION_CONSISTENCY_REPAIR_46D10",
+  "generatedAt": "2026-09-09T15:08:07.720Z",
+  "summary": {
+    "OFFICIAL_PYQ_FOUND_COUNT": 0,
+    "OFFICIAL_PYQ_ACQUIRED_COUNT": 0,
+    "OFFICIAL_PYQ_BYTE_VERIFIED_COUNT": 0,
+    "OFFICIAL_ANSWER_KEY_FOUND_COUNT": 0,
+    "OFFICIAL_ANSWER_KEY_BYTE_VERIFIED_COUNT": 0,
+    "OFFICIAL_PYQ_NOT_ACQUIRED_COUNT": 15,
+    "TRUE_OFFICIAL_PYQ_NOT_FOUND_MISSION_COUNT": "NOT_YET_PROVEN"
+  },
+  "officialPortalStatus": [
+    {
+      "missionId": "upsc_cse_prelims",
+      "authority": "UPSC",
+      "status": "OFFICIAL_REGISTRY_REFERENCE_FOUND",
+      "portalUrl": "https://upsc.gov.in/examinations/previous-question-papers"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "authority": "RPSC",
+      "status": "OFFICIAL_REGISTRY_REFERENCE_FOUND",
+      "portalUrl": "https://rpsc.rajasthan.gov.in/previous-question-papers"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authority": "RPSC",
+      "status": "OFFICIAL_REGISTRY_REFERENCE_FOUND",
+      "portalUrl": "https://rpsc.rajasthan.gov.in/previous-question-papers"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "authority": "NTA",
+      "status": "OFFICIAL_REGISTRY_REFERENCE_FOUND",
+      "portalUrl": "https://jeemain.nta.nic.in"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authority": "NTA",
+      "status": "OFFICIAL_REGISTRY_REFERENCE_FOUND",
+      "portalUrl": "https://neet.nta.nic.in"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_je",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "ssc_gd",
+      "authority": "SSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://ssc.gov.in"
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "authority": "UPPSC",
+      "status": "NOT_YET_ACQUIRED_IN_LOCAL_REPOSITORY",
+      "portalUrl": "https://uppsc.up.nic.in"
+    }
+  ]
+}

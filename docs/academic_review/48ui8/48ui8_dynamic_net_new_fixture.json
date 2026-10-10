@@ -1,0 +1,18 @@
+{
+  "testMissionId": "afcat",
+  "canarySource": "docs/academic_review/48a6r2/48a6r2_first_net_new_canary.json",
+  "testedStateA_Draft": {
+    "publicationState": "INTERNAL_DRAFT",
+    "studentVisible": false,
+    "reason": "Filtered out by cardVisible=false and in-memory draft defense-in-depth filter."
+  },
+  "testedStateB_Published": {
+    "publicationState": "PUBLISHED",
+    "studentVisible": true,
+    "renderedAuthorityTitle": "Indian Air Force",
+    "renderedMissionTitle": "Air Force Common Admission Test",
+    "apkHardcodeRequired": false,
+    "dynamicRenderingVerified": true
+  },
+  "MISSION_SPECIFIC_UI_HARDCODE_COUNT": 0
+}

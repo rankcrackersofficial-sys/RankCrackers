@@ -1,0 +1,7 @@
+{
+  "implicit_true_consent_default_count": 0,
+  "consent_false_profile_bypass_count": 0,
+  "authoritative_consent_path": "consent.termsAccepted == true",
+  "legacy_flat_flag_promoted_without_governance": false,
+  "verdict": "CONSENT_AUTHORITY_SECURE"
+}

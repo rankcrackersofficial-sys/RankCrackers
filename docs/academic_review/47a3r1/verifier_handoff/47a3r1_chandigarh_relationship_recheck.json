@@ -1,0 +1,38 @@
+{
+  "recheckCode": "RC_47A3R1_CHANDIGARH_RELATIONSHIP_RECHECK",
+  "generatedAt": "2026-09-10T07:00:05.928Z",
+  "metrics": {
+    "UNSUPPORTED_CHANDIGARH_QUOTA_PERCENTAGE_COUNT": 0,
+    "STATUTORY_RELATIONSHIP_VERIFIED": true
+  },
+  "auditActionSummary": {
+    "previousClaimIn47A3R": "Chandigarh Administration civil posts and engineering cadres are apportioned between Punjab (60%) and Haryana (40%) on deputation/cadre quota.",
+    "flawIdentified": "Numerical ratio (60:40) was historically based on conventions following Punjab Reorganisation, but current exact statutory percentage is not isolated in official recruitments.",
+    "actionTaken": "Withdrew numerical 60% / 40% percentage claims completely. Replaced with authentic statutory administrative relationship.",
+    "verifiedStatutoryRelationship": "Pursuant to the Punjab Reorganisation Act, 1966 (Act No. 31 of 1966), Chandigarh serves as the joint capital of Punjab and Haryana. The Union Territory Administration does not conduct its own State Civil Service examination. Civil executive and police services (PCS / HCS) are drawn on deputation from Punjab and Haryana. Aspirants in Chandigarh prepare for Punjab Civil Services (ppsc_pscce_prelims) or Haryana Civil Services (hpsc_hcs_prelims)."
+  },
+  "updatedOverlapRows": [
+    {
+      "overlapId": "ovl_chandigarh_cadre_quota_punjab",
+      "regionalContext": "CH",
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "canonicalAuthorityKey": "auth_in_pb_ppsc",
+      "conductingAuthorityKey": "auth_in_pb_ppsc",
+      "clientAuthorityKey": "auth_in_ch_admin",
+      "regionalDiscoveryOnly": true,
+      "deputationRelationship": "Deputation of administrative and police cadre personnel from State of Punjab under Punjab Reorganisation Act, 1966.",
+      "unsupportedNumericalPercentage": null
+    },
+    {
+      "overlapId": "ovl_chandigarh_cadre_quota_haryana",
+      "regionalContext": "CH",
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "canonicalAuthorityKey": "auth_in_hr_hpsc",
+      "conductingAuthorityKey": "auth_in_hr_hpsc",
+      "clientAuthorityKey": "auth_in_ch_admin",
+      "regionalDiscoveryOnly": true,
+      "deputationRelationship": "Deputation of administrative and police cadre personnel from State of Haryana under Punjab Reorganisation Act, 1966.",
+      "unsupportedNumericalPercentage": null
+    }
+  ]
+}

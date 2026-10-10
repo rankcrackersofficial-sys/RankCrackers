@@ -1,0 +1,210 @@
+{
+  "registryCode": "RC_47A3R_DUPLICATE_OWNERSHIP_REGISTRY",
+  "generatedAt": "2026-09-10T06:27:19.350Z",
+  "metrics": {
+    "TOTAL_OVERLAP_ROWS": 11,
+    "MULTI_CANONICAL_MISSION_IN_ONE_OVERLAP_ROW_COUNT": 0,
+    "CENTRAL_AUTHORITY_ID_DRIFT_COUNT": 0,
+    "ONE_EXAM_ONE_PERMANENT_MISSION_ENFORCED": true
+  },
+  "overlapRows": [
+    {
+      "overlapId": "ovl_upsc_danics_danips",
+      "regionalContext": "DL, AN, LD, DN",
+      "canonicalMissionId": "upsc_cse_prelims",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "conductingAuthorityKey": "auth_in_upsc",
+      "clientAuthorityKey": "auth_in_mha_uts",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://upsc.gov.in/examinations/active-examinations",
+          "evidenceTitle": "UPSC Civil Services Examination Rules - Inclusion of DANICS/DANIPS",
+          "verifiedFact": "Delhi, Andaman & Nicobar Islands, Lakshadweep, Daman & Diu and Dadra & Nagar Haveli Civil Service (DANICS) and Police Service (DANIPS) Group B services are recruited through UPSC Civil Services Examination."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_EXAM_REGIONAL_DISCOVERY_POINTER",
+      "architecturalNotes": "Union Territories do not conduct independent State Civil Service examinations for DANICS/DANIPS. Canonical mission is upsc_cse_prelims; regional entries in DL, AN, LD, DN provide discovery pointers only."
+    },
+    {
+      "overlapId": "ovl_ssc_cpo_delhi_police_si",
+      "regionalContext": "DL",
+      "canonicalMissionId": "ssc_cpo",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_dl_delpol",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ssc.gov.in/notices",
+          "evidenceTitle": "SSC Notice - Sub-Inspector in Delhi Police and Central Armed Police Forces Examination",
+          "verifiedFact": "Sub-Inspector (Executive) in Delhi Police is recruited centrally by Staff Selection Commission through SSC CPO Examination. Delhi Police does not conduct a separate written examination for SI."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_EXAM_REGIONAL_DISCOVERY_POINTER",
+      "architecturalNotes": "Deconstructed from 47A3 compound candidate. Canonical mission is ssc_cpo owned by auth_in_ssc. Delhi region provides discoverability pointer; duplicate Delhi SI mission is suppressed from materialization."
+    },
+    {
+      "overlapId": "ovl_ssc_delhi_police_constable",
+      "regionalContext": "DL",
+      "canonicalMissionId": "delhi_police_constable",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_dl_delpol",
+      "regionalDiscoveryOnly": false,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ssc.gov.in/notices",
+          "evidenceTitle": "SSC Notice - Constable (Executive) Male and Female in Delhi Police Examination",
+          "verifiedFact": "Staff Selection Commission conducts the pan-India Computer Based Examination under MOU with Delhi Police / Ministry of Home Affairs specifically for Delhi Police Constable (Executive) posts."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_CONDUCTED_DEDICATED_REGIONAL_MISSION",
+      "architecturalNotes": "Dedicated recruitment mission for Delhi Police Constable (Executive) conducted by SSC on behalf of Delhi Police. Retains dedicated mission identity delhi_police_constable with conductingAuthority auth_in_ssc and clientAuthority auth_in_dl_delpol."
+    },
+    {
+      "overlapId": "ovl_ssc_ladakh_selection_post",
+      "regionalContext": "LA",
+      "canonicalMissionId": "ssc_ladakh_selection_post",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_la_admin",
+      "regionalDiscoveryOnly": false,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ssc.gov.in/notices",
+          "evidenceTitle": "SSC Notice - Selection Posts for UT of Ladakh",
+          "verifiedFact": "Staff Selection Commission (NWR) conducts the Computer Based Examination for direct recruitment to Group B and C posts belonging to UT of Ladakh administration."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_CONDUCTED_DEDICATED_REGIONAL_MISSION",
+      "architecturalNotes": "Canonical exam owner is auth_in_ssc; client/beneficiary UT is Administration of UT of Ladakh (auth_in_la_admin). Regional discoverability is LA."
+    },
+    {
+      "overlapId": "ovl_cbse_ctet",
+      "regionalContext": "GA, CH, DN, LD, DL",
+      "canonicalMissionId": "cbse_ctet",
+      "canonicalAuthorityKey": "auth_in_cbse",
+      "conductingAuthorityKey": "auth_in_cbse",
+      "clientAuthorityKey": "auth_in_state_ut_education",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ctet.nic.in",
+          "evidenceTitle": "CBSE CTET Information Bulletin & Guidelines",
+          "verifiedFact": "CBSE CTET qualifies candidates for teaching appointments in schools of UTs (Chandigarh, Dadra & Nagar Haveli, Daman & Diu, Andaman & Nicobar, Lakshadweep, Delhi) and states lacking independent state TET (e.g. Goa)."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_EXAM_REGIONAL_DISCOVERY_POINTER",
+      "architecturalNotes": "Canonical mission is cbse_ctet owned by auth_in_cbse. States/UTs without dedicated TET boards map regional teacher eligibility to this canonical central mission."
+    },
+    {
+      "overlapId": "ovl_chandigarh_cadre_quota_punjab",
+      "regionalContext": "CH",
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "canonicalAuthorityKey": "auth_in_pb_ppsc",
+      "conductingAuthorityKey": "auth_in_pb_ppsc",
+      "clientAuthorityKey": "auth_in_ch_admin",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://chandigarh.gov.in",
+          "evidenceTitle": "Punjab Reorganisation Act 1966 & Chandigarh Administration Service Rules",
+          "verifiedFact": "Chandigarh Administration civil posts and engineering cadres are apportioned between Punjab (60%) and Haryana (40%) on deputation/cadre quota."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_INTERSTATE_CADRE_QUOTA_REGIONAL_DISCOVERY",
+      "architecturalNotes": "Deconstructed from 47A3 compound candidate. Canonical mission is ppsc_pscce_prelims; Chandigarh regional catalog provides discovery pointer for the 60% quota."
+    },
+    {
+      "overlapId": "ovl_chandigarh_cadre_quota_haryana",
+      "regionalContext": "CH",
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "canonicalAuthorityKey": "auth_in_hr_hpsc",
+      "conductingAuthorityKey": "auth_in_hr_hpsc",
+      "clientAuthorityKey": "auth_in_ch_admin",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://chandigarh.gov.in",
+          "evidenceTitle": "Punjab Reorganisation Act 1966 & Chandigarh Administration Service Rules",
+          "verifiedFact": "Chandigarh Administration civil posts and engineering cadres are apportioned between Punjab (60%) and Haryana (40%) on deputation/cadre quota."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_INTERSTATE_CADRE_QUOTA_REGIONAL_DISCOVERY",
+      "architecturalNotes": "Deconstructed from 47A3 compound candidate. Canonical mission is hpsc_hcs_prelims; Chandigarh regional catalog provides discovery pointer for the 40% quota."
+    },
+    {
+      "overlapId": "ovl_high_courts_subordinate_judiciary",
+      "regionalContext": "AS, AR, NL, MZ, GA, DN, PY, LD, PB, HR, CH",
+      "canonicalMissionId": "subordinate_judicial_service_prelims",
+      "canonicalAuthorityKey": "auth_in_high_courts",
+      "conductingAuthorityKey": "auth_in_high_courts",
+      "clientAuthorityKey": "auth_in_state_law_depts",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://districts.ecourts.gov.in",
+          "evidenceTitle": "High Court Subordinate Judicial Service Examination Rules",
+          "verifiedFact": "High Courts exercise constitutional jurisdiction under Article 233-235 over subordinate judiciary across shared territorial entities."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_JUDICIAL_CONSORTIUM_REGIONAL_DISCOVERY",
+      "architecturalNotes": "Shared High Courts (Gauhati HC, Bombay HC, Punjab & Haryana HC, Madras HC, Kerala HC) recruit subordinate judges across multiple states/UTs."
+    },
+    {
+      "overlapId": "ovl_assam_rifles_paramilitary",
+      "regionalContext": "AS, AR, MN, ML, MZ, NL, TR",
+      "canonicalMissionId": "ssc_gd_constable",
+      "canonicalAuthorityKey": "auth_in_ssc",
+      "conductingAuthorityKey": "auth_in_ssc",
+      "clientAuthorityKey": "auth_in_mha_assam_rifles",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ssc.gov.in/notices",
+          "evidenceTitle": "SSC Notice - Constable (GD) in Central Armed Police Forces & Rifleman (GD) in Assam Rifles Examination",
+          "verifiedFact": "Assam Rifles is a Central Paramilitary Force under the Ministry of Home Affairs. Rifleman (GD) recruitment is conducted centrally by SSC under SSC GD Constable examination."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_EXAM_REGIONAL_DISCOVERY_POINTER",
+      "architecturalNotes": "Not a State/UT recruitment. Conducted centrally by SSC under ssc_gd_constable. Regional discoverability in North Eastern states routes to central mission."
+    },
+    {
+      "overlapId": "ovl_ibps_rrb_officers_scale",
+      "regionalContext": "ALL_STATES_UTS",
+      "canonicalMissionId": "ibps_rrb_po",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "conductingAuthorityKey": "auth_in_ibps",
+      "clientAuthorityKey": "auth_in_nabard_rrbs",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ibps.in/crp-rrb",
+          "evidenceTitle": "IBPS Common Recruitment Process for RRBs (CRP RRBs - Officers Scale I, II & III)",
+          "verifiedFact": "IBPS conducts common written examination for recruitment of Officers in participating Regional Rural Banks sponsored by Public Sector Banks across all states."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_CONSORTIUM_REGIONAL_DISCOVERY",
+      "architecturalNotes": "Deconstructed from 47A3 compound candidate. Canonical mission is ibps_rrb_po owned by auth_in_ibps; state-level banks participate via state quotas."
+    },
+    {
+      "overlapId": "ovl_ibps_rrb_office_assistants",
+      "regionalContext": "ALL_STATES_UTS",
+      "canonicalMissionId": "ibps_rrb_clerk",
+      "canonicalAuthorityKey": "auth_in_ibps",
+      "conductingAuthorityKey": "auth_in_ibps",
+      "clientAuthorityKey": "auth_in_nabard_rrbs",
+      "regionalDiscoveryOnly": true,
+      "officialOwnershipEvidence": [
+        {
+          "evidenceSource": "https://ibps.in/crp-rrb",
+          "evidenceTitle": "IBPS Common Recruitment Process for RRBs (CRP RRBs - Office Assistants Multipurpose)",
+          "verifiedFact": "IBPS conducts common written examination for recruitment of Office Assistants (Multipurpose) across participating Regional Rural Banks."
+        }
+      ],
+      "resolutionStatus": "RESOLVED_CENTRAL_CONSORTIUM_REGIONAL_DISCOVERY",
+      "architecturalNotes": "Deconstructed from 47A3 compound candidate. Canonical mission is ibps_rrb_clerk owned by auth_in_ibps; separate examination from Officers Scale."
+    }
+  ]
+}

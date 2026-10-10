@@ -1,0 +1,464 @@
+{
+  "authorityProfiles": [
+    {
+      "authorityKey": "auth_in_upsc",
+      "officialDomains": [
+        "upsc.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_upsc_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://upsc.gov.in/",
+          "missionScope": [
+            "upsc_cse_prelims",
+            "upsc_ifos",
+            "upsc_cds",
+            "upsc_nda_na",
+            "upsc_capf_ac",
+            "upsc_ese",
+            "upsc_cms",
+            "upsc_ies_iss",
+            "upsc_geo_scientist"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_upsc_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://upsc.gov.in/",
+          "missionScope": [
+            "upsc_cse_prelims",
+            "upsc_ifos",
+            "upsc_cds",
+            "upsc_nda_na",
+            "upsc_capf_ac",
+            "upsc_ese",
+            "upsc_cms",
+            "upsc_ies_iss",
+            "upsc_geo_scientist"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ssc",
+      "officialDomains": [
+        "ssc.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_ssc_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://ssc.gov.in/",
+          "missionScope": [
+            "ssc_cgl",
+            "ssc_chsl",
+            "ssc_mts_havaldar",
+            "ssc_gd",
+            "ssc_cpo",
+            "ssc_je",
+            "ssc_stenographer",
+            "ssc_hindi_translators",
+            "ssc_selection_post"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_ssc_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://ssc.gov.in/",
+          "missionScope": [
+            "ssc_cgl",
+            "ssc_chsl",
+            "ssc_mts_havaldar",
+            "ssc_gd",
+            "ssc_cpo",
+            "ssc_je",
+            "ssc_stenographer",
+            "ssc_hindi_translators",
+            "ssc_selection_post"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_cbse",
+      "officialDomains": [
+        "cbse.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_cbse_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://cbse.gov.in/",
+          "missionScope": [],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_cbse_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://cbse.gov.in/",
+          "missionScope": [],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nta",
+      "officialDomains": [
+        "nta.ac.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_nta_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://nta.ac.in/",
+          "missionScope": [
+            "nta_jee_main",
+            "nta_neet_ug",
+            "nta_cuet_ug",
+            "nta_cuet_pg",
+            "nta_ugc_net",
+            "nta_csir_ugc_net",
+            "nta_icar_aieea_pg",
+            "nta_nchm_jee"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_nta_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://nta.ac.in/",
+          "missionScope": [
+            "nta_jee_main",
+            "nta_neet_ug",
+            "nta_cuet_ug",
+            "nta_cuet_pg",
+            "nta_ugc_net",
+            "nta_csir_ugc_net",
+            "nta_icar_aieea_pg",
+            "nta_nchm_jee"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rrb",
+      "officialDomains": [
+        "rrbcdg.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rrb_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://rrbcdg.gov.in/",
+          "missionScope": [
+            "rrb_ntpc",
+            "rrb_level_1",
+            "rrb_alp",
+            "rrb_technician",
+            "rrb_je"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_rrb_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://rrbcdg.gov.in/",
+          "missionScope": [
+            "rrb_ntpc",
+            "rrb_level_1",
+            "rrb_alp",
+            "rrb_technician",
+            "rrb_je"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rpf",
+      "officialDomains": [
+        "rpf.indianrailways.gov.in",
+        "indianrailways.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rpf_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://rpf.indianrailways.gov.in/",
+          "missionScope": [
+            "rpf_si",
+            "rpf_constable"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_rpf_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://rpf.indianrailways.gov.in/",
+          "missionScope": [
+            "rpf_si",
+            "rpf_constable"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_ibps",
+      "officialDomains": [
+        "ibps.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_ibps_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://ibps.in/",
+          "missionScope": [
+            "ibps_po_mt",
+            "ibps_csa",
+            "ibps_so",
+            "ibps_rrb_officer",
+            "ibps_rrb_office_assistant"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_ibps_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://ibps.in/",
+          "missionScope": [
+            "ibps_po_mt",
+            "ibps_csa",
+            "ibps_so",
+            "ibps_rrb_officer",
+            "ibps_rrb_office_assistant"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_sbi",
+      "officialDomains": [
+        "sbi.co.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_sbi_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://sbi.co.in/",
+          "missionScope": [
+            "sbi_po",
+            "sbi_ja"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_sbi_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://sbi.co.in/",
+          "missionScope": [
+            "sbi_po",
+            "sbi_ja"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_rbi",
+      "officialDomains": [
+        "rbi.org.in",
+        "opportunities.rbi.org.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_rbi_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://rbi.org.in/",
+          "missionScope": [
+            "rbi_grade_b",
+            "rbi_assistant"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_rbi_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://rbi.org.in/",
+          "missionScope": [
+            "rbi_grade_b",
+            "rbi_assistant"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_nabard",
+      "officialDomains": [
+        "nabard.org"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_nabard_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://nabard.org/",
+          "missionScope": [
+            "nabard_grade_a"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_nabard_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://nabard.org/",
+          "missionScope": [
+            "nabard_grade_a"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_army",
+      "officialDomains": [
+        "joinindianarmy.nic.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_army_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://joinindianarmy.nic.in/",
+          "missionScope": [
+            "army_agniveer_cee"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_indian_army_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://joinindianarmy.nic.in/",
+          "missionScope": [
+            "army_agniveer_cee"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_navy",
+      "officialDomains": [
+        "joinindiannavy.gov.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_navy_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://joinindiannavy.gov.in/",
+          "missionScope": [
+            "navy_agniveer_ssr"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_indian_navy_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://joinindiannavy.gov.in/",
+          "missionScope": [
+            "navy_agniveer_ssr"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    },
+    {
+      "authorityKey": "auth_in_indian_air_force",
+      "officialDomains": [
+        "careerairforce.gov.in",
+        "iafrecruitment.edcil.co.in"
+      ],
+      "sourceSurfaces": [
+        {
+          "surfaceId": "auth_in_indian_air_force_notices",
+          "surfaceType": "NOTIFICATION_LISTING",
+          "officialUrl": "https://careerairforce.gov.in/",
+          "missionScope": [
+            "afcat",
+            "agniveervayu"
+          ],
+          "accessMode": "PUBLIC_WEB",
+          "automationCapability": "AUTOMATABLE_WITH_BROWSER_ADAPTER",
+          "monitorRuntimeProven": false
+        },
+        {
+          "surfaceId": "auth_in_indian_air_force_results",
+          "surfaceType": "RESULT_NOTICE",
+          "officialUrl": "https://careerairforce.gov.in/",
+          "missionScope": [
+            "afcat",
+            "agniveervayu"
+          ],
+          "accessMode": "PUBLIC_OR_AUTHENTICATED",
+          "automationCapability": "EPHEMERAL_WINDOW_MONITOR",
+          "monitorRuntimeProven": false
+        }
+      ]
+    }
+  ],
+  "runtimeMonitorClaimCount": 0
+}

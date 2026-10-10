@@ -1,0 +1,23 @@
+{
+  "command": "runGenericMissionMaterializer(manifest, {}, {mode: VALIDATE_ONLY, context: ACCEPTED_MANIFEST, authorityRegistry})",
+  "materializerSourcePath": "functions/services/generic_mission_materializer.js",
+  "materializerSourceSha256": "7c8627e27a674fc6f8373a5f27b5404e5d5741c990303fa6abd170edbbd1c7a5",
+  "authorityInputCount": 13,
+  "missionInputCount": 49,
+  "validationPassCount": 49,
+  "validationHoldCount": 0,
+  "validationRejectCount": 0,
+  "errors": [],
+  "warnings": [],
+  "processExitCode": 0,
+  "result": {
+    "status": "PASS",
+    "totalMissionsEvaluated": 49,
+    "validation": {
+      "valid": true,
+      "totalMissions": 49,
+      "errors": [],
+      "warnings": []
+    }
+  }
+}

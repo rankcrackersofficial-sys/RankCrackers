@@ -1,0 +1,57 @@
+{
+  "algorithm": "SHA-256",
+  "generatedLast": true,
+  "fileCount": 10,
+  "rows": [
+    {
+      "file": "48cs5_amendment_chain.json",
+      "byteLength": 2149,
+      "sha256": "f88379150afda16f18b21744fec9b1aed22ecd0b1ebc22f98fd12a735b61950f"
+    },
+    {
+      "file": "48cs5_career_signal_event_evidence.json",
+      "byteLength": 2674,
+      "sha256": "07c8624cf8173f0dc00c8ea0225b9fcaaa29ad95dd522e6820f8555ae3548c5e"
+    },
+    {
+      "file": "48cs5_current_cycle_state.json",
+      "byteLength": 1371,
+      "sha256": "c0834004912087874e51fc15c1e8b15a1b5a9f9e70cbc0fb0b8870ab1edcc994"
+    },
+    {
+      "file": "48cs5_final_report.md",
+      "byteLength": 962,
+      "sha256": "2bde3bc5a21352953ef583d90864ff52dbe7ad069dde9a32bcfba4aec21c7b50"
+    },
+    {
+      "file": "48cs5_jee_main_2026_rulebook_package.json",
+      "byteLength": 5351,
+      "sha256": "e7286df8914586a3c4deb9d1040af9cf314ce6a1ce870a85464c63ac4ea47ed8"
+    },
+    {
+      "file": "48cs5_rule_family_coverage.json",
+      "byteLength": 2935,
+      "sha256": "7f28be78365e5ecd5d66e1f85dd23721953ede3ee19a1a28595155787fa82f72"
+    },
+    {
+      "file": "48cs5_source_document_registry.json",
+      "byteLength": 4919,
+      "sha256": "2582ffe0806daeebbc2b49cf8cc3b59e84b62488969b91276dfe48db3f66239e"
+    },
+    {
+      "file": "48cs5_ssc_cgl_rulebook_package.json",
+      "byteLength": 5595,
+      "sha256": "dad1055395aa224346c2e82ad4168de5a364103301e21d37b689b4f02c8ef093"
+    },
+    {
+      "file": "48cs5_ssc_cgl_vacancy_source_audit.json",
+      "byteLength": 708,
+      "sha256": "583475b09e65e7419dfa8c85f8472540187477bfc93dd6b095187731bd125f51"
+    },
+    {
+      "file": "48cs5_unresolved_facts.json",
+      "byteLength": 1004,
+      "sha256": "94247b3026a255ba53f0223150ade080f3977fdd85819e2d8560244788e13e36"
+    }
+  ]
+}

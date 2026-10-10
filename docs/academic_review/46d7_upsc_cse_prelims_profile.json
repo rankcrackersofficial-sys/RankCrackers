@@ -1,0 +1,150 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "upsc_cse_prelims",
+  "canonicalDisplayName": "UPSC Civil Services – Prelims",
+  "examAuthority": {
+    "authorityKey": "upsc",
+    "name": "Union Public Service Commission",
+    "acronym": "UPSC",
+    "headquarters": "Dholpur House, Shahjahan Road, New Delhi",
+    "officialPortalUrl": "https://upsc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2026",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "OFFICIAL_CALENDAR_PUBLISHED_NOTIFICATION_UNRELEASED",
+    "calendarProof": {
+      "documentTitle": "UPSC Annual Examination Calendar 2027",
+      "examName": "Civil Services (Preliminary) Examination, 2027",
+      "notificationScheduledDate": "2027-01-13",
+      "applicationCloseDate": "2027-02-02",
+      "examCommencementDate": "2027-05-23",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED"
+    }
+  },
+  "rankCrackersScope": {
+    "supportedStage": "PRELIMS_OBJECTIVE_MCQ",
+    "unsupportedStages": [
+      { "stageName": "Civil Services (Main) Examination", "reason": "Subjective/Descriptive Written Format" },
+      { "stageName": "Personality Test / Interview", "reason": "Oral Assessment Board" }
+    ]
+  },
+  "examinationStructure": {
+    "totalPapers": 2,
+    "totalMarks": 400,
+    "totalDurationMinutes": 240,
+    "languageScripts": ["LATIN", "DEVANAGARI"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "questionFormat": "OBJECTIVE_MCQ_4_CHOICES",
+    "papers": [
+      {
+        "paperId": "upsc_cse_prelims_paper_1",
+        "paperCode": "GS-1",
+        "officialName": "Paper-I: General Studies",
+        "totalQuestions": 100,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "marksPerQuestion": 2.0,
+        "negativeMarkingPerQuestion": 0.6666666666666666,
+        "negativeMarkingFactor": "ONE_THIRD",
+        "isQualifying": false,
+        "countsForMerit": true,
+        "subjects": [
+          {
+            "subjectId": "current_events",
+            "subjectName": "Current Events of National and International Importance",
+            "subjectAliases": ["Current Affairs", "National & International Events"]
+          },
+          {
+            "subjectId": "indian_history_and_national_movement",
+            "subjectName": "History of India and Indian National Movement",
+            "subjectAliases": ["Ancient History", "Medieval History", "Modern History", "Indian National Movement", "Art and Culture"]
+          },
+          {
+            "subjectId": "indian_and_world_geography",
+            "subjectName": "Indian and World Geography - Physical, Social, Economic",
+            "subjectAliases": ["Physical Geography", "Human Geography", "Indian Geography", "World Geography", "Economic Geography"]
+          },
+          {
+            "subjectId": "indian_polity_and_governance",
+            "subjectName": "Indian Polity and Governance - Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues",
+            "subjectAliases": ["Polity", "Governance", "Constitution of India", "Panchayati Raj", "Public Policy", "Rights"]
+          },
+          {
+            "subjectId": "economic_and_social_development",
+            "subjectName": "Economic and Social Development - Sustainable Development, Poverty, Inclusion, Demographics, Social Sector Initiatives",
+            "subjectAliases": ["Economy", "Indian Economy", "Sustainable Development", "Inclusion", "Social Sector"]
+          },
+          {
+            "subjectId": "environmental_ecology_and_climate_change",
+            "subjectName": "General Issues on Environmental Ecology, Bio-diversity and Climate Change",
+            "subjectAliases": ["Environment", "Ecology", "Biodiversity", "Climate Change"]
+          },
+          {
+            "subjectId": "general_science",
+            "subjectName": "General Science",
+            "subjectAliases": ["Physics", "Chemistry", "Biology", "Science and Technology"]
+          }
+        ]
+      },
+      {
+        "paperId": "upsc_cse_prelims_paper_2",
+        "paperCode": "GS-2 (CSAT)",
+        "officialName": "Paper-II: General Studies (Civil Services Aptitude Test)",
+        "totalQuestions": 80,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "marksPerQuestion": 2.5,
+        "negativeMarkingPerQuestion": 0.8333333333333334,
+        "negativeMarkingFactor": "ONE_THIRD",
+        "isQualifying": true,
+        "qualifyingThresholdPercentage": 33.0,
+        "qualifyingThresholdMarks": 66.0,
+        "countsForMerit": false,
+        "subjects": [
+          {
+            "subjectId": "reading_comprehension",
+            "subjectName": "Comprehension & Interpersonal Skills",
+            "subjectAliases": ["Reading Comprehension", "English & Hindi Passages", "Interpersonal Skills"]
+          },
+          {
+            "subjectId": "logical_reasoning_and_analytical_ability",
+            "subjectName": "Logical Reasoning and Analytical Ability",
+            "subjectAliases": ["Reasoning", "Analytical Ability", "Critical Thinking", "Deductive Logic"]
+          },
+          {
+            "subjectId": "decision_making_and_problem_solving",
+            "subjectName": "Decision Making and Problem Solving",
+            "subjectAliases": ["Decision Making", "Administrative Problem Solving"]
+          },
+          {
+            "subjectId": "general_mental_ability",
+            "subjectName": "General Mental Ability",
+            "subjectAliases": ["Mental Ability", "Direction Sense", "Blood Relations", "Coding-Decoding"]
+          },
+          {
+            "subjectId": "basic_numeracy_and_data_interpretation",
+            "subjectName": "Basic Numeracy (Class X level) & Data Interpretation (Charts, Graphs, Tables, Data Sufficiency - Class X level)",
+            "subjectAliases": ["Basic Numeracy", "Quantitative Aptitude", "Data Interpretation", "Charts and Graphs"]
+          }
+        ]
+      }
+    ]
+  },
+  "variantArchitecture": {
+    "model": "SINGLE_ACADEMIC_TRACK_ALL_CANDIDATES",
+    "academicVariants": [
+      {
+        "variantKey": "upsc_cse_prelims_common",
+        "variantName": "Civil Services (Preliminary) & Indian Forest Service (Preliminary)",
+        "paper1Authority": "upsc_cse_prelims_paper_1",
+        "paper2Authority": "upsc_cse_prelims_paper_2",
+        "cadreNote": "Common preliminary screening exam for Indian Administrative Service (IAS), Indian Police Service (IPS), Indian Foreign Service (IFS), Indian Forest Service (IFoS), and Central Group A/B Services."
+      }
+    ]
+  }
+}

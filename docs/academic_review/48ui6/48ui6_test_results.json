@@ -1,0 +1,33 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "TEST_RESULTS",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "summary": {
+    "total_auth_tests": 63,
+    "passed": 63,
+    "failed": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "test_suites": [
+    {
+      "suite": "test/features/auth/gate_48ui6_authority_and_academic_reattachment_test.dart",
+      "tests": 6,
+      "passed": 6,
+      "failed": 0
+    },
+    {
+      "suite": "test/features/auth/student_identity_and_mission_realm_ux_test.dart",
+      "tests": 12,
+      "passed": 12,
+      "failed": 0
+    },
+    {
+      "suite": "test/features/auth/student_professional_auth_profile_route_test.dart",
+      "tests": 45,
+      "passed": 45,
+      "failed": 0
+    }
+  ],
+  "status": "PASSED"
+}

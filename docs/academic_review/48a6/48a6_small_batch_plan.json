@@ -1,0 +1,216 @@
+{
+  "planVersion": "2.0.0-48a6",
+  "maxBatchSize": 20,
+  "generatedAt": "2026-09-10T12:42:43.740Z",
+  "batches": {
+    "BATCH_0_LIVE_REPAIRS": {
+      "target": "EXISTING_LIVE_REPAIRS_ONLY",
+      "count": 15,
+      "referencePackage": "docs/academic_review/48b2/48b2_batch0_exact_mutation_plan.json",
+      "status": "SUPERSEDED_DO_NOT_APPLY_WITHOUT_QUICK_START_LOCK"
+    },
+    "BATCH_1A_NATIONAL_NET_NEW_PART1": {
+      "count": 17,
+      "missionIds": [
+        "afcat",
+        "agniveervayu",
+        "army_agniveer_cee",
+        "cbse_ctet",
+        "ibps_crp_rrb_office_assistant",
+        "ibps_crp_rrb_officers",
+        "ibps_csa",
+        "ibps_po_mt",
+        "ibps_so",
+        "nabard_grade_a",
+        "navy_agniveer_mr",
+        "navy_agniveer_ssr",
+        "nta_csir_ugc_net",
+        "nta_cuet_pg",
+        "nta_cuet_ug",
+        "nta_ugc_net",
+        "rbi_assistant"
+      ]
+    },
+    "BATCH_1B_NATIONAL_NET_NEW_PART2": {
+      "count": 16,
+      "missionIds": [
+        "rbi_grade_b",
+        "rpf_constable",
+        "rpf_si",
+        "rrb_alp",
+        "rrb_je",
+        "rrb_level_1",
+        "rrb_ntpc",
+        "rrb_technician",
+        "sbi_ja",
+        "sbi_po",
+        "upsc_capf_ac",
+        "upsc_cds",
+        "upsc_cms",
+        "upsc_ese",
+        "upsc_geo_scientist",
+        "upsc_nda_na"
+      ]
+    },
+    "BATCH_2A_STATE_UP_UK_DL": {
+      "count": 18,
+      "missionIds": [
+        "appsc_arunachal_cce",
+        "appsc_group1",
+        "appsc_group2",
+        "apsc_cce",
+        "apslprb_sct_pc",
+        "apslprb_sct_si",
+        "apssb_cgl_csle",
+        "arunachal_police_constable",
+        "bpsc_cce_prelims",
+        "bpsc_tre",
+        "bpssc_police_si",
+        "bse_odisha_otet",
+        "bseb_stet",
+        "bssc_cgl",
+        "bssc_inter_level",
+        "cgpsc_state_service",
+        "cgvyapam_cgtet",
+        "chandigarh_jbt_teacher"
+      ]
+    },
+    "BATCH_2B_STATE_RJ_MP_CG": {
+      "count": 18,
+      "missionIds": [
+        "chandigarh_police_asi",
+        "chandigarh_police_constable",
+        "chandigarh_tgt_teacher",
+        "csbc_bihar_police_constable",
+        "dnhdd_ssb_group_bc",
+        "dsssb_delhi_pgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_tgt",
+        "dsssb_junior_assistant_ldc",
+        "ga_police_recruitment",
+        "gprb_lokrakshak",
+        "gpsc_class_1_2",
+        "gpsc_goa_civil_service",
+        "gpssb_talati",
+        "gssc_goa_group_c",
+        "gsssb_cce",
+        "haryana_htet",
+        "haryana_police_constable"
+      ]
+    },
+    "BATCH_2C_STATE_BR_JH_WB_OD": {
+      "count": 18,
+      "missionIds": [
+        "haryana_police_si",
+        "hp_tet",
+        "hppsc_hpas_prelims",
+        "hppsc_police_constable",
+        "hprca_group_c_common",
+        "hpsc_hcs_prelims",
+        "hssc_cet_group_c",
+        "hssc_cet_group_d",
+        "jac_jtet",
+        "jk_police_constable",
+        "jk_police_si",
+        "jkpsc_cce_prelims",
+        "jkssb_graduate_level",
+        "jpsc_cce_prelims",
+        "jrbt_tripura_group_cd",
+        "jssc_cgl",
+        "kea_fda_sda",
+        "kpsc_kas_gp"
+      ]
+    },
+    "BATCH_2D_STATE_AP_TS_TN_KL_KA": {
+      "count": 18,
+      "missionIds": [
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_kas",
+        "kpsc_kl_police_constable",
+        "ksp_cpc",
+        "ksp_psi",
+        "ladakh_police_constable",
+        "lahdc_dssrb_district_cadre",
+        "meghalaya_crb_police",
+        "mizoram_police_constable",
+        "mpesb_group2_subgroup4",
+        "mpesb_mptet",
+        "mpesb_police_constable",
+        "mppsc_state_service",
+        "mpsc_group_bc_combined",
+        "mpsc_manipur_mcscc",
+        "mpsc_meghalaya_mcs",
+        "mpsc_mizoram_mcs"
+      ]
+    },
+    "BATCH_2E_STATE_MH_GJ_GA_HR_PB": {
+      "count": 18,
+      "missionIds": [
+        "mpsc_rajyaseva",
+        "mscepune_mahatet",
+        "nagaland_police_constable",
+        "npsc_nagaland_ncs",
+        "nssb_nagaland_csre",
+        "opsc_ocs_prelims",
+        "ossc_cgl",
+        "osssc_cre_combined",
+        "ppsc_pscce_prelims",
+        "psssb_clerk",
+        "punjab_police_si",
+        "punjab_pstet",
+        "rbse_reet",
+        "rssb_cet_graduate",
+        "rssb_cet_senior_secondary",
+        "seb_gujarattet",
+        "slprb_assam_police",
+        "slrc_adre"
+      ]
+    },
+    "BATCH_2F_STATE_NORTH_EAST_NE": {
+      "count": 18,
+      "missionIds": [
+        "spsc_sikkim_cce",
+        "spsc_sikkim_police_si",
+        "ssb_odisha_lecturer",
+        "tgpsc_group1",
+        "tgpsc_group2",
+        "tgpsc_group3",
+        "tgpsc_group4",
+        "tgslprb_sct_pc",
+        "tgslprb_sct_si",
+        "tnpsc_group1",
+        "tnpsc_group2_2a",
+        "tnpsc_group4_vao",
+        "tntrb_pg_assistant_tet",
+        "tnusrb_pc",
+        "tnusrb_si",
+        "tpsc_tripura_tcs_tps",
+        "trbt_tripura_stgt_stpgt",
+        "treirb_teaching"
+      ]
+    },
+    "BATCH_2G_STATE_REMAINING_UT": {
+      "count": 17,
+      "missionIds": [
+        "uk_police_constable",
+        "uk_police_si",
+        "uk_tet",
+        "ukpsc_lower_subordinate_prelims",
+        "ukpsc_pcs_prelims",
+        "uksssc_group_c_combined",
+        "up_tet",
+        "upprpb_police_constable",
+        "upprpb_police_si",
+        "uppsc_ro_aro_prelims",
+        "upsssc_pet",
+        "wbbpe_primary_tet",
+        "wbcssc_slst_teacher",
+        "wbprb_police_constable",
+        "wbprb_police_si",
+        "wbpsc_clerkship",
+        "wbpsc_wbcs_prelims"
+      ]
+    }
+  }
+}

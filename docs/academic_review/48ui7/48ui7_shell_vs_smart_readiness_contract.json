@@ -1,0 +1,49 @@
+{
+  "gate": "GATE 48UI7",
+  "contract_name": "THREE SEPARATE GATES: MISSION SHELL vs SMART ENTRY vs ACADEMIC CONSUMER READINESS",
+  "principles": {
+    "principle_1": "MISSION SHELL ACCESS (canEnterMissionShell / canQuickStart) allows selecting a canonical mission and entering the Dashboard shell regardless of academic engine preparation.",
+    "principle_2": "SMART START (canSmartStart) is strictly fail-closed and reserved for diagnostic / Smart Entry readiness only when proven.",
+    "principle_3": "ACADEMIC CONSUMERS (Syllabus, DigiBook, Crucible) display truthful governed content or 'Preparing' / 'Not Ready' states without blocking navigation or fabricating readiness."
+  },
+  "gate_definitions": {
+    "canEnterMissionShell": {
+      "definition": "Whether the mission shell is selectable by the student.",
+      "conditions": [
+        "!archived",
+        "!founderHold",
+        "!manualGovernanceLock",
+        "status not in [ARCHIVED, HOLD, BLOCKED, DRAFT, PAUSED]",
+        "catalogDiscoverable == true",
+        "if variantRequired == true -> missionSelectionReady == true"
+      ],
+      "academic_readiness_required": false
+    },
+    "canQuickStart": {
+      "definition": "Action button to persist canonical mission and navigate to Dashboard shell.",
+      "maps_to": "canEnterMissionShell",
+      "target_route": "/dashboard",
+      "non_blocking_initialization": "KnowledgeEngine.initialize runs asynchronously in background without blocking route transition"
+    },
+    "canSmartStart": {
+      "definition": "Action button to enter diagnostic / Smart Entry flow.",
+      "conditions": [
+        "canEnterMissionShell == true",
+        "smartEntryEnabled == true",
+        "status in [AVAILABLE, LIVE, PUBLISHED, ACTIVE, CATALOG_VISIBLE, MISSION_COMPLETE, MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE]"
+      ],
+      "target_route": "/diagnostic-test",
+      "fail_closed": true
+    },
+    "academicConsumerState": {
+      "unmapped_status": "Truthful 'Preparing' / 'Not Ready' / 'Pending' displays",
+      "fake_readiness_prohibited": true
+    }
+  },
+  "metrics": {
+    "ACADEMIC_NOT_READY_BLOCKS_DASHBOARD_COUNT": 0,
+    "SMART_START_WITHOUT_DIAGNOSTIC_PROOF_COUNT": 0,
+    "FAKE_ACADEMIC_READINESS_COUNT": 0
+  },
+  "verdict": "CONTRACT_LOCKED_AND_VERIFIED"
+}

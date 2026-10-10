@@ -1,0 +1,259 @@
+{
+  "censusCode": "RC_INDIA_WIDE_STATE_UT_OFFICIAL_AUTHORITY_AND_MAJOR_EXAM_CENSUS_47A",
+  "censusTitle": "India-wide State / Union Territory Official Exam & Recruitment Authority Census",
+  "censusVersion": "1.0.0",
+  "academicReviewLane": "Agent-2 / EID Official Source Research Lane",
+  "censusDate": "2026-09-10",
+  "jurisdictionScope": {
+    "totalEntitiesCovered": 36,
+    "stateCount": 28,
+    "utCount": 8
+  },
+  "totalCandidates": 8,
+  "candidates": [
+    {
+      "candidateKey": "dup_upsc_danics_danips",
+      "candidateName": "UPSC DANICS & DANIPS (Union Territories Civil & Police Services)",
+      "centralAuthority": "Union Public Service Commission (UPSC)",
+      "centralAuthorityKey": "auth_upsc",
+      "centralPortal": "https://upsc.gov.in",
+      "affectedRegions": [
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        },
+        {
+          "regionCode": "AN",
+          "regionName": "Andaman and Nicobar Islands"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        }
+      ],
+      "examConducted": "UPSC Civil Services Examination (CSE)",
+      "cadresRecruited": "DANICS (Delhi, Andaman & Nicobar Islands, Lakshadweep, Daman & Diu, Dadra & Nagar Haveli Civil Service - Group B Gazetted) and DANIPS (Police Service - Group B Gazetted)",
+      "natureOfOverlap": "These administrative and police leadership positions operate at the state/UT executive level (equivalent to SDM/DSP), but are constitutionally and operationally recruited by UPSC under the Ministry of Home Affairs AGMUT cadre umbrella.",
+      "canonicalOwnershipDecision": "CENTRAL_OWNERSHIP",
+      "missionRealmRoutingRule": "Route preparation to central `upsc_cse_prelims` mission realm. Do NOT create synthetic state PSC missions (e.g. `delhi_psc_prelims` or `lakshadweep_psc`) because no such state/UT commissions exist for these territories."
+    },
+    {
+      "candidateKey": "dup_ssc_delhi_police",
+      "candidateName": "SSC Delhi Police Constable & Sub-Inspector Recruitment",
+      "centralAuthority": "Staff Selection Commission (SSC)",
+      "centralAuthorityKey": "auth_ssc",
+      "centralPortal": "https://ssc.gov.in",
+      "affectedRegions": [
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        }
+      ],
+      "examConducted": "SSC Delhi Police Constable (Executive) Exam & SSC CPO (Sub-Inspector in Delhi Police and CAPFs) Exam",
+      "cadresRecruited": "Constable (Executive) Male/Female and Sub-Inspector (Executive) in Delhi Police",
+      "natureOfOverlap": "Delhi Police is a state/metropolitan law enforcement agency, but because GNCTD is a Union Territory with police under Ministry of Home Affairs control, recruitment examinations are conducted centrally by SSC.",
+      "canonicalOwnershipDecision": "SHARED_RECRUITMENT_CENTRAL_EXAM",
+      "missionRealmRoutingRule": "Exams can be displayed in Delhi state catalog with badge 'Conducted by Central SSC', mapped to canonical mission keys `delhi_police_constable` and `ssc_cpo_delhi_police_si`."
+    },
+    {
+      "candidateKey": "dup_ssc_ladakh_selection_posts",
+      "candidateName": "SSC Selection Posts (Ladakh Subordinate Services)",
+      "centralAuthority": "Staff Selection Commission (SSC - Northern Region)",
+      "centralAuthorityKey": "auth_ssc_nr",
+      "centralPortal": "https://ssc.gov.in",
+      "affectedRegions": [
+        {
+          "regionCode": "LA",
+          "regionName": "Ladakh"
+        }
+      ],
+      "examConducted": "SSC Selection Posts (Ladakh Phase Examinations)",
+      "cadresRecruited": "Non-Gazetted Group B and Group C posts in the Administration of UT Ladakh",
+      "natureOfOverlap": "UT Ladakh has no state-level subordinate selection board. The UT administration entered into a statutory MOU with Central SSC to conduct selection tests for UT departmental posts.",
+      "canonicalOwnershipDecision": "CENTRAL_AGENCY_STATE_CADRE",
+      "missionRealmRoutingRule": "Categorize under UT Ladakh subordinate recruitment realm with explicit attribution to SSC Selection Posts testing framework."
+    },
+    {
+      "candidateKey": "dup_cbse_ctet",
+      "candidateName": "Central Teacher Eligibility Test (CTET) for States/UTs without State TET",
+      "centralAuthority": "Central Board of Secondary Education (CBSE)",
+      "centralAuthorityKey": "auth_cbse",
+      "centralPortal": "https://ctet.nic.in",
+      "affectedRegions": [
+        {
+          "regionCode": "GA",
+          "regionName": "Goa"
+        },
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        }
+      ],
+      "examConducted": "Central Teacher Eligibility Test (CTET Paper 1 & Paper 2)",
+      "cadresRecruited": "Eligibility certification for Primary (Classes 1-5) and Upper Primary (Classes 6-8) teachers",
+      "natureOfOverlap": "Goa, Chandigarh, and Union Territories do not conduct independent annual state TET examinations; statutory teacher recruitment rules adopt CBSE CTET scores as mandatory eligibility.",
+      "canonicalOwnershipDecision": "CENTRAL_OWNERSHIP_STATE_ADOPTION",
+      "missionRealmRoutingRule": "Direct teaching aspirants from these territories to the unified `cbse_ctet` mission realm with state eligibility tagging."
+    },
+    {
+      "candidateKey": "dup_chandigarh_cadre_sharing",
+      "candidateName": "Chandigarh Administration Inter-State Cadre Quota (Punjab 60% : Haryana 40%)",
+      "centralAuthority": "Punjab Government & Haryana Government / PPSC / HPSC / PSSSB / HSSC",
+      "centralAuthorityKey": "auth_pb_hr_shared",
+      "centralPortal": "https://chandigarh.gov.in",
+      "affectedRegions": [
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        },
+        {
+          "regionCode": "PB",
+          "regionName": "Punjab"
+        },
+        {
+          "regionCode": "HR",
+          "regionName": "Haryana"
+        }
+      ],
+      "examConducted": "Punjab & Haryana State Civil Services and Subordinate examinations",
+      "cadresRecruited": "Administrative, Education, and Engineering officers serving in Chandigarh UT on deputation",
+      "natureOfOverlap": "By inter-governmental agreement, 60% of administrative posts in Chandigarh are drawn from Punjab cadre and 40% from Haryana cadre. Subordinate posts are either recruited via Chandigarh Education Department / CCET or deputation.",
+      "canonicalOwnershipDecision": "STATE_CADRE_INTER_DEPUTATION",
+      "missionRealmRoutingRule": "Chandigarh administrative aspirants must be guided to `ppsc_cce` or `hpsc_hcs`, while direct recruitment (Chandigarh Police Constable/ASI) is mapped to `ch_police_constable`."
+    },
+    {
+      "candidateKey": "dup_high_courts_judicial_recruitment",
+      "candidateName": "High Courts Territorial Jurisdiction over Subordinate Judiciary",
+      "centralAuthority": "State High Courts (Constitutional Bodies under Art. 214-231)",
+      "centralAuthorityKey": "auth_high_courts",
+      "centralPortal": "Various High Court Portals",
+      "affectedRegions": [
+        {
+          "regionCode": "AS",
+          "regionName": "Assam"
+        },
+        {
+          "regionCode": "AR",
+          "regionName": "Arunachal Pradesh"
+        },
+        {
+          "regionCode": "NL",
+          "regionName": "Nagaland"
+        },
+        {
+          "regionCode": "MZ",
+          "regionName": "Mizoram"
+        },
+        {
+          "regionCode": "GA",
+          "regionName": "Goa"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        },
+        {
+          "regionCode": "PY",
+          "regionName": "Puducherry"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "PB",
+          "regionName": "Punjab"
+        },
+        {
+          "regionCode": "HR",
+          "regionName": "Haryana"
+        },
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        }
+      ],
+      "examConducted": "Judicial Services Examination (Civil Judge Junior Division & District Judge) and High Court Registry Staff (LDC/Assistant/Stenographer)",
+      "cadresRecruited": "Subordinate Judicial Officers and High Court Ministerial Staff",
+      "natureOfOverlap": "Gauhati High Court exercises territorial jurisdiction over 4 NE states (AS, AR, NL, MZ); Bombay High Court covers MH, GA, DN; Madras High Court covers TN and PY; Kerala High Court covers KL and LD; Punjab & Haryana High Court covers PB, HR, and CH.",
+      "canonicalOwnershipDecision": "JUDICIAL_AUTONOMY_HIGH_COURT_OWNERSHIP",
+      "missionRealmRoutingRule": "Judicial services recruitment belongs to separate Judicial Realm under High Court authority, segregated from Executive State PSC / Subordinate boards."
+    },
+    {
+      "candidateKey": "dup_assam_rifles_paramilitary",
+      "candidateName": "Assam Rifles (Central Paramilitary Force under MHA)",
+      "centralAuthority": "Directorate General Assam Rifles, Shillong / Ministry of Home Affairs",
+      "centralAuthorityKey": "auth_assam_rifles_mha",
+      "centralPortal": "https://assamrifles.gov.in",
+      "affectedRegions": [
+        {
+          "regionCode": "AS",
+          "regionName": "Assam"
+        },
+        {
+          "regionCode": "AR",
+          "regionName": "Arunachal Pradesh"
+        },
+        {
+          "regionCode": "MN",
+          "regionName": "Manipur"
+        },
+        {
+          "regionCode": "ML",
+          "regionName": "Meghalaya"
+        },
+        {
+          "regionCode": "MZ",
+          "regionName": "Mizoram"
+        },
+        {
+          "regionCode": "NL",
+          "regionName": "Nagaland"
+        },
+        {
+          "regionCode": "TR",
+          "regionName": "Tripura"
+        }
+      ],
+      "examConducted": "Assam Rifles Technical and Tradesmen Recruitment Rally & SSC GD Constable",
+      "cadresRecruited": "Rifleman (General Duty), Havildar (Clerk), and Warrant Officers in Assam Rifles",
+      "natureOfOverlap": "Despite having 'Assam' in the name, Assam Rifles is India's oldest Central Paramilitary Force under the operational control of the Indian Army and administrative control of the MHA. It is NOT part of the Assam State Police.",
+      "canonicalOwnershipDecision": "CENTRAL_PARAMILITARY_OWNERSHIP",
+      "missionRealmRoutingRule": "Route preparation to central `ssc_gd_constable` and central defense recruitment tracks; strictly exclude from state police catalogs."
+    },
+    {
+      "candidateKey": "dup_ibps_regional_rural_banks",
+      "candidateName": "Regional Rural Banks (RRBs) State-Specific Officer & Office Assistant Intake",
+      "centralAuthority": "Institute of Banking Personnel Selection (IBPS)",
+      "centralAuthorityKey": "auth_ibps",
+      "centralPortal": "https://ibps.in",
+      "affectedRegions": [
+        {
+          "regionCode": "ALL",
+          "regionName": "All 28 States and UTs with RRBs"
+        }
+      ],
+      "examConducted": "IBPS CRP RRBs (Officers Scale I, II, III & Office Assistant)",
+      "cadresRecruited": "Branch Managers, Agricultural Field Officers, Office Assistants in Gramin Banks",
+      "natureOfOverlap": "Gramin Banks operate within specific state borders (e.g. Prathama UP Gramin Bank, Aryavart Bank, Kerala Gramin Bank, Assam Gramin Vikash Bank), leading students to search for them under state exams, but recruitment is 100% centrally conducted by IBPS.",
+      "canonicalOwnershipDecision": "CENTRAL_BANKING_AGENCY_OWNERSHIP",
+      "missionRealmRoutingRule": "Route to central `ibps_rrb_po` and `ibps_rrb_clerk` mission realms with state-wise language and vacancy filter options."
+    }
+  ]
+}

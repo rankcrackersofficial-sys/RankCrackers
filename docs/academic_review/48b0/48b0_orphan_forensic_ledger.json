@@ -1,0 +1,27 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "ORPHAN_FORENSIC",
+  "generatedAt": "2026-09-10T10:39:12.870Z",
+  "metrics": {
+    "TOTAL_ORPHANS_MEASURED": 1,
+    "ACTIVE_PROJECTION_DEFECT_COUNT": 0,
+    "LEGACY_ORPHAN_COUNT": 0,
+    "FOUNDER_HELD_ORPHAN_COUNT": 0,
+    "TEST_ORPHAN_COUNT": 1,
+    "UNKNOWN_ORPHAN_COUNT": 0
+  },
+  "orphanEntries": [
+    {
+      "missionId": "test_mission_catalog_bridge",
+      "presentIn": {
+        "mission_realms": false,
+        "recruitments": true,
+        "student_mission_catalog": false
+      },
+      "classification": "TEST_ORPHAN",
+      "forensicAnalysis": "Created during early M4B emulator bridging test. Only exists in recruitments collection with status draft. Missing from mission_realms and student_mission_catalog. A dedicated cleanup script functions/cleanup_test_mission_catalog_bridge.js exists in repository. In Gate 48B0, STRICT ZERO MUTATION requires HOLD status without creating fake production projections or deleting without confirmation.",
+      "plannedDryRunAction": "HOLD",
+      "recommendedPermanentResolution": "Execute functions/cleanup_test_mission_catalog_bridge.js under authorized maintenance window."
+    }
+  ]
+}

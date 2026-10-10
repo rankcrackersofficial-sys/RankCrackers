@@ -1,0 +1,16 @@
+{
+  "command": "runGenericMissionMaterializer(manifest, {}, {mode: VALIDATE_ONLY, context: ACCEPTED_MANIFEST, authorityRegistry})",
+  "absolutePath": "C:\\RankCrackers\\RankCrackers-55\\functions\\services\\generic_mission_materializer.js",
+  "byteLength": 43995,
+  "sha256": "7c8627e27a674fc6f8373a5f27b5404e5d5741c990303fa6abd170edbbd1c7a5",
+  "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "stdout": "{\"executionMode\":\"VALIDATE_ONLY\",\"status\":\"PASS\",\"totalMissionsEvaluated\":49,\"validation\":{\"valid\":true,\"totalMissions\":49,\"errors\":[],\"warnings\":[]}}",
+  "stderr": "",
+  "processExitCode": 0,
+  "missionInputCount": 49,
+  "validationPassCount": 49,
+  "warningCount": 0,
+  "validationRejectCount": 0,
+  "warnings": [],
+  "rejects": []
+}

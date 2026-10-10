@@ -1,0 +1,33 @@
+{
+  "gate": "RC_CANONICAL_MISSION_AUTHORITY_POST_REPAIR_CERTIFICATION_46D5R",
+  "certifiedAt": "2026-09-09T13:40:01.132Z",
+  "reconciledCommit": "1a2932d1be481189ce16e0860340b152b57d975e",
+  "authorizedMutations": [
+    {
+      "path": "mission_realms/jee_main_2026",
+      "operation": "CREATE"
+    },
+    {
+      "path": "mission_realms/neet_(ug)-2027",
+      "operation": "CREATE"
+    },
+    {
+      "path": "mission_realms/RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "operation": "CREATE"
+    },
+    {
+      "path": "student_mission_catalog/neet_(ug)-2027",
+      "operation": "UPDATE",
+      "field": "recruitmentGroupId",
+      "before": "student_mission_catalog",
+      "after": "neet_(ug)-2027"
+    }
+  ],
+  "unauthorizedMutations": [],
+  "recruitmentDiffs": [],
+  "nonNeetCatalogDiffs": [],
+  "otherNeetCatalogDiffs": [],
+  "lifecycleDiffs": [],
+  "visibilityDiffs": [],
+  "subcollectionDeletions": []
+}

@@ -1,0 +1,19 @@
+{
+  "auditCode": "RC_47C8V_ARMY_CEE_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.329Z",
+  "missionId": "army_agniveer_cee",
+  "canonicalAuthorityKey": "auth_in_indian_army",
+  "metrics": {
+    "ARMY_UNVERIFIED_SELECTABLE_VARIANT_COUNT": 0,
+    "ARMY_VARIANT_CANDIDATE_COUNT": 4,
+    "ARMY_SELECTABLE_VARIANT_COUNT": 0
+  },
+  "governanceIsolation": {
+    "manifestVariants": [],
+    "variantRequired": true,
+    "variantModelReady": false,
+    "missionSelectionReady": false,
+    "academicStartReady": false
+  },
+  "verdict": "PASS (Army trade variants correctly quarantined under REVIEW_REQUIRED; selectable variant count = 0)"
+}

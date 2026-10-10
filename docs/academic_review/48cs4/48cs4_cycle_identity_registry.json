@@ -1,0 +1,47 @@
+{
+  "pilotCount": 6,
+  "rows": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "authority": "RPSC",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycleId": "RPSC-RAS-2024",
+      "authority": "RPSC",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "authority": "NTA",
+      "opportunityActive": "NO",
+      "processActive": "NO"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "authority": "NTA",
+      "opportunityActive": "UNRESOLVED",
+      "processActive": "NO"
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycleId": "UPSC-CSE-2026",
+      "authority": "UPSC",
+      "opportunityActive": "NO",
+      "processActive": "YES"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "authority": "SSC",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    }
+  ]
+}

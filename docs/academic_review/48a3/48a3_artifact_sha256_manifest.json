@@ -1,0 +1,56 @@
+{
+  "gate": "GATE 48A3 — INDIA MASTER PHYSICAL SET VERIFIER",
+  "generatedAt": "2026-09-10T12:05:27.748Z",
+  "manifestFiles": [
+    {
+      "fileName": "48a3_input_file_inventory.json",
+      "byteLength": 3729,
+      "sha256": "8c90790bb56ce4b1c01e69317eef21b242964686be62b6fd40a420b1508fb4de"
+    },
+    {
+      "fileName": "48a3_physical_row_extraction.json",
+      "byteLength": 69396,
+      "sha256": "376823fd6cd5eec9922155b3bb9472c0575028cf74e5999e23945a83230a0b4c"
+    },
+    {
+      "fileName": "48a3_exact_unique_mission_ids.json",
+      "byteLength": 5335,
+      "sha256": "6a169f179aac118f4ebfeaa8df65c413dd6d67675bc46ed88ec55245e17061c7"
+    },
+    {
+      "fileName": "48a3_disposition_sets.json",
+      "byteLength": 7057,
+      "sha256": "7f24555ccdbc2626791bbdcaf4bd7f9e7aebad27aec3f59d036446db358f3268"
+    },
+    {
+      "fileName": "48a3_bucket_exclusivity.json",
+      "byteLength": 16306,
+      "sha256": "6ba85f9277b8d6f82bf7b1c9f4543a66518ca8371a32658b0e56b537670c115e"
+    },
+    {
+      "fileName": "48a3_48c_delta.json",
+      "byteLength": 1716,
+      "sha256": "b1b997231ebec0cd7f02231ac72bc6c41f96b6d30f6054dd0be220c32acc07dc"
+    },
+    {
+      "fileName": "48a3_tripura_identity_observations.json",
+      "byteLength": 761,
+      "sha256": "d7d4872a9c170b2b9dfea631565cc407a4b1bc4e2836d850f2dcc7d5a487e550"
+    },
+    {
+      "fileName": "48a3_verifier_static_integrity.json",
+      "byteLength": 164,
+      "sha256": "6e6bfd50358dfcfa58ab7c1f07f230e3c1f52d89ba39f57a13d769d2884becc3"
+    },
+    {
+      "fileName": "48a3_second_run_determinism.json",
+      "byteLength": 243,
+      "sha256": "fc3a604ef5e1bae6f002e76804f188e75544afe04f6b5dd8eb0ed482bc588017"
+    },
+    {
+      "fileName": "48a3_final_report.md",
+      "byteLength": 2513,
+      "sha256": "565cf78d7577fc0bf7c8ced93e4970dd52b4664953170ad3bb967b90c70c009c"
+    }
+  ]
+}

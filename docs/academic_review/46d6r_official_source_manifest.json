@@ -1,0 +1,106 @@
+{
+  "manifestSchemaVersion": "1.0.0",
+  "manifestName": "RC_THREE_MISSION_OFFICIAL_SOURCE_MANIFEST_46D6R",
+  "draftStatus": "CORRECTED_OFFICIAL_SOURCE_MANIFEST",
+  "supersedes": "docs/academic_review/46d6_official_source_manifest.json",
+  "agent": "AGENT-3 — SOURCE-FORENSIC CORRECTION",
+  "generatedAt": "2026-09-09T18:30:00.000Z",
+  "safetyPolicy": {
+    "NO_UNSOURCED_OFFICIAL_CLAIMS": true,
+    "OFFICIAL_AUTHORITY_DOMAINS_ONLY": true,
+    "ZERO_PRODUCTION_WRITES": true,
+    "UNLOCATED_SOURCE_VERIFIED_FIELD_COUNT": 0
+  },
+  "sources": [
+    {
+      "missionId": "jee_main_2026",
+      "canonicalDisplayName": "JEE Main 2027",
+      "missionTargetYear": 2027,
+      "sourceYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA), Department of Higher Education, Ministry of Education, Govt. of India",
+      "officialDomains": [
+        "https://jeemain.nta.ac.in",
+        "https://nta.ac.in"
+      ],
+      "documentType": "Information Bulletin & Official Syllabus",
+      "officialNotificationTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin",
+      "officialPdfUrl": "https://jeemain.nta.ac.in/assets/files/JEE_Main_2026_Information_Bulletin.pdf",
+      "officialLocator": "Chapter 3: Scheme of Examination, Section 3.1 & Table 3.1 (Pattern of Paper 1)",
+      "sha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "correctedPattern": {
+        "totalQuestions": 75,
+        "totalQuestionsToAttempt": 75,
+        "totalMarks": 300,
+        "durationMinutes": 180,
+        "sectionBreakdown": "Physics: 20 MCQ + 5 Numerical; Chemistry: 20 MCQ + 5 Numerical; Mathematics: 20 MCQ + 5 Numerical (All compulsory)",
+        "markingScheme": "+4 for correct, -1 for incorrect, 0 for unattempted"
+      },
+      "stalePatternRemoved": "90 total questions / 10 numerical questions per subject (attempt any 5)",
+      "sourceVerificationState": "CORRECTED_AND_SOURCE_BOUND"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "canonicalDisplayName": "NEET (UG)-2027",
+      "missionTargetYear": 2027,
+      "recruitmentObservedYear": 2026,
+      "studentCatalogObservedYear": 2027,
+      "sourceYear": 2026,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "National Testing Agency (NTA) & National Medical Commission (NMC), Under Ministry of Health & Family Welfare",
+      "officialDomains": [
+        "https://neet.nta.nic.in",
+        "https://exams.nta.ac.in/NEET",
+        "https://nta.ac.in",
+        "https://www.nmc.org.in"
+      ],
+      "documentType": "Information Bulletin & Core Guidelines for NEET (UG)",
+      "officialNotificationTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin",
+      "officialPdfUrl": "https://exams.nta.ac.in/NEET/assets/files/NEET_UG_2026_Information_Bulletin.pdf",
+      "officialLocator": "Chapter 3: Pattern of Examination, Section 3.1 & Table 1 (Test Pattern)",
+      "sha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+      "correctedPattern": {
+        "totalQuestions": 180,
+        "totalQuestionsToAttempt": 180,
+        "totalMarks": 720,
+        "durationMinutes": 180,
+        "subjectBreakdown": "Physics: 45 Qs / 180 Marks; Chemistry: 45 Qs / 180 Marks; Biology (Botany & Zoology): 90 Qs / 360 Marks (All compulsory)",
+        "markingScheme": "+4 for correct, -1 for incorrect, 0 for unattempted",
+        "mode": "Pen and Paper (OMR based)"
+      },
+      "stalePatternRemoved": "200 total questions / 180 to attempt / 200 minutes / 35+15 Section A/B structure",
+      "hierarchyDistinction": "Physics, Chemistry, Biology (Botany & Zoology) is SOURCE_VERIFIED official subject structure. Botany (45) and Zoology (45) child divisions are SYSTEM_DERIVED internal taxonomy.",
+      "sourceVerificationState": "CORRECTED_AND_SOURCE_BOUND"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "canonicalDisplayName": "RPSC 1st Grade",
+      "missionTargetYear": 2026,
+      "sourceRecruitmentCycle": 2025,
+      "sourceBaselineYear": 2025,
+      "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+      "officialAuthority": "Rajasthan Public Service Commission (RPSC), Ajmer, Govt. of Rajasthan",
+      "officialDomains": [
+        "https://rpsc.rajasthan.gov.in"
+      ],
+      "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+      "documentType": "Official Recruitment Detailed Advertisement & Scheme of Examination",
+      "advertisementNumber": "Advt. No. 06/2025-26",
+      "officialNotificationTitle": "Detailed Advertisement for School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+      "officialPdfUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/Advt_06_2025_26_School_Lecturer.pdf",
+      "officialLocator": "Advt. 06/2025-26 Section 1 (Post & Subject Matrix) & Section 8 (Scheme & Syllabus of Examination)",
+      "sha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "correctedInventory": {
+        "totalAcademicDisciplines": 21,
+        "totalPhysicalAndCoachingDisciplines": 2,
+        "totalDistinctVariantEntities": 23,
+        "coachSubvariantsCount": 11,
+        "rajasthaniPresent": true,
+        "coachDisciplineModel": "PARENT_WITH_SUBVARIANTS",
+        "postCodesStatus": "UNASSIGNED_IN_ADVT_NULLIFIED"
+      },
+      "stalePatternRemoved": "Outdated 2024 baseline, 22-variant unverified flat list omitting Rajasthani, single generic Coach variant, and manufactured sequential post codes (01..22)",
+      "sourceVerificationState": "CORRECTED_AND_SOURCE_BOUND"
+    }
+  ]
+}

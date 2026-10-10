@@ -1,0 +1,4157 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "capturedAt": "2026-09-09T15:42:20.619Z",
+  "missions": {
+    "jee_main_2026": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "jee_main_2026",
+          "canonicalExamName": "JEE Main",
+          "canonicalDisplayName": "JEE Main"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+        "authority": {
+          "organization": "National Testing Agency",
+          "authorityKey": "nta",
+          "officialPortals": [
+            "https://jeemain.nta.nic.in"
+          ],
+          "evidenceClass": "BYTE_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_INFORMATION_BULLETIN"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788966453,
+          "_nanoseconds": 337000000
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "B.E./B.Tech Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "cycleContext": {
+          "officialCycle": "2026",
+          "preparationTargetCycle": "2027",
+          "sourceBaselineCycle": "2026",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "B.E./B.Tech Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967608,
+          "_nanoseconds": 584000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:48.602Z",
+      "recruitment": {
+        "examCategory": "qualifying",
+        "nature": "ACTIVE_MISSION",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783346416,
+          "_nanoseconds": 649000000
+        },
+        "variantCode": "universal",
+        "examId": "jee_main_2026",
+        "titleHindi": "",
+        "id": "jee_main_2026",
+        "status": "draft",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "year": 2027,
+        "missionRealmId": "jee_main_2026",
+        "org": "INDIA",
+        "state": null,
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "SINGLE_TRACK",
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "JEE Main",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "B.E./B.Tech Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966470,
+          "_nanoseconds": 209000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:50.238Z",
+      "officialDocumentsCount": 3,
+      "officialDocuments": {
+        "different_document_id": {
+          "id": "different_document_id",
+          "missionId": "jee_main_2026",
+          "lifecycle_state": "B3_COMPLETE",
+          "sourceSha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+        },
+        "doc_nta_jee_main_2026_bulletin": {
+          "documentId": "doc_nta_jee_main_2026_bulletin",
+          "authority": "National Testing Agency (NTA)",
+          "documentType": "INFORMATION_BULLETIN_AND_SYLLABUS",
+          "officialTitle": "JEE (Main) - 2026 Information Bulletin & Prescribed Syllabus",
+          "publicationDate": "2025-10-28",
+          "sourceCycle": "2026",
+          "targetCycle": "2027",
+          "officialListingPageUrl": "https://jeemain.nta.nic.in",
+          "actualDownloadHref": "https://jeemain.nta.nic.in/document/information-bulletin-jee-main-2026.pdf",
+          "servedFilename": "information-bulletin-jee-main-2026.pdf",
+          "evidenceClass": "BYTE_VERIFIED",
+          "fileSha256": "9a710bc85172ea2bb8fb59178ad38e64c39f2982fa144e13511eb982703f8373",
+          "fileSizeBytes": 2458900,
+          "pageCount": 112,
+          "contentLocator": "Complete Bulletin, Examination Scheme & Appendix-VI Syllabus",
+          "acquisitionStatus": "METADATA_AND_BYTES_VERIFIED",
+          "storagePath": "official_documents/jee_main_2026/information-bulletin-jee-main-2026.pdf",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "jee_main_2026",
+          "createdAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 266000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 266000000
+          },
+          "actualStorageStatus": "PHYSICAL_OBJECT_NOT_IN_BUCKET",
+          "storageObjectExists": false,
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "updatedAt": {
+            "_seconds": 1788967606,
+            "_nanoseconds": 874000000
+          }
+        },
+        "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905": {
+          "sourceSha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+          "updatedAt": {
+            "_seconds": 1787907834,
+            "_nanoseconds": 318000000
+          },
+          "lifecycle_state": "B4_PLANNED"
+        }
+      },
+      "syllabusAtomsCount": 430
+    },
+    "neet_(ug)-2027": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "neet_(ug)-2027",
+          "canonicalExamName": "NEET (UG)",
+          "canonicalDisplayName": "NEET (UG)"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "nta",
+          "authorityDisplayName": "National Testing Agency"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+        "authority": {
+          "organization": "National Testing Agency",
+          "authorityKey": "nta",
+          "officialPortals": [
+            "https://neet.nta.nic.in"
+          ],
+          "evidenceClass": "BYTE_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_INFORMATION_BULLETIN"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788966454,
+          "_nanoseconds": 336000000
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Undergraduate Medical Entrance Examination",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "cycleContext": {
+          "officialCycle": "2026",
+          "preparationTargetCycle": "2027",
+          "sourceBaselineCycle": "2026",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Undergraduate Medical Entrance Examination",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967609,
+          "_nanoseconds": 555000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:49.576Z",
+      "recruitment": {
+        "examCategory": "competitive",
+        "nature": "ACTIVE_MISSION",
+        "year": 2026,
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1783351586,
+          "_nanoseconds": 781000000
+        },
+        "variantCode": "universal",
+        "examId": "neet_(ug)-2027",
+        "titleHindi": "",
+        "id": "neet_(ug)-2027",
+        "examScope": "ALL_INDIA",
+        "missionStructureType": "VARIABLE_BASED",
+        "status": "draft",
+        "org": "Rajasthan",
+        "sortOrder": 0,
+        "displayOrder": 0,
+        "state": "Rajasthan",
+        "priority": 0,
+        "jurisdictionLevel": "CENTRAL",
+        "stateName": null,
+        "stateCode": null,
+        "title": "NEET (UG)",
+        "authorityGroupKey": "nta",
+        "authorityDisplayName": "National Testing Agency",
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Undergraduate Medical Entrance Examination",
+              "mode": "OMR_PEN_PAPER",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966470,
+          "_nanoseconds": 557000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:50.575Z",
+      "officialDocumentsCount": 2,
+      "officialDocuments": {
+        "doc_nta_neet_ug_2026_bulletin": {
+          "documentId": "doc_nta_neet_ug_2026_bulletin",
+          "authority": "National Testing Agency (NTA)",
+          "documentType": "INFORMATION_BULLETIN_AND_SYLLABUS",
+          "officialTitle": "NEET (UG) - 2026 Information Bulletin & Core Syllabus Framework",
+          "publicationDate": "2026-02-09",
+          "sourceCycle": "2026",
+          "targetCycle": "2027",
+          "officialListingPageUrl": "https://neet.nta.nic.in",
+          "actualDownloadHref": "https://neet.nta.nic.in/document/information-bulletin-neet-ug-2026.pdf",
+          "servedFilename": "information-bulletin-neet-ug-2026.pdf",
+          "evidenceClass": "BYTE_VERIFIED",
+          "fileSha256": "c32fdba7fb459ef4e1e8eb95015ff3dfa1050e828d11fa9ffb44cb7e39a3f2d0",
+          "fileSizeBytes": 3120400,
+          "pageCount": 148,
+          "contentLocator": "Complete Bulletin, Examination Scheme & Appendix-V Core Syllabus",
+          "acquisitionStatus": "METADATA_AND_BYTES_VERIFIED",
+          "storagePath": "official_documents/neet_(ug)-2027/information-bulletin-neet-ug-2026.pdf",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "neet_(ug)-2027",
+          "createdAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 606000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 606000000
+          },
+          "actualStorageStatus": "PHYSICAL_OBJECT_NOT_IN_BUCKET",
+          "storageObjectExists": false,
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "updatedAt": {
+            "_seconds": 1788967607,
+            "_nanoseconds": 825000000
+          }
+        },
+        "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905": {
+          "id": "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+          "missionId": "neet_(ug)-2027",
+          "lifecycle_state": "B3_COMPLETE",
+          "sourceSha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905"
+        }
+      },
+      "syllabusAtomsCount": 219
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "canonicalExamName": "RPSC 1st Grade",
+          "canonicalDisplayName": "RPSC 1st Grade"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission"
+        },
+        "missionTargetYear": 2026,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+        "authority": {
+          "organization": "Rajasthan Public Service Commission",
+          "authorityKey": "rpsc",
+          "officialPortals": [
+            "https://rpsc.rajasthan.gov.in"
+          ],
+          "evidenceClass": "BYTE_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS"
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variantCount": 28,
+          "selectableVariants": 28,
+          "variants": [
+            {
+              "variantId": "var_HINDI_1782713551600",
+              "variantName": "Hindi / हिन्दी",
+              "variantCode": "HINDI_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_ENGLISH_2026_1782736222410",
+              "variantName": "English / अंग्रेजी",
+              "variantCode": "ENGLISH_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_sanskrit_2026",
+              "variantName": "Sanskrit / संस्कृत",
+              "variantCode": "SANSKRIT_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_rajasthani_2026",
+              "variantName": "Rajasthani / राजस्थानी",
+              "variantCode": "RAJASTHANI_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_punjabi_2026",
+              "variantName": "Punjabi / पंजाबी",
+              "variantCode": "PUNJABI_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_urdu_2026",
+              "variantName": "Urdu / उर्दू",
+              "variantCode": "URDU_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_history_2026",
+              "variantName": "History / इतिहास",
+              "variantCode": "HISTORY_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_geography_2026",
+              "variantName": "Geography / भूगोल",
+              "variantCode": "GEOGRAPHY_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_polscience_2026",
+              "variantName": "Political Science / राजनीति विज्ञान",
+              "variantCode": "POLSCIENCE_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_economics_2026",
+              "variantName": "Economics / अर्थशास्त्र",
+              "variantCode": "ECONOMICS_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_sociology_2026",
+              "variantName": "Sociology / समाजशास्त्र",
+              "variantCode": "SOCIOLOGY_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_pubadmin_2026",
+              "variantName": "Public Administration / लोक प्रशासन",
+              "variantCode": "PUBADMIN_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_physics_2026",
+              "variantName": "Physics / भौतिक विज्ञान",
+              "variantCode": "PHYSICS_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_chemistry_2026",
+              "variantName": "Chemistry / रसायन विज्ञान",
+              "variantCode": "CHEMISTRY_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_biology_2026",
+              "variantName": "Biology / जीव विज्ञान",
+              "variantCode": "BIOLOGY_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_mathematics_2026",
+              "variantName": "Mathematics / गणित",
+              "variantCode": "MATHEMATICS_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_commerce_2026",
+              "variantName": "Commerce / वाणिज्य",
+              "variantCode": "COMMERCE_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_music_2026",
+              "variantName": "Music / संगीत",
+              "variantCode": "MUSIC_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_drawing_2026",
+              "variantName": "Drawing / चित्रकला",
+              "variantCode": "DRAWING_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_homescience_2026",
+              "variantName": "Home Science / गृह विज्ञान",
+              "variantCode": "HOMESCIENCE_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_agriculture_2026",
+              "variantName": "Agriculture / कृषि",
+              "variantCode": "AGRICULTURE_2026",
+              "family": "ACADEMIC_LECTURER_FAMILY"
+            },
+            {
+              "variantId": "var_physical_education_2026",
+              "variantName": "Physical Education / शारीरिक शिक्षा",
+              "variantCode": "PHYSED_2026",
+              "family": "PHYSICAL_EDUCATION_FAMILY"
+            },
+            {
+              "variantId": "var_coach_athletics_2026",
+              "variantName": "Coach Athletics / कोच एथलेटिक्स",
+              "variantCode": "COACH_ATHLETICS_2026",
+              "family": "COACH_FAMILY"
+            },
+            {
+              "variantId": "var_coach_basketball_2026",
+              "variantName": "Coach Basketball / कोच बास्केटबॉल",
+              "variantCode": "COACH_BASKETBALL_2026",
+              "family": "COACH_FAMILY"
+            },
+            {
+              "variantId": "var_coach_handball_2026",
+              "variantName": "Coach Handball / कोच हैंडबॉल",
+              "variantCode": "COACH_HANDBALL_2026",
+              "family": "COACH_FAMILY"
+            },
+            {
+              "variantId": "var_coach_kabaddi_2026",
+              "variantName": "Coach Kabaddi / कोच कबड्डी",
+              "variantCode": "COACH_KABADDI_2026",
+              "family": "COACH_FAMILY"
+            },
+            {
+              "variantId": "var_coach_table_tennis_2026",
+              "variantName": "Coach Table Tennis / कोच टेबल टेनिस",
+              "variantCode": "COACH_TABLE_TENNIS_2026",
+              "family": "COACH_FAMILY"
+            },
+            {
+              "variantId": "var_coach_volleyball_2026",
+              "variantName": "Coach Volleyball / कोच वॉलीबॉल",
+              "variantCode": "COACH_VOLLEYBALL_2026",
+              "family": "COACH_FAMILY"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788966455,
+          "_nanoseconds": 17000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "uniqueSyllabusDocuments": 26,
+          "paper1UniqueDocuments": 3,
+          "paper2UniqueDocuments": 23,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Awareness and General Studies",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: Subject Paper",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": false,
+              "isVariantSpecific": true
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: General Awareness and General Studies",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: Subject Concerned / Discipline",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": false,
+            "isVariantSpecific": true,
+            "appliesToAllVariables": false,
+            "scope": "VARIABLE_SPECIFIC",
+            "variantDimension": "SUBJECT_VARIANT"
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967610,
+          "_nanoseconds": 289000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:50.313Z",
+      "recruitment": {
+        "examCategory": "competitive",
+        "updatedBy": "bywto0FzLaQ337rWrbCKOeffdJ92",
+        "nature": "ACTIVE_MISSION",
+        "org": "Rajasthan",
+        "year": 2026,
+        "title": "RPSC 1st Grade",
+        "titleHindi": "",
+        "missionRealmId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "state": "Rajasthan",
+        "status": "draft",
+        "jurisdictionLevel": "STATE",
+        "stateName": "Rajasthan",
+        "stateCode": "RJ",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Awareness and General Studies",
+              "mode": "OMR_PEN_PAPER",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: Subject Paper",
+              "mode": "OMR_PEN_PAPER",
+              "order": 2,
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966470,
+          "_nanoseconds": 881000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:50.910Z",
+      "officialDocumentsCount": 32,
+      "officialDocuments": {
+        "doc_advt_06_2025_26": {
+          "servedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Section 1 (Post Tables 1.1, 1.2, 1.3) & Section 8 (Examination Scheme)",
+          "documentType": "PRIMARY_RECRUITMENT_ADVERTISEMENT",
+          "sourceCycle": "2025",
+          "actualDownloadHref": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "storagePath": "official_documents/RPSC_FIRST_GRADE2026_2026_1782713222215/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025",
+          "acquisitionStatus": "METADATA_AND_LOCAL_BYTES_VERIFIED",
+          "fileSha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+          "evidenceClass": "BYTE_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_advt_06_2025_26",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ALL_FAMILIES",
+          "publicationDate": "2025-07-25",
+          "applicableVariants": [
+            "Hindi",
+            "English",
+            "Sanskrit",
+            "Rajasthani",
+            "Punjabi",
+            "Urdu",
+            "History",
+            "Geography",
+            "Political Science",
+            "Economics",
+            "Sociology",
+            "Public Administration",
+            "Physics",
+            "Chemistry",
+            "Biology",
+            "Mathematics",
+            "Commerce",
+            "Music",
+            "Drawing",
+            "Home Science",
+            "Physical Education",
+            "Coach (Athletics, Basketball, Handball, Kabaddi, Table Tennis, Volleyball)"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967578,
+            "_nanoseconds": 2000000
+          }
+        },
+        "doc_advt_09_2025_26": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Preamble & Section 1 (Department of Secondary Education - School Lecturer Agriculture Post)",
+          "documentType": "ADDITIONAL_SAME_FAMILY_ADVERTISEMENT",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "storagePath": null,
+          "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture / कृषि)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_advt_09_2025_26",
+          "advertisementNumber": "Advt. No. 09/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-08-28",
+          "applicableVariants": [
+            "Agriculture"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967579,
+            "_nanoseconds": 281000000
+          }
+        },
+        "doc_corrigendum_08_2025_26": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Corrigendum Notice (Ref: F.7(1)Exam/School Lecturer/2025-26/08)",
+          "documentType": "OFFICIAL_CORRIGENDUM",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+          "storagePath": null,
+          "officialTitle": "Corrigendum No. 08/2025-26 regarding School Lecturer (School Education) Exam 2025",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_corrigendum_08_2025_26",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ALL_FAMILIES",
+          "publicationDate": "2025-08-13",
+          "applicableVariants": [
+            "ALL_ACTIVE_VARIANTS"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967579,
+            "_nanoseconds": 766000000
+          }
+        },
+        "doc_rpsc_school_lecturer_advt_06_2025_26": {
+          "documentId": "doc_rpsc_school_lecturer_advt_06_2025_26",
+          "authority": "Rajasthan Public Service Commission (RPSC)",
+          "documentType": "PRIMARY_RECRUITMENT_ADVERTISEMENT",
+          "officialTitle": "Detailed Advertisement for School Lecturer (School Education) Exam 2024 (Advt. No. 06/2025-26)",
+          "publicationDate": "2025-10-25",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "sourceCycle": "2025-2026",
+          "targetCycle": "2026",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "actualDownloadHref": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "servedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "evidenceClass": "BYTE_VERIFIED",
+          "fileSha256": "132649a3c333a39e7ae98835845c479326d9c66da915998a96677fec3cf2a048",
+          "fileSizeBytes": 1854200,
+          "pageCount": 16,
+          "contentLocator": "Section 1 (Post Tables) & Section 8 (Examination Scheme)",
+          "acquisitionStatus": "METADATA_AND_BYTES_VERIFIED",
+          "storagePath": "official_documents/RPSC_FIRST_GRADE2026_2026_1782713222215/E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "createdAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 963000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966475,
+            "_nanoseconds": 963000000
+          },
+          "actualStorageStatus": "PHYSICAL_OBJECT_NOT_IN_BUCKET",
+          "storageObjectExists": false,
+          "updatedAt": {
+            "_seconds": 1788967441,
+            "_nanoseconds": 694000000
+          }
+        },
+        "doc_rpsc_school_lecturer_advt_09_2025_26_agri": {
+          "documentId": "doc_rpsc_school_lecturer_advt_09_2025_26_agri",
+          "authority": "Rajasthan Public Service Commission (RPSC)",
+          "documentType": "ADDITIONAL_SAME_FAMILY_ADVERTISEMENT",
+          "officialTitle": "Detailed Advertisement for School Lecturer (School Education) Exam 2024 (Agriculture) (Advt. No. 09/2025-26)",
+          "publicationDate": "2025-08-28",
+          "advertisementNumber": "Advt. No. 09/2025-26",
+          "sourceCycle": "2025-2026",
+          "targetCycle": "2026",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "fileSizeBytes": null,
+          "pageCount": null,
+          "contentLocator": "Section 1 (Agriculture Post Vacancies & Scheme)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "createdAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 297000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 297000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 297000000
+          }
+        },
+        "doc_rpsc_school_lecturer_corrigendum_08_2025_26": {
+          "documentId": "doc_rpsc_school_lecturer_corrigendum_08_2025_26",
+          "authority": "Rajasthan Public Service Commission (RPSC)",
+          "documentType": "OFFICIAL_CORRIGENDUM",
+          "officialTitle": "Corrigendum No. 08/2025-26 regarding School Lecturer Exam 2024",
+          "publicationDate": "2025-08-13",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "sourceCycle": "2025-2026",
+          "targetCycle": "2026",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "fileSizeBytes": null,
+          "pageCount": null,
+          "contentLocator": "Official Corrigendum Notice (Ref: F.7(1)Exam/School Lecturer/2025-26/08)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "createdAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 657000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 657000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 657000000
+          }
+        },
+        "doc_syllabus_p1_academic": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-I General Awareness & General Studies",
+          "documentType": "PAPER_1_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-I: General Awareness and General Studies (Academic Lecturer Family)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p1_academic",
+          "advertisementNumber": "Advt. No. 06/2025-26 & Advt. No. 09/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Hindi",
+            "English",
+            "Sanskrit",
+            "Rajasthani",
+            "Punjabi",
+            "Urdu",
+            "History",
+            "Geography",
+            "Political Science",
+            "Economics",
+            "Sociology",
+            "Public Administration",
+            "Physics",
+            "Chemistry",
+            "Biology",
+            "Mathematics",
+            "Commerce",
+            "Music",
+            "Drawing",
+            "Home Science",
+            "Agriculture"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967581,
+            "_nanoseconds": 59000000
+          }
+        },
+        "doc_syllabus_p1_coach": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-I Coach",
+          "documentType": "PAPER_1_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-I: General Awareness and Sports Science (Coach Cadre)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p1_coach",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "COACH_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Coach - Athletics",
+            "Coach - Basketball",
+            "Coach - Handball",
+            "Coach - Kabaddi",
+            "Coach - Table Tennis",
+            "Coach - Volleyball"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967583,
+            "_nanoseconds": 289000000
+          }
+        },
+        "doc_syllabus_p1_phy_edu": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-I Physical Education",
+          "documentType": "PAPER_1_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-I: General Awareness and General Studies (Physical Education)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p1_phy_edu",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "PHYSICAL_EDUCATION_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Physical Education"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967581,
+            "_nanoseconds": 519000000
+          }
+        },
+        "doc_syllabus_p2_agriculture": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Agriculture (13 Oct 2025)",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Agriculture (कृषि)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_agriculture",
+          "advertisementNumber": "Advt. No. 09/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-10-13",
+          "applicableVariants": [
+            "Agriculture"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967603,
+            "_nanoseconds": 380000000
+          }
+        },
+        "doc_syllabus_p2_biology": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Biology",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Biology (जीव विज्ञान)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_biology",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Biology"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967597,
+            "_nanoseconds": 998000000
+          }
+        },
+        "doc_syllabus_p2_chemistry": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Chemistry",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Chemistry (रसायन विज्ञान)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_chemistry",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Chemistry"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967597,
+            "_nanoseconds": 268000000
+          }
+        },
+        "doc_syllabus_p2_coach_shared": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Coach",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Sports Coach Disciplines Scheme & Syllabus (Coach Cadre)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_coach_shared",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "COACH_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Coach - Athletics",
+            "Coach - Basketball",
+            "Coach - Handball",
+            "Coach - Kabaddi",
+            "Coach - Table Tennis",
+            "Coach - Volleyball"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967584,
+            "_nanoseconds": 582000000
+          }
+        },
+        "doc_syllabus_p2_commerce": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Commerce",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Commerce (वाणिज्य)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_commerce",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Commerce"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967599,
+            "_nanoseconds": 762000000
+          }
+        },
+        "doc_syllabus_p2_drawing": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Drawing",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Drawing (चित्रकला)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_drawing",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Drawing"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967601,
+            "_nanoseconds": 587000000
+          }
+        },
+        "doc_syllabus_p2_economics": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Economics",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Economics (अर्थशास्त्र)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_economics",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Economics"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967593,
+            "_nanoseconds": 643000000
+          }
+        },
+        "doc_syllabus_p2_english": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II English",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - English (अंग्रेजी)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_english",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "English"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967586,
+            "_nanoseconds": 480000000
+          }
+        },
+        "doc_syllabus_p2_geography": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Geography",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Geography (भूगोल)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_geography",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Geography"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967591,
+            "_nanoseconds": 799000000
+          }
+        },
+        "doc_syllabus_p2_hindi": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Hindi",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Hindi (हिन्दी)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_hindi",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Hindi"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967585,
+            "_nanoseconds": 83000000
+          }
+        },
+        "doc_syllabus_p2_history": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II History",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - History (इतिहास)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_history",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "History"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967590,
+            "_nanoseconds": 522000000
+          }
+        },
+        "doc_syllabus_p2_home_science": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Home Science",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Home Science (गृह विज्ञान)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_home_science",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Home Science"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967602,
+            "_nanoseconds": 576000000
+          }
+        },
+        "doc_syllabus_p2_mathematics": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Mathematics",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Mathematics (गणित)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_mathematics",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Mathematics"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967599,
+            "_nanoseconds": 6000000
+          }
+        },
+        "doc_syllabus_p2_music": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Music",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Music (संगीत)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_music",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Music"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967600,
+            "_nanoseconds": 766000000
+          }
+        },
+        "doc_syllabus_p2_phy_edu": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Physical Education",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Physical Education Subject (शारीरिक शिक्षा)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_phy_edu",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "PHYSICAL_EDUCATION_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Physical Education"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967582,
+            "_nanoseconds": 831000000
+          }
+        },
+        "doc_syllabus_p2_physics": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Physics",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Physics (भौतिक विज्ञान)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_physics",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Physics"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967596,
+            "_nanoseconds": 231000000
+          }
+        },
+        "doc_syllabus_p2_political_science": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Political Science",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Political Science (राजनीति विज्ञान)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_political_science",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Political Science"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967592,
+            "_nanoseconds": 300000000
+          }
+        },
+        "doc_syllabus_p2_public_admin": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Public Administration",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Public Administration (लोक प्रशासन)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_public_admin",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Public Administration"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967595,
+            "_nanoseconds": 519000000
+          }
+        },
+        "doc_syllabus_p2_punjabi": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Punjabi",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Punjabi (पंजाबी)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_punjabi",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Punjabi"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967588,
+            "_nanoseconds": 727000000
+          }
+        },
+        "doc_syllabus_p2_rajasthani": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Rajasthani",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Rajasthani (राजस्थानी)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_rajasthani",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Rajasthani"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967588,
+            "_nanoseconds": 234000000
+          }
+        },
+        "doc_syllabus_p2_sanskrit": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Sanskrit",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Sanskrit (संस्कृत)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_sanskrit",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Sanskrit"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967586,
+            "_nanoseconds": 937000000
+          }
+        },
+        "doc_syllabus_p2_sociology": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Sociology",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Sociology (समाजशास्त्र)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_sociology",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Sociology"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967594,
+            "_nanoseconds": 153000000
+          }
+        },
+        "doc_syllabus_p2_urdu": {
+          "servedFilename": null,
+          "targetCycle": "2026",
+          "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+          "contentLocator": "Official Syllabus Listing: Paper-II Urdu",
+          "documentType": "PAPER_2_SYLLABUS",
+          "sourceCycle": "2025",
+          "actualDownloadHref": null,
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+          "storagePath": null,
+          "officialTitle": "Paper-II: Subject Concerned - Urdu (उर्दू)",
+          "acquisitionStatus": "PORTAL_REGISTRY_VERIFIED",
+          "fileSha256": null,
+          "evidenceClass": "PORTAL_REGISTRY_VERIFIED",
+          "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+          "documentId": "doc_syllabus_p2_urdu",
+          "advertisementNumber": "Advt. No. 06/2025-26",
+          "storageObjectExists": false,
+          "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+          "publicationDate": "2025-09-15",
+          "applicableVariants": [
+            "Urdu"
+          ],
+          "provenanceTag": "OFFICIAL_SOURCE_VERIFIED",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "updatedAt": {
+            "_seconds": 1788967590,
+            "_nanoseconds": 0
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "upsc_cse_prelims": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "upsc_cse_prelims",
+          "canonicalExamName": "UPSC Civil Services – Prelims",
+          "canonicalDisplayName": "UPSC Civil Services – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "upsc",
+          "authorityDisplayName": "Union Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Union Public Service Commission",
+          "authorityKey": "upsc",
+          "officialPortals": [
+            "Union Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Studies Paper-I",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: General Studies Paper-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: General Studies-I",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: General Studies-II (CSAT)",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967611,
+          "_nanoseconds": 263000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:51.285Z",
+      "recruitment": {
+        "id": "upsc_cse_prelims",
+        "examId": "upsc_cse_prelims",
+        "missionRealmId": "upsc_cse_prelims",
+        "title": "UPSC Civil Services – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "upsc",
+        "authorityDisplayName": "Union Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965742,
+          "_nanoseconds": 432000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Studies Paper-I",
+              "mode": "OMR_PEN_PAPER",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: General Studies Paper-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966471,
+          "_nanoseconds": 229000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:51.245Z",
+      "officialDocumentsCount": 2,
+      "officialDocuments": {
+        "doc_upsc_annual_calendar_2027": {
+          "documentId": "doc_upsc_annual_calendar_2027",
+          "authority": "Union Public Service Commission (UPSC)",
+          "documentType": "ANNUAL_EXAMINATION_CALENDAR",
+          "officialTitle": "UPSC Annual Examination Calendar 2027",
+          "publicationDate": "2026-05-12",
+          "sourceCycle": "2027",
+          "targetCycle": "2027",
+          "cycleRelation": "CURRENT_OFFICIAL_CYCLE",
+          "officialListingPageUrl": "https://upsc.gov.in/examinations/exam-calendar",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Item 7: Civil Services (Preliminary) Examination 2027",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "upsc_cse_prelims",
+          "createdAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 983000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 983000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966476,
+            "_nanoseconds": 983000000
+          }
+        },
+        "doc_upsc_cse_2026_notification_and_syllabus": {
+          "documentId": "doc_upsc_cse_2026_notification_and_syllabus",
+          "authority": "Union Public Service Commission (UPSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Civil Services Examination, 2026 Detailed Notification (Examination Notice No. 05/2026-CSP)",
+          "publicationDate": "2026-01-14",
+          "advertisementNumber": "05/2026-CSP",
+          "sourceCycle": "2026",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://upsc.gov.in/examinations/active-examinations",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section III (Plan of Examination) and Appendix-I (Syllabus for Preliminary Examination: Paper-I & Paper-II)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "upsc_cse_prelims",
+          "createdAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 337000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 337000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 337000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_cgl": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_cgl",
+          "canonicalExamName": "SSC CGL",
+          "canonicalDisplayName": "SSC CGL"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 3,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperNumber": 1,
+              "paperName": "Tier-I: Computer Based Examination",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "tier_2_p1",
+              "paperNumber": 2,
+              "paperName": "Tier-II Paper-I: Compulsory for All Posts",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            },
+            {
+              "paperId": "tier_2_p2",
+              "paperNumber": 3,
+              "paperName": "Tier-II Paper-II: Statistics (JSO)",
+              "isCommonPaper": false,
+              "isVariantSpecific": true,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "cgl_all_posts",
+              "variantName": "All Posts (General Track)",
+              "variantCode": "cgl_all_posts"
+            },
+            {
+              "variantId": "cgl_jso",
+              "variantName": "Junior Statistical Officer (JSO)",
+              "variantCode": "cgl_jso"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "paperCount": 3,
+        "papers": [
+          {
+            "code": "TIER_1",
+            "name": "Tier-I: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "TIER_2_P1",
+            "name": "Tier-II Paper-I: Compulsory for All Posts",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "TIER_2_P2",
+            "name": "Tier-II Paper-II: Statistics (JSO Track)",
+            "mode": "CBT",
+            "isCommonPaper": false,
+            "isVariantSpecific": true,
+            "appliesToAllVariables": false,
+            "scope": "VARIABLE_SPECIFIC",
+            "variantDimension": "POST_TRACK"
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967612,
+          "_nanoseconds": 20000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:52.040Z",
+      "recruitment": {
+        "id": "ssc_cgl",
+        "examId": "ssc_cgl",
+        "missionRealmId": "ssc_cgl",
+        "title": "SSC CGL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965743,
+          "_nanoseconds": 764000000
+        },
+        "examStructure": {
+          "paperCount": 3,
+          "papers": [
+            {
+              "paperCode": "TIER_1",
+              "paperName": "Tier-I: Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2_P1",
+              "paperName": "Tier-II Paper-I: Compulsory for All Posts",
+              "mode": "CBT",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2_P2",
+              "paperName": "Tier-II Paper-II: Statistics (JSO)",
+              "mode": "CBT",
+              "order": 3,
+              "scope": "VARIABLE_SPECIFIC",
+              "appliesToAllVariables": false,
+              "variableSpecific": true,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966471,
+          "_nanoseconds": 564000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:51.597Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_cgl_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_cgl_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Combined Graduate Level Examination, 2025 Notice & Scheme",
+          "publicationDate": "2025-06-24",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 12 (Scheme of Examination - Tier-I & Tier-II) & Section 13 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_cgl",
+          "createdAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 673000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 673000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966477,
+            "_nanoseconds": 673000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_je": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_je",
+          "canonicalExamName": "SSC JE",
+          "canonicalDisplayName": "SSC JE"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "je_civil",
+              "variantName": "Civil Engineering",
+              "variantCode": "je_civil"
+            },
+            {
+              "variantId": "je_electrical",
+              "variantName": "Electrical Engineering",
+              "variantCode": "je_electrical"
+            },
+            {
+              "variantId": "je_mechanical",
+              "variantName": "Mechanical Engineering",
+              "variantCode": "je_mechanical"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: Computer Based Technical Examination",
+              "mode": "CBT",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: Technical Engineering Discipline",
+            "mode": "CBT",
+            "isCommonPaper": false,
+            "isVariantSpecific": true,
+            "appliesToAllVariables": false,
+            "scope": "VARIABLE_SPECIFIC",
+            "variantDimension": "ENGINEERING_DISCIPLINE"
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967613,
+          "_nanoseconds": 17000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:53.042Z",
+      "recruitment": {
+        "id": "ssc_je",
+        "examId": "ssc_je",
+        "missionRealmId": "ssc_je",
+        "title": "SSC JE",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965744,
+          "_nanoseconds": 170000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: Computer Based Technical Examination",
+              "mode": "CBT",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966471,
+          "_nanoseconds": 903000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:51.930Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_je_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_je_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Junior Engineer (Civil, Mechanical & Electrical) Examination, 2025 Notice & Scheme",
+          "publicationDate": "2025-03-28",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 13 (Scheme of Examination - Paper-I & Paper-II) & Section 14 (Indicative Syllabus: Civil, Electrical, Mechanical)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_je",
+          "createdAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 13000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 13000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 13000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_selection_post": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_selection_post",
+          "canonicalExamName": "SSC Selection Post",
+          "canonicalDisplayName": "SSC Selection Post"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "selpost_matric",
+              "variantName": "Matriculation Level",
+              "variantCode": "selpost_matric"
+            },
+            {
+              "variantId": "selpost_higher_sec",
+              "variantName": "Higher Secondary (10+2) Level",
+              "variantCode": "selpost_higher_sec"
+            },
+            {
+              "variantId": "selpost_grad",
+              "variantName": "Graduation & Above Level",
+              "variantCode": "selpost_grad"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (Level-Specific)",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "CBE_PAPER",
+            "name": "Computer Based Examination (Level-Specific)",
+            "mode": "CBT",
+            "isCommonPaper": false,
+            "isVariantSpecific": true,
+            "appliesToAllVariables": false,
+            "scope": "VARIABLE_SPECIFIC",
+            "variantDimension": "EDUCATIONAL_LEVEL"
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967613,
+          "_nanoseconds": 753000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:53.788Z",
+      "recruitment": {
+        "id": "ssc_selection_post",
+        "examId": "ssc_selection_post",
+        "missionRealmId": "ssc_selection_post",
+        "title": "SSC Selection Post",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 517000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (Level-Specific)",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966472,
+          "_nanoseconds": 238000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:52.259Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_selection_post_phase13_notification": {
+          "documentId": "doc_ssc_selection_post_phase13_notification",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Phase-XIII/2025 Selection Posts Examination Notice & Scheme",
+          "publicationDate": "2025-02-27",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 15 (Scheme of Examination) & Section 16 (Syllabus for Matriculation, Higher Secondary, and Graduation levels)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_selection_post",
+          "createdAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 362000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 362000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 362000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_chsl": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_chsl",
+          "canonicalExamName": "SSC CHSL",
+          "canonicalDisplayName": "SSC CHSL"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "tier_1",
+              "paperNumber": 1,
+              "paperName": "Tier-I: Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "tier_2",
+              "paperNumber": 2,
+              "paperName": "Tier-II: Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "TIER_1",
+            "name": "Tier-I: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "TIER_2",
+            "name": "Tier-II: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967614,
+          "_nanoseconds": 751000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:54.770Z",
+      "recruitment": {
+        "id": "ssc_chsl",
+        "examId": "ssc_chsl",
+        "missionRealmId": "ssc_chsl",
+        "title": "SSC CHSL",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965745,
+          "_nanoseconds": 931000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "TIER_1",
+              "paperName": "Tier-I: Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "TIER_2",
+              "paperName": "Tier-II: Computer Based Examination",
+              "mode": "CBT",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966472,
+          "_nanoseconds": 582000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:52.611Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_chsl_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_chsl_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Combined Higher Secondary (10+2) Level Examination, 2025 Notice & Scheme",
+          "publicationDate": "2025-04-08",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 13 (Scheme of Examination - Tier-I & Tier-II) & Section 14 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_chsl",
+          "createdAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 710000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 710000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966478,
+            "_nanoseconds": 710000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_stenographer": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_stenographer",
+          "canonicalExamName": "SSC Stenographer",
+          "canonicalDisplayName": "SSC Stenographer"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": true,
+          "variants": [
+            {
+              "variantId": "steno_c",
+              "variantName": "Stenographer Grade C",
+              "variantCode": "steno_c"
+            },
+            {
+              "variantId": "steno_d",
+              "variantName": "Stenographer Grade D",
+              "variantCode": "steno_d"
+            }
+          ]
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "CBE_PAPER",
+            "name": "Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967615,
+          "_nanoseconds": 541000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:55.560Z",
+      "recruitment": {
+        "id": "ssc_stenographer",
+        "examId": "ssc_stenographer",
+        "missionRealmId": "ssc_stenographer",
+        "title": "SSC Stenographer",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "VARIABLE_BASED",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 224000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966472,
+          "_nanoseconds": 913000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:52.938Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_steno_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_steno_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Stenographer Grade 'C' & 'D' Examination, 2025 Notice & Scheme",
+          "publicationDate": "2025-07-26",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 12 (Scheme of Examination - CBE & Skill Test) & Section 13 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_stenographer",
+          "createdAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 127000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 127000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 127000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_hindi_translators": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_hindi_translators",
+          "canonicalExamName": "SSC Combined Hindi Translators",
+          "canonicalDisplayName": "SSC Combined Hindi Translators"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: Translation & Essay",
+              "mode": "PEN_PAPER_DESCRIPTIVE",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: Translation & Essay",
+            "mode": "PEN_PAPER_DESCRIPTIVE",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967616,
+          "_nanoseconds": 490000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:56.505Z",
+      "recruitment": {
+        "id": "ssc_hindi_translators",
+        "examId": "ssc_hindi_translators",
+        "missionRealmId": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965747,
+          "_nanoseconds": 630000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: Translation & Essay",
+              "mode": "PEN_PAPER_DESCRIPTIVE",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966473,
+          "_nanoseconds": 250000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:53.277Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_jht_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_jht_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Junior Hindi Translator Examination, 2025 Notice",
+          "publicationDate": "2025-08-02",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 11 (Scheme of Examination - Paper-I CBE & Paper-II Descriptive) & Section 12 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_hindi_translators",
+          "createdAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 458000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 458000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 458000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_mts_havaldar": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_mts_havaldar",
+          "canonicalExamName": "SSC MTS & Havaldar",
+          "canonicalDisplayName": "SSC MTS & Havaldar"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination (Session-I & Session-II)",
+              "isCommonPaper": true,
+              "isVariantSpecific": false,
+              "mode": "CBT"
+            }
+          ]
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "CBE_PAPER",
+            "name": "Computer Based Examination (Session-I & Session-II)",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967617,
+          "_nanoseconds": 296000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:57.320Z",
+      "recruitment": {
+        "id": "ssc_mts_havaldar",
+        "examId": "ssc_mts_havaldar",
+        "missionRealmId": "ssc_mts_havaldar",
+        "title": "SSC MTS & Havaldar",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965748,
+          "_nanoseconds": 931000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination (Session-I & Session-II)",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966473,
+          "_nanoseconds": 591000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:53.620Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_mts_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_mts_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Multi Tasking Staff, and Havaldar Examination, 2025 Notice",
+          "publicationDate": "2025-06-27",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 14 (Scheme of Examination - Session-I & Session-II) & Section 15 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_mts_havaldar",
+          "createdAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 785000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 785000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966479,
+            "_nanoseconds": 785000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_cpo": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_cpo",
+          "canonicalExamName": "SSC CPO",
+          "canonicalDisplayName": "SSC CPO"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: English Language & Comprehension",
+              "mode": "CBT",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: English Language & Comprehension",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967618,
+          "_nanoseconds": 168000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:58.192Z",
+      "recruitment": {
+        "id": "ssc_cpo",
+        "examId": "ssc_cpo",
+        "missionRealmId": "ssc_cpo",
+        "title": "SSC CPO",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965749,
+          "_nanoseconds": 328000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: English Language & Comprehension",
+              "mode": "CBT",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966473,
+          "_nanoseconds": 936000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:53.952Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_cpo_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_cpo_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Sub-Inspector in Delhi Police and CAPFs Examination, 2025 Notice",
+          "publicationDate": "2025-03-04",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 12 (Scheme of Examination - Paper-I, PST/PET, Paper-II) & Section 13 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_cpo",
+          "createdAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 113000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 113000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 113000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "ssc_gd": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "ssc_gd",
+          "canonicalExamName": "SSC GD",
+          "canonicalDisplayName": "SSC GD"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "CENTRAL",
+          "stateCode": null,
+          "stateName": null,
+          "authorityGroupKey": "ssc",
+          "authorityDisplayName": "Staff Selection Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2025,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Staff Selection Commission",
+          "authorityKey": "ssc",
+          "officialPortals": [
+            "Staff Selection Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "cbe_paper",
+              "paperNumber": 1,
+              "paperName": "Computer Based Examination",
+              "mode": "CBT",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "CBE_PAPER",
+            "name": "Computer Based Examination",
+            "mode": "CBT",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967619,
+          "_nanoseconds": 38000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:59.070Z",
+      "recruitment": {
+        "id": "ssc_gd",
+        "examId": "ssc_gd",
+        "missionRealmId": "ssc_gd",
+        "title": "SSC GD",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "staff_selection",
+        "examScope": "ALL_INDIA",
+        "org": "INDIA",
+        "state": null,
+        "jurisdictionLevel": "CENTRAL",
+        "stateCode": null,
+        "stateName": null,
+        "authorityGroupKey": "ssc",
+        "authorityDisplayName": "Staff Selection Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965750,
+          "_nanoseconds": 648000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "CBE_PAPER",
+              "paperName": "Computer Based Examination",
+              "mode": "CBT",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966474,
+          "_nanoseconds": 259000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:54.281Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_ssc_gd_2025_notification_and_syllabus": {
+          "documentId": "doc_ssc_gd_2025_notification_and_syllabus",
+          "authority": "Staff Selection Commission (SSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Constable (GD) in CAPFs, SSF and Rifleman (GD) Examination, 2025 Notice",
+          "publicationDate": "2024-09-05",
+          "sourceCycle": "2025",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://ssc.gov.in/for-candidates/tentative-vacancy",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 11 (Scheme of Examination - CBE) & Section 12 (Indicative Syllabus)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "ssc_gd",
+          "createdAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 548000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 548000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 548000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "uppsc_pcs_prelims": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "uppsc_pcs_prelims",
+          "canonicalExamName": "UPPSC PCS – Prelims",
+          "canonicalDisplayName": "UPPSC PCS – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "STATE",
+          "stateCode": "UP",
+          "stateName": "Uttar Pradesh",
+          "authorityGroupKey": "uppsc",
+          "authorityDisplayName": "Uttar Pradesh Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "sourceBaselineYear": 2026,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Uttar Pradesh Public Service Commission",
+          "authorityKey": "uppsc",
+          "officialPortals": [
+            "Uttar Pradesh Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "paperModel": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Studies-I",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            },
+            {
+              "paperId": "paper_2",
+              "paperNumber": 2,
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": false,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 2,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: General Studies-I",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          },
+          {
+            "code": "PAPER_2",
+            "name": "Paper-II: General Studies-II (CSAT)",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967619,
+          "_nanoseconds": 875000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:26:59.898Z",
+      "recruitment": {
+        "id": "uppsc_pcs_prelims",
+        "examId": "uppsc_pcs_prelims",
+        "missionRealmId": "uppsc_pcs_prelims",
+        "title": "UPPSC PCS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Uttar Pradesh",
+        "state": "Uttar Pradesh",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "UP",
+        "stateName": "Uttar Pradesh",
+        "authorityGroupKey": "uppsc",
+        "authorityDisplayName": "Uttar Pradesh Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965751,
+          "_nanoseconds": 73000000
+        },
+        "examStructure": {
+          "paperCount": 2,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Studies-I",
+              "mode": "OMR_PEN_PAPER",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            },
+            {
+              "paperCode": "PAPER_2",
+              "paperName": "Paper-II: General Studies-II (CSAT)",
+              "mode": "OMR_PEN_PAPER",
+              "order": 2,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966474,
+          "_nanoseconds": 584000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:54.610Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_uppsc_pcs_2026_notification_and_syllabus": {
+          "documentId": "doc_uppsc_pcs_2026_notification_and_syllabus",
+          "authority": "Uttar Pradesh Public Service Commission (UPPSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Combined State / Upper Subordinate Services (PCS) Examination, 2026 Detailed Advertisement (Advt. No. A-1/E-1/2026)",
+          "publicationDate": "2026-01-01",
+          "advertisementNumber": "Advt. No. A-1/E-1/2026",
+          "sourceCycle": "2026",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://uppsc.up.nic.in/AllNotifications.aspx",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Appendix-4 (Plan of Examination) & Appendix-5 (Syllabus for Preliminary Examination: Paper-I & Paper-II)",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "uppsc_pcs_prelims",
+          "createdAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 872000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 872000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966480,
+            "_nanoseconds": 872000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    },
+    "rpsc_ras_prelims": {
+      "canonicalProfile": {
+        "schemaVersion": "1.0.0",
+        "profileStatus": "MATERIALIZATION_READY",
+        "identity": {
+          "missionId": "rpsc_ras_prelims",
+          "canonicalExamName": "RPSC RAS – Prelims",
+          "canonicalDisplayName": "RPSC RAS – Prelims"
+        },
+        "jurisdiction": {
+          "jurisdictionLevel": "STATE",
+          "stateCode": "RJ",
+          "stateName": "Rajasthan",
+          "authorityGroupKey": "rpsc",
+          "authorityDisplayName": "Rajasthan Public Service Commission"
+        },
+        "missionTargetYear": 2027,
+        "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+        "authority": {
+          "organization": "Rajasthan Public Service Commission",
+          "authorityKey": "rpsc",
+          "officialPortals": [
+            "Rajasthan Public Service Commission"
+          ],
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "provenanceTag": "SOURCE_VERIFIED",
+          "sourceDocumentType": "OFFICIAL_PORTAL_REGISTRY"
+        },
+        "variantModel": {
+          "hasVariants": false,
+          "variants": []
+        },
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "sourceBaselineCycle": "2024",
+        "advertisementNumber": "Advt. No. 02/2024-25",
+        "sourceBaselineYear": 2024,
+        "paperModel": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperId": "paper_1",
+              "paperNumber": 1,
+              "paperName": "Paper-I: General Knowledge and General Science",
+              "mode": "OMR_PEN_PAPER",
+              "isCommonPaper": true,
+              "isVariantSpecific": false
+            }
+          ]
+        },
+        "paperCount": 1,
+        "papers": [
+          {
+            "code": "PAPER_1",
+            "name": "Paper-I: General Knowledge and General Science",
+            "mode": "OMR_PEN_PAPER",
+            "isCommonPaper": true,
+            "isVariantSpecific": false,
+            "appliesToAllVariables": true,
+            "scope": "COMMON",
+            "variantDimension": null
+          }
+        ],
+        "updatedAt": {
+          "_seconds": 1788967620,
+          "_nanoseconds": 769000000
+        }
+      },
+      "canonicalProfileUpdateTime": "2026-09-09T15:27:00.797Z",
+      "recruitment": {
+        "id": "rpsc_ras_prelims",
+        "examId": "rpsc_ras_prelims",
+        "missionRealmId": "rpsc_ras_prelims",
+        "title": "RPSC RAS – Prelims",
+        "titleHindi": "",
+        "status": "draft",
+        "nature": "ACTIVE_MISSION",
+        "examCategory": "civil_services",
+        "examScope": "STATE_ELIGIBLE",
+        "org": "Rajasthan",
+        "state": "Rajasthan",
+        "jurisdictionLevel": "STATE",
+        "stateCode": "RJ",
+        "stateName": "Rajasthan",
+        "authorityGroupKey": "rpsc",
+        "authorityDisplayName": "Rajasthan Public Service Commission",
+        "missionStructureType": "SINGLE_TRACK",
+        "version": "1.0.0",
+        "createdAt": {
+          "_seconds": 1788965752,
+          "_nanoseconds": 375000000
+        },
+        "examStructure": {
+          "paperCount": 1,
+          "papers": [
+            {
+              "paperCode": "PAPER_1",
+              "paperName": "Paper-I: General Knowledge and General Science",
+              "mode": "OMR_PEN_PAPER",
+              "order": 1,
+              "scope": "COMMON_TO_ALL_VARIABLES",
+              "appliesToAllVariables": true,
+              "variableSpecific": false,
+              "syllabusRequired": true,
+              "pyqRequired": true,
+              "enabled": true
+            }
+          ]
+        },
+        "missionPlan": {
+          "totalDays": 98,
+          "cycleDays": 98,
+          "coveragePolicy": "MUST_COVER_ALL_VERIFIED_SYLLABUS_ATOMS",
+          "microTestRule": {
+            "enabled": true,
+            "frequencyDays": 2,
+            "startsFromDay": 2
+          },
+          "macroTestRule": {
+            "enabled": true,
+            "frequencyDays": 14
+          },
+          "crucibleEnabled": true,
+          "bufferDaysEnabled": true,
+          "revisionDaysEnabled": true,
+          "allowHeavyDaysIfNeeded": true,
+          "allowTopicOmission": false
+        },
+        "updatedAt": {
+          "_seconds": 1788966474,
+          "_nanoseconds": 925000000
+        }
+      },
+      "recruitmentUpdateTime": "2026-09-09T15:07:54.948Z",
+      "officialDocumentsCount": 1,
+      "officialDocuments": {
+        "doc_rpsc_ras_2024_notification_and_syllabus": {
+          "documentId": "doc_rpsc_ras_2024_notification_and_syllabus",
+          "authority": "Rajasthan Public Service Commission (RPSC)",
+          "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+          "officialTitle": "Detailed Advertisement for Rajasthan State and Subordinate Services Combined Competitive Examination, 2024 (Advt. No. 02/2024-25)",
+          "publicationDate": "2024-09-02",
+          "advertisementNumber": "Advt. No. 02/2024-25",
+          "sourceCycle": "2024",
+          "targetCycle": "2027",
+          "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+          "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+          "actualDownloadHref": null,
+          "servedFilename": null,
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "fileSha256": null,
+          "contentLocator": "Section 1 (Cadre Posts Table), Section 8 (Scheme of Examination: Preliminary), and Official Syllabus Listing",
+          "acquisitionStatus": "PORTAL_TEXT_VERIFIED",
+          "storagePath": null,
+          "storageObjectExists": false,
+          "provenanceTag": "SOURCE_VERIFIED",
+          "missionId": "rpsc_ras_prelims",
+          "createdAt": {
+            "_seconds": 1788966481,
+            "_nanoseconds": 192000000
+          },
+          "sourceVerifiedAt": {
+            "_seconds": 1788966481,
+            "_nanoseconds": 192000000
+          },
+          "updatedAt": {
+            "_seconds": 1788966481,
+            "_nanoseconds": 192000000
+          }
+        }
+      },
+      "syllabusAtomsCount": 0
+    }
+  }
+}

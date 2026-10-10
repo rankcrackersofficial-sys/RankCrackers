@@ -1,0 +1,44 @@
+{
+  "manifestSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_SOURCE_MANIFEST_46D7",
+  "missionFamilyId": "upsc_cse_prelims",
+  "authority": "Union Public Service Commission (UPSC), New Delhi",
+  "generatedAt": "2026-09-09T19:52:00.000Z",
+  "summary": {
+    "TOTAL_OFFICIAL_DOCUMENTS": 2,
+    "BYTE_VERIFIED_COUNT": 0,
+    "PORTAL_TEXT_VERIFIED_COUNT": 2,
+    "PORTAL_REGISTRY_VERIFIED_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "sources": [
+    {
+      "documentAuthorityKey": "doc_upsc_calendar_2027",
+      "documentType": "OFFICIAL_ANNUAL_CALENDAR",
+      "title": "UPSC Annual Examination Calendar 2027",
+      "officialListingPageUrl": "https://upsc.gov.in/examinations/exam-calendar",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "publicationDate": "2026-05-12",
+      "contentLocator": "Calendar Entry: Civil Services (Preliminary) Examination 2027 (Notification: 13.01.2027, Exam: 23.05.2027)",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_upsc_annual_calendar_2027_cse_entry"
+    },
+    {
+      "documentAuthorityKey": "doc_upsc_cse_2026_notification",
+      "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+      "title": "Civil Services Examination, 2026 Detailed Notification (Examination Notice No. 05/2026-CSP)",
+      "officialListingPageUrl": "https://upsc.gov.in/examinations/active-examinations",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "publicationDate": "2026-01-14",
+      "contentLocator": "Section III (Plan of Examination) and Appendix-I (Syllabus for Preliminary Examination: Paper-I & Paper-II)",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_upsc_cse_2026_prelims_syllabus_authority"
+    }
+  ]
+}

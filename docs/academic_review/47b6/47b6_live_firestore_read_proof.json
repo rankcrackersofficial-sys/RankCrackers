@@ -1,0 +1,15 @@
+{
+  "proofCode": "RC_47B6_LIVE_FIRESTORE_READ_PROOF",
+  "executedAt": "2026-09-10T07:08:16.154Z",
+  "projectId": "rankcrackers-55",
+  "queryStartTime": "2026-09-10T07:08:10.842Z",
+  "queryEndTime": "2026-09-10T07:08:16.154Z",
+  "LIVE_FIRESTORE_READ_SUCCESS": "YES",
+  "liveReadError": null,
+  "metrics": {
+    "PRODUCTION_READ_COUNT": 46,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "SYNTHETIC_PRODUCTION_SNAPSHOT_ROW_COUNT": 0,
+    "SYNTHETIC_ROW_COUNTED_AS_PRODUCTION_READ": 0
+  }
+}

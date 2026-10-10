@@ -1,0 +1,13 @@
+{
+  "testCode": "RC_47B4_STARTABILITY_DEPENDENCY_TEST",
+  "executedAt": "2026-09-10T06:57:27.659Z",
+  "catalogStatus": "PREPARING",
+  "quickEntryEnabled": false,
+  "smartEntryEnabled": false,
+  "metrics": {
+    "PREPARING_MARKED_LIVE_COUNT": 0,
+    "UNREADY_QUICK_ENTRY_ENABLED_COUNT": 0,
+    "UNREADY_SMART_ENTRY_ENABLED_COUNT": 0
+  },
+  "assertionPass": true
+}

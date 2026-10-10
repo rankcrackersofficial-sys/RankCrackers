@@ -1,0 +1,214 @@
+{
+  "uploadReportSchemaVersion": "8.0.0",
+  "gate": "RC_NEW_MISSION_SOURCE_HARDENING_FOUNDER_MATERIALIZATION_46D8",
+  "draftStatus": "CANONICAL_SOURCE_UPLOAD_REPORT_46D8",
+  "agent": "AGENT-3 — FOUNDER BACKEND / OFFICIAL SOURCE / MISSION MATERIALIZATION LANE",
+  "generatedAt": "2026-09-09T20:22:00.000Z",
+  "storageContracts": {
+    "OFFICIAL_DOCUMENT_STORAGE_PATH": "mission_realms/{missionId}/official_documents/{documentId}.{ext}",
+    "OFFICIAL_DOCUMENT_METADATA_PATH": "mission_realms/{missionId}/official_documents/{docId}",
+    "CANONICAL_PROFILE_STORAGE_PATH": "mission_realms/{missionId}/canonical_profile/current"
+  },
+  "summary": {
+    "TOTAL_CANDIDATE_MISSIONS": 12,
+    "TOTAL_OFFICIAL_DOCUMENTS_BOUND": 14,
+    "OFFICIAL_DOCUMENT_BYTE_UPLOAD_COUNT": 0,
+    "PORTAL_TEXT_EVIDENCE_COUNT": 14,
+    "PORTAL_REGISTRY_EVIDENCE_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0,
+    "STORAGE_CONFORMANCE": "PASS"
+  },
+  "missionDocumentUploadDetails": [
+    {
+      "missionFamilyId": "upsc_cse_prelims",
+      "canonicalDisplayName": "UPSC Civil Services – Prelims",
+      "boundDocuments": [
+        {
+          "documentId": "doc_upsc_calendar_2027",
+          "title": "UPSC Annual Examination Calendar 2027",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/upsc_cse_prelims/official_documents/doc_upsc_calendar_2027",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_upsc_annual_calendar_2027_cse_entry",
+          "fileSha256": null
+        },
+        {
+          "documentId": "doc_upsc_cse_2026_notification",
+          "title": "Civil Services Examination, 2026 Detailed Notification (Notice No. 05/2026-CSP)",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/upsc_cse_prelims/official_documents/doc_upsc_cse_2026_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_upsc_cse_2026_prelims_syllabus_authority",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_cgl",
+      "canonicalDisplayName": "SSC CGL",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_cgl_2025_notification",
+          "title": "Combined Graduate Level Examination, 2025 Notice & Scheme",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_cgl/official_documents/doc_ssc_cgl_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_cgl_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_je",
+      "canonicalDisplayName": "SSC Junior Engineer",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_je_2025_notification",
+          "title": "Junior Engineer (Civil, Mechanical & Electrical) Examination, 2025 Notice & Scheme",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_je/official_documents/doc_ssc_je_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_je_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_selection_post",
+      "canonicalDisplayName": "SSC Selection Post",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_selection_post_phase13_notification",
+          "title": "Phase-XIII/2025 Selection Posts Examination Notice & Scheme",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_selection_post/official_documents/doc_ssc_selection_post_phase13_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_selection_post_phase13_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_chsl",
+      "canonicalDisplayName": "SSC CHSL",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_chsl_2025_notification",
+          "title": "Combined Higher Secondary (10+2) Level Examination, 2025 Notice & Scheme",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_chsl/official_documents/doc_ssc_chsl_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_chsl_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_stenographer",
+      "canonicalDisplayName": "SSC Stenographer Grade C & D",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_steno_2025_notification",
+          "title": "Stenographer Grade 'C' & 'D' Examination, 2025 Notice & Scheme",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_stenographer/official_documents/doc_ssc_steno_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_steno_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_hindi_translators",
+      "canonicalDisplayName": "SSC Combined Hindi Translators",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_jht_2025_notification",
+          "title": "Junior Hindi Translator, Junior Translator and Senior Hindi Translator Examination, 2025 Notice",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_hindi_translators/official_documents/doc_ssc_jht_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_jht_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_mts_havaldar",
+      "canonicalDisplayName": "SSC MTS & Havaldar",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_mts_2025_notification",
+          "title": "Multi Tasking (Non-Technical) Staff, and Havaldar (CBIC & CBN) Examination, 2025 Notice",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_mts_havaldar/official_documents/doc_ssc_mts_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_mts_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_cpo",
+      "canonicalDisplayName": "SSC CPO",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_cpo_2025_notification",
+          "title": "Sub-Inspector in Delhi Police and Central Armed Police Forces Examination, 2025 Notice",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_cpo/official_documents/doc_ssc_cpo_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_cpo_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "ssc_gd",
+      "canonicalDisplayName": "SSC GD Constable",
+      "boundDocuments": [
+        {
+          "documentId": "doc_ssc_gd_2025_notification",
+          "title": "Constable (GD) in Central Armed Police Forces (CAPFs), SSF and Rifleman (GD) in Assam Rifles Examination, 2025 Notice",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/ssc_gd/official_documents/doc_ssc_gd_2025_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_ssc_gd_2025_scheme_syllabus",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "uppsc_pcs_prelims",
+      "canonicalDisplayName": "UPPSC PCS – Prelims",
+      "boundDocuments": [
+        {
+          "documentId": "doc_uppsc_pcs_2026_notification",
+          "title": "Combined State / Upper Subordinate Services (PCS) Examination, 2026 Detailed Advertisement (Advt. No. A-1/E-1/2026)",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/uppsc_pcs_prelims/official_documents/doc_uppsc_pcs_2026_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_uppsc_pcs_2026_prelims_syllabus_authority",
+          "fileSha256": null
+        }
+      ]
+    },
+    {
+      "missionFamilyId": "rpsc_ras_prelims",
+      "canonicalDisplayName": "RPSC RAS – Prelims",
+      "boundDocuments": [
+        {
+          "documentId": "doc_rpsc_ras_2024_notification",
+          "title": "Detailed Advertisement for Rajasthan State and Subordinate Services Combined Competitive Examination, 2024 (Advt. No. 02/2024-25)",
+          "evidenceClass": "PORTAL_TEXT_VERIFIED",
+          "firestoreMetadataPath": "mission_realms/rpsc_ras_prelims/official_documents/doc_rpsc_ras_2024_notification",
+          "storagePayloadType": "OFFICIAL_PORTAL_TEXT_SNAPSHOT",
+          "contentSnapshotHash": "snapshot_rpsc_ras_2024_prelims_syllabus_authority",
+          "fileSha256": null
+        }
+      ]
+    }
+  ]
+}

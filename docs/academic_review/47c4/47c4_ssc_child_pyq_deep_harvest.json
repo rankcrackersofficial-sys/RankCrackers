@@ -1,0 +1,118 @@
+{
+  "missionsAudited": 9,
+  "exactChildPyqRows": [],
+  "syntheticChildUrlCount": 0,
+  "rows": [
+    {
+      "missionId": "ssc_cgl",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Result%20Write-up%20CGLE%202024%20Tier%20I_51224.pdf"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Final%20Answer%20Key%20and%20marks%20CHSLE%202024%20Tier-I161024.pdf"
+    },
+    {
+      "missionId": "ssc_je",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/writeup_23032026.pdf"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "OFFICIAL_LISTING_FOUND_CHILD_LINK_NOT_FOUND",
+      "releaseNoticeUrl": null
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "OFFICIAL_LISTING_FOUND_CHILD_LINK_NOT_FOUND",
+      "releaseNoticeUrl": null
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Write_up_CHT2024_PaperI_140225.pdf"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_ARCHIVE_LISTING_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "OFFICIAL_LISTING_FOUND_CHILD_LINK_NOT_FOUND",
+      "releaseNoticeUrl": null
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/writeup_21042026.pdf"
+    },
+    {
+      "missionId": "ssc_gd",
+      "authorityListingUrl": "https://ssc.gov.in/",
+      "exactChildRows": [],
+      "verificationClass": "OFFICIAL_PYQ_RELEASE_NOTICE_VERIFIED",
+      "oldestOfficiallyReachablePaper": null,
+      "newestOfficiallyReachablePaper": null,
+      "bytesAcquired": 0,
+      "sha256Verified": 0,
+      "blocker": "EPHEMERAL_WINDOW_EXPIRED: official notice proves candidate-specific publication, but persistent exact paper is unavailable.",
+      "releaseNoticeUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/AnswerKeys/Write_Up_English_26062025.pdf"
+    }
+  ],
+  "conclusion": "Six mission-specific official release notices verified; no time-limited candidate paper was promoted to an exact persistent child.",
+  "releaseNoticeMissionCount": 6,
+  "archiveListingOnlyMissionCount": 3
+}

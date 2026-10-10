@@ -1,0 +1,1007 @@
+filePath	status	entryType	classification	safeDeleteCandidate	reason
+artifacts/3734ef33-b649-484f-b42a-8c5edec5eb5b/implementation_plan.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/3734ef33-b649-484f-b42a-8c5edec5eb5b/scratch/verify_p09_acceptance.js	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/d097b28b-ffaf-4ab7-930c-90feb2345f3f/implementation_plan.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/d097b28b-ffaf-4ab7-930c-90feb2345f3f/task.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/fa41bf19-e052-474f-914d-5b9bfc2c3646/implementation_plan.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/fa41bf19-e052-474f-914d-5b9bfc2c3646/task.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.artifacts/fa41bf19-e052-474f-914d-5b9bfc2c3646/walkthrough.artifact.md	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.gitignore	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/build.gradle.kts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-hdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-hdpi/ic_launcher_foreground.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-hdpi/splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-mdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-mdpi/ic_launcher_foreground.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-mdpi/splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-hdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-mdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xxhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xxxhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xhdpi/ic_launcher_foreground.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xhdpi/splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxhdpi/ic_launcher_foreground.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxhdpi/splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxxhdpi/android12splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxxhdpi/ic_launcher_foreground.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-xxxhdpi/splash.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/mipmap-hdpi/ic_launcher.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/mipmap-mdpi/ic_launcher.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/mipmap-xhdpi/ic_launcher.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/values-night-v31/styles.xml	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/values-v31/styles.xml	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/build/reports/problems/problems-report.html	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/gradle.properties	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/settings.gradle.kts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+assets/images/logo.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/academic_review/digibook_authority_bridge_manifest.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/pers_aaf_01_clean_personalization_source_authority_20260818/tests/aaf_pers_bridge_attacks_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/pers_aaf_03_revision_and_coaching_contracts_20260818/tests/revision_coaching_contracts_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff04_20260818/resolved_holds_manifest.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/RC_AG_FF06_REPORT.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/RC_AG_FF06_REPORT.md	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/batch05_academic_validation.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/batch05_editorial_validation.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/batch05_execution.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/batch05_inventory.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/batch05_personalization_validation.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/factory_scale_status.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/next_batch_status.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/resolved_holds_manifest.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/rc_ag_ff06_20260818/test_denominators.json	M	MODIFIED_TRACKED	GENERATED	YES	Temporary execution or dump output
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/02_enabled_cta_393.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/02_enabled_cta_393.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/03_compact_360.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/04_keyboard_open_360.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/04_keyboard_open_360.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/05_normal_412.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/05_normal_412.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/06_large_text_393.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/patch_safety/student_journey_fix3b_r1_sovereign_identity_visual_qa_20260810114000/06_large_text_393.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+firebase.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+firestore.indexes.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+firestore.rules	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/apply_official_document_metadata_repair.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/apply_rc_x4e_p15_authorized_pagewise_native.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_firestore.js	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_firestore_v2.js	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_firestore_v3.js	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_universal_official_document_page_completeness.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/callable/handle_mission_action.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/callable/handle_sentinel_action.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/detailed_census.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/index.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/index_test.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/lib/academicFactory/core/aafDispatcher.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/core/aafDispatcher.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/core/aafJobRegistry.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/models/aafJob.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/repositories/aafQueueRepository.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/repositories/aafQueueRepository.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/aafLifecycleService.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/aafLifecycleService.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/aafProgressMonitor.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/stale_lease_recovery.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/superseded_batch_cleanup.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/aafWorkerResult.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/aafWorkerTypes.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/crucibleDraftAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/crucibleMaterializationAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/crucibleProReviewAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/crucibleRepairAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/crucibleValidationAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookAssemblyAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookDraftAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookMaterializationAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookProReviewAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookRepairAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/digibookValidationAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/encodingAafWorker.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/encodingAafWorker.js.map	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/manifestAafWorker.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/manifestAafWorker.js.map	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/repairAafWorker.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/repairAafWorker.js.map	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/sourceAcquisitionAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/sourceValidationAafWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/structuralAafWorker.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/structuralAafWorker.js.map	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/svoAafWorker.js	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/workers/svoAafWorker.js.map	D	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/core/retryEngine.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/index.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/index.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/models/aiTask.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/parsers/jsonParser.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/parsers/pdfParser.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/geminiProvider.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/geminiProvider.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/promptFactory.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/promptFactory.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/providerExecutor.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/providers/providerExecutor.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/aafLifecycle.test.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/aafLifecycle.test.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/aafQueue.test.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/aafQueue.test.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/aafRegistry.test.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/ownership.test.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/queueWorker.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/queueWorker.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/storageTrigger.js	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/storageTrigger.js.map	M	MODIFIED_TRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/list_realms.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/materialize_neet_full_v3.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/package.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/process_pagewise_extraction_batches.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/query_syllabus.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/scratch_inspect_p09.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/services/gemini_service.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/mission_lifecycle_governance.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/core/aafDispatcher.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/core/aafJobRegistry.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/models/aafJob.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/repositories/aafQueueRepository.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/services/aafLifecycleService.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/services/aafProgressMonitor.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/services/materializationService.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/services/staleLeaseRecovery.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/services/staleLeaseRecoveryOrchestrator.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/aafWorkerResult.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/aafWorkerTypes.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/crucibleDraftAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/crucibleMaterializationAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/crucibleProReviewAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/crucibleRepairAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/crucibleValidationAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookAssemblyAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookDraftAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookMaterializationAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookProReviewAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookRepairAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/digibookValidationAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/sourceAcquisitionAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/academicFactory/workers/sourceValidationAafWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/index.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/providers/geminiProvider.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/providers/promptFactory.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/providers/providerExecutor.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/services/knowledgeIdentityService.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/test/aafLifecycle.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/aafQueue.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/classifyHeldAtoms.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/deltaAuthority.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/downstreamImpact.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/finalizeMaterialization.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/fix_jee_hierarchy_data.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/governanceAudit.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/isolatedMaterializerEnforcement.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/manualMaterialization.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/rollbackAuthority.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/scaleMaterialization.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/securityRules.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/staleLeaseRecovery.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/studentCutover.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/triggerRuntime.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/universal_identity_poc.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/verify_syllabus_tree_logic.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/xp_cross_page.test.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/workers/queueWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/storageTrigger.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/syllabusLifecycleWorker.ts	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/test_firestore_rules.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/test_orchestrator.js	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/test_p09_acceptance_full.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/tsconfig.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/verification/write_authorization/verify5_p15_auth_candidate.json	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/workers/materialize_worker.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/workers/sentinel_worker.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+init_budget.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+lib/core/ai/ai_provider_config.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/ai_queue_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/ai_worker_router.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/local_repair_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/models/ai_task_type.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/refinery_ai_orchestrator.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/token_control_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/atomic_rule_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/battle_outcome_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/campaign_adaptation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/campaign_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/canonical_correction_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/constitutional_compliance_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/coverage_update_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/crucible_assembly_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/decision_trace_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/digibook_assembly_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/digibook_factory_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/document_intelligence_workers.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/docx_parse_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/duplicate_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/eligibility_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/exam_clock_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/explainability_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/forecast_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/founder_oversight_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/fusion_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/intervention_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/knowledge_expansion_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/learning_validation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/mastery_update_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/mcq_factory_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/mission_planner_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/momentum_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/node_factory_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/notice_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/notification_pipeline_workers.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/optimization_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/pdf_parse_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/pyq_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/pyq_linkage_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/recommendation_confidence_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/recruitment_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/risk_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/scenario_simulator.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/sentinel_extraction_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/strategic_drift_detector.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/study_material_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/success_probability_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/syllabus_detection_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/syllabus_pipeline_workers.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/time_budget_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/trust_safety_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/ai/workers/xlsx_parse_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/analytics/performance_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/atomic_coverage_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/atomic_mastery_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/atomic_risk_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/backend_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/blueprint_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/crucible_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/digibook_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/mission_variant_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/notification_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/offline_cache.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/question_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/realm_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/sentinel_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/storage_adapter.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/backend/sync_manager.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/diagnostic/diagnostic_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/chunking_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/coverage_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/coverage_validation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/crucible_coverage_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/digibook_publication_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/forecasting_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/mastery_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/mission_seed_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/publish_eligibility_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/pyq_linkage_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/question_engine/difficulty_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/question_engine/distractor_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/question_engine/mcq_generator.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/question_engine/template_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/readiness_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/realm_constitution_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/realm_creation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/recruitment_gate_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/risk_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/sentinel_seed_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/stress_test_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/engines/write_buffer_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/errors/global_error_handler.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/firebase/firestore_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/adaptive_mapper.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/atomic_risk_analyzer.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/completion_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/coverage_aggregation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/coverage_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/hierarchical_aggregation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/knowledge_cache.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/knowledge_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/knowledge_engine_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/knowledge_graph.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/mastery_aggregation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/mastery_decay_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/mastery_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/mastery_propagation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/momentum_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/node_linker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/performance_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/rebuild_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/reconciliation_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/risk_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/search_intelligence_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/knowledge/weak_node_detector.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/learning/learning_state_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/apos_decision_ledger_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/atomic_coverage_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/atomic_fact.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/atomic_mastery_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/atomic_risk_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/atomic_topic.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/audit_record.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/battle_session.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/campaign_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/coverage_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/decision_trace_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/digibook_block.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/drift_detection_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/exam_blueprint.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/exam_clock_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/fact_intelligence.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/fact_relationship.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/forecast_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/fusion_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/ingestion_record.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/mastery_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/micro_topic_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/mission_context.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/mission_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/mission_variant.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/momentum_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/node_runtime_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification/notification_evidence.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification/notification_feedback.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification/notification_graph.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification/notification_identity.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification/notification_intelligence.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification_candidate.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification_canonical.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification_event.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/notification_item.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/optimization_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/publish_eligibility_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/question_model.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/question_outcome.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/readiness_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/rebuild_candidate.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/rebuild_item.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/recruitment.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/recruitment_realm.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/risk_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/semantic_unit.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/sentinel_draft.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/success_probability_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/syllabus_canonical.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/time_budget_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/transformation_lineage.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/verification_candidate.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/models/worker_registry.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/navigation/main_navigation_shell.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/notifications/notification_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/notifications/notification_importance_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/router/app_router.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/ai_gateway_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/content_governance_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/docx_extraction_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/knowledge_content_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/pdf_extraction_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/sentinel_notification_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/sentinel_validation_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/support_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/truth_validation_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/services/universal_ingestion_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/telemetry/models/telemetry_record.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/telemetry/telemetry_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/theme/app_colors.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/theme/tactical_noir_background.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/utils/app_routes.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/utils/benchmark_util.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/utils/notification_weight_util.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/utils/responsive_helper.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/widgets/dark_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/widgets/paywall/premium_paywall_widget.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/widgets/premium_button.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/core/widgets/tactical_autocomplete_field.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/data/exam_seed_data.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/database/local/dashboard_local_datasource.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/core/admin_storage_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/core/admin_upload_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/admin_upload_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/command_center_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/repositories/access_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/repositories/health_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/repositories/sentinel_admin_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/data/repositories/worker_registry_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/dashboard/founder_activity_ledger.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/dashboard/founder_dashboard.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/intelligence/intelligence_command_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/intelligence/screens/intelligence_review_workspace.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/intelligence/widgets/worker_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/people_access/people_access_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/review_queue/digibook_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/sentinel/widgets/discovery_tile.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/system_health/dead_letter_queue.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/system_health/system_vitals.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/governance_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/recruitment_intelligence_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/upload_queue_panel.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/widgets/mission_asset_form.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/widgets/pipeline_progress_steps.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/admin/presentation/widgets/upload_center/widgets/upload_action_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/analytics/core/adaptive_difficulty_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/analytics/core/importance_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/analytics/core/weakness_detector.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/archive/data/archive_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/archive/presentation/screens/archive_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/assessment/core/diagnostic_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/auth/data/auth_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/auth/data/auth_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/auth/presentation/providers/auth_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/auth/presentation/screens/mission_realm_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/auth/presentation/screens/unified_identity_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/courses/data/course_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/battle_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/crucible_clock_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/crucible_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/crucible_master_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/leaderboard_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/engine/logic/tactical_schedule_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/crucible_cluster.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/crucible_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/crucible_protocol_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/crucible_schedule.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/mission_crucible_blueprint.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/student_crucible_ledger.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/models/tactical_schedule.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/providers/crucible_state_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/screens/battle_arena_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/screens/crucible_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/battle_engine_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/blueprint_node.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/mission_blueprint_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/rebuild_zone_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/roadmap_day.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/sacred_micro_test_chamber.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/tactical_progress_bar.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/tactical_roadmap_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/presentation/widgets/tactical_schedule_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/data/repositories/dashboard_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/providers/dashboard_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/screens/dashboard_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/battle_tools/battle_tool_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/battle_tools/battle_tools_grid.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/crucible/macro_war_status_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/notifications/latest_updates_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/shared/dashboard_constants.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/dashboard/presentation/widgets/syllabus/syllabus_constellation_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/data/subject_master.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/models/professional_credential.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/models/warrior_profile.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/providers/warrior_profile_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/services/profile_completion_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/services/warrior_profile_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/core/digibook_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/core/digibook_worker_trigger.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/data/models/digibook_chapter.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/data/models/digibook_revision.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/data/models/digibook_unit.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/data/repositories/digibook_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/domain/models/digibook_launch_args.dart	A	STAGED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/domain/services/digibook_canonical_bridge_service.dart	AM	STAGED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/domain/services/digibook_revision_service.dart	AM	STAGED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/models/digibook_content.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/models/digibook_session.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/presentation/widgets/live_digibook_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/exam/core/final_exam_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/exam/models/final_exam.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/home/presentation/screens/digi_book_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/mcq/core/mcq_fetch_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/mcq/core/mcq_worker_trigger.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/mcq/presentation/widgets/mcq_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/notes/presentation/screens/smart_notes_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/notifications/g2_notification_routing_rule.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/onboarding/presentation/screens/diagnostic_test_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/onboarding/presentation/screens/splash_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/data/repositories/sentinel_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/models/opportunity.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/models/opportunity_match.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/models/sentinel_metrics.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/presentation/screens/sentinel_center_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/presentation/widgets/sentinel_intelligence_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/providers/opportunities_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/providers/opportunity_match_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/providers/sentinel_intelligence_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/screens/opportunities_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/eligibility_alert_generator.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/notification_builder.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/opportunity_filter_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/opportunity_matching_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/opportunity_stats_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/recruitment_alert_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/sentinel_metrics_aggregator.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/services/sentinel_metrics_service.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/data/cache/realtime_cache_invalidation.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/crucible_personalization_blueprint_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_fluency_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_learning_state_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_mastery_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_prerequisite_state_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_retention_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_revision_closed_loop_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_revision_queue_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/student_treatment_decision_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/engines/syllabus_personalization_route_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/aaf_personalization_bridge.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/crucible_personalization_blueprint.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/student_evidence_event.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/student_learning_state.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/student_revision_queue.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/student_treatment_decision.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/domain/models/syllabus_personalization_route.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/personalization/engine/smart_entry_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/profile/data/models/user_profile_model.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/profile/presentation/screens/profile_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/progress/data/models/user_progress.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/progress/data/progress_cloud_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/progress_tracker/presentation/screens/progress_tracker_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/pyq/presentation/screens/pyq_vault_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/pyq/presentation/widgets/pyq_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/rebuild/core/rebuild_priority_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/core/retention_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/core/revision_worker_trigger.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/data/priority_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/data/revision_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/presentation/screens/revision_desk_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/revision/presentation/widgets/revision_card.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/core/autonomous_syllabus_pipeline.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/core/node_factory_worker.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/core/syllabus_breakdown_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/data/syllabus_repository.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/presentation/controllers/syllabus_controller.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/syllabus/presentation/screens/syllabus_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_arena/core/test_arena_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_arena/models/test_arena_result.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_arena/presentation/screens/test_arena_screen.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_engine/core/result_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_engine/core/test_submit_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_engine/core/test_timer_engine.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/main.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/main_web.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/shared/providers/session_provider.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/shared/session/session_manager.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/shared/widgets/command_header.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/shared/widgets/formatted_math_text.dart	AM	STAGED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/shared/widgets/governed_not_ready_panel.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/fdc/document_command_center.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/health/founder_student_health_web.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/mission_control/founder_mission_inventory.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/mission_control/mission_control_room.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/mission_control/mission_documents_tab.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/mission_control/mission_publish_readiness_panel.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/founder/mission_control/mission_variable_authority_panel.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/web/shared/unified_command_console.dart	M	MODIFIED_TRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+pipeline_diagnosis.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+pubspec.yaml	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+read_requested_pages.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+recover_pipeline.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+scratch_inspect_atoms.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+scratch_locate_pages.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+scratch_read_unit20.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+scratch_test_regex.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+test/benchmark_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/crucible_c1_runtime_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/crucible_c2_micro_factory_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/crucible_c3_student_scoped_clock_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_98day_ring_test.dart	AM	STAGED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_physical_preflight.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_read_access_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/deep_profile/career_profile_education_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/digibook/digibook_canonical_bridge_test.dart	AM	STAGED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/digibook/digibook_revision_pointer_switch_test.dart	A	STAGED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/knowledge/digibook_ready_gate_fail_closed_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/notifications/g2_routing_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/opportunities/career_signals_logic_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/opportunities/opportunities_loading_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/opportunities/opportunities_terminal_state_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/cache_invalidation_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/coaching_runtime_scenario_driver_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/idempotency_dedup_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/isolation_leakage_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/pers_isolation_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/crucible_personalization_blueprint_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/crucible_personalized_item_selector_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/digibook_personalization_integration_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/personalized_practice_route_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_coaching_support_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_evidence_event_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_evidence_policy_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_fluency_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_learning_state_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_learning_state_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_mastery_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_personalization_analytics_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_prerequisite_state_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_retention_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_revision_closed_loop_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_revision_queue_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_schedule_support_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/student_treatment_decision_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/personalization/recovery/syllabus_personalization_route_engine_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/syllabus/syllabus_hierarchy_ux_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/test_arena/test_arena_mission_adaptive_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/fixtures/career_signal_fixtures.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/seeding_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/student_journey/student_journey_fix2_visual_device_qa_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/student_journey/student_journey_fix3b_r1_visual_qa_test.dart	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+tools/academic_factory/run_ff04_verification.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/academic_factory/run_ff06_verification.js	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/favicon.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/icons/Icon-192.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/icons/Icon-512.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/icons/Icon-maskable-192.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/icons/Icon-maskable-512.png	M	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/dark-1x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/dark-2x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/dark-3x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/dark-4x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/light-1x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/light-2x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/light-3x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+web/splash/img/light-4x.png	D	MODIFIED_TRACKED	EVIDENCE	NO	Historical tool or documentation script
+.agents_BACKUP/	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+.gcloudignore	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+THE_CRUCIBLE_TEST_ARENA_CONSTITUTION_V3.md	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-hdpi/splash.png	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-mdpi/splash.png	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xhdpi/splash.png	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xxhdpi/splash.png	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable-night-xxxhdpi/splash.png	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+android/app/src/main/res/drawable/android12_splash_icon.xml	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+assets/data/digibook_lessons/	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+assets/data/verified_atomic_facts_cache.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+audit375_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+audit675_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+docs/authority/jee_b4_academic_cache.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_b4_academic_decompositions.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_main_2026_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787913133446_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787913139333_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787914132272_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787914136562_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787914755963_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787914761521_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787915419131_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787915424349_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787915518328_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787915525001_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787916156092_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787916157811_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787916880010_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787917441262_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787917447053_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787917711764_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787917716090_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918249585_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918257422_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918323476_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918329972_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918425230_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787918431814_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787924339725_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787924347361_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787924664333_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787924673891_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787925250328_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1787925264090_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788150861467_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788150876018_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788156104510_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788156113562_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788156412027_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788156418066_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788173804281_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788173836550_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788248214315_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788248227759_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788257042713_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788257061517_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788267378400_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788267392628_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788347941729_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788347976719_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788349591097_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788349643754_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351303322_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351342161_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351350578_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351366277_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351514678_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788351524646_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788355564191_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788355578789_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788357340158_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/jee_mission_1788357355022_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/neet_ug_2027_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/rpsc_2027_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555054_1_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555218_2_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555303_3_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555416_4_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555535_5_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555571_6_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555690_7_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555733_8_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555857_9_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/authority/xp_mission_1788355555901_10_authority_decision.json	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+docs/governance/	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/.secret.local	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_digibook_and_reconcile_corpus.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_major_packs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_question_schedule_bindings.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/audit_s01_packs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/b2_verification_engine.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/b2_verification_matrix_run_results.json	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+functions/build_digibook_authority_manifest.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/calibrate_authority_and_audit_375.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/check_canary_status.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/check_task_status_temp.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/commit_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/compute_physical_ncert_hashes.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/create_canary_task.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/debug_s01_match.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/discover_all_docs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/execute_git_and_authority_closeout.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/execute_latest_authority_and_100day_reconciliation.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/find_uploads.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/forensic_investigation.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/forensic_scan_workspace.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_chief_architect_crucible_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_crucible_student_panel_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_gate_integration_audit_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_rich_s02_to_s06_packs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_s02_to_s06_review_packs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_s07_to_s12_packs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_source_authority_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/generate_test_arena_foundation_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_detailed_tasks.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_exact_physical_counts.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_ff09_detailed_census.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_neet_docs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_neet_tasks.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_pyq_counts.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_real_student_session.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/get_student_attempts_audit.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/import_source_factory_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_51_gus.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_components.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_digibook_tsvs.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_draft_subjects.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_facts.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_latest_digibook_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_lesson_json_keys.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_node_ids.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_phy_gus.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_sample_drafts.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/inspect_thin_gus.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/isolated_test_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+functions/lib/academicFactory/services/materializationService.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/materializationService.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/staleLeaseRecovery.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/staleLeaseRecovery.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/staleLeaseRecoveryOrchestrator.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/academicFactory/services/staleLeaseRecoveryOrchestrator.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/services/	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/authority.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/authority.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/b3Hardening.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/b3Hardening.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/b4Hardening.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/b4Hardening.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/canonicalSourceAuthority.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/classifyHeldAtoms.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/classifyHeldAtoms.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/deltaAuthority.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/deltaAuthority.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/downstreamImpact.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/downstreamImpact.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_all_remaining_promoted.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_all_remaining_promoted.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_autonomous_factory.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_autonomous_factory.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_paper1_fasttrack.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/execute_paper1_fasttrack.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/finalizeMaterialization.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/finalizeMaterialization.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/fix_jee_hierarchy_data.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/fix_jee_hierarchy_data.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/genericB3.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/genericB3.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/genericStructuredSyllabus.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/genericStructuredSyllabus.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/governanceAudit.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/governanceAudit.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/isolatedMaterializerEnforcement.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/isolatedMaterializerEnforcement.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeFullE2E.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeFullE2E.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeMaterialization.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeMaterialization.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeVerificationHardened.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/jeeVerificationHardened.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/manualMaterialization.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/manualMaterialization.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/pagewiseWorker.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/pagewiseWorker.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/physicalPageAuthority.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/physicalPageAuthority.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/publishGate.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/publishGate.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/pyqGuard.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/pyqGuard.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/rollbackAuthority.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/rollbackAuthority.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/scaleMaterialization.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/scaleMaterialization.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/securityRules.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/securityRules.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/staleLeaseRecovery.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/staleLeaseRecovery.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/studentCutover.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/studentCutover.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/triggerRaceHardening.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/triggerRaceHardening.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/triggerRuntime.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/triggerRuntime.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/universal_identity_poc.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/universal_identity_poc.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/verify_syllabus_tree_logic.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/verify_syllabus_tree_logic.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/vertexMigration.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/vertexMigration.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/xp_cross_page.test.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/test/xp_cross_page.test.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/aafQueueWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/aafQueueWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/canonicalSourceReconciliationWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/canonicalSourceReconciliationWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/downstreamImpactWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/downstreamImpactWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/genericB3Worker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/genericB3Worker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/genericB4Worker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/genericB4Worker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/ingestionTrigger.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/ingestionTrigger.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/projectionAdapterWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/projectionAdapterWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/syllabusLifecycleWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/syllabusLifecycleWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/testArenaFinalScorerWorker.js	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/lib/workers/testArenaFinalScorerWorker.js.map	??	UNTRACKED	GENERATED	YES	Compiled TypeScript output in functions/lib/
+functions/list_active_missions.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/phase1_check_prod_status.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_debug_db.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_debug_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_find_pages.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_ping_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_print_env.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_read_records.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_search_doc.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_search_subcolls.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_test_direct.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/phase1_trigger_prod_b1.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/prove_rem_0001_0005.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/reconcile_and_audit_full_675.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/reconcile_s01_and_major_provenance.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/repair_and_audit_major.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/repair_and_audit_s01.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/run_gate_09_reviewer_assignment_tests.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/run_gate_11_cross_branch_reconciliation.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/run_isolated_test_direct.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/run_review_transactions_direct.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/scratch_read_production_gates.js	??	UNTRACKED	EVIDENCE	NO	Backend audit, repair, or migration scratch script
+functions/search_fact_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/canonical_source_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/mission_structure_authority.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/routing_classifier.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/scanned_extraction_service.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/services/scientific_corrector.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/services/genericStructuredSyllabus.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/services/physicalPageAuthority.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/test/authority.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/b3Hardening.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/b4Hardening.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/execute_all_remaining_promoted.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/execute_autonomous_factory.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/execute_paper1_fasttrack.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/genericB3.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/genericStructuredSyllabus.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/jeeMaterialization.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/jeeVerificationHardened.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/pagewiseWorker.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/physicalPageAuthority.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/triggerRaceHardening.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/test/vertexMigration.test.ts	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/src/workers/aafQueueWorker.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/canonicalSourceReconciliationWorker.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/genericB3Worker.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/genericB4Worker.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/ingestionTrigger.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/src/workers/testArenaFinalScorerWorker.ts	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/test/canonical_reconciliation_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/canonical_source_authority_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/canonical_source_rules_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/mission_lifecycle_emulator_roundtrip.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/seed_founder_visual_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/seed_mission_variable_emulator.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test/test_p06_sha_binding.js	??	UNTRACKED	EVIDENCE	NO	Backend test execution harness / verification script
+functions/test_document_rules_workspace.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/test_mission_portfolio_structure_21.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+functions/utils/trusted_runner.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+generate_final_backend_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+generate_strict41_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+lib/core/models/canonical_academic_ref.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/core/telemetry/student_route_telemetry.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/core/utils/temporal_normalizer.dart	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/crucible/core/crucible_canonical_schedules.dart	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/deep_profile/screens/career_profile_screen.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/digibook/domain/services/digibook_user_preferences_service.dart	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/presentation/screens/	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/digibook/presentation/widgets/visual/	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/opportunities/models/career_signal.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/opportunities/services/career_signal_engine.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/syllabus/presentation/providers/	??	UNTRACKED	ALREADY_INTEGRATED	NO	Matches active candidate in canonical-student-integration-06
+lib/features/test_arena/core/test_arena_fixture_harness.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/test_arena/models/test_arena_attempt.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/test_arena/models/test_arena_paper.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/test_arena/presentation/screens/test_arena_active_test_screen.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/features/test_arena/presentation/screens/test_arena_founder_harness_screen.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+lib/main_web_emulator.dart	??	UNTRACKED	UNIQUE_PRODUCT_WORK	NO	Unique lib file in root repo requiring preservation
+mat_test_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+ncert_hash_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+p09_independent_results.json	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+paper1_topics.json	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+s02_out.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+scripts/governance/	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+test/dump_crucible_checkpoints.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/auth/state_and_logout_authority_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_r10a_evidence_integrity_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_r10c_hardening_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_recovery_10b_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/crucible_screen_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/crucible/founder_video_regression_recovery_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/knowledge/knowledge_engine_provider_isolation_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/opportunities/career_signals_matrix_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/syllabus/right_practice_truth_and_drilldown_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/syllabus/syllabus_knowledge_node_reachability_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/syllabus/syllabus_search_and_navigation_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/syllabus/syllabus_visual_flow_and_overflow_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/features/test_arena/test_arena_runtime_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/find_canonical_syllabus.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/generate_fix10a_artifacts.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/generate_r10c_artifacts.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/icon_hashes.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/inspect_checklist.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/inspect_children.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/inspect_tree.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/inspect_tree_schema.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/make_safety_artifacts.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/print_crucible_models.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/print_from_maps.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/scan_timestamps.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/tool_audit.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/traverse_syllabus_tree.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/canonical_source_authority_ui_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/document_selected_workspace_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/final_document_delivery_closeout_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/final_professional_retouch_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/founder_operational_console_polish_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test/web/founder/mission_detail_selection_state_test.dart	??	UNTRACKED	EVIDENCE	NO	Historical inspection / forensic test script
+test_stderr.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+test_stdout.txt	??	UNTRACKED	GENERATED	YES	Temporary execution or dump output
+tool/	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/academic_factory/generate_neet_slice.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/academic_factory/quarantine_neet_slice.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/academic_factory/seed_first_micro_questions.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/academic_factory/seed_real_founder_uploads.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script
+tools/capture_founder_visual_evidence.js	??	UNTRACKED	EVIDENCE	NO	Historical tool or documentation script

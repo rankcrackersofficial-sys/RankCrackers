@@ -1,0 +1,26 @@
+{
+  "test_cases": [
+    {
+      "input": "neet_(ug)-2027",
+      "preserved_exact": "neet_(ug)-2027",
+      "passed": true
+    },
+    {
+      "input": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "preserved_exact": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "passed": true
+    },
+    {
+      "input": "jee_main_2026",
+      "preserved_exact": "jee_main_2026",
+      "passed": true
+    },
+    {
+      "input": "NEW_FUTURE_MISSION_2028_XYZ",
+      "preserved_exact": "NEW_FUTURE_MISSION_2028_XYZ",
+      "passed": true
+    }
+  ],
+  "mutation_count": 0,
+  "verdict": "OPAQUE_CASE_SENSITIVE_PRESERVED"
+}

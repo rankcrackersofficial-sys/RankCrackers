@@ -1,0 +1,62 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_selection_post",
+  "canonicalDisplayName": "SSC Selection Post",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "Phase-XIII (2025)",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["COMPUTER_BASED_EXAMINATION_MCQ"],
+    "unsupportedStages": [
+      { "stageName": "Skill Test / Data Entry / Typing / Computer Proficiency (Where Prescribed)", "reason": "Post-specific skill evaluation" }
+    ]
+  },
+  "examinationStructure": {
+    "examType": "COMPUTER_BASED_EXAMINATION",
+    "totalQuestions": 100,
+    "totalMarks": 200,
+    "durationMinutes": 60,
+    "negativeMarkingPerQuestion": 0.5,
+    "sections": [
+      { "sectionId": "gi_reasoning", "sectionName": "General Intelligence", "questions": 25, "marks": 50 },
+      { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 25, "marks": 50 },
+      { "sectionId": "quantitative_aptitude", "sectionName": "Quantitative Aptitude (Basic Arithmetic Skills for Matric / Quantitative for Higher)", "questions": 25, "marks": 50 },
+      { "sectionId": "english_language", "sectionName": "English Language (Basic Knowledge)", "questions": 25, "marks": 50 }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "QUALIFICATION_LEVEL",
+    "variants": [
+      {
+        "variantKey": "ssc_selection_post_matric",
+        "variantName": "Matriculation Level Posts",
+        "syllabusStandard": "Class 10th Difficulty Standard",
+        "educationalRequirement": "10th Standard / Secondary Pass"
+      },
+      {
+        "variantKey": "ssc_selection_post_10plus2",
+        "variantName": "Higher Secondary (10+2) Level Posts",
+        "syllabusStandard": "Class 12th Difficulty Standard",
+        "educationalRequirement": "12th Standard / Senior Secondary Pass"
+      },
+      {
+        "variantKey": "ssc_selection_post_graduation",
+        "variantName": "Graduation & Above Level Posts",
+        "syllabusStandard": "Graduate Degree Difficulty Standard",
+        "educationalRequirement": "Bachelor's Degree or higher from a recognized University"
+      }
+    ]
+  }
+}

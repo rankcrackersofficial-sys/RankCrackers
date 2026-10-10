@@ -1,0 +1,46 @@
+{
+  "opportunityActiveYes": 0,
+  "opportunityActiveNo": 5,
+  "opportunityActiveUnresolved": 1,
+  "processActiveYes": 1,
+  "processActiveNo": 2,
+  "processActiveUnresolved": 3,
+  "rows": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycleId": "RPSC-RAS-2024",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    },
+    {
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "opportunityActive": "NO",
+      "processActive": "NO"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "opportunityActive": "UNRESOLVED",
+      "processActive": "NO"
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycleId": "UPSC-CSE-2026",
+      "opportunityActive": "NO",
+      "processActive": "YES"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "opportunityActive": "NO",
+      "processActive": "UNRESOLVED"
+    }
+  ]
+}

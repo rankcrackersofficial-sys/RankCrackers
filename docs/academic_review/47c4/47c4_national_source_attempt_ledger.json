@@ -1,0 +1,222 @@
+{
+  "attempts": [
+    {
+      "missionId": "afcat",
+      "method": "METHOD_01",
+      "queryOrUrl": "https://careerairforce.gov.in/",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Official IAF Career site verified",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://careerairforce.gov.in/notification"
+      ],
+      "nextAction": "Open notifications"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_02",
+      "queryOrUrl": "https://careerairforce.gov.in/node/386",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Official AFCAT 02/2026 node identified",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf"
+      ],
+      "nextAction": "Follow exact PDF"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_04",
+      "queryOrUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact PDF indexed and content verified; direct local fetch timed out",
+      "httpState": "TIMEOUT",
+      "linksDiscovered": [],
+      "nextAction": "Retain URL evidence and retry with monitored HTTP adapter"
+    },
+    {
+      "missionId": "afcat",
+      "method": "METHOD_10",
+      "queryOrUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Direct PowerShell fetch timed out at official host",
+      "httpState": "TLS_CONNECT_TIMEOUT",
+      "linksDiscovered": [],
+      "nextAction": "Do not claim bytes"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_01",
+      "queryOrUrl": "https://www.joinindianarmy.nic.in/",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Canonical portal identified; exact child content not returned by research client",
+      "httpState": "TECHNICAL_ACCESS_GAP",
+      "linksDiscovered": [],
+      "nextAction": "Use MoD/PIB breadcrumb"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves registration 13 Feb–1 Apr 2026, CBT, Rs 250 fee, June exam and Army portal",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48"
+      ],
+      "nextAction": "Check schedule release"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2263243&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves 1–12 June 2026 online CEE schedule",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48"
+      ],
+      "nextAction": "Check categories/results"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "method": "METHOD_08",
+      "queryOrUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2284249&lang=2&reg=48",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "MoD/PIB proves GD, Technical, Office Assistant/SKT, Tradesman, Women MP and regular-cadre categories",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Continue direct-notice/syllabus discovery"
+    },
+    {
+      "missionId": "agniveervayu",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:iafrecruitment.edcil.co.in Agniveervayu 01/2027",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact official PDF discovered",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+      ],
+      "nextAction": "Verify scheme and policy"
+    },
+    {
+      "missionId": "agniveervayu",
+      "method": "METHOD_04",
+      "queryOrUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact notice verifies objective Phase-I and three subject-track choices",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Record ephemeral question-paper policy"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_cgl question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.034Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Result%20Write-up%20CGLE%202024%20Tier%20I_51224.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_chsl",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_chsl question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Final%20Answer%20Key%20and%20marks%20CHSLE%202024%20Tier-I161024.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_je",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_je question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/writeup_23032026.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_selection_post question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Authority resource found; no exact persistent child surfaced.",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_stenographer question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Authority resource found; no exact persistent child surfaced.",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_hindi_translators question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Write_up_CHT2024_PaperI_140225.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_mts_havaldar question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Authority resource found; no exact persistent child surfaced.",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_cpo",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_cpo question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/writeup_21042026.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    },
+    {
+      "missionId": "ssc_gd",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:ssc.gov.in ssc_gd question paper final answer key",
+      "timestamp": "2026-09-10T06:36:03.036Z",
+      "result": "Official release notice found; paper access was login/time-window limited.",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://ssc.gov.in/api/attachment/uploads/masterData/AnswerKeys/Write_Up_English_26062025.pdf"
+      ],
+      "nextAction": "Do not synthesize child URLs."
+    }
+  ],
+  "blockerQualityGate": {
+    "attemptLedgerExists": true,
+    "applicableDiscoveryMethodsExhaustedForDeclaredBlockers": true,
+    "exactFailureReasonCaptured": true,
+    "officialBreadcrumbsRecorded": true
+  }
+}

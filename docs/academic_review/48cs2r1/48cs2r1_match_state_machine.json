@@ -1,0 +1,16 @@
+{
+  "gate": "GATE_48CS2R1_MATCH_STATE_MACHINE",
+  "generatedAt": "2026-09-10T11:26:52.327Z",
+  "states": {
+    "ELIGIBLE": "All mandatory official rules are proven satisfied by verified student profile data.",
+    "NOT_ELIGIBLE": "At least one mandatory official rule is proven failed (e.g. age exceeded, minimum qualification not met).",
+    "MORE_INFORMATION_NEEDED": "A required student profile field is missing/unpopulated, preventing complete rule evaluation.",
+    "NOT_EVALUATED": "Official rule is unavailable, corrupted, or unsupported by automated rule parser.",
+    "LIKELY_ELIGIBLE": "Provisional match permitted only under explicit governance contract (never masks unresolved authoritative rules)."
+  },
+  "collapsePreventionRule": {
+    "principle": "ZERO_FALSE_INELIGIBLE_INCOMPLETE_COLLAPSE",
+    "logic": "If any rule evaluates to FAILED, the state is strictly NOT_ELIGIBLE, even if other profile fields are unpopulated. Missing fields only cause MORE_INFORMATION_NEEDED when no rules have failed.",
+    "metric": "KNOWN_INELIGIBLE_MAPPED_TO_INCOMPLETE_COUNT = 0"
+  }
+}

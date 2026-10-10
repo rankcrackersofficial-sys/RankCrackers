@@ -1,0 +1,54 @@
+{
+  "gate": "GATE_48CS2_EFFECTIVE_STATE_REDUCER",
+  "generatedAt": "2026-09-10T11:06:36.541Z",
+  "reducerModule": "functions/services/career_signal_reducer.js",
+  "pureFunction": "reduceEventsToEffectiveState(initialCycle, events, nowIso)",
+  "signalCalculationRules": {
+    "opportunitySignalActive": "Evaluates to true IF status in [UPCOMING, ACTIVE] AND (nowIso <= applicationWindow.endDate)",
+    "processUpdateSignalActive": "Evaluates to true IF status in [IN_SELECTION, EXAM_COMPLETED, RESULT_STAGE]"
+  },
+  "statusTransitionMatrix": [
+    {
+      "status": "UPCOMING",
+      "oppActive": true,
+      "procActive": false,
+      "reason": "Upcoming notice signals future opportunity"
+    },
+    {
+      "status": "ACTIVE",
+      "oppActive": true,
+      "procActive": false,
+      "reason": "Students can actively apply while window is open"
+    },
+    {
+      "status": "IN_SELECTION",
+      "oppActive": false,
+      "procActive": true,
+      "reason": "Application window closed; selection/admit cards active"
+    },
+    {
+      "status": "EXAM_COMPLETED",
+      "oppActive": false,
+      "procActive": true,
+      "reason": "Exam conducted, awaiting keys and results"
+    },
+    {
+      "status": "RESULT_STAGE",
+      "oppActive": false,
+      "procActive": true,
+      "reason": "Result lists and cutoffs active"
+    },
+    {
+      "status": "CLOSED",
+      "oppActive": false,
+      "procActive": false,
+      "reason": "Recruitment cycle fully completed; zero signals active"
+    },
+    {
+      "status": "CANCELLED",
+      "oppActive": false,
+      "procActive": false,
+      "reason": "Recruitment cycle aborted; zero signals active"
+    }
+  ]
+}

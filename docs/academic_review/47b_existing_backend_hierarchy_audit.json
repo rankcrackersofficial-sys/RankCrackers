@@ -1,0 +1,67 @@
+{
+  "auditName": "47b_existing_backend_hierarchy_audit",
+  "executedAt": "2026-09-10T04:55:45.290Z",
+  "forensicScanResults": {
+    "authorityRegistry": {
+      "status": "CANONICAL_EXTENDED_IN_EXISTING_PROJECTIONS",
+      "topLevelCollectionRequired": false,
+      "explanation": "Authority ownership and hierarchy are cleanly represented via canonical fields (authorityGroupKey, authorityDisplayName, organizationCode, jurisdictionLevel, stateCode, stateName, region, sector) embedded across the three primary projections (mission_realms, recruitments, student_mission_catalog). No parallel top-level collection is required."
+    },
+    "authorityGroupKey": {
+      "status": "CANONICAL",
+      "examples": [
+        "nta",
+        "upsc",
+        "ssc",
+        "rpsc",
+        "uppsc",
+        "mppsc",
+        "bpsc"
+      ]
+    },
+    "jurisdictionLevel": {
+      "status": "CANONICAL",
+      "allowedValues": [
+        "CENTRAL",
+        "STATE",
+        "UT"
+      ]
+    },
+    "stateCodeAndName": {
+      "status": "CANONICAL",
+      "normalizationRule": "2-letter uppercase ISO code for STATE/UT (e.g., RJ, UP, MP, BR). Normalized to null for CENTRAL."
+    },
+    "missionGroupingAndRealms": {
+      "status": "CANONICAL",
+      "primaryCollections": [
+        "mission_realms",
+        "recruitments",
+        "student_mission_catalog"
+      ]
+    },
+    "founderMissionControl": {
+      "status": "SUPPORTED",
+      "implementationFiles": [
+        "functions/callable/handle_sentinel_action.js",
+        "functions/services/mission_variable_authority.js",
+        "lib/founder_mission_inventory.dart"
+      ]
+    },
+    "missionCreationServices": {
+      "status": "EXTENDED",
+      "files": [
+        "functions/canonical_mission_registry.js",
+        "functions/generic_authority_mission_materializer.js",
+        "functions/callable/handle_sentinel_action.js"
+      ]
+    },
+    "sourceMonitoringRegistry": {
+      "status": "CANONICAL",
+      "paths": [
+        "mission_realms/{missionId}/official_documents",
+        "source_documents",
+        "official_source_oracle"
+      ]
+    }
+  }
+}

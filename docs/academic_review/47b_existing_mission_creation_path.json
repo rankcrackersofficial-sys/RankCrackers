@@ -1,0 +1,37 @@
+{
+  "auditName": "47b_existing_mission_creation_path",
+  "executedAt": "2026-09-10T04:55:45.313Z",
+  "existingComponents": {
+    "canonicalMissionRegistry": {
+      "path": "functions/canonical_mission_registry.js",
+      "functions": [
+        "resolveCanonicalMissionId",
+        "validateOrResolveId"
+      ],
+      "immutablePilotIds": [
+        "jee_main_2026",
+        "neet_(ug)-2027",
+        "RPSC_FIRST_GRADE2026_2026_1782713222215"
+      ]
+    },
+    "callableSentinelActions": {
+      "path": "functions/callable/handle_sentinel_action.js",
+      "actions": [
+        "launch_exam_mission",
+        "manifest_realm",
+        "update_mission_variables"
+      ],
+      "mirrorFunction": "mirrorMissionShellToStudentCatalog"
+    },
+    "studentCatalogBackfill": {
+      "path": "functions/backfill_student_mission_catalog.js",
+      "payloadBuilder": "buildCatalogPayload"
+    }
+  },
+  "gate47bExtensions": {
+    "bulkMaterializerEngine": "functions/generic_authority_mission_materializer.js",
+    "yearlessPermanentMissionIds": "Enforced for new major exam missions (e.g. upsc_cse_prelims, ssc_cgl, rpsc_ras_prelims)",
+    "dryRunDiffEngine": "Computes SHA-256 semantic digests of payloads to eliminate unconditional updatedAt changes on no-op",
+    "studentVisibilityGate": "Enforces strict source-grounding, authority resolution, and hierarchy path verification before student discovery"
+  }
+}

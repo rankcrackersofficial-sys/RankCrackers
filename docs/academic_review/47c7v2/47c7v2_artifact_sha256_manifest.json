@@ -1,0 +1,59 @@
+{
+  "manifestCode": "RC_47C7V2_ARTIFACT_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T07:56:44.325Z",
+  "totalArtifacts": 10,
+  "files": [
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_afcat_official_oracle.json",
+      "byteLength": 2319,
+      "sha256": "ca5a0830f794c6c9239b01a32f10fa18bd891084681b8feeb5a8e3555814c3e0"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_afcat_route_oracle.json",
+      "byteLength": 3255,
+      "sha256": "74bafd65011f1072cdf33d204c6daa3bdcea02adf2d3a284275bbfa9798a4279"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_nta_s3waas_binding_oracle.json",
+      "byteLength": 1505,
+      "sha256": "1e42e8b65fd55b1ce59e0282a34ea2344ed9f89ea04c3ff3b63bec604a700d7a"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_ib_completeness_oracle.json",
+      "byteLength": 3169,
+      "sha256": "5c10a1bcc1b41b9dfe09942cb3faf89b3912b1a893246a5383ef00319672e9d5"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_epfo_completeness_oracle.json",
+      "byteLength": 3709,
+      "sha256": "1f1239f3932e10e5559d5603d3757af59ba2831dc74d67a310693fc83e3c9c1f"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_ibps_identity_oracle.json",
+      "byteLength": 2141,
+      "sha256": "cf71992fb7caa2a37085372db33a9562fee152fcffc9bd6a261eb442ecc07338"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_ctet_level_oracle.json",
+      "byteLength": 1647,
+      "sha256": "2fcd12e12ad9a5b042422817f072adb18c684d41d4e5d98cf24886aaa8c35e09"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_materializer_contract_snapshot.json",
+      "byteLength": 2237,
+      "sha256": "55f271d589200e1ad81fc29099ac5d63e7e2707eaba3baebf2fb5349024ed8b6"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_47c8_verifier_self_audit.json",
+      "byteLength": 1298,
+      "sha256": "c860968fcdca14d7965bb6f6df59cac59f59cdf41563b50157c58a1d45387527"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v2/47c7v2_final_report.md",
+      "byteLength": 7486,
+      "sha256": "2fd29a9f0ff73da0dfc79147a8348bc14c8030f82d4992d44e3ae1efa151ce59"
+    }
+  ],
+  "pendingGenerationHashCount": 0,
+  "mismatchCount": 0
+}

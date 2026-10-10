@@ -1,0 +1,358 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CareerRulebookPackage",
+  "version": "2.0.0",
+  "description": "Authoritative schema for recruitment rulebook packages establishing the trust boundary between ingestion and matching engines.",
+  "type": "object",
+  "required": [
+    "packageId",
+    "cycleId",
+    "authorityId",
+    "baseNotification",
+    "ruleFamilyCoverage",
+    "vacancyMatrix"
+  ],
+  "properties": {
+    "packageId": {
+      "type": "string",
+      "description": "Unique immutable package identifier (e.g. pkg_rpsc_ras_2026_v1)."
+    },
+    "cycleId": {
+      "type": "string",
+      "description": "Recruitment cycle identifier bound to official exam notification."
+    },
+    "permanentMissionId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Associated recurring mission ID, or null for one-off recruitments."
+    },
+    "authorityId": {
+      "type": "string",
+      "description": "Exam conducting authority key (e.g. auth_in_rj_rpsc, auth_in_gov_upsc)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Official recruitment advertisement title."
+    },
+    "advertisementNumber": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Official advertisement or notice number."
+    },
+    "baseNotification": {
+      "type": "object",
+      "required": [
+        "documentIdentity",
+        "sourceState"
+      ],
+      "properties": {
+        "documentIdentity": {
+          "type": "string"
+        },
+        "officialNoticeNumber": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "issueDate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "documentSha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourceState": {
+          "type": "string",
+          "enum": [
+            "URL_FOUND",
+            "METADATA_INDEXED",
+            "BYTES_INGESTED",
+            "SHA_VERIFIED"
+          ]
+        },
+        "officialSourceUrl": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "applicableCorrigenda": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "documentIdentity",
+          "sourceState"
+        ],
+        "properties": {
+          "documentIdentity": {
+            "type": "string"
+          },
+          "officialNoticeNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "issueDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "documentSha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceState": {
+            "type": "string",
+            "enum": [
+              "URL_FOUND",
+              "METADATA_INDEXED",
+              "BYTES_INGESTED",
+              "SHA_VERIFIED"
+            ]
+          },
+          "officialSourceUrl": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "latestKnownOfficialNotice": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "documentIdentity": {
+          "type": "string"
+        },
+        "noticeDate": {
+          "type": "string"
+        }
+      }
+    },
+    "eligibilityRules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ruleId",
+          "ruleType",
+          "officialValue"
+        ],
+        "properties": {
+          "ruleId": {
+            "type": "string"
+          },
+          "ruleType": {
+            "type": "string"
+          },
+          "officialValue": {
+            "type": [
+              "string",
+              "number",
+              "array"
+            ]
+          },
+          "category": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceDocumentId": {
+            "type": "string"
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "ruleFamilyCoverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "family",
+          "resolutionStatus",
+          "coverageStatus"
+        ],
+        "properties": {
+          "family": {
+            "type": "string",
+            "enum": [
+              "AGE",
+              "EDUCATION",
+              "DISCIPLINE",
+              "DOMICILE",
+              "EXPERIENCE",
+              "REGISTRATION",
+              "PHYSICAL_STANDARD",
+              "CATEGORY_OR_RESERVATION",
+              "SPECIAL_CERTIFICATE",
+              "OTHER_OFFICIAL_CONDITION"
+            ]
+          },
+          "resolutionStatus": {
+            "type": "string",
+            "enum": [
+              "RULE_PRESENT_VERIFIED",
+              "RULE_ABSENCE_VERIFIED",
+              "RULE_UNRESOLVED"
+            ]
+          },
+          "coverageStatus": {
+            "type": "string",
+            "enum": [
+              "EXHAUSTIVE",
+              "PARTIAL",
+              "NOT_APPLICABLE_VERIFIED",
+              "UNAUDITED"
+            ]
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "absenceAttestation": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "ruleFamily": {
+                "type": "string"
+              },
+              "cycleId": {
+                "type": "string"
+              },
+              "authoritativeDocumentsReviewed": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "sourceScope": {
+                "type": "string"
+              },
+              "evidenceRefs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "reviewStatus": {
+                "type": "string",
+                "enum": [
+                  "AUDITED_ABSENCE_CONFIRMED"
+                ]
+              },
+              "attestationReason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "vacancyMatrix": {
+      "type": "object",
+      "required": [
+        "coverageStatus",
+        "rows"
+      ],
+      "properties": {
+        "coverageStatus": {
+          "type": "string",
+          "enum": [
+            "COMPLETE_OFFICIAL_TABLE",
+            "PARTIAL_TABLE",
+            "TOTAL_SEATS_ONLY",
+            "UNAUDITED"
+          ]
+        },
+        "totalSeats": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "vacancies"
+            ],
+            "properties": {
+              "rowId": {
+                "type": "string"
+              },
+              "postCode": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
+              },
+              "horizontalQuota": {
+                "type": "string"
+              },
+              "vacancies": {
+                "type": "number"
+              },
+              "evidenceRefs": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "amendmentAudit": {
+      "type": "object",
+      "properties": {
+        "auditScope": {
+          "type": "string"
+        },
+        "auditWindowThrough": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "packageSemanticHash": {
+      "type": "string",
+      "description": "Pure deterministic SHA-256 hash over immutable canonical content."
+    }
+  }
+}

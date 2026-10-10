@@ -1,0 +1,66 @@
+{
+  "gate": "GATE_48CS2R2",
+  "title": "Report vs Physical Code Consistency Audit",
+  "inspectedModules": {
+    "functions/services/career_signal_models.js": {
+      "exportedSymbols": [
+        "CANONICAL_RECRUITMENT_CYCLE_STATUS",
+        "RECRUITMENT_CYCLE_STATUS",
+        "OPPORTUNITY_KIND",
+        "CAREER_SIGNAL_EVENT_TYPE",
+        "VERIFICATION_STATE",
+        "PARTICIPATION_STATE",
+        "ELIGIBILITY_STATUS",
+        "MATCH_RESULT_STATE",
+        "VACANCY_APPLICABILITY_STATUS",
+        "VERTICAL_CATEGORY",
+        "HORIZONTAL_CATEGORY",
+        "normalizeCycleStatus",
+        "normalizeEventType",
+        "isUpcoming",
+        "isActiveApplication",
+        "canonicalJsonStringify",
+        "computeSemanticHash",
+        "computeCareerSignalEventId",
+        "normalizeSourceProvenance",
+        "normalizeNotificationCandidate",
+        "normalizeCareerSignalEvent",
+        "normalizeCareerSignalView",
+        "normalizeNotificationEvent",
+        "normalizeRecruitmentCycle",
+        "normalizeCareerProfile"
+      ],
+      "canonicalEnumLength": 12,
+      "competingLegacyMembersExported": false
+    },
+    "functions/services/career_signal_reducer.js": {
+      "exportedSymbols": [
+        "computeActiveSignalFlags",
+        "reduceEventsToEffectiveState"
+      ],
+      "handlesCycleClosed": true,
+      "handlesFinalResultDeclared": true
+    },
+    "functions/services/career_signal_matching_engine.js": {
+      "exportedSymbols": [
+        "calculateAgeYears",
+        "findOfficialAgeRelaxationRule",
+        "evaluateSingleRule",
+        "evaluateApplicableVacancies",
+        "evaluateCareerSignalPersonalization"
+      ],
+      "hasHardcodedRelaxation": false,
+      "hasSyntheticEventIdSynthesis": false,
+      "hasRuleIdStringHeuristics": false,
+      "hasDomicileAutoMatch": false
+    }
+  },
+  "auditFindings": {
+    "discrepancyCount": 0,
+    "contradictionCount": 0,
+    "status": "100% CONSISTENT"
+  },
+  "verificationMetric": {
+    "REPORT_CODE_CONTRADICTION_COUNT": 0
+  }
+}

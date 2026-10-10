@@ -1,0 +1,85 @@
+{
+  "count": 16,
+  "rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "psssb_patwari",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "rj_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "cg_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "mh_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "lane": "ARTICLE315",
+      "blocker": "No mission-specific official notification/rules/calendar/result source was verified within bounded search."
+    },
+    {
+      "missionId": "uppsc_pcs_j_prelims",
+      "lane": "JUDICIAL",
+      "blocker": "Official homepage known, but exact notification plus objective preliminary-stage evidence was not verified within bounded search."
+    },
+    {
+      "missionId": "bpsc_judicial_service_prelims",
+      "lane": "JUDICIAL",
+      "blocker": "Official homepage known, but exact notification plus objective preliminary-stage evidence was not verified within bounded search."
+    },
+    {
+      "missionId": "ppsc_pcs_j_prelims",
+      "lane": "JUDICIAL",
+      "blocker": "Official homepage known, but exact notification plus objective preliminary-stage evidence was not verified within bounded search."
+    },
+    {
+      "missionId": "hpsc_hcs_j_prelims",
+      "lane": "JUDICIAL",
+      "blocker": "Official homepage known, but exact notification plus objective preliminary-stage evidence was not verified within bounded search."
+    },
+    {
+      "missionId": "tripura_tet",
+      "lane": "TRIPURA_PATTERN",
+      "blocker": "Exact official TRBT prospectus bytes unavailable; all 11 pattern fields remain uncertified."
+    }
+  ]
+}

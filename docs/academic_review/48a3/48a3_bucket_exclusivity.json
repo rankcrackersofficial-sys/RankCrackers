@@ -1,0 +1,843 @@
+{
+  "MULTI_BUCKET_ID_COUNT": 24,
+  "NO_BUCKET_ID_COUNT": 0,
+  "multiBucketIds": [
+    {
+      "missionId": "cg_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "jk_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "mh_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "psssb_patwari",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "rj_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "uk_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "upsssc_vdo",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_UNRESOLVED"
+      ]
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "buckets": [
+        "STATE_UT_CLEAN",
+        "ARTICLE315_SUPPORTED"
+      ]
+    }
+  ],
+  "noBucketIds": [],
+  "missionBucketMembershipMap": {
+    "afcat": [
+      "NATIONAL_CLEAN"
+    ],
+    "agniveervayu": [
+      "NATIONAL_CLEAN"
+    ],
+    "an_erecruitment_chsl": [
+      "STATE_UT_HOLD"
+    ],
+    "an_erecruitment_cml": [
+      "EXCLUDED"
+    ],
+    "an_police_constable_si": [
+      "STATE_UT_HOLD"
+    ],
+    "appsc_arunachal_cce": [
+      "STATE_UT_CLEAN"
+    ],
+    "appsc_group1": [
+      "STATE_UT_CLEAN"
+    ],
+    "appsc_group2": [
+      "STATE_UT_CLEAN"
+    ],
+    "apsc_cce": [
+      "STATE_UT_CLEAN"
+    ],
+    "apslprb_sct_pc": [
+      "STATE_UT_CLEAN"
+    ],
+    "apslprb_sct_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "apssb_cgl_csle": [
+      "STATE_UT_CLEAN"
+    ],
+    "army_agniveer_cee": [
+      "NATIONAL_CLEAN"
+    ],
+    "arunachal_police_constable": [
+      "STATE_UT_CLEAN"
+    ],
+    "bpsc_cce_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "bpsc_judicial_service_prelims": [
+      "JUDICIAL_UNRESOLVED"
+    ],
+    "bpsc_tre": [
+      "STATE_UT_CLEAN"
+    ],
+    "bpssc_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "bse_odisha_otet": [
+      "STATE_UT_CLEAN"
+    ],
+    "bseb_stet": [
+      "STATE_UT_CLEAN"
+    ],
+    "bssc_cgl": [
+      "STATE_UT_CLEAN"
+    ],
+    "bssc_inter_level": [
+      "STATE_UT_CLEAN"
+    ],
+    "cbse_ctet": [
+      "NATIONAL_CLEAN"
+    ],
+    "cg_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "cgpsc_state_service": [
+      "STATE_UT_CLEAN"
+    ],
+    "cgvyapam_cgtet": [
+      "STATE_UT_CLEAN"
+    ],
+    "chandigarh_jbt_teacher": [
+      "STATE_UT_CLEAN"
+    ],
+    "chandigarh_police_asi": [
+      "STATE_UT_CLEAN"
+    ],
+    "chandigarh_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "chandigarh_tgt_teacher": [
+      "STATE_UT_CLEAN"
+    ],
+    "csbc_bihar_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "delhi_judicial_service_prelims": [
+      "JUDICIAL_CONFIRMED"
+    ],
+    "delhi_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "delhi_police_si": [
+      "POINTER"
+    ],
+    "dnhdd_ssb_group_bc": [
+      "STATE_UT_CLEAN"
+    ],
+    "dsssb_delhi_pgt": [
+      "STATE_UT_CLEAN"
+    ],
+    "dsssb_delhi_prt": [
+      "STATE_UT_CLEAN"
+    ],
+    "dsssb_delhi_tgt": [
+      "STATE_UT_CLEAN"
+    ],
+    "dsssb_junior_assistant_ldc": [
+      "STATE_UT_CLEAN"
+    ],
+    "epfo_assistant_provident_fund_commissioner": [
+      "NATIONAL_HOLD"
+    ],
+    "epfo_enforcement_officer_accounts_officer": [
+      "NATIONAL_HOLD"
+    ],
+    "ga_police_recruitment": [
+      "STATE_UT_CLEAN"
+    ],
+    "gauhc_ajs_grade3_prelims": [
+      "JUDICIAL_CONFIRMED"
+    ],
+    "gprb_lokrakshak": [
+      "STATE_UT_CLEAN"
+    ],
+    "gpsc_class_1_2": [
+      "STATE_UT_CLEAN"
+    ],
+    "gpsc_goa_civil_service": [
+      "STATE_UT_CLEAN"
+    ],
+    "gpssb_talati": [
+      "STATE_UT_CLEAN"
+    ],
+    "gssc_goa_group_c": [
+      "STATE_UT_CLEAN"
+    ],
+    "gsssb_cce": [
+      "STATE_UT_CLEAN"
+    ],
+    "haryana_htet": [
+      "STATE_UT_CLEAN"
+    ],
+    "haryana_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "haryana_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "hp_tet": [
+      "STATE_UT_CLEAN"
+    ],
+    "hppsc_hpas_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "hppsc_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "hprca_group_c_common": [
+      "STATE_UT_CLEAN"
+    ],
+    "hpsc_hcs_j_prelims": [
+      "JUDICIAL_UNRESOLVED"
+    ],
+    "hpsc_hcs_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "hssc_cet_group_c": [
+      "STATE_UT_CLEAN"
+    ],
+    "hssc_cet_group_d": [
+      "STATE_UT_CLEAN"
+    ],
+    "ib_acio_ii_executive": [
+      "NATIONAL_HOLD"
+    ],
+    "ib_security_assistant_executive": [
+      "NATIONAL_HOLD"
+    ],
+    "ibps_crp_rrb_office_assistant": [
+      "NATIONAL_CLEAN"
+    ],
+    "ibps_crp_rrb_officers": [
+      "NATIONAL_CLEAN"
+    ],
+    "ibps_csa": [
+      "NATIONAL_CLEAN"
+    ],
+    "ibps_po_mt": [
+      "NATIONAL_CLEAN"
+    ],
+    "ibps_so": [
+      "NATIONAL_CLEAN"
+    ],
+    "jac_jtet": [
+      "STATE_UT_CLEAN"
+    ],
+    "jee_main_2026": [
+      "NATIONAL_CLEAN"
+    ],
+    "jk_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "jk_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "jkpsc_cce_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "jkssb_graduate_level": [
+      "STATE_UT_CLEAN"
+    ],
+    "jpsc_cce_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "jrbt_tripura_group_cd": [
+      "STATE_UT_CLEAN"
+    ],
+    "jssc_cgl": [
+      "STATE_UT_CLEAN"
+    ],
+    "jssc_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "kea_fda_sda": [
+      "STATE_UT_CLEAN"
+    ],
+    "kpsc_kas_gp": [
+      "STATE_UT_CLEAN"
+    ],
+    "kpsc_kl_10th_plus2_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "kpsc_kl_degree_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "kpsc_kl_kas": [
+      "STATE_UT_CLEAN"
+    ],
+    "kpsc_kl_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "ksp_cpc": [
+      "STATE_UT_CLEAN"
+    ],
+    "ksp_psi": [
+      "STATE_UT_CLEAN"
+    ],
+    "ladakh_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "lahdc_dssrb_district_cadre": [
+      "STATE_UT_CLEAN"
+    ],
+    "ld_admin_group_c": [
+      "EXCLUDED"
+    ],
+    "manipur_police_constable": [
+      "STATE_UT_HOLD"
+    ],
+    "meghalaya_crb_police": [
+      "STATE_UT_CLEAN"
+    ],
+    "mh_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "mizoram_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "mizoram_subordinate_services": [
+      "EXCLUDED"
+    ],
+    "mpesb_group2_subgroup4": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpesb_mptet": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpesb_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "mphc_civil_judge_prelims": [
+      "JUDICIAL_CONFIRMED"
+    ],
+    "mppsc_state_service": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpsc_group_bc_combined": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpsc_manipur_mcscc": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpsc_meghalaya_mcs": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpsc_mizoram_mcs": [
+      "STATE_UT_CLEAN"
+    ],
+    "mpsc_rajyaseva": [
+      "STATE_UT_CLEAN"
+    ],
+    "mscepune_mahatet": [
+      "STATE_UT_CLEAN"
+    ],
+    "mssc_manipur_group_cd": [
+      "STATE_UT_HOLD"
+    ],
+    "nabard_grade_a": [
+      "NATIONAL_CLEAN"
+    ],
+    "nagaland_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "navy_agniveer_mr": [
+      "NATIONAL_CLEAN"
+    ],
+    "navy_agniveer_ssr": [
+      "NATIONAL_CLEAN"
+    ],
+    "neet_(ug)-2027": [
+      "NATIONAL_CLEAN"
+    ],
+    "npsc_nagaland_ctse": [
+      "EXCLUDED"
+    ],
+    "npsc_nagaland_ncs": [
+      "STATE_UT_CLEAN"
+    ],
+    "nssb_nagaland_csre": [
+      "STATE_UT_CLEAN"
+    ],
+    "nta_csir_ugc_net": [
+      "NATIONAL_CLEAN"
+    ],
+    "nta_cuet_pg": [
+      "NATIONAL_CLEAN"
+    ],
+    "nta_cuet_ug": [
+      "NATIONAL_CLEAN"
+    ],
+    "nta_icar_aieea_pg": [
+      "NATIONAL_HOLD"
+    ],
+    "nta_nchm_jee": [
+      "NATIONAL_HOLD"
+    ],
+    "nta_ugc_net": [
+      "NATIONAL_CLEAN"
+    ],
+    "odisha_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "opsc_ocs_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "ossc_cgl": [
+      "STATE_UT_CLEAN"
+    ],
+    "osssc_cre_combined": [
+      "STATE_UT_CLEAN"
+    ],
+    "ppsc_pcs_j_prelims": [
+      "JUDICIAL_UNRESOLVED"
+    ],
+    "ppsc_pscce_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "psssb_clerk": [
+      "STATE_UT_CLEAN"
+    ],
+    "psssb_patwari": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "punjab_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "punjab_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "punjab_pstet": [
+      "STATE_UT_CLEAN"
+    ],
+    "py_dpar_clerk_vao": [
+      "STATE_UT_HOLD"
+    ],
+    "py_police_si_pc": [
+      "STATE_UT_HOLD"
+    ],
+    "rbi_assistant": [
+      "NATIONAL_CLEAN"
+    ],
+    "rbi_grade_b": [
+      "NATIONAL_CLEAN"
+    ],
+    "rbse_reet": [
+      "STATE_UT_CLEAN"
+    ],
+    "rhc_civil_judge_prelims": [
+      "JUDICIAL_CONFIRMED"
+    ],
+    "rj_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "rpf_constable": [
+      "NATIONAL_CLEAN"
+    ],
+    "rpf_si": [
+      "NATIONAL_CLEAN"
+    ],
+    "rpsc_ras_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "rpsc_school_lecturer": [
+      "STATE_UT_CLEAN"
+    ],
+    "rrb_alp": [
+      "NATIONAL_CLEAN"
+    ],
+    "rrb_je": [
+      "NATIONAL_CLEAN"
+    ],
+    "rrb_level_1": [
+      "NATIONAL_CLEAN"
+    ],
+    "rrb_ntpc": [
+      "NATIONAL_CLEAN"
+    ],
+    "rrb_technician": [
+      "NATIONAL_CLEAN"
+    ],
+    "rssb_cet_graduate": [
+      "STATE_UT_CLEAN"
+    ],
+    "rssb_cet_senior_secondary": [
+      "STATE_UT_CLEAN"
+    ],
+    "sbi_ja": [
+      "NATIONAL_CLEAN"
+    ],
+    "sbi_po": [
+      "NATIONAL_CLEAN"
+    ],
+    "seb_gujarattet": [
+      "STATE_UT_CLEAN"
+    ],
+    "sikkim_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "slprb_assam_police": [
+      "STATE_UT_CLEAN"
+    ],
+    "slrc_adre": [
+      "STATE_UT_CLEAN"
+    ],
+    "spsc_sikkim_cce": [
+      "STATE_UT_CLEAN"
+    ],
+    "spsc_sikkim_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "ssb_odisha_lecturer": [
+      "STATE_UT_CLEAN"
+    ],
+    "ssc_cgl": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_chsl": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_cpo": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_gd": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_hindi_translators": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_je": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_ladakh_selection_post": [
+      "POINTER"
+    ],
+    "ssc_mts_havaldar": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_selection_post": [
+      "NATIONAL_CLEAN"
+    ],
+    "ssc_stenographer": [
+      "NATIONAL_CLEAN"
+    ],
+    "tgpsc_group1": [
+      "STATE_UT_CLEAN"
+    ],
+    "tgpsc_group2": [
+      "STATE_UT_CLEAN"
+    ],
+    "tgpsc_group3": [
+      "STATE_UT_CLEAN"
+    ],
+    "tgpsc_group4": [
+      "STATE_UT_CLEAN"
+    ],
+    "tgslprb_sct_pc": [
+      "STATE_UT_CLEAN"
+    ],
+    "tgslprb_sct_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "tnmrb_assistant_surgeon": [
+      "EXCLUDED"
+    ],
+    "tnpsc_group1": [
+      "STATE_UT_CLEAN"
+    ],
+    "tnpsc_group2_2a": [
+      "STATE_UT_CLEAN"
+    ],
+    "tnpsc_group4_vao": [
+      "STATE_UT_CLEAN"
+    ],
+    "tntrb_pg_assistant_tet": [
+      "STATE_UT_CLEAN"
+    ],
+    "tnusrb_pc": [
+      "STATE_UT_CLEAN"
+    ],
+    "tnusrb_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "tpsc_tripura_tcs_tps": [
+      "STATE_UT_CLEAN"
+    ],
+    "trbt_tripura_stgt_stpgt": [
+      "STATE_UT_CLEAN"
+    ],
+    "trbt_tripura_ttet": [
+      "STATE_UT_CLEAN"
+    ],
+    "treirb_teaching": [
+      "STATE_UT_CLEAN"
+    ],
+    "tripura_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "uk_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "uk_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "uk_tet": [
+      "STATE_UT_CLEAN"
+    ],
+    "ukpsc_lower_subordinate_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "ukpsc_pcs_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "uksssc_group_c_combined": [
+      "STATE_UT_CLEAN"
+    ],
+    "up_tet": [
+      "STATE_UT_CLEAN"
+    ],
+    "upprpb_police_constable": [
+      "STATE_UT_CLEAN"
+    ],
+    "upprpb_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "uppsc_pcs_j_prelims": [
+      "JUDICIAL_UNRESOLVED"
+    ],
+    "uppsc_pcs_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "uppsc_ro_aro_prelims": [
+      "STATE_UT_CLEAN"
+    ],
+    "upsc_capf_ac": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_cds": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_cms": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_cse_prelims": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_ese": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_geo_scientist": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsc_ies_iss": [
+      "NATIONAL_HOLD"
+    ],
+    "upsc_ifos": [
+      "NATIONAL_HOLD"
+    ],
+    "upsc_nda_na": [
+      "NATIONAL_CLEAN"
+    ],
+    "upsssc_pet": [
+      "STATE_UT_CLEAN"
+    ],
+    "upsssc_vdo": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_UNRESOLVED"
+    ],
+    "wbbpe_primary_tet": [
+      "STATE_UT_CLEAN"
+    ],
+    "wbcssc_slst_teacher": [
+      "STATE_UT_CLEAN"
+    ],
+    "wbprb_police_constable": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "wbprb_police_si": [
+      "STATE_UT_CLEAN"
+    ],
+    "wbpsc_clerkship": [
+      "STATE_UT_CLEAN",
+      "ARTICLE315_SUPPORTED"
+    ],
+    "wbpsc_wbcs_prelims": [
+      "STATE_UT_CLEAN"
+    ]
+  }
+}

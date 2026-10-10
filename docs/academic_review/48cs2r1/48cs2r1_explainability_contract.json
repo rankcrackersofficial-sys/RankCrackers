@@ -1,0 +1,14 @@
+{
+  "gate": "GATE_48CS2R1_EXPLAINABILITY_CONTRACT",
+  "generatedAt": "2026-09-10T11:26:52.328Z",
+  "outputFields": {
+    "passedRuleIds": "Array of rule IDs proven satisfied",
+    "failedRuleIds": "Array of rule IDs proven failed",
+    "missingProfileFields": "Array of profile attributes required but absent",
+    "unresolvedRuleIds": "Array of rules unparsed or unsupported",
+    "applicableVacancyRows": "Array of specific VacancyRows matched",
+    "reasonCodes": "Human-readable, evidence-traceable justification bullets"
+  },
+  "antiFabricationRule": "Every reason code must derive directly from an official rule or vacancy matrix row. Generic synthetic explanations are strictly forbidden.",
+  "metric": "PERSONAL_ELIGIBILITY_WITHOUT_RULE_EVIDENCE_COUNT = 0"
+}

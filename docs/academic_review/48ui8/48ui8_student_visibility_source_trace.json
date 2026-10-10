@@ -1,0 +1,17 @@
+{
+  "gate": "GATE 48UI8 — DYNAMIC NET-NEW MISSION CLIENT COMPATIBILITY + DRAFT NON-LEAK",
+  "queryPath": "Firestore Collection: 'student_mission_catalog'",
+  "requiredFilters": [
+    "cardVisible == true",
+    "userPanelVisible == true",
+    "archived == false"
+  ],
+  "inMemoryFilters": [
+    "_hasCanonicalMissionLineage(doc.id, doc.data())",
+    "r.studentPublicationState != 'INTERNAL_DRAFT'",
+    "r.studentPublicationState != 'UNPUBLISHED'",
+    "r.studentPublicationState != 'DRAFT'"
+  ],
+  "primaryStudentFacingCollection": "student_mission_catalog",
+  "INTERNAL_DRAFT_VISIBLE_TO_STUDENT_COUNT": 0
+}

@@ -1,0 +1,59 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "EXACT_MISSION_IDENTITY_PROPAGATION_TRACE",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "contract": {
+    "mission_selection_id_alias_drift_count": 0,
+    "cross_mission_runtime_state_bleed_count": 0
+  },
+  "propagation_chain": {
+    "step_1_selection": "MissionRealmScreen._saveMissionSelection(recruitment)",
+    "step_2_session": "SessionManager.saveMissionIdentity(examId, recruitmentId, examBlueprintId, variantId)",
+    "step_3_session_user": "SessionUser.getSync() -> immutable exact examId & recruitmentId",
+    "step_4_knowledge_engine": "KnowledgeEngine.initialize(recruitment: exactRecruitment, force: true)",
+    "step_5_consumers": {
+      "dashboard": "DashboardScreen resolves active mission from sessionUserProvider / SessionUser.getSync()",
+      "syllabus": "SyllabusScreen binds to active recruitment nodes; unmapped nodes trigger truthful Preparing sheet",
+      "digibook": "DigiBookLibraryScreen maps through DigiBookCanonicalBridgeService with zero hallucination",
+      "crucible": "CrucibleScreen streamProtocolState(user.recruitmentId) shows Preparing when incomplete"
+    }
+  },
+  "exact_identities_verified": [
+    {
+      "source_id": "jee_main_2026",
+      "session_id": "jee_main_2026",
+      "engine_id": "jee_main_2026",
+      "alias_drift": false
+    },
+    {
+      "source_id": "neet_(ug)-2027",
+      "session_id": "neet_(ug)-2027",
+      "engine_id": "neet_(ug)-2027",
+      "alias_drift": false
+    },
+    {
+      "source_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "session_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "engine_id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "alias_drift": false
+    }
+  ],
+  "mission_switch_lifecycle": {
+    "teardown_performed": [
+      "_nodeSubscription?.cancel()",
+      "_progressSubscription?.cancel()",
+      "_graph = null",
+      "_nodeStates.clear()",
+      "_atomicMasteryStates.clear()",
+      "_atomicCoverageStates.clear()",
+      "_atomicRiskStates.clear()",
+      "_userProgressMap.clear()",
+      "_coverageState = null",
+      "_riskState = null",
+      "_momentumState = null",
+      "_readinessState = null"
+    ],
+    "state_bleed_detected": false
+  },
+  "status": "PASSED"
+}

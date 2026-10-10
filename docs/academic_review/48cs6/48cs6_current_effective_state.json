@@ -1,0 +1,26 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "states": [
+    {
+      "cycleId": "SSC-CGL-2026",
+      "matchingReadiness": "PARTIAL_SOURCE_PACKAGE",
+      "amendmentStatus": "CHAIN_PARTIAL"
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "matchingReadiness": "PARTIAL_SOURCE_PACKAGE",
+      "amendmentStatus": "CHAIN_PARTIAL"
+    },
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "matchingReadiness": "PARTIAL_SOURCE_PACKAGE",
+      "amendmentStatus": "CHAIN_PARTIAL"
+    }
+  ]
+}

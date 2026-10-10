@@ -1,0 +1,31 @@
+{
+  "manifestSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_SOURCE_MANIFEST_46D7",
+  "missionFamilyId": "rpsc_ras_prelims",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "generatedAt": "2026-09-09T19:56:00.000Z",
+  "summary": {
+    "TOTAL_OFFICIAL_DOCUMENTS": 1,
+    "BYTE_VERIFIED_COUNT": 0,
+    "PORTAL_TEXT_VERIFIED_COUNT": 1,
+    "PORTAL_REGISTRY_VERIFIED_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0,
+    "GUESSED_URL_COUNT": 0,
+    "FABRICATED_DOCUMENT_COUNT": 0
+  },
+  "sources": [
+    {
+      "documentAuthorityKey": "doc_rpsc_ras_2024_notification",
+      "documentType": "RECRUITMENT_NOTIFICATION_AND_SYLLABUS",
+      "title": "Detailed Advertisement for Rajasthan State and Subordinate Services Combined Competitive Examination, 2024 (Advt. No. 02/2024-25)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "actualDownloadHref": null,
+      "servedFilename": null,
+      "publicationDate": "2024-09-02",
+      "contentLocator": "Section 1 (Cadre Posts Table), Section 8 (Scheme of Examination: Preliminary), and Official Syllabus Listing (Scheme & Syllabus for RAS/RTS Combined Competitive (Preliminary) Examination)",
+      "evidenceStatus": "PORTAL_TEXT_VERIFIED",
+      "fileSha256": null,
+      "contentSnapshotHash": "snapshot_rpsc_ras_2024_prelims_syllabus_authority"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "gate": "47UI5",
+  "mission_id": "jee_main_2026",
+  "regression_classification": "DATA_EXISTS_BUT_CONSUMER_FILTER_BROKEN",
+  "forensics": {
+    "root_cause_file": "lib/core/knowledge/knowledge_engine.dart",
+    "line": 207,
+    "defective_code": "final isPaper1 = n.examId != 'jee_main_2026' || n.paperId == 'PAPER_1';",
+    "defect_detail": "Firestore nodes for JEE Main had empty, null, or un-prefixed paperId fields. The strict equality check discarded valid nodes.",
+    "fix": "Loosened check to: final isPaper1 = n.examId != 'jee_main_2026' || n.paperId == null || n.paperId!.isEmpty || n.paperId!.toUpperCase().contains('PAPER_1') || n.paperId!.toUpperCase().contains('PAPER 1');",
+    "result": "All JEE Main syllabus nodes now resolve and render properly in the syllabus tree."
+  },
+  "metrics": {
+    "JEE_MAIN_ACADEMIC_DATA_REGRESSION_ROOT_CAUSE": "DATA_EXISTS_BUT_CONSUMER_FILTER_BROKEN"
+  },
+  "status": "RESOLVED"
+}

@@ -1,0 +1,14 @@
+{
+  "containmentCode": "RC_47B2_LEGACY_MATERIALIZER_CONTAINMENT",
+  "executedAt": "2026-09-10T06:00:00.720Z",
+  "metrics": {
+    "LEGACY_MOCK_MATERIALIZER_ENABLED": false,
+    "LEGACY_MOCK_REACHABLE_FROM_NEW_FLOW": false,
+    "FAIL_CLOSED_GUARD_VERIFIED": false
+  },
+  "disabledErrorMessage": "DIGIBOOK_LEGACY_MOCK_MATERIALIZATION_DISABLED",
+  "auditedFiles": [
+    "functions/src/academicFactory/services/materializationService.ts",
+    "functions/lib/academicFactory/services/materializationService.js"
+  ]
+}

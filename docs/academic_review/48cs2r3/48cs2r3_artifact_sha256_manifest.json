@@ -1,0 +1,63 @@
+{
+  "gate": "GATE_48CS2R3",
+  "timestamp": "2026-09-10T11:56:50.329Z",
+  "lane": "AGENT_3_CAREER_SIGNAL_BACKEND_ENGINE",
+  "root": "c:\\\\RankCrackers\\\\RankCrackers-55",
+  "metrics": {
+    "MISSING_RULE_TREATED_AS_VERIFIED_NONE_COUNT": 0,
+    "ELIGIBLE_WITH_INCOMPLETE_RULEBOOK_COUNT": 0,
+    "NOT_ELIGIBLE_WITH_UNRESOLVED_OVERRIDE_RULE_COUNT": 0,
+    "NO_VACANCY_CONCLUSION_FROM_PARTIAL_MATRIX_COUNT": 0,
+    "SOURCE_GAP_MAPPED_TO_USER_PROFILE_GAP_COUNT": 0,
+    "TEST_FAILURE_COUNT": 0,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "CAREER_SIGNAL_PRODUCTION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "artifacts": {
+    "48cs2r3_adversarial_test_results.json": {
+      "bytes": 2399,
+      "sha256": "7d0fe18eac92df7cce6c10fbae0cbb3d65ba27acf70c9a1482abef39eef49c79"
+    },
+    "48cs2r3_age_relaxation_resolution.json": {
+      "bytes": 1306,
+      "sha256": "ce2835bdc6a3dca08ed517ba54833a8e485a868b5f55a8cafbd8df07fcd6dcea"
+    },
+    "48cs2r3_amendment_chain_completeness.json": {
+      "bytes": 877,
+      "sha256": "68e35dae7927f48c71b0716c973640ba1fec6ba5bba9353aa60a32b1ddb70945"
+    },
+    "48cs2r3_final_report.md": {
+      "bytes": 11356,
+      "sha256": "98c9213607c2b2892337d8023e69fe6b7328c41e8f227094ab08ea2a40bc4447"
+    },
+    "48cs2r3_final_verdict_barrier.json": {
+      "bytes": 1189,
+      "sha256": "42e5ba9aea0ad8de27263a970689296eee2769e2547f3ca3d0e63c31d1070e56"
+    },
+    "48cs2r3_no_production_mutation_proof.json": {
+      "bytes": 587,
+      "sha256": "64d737f240436dc082005081b042677024acee11bddd93f77f86c3dc1a246c0b"
+    },
+    "48cs2r3_reservation_completeness.json": {
+      "bytes": 724,
+      "sha256": "6cc003c60f703ba7253d418ddf122c83a99ab4699e581b0c8a4d65f598cd7435"
+    },
+    "48cs2r3_rule_absence_semantics.json": {
+      "bytes": 1179,
+      "sha256": "aacbd2cd5cabf8debd93f230cebbff73fe84a065ccfeac0656d70849315e4ef7"
+    },
+    "48cs2r3_rulebook_completeness_model.json": {
+      "bytes": 1257,
+      "sha256": "e408adca50f504b2795812c607f82537bf85eeca329854e0e44a2c08e2c678d5"
+    },
+    "48cs2r3_uncertainty_separation.json": {
+      "bytes": 919,
+      "sha256": "b95d3773c80c9b8ec40d0c085c358a1679790ad517b016db8fde78cc5c4dbc41"
+    },
+    "48cs2r3_vacancy_matrix_completeness.json": {
+      "bytes": 937,
+      "sha256": "b1a04108bda07deb63e1c1ce1cdec871b86fbc10de26d248cbc2e5a2ac6372ea"
+    }
+  }
+}

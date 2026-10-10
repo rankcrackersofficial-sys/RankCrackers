@@ -1,0 +1,77 @@
+{
+  "testSuite": "test_48cs2r4_trust_boundary.js",
+  "gate": "GATE 48CS2R4",
+  "totalTests": 12,
+  "passedTests": 12,
+  "failedTests": 0,
+  "executedAt": "2026-09-10T12:09:30Z",
+  "testResults": [
+    {
+      "testId": 1,
+      "name": "Caller sends isComplete: true with unresolved family -> rejected/derived false",
+      "status": "PASS"
+    },
+    {
+      "testId": 2,
+      "name": "RULE_ABSENCE_VERIFIED without evidence attestation -> rejected / unresolved",
+      "status": "PASS"
+    },
+    {
+      "testId": 3,
+      "name": "Search-no-result alone cannot prove absence",
+      "status": "PASS"
+    },
+    {
+      "testId": 4,
+      "name": "Partial corrigendum surface cannot become CURRENT_CHAIN_VERIFIED",
+      "status": "PASS"
+    },
+    {
+      "testId": 5,
+      "name": "Partial vacancy table cannot become VACANCY_MATRIX_COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "testId": 6,
+      "name": "URL-only source remains URL_FOUND, not SHA_VERIFIED",
+      "status": "PASS"
+    },
+    {
+      "testId": 7,
+      "name": "SHA verified document retains SHA_VERIFIED",
+      "status": "PASS"
+    },
+    {
+      "testId": 8,
+      "name": "Incomplete rulebook permits generic verified notification facts (title, dates, total seats)",
+      "status": "PASS"
+    },
+    {
+      "testId": 9,
+      "name": "Incomplete rulebook cannot output ELIGIBLE (strictly NOT_EVALUATED)",
+      "status": "PASS"
+    },
+    {
+      "testId": 10,
+      "name": "Complete evidence-backed package is accepted for matching and outputs ELIGIBLE",
+      "status": "PASS"
+    },
+    {
+      "testId": 11,
+      "name": "Same evidence gives same semantic hash (excluding non-deterministic fields)",
+      "status": "PASS"
+    },
+    {
+      "testId": 12,
+      "name": "New corrigendum changes semantic hash",
+      "status": "PASS"
+    }
+  ],
+  "historicalRegressionStatus": {
+    "48cs2_source_impact_and_career_signal": "11/11 PASS",
+    "48cs2r2_adversarial_hardening": "20/20 PASS",
+    "48cs2r3_completeness_safety": "10/10 PASS",
+    "48cs2r4_trust_boundary": "12/12 PASS",
+    "totalAcrossAllSuites": "53/53 PASS (100%)"
+  }
+}

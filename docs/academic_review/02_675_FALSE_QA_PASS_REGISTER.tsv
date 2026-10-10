@@ -1,0 +1,5 @@
+questionId	subject	assessmentType	firstPassQA	secondPassQA	primaryState	defects	stem	storedAnswer	solutionSnippet
+JEE_S01_PHY_018	Physics	CRUCIBLE_MICRO	PASS	PASS	INPUT_MUTATED_IN_SOLUTION	INPUT_MUTATED_IN_SOLUTION	The area of a parallelogram formed by vectors A = 3î + 2ĵ and B = 2ĵ - 4k̂ as ad	14	Area = |A × B|. A = 3î + 2ĵ + 0k̂, B = 0î + 2ĵ - 4k̂. A × B = |î  ĵ  k̂|
+        |3  2  0|
+        |0  2 -4| = î(-8 - 0)
+JEE_S01_PHY_030	Physics	CRUCIBLE_MICRO	PASS	PASS	INPUT_MUTATED_IN_SOLUTION	INPUT_MUTATED_IN_SOLUTION	A particle is projected from the ground with speed u at angle 45° to horizontal.	(u / 2) √5	Displacement to highest point: x = u cos θ * (u sin θ / g) = u² / (2g), y = u² sin² θ / (2g) = u² / (4g). Net displaceme

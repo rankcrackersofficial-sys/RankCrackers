@@ -1,0 +1,16 @@
+{
+  "contractName": "Vacancy Matrix Coverage Contract",
+  "gate": "GATE 48CS2R4",
+  "invariant": "VACANCY_COMPLETE_WITHOUT_COVERAGE_EVIDENCE_COUNT = 0",
+  "description": "Zero applicable vacancies verdict requires verified complete vacancy matrix. Partial tables cannot self-declare completeness.",
+  "requirementsForMatrixComplete": {
+    "coverageStatus": "Must be COMPLETE_OFFICIAL_TABLE.",
+    "nonEmptyRows": "rows array must contain at least one quota row.",
+    "rowLevelEvidence": "Every vacancy row must contain verifiable evidenceRefs or source locator.",
+    "categoryBreakdown": "Must account for vertical and horizontal reservation distributions."
+  },
+  "matchingEngineBehavior": {
+    "completeMatrixZeroMatches": "When matrix is VACANCY_MATRIX_COMPLETE and user matches 0 rows -> NO_APPLICABLE_VACANCIES.",
+    "partialMatrixZeroMatches": "When matrix is VACANCY_MATRIX_PARTIAL or TOTAL_SEATS_ONLY and user matches 0 rows -> VACANCIES_PENDING_RESERVATION_DATA (never false rejection!)."
+  }
+}

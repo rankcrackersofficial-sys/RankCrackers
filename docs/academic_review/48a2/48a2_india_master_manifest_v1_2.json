@@ -1,0 +1,23 @@
+{
+  "version": "V1.2",
+  "title": "India Master Manifest V1.2 Physical Recomputation",
+  "timestamp": "2026-09-10T11:21:27.356Z",
+  "metrics": {
+    "INDIA_MASTER_UNIQUE_MISSION_COUNT": 215,
+    "INDIA_CLEAN_COUNT": 161,
+    "INDIA_HOLD_COUNT": 47,
+    "INDIA_POINTER_COUNT": 2,
+    "INDIA_EXCLUDED_COUNT": 5,
+    "NATIONAL_CLEAN_COUNT": 45,
+    "STATE_UT_CLEAN_COUNT": 116,
+    "ARTICLE315_HOLD_COUNT": 24,
+    "JUDICIAL_HOLD_COUNT": 8,
+    "VARIANT_HOLD_COUNT": 0,
+    "PATTERN_HOLD_COUNT": 1,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "MISSION_CREATE_COUNT": 0,
+    "MISSION_DELETE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "verdict": "48A2_TRUE_INDIA_MASTER_V1_2_CONTROL_READY"
+}

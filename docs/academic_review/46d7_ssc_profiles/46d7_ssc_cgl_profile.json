@@ -1,0 +1,80 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_cgl",
+  "canonicalDisplayName": "SSC CGL",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["TIER_I_CBE", "TIER_II_PAPER_1_CBE", "TIER_II_PAPER_2_STATISTICS_CBE"],
+    "unsupportedStages": [
+      { "stageName": "Data Entry Speed Test (DEST)", "reason": "Physical Typing Test Module" }
+    ]
+  },
+  "examinationStructure": {
+    "tiers": [
+      {
+        "tierId": "tier_1",
+        "tierName": "Tier-I: Computer Based Examination",
+        "isQualifyingForNextStage": true,
+        "totalQuestions": 100,
+        "totalMarks": 200,
+        "durationMinutes": 60,
+        "sections": [
+          { "sectionId": "gi_reasoning", "sectionName": "General Intelligence and Reasoning", "questions": 25, "marks": 50, "negativeMarking": 0.5 },
+          { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 25, "marks": 50, "negativeMarking": 0.5 },
+          { "sectionId": "quantitative_aptitude", "sectionName": "Quantitative Aptitude", "questions": 25, "marks": 50, "negativeMarking": 0.5 },
+          { "sectionId": "english_comprehension", "sectionName": "English Comprehension", "questions": 25, "marks": 50, "negativeMarking": 0.5 }
+        ]
+      },
+      {
+        "tierId": "tier_2",
+        "tierName": "Tier-II: Computer Based Examination",
+        "papers": [
+          {
+            "paperId": "cgl_tier_2_paper_1",
+            "paperName": "Paper-I: Compulsory for All Posts",
+            "durationMinutes": 135,
+            "sessionStructure": [
+              {
+                "sessionId": "session_1",
+                "section1": { "name": "Mathematical Abilities & Reasoning", "modules": ["Mathematical Abilities (30 Qs)", "Reasoning and General Intelligence (30 Qs)"], "totalQuestions": 60, "totalMarks": 180, "negativeMarking": 1.0 },
+                "section2": { "name": "English Language & General Awareness", "modules": ["English Language and Comprehension (45 Qs)", "General Awareness (25 Qs)"], "totalQuestions": 70, "totalMarks": 210, "negativeMarking": 1.0 },
+                "section3": { "name": "Computer Knowledge Module", "modules": ["Computer Knowledge (20 Qs)"], "totalQuestions": 20, "totalMarks": 60, "negativeMarking": 1.0, "isQualifying": true }
+              }
+            ]
+          },
+          {
+            "paperId": "cgl_tier_2_paper_2",
+            "paperName": "Paper-II: Statistics (for Junior Statistical Officer / JSO)",
+            "applicablePostTrack": "JUNIOR_STATISTICAL_OFFICER",
+            "totalQuestions": 100,
+            "totalMarks": 200,
+            "durationMinutes": 120,
+            "marksPerQuestion": 2.0,
+            "negativeMarkingPerQuestion": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "POST_TRACK",
+    "variants": [
+      { "variantKey": "cgl_all_posts", "variantName": "All Posts (General Track)", "applicablePapers": ["tier_1", "cgl_tier_2_paper_1"] },
+      { "variantKey": "cgl_jso", "variantName": "Junior Statistical Officer (JSO)", "applicablePapers": ["tier_1", "cgl_tier_2_paper_1", "cgl_tier_2_paper_2"] }
+    ]
+  }
+}

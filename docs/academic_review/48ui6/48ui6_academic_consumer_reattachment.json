@@ -1,0 +1,38 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "ACADEMIC_CONSUMER_REATTACHMENT_AUDIT",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "consumers": {
+    "dashboard": {
+      "route": "/dashboard",
+      "provider": "sessionUserProvider",
+      "rehydration": "Synchronous first-frame read from SessionUser.getSync(), reactive update on mission selection",
+      "status": "REATTACHED"
+    },
+    "syllabus": {
+      "route": "/syllabus",
+      "provider": "syllabusTreeProvider / knowledgeEngineProvider",
+      "governance_rule": "Renders only nodes physically scoped to active recruitment; unmapped/ungoverned nodes show Preparing sheet",
+      "status": "REATTACHED"
+    },
+    "digibook": {
+      "route": "/digibook",
+      "provider": "DigiBookCanonicalBridgeService",
+      "governance_rule": "Resolves canonical node mappings strictly under existing governance; unmapped chapters show truthful unavailable state",
+      "status": "REATTACHED"
+    },
+    "crucible": {
+      "route": "/crucible",
+      "provider": "crucibleProtocolStateProvider",
+      "governance_rule": "Consumes active recruitment ID; incomplete/unbound schedules fall back to Preparing/Not Ready state",
+      "status": "REATTACHED"
+    }
+  },
+  "content_preservation": {
+    "digibook_existing_lessons": 56,
+    "crucible_existing_schedules": 42,
+    "fake_readiness_manufactured": false,
+    "zero_hallucination_enforced": true
+  },
+  "verdict": "ACADEMIC_CONSUMERS_GOVERNED_AND_REATTACHED"
+}

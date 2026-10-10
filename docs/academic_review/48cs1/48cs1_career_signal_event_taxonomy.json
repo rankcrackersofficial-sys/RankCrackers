@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0-48cs1",
+  "generatedAt": "2026-09-10T12:00:00.000Z",
+  "signalCategories": {
+    "OPPORTUNITY_SIGNAL": {
+      "description": "Signals indicating new career openings, vacancy changes, eligibility changes, or registration windows.",
+      "eventTypes": [
+        "NEW_NOTIFICATION",
+        "APPLICATION_OPEN",
+        "APPLICATION_DEADLINE",
+        "APPLICATION_DEADLINE_CHANGED",
+        "VACANCY_ANNOUNCED",
+        "VACANCY_CHANGED",
+        "ELIGIBILITY_CHANGED",
+        "AGE_RULE_CHANGED",
+        "FEE_CHANGED"
+      ]
+    },
+    "PROCESS_UPDATE_SIGNAL": {
+      "description": "Signals tracking the administrative progress of an ongoing recruitment cycle.",
+      "eventTypes": [
+        "EXAM_DATE_ANNOUNCED",
+        "EXAM_DATE_CHANGED",
+        "ADMIT_CARD_RELEASED",
+        "ANSWER_KEY_RELEASED",
+        "RESULT_DECLARED",
+        "INTERVIEW_OR_DV_NOTICE",
+        "FINAL_RESULT_DECLARED",
+        "RECRUITMENT_CANCELLED"
+      ]
+    }
+  }
+}

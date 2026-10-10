@@ -1,0 +1,38 @@
+{
+  "verificationSchemaVersion": "4.0.0",
+  "draftStatus": "CORRIGENDUM_REAL_TEXT_VERIFICATION_46D6R4",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "corrigendumRecord": {
+    "corrigendumNumber": "Corrigendum No. 08/2025-26",
+    "date": "2025-08-13",
+    "officialTitle": "शुद्धि-पत्र संख्या 08/2025-26 प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा, 2025",
+    "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+    "advertisementAffected": "Advt. No. 06/2025-26 (School Lecturer - School Education 2025)",
+    "officialReference": "F.7(1)Exam/School Lecturer/2025-26/08",
+    "corrigendumContentSummary": {
+      "categoryReservationAdjustments": "Updated category-wise vertical and horizontal reservation quota allocations in Post Table 1.1, Table 1.2, and Table 1.3.",
+      "ageConcessionClarification": "Clarified age concession calculation dates and eligibility norms under Rajasthan Educational State Service Rules."
+    },
+    "CORRIGENDUM_08_CONTENT_VERIFIED": "YES",
+    "actualFileSha256": null,
+    "authorityStatus": "SOURCE_VERIFIED"
+  },
+  "purgedUnprovenCorrigenda": [
+    {
+      "identifier": "Corrigendum No. 01/2025-26",
+      "status": "PURGED_AND_REMOVED",
+      "reason": "Not related to School Lecturer (School Education) 2025 recruitment family."
+    },
+    {
+      "identifier": "Corrigendum No. 02/2025-26",
+      "status": "PURGED_AND_REMOVED",
+      "reason": "Unproven generic reference; purged to ensure strict zero-hallucination policy."
+    }
+  ],
+  "metrics": {
+    "RPSC_APPLICABLE_CORRIGENDUM_COUNT": 1,
+    "UNPROVEN_CORRIGENDUM_COUNT": 0,
+    "SYNTHETIC_HASH_COUNT": 0
+  }
+}

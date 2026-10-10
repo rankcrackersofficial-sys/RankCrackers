@@ -1,0 +1,217 @@
+{
+  "verificationCode": "RC_47B6_INPUT_HASH_VERIFICATION",
+  "executedAt": "2026-09-10T07:08:16.206Z",
+  "metrics": {
+    "INPUT_FILE_COUNT": 34,
+    "INPUT_HASH_VERIFIED_COUNT": 34,
+    "INPUT_HASH_MISMATCH_COUNT": 0,
+    "INPUT_MISSING_FILE_COUNT": 0
+  },
+  "hashAuditDetails": [
+    {
+      "file": "47a_coverage_matrix.csv",
+      "status": "VERIFIED",
+      "byteLength": 4892,
+      "sha256": "d7aa00d3c24a2c35fffde091c0b58ae244dbd2e984a54fb9cfba82258247f60d"
+    },
+    {
+      "file": "47a_duplicate_ownership_candidates.json",
+      "status": "VERIFIED",
+      "byteLength": 12137,
+      "sha256": "e3a10f12f7c39899caa152ec33c5f7af304b16e5c439189e50b2521f6e112c25"
+    },
+    {
+      "file": "47a_final_report.md",
+      "status": "VERIFIED",
+      "byteLength": 8868,
+      "sha256": "e1aaf0891f428709d1895c9400183d4ed5afa31ade4073f85f0f6fe08d51655a"
+    },
+    {
+      "file": "47a_india_state_ut_authority_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 51705,
+      "sha256": "6d73fbb01a38eedc265248b8b7b2fc6b4e00c8fdd39ca3c02eee579fc57b92c2"
+    },
+    {
+      "file": "47a_state_ut_authority_source_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 64781,
+      "sha256": "e337f45706211baf39495bfc3305db7fbccced14ac7207bc486ed440818c618d"
+    },
+    {
+      "file": "47a_state_ut_latest_document_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 121167,
+      "sha256": "ad0bfa3da710766116eb58b68b9582545d1bbefabee09c437fb4403aba3a9c89"
+    },
+    {
+      "file": "47a_state_ut_major_exam_inventory.json",
+      "status": "VERIFIED",
+      "byteLength": 111935,
+      "sha256": "e1ab77cb782c4f2e937feef3058bbb41dcf60a6f6b1da220cad435f76575c7fe"
+    },
+    {
+      "file": "47a_state_ut_pyq_archive_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 56890,
+      "sha256": "e80dbe8d047e73afb42677a7ed0258487fc04105f2c2271e59f0eb03e8137ae4"
+    },
+    {
+      "file": "47a_unresolved_authority_or_exam_questions.json",
+      "status": "VERIFIED",
+      "byteLength": 6001,
+      "sha256": "a86d858ac1eaf2038603d58c1ed77d7894ffdfd7008b8f53db2c67ea51120415"
+    },
+    {
+      "file": "47a3_authority_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 54825,
+      "sha256": "d0ea76f5cace024982f656d6d321b4244766d1e4858a5b8ba014a2fd856083ff"
+    },
+    {
+      "file": "47a3_authority_reference_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 62416,
+      "sha256": "9450359848e8e28e4039e2c5e7d3ad55b1f6512bda4d68cf4cdd43e05f6234d8"
+    },
+    {
+      "file": "47a3_authority_count_reconciliation.json",
+      "status": "VERIFIED",
+      "byteLength": 837,
+      "sha256": "858044a88687e91a63dfd6b5e750e6d7a3646a73e7f4db5bccc0f94d252dc853"
+    },
+    {
+      "file": "47a3_candidate_manifest.json",
+      "status": "VERIFIED",
+      "byteLength": 545646,
+      "sha256": "215b93facb106494a3fa2541277a40744704f8ddff29855e5e648cf2b9072c7f"
+    },
+    {
+      "file": "47a3_duplicate_ownership_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 10988,
+      "sha256": "cbd9c1c2fe566d3ba3f29ba6e91c9482ce33b5250b751b6477b1bbff9409e96a"
+    },
+    {
+      "file": "47a3_exact_source_document_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 259328,
+      "sha256": "39f4474bc3721e8890de96260b4db8513ebe2a3a17a2ea7864e2fbf932267f2d"
+    },
+    {
+      "file": "47a3_latest_effective_source_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 71612,
+      "sha256": "a7a03e2ffd10ff33ffad4916ec72ec9f946977850c4c1dd926196d55f33b5ec1"
+    },
+    {
+      "file": "47a3_major_exam_qualification_evidence_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 117076,
+      "sha256": "12b557aba312c63f9877615a25ba8e0f607611cedebebacda346a301731b5300"
+    },
+    {
+      "file": "47a3_major_exam_qualification_ledger.json",
+      "status": "VERIFIED",
+      "byteLength": 69510,
+      "sha256": "effbf659d4d96ae5cfed0ffd193ef6121d41e66ef7eb5df79595ab6560f74d8d"
+    },
+    {
+      "file": "47a3_pyq_exact_child_evidence_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 334,
+      "sha256": "35fa2b515bf840fe130372d40339b6521f1bcd0a3333b74d70014762a3b1d643"
+    },
+    {
+      "file": "47a3_pyq_mission_level_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 93577,
+      "sha256": "38d44fdb76a12e37f670a01d434bd3b3654b22ec5e6937aea1b5422cfdd4034d"
+    },
+    {
+      "file": "47a3_readiness_dependency_ledger.json",
+      "status": "VERIFIED",
+      "byteLength": 105841,
+      "sha256": "e9663f14a874111088c7a9b6bcedef80bf1add7d1dc941b3af402e36e2b37e95"
+    },
+    {
+      "file": "47a3_variant_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 52291,
+      "sha256": "2f24ef246c0ae4074658cc399612b97bc3a987b199378718f569e5aacd27b5bc"
+    },
+    {
+      "file": "47a3_zero_fabrication_measured_audit.json",
+      "status": "VERIFIED",
+      "byteLength": 1329,
+      "sha256": "cdafac2c31d68eafb9e40afbd9f92b297df5d7b4c310a0b3d3a348304659016e"
+    },
+    {
+      "file": "47a3_47b_contract_handoff.json",
+      "status": "VERIFIED",
+      "byteLength": 1655,
+      "sha256": "f06c29268d96480ed4bce7397745d437e3c63df521aec95fb6c59ae3c9f2c1bc"
+    },
+    {
+      "file": "47a3_final_report.md",
+      "status": "VERIFIED",
+      "byteLength": 10059,
+      "sha256": "7e39426c8b9da8913dd982105f6126deab738b3941f20c20502a8572eea3e872"
+    },
+    {
+      "file": "47a3r_central_authority_id_reconciliation.json",
+      "status": "VERIFIED",
+      "byteLength": 6090,
+      "sha256": "681873bef1c8313e533c5f4b1e1a3490f56e917fcb9ba776a5c8795c2908705e"
+    },
+    {
+      "file": "47a3r_duplicate_ownership_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 11806,
+      "sha256": "929a6b59881e2761eeb5c228e0b3a5e7939b43406f7a9581479e645a269a47dc"
+    },
+    {
+      "file": "47a3r_numeric_scale_evidence_recheck.json",
+      "status": "VERIFIED",
+      "byteLength": 65207,
+      "sha256": "3aeff09996b246eaa57874d1b8b4fe391acaa55b4af173a01ab486d8ebdf0e2d"
+    },
+    {
+      "file": "47a3r_variant_source_binding_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 73300,
+      "sha256": "c7dd1017ce147e490f1af72ea62658f86e642895e3e057fad510a57004956855"
+    },
+    {
+      "file": "47a3r_source_resolution_semantics.json",
+      "status": "VERIFIED",
+      "byteLength": 105675,
+      "sha256": "c6226418c652a49b38def1cf20a3edb6dfc43e22a068a8699af7839cfa23ea73"
+    },
+    {
+      "file": "47a3r_state_ut_source_monitor_seed_registry.json",
+      "status": "VERIFIED",
+      "byteLength": 443689,
+      "sha256": "649dcd0abf0c4e83e61c5abbba533f1e60edaacf50c417c3a32b7bf82f461139"
+    },
+    {
+      "file": "47a3r_candidate_manifest_delta.json",
+      "status": "VERIFIED",
+      "byteLength": 35251,
+      "sha256": "ca7f79c677dc1891788d0a4ed82dd05d7d303b15af821de615142935dba93eba"
+    },
+    {
+      "file": "build_47a3r_master.js",
+      "status": "VERIFIED",
+      "byteLength": 69520,
+      "sha256": "6f2d876b805be75365285bc38f844c3dedb61b0a97029fd939554167edd5f47c"
+    },
+    {
+      "file": "47a3r_final_report.md",
+      "status": "VERIFIED",
+      "byteLength": 11418,
+      "sha256": "e4767413eb2af905ad2fe87642b1eafcf7bca8f6f51fde50392e6c532a234d31"
+    }
+  ],
+  "verificationPass": true
+}

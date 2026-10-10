@@ -1,0 +1,53 @@
+{
+  "gate": "GATE_48B1_CLIENT_FALLBACK_RISK_AUDIT",
+  "generatedAt": "2026-09-10T11:03:34.058Z",
+  "auditedFiles": [
+    {
+      "filePath": "lib/core/backend/recruitment_repository.dart",
+      "findings": [
+        {
+          "lineRange": "L54-L57",
+          "codeSnippet": "state: 'Central',\\nexamCategory: 'category_pending',\\nexamDifficulty: 0.6,",
+          "issueType": "HARDCODED_FALLBACK",
+          "riskLevel": "HIGH",
+          "riskAnalysis": "Hardcoding state to 'Central' and examCategory to 'category_pending' in parse methods causes unconfigured missions to appear in Central filters and absorb all category queries."
+        },
+        {
+          "lineRange": "L90-L92",
+          "codeSnippet": "r.examCategory == category || r.examCategory == 'category_pending'",
+          "issueType": "FILTER_BYPASS",
+          "riskLevel": "CRITICAL",
+          "riskAnalysis": "Any mission retaining 'category_pending' matches EVERY single student category filter, polluting Teaching, Engineering, and Civil Services buckets."
+        }
+      ]
+    },
+    {
+      "filePath": "lib/core/firebase/firestore_service.dart",
+      "findings": [
+        {
+          "lineRange": "L452-L461",
+          "codeSnippet": "state: normalizedState.isEmpty ? 'Central' : normalizedState,\\nexamCategory: (data['examCategory'] ?? ... ?? 'category_pending').toString(),\\nexamDifficulty: 0.6,",
+          "issueType": "UNCONDITIONAL_DEFAULT",
+          "riskLevel": "HIGH",
+          "riskAnalysis": "Missions missing state default to 'Central' rather than throwing or marking unassigned. Fixed 0.6 examDifficulty bypasses dynamic forecasting."
+        }
+      ]
+    },
+    {
+      "filePath": "lib/features/auth/presentation/providers/mission_realm_provider.dart",
+      "findings": [
+        {
+          "lineRange": "L43-L45",
+          "codeSnippet": "rCat == filterCat || rCat == 'category_pending' || rCat == 'pending'",
+          "issueType": "PROVIDER_FILTER_LEAK",
+          "riskLevel": "CRITICAL",
+          "riskAnalysis": "UI realm selector displays 'category_pending' missions in all categories. Once NEET is repaired to 'medical', this leak is sealed at the data tier without requiring immediate UI rewrites."
+        }
+      ]
+    }
+  ],
+  "remediationStrategy": {
+    "backendTier": "Eliminate category_pending and missing states at Firestore document level (Gate 48B1 Batch-0).",
+    "clientTier": "In future client refactor, replace category_pending with strict enum parsing and replace fixed 0.6 difficulty with dynamic model values."
+  }
+}

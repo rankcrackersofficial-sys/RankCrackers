@@ -1,0 +1,409 @@
+{
+  "planVersion": "3.0.0-48a6r2",
+  "maxBatchSize": 20,
+  "generatedAt": "2026-09-10T13:07:44.096Z",
+  "batch0ReplacementReference": "docs/academic_review/48a6r2/48a6r2_corrected_batch0_replacement.json",
+  "batches": {
+    "BATCH_1_1_NATIONAL_NET_NEW": {
+      "target": "Net-New National Central Shells Part 1",
+      "count": 20,
+      "missionIds": [
+        "afcat",
+        "agniveervayu",
+        "army_agniveer_cee",
+        "cbse_ctet",
+        "ibps_crp_rrb_office_assistant",
+        "ibps_crp_rrb_officers",
+        "ibps_csa",
+        "ibps_po_mt",
+        "ibps_so",
+        "nabard_grade_a",
+        "navy_agniveer_mr",
+        "navy_agniveer_ssr",
+        "nta_csir_ugc_net",
+        "nta_cuet_pg",
+        "nta_cuet_ug",
+        "nta_ugc_net",
+        "rbi_assistant",
+        "rbi_grade_b",
+        "rpf_constable",
+        "rpf_si"
+      ]
+    },
+    "BATCH_1_2_NATIONAL_NET_NEW": {
+      "target": "Net-New National Central Shells Part 2",
+      "count": 13,
+      "missionIds": [
+        "rrb_alp",
+        "rrb_je",
+        "rrb_level_1",
+        "rrb_ntpc",
+        "rrb_technician",
+        "sbi_ja",
+        "sbi_po",
+        "upsc_capf_ac",
+        "upsc_cds",
+        "upsc_cms",
+        "upsc_ese",
+        "upsc_geo_scientist",
+        "upsc_nda_na"
+      ]
+    },
+    "BATCH_2_STATE_AP": {
+      "target": "Net-New State/UT Shells Region AP",
+      "regionCode": "AP",
+      "count": 4,
+      "missionIds": [
+        "appsc_group1",
+        "appsc_group2",
+        "apslprb_sct_pc",
+        "apslprb_sct_si"
+      ]
+    },
+    "BATCH_2_STATE_AR": {
+      "target": "Net-New State/UT Shells Region AR",
+      "regionCode": "AR",
+      "count": 3,
+      "missionIds": [
+        "appsc_arunachal_cce",
+        "apssb_cgl_csle",
+        "arunachal_police_constable"
+      ]
+    },
+    "BATCH_2_STATE_AS": {
+      "target": "Net-New State/UT Shells Region AS",
+      "regionCode": "AS",
+      "count": 3,
+      "missionIds": [
+        "apsc_cce",
+        "slprb_assam_police",
+        "slrc_adre"
+      ]
+    },
+    "BATCH_2_STATE_BR": {
+      "target": "Net-New State/UT Shells Region BR",
+      "regionCode": "BR",
+      "count": 7,
+      "missionIds": [
+        "bpsc_cce_prelims",
+        "bpsc_tre",
+        "bpssc_police_si",
+        "bseb_stet",
+        "bssc_cgl",
+        "bssc_inter_level",
+        "csbc_bihar_police_constable"
+      ]
+    },
+    "BATCH_2_STATE_CG": {
+      "target": "Net-New State/UT Shells Region CG",
+      "regionCode": "CG",
+      "count": 2,
+      "missionIds": [
+        "cgpsc_state_service",
+        "cgvyapam_cgtet"
+      ]
+    },
+    "BATCH_2_STATE_CH": {
+      "target": "Net-New State/UT Shells Region CH",
+      "regionCode": "CH",
+      "count": 4,
+      "missionIds": [
+        "chandigarh_jbt_teacher",
+        "chandigarh_police_asi",
+        "chandigarh_police_constable",
+        "chandigarh_tgt_teacher"
+      ]
+    },
+    "BATCH_2_STATE_DL": {
+      "target": "Net-New State/UT Shells Region DL",
+      "regionCode": "DL",
+      "count": 4,
+      "missionIds": [
+        "dsssb_delhi_pgt",
+        "dsssb_delhi_prt",
+        "dsssb_delhi_tgt",
+        "dsssb_junior_assistant_ldc"
+      ]
+    },
+    "BATCH_2_STATE_DN": {
+      "target": "Net-New State/UT Shells Region DN",
+      "regionCode": "DN",
+      "count": 1,
+      "missionIds": [
+        "dnhdd_ssb_group_bc"
+      ]
+    },
+    "BATCH_2_STATE_GA": {
+      "target": "Net-New State/UT Shells Region GA",
+      "regionCode": "GA",
+      "count": 3,
+      "missionIds": [
+        "ga_police_recruitment",
+        "gpsc_goa_civil_service",
+        "gssc_goa_group_c"
+      ]
+    },
+    "BATCH_2_STATE_GJ": {
+      "target": "Net-New State/UT Shells Region GJ",
+      "regionCode": "GJ",
+      "count": 5,
+      "missionIds": [
+        "gprb_lokrakshak",
+        "gpsc_class_1_2",
+        "gpssb_talati",
+        "gsssb_cce",
+        "seb_gujarattet"
+      ]
+    },
+    "BATCH_2_STATE_HP": {
+      "target": "Net-New State/UT Shells Region HP",
+      "regionCode": "HP",
+      "count": 4,
+      "missionIds": [
+        "hp_tet",
+        "hppsc_hpas_prelims",
+        "hppsc_police_constable",
+        "hprca_group_c_common"
+      ]
+    },
+    "BATCH_2_STATE_HR": {
+      "target": "Net-New State/UT Shells Region HR",
+      "regionCode": "HR",
+      "count": 6,
+      "missionIds": [
+        "haryana_htet",
+        "haryana_police_constable",
+        "haryana_police_si",
+        "hpsc_hcs_prelims",
+        "hssc_cet_group_c",
+        "hssc_cet_group_d"
+      ]
+    },
+    "BATCH_2_STATE_JH": {
+      "target": "Net-New State/UT Shells Region JH",
+      "regionCode": "JH",
+      "count": 3,
+      "missionIds": [
+        "jac_jtet",
+        "jpsc_cce_prelims",
+        "jssc_cgl"
+      ]
+    },
+    "BATCH_2_STATE_JK": {
+      "target": "Net-New State/UT Shells Region JK",
+      "regionCode": "JK",
+      "count": 4,
+      "missionIds": [
+        "jk_police_constable",
+        "jk_police_si",
+        "jkpsc_cce_prelims",
+        "jkssb_graduate_level"
+      ]
+    },
+    "BATCH_2_STATE_KA": {
+      "target": "Net-New State/UT Shells Region KA",
+      "regionCode": "KA",
+      "count": 4,
+      "missionIds": [
+        "kea_fda_sda",
+        "kpsc_kas_gp",
+        "ksp_cpc",
+        "ksp_psi"
+      ]
+    },
+    "BATCH_2_STATE_KL": {
+      "target": "Net-New State/UT Shells Region KL",
+      "regionCode": "KL",
+      "count": 4,
+      "missionIds": [
+        "kpsc_kl_10th_plus2_prelims",
+        "kpsc_kl_degree_prelims",
+        "kpsc_kl_kas",
+        "kpsc_kl_police_constable"
+      ]
+    },
+    "BATCH_2_STATE_LA": {
+      "target": "Net-New State/UT Shells Region LA",
+      "regionCode": "LA",
+      "count": 2,
+      "missionIds": [
+        "ladakh_police_constable",
+        "lahdc_dssrb_district_cadre"
+      ]
+    },
+    "BATCH_2_STATE_MH": {
+      "target": "Net-New State/UT Shells Region MH",
+      "regionCode": "MH",
+      "count": 3,
+      "missionIds": [
+        "mpsc_group_bc_combined",
+        "mpsc_rajyaseva",
+        "mscepune_mahatet"
+      ]
+    },
+    "BATCH_2_STATE_ML": {
+      "target": "Net-New State/UT Shells Region ML",
+      "regionCode": "ML",
+      "count": 2,
+      "missionIds": [
+        "meghalaya_crb_police",
+        "mpsc_meghalaya_mcs"
+      ]
+    },
+    "BATCH_2_STATE_MN": {
+      "target": "Net-New State/UT Shells Region MN",
+      "regionCode": "MN",
+      "count": 1,
+      "missionIds": [
+        "mpsc_manipur_mcscc"
+      ]
+    },
+    "BATCH_2_STATE_MP": {
+      "target": "Net-New State/UT Shells Region MP",
+      "regionCode": "MP",
+      "count": 4,
+      "missionIds": [
+        "mpesb_group2_subgroup4",
+        "mpesb_mptet",
+        "mpesb_police_constable",
+        "mppsc_state_service"
+      ]
+    },
+    "BATCH_2_STATE_MZ": {
+      "target": "Net-New State/UT Shells Region MZ",
+      "regionCode": "MZ",
+      "count": 2,
+      "missionIds": [
+        "mizoram_police_constable",
+        "mpsc_mizoram_mcs"
+      ]
+    },
+    "BATCH_2_STATE_NL": {
+      "target": "Net-New State/UT Shells Region NL",
+      "regionCode": "NL",
+      "count": 3,
+      "missionIds": [
+        "nagaland_police_constable",
+        "npsc_nagaland_ncs",
+        "nssb_nagaland_csre"
+      ]
+    },
+    "BATCH_2_STATE_OD": {
+      "target": "Net-New State/UT Shells Region OD",
+      "regionCode": "OD",
+      "count": 5,
+      "missionIds": [
+        "bse_odisha_otet",
+        "opsc_ocs_prelims",
+        "ossc_cgl",
+        "osssc_cre_combined",
+        "ssb_odisha_lecturer"
+      ]
+    },
+    "BATCH_2_STATE_PB": {
+      "target": "Net-New State/UT Shells Region PB",
+      "regionCode": "PB",
+      "count": 4,
+      "missionIds": [
+        "ppsc_pscce_prelims",
+        "psssb_clerk",
+        "punjab_police_si",
+        "punjab_pstet"
+      ]
+    },
+    "BATCH_2_STATE_RJ": {
+      "target": "Net-New State/UT Shells Region RJ",
+      "regionCode": "RJ",
+      "count": 3,
+      "missionIds": [
+        "rbse_reet",
+        "rssb_cet_graduate",
+        "rssb_cet_senior_secondary"
+      ]
+    },
+    "BATCH_2_STATE_SK": {
+      "target": "Net-New State/UT Shells Region SK",
+      "regionCode": "SK",
+      "count": 2,
+      "missionIds": [
+        "spsc_sikkim_cce",
+        "spsc_sikkim_police_si"
+      ]
+    },
+    "BATCH_2_STATE_TG": {
+      "target": "Net-New State/UT Shells Region TG",
+      "regionCode": "TG",
+      "count": 7,
+      "missionIds": [
+        "tgpsc_group1",
+        "tgpsc_group2",
+        "tgpsc_group3",
+        "tgpsc_group4",
+        "tgslprb_sct_pc",
+        "tgslprb_sct_si",
+        "treirb_teaching"
+      ]
+    },
+    "BATCH_2_STATE_TN": {
+      "target": "Net-New State/UT Shells Region TN",
+      "regionCode": "TN",
+      "count": 6,
+      "missionIds": [
+        "tnpsc_group1",
+        "tnpsc_group2_2a",
+        "tnpsc_group4_vao",
+        "tntrb_pg_assistant_tet",
+        "tnusrb_pc",
+        "tnusrb_si"
+      ]
+    },
+    "BATCH_2_STATE_TR": {
+      "target": "Net-New State/UT Shells Region TR",
+      "regionCode": "TR",
+      "count": 3,
+      "missionIds": [
+        "jrbt_tripura_group_cd",
+        "tpsc_tripura_tcs_tps",
+        "trbt_tripura_stgt_stpgt"
+      ]
+    },
+    "BATCH_2_STATE_UK": {
+      "target": "Net-New State/UT Shells Region UK",
+      "regionCode": "UK",
+      "count": 6,
+      "missionIds": [
+        "uk_police_constable",
+        "uk_police_si",
+        "uk_tet",
+        "ukpsc_lower_subordinate_prelims",
+        "ukpsc_pcs_prelims",
+        "uksssc_group_c_combined"
+      ]
+    },
+    "BATCH_2_STATE_UP": {
+      "target": "Net-New State/UT Shells Region UP",
+      "regionCode": "UP",
+      "count": 5,
+      "missionIds": [
+        "up_tet",
+        "upprpb_police_constable",
+        "upprpb_police_si",
+        "uppsc_ro_aro_prelims",
+        "upsssc_pet"
+      ]
+    },
+    "BATCH_2_STATE_WB": {
+      "target": "Net-New State/UT Shells Region WB",
+      "regionCode": "WB",
+      "count": 6,
+      "missionIds": [
+        "wbbpe_primary_tet",
+        "wbcssc_slst_teacher",
+        "wbprb_police_constable",
+        "wbprb_police_si",
+        "wbpsc_clerkship",
+        "wbpsc_wbcs_prelims"
+      ]
+    }
+  }
+}

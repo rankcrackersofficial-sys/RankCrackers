@@ -1,0 +1,62 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_mts_havaldar",
+  "canonicalDisplayName": "SSC MTS & Havaldar",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["COMPUTER_BASED_EXAMINATION_SESSION_I_AND_II"],
+    "unsupportedStages": [
+      { "stageName": "Physical Efficiency Test (PET) / Physical Standard Test (PST) (For Havaldar Only)", "reason": "Physical Fitness & Measurement Test" }
+    ]
+  },
+  "examinationStructure": {
+    "examType": "COMPUTER_BASED_EXAMINATION",
+    "totalDurationMinutes": 90,
+    "sessions": [
+      {
+        "sessionId": "session_1",
+        "sessionName": "Session-I (Qualifying)",
+        "durationMinutes": 45,
+        "negativeMarkingPerQuestion": 0.0,
+        "hasNegativeMarking": false,
+        "sections": [
+          { "sectionId": "numerical_math_ability", "sectionName": "Numerical and Mathematical Ability", "questions": 20, "marks": 60 },
+          { "sectionId": "reasoning_ability", "sectionName": "Reasoning Ability and Problem Solving", "questions": 20, "marks": 60 }
+        ]
+      },
+      {
+        "sessionId": "session_2",
+        "sessionName": "Session-II (Merit Determining)",
+        "durationMinutes": 45,
+        "negativeMarkingPerQuestion": 1.0,
+        "hasNegativeMarking": true,
+        "sections": [
+          { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 25, "marks": 75 },
+          { "sectionId": "english_language", "sectionName": "English Language and Comprehension", "questions": 25, "marks": 75 }
+        ]
+      }
+    ],
+    "meritRule": "Performance in Session-II will be evaluated only if a candidate qualifies Session-I. Final merit list is prepared solely on the basis of marks in Session-II."
+  },
+  "variantContext": {
+    "variantDistinctionType": "POST_TRACK",
+    "variants": [
+      { "variantKey": "mts_general", "variantName": "Multi Tasking (Non-Technical) Staff", "physicalStageRequired": false },
+      { "variantKey": "havaldar_cbic_cbn", "variantName": "Havaldar (CBIC and CBN)", "physicalStageRequired": true }
+    ]
+  }
+}

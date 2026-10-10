@@ -1,0 +1,9 @@
+{
+  "testCode": "RC_47B6_VARIANT_SELECTION_GATE_TEST",
+  "executedAt": "2026-09-10T07:08:16.410Z",
+  "metrics": {
+    "VARIANT_REQUIRED_EMPTY_BUT_SELECTION_READY_COUNT": 0,
+    "VARIANT_REQUIRED_EMPTY_BUT_STARTABLE_COUNT": 0
+  },
+  "gatePass": true
+}

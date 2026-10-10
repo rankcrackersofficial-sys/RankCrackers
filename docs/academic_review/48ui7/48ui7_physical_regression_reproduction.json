@@ -1,0 +1,45 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "PHYSICAL REGRESSION REPRODUCTION",
+  "timestamp": "2026-09-10T18:10:00.000Z",
+  "device": {
+    "model": "Samsung Galaxy S23 (SM-S911B)",
+    "serial": "RZCW12FBFXZ",
+    "platform": "Android 16 (API 36)"
+  },
+  "physical_block_reproduced": "YES",
+  "reproduction_findings": {
+    "symptom": "Authenticated student in Mission Realm could expand JEE Main and other missions, but both 'SMART START' and 'QUICK START' buttons were disabled / blurred, blocking access to Dashboard/Home.",
+    "root_cause_analysis": {
+      "code_location_1": "lib/core/models/recruitment.dart",
+      "issue_1": "In 48UI6, quickEntryEnabled, smartEntryEnabled, and missionSelectionReady were defaulted to false when omitted. isStartable required explicit true flags and allowed no exit path to Dashboard.",
+      "code_location_2": "lib/features/auth/presentation/screens/mission_realm_screen.dart",
+      "issue_2": "_buildMissionActionButtons checked recruitment.quickEntryEnabled directly instead of distinguishing mission shell access from academic diagnostic readiness.",
+      "code_location_3": "lib/core/firebase/firestore_service.dart",
+      "issue_3": "Firestore document parsing previously read only top-level flags and omitted nested visibility.quickEntryEnabled / visibility.smartEntryEnabled fallback resolution."
+    },
+    "observed_raw_recruitment_state": {
+      "id": "jee_main_2026",
+      "sourceMissionId": "jee_main_2026",
+      "sourcePath": "mission_realms/jee_main_2026",
+      "status": "PREPARING",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "missionSelectionReady": false,
+      "variantRequired": false,
+      "catalogDiscoverable": true,
+      "founderHold": false,
+      "manualGovernanceLock": false
+    },
+    "observed_raw_firestore_catalog_doc": {
+      "top_level_quickEntryEnabled": null,
+      "top_level_smartEntryEnabled": null,
+      "visibility": {
+        "quickEntryEnabled": true,
+        "smartEntryEnabled": false,
+        "catalogDiscoverable": true
+      }
+    }
+  },
+  "verdict": "PHYSICAL_BLOCK_CONFIRMED_AND_DOCUMENTED"
+}

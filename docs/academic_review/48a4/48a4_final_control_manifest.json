@@ -1,0 +1,1517 @@
+{
+  "manifestVersion": "1.4.0-48a4",
+  "gate": "GATE 48A4 — FINAL CANONICAL OVERLAY + LIVE IDENTITY BINDING",
+  "generatedAt": "2026-09-10T12:16:44.455Z",
+  "metrics": {
+    "TRACKED_PHYSICAL_ID_COUNT": 214,
+    "CANONICAL_CLEAN_COUNT": 173,
+    "CANONICAL_HOLD_COUNT": 34,
+    "POINTER_COUNT": 2,
+    "EXCLUDED_COUNT": 5,
+    "CANONICAL_ACTIVE_CONTROL_COUNT": 207,
+    "TOP_LEVEL_MULTI_BUCKET_COUNT": 0,
+    "TOP_LEVEL_NO_BUCKET_COUNT": 0,
+    "MATERIALIZATION_ELIGIBLE_NOW_COUNT": 173,
+    "RPSC_FIRST_GRADE_DUPLICATE_CANONICAL_COUNT": 0
+  },
+  "canonicalMissions": [
+    {
+      "rawPhysicalId": "afcat",
+      "canonicalId": "afcat",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "agniveervayu",
+      "canonicalId": "agniveervayu",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "an_erecruitment_chsl",
+      "canonicalId": "an_erecruitment_chsl",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "an_erecruitment_cml",
+      "canonicalId": "an_erecruitment_cml",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "EXCLUDED",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "an_police_constable_si",
+      "canonicalId": "an_police_constable_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "appsc_arunachal_cce",
+      "canonicalId": "appsc_arunachal_cce",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "appsc_group1",
+      "canonicalId": "appsc_group1",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "appsc_group2",
+      "canonicalId": "appsc_group2",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "apsc_cce",
+      "canonicalId": "apsc_cce",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "apslprb_sct_pc",
+      "canonicalId": "apslprb_sct_pc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "apslprb_sct_si",
+      "canonicalId": "apslprb_sct_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "apssb_cgl_csle",
+      "canonicalId": "apssb_cgl_csle",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "army_agniveer_cee",
+      "canonicalId": "army_agniveer_cee",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "arunachal_police_constable",
+      "canonicalId": "arunachal_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bpsc_cce_prelims",
+      "canonicalId": "bpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bpsc_judicial_service_prelims",
+      "canonicalId": "bpsc_judicial_service_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "bpsc_tre",
+      "canonicalId": "bpsc_tre",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bpssc_police_si",
+      "canonicalId": "bpssc_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bse_odisha_otet",
+      "canonicalId": "bse_odisha_otet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bseb_stet",
+      "canonicalId": "bseb_stet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bssc_cgl",
+      "canonicalId": "bssc_cgl",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "bssc_inter_level",
+      "canonicalId": "bssc_inter_level",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "cbse_ctet",
+      "canonicalId": "cbse_ctet",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "cg_police_constable",
+      "canonicalId": "cg_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "cgpsc_state_service",
+      "canonicalId": "cgpsc_state_service",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "cgvyapam_cgtet",
+      "canonicalId": "cgvyapam_cgtet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "chandigarh_jbt_teacher",
+      "canonicalId": "chandigarh_jbt_teacher",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "chandigarh_police_asi",
+      "canonicalId": "chandigarh_police_asi",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "chandigarh_police_constable",
+      "canonicalId": "chandigarh_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "chandigarh_tgt_teacher",
+      "canonicalId": "chandigarh_tgt_teacher",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "csbc_bihar_police_constable",
+      "canonicalId": "csbc_bihar_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "delhi_judicial_service_prelims",
+      "canonicalId": "delhi_judicial_service_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "delhi_police_constable",
+      "canonicalId": "delhi_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "delhi_police_si",
+      "canonicalId": "delhi_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "POINTER",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "dnhdd_ssb_group_bc",
+      "canonicalId": "dnhdd_ssb_group_bc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "dsssb_delhi_pgt",
+      "canonicalId": "dsssb_delhi_pgt",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "dsssb_delhi_prt",
+      "canonicalId": "dsssb_delhi_prt",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "dsssb_delhi_tgt",
+      "canonicalId": "dsssb_delhi_tgt",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "dsssb_junior_assistant_ldc",
+      "canonicalId": "dsssb_junior_assistant_ldc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "epfo_assistant_provident_fund_commissioner",
+      "canonicalId": "epfo_assistant_provident_fund_commissioner",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "epfo_enforcement_officer_accounts_officer",
+      "canonicalId": "epfo_enforcement_officer_accounts_officer",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "ga_police_recruitment",
+      "canonicalId": "ga_police_recruitment",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gauhc_ajs_grade3_prelims",
+      "canonicalId": "gauhc_ajs_grade3_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "gprb_lokrakshak",
+      "canonicalId": "gprb_lokrakshak",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gpsc_class_1_2",
+      "canonicalId": "gpsc_class_1_2",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gpsc_goa_civil_service",
+      "canonicalId": "gpsc_goa_civil_service",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gpssb_talati",
+      "canonicalId": "gpssb_talati",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gssc_goa_group_c",
+      "canonicalId": "gssc_goa_group_c",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "gsssb_cce",
+      "canonicalId": "gsssb_cce",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "haryana_htet",
+      "canonicalId": "haryana_htet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "haryana_police_constable",
+      "canonicalId": "haryana_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "haryana_police_si",
+      "canonicalId": "haryana_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hp_tet",
+      "canonicalId": "hp_tet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hppsc_hpas_prelims",
+      "canonicalId": "hppsc_hpas_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hppsc_police_constable",
+      "canonicalId": "hppsc_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hprca_group_c_common",
+      "canonicalId": "hprca_group_c_common",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hpsc_hcs_j_prelims",
+      "canonicalId": "hpsc_hcs_j_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "hpsc_hcs_prelims",
+      "canonicalId": "hpsc_hcs_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hssc_cet_group_c",
+      "canonicalId": "hssc_cet_group_c",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "hssc_cet_group_d",
+      "canonicalId": "hssc_cet_group_d",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ib_acio_ii_executive",
+      "canonicalId": "ib_acio_ii_executive",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "ib_security_assistant_executive",
+      "canonicalId": "ib_security_assistant_executive",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "ibps_crp_rrb_office_assistant",
+      "canonicalId": "ibps_crp_rrb_office_assistant",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ibps_crp_rrb_officers",
+      "canonicalId": "ibps_crp_rrb_officers",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ibps_csa",
+      "canonicalId": "ibps_csa",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ibps_po_mt",
+      "canonicalId": "ibps_po_mt",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ibps_so",
+      "canonicalId": "ibps_so",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jac_jtet",
+      "canonicalId": "jac_jtet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jee_main_2026",
+      "canonicalId": "jee_main_2026",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jk_police_constable",
+      "canonicalId": "jk_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jk_police_si",
+      "canonicalId": "jk_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jkpsc_cce_prelims",
+      "canonicalId": "jkpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jkssb_graduate_level",
+      "canonicalId": "jkssb_graduate_level",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jpsc_cce_prelims",
+      "canonicalId": "jpsc_cce_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jrbt_tripura_group_cd",
+      "canonicalId": "jrbt_tripura_group_cd",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jssc_cgl",
+      "canonicalId": "jssc_cgl",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "jssc_police_constable",
+      "canonicalId": "jssc_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "kea_fda_sda",
+      "canonicalId": "kea_fda_sda",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "kpsc_kas_gp",
+      "canonicalId": "kpsc_kas_gp",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "kpsc_kl_10th_plus2_prelims",
+      "canonicalId": "kpsc_kl_10th_plus2_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "kpsc_kl_degree_prelims",
+      "canonicalId": "kpsc_kl_degree_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "kpsc_kl_kas",
+      "canonicalId": "kpsc_kl_kas",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "kpsc_kl_police_constable",
+      "canonicalId": "kpsc_kl_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ksp_cpc",
+      "canonicalId": "ksp_cpc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ksp_psi",
+      "canonicalId": "ksp_psi",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ladakh_police_constable",
+      "canonicalId": "ladakh_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "lahdc_dssrb_district_cadre",
+      "canonicalId": "lahdc_dssrb_district_cadre",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ld_admin_group_c",
+      "canonicalId": "ld_admin_group_c",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "EXCLUDED",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "manipur_police_constable",
+      "canonicalId": "manipur_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "meghalaya_crb_police",
+      "canonicalId": "meghalaya_crb_police",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mh_police_constable",
+      "canonicalId": "mh_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "mizoram_police_constable",
+      "canonicalId": "mizoram_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mizoram_subordinate_services",
+      "canonicalId": "mizoram_subordinate_services",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "EXCLUDED",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpesb_group2_subgroup4",
+      "canonicalId": "mpesb_group2_subgroup4",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpesb_mptet",
+      "canonicalId": "mpesb_mptet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpesb_police_constable",
+      "canonicalId": "mpesb_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mphc_civil_judge_prelims",
+      "canonicalId": "mphc_civil_judge_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "mppsc_state_service",
+      "canonicalId": "mppsc_state_service",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpsc_group_bc_combined",
+      "canonicalId": "mpsc_group_bc_combined",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpsc_manipur_mcscc",
+      "canonicalId": "mpsc_manipur_mcscc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpsc_meghalaya_mcs",
+      "canonicalId": "mpsc_meghalaya_mcs",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpsc_mizoram_mcs",
+      "canonicalId": "mpsc_mizoram_mcs",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mpsc_rajyaseva",
+      "canonicalId": "mpsc_rajyaseva",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mscepune_mahatet",
+      "canonicalId": "mscepune_mahatet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "mssc_manipur_group_cd",
+      "canonicalId": "mssc_manipur_group_cd",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "nabard_grade_a",
+      "canonicalId": "nabard_grade_a",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nagaland_police_constable",
+      "canonicalId": "nagaland_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "navy_agniveer_mr",
+      "canonicalId": "navy_agniveer_mr",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "navy_agniveer_ssr",
+      "canonicalId": "navy_agniveer_ssr",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "neet_(ug)-2027",
+      "canonicalId": "neet_(ug)-2027",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "npsc_nagaland_ctse",
+      "canonicalId": "npsc_nagaland_ctse",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "EXCLUDED",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "npsc_nagaland_ncs",
+      "canonicalId": "npsc_nagaland_ncs",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nssb_nagaland_csre",
+      "canonicalId": "nssb_nagaland_csre",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nta_csir_ugc_net",
+      "canonicalId": "nta_csir_ugc_net",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nta_cuet_pg",
+      "canonicalId": "nta_cuet_pg",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nta_cuet_ug",
+      "canonicalId": "nta_cuet_ug",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "nta_icar_aieea_pg",
+      "canonicalId": "nta_icar_aieea_pg",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "nta_nchm_jee",
+      "canonicalId": "nta_nchm_jee",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "nta_ugc_net",
+      "canonicalId": "nta_ugc_net",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "odisha_police_constable",
+      "canonicalId": "odisha_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "opsc_ocs_prelims",
+      "canonicalId": "opsc_ocs_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ossc_cgl",
+      "canonicalId": "ossc_cgl",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "osssc_cre_combined",
+      "canonicalId": "osssc_cre_combined",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ppsc_pcs_j_prelims",
+      "canonicalId": "ppsc_pcs_j_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "ppsc_pscce_prelims",
+      "canonicalId": "ppsc_pscce_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "psssb_clerk",
+      "canonicalId": "psssb_clerk",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "psssb_patwari",
+      "canonicalId": "psssb_patwari",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "punjab_police_constable",
+      "canonicalId": "punjab_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "punjab_police_si",
+      "canonicalId": "punjab_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "punjab_pstet",
+      "canonicalId": "punjab_pstet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "py_dpar_clerk_vao",
+      "canonicalId": "py_dpar_clerk_vao",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "py_police_si_pc",
+      "canonicalId": "py_police_si_pc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "rbi_assistant",
+      "canonicalId": "rbi_assistant",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rbi_grade_b",
+      "canonicalId": "rbi_grade_b",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rbse_reet",
+      "canonicalId": "rbse_reet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rhc_civil_judge_prelims",
+      "canonicalId": "rhc_civil_judge_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_PRODUCER_ROW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "rj_police_constable",
+      "canonicalId": "rj_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "rpf_constable",
+      "canonicalId": "rpf_constable",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rpf_si",
+      "canonicalId": "rpf_si",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rpsc_ras_prelims",
+      "canonicalId": "rpsc_ras_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rpsc_school_lecturer",
+      "canonicalId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rrb_alp",
+      "canonicalId": "rrb_alp",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rrb_je",
+      "canonicalId": "rrb_je",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rrb_level_1",
+      "canonicalId": "rrb_level_1",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rrb_ntpc",
+      "canonicalId": "rrb_ntpc",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rrb_technician",
+      "canonicalId": "rrb_technician",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rssb_cet_graduate",
+      "canonicalId": "rssb_cet_graduate",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "rssb_cet_senior_secondary",
+      "canonicalId": "rssb_cet_senior_secondary",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "sbi_ja",
+      "canonicalId": "sbi_ja",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "sbi_po",
+      "canonicalId": "sbi_po",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "seb_gujarattet",
+      "canonicalId": "seb_gujarattet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "sikkim_police_constable",
+      "canonicalId": "sikkim_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "slprb_assam_police",
+      "canonicalId": "slprb_assam_police",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "slrc_adre",
+      "canonicalId": "slrc_adre",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "spsc_sikkim_cce",
+      "canonicalId": "spsc_sikkim_cce",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "spsc_sikkim_police_si",
+      "canonicalId": "spsc_sikkim_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssb_odisha_lecturer",
+      "canonicalId": "ssb_odisha_lecturer",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_cgl",
+      "canonicalId": "ssc_cgl",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_chsl",
+      "canonicalId": "ssc_chsl",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_cpo",
+      "canonicalId": "ssc_cpo",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_gd",
+      "canonicalId": "ssc_gd",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_hindi_translators",
+      "canonicalId": "ssc_hindi_translators",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_je",
+      "canonicalId": "ssc_je",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_ladakh_selection_post",
+      "canonicalId": "ssc_ladakh_selection_post",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "POINTER",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_mts_havaldar",
+      "canonicalId": "ssc_mts_havaldar",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_selection_post",
+      "canonicalId": "ssc_selection_post",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ssc_stenographer",
+      "canonicalId": "ssc_stenographer",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgpsc_group1",
+      "canonicalId": "tgpsc_group1",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgpsc_group2",
+      "canonicalId": "tgpsc_group2",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgpsc_group3",
+      "canonicalId": "tgpsc_group3",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgpsc_group4",
+      "canonicalId": "tgpsc_group4",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgslprb_sct_pc",
+      "canonicalId": "tgslprb_sct_pc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tgslprb_sct_si",
+      "canonicalId": "tgslprb_sct_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnmrb_assistant_surgeon",
+      "canonicalId": "tnmrb_assistant_surgeon",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "EXCLUDED",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnpsc_group1",
+      "canonicalId": "tnpsc_group1",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnpsc_group2_2a",
+      "canonicalId": "tnpsc_group2_2a",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnpsc_group4_vao",
+      "canonicalId": "tnpsc_group4_vao",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tntrb_pg_assistant_tet",
+      "canonicalId": "tntrb_pg_assistant_tet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnusrb_pc",
+      "canonicalId": "tnusrb_pc",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tnusrb_si",
+      "canonicalId": "tnusrb_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tpsc_tripura_tcs_tps",
+      "canonicalId": "tpsc_tripura_tcs_tps",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "trbt_tripura_stgt_stpgt",
+      "canonicalId": "trbt_tripura_stgt_stpgt",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "trbt_tripura_ttet",
+      "canonicalId": "trbt_tripura_ttet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_IDENTITY_ALIAS_DISCREPANCY"
+    },
+    {
+      "rawPhysicalId": "treirb_teaching",
+      "canonicalId": "treirb_teaching",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "tripura_police_constable",
+      "canonicalId": "tripura_police_constable",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "uk_police_constable",
+      "canonicalId": "uk_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "uk_police_si",
+      "canonicalId": "uk_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "uk_tet",
+      "canonicalId": "uk_tet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ukpsc_lower_subordinate_prelims",
+      "canonicalId": "ukpsc_lower_subordinate_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "ukpsc_pcs_prelims",
+      "canonicalId": "ukpsc_pcs_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "uksssc_group_c_combined",
+      "canonicalId": "uksssc_group_c_combined",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "up_tet",
+      "canonicalId": "up_tet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upprpb_police_constable",
+      "canonicalId": "upprpb_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upprpb_police_si",
+      "canonicalId": "upprpb_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "uppsc_pcs_j_prelims",
+      "canonicalId": "uppsc_pcs_j_prelims",
+      "lane": "JUDICIAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "uppsc_pcs_prelims",
+      "canonicalId": "uppsc_pcs_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "uppsc_ro_aro_prelims",
+      "canonicalId": "uppsc_ro_aro_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_capf_ac",
+      "canonicalId": "upsc_capf_ac",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_cds",
+      "canonicalId": "upsc_cds",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_cms",
+      "canonicalId": "upsc_cms",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_cse_prelims",
+      "canonicalId": "upsc_cse_prelims",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_ese",
+      "canonicalId": "upsc_ese",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_geo_scientist",
+      "canonicalId": "upsc_geo_scientist",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsc_ies_iss",
+      "canonicalId": "upsc_ies_iss",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "upsc_ifos",
+      "canonicalId": "upsc_ifos",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_REVIEW_REQUIRED"
+    },
+    {
+      "rawPhysicalId": "upsc_nda_na",
+      "canonicalId": "upsc_nda_na",
+      "lane": "NATIONAL",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsssc_pet",
+      "canonicalId": "upsssc_pet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "upsssc_vdo",
+      "canonicalId": "upsssc_vdo",
+      "lane": "ARTICLE315_OVERLAY",
+      "topLevelDisposition": "HOLD",
+      "holdSubreason": "HOLD_EVIDENCE"
+    },
+    {
+      "rawPhysicalId": "wbbpe_primary_tet",
+      "canonicalId": "wbbpe_primary_tet",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "wbcssc_slst_teacher",
+      "canonicalId": "wbcssc_slst_teacher",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "wbprb_police_constable",
+      "canonicalId": "wbprb_police_constable",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "wbprb_police_si",
+      "canonicalId": "wbprb_police_si",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "wbpsc_clerkship",
+      "canonicalId": "wbpsc_clerkship",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    },
+    {
+      "rawPhysicalId": "wbpsc_wbcs_prelims",
+      "canonicalId": "wbpsc_wbcs_prelims",
+      "lane": "STATE_UT",
+      "topLevelDisposition": "CLEAN_CANONICAL",
+      "holdSubreason": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "testCode": "RC_47B4_CANONICAL_IDENTITY_PRESERVATION_TEST",
+  "executedAt": "2026-09-10T06:57:27.631Z",
+  "inputMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "outputHierarchyPath": "STATE/RJ/RPSC/RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "metrics": {
+    "CANONICAL_MISSION_ID_CASE_MUTATION_COUNT": 0
+  },
+  "assertionPass": true
+}

@@ -1,0 +1,12 @@
+{
+  "testCode": "RC_47B4_LIFECYCLE_PRESERVATION_TEST",
+  "executedAt": "2026-09-10T06:57:27.663Z",
+  "archivedPreserved": true,
+  "founderHoldPreserved": true,
+  "metrics": {
+    "EXISTING_ARCHIVED_MISSION_AUTO_UNARCHIVED_COUNT": 0,
+    "EXISTING_ARCHIVED_STATE_PRESERVED": "PASS",
+    "EXISTING_FOUNDER_HOLD_PRESERVED": "PASS"
+  },
+  "assertionPass": true
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IndiaWideGenericAuthorityMissionManifest",
+  "type": "object",
+  "required": [
+    "manifestVersion",
+    "manifestId",
+    "missions"
+  ],
+  "properties": {
+    "manifestVersion": {
+      "type": "string",
+      "example": "1.0.0"
+    },
+    "manifestId": {
+      "type": "string",
+      "example": "manifest_india_wide_v1_2026"
+    },
+    "description": {
+      "type": "string"
+    },
+    "missions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "missionId",
+          "title",
+          "authorityGroupKey",
+          "authorityDisplayName",
+          "jurisdictionLevel"
+        ],
+        "properties": {
+          "missionId": {
+            "type": "string",
+            "description": "Year-less permanent ID for new missions, or immutable pilot ID"
+          },
+          "title": {
+            "type": "string"
+          },
+          "authorityGroupKey": {
+            "type": "string"
+          },
+          "authorityDisplayName": {
+            "type": "string"
+          },
+          "jurisdictionLevel": {
+            "type": "string",
+            "enum": [
+              "CENTRAL",
+              "STATE",
+              "UT"
+            ]
+          },
+          "stateCode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "stateName": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "region": {
+            "type": "string"
+          },
+          "sector": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "examCategory": {
+            "type": "string",
+            "enum": [
+              "competitive",
+              "qualifying",
+              "category_pending"
+            ]
+          },
+          "examScope": {
+            "type": "string"
+          },
+          "examPurpose": {
+            "type": "string"
+          },
+          "variants": {
+            "type": "array"
+          },
+          "officialSourceLocator": {
+            "type": "object"
+          },
+          "latestEffectiveSource": {
+            "type": "object"
+          },
+          "pyqArchiveRef": {
+            "type": "object"
+          },
+          "sourceMonitoringRef": {
+            "type": "object"
+          },
+          "readiness": {
+            "type": "object"
+          },
+          "visibility": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "variants": [
+    {
+      "variantId": "graduate",
+      "displayName": "Graduate Posts",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "missionId": "rrb_ntpc"
+    },
+    {
+      "variantId": "undergraduate",
+      "displayName": "Undergraduate Posts",
+      "variantDimension": "LEVEL",
+      "sourceEvidenceRef": "https://www.rrbcdg.gov.in/employment-notices.php",
+      "missionId": "rrb_ntpc"
+    },
+    {
+      "variantId": "scale_i",
+      "displayName": "Officer Scale I",
+      "variantDimension": "CADRE",
+      "sourceEvidenceRef": "https://www.ibps.in/index.php/crp-updates/",
+      "missionId": "ibps_rrb_officer"
+    },
+    {
+      "variantId": "scale_ii",
+      "displayName": "Officer Scale II",
+      "variantDimension": "CADRE",
+      "sourceEvidenceRef": "https://www.ibps.in/index.php/crp-updates/",
+      "missionId": "ibps_rrb_officer"
+    },
+    {
+      "variantId": "scale_iii",
+      "displayName": "Officer Scale III",
+      "variantDimension": "CADRE",
+      "sourceEvidenceRef": "https://www.ibps.in/index.php/crp-updates/",
+      "missionId": "ibps_rrb_officer"
+    },
+    {
+      "variantId": "general",
+      "displayName": "General",
+      "variantDimension": "DISCIPLINE",
+      "sourceEvidenceRef": "https://opportunities.rbi.org.in/",
+      "missionId": "rbi_grade_b"
+    },
+    {
+      "variantId": "depr",
+      "displayName": "DEPR",
+      "variantDimension": "DISCIPLINE",
+      "sourceEvidenceRef": "https://opportunities.rbi.org.in/",
+      "missionId": "rbi_grade_b"
+    },
+    {
+      "variantId": "dsim",
+      "displayName": "DSIM",
+      "variantDimension": "DISCIPLINE",
+      "sourceEvidenceRef": "https://opportunities.rbi.org.in/",
+      "missionId": "rbi_grade_b"
+    },
+    {
+      "variantId": "flying",
+      "displayName": "Flying Branch",
+      "variantDimension": "BRANCH",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "missionId": "afcat"
+    },
+    {
+      "variantId": "ground_duty_technical",
+      "displayName": "Ground Duty Technical",
+      "variantDimension": "BRANCH",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "missionId": "afcat"
+    },
+    {
+      "variantId": "ground_duty_non_technical",
+      "displayName": "Ground Duty Non-Technical",
+      "variantDimension": "BRANCH",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "missionId": "afcat"
+    },
+    {
+      "variantId": "general_duty",
+      "displayName": "Agniveer General Duty",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "missionId": "army_agniveer_cee"
+    },
+    {
+      "variantId": "technical",
+      "displayName": "Agniveer Technical",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "missionId": "army_agniveer_cee"
+    },
+    {
+      "variantId": "office_assistant_skt",
+      "displayName": "Agniveer Office Assistant / Store Keeper Technical",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "missionId": "army_agniveer_cee"
+    },
+    {
+      "variantId": "tradesman",
+      "displayName": "Agniveer Tradesman",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "missionId": "army_agniveer_cee"
+    },
+    {
+      "variantId": "women_military_police",
+      "displayName": "Agniveer Women Military Police",
+      "variantDimension": "TRADE",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "missionId": "army_agniveer_cee"
+    },
+    {
+      "variantId": "science",
+      "displayName": "Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "missionId": "agniveervayu"
+    },
+    {
+      "variantId": "other_than_science",
+      "displayName": "Other than Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "missionId": "agniveervayu"
+    },
+    {
+      "variantId": "combined",
+      "displayName": "Science and Other than Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "missionId": "agniveervayu"
+    }
+  ]
+}

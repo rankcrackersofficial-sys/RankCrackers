@@ -1,0 +1,103 @@
+{
+  "unresolvedFactCount": 12,
+  "unverifiedFactClaims": 0,
+  "unsupportedReservationInferenceCount": 0,
+  "rows": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "factType": "ELIGIBILITY_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "factType": "RESERVATION_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycleId": "RPSC-RAS-2024",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycleId": "RPSC-RAS-2024",
+      "factType": "ELIGIBILITY_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "cycleId": "RPSC-RAS-2024",
+      "factType": "RESERVATION_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycleId": "UPSC-CSE-2026",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycleId": "UPSC-CSE-2026",
+      "factType": "ELIGIBILITY_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "cycleId": "UPSC-CSE-2026",
+      "factType": "RESERVATION_RULES",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    },
+    {
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "factType": "VACANCY_MATRIX",
+      "value": "UNKNOWN",
+      "reason": "Exact current-cycle official document text/table not recovered with stable page-level provenance",
+      "unsupportedInferenceMade": false
+    }
+  ]
+}

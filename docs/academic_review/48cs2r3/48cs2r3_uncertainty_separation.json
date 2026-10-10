@@ -1,0 +1,21 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "User Data vs Official Source Data Uncertainty Separation",
+  "classificationMatrix": {
+    "missingUserProfileFact": {
+      "definition": "Candidate has not supplied required profile data (e.g. dateOfBirth, reservationCategory, qualification).",
+      "resultingStatus": "MORE_INFORMATION_NEEDED",
+      "actionableUserPrompt": "Prompt candidate to update Career Profile.",
+      "fieldTracking": "missingProfileFields[]"
+    },
+    "missingOfficialSourceRule": {
+      "definition": "Commission rulebook was not audited, rule missing source proof, or rulebook family is unresolved.",
+      "resultingStatus": "NOT_EVALUATED",
+      "actionableUserPrompt": "Awaiting official notification rulebook verification.",
+      "fieldTracking": "unresolvedRuleIds[], unresolvedRuleFamilies[]"
+    }
+  },
+  "complianceMetric": {
+    "SOURCE_GAP_MAPPED_TO_USER_PROFILE_GAP_COUNT": 0
+  }
+}

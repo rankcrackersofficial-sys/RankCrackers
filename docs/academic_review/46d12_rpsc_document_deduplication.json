@@ -1,0 +1,49 @@
+{
+  "gate": "RC_46D11_FALSE_CERTIFICATION_AND_CANONICAL_SCHEMA_CLOSURE_46D12",
+  "generatedAt": "2026-09-09T15:44:08.697Z",
+  "summary": {
+    "RPSC_OFFICIAL_DOCUMENT_RAW_ROW_COUNT_BEFORE": 32,
+    "RPSC_OFFICIAL_DOCUMENT_RAW_ROW_COUNT_AFTER": 29,
+    "RPSC_UNIQUE_OFFICIAL_SOURCE_COUNT": 29,
+    "RPSC_DUPLICATE_SOURCE_GROUP_COUNT": 0,
+    "RPSC_DELETED_ALIAS_ROWS_COUNT": 3,
+    "RPSC_SYLLABUS_DOCUMENTS_COUNT": 26,
+    "RPSC_ADVERTISEMENT_DOCUMENTS_COUNT": 3
+  },
+  "deletedAliasRows": [
+    "doc_rpsc_school_lecturer_advt_06_2025_26",
+    "doc_rpsc_school_lecturer_advt_09_2025_26_agri",
+    "doc_rpsc_school_lecturer_corrigendum_08_2025_26"
+  ],
+  "retainedCanonicalDocumentIds": [
+    "doc_advt_06_2025_26",
+    "doc_advt_09_2025_26",
+    "doc_corrigendum_08_2025_26",
+    "doc_syllabus_p1_academic",
+    "doc_syllabus_p1_coach",
+    "doc_syllabus_p1_phy_edu",
+    "doc_syllabus_p2_agriculture",
+    "doc_syllabus_p2_biology",
+    "doc_syllabus_p2_chemistry",
+    "doc_syllabus_p2_coach_shared",
+    "doc_syllabus_p2_commerce",
+    "doc_syllabus_p2_drawing",
+    "doc_syllabus_p2_economics",
+    "doc_syllabus_p2_english",
+    "doc_syllabus_p2_geography",
+    "doc_syllabus_p2_hindi",
+    "doc_syllabus_p2_history",
+    "doc_syllabus_p2_home_science",
+    "doc_syllabus_p2_mathematics",
+    "doc_syllabus_p2_music",
+    "doc_syllabus_p2_phy_edu",
+    "doc_syllabus_p2_physics",
+    "doc_syllabus_p2_political_science",
+    "doc_syllabus_p2_public_admin",
+    "doc_syllabus_p2_punjabi",
+    "doc_syllabus_p2_rajasthani",
+    "doc_syllabus_p2_sanskrit",
+    "doc_syllabus_p2_sociology",
+    "doc_syllabus_p2_urdu"
+  ]
+}

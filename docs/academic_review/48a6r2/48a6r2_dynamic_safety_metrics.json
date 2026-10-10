@@ -1,0 +1,23 @@
+{
+  "CLEAN_INPUT_COUNT": 173,
+  "ALREADY_LIVE_COUNT": 14,
+  "VERIFIED_ALIAS_COUNT": 1,
+  "NET_NEW_READY_COUNT": 158,
+  "NET_NEW_HOLD_COUNT": 0,
+  "READY_WITH_MISSING_REQUIRED_FIELD_COUNT": 0,
+  "INVENTED_FALLBACK_READY_COUNT": 0,
+  "HEURISTIC_TAXONOMY_READY_COUNT": 0,
+  "UNRESOLVED_AUTHORITY_READY_COUNT": 0,
+  "THREE_PROJECTION_INVALID_READY_COUNT": 0,
+  "STALE_QUICK_ENTRY_OPERATION_PRESENT_COUNT": 0,
+  "FALSE_CURRENT_CYCLE_RESOLVED_COUNT": 0,
+  "MISSION_ID_SUBSTRING_TAXONOMY_COUNT": 0,
+  "TITLE_SUBSTRING_TAXONOMY_COUNT": 0,
+  "offendingMissions": {
+    "readyWithMissingRequiredField": [],
+    "inventedFallbackReady": [],
+    "heuristicTaxonomyReady": [],
+    "unresolvedAuthorityReady": [],
+    "threeProjectionInvalidReady": []
+  }
+}

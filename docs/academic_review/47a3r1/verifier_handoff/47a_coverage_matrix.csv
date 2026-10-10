@@ -1,0 +1,37 @@
+regionCode,regionName,jurisdictionType,zone,pscAuthorityKey,subordinateAuthorityKey,policeAuthorityKey,majorExamCount,pyqArchiveClassification,auditStatus
+AP,"Andhra Pradesh",STATE,Zone-4,auth_in_ap_appsc,NONE,auth_in_ap_apslprb,4,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+AR,"Arunachal Pradesh",STATE,Zone-5,auth_in_ar_appsc,auth_in_ar_apssb,auth_in_ar_police,3,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+AS,"Assam",STATE,Zone-5,auth_in_as_apsc,auth_in_as_slrc,auth_in_as_slprb,3,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL
+BR,"Bihar",STATE,Zone-3,auth_in_br_bpsc,auth_in_br_bssc,auth_in_br_bpssc,7,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+CG,"Chhattisgarh",STATE,Zone-2,auth_in_cg_cgpsc,auth_in_cg_cgvyapam,auth_in_cg_police,3,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+GA,"Goa",STATE,Zone-2,auth_in_ga_gpsc,auth_in_ga_gssc,auth_in_ga_police,3,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+GJ,"Gujarat",STATE,Zone-2,auth_in_gj_gpsc,auth_in_gj_gsssb,auth_in_gj_gprb,5,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+HR,"Haryana",STATE,Zone-1,auth_in_hr_hpsc,auth_in_hr_hssc,DEPARTMENTAL,6,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+HP,"Himachal Pradesh",STATE,Zone-1,auth_in_hp_hppsc,auth_in_hp_hprca,DEPARTMENTAL,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+JH,"Jharkhand",STATE,Zone-3,auth_in_jh_jpsc,auth_in_jh_jssc,DEPARTMENTAL,4,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+KA,"Karnataka",STATE,Zone-4,auth_in_ka_kpsc,auth_in_ka_kea,auth_in_ka_ksp,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+KL,"Kerala",STATE,Zone-4,auth_in_kl_kpsc,NONE,DEPARTMENTAL,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+MP,"Madhya Pradesh",STATE,Zone-2,auth_in_mp_mppsc,auth_in_mp_mpesb,auth_in_mp_police,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+MH,"Maharashtra",STATE,Zone-2,auth_in_mh_mpsc,NONE,auth_in_mh_police,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+MN,"Manipur",STATE,Zone-5,auth_in_mn_mpsc,auth_in_mn_mssc,auth_in_mn_police,3,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+ML,"Meghalaya",STATE,Zone-5,auth_in_ml_mpsc,NONE,auth_in_ml_crb,2,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+MZ,"Mizoram",STATE,Zone-5,auth_in_mz_mpsc,auth_in_mz_msssb,auth_in_mz_police,3,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+NL,"Nagaland",STATE,Zone-5,auth_in_nl_npsc,auth_in_nl_nssb,auth_in_nl_police,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+OD,"Odisha",STATE,Zone-3,auth_in_od_opsc,auth_in_od_ossc,auth_in_od_opssb,6,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+PB,"Punjab",STATE,Zone-1,auth_in_pb_ppsc,auth_in_pb_psssb,auth_in_pb_police,6,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+RJ,"Rajasthan",STATE,Zone-2,auth_in_rj_rpsc,auth_in_rj_rssb,auth_in_rj_police,6,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+SK,"Sikkim",STATE,Zone-5,auth_in_sk_spsc,NONE,auth_in_sk_police,3,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL
+TN,"Tamil Nadu",STATE,Zone-4,auth_in_tn_tnpsc,auth_in_tn_tnmrb,auth_in_tn_tnusrb,7,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+TG,"Telangana",STATE,Zone-4,auth_in_tg_tgpsc,auth_in_tg_treirb,auth_in_tg_tgslprb,7,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+TR,"Tripura",STATE,Zone-5,auth_in_tr_tpsc,auth_in_tr_jrbt,auth_in_tr_police,5,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+UP,"Uttar Pradesh",STATE,Zone-1,auth_in_up_uppsc,auth_in_up_upsssc,auth_in_up_upprpb,7,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+UK,"Uttarakhand",STATE,Zone-1,auth_in_uk_ukpsc,auth_in_uk_uksssc,DEPARTMENTAL,6,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+WB,"West Bengal",STATE,Zone-3,auth_in_wb_wbpsc,auth_in_wb_wbssc,auth_in_wb_wbprb,6,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+AN,"Andaman and Nicobar Islands",UT,Zone-3,CENTRAL_UPSC_OR_NONE,auth_in_an_erecruitment,auth_in_an_police,3,OFFICIAL_ARCHIVE_LISTING_VERIFIED,VERIFIED_OFFICIAL
+CH,"Chandigarh",UT,Zone-1,CENTRAL_UPSC_OR_NONE,auth_in_ch_admin,auth_in_ch_police,4,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL
+DN,"Dadra and Nagar Haveli and Daman and Diu",UT,Zone-2,auth_in_dn_upsc,auth_in_dn_ssb,auth_in_dn_police,1,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+DL,"Delhi",UT,Zone-1,CENTRAL_UPSC_OR_NONE,auth_in_dl_dsssb,auth_in_dl_delpol,6,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL
+JK,"Jammu and Kashmir",UT,Zone-1,auth_in_jk_jkpsc,auth_in_jk_jkssb,DEPARTMENTAL,4,OFFICIAL_EXACT_PYQ_DOCUMENT_VERIFIED,VERIFIED_OFFICIAL
+LA,"Ladakh",UT,Zone-1,CENTRAL_UPSC_OR_NONE,auth_in_la_admin,auth_in_la_police,3,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL
+LD,"Lakshadweep",UT,Zone-4,CENTRAL_UPSC_OR_NONE,auth_in_ld_admin,DEPARTMENTAL,1,NOT_FOUND_ON_OFFICIAL_SOURCE,VERIFIED_OFFICIAL
+PY,"Puducherry",UT,Zone-4,CENTRAL_UPSC_OR_NONE,auth_in_py_dpar,auth_in_py_police,2,OFFICIAL_PORTAL_ONLY,VERIFIED_OFFICIAL

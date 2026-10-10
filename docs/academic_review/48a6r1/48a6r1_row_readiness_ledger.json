@@ -1,0 +1,1042 @@
+{
+  "ledger": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "classification": "VERIFIED_ALIAS_TO_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "classification": "ALREADY_LIVE",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "classification": "NET_NEW_READY",
+      "ready": true,
+      "holdReason": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "auditCode": "RC_47A4R2_SSC_OVERLAP_EVIDENCE_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.922Z",
+  "metrics": {
+    "HARDCODED_SSC_RESOLUTION_ROW_COUNT": 0,
+    "UNRESOLVED_SSC_OVERLAP_COUNT": 0
+  },
+  "sscOverlaps": []
+}

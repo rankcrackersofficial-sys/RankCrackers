@@ -1,0 +1,53 @@
+{
+  "gate": "GATE_48CS2_RECRUITMENT_CYCLE_MODEL",
+  "generatedAt": "2026-09-10T11:06:36.537Z",
+  "modelName": "RecruitmentCycle",
+  "governedStatuses": [
+    "UPCOMING",
+    "ACTIVE",
+    "IN_SELECTION",
+    "EXAM_COMPLETED",
+    "RESULT_STAGE",
+    "CLOSED",
+    "CANCELLED"
+  ],
+  "schemaDefinition": {
+    "cycleId": "String (Primary Key, e.g. rc_{authority}_{exam}_{year})",
+    "permanentMissionId": "String | null (Link to permanent 3-projection mission. Nullable for one-off recruitments)",
+    "authorityKey": "String",
+    "title": "String",
+    "cycleYear": "Number",
+    "advertisementNumber": "String | null",
+    "status": "Enum of RECRUITMENT_CYCLE_STATUS",
+    "applicationWindow": "Object { startDate, endDate, isExtended }",
+    "examDates": "Object { prelims, mains, interview }",
+    "totalVacancies": "Number | null",
+    "opportunitySignalActive": "Boolean (True when new applications can be submitted)",
+    "processUpdateSignalActive": "Boolean (True when existing applicants receive active procedural updates)",
+    "sourceProvenance": "Object { sourceId, sourceSha256, sourceUrl, verificationState, ingestedAt }",
+    "createdAt": "String (ISO 8601)",
+    "updatedAt": "String (ISO 8601)"
+  },
+  "sampleNormalizedInstance": {
+    "cycleId": "rc_auth_in_upsc_cse_2026",
+    "permanentMissionId": "upsc_cse_prelims",
+    "authorityKey": "auth_in_upsc",
+    "title": "Civil Services Examination 2026",
+    "cycleYear": 2026,
+    "advertisementNumber": "05/2026-CSP",
+    "status": "ACTIVE",
+    "applicationWindow": {
+      "startDate": "2026-02-14T00:00:00.000Z",
+      "endDate": "2026-03-05T18:00:00.000Z",
+      "isExtended": false,
+      "extensionHistory": []
+    },
+    "examDates": [],
+    "totalVacancies": 1056,
+    "opportunitySignalActive": true,
+    "processUpdateSignalActive": false,
+    "sourceProvenance": null,
+    "createdAt": "2026-09-10T11:06:36.537Z",
+    "updatedAt": "2026-09-10T11:06:36.537Z"
+  }
+}

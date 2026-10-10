@@ -1,0 +1,385 @@
+{
+  "rows": [
+    {
+      "candidateId": "upsc_cse_prelims",
+      "displayName": "Civil Services Preliminary Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_ifos",
+      "displayName": "Indian Forest Service Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_cds",
+      "displayName": "Combined Defence Services Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_nda_na",
+      "displayName": "National Defence Academy and Naval Academy Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_capf_ac",
+      "displayName": "Central Armed Police Forces (ACs) Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_ese",
+      "displayName": "Engineering Services Preliminary Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_cms",
+      "displayName": "Combined Medical Services Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_ies_iss",
+      "displayName": "Indian Economic Service / Indian Statistical Service Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "upsc_geo_scientist",
+      "displayName": "Combined Geo-Scientist Preliminary Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_cgl",
+      "displayName": "SSC Combined Graduate Level Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_chsl",
+      "displayName": "SSC Combined Higher Secondary Level Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_mts_havaldar",
+      "displayName": "SSC MTS / Havaldar Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_gd",
+      "displayName": "SSC Constable GD Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_cpo",
+      "displayName": "SSC Sub-Inspector CPO Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_je",
+      "displayName": "SSC Junior Engineer Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_stenographer",
+      "displayName": "SSC Stenographer Grade C and D Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_hindi_translators",
+      "displayName": "SSC Combined Hindi Translators Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ssc_selection_post",
+      "displayName": "SSC Selection Post Examination",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "jee_main_2026",
+      "displayName": "Joint Entrance Examination Main",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "neet_(ug)-2027",
+      "displayName": "NEET UG",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_cuet_ug",
+      "displayName": "CUET UG",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_cuet_pg",
+      "displayName": "CUET PG",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_ugc_net",
+      "displayName": "UGC NET",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_csir_ugc_net",
+      "displayName": "Joint CSIR UGC NET",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_icar_aieea_pg",
+      "displayName": "ICAR AIEEA PG / AICE JRF-SRF",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nta_nchm_jee",
+      "displayName": "NCHM JEE",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rrb_ntpc",
+      "displayName": "RRB NTPC",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rrb_level_1",
+      "displayName": "RRB Level 1",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rrb_alp",
+      "displayName": "RRB Assistant Loco Pilot",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rrb_technician",
+      "displayName": "RRB Technician",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rrb_je",
+      "displayName": "RRB Junior Engineer",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rpf_si",
+      "displayName": "RPF Sub-Inspector",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rpf_constable",
+      "displayName": "RPF Constable",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ibps_po_mt",
+      "displayName": "IBPS CRP PO/MT",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ibps_csa",
+      "displayName": "IBPS CRP Customer Service Associate",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ibps_so",
+      "displayName": "IBPS CRP Specialist Officer",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ibps_crp_rrb_officers",
+      "displayName": "IBPS RRB Officer Scale I/II/III",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ibps_crp_rrb_office_assistant",
+      "displayName": "IBPS RRB Office Assistant",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "sbi_po",
+      "displayName": "SBI Probationary Officer",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "sbi_ja",
+      "displayName": "SBI Junior Associate",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rbi_grade_b",
+      "displayName": "RBI Grade B",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "rbi_assistant",
+      "displayName": "RBI Assistant",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "nabard_grade_a",
+      "displayName": "NABARD Grade A Assistant Manager",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "afcat",
+      "displayName": "Air Force Common Admission Test",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "army_agniveer_cee",
+      "displayName": "Indian Army Agniveer Online CEE",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "navy_agniveer_ssr",
+      "displayName": "Indian Navy Agniveer SSR / INET",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "agniveervayu",
+      "displayName": "Indian Air Force Agniveervayu Selection Test",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "cbse_ctet",
+      "displayName": "Central Teacher Eligibility Test",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "navy_agniveer_mr",
+      "displayName": "Indian Navy Agniveer MR / INET",
+      "sourceGate": "47C6",
+      "disposition": "MAJOR_MISSION_ACCEPTED",
+      "activeMaterializerMission": true
+    },
+    {
+      "candidateId": "ib_acio_ii_executive",
+      "displayName": "IB ACIO-II/Executive",
+      "sourceGate": "47C5/47C7V",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": false
+    },
+    {
+      "candidateId": "ib_security_assistant_executive",
+      "displayName": "IB Security Assistant/Executive",
+      "sourceGate": "47C5/47C7V",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": false
+    },
+    {
+      "candidateId": "epfo_enforcement_officer_accounts_officer",
+      "displayName": "EPFO Enforcement Officer / Accounts Officer",
+      "sourceGate": "47C5/47C7V",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": false
+    },
+    {
+      "candidateId": "epfo_assistant_provident_fund_commissioner",
+      "displayName": "EPFO Assistant Provident Fund Commissioner",
+      "sourceGate": "47C5/47C7V",
+      "disposition": "MAJOR_MISSION_REVIEW_REQUIRED",
+      "activeMaterializerMission": false
+    }
+  ],
+  "counts": {
+    "NATIONAL_COMPLETENESS_CANDIDATE_COUNT": 53,
+    "NATIONAL_MATERIALIZER_CANDIDATE_COUNT": 49,
+    "MAJOR_ACCEPTED_COUNT": 45,
+    "REVIEW_REQUIRED_COUNT": 8,
+    "DEFERRED_COUNT": 0,
+    "NOT_MAJOR_COUNT": 0,
+    "PREVIOUSLY_UNRESOLVED_CANDIDATE_SILENTLY_DROPPED_COUNT": 0,
+    "UNEXPLAINED_COMPLETENESS_GAP_COUNT": 0
+  }
+}

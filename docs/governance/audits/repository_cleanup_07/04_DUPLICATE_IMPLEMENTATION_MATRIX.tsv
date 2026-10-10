@@ -1,0 +1,17 @@
+domain	filePath	worktree	routeReachable	runtimeReferenced	currentAuthorityMatch	containsUniqueRequiredBehavior	classification
+Dashboard/Home	lib/features/dashboard/presentation/screens/dashboard_screen.dart	canonical-student-integration-06	YES	YES	YES	YES (Modern Dashboard with Battle Tools grid and contrast-hardened header)	ACTIVE
+Dashboard/Home	lib/features/home/presentation/screens/home_screen.dart	canonical-student-integration-06	NO	NO	NO	NO (Superseded by dashboard_screen.dart)	DORMANT
+Battle Tools	lib/features/dashboard/presentation/widgets/battle_tools/battle_tools_grid.dart	canonical-student-integration-06	YES	YES	YES	YES (Compact 2x2 grid with human status labels & zero RenderFlex overflow)	ACTIVE
+Battle Tools	lib/features/dashboard/presentation/widgets/battle_tools/battle_tool_card.dart	canonical-student-integration-06	YES	YES	YES	YES (Interactive battle tool card component)	ACTIVE
+Syllabus	lib/features/syllabus/presentation/screens/syllabus_screen.dart	canonical-student-integration-06	YES	YES	YES	YES (Authoritative 1125-node 4-level hierarchy with English header title "Syllabus")	ACTIVE
+Syllabus	lib/features/syllabus/presentation/screens/syllabus_tree_screen.dart	canonical-student-integration-06	NO	NO	NO	NO (Old flat syllabus prototype)	DORMANT
+DigiBook Library	lib/features/digibook/presentation/screens/digi_book_library_screen.dart	canonical-student-integration-06	YES	YES	YES	YES (56 verified physical lesson grid with English header title "Library")	ACTIVE
+DigiBook Reader	lib/features/digibook/presentation/screens/digi_book_reader_screen.dart	product-canonical-recovery-13	YES	YES	YES	YES (Mission 14 recovered multi-tab educational reader with DigiBookLaunchArgs contract)	ACTIVE
+DigiBook Reader	lib/features/digibook/presentation/screens/digi_book_reader_screen.dart	canonical-student-integration-06	YES	YES	NO	NO (Mission 06R1 fallback reader, superseded by Mission 14 rich reader)	DORMANT
+DigiBook Node Adapter	lib/features/digibook/presentation/screens/digi_book_node_adapter_screen.dart	canonical-student-integration-06	NO	NO	NO	NO (Old adapter shell replaced by direct typed DigiBookLaunchArgs routing)	UNREFERENCED
+Crucible	lib/features/crucible/screens/crucible_screen.dart	canonical-student-integration-06	YES	YES	YES	YES (Authoritative 98-day ring, temporal timestamp normalization, canonical daily training plans)	ACTIVE
+Crucible	lib/features/crucible/screens/crucible_dashboard_screen.dart	canonical-student-integration-06	NO	NO	NO	NO (Legacy crucible dashboard shell)	DORMANT
+Career Signals	lib/features/opportunities/screens/opportunities_screen.dart	canonical-student-integration-06	YES	YES	YES	YES (Clean Student-facing Career Signals UI with zero internal governance leakage)	ACTIVE
+Sentinel Center	lib/features/sentinel/screens/sentinel_center_screen.dart	canonical-student-integration-06	NO	NO	NO	NO (Internal governance diagnostic shell, unrouted in student app)	FOUNDER_PREVIEW_ONLY
+Router	lib/core/router/app_router.dart	canonical-student-integration-06	YES	YES	YES	YES (Primary active Student router)	ACTIVE
+Router	lib/core/router/app_router.dart	product-canonical-recovery-13	YES	YES	YES	YES (Mission 14 typed route contract & launch argument parser)	ACTIVE

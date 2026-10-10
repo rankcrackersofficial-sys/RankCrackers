@@ -1,0 +1,53 @@
+{
+  "gate": "GATE_48CS2R1_VACANCY_MATRIX_MODEL",
+  "generatedAt": "2026-09-10T11:26:52.325Z",
+  "models": {
+    "VacancyMatrix": {
+      "cycleId": "String",
+      "totalPostsCount": "Number",
+      "sourceEvidence": "Object",
+      "rows": "Array of VacancyRow"
+    },
+    "VacancyRow": {
+      "postCode": "String",
+      "postName": "String",
+      "subjectOrDiscipline": "String | null",
+      "regionCode": "String | null",
+      "verticalCategory": "Enum: UR | SC | ST | OBC | EWS",
+      "horizontalCategory": "Enum: NONE | WOMEN | PWBD | EX_SERVICEMAN",
+      "genderApplicability": "Enum: ALL | FEMALE_ONLY | MALE_ONLY",
+      "pwbdApplicable": "Boolean",
+      "exServicemanApplicable": "Boolean",
+      "vacanciesCount": "Number",
+      "sourceLocator": "String"
+    }
+  },
+  "sampleRows": [
+    {
+      "postCode": "POST_IAS_01",
+      "postName": "Indian Administrative Service",
+      "subjectOrDiscipline": null,
+      "regionCode": null,
+      "verticalCategory": "UR",
+      "horizontalCategory": "NONE",
+      "genderApplicability": "ALL",
+      "pwbdApplicable": false,
+      "exServicemanApplicable": false,
+      "vacanciesCount": 75,
+      "sourceLocator": "Table 1, Page 2"
+    },
+    {
+      "postCode": "POST_IAS_02",
+      "postName": "Indian Administrative Service",
+      "subjectOrDiscipline": null,
+      "regionCode": null,
+      "verticalCategory": "SC",
+      "horizontalCategory": "NONE",
+      "genderApplicability": "ALL",
+      "pwbdApplicable": false,
+      "exServicemanApplicable": false,
+      "vacanciesCount": 25,
+      "sourceLocator": "Table 1, Page 2"
+    }
+  ]
+}

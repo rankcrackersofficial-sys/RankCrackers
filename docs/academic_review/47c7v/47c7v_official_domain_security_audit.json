@@ -1,0 +1,181 @@
+{
+  "auditCode": "RC_47C7V_OFFICIAL_DOMAIN_SECURITY_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.760Z",
+  "contractRule": "A SHARED_GOVERNMENT_HOST must never grant blanket authority ownership. Exact document-level binding required.",
+  "metrics": {
+    "TOTAL_DOMAINS_AUDITED": 23,
+    "BROAD_SHARED_HOST_USED_AS_BLANKET_AUTHORITY_DOMAIN_COUNT": 1
+  },
+  "findings": [
+    {
+      "authorityId": "auth_in_nta",
+      "offendingDomain": "cdnbbsr.s3waas.gov.in",
+      "classification": "SHARED_GOVERNMENT_HOST",
+      "blocker": true,
+      "remediation": "Remove cdnbbsr.s3waas.gov.in from blanket authority.officialDomains[]. Model individual S3WaaS documents through SHARED_GOVERNMENT_DOCUMENT_HOST_WITH_NTA_BINDING."
+    }
+  ],
+  "domainClassifications": [
+    {
+      "authorityId": "auth_in_upsc",
+      "authorityGroupKey": "upsc",
+      "domain": "upsc.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "domain": "ssc.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_ssc",
+      "authorityGroupKey": "ssc",
+      "domain": "ssc.nic.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_cbse",
+      "authorityGroupKey": "cbse",
+      "domain": "cbse.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_cbse",
+      "authorityGroupKey": "cbse",
+      "domain": "cbse.nic.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_cbse",
+      "authorityGroupKey": "cbse",
+      "domain": "ctet.nic.in",
+      "classification": "DEDICATED_OFFICIAL_RECRUITMENT_DOMAIN",
+      "riskComment": "OFFICIAL_SPECIALIZED_PORTAL"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "domain": "nta.ac.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "domain": "jeemain.nta.nic.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "domain": "neet.nta.nic.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_nta",
+      "authorityGroupKey": "nta",
+      "domain": "cdnbbsr.s3waas.gov.in",
+      "classification": "SHARED_GOVERNMENT_HOST",
+      "riskComment": "CRITICAL_RISK: Shared NIC cloud edge infrastructure. Blanket authority binding forbidden by Contract Law."
+    },
+    {
+      "authorityId": "auth_in_rrb",
+      "authorityGroupKey": "rrb",
+      "domain": "rrbcdg.gov.in",
+      "classification": "DEDICATED_OFFICIAL_RECRUITMENT_DOMAIN",
+      "riskComment": "OFFICIAL_SPECIALIZED_PORTAL"
+    },
+    {
+      "authorityId": "auth_in_rpf",
+      "authorityGroupKey": "rpf",
+      "domain": "rpf.indianrailways.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_rpf",
+      "authorityGroupKey": "rpf",
+      "domain": "indianrailways.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_ibps",
+      "authorityGroupKey": "ibps",
+      "domain": "ibps.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_sbi",
+      "authorityGroupKey": "sbi",
+      "domain": "sbi.co.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_rbi",
+      "authorityGroupKey": "rbi",
+      "domain": "rbi.org.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_rbi",
+      "authorityGroupKey": "rbi",
+      "domain": "opportunities.rbi.org.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_nabard",
+      "authorityGroupKey": "nabard",
+      "domain": "nabard.org",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_indian_army",
+      "authorityGroupKey": "indian_army",
+      "domain": "joinindianarmy.nic.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_indian_navy",
+      "authorityGroupKey": "indian_navy",
+      "domain": "joinindiannavy.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_indian_air_force",
+      "authorityGroupKey": "indian_air_force",
+      "domain": "careerairforce.gov.in",
+      "classification": "AUTHORITY_OWNED_DOMAIN",
+      "riskComment": "SAFE"
+    },
+    {
+      "authorityId": "auth_in_indian_air_force",
+      "authorityGroupKey": "indian_air_force",
+      "domain": "iafrecruitment.edcil.co.in",
+      "classification": "AUTHORIZED_EXTERNAL_PLATFORM",
+      "riskComment": "GOVERNMENT_CONSULTANCY_PLATFORM: Official contracted portal for online applications."
+    },
+    {
+      "authorityId": "auth_in_indian_air_force",
+      "authorityGroupKey": "indian_air_force",
+      "domain": "afcat.cdac.in",
+      "classification": "HISTORICAL_DOMAIN",
+      "riskComment": "SUPERSEDED: Previous test provider platform. Not current official recruitment portal."
+    }
+  ]
+}

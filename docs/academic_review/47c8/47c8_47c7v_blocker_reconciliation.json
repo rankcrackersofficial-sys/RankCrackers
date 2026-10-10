@@ -1,0 +1,35 @@
+{
+  "blockers": [
+    {
+      "id": 1,
+      "name": "AFCAT current portal",
+      "status": "REPAIRED",
+      "evidence": "afcat.edcil.co.in classified as current authorized platform; afcat.cdac.in historical only"
+    },
+    {
+      "id": 2,
+      "name": "NTA shared S3WAAS host",
+      "status": "REPAIRED",
+      "evidence": "removed from officialDomains; exact document bindings retained"
+    },
+    {
+      "id": 3,
+      "name": "AFCAT route evidence",
+      "status": "REPAIRED",
+      "evidence": "five routes now carry notification and paragraph locators"
+    },
+    {
+      "id": 4,
+      "name": "IB and EPFO completeness",
+      "status": "REPAIRED",
+      "evidence": "four explicit review-required rows restored outside active manifest"
+    },
+    {
+      "id": 5,
+      "name": "IBPS cross-lane IDs",
+      "status": "REPAIRED",
+      "evidence": "Chief-locked IDs active; legacy aliases cannot materialize"
+    }
+  ],
+  "unresolvedBlockerCount": 0
+}

@@ -1,0 +1,16 @@
+{
+  "auditCode": "RC_47A4R2_ACTUAL_GENERATOR_FORENSIC_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.896Z",
+  "ACTUAL_47A3R1_GENERATOR_IDENTIFIED": "YES",
+  "generatorPath": "docs/academic_review/47a3r1/verifier_handoff/build_47a3r1_master.js",
+  "byteLength": 65687,
+  "sha256": "91550ea1e1f919262177391ea41d5a4ba3748b3f96330980be1d23be34cf5f03",
+  "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "gitStatus": "DIRTY",
+  "generatorScan": {
+    "hardcodedCounts": true,
+    "hardcodedClassifications": true,
+    "automaticPassValues": false,
+    "manualReadinessValues": false
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "rows": [
+    {
+      "semanticExamIdentity": "JEE Main",
+      "existingMissionId": "jee_main_2026",
+      "proposed47C5MissionId": "nta_jee_main",
+      "resolution": "USE_EXISTING_IMMUTABLE_ID",
+      "newMissionCreateAllowed": false,
+      "displayName": "JEE Main",
+      "authorityKey": "auth_in_nta"
+    },
+    {
+      "semanticExamIdentity": "NEET UG",
+      "existingMissionId": "neet_(ug)-2027",
+      "proposed47C5MissionId": "nta_neet_ug",
+      "resolution": "USE_EXISTING_IMMUTABLE_ID",
+      "newMissionCreateAllowed": false,
+      "displayName": "NEET UG",
+      "authorityKey": "auth_in_nta"
+    },
+    {
+      "semanticExamIdentity": "UPSC CSE Prelims",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "upsc_cse_prelims",
+      "resolution": "NO_EXISTING_IMMUTABLE_ID_PROVEN_LOCALLY",
+      "newMissionCreateAllowed": true,
+      "displayName": "UPSC Civil Services Prelims",
+      "authorityKey": "auth_in_upsc"
+    },
+    {
+      "semanticExamIdentity": "SSC Combined Graduate Level Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_cgl",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Combined Graduate Level Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Combined Higher Secondary Level Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_chsl",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Combined Higher Secondary Level Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC MTS / Havaldar Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_mts_havaldar",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC MTS / Havaldar Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Constable GD Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_gd",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Constable GD Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Sub-Inspector CPO Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_cpo",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Sub-Inspector CPO Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Junior Engineer Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_je",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Junior Engineer Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Stenographer Grade C and D Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_stenographer",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Stenographer Grade C and D Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Combined Hindi Translators Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_hindi_translators",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Combined Hindi Translators Examination",
+      "authorityKey": "auth_in_ssc"
+    },
+    {
+      "semanticExamIdentity": "SSC Selection Post Examination",
+      "existingMissionId": null,
+      "proposed47C5MissionId": "ssc_selection_post",
+      "resolution": "ESTABLISHED_CANONICAL_ID_NO_PRODUCTION_COLLISION_FOUND",
+      "newMissionCreateAllowed": true,
+      "displayName": "SSC Selection Post Examination",
+      "authorityKey": "auth_in_ssc"
+    }
+  ]
+}

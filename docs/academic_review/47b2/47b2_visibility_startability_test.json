@@ -1,0 +1,14 @@
+{
+  "testCode": "RC_47B2_VISIBILITY_STARTABILITY_TEST",
+  "executedAt": "2026-09-10T06:00:00.750Z",
+  "scenario": "Source-grounded PREPARING mission",
+  "metrics": {
+    "studentVisible": true,
+    "catalogDiscoverable": true,
+    "quickEntryEnabled": false,
+    "smartEntryEnabled": false,
+    "PREPARING_QUICK_ENTRY_ENABLED_COUNT": 0,
+    "PREPARING_SMART_ENTRY_ENABLED_COUNT": 0,
+    "pass": true
+  }
+}

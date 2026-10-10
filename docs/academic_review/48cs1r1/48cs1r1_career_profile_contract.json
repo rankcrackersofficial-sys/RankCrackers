@@ -1,0 +1,19 @@
+{
+  "primaryProfile": {
+    "fields": [
+      "uid",
+      "email",
+      "verifiedMobile",
+      "homeState"
+    ],
+    "immutability": "Core user identity bindings"
+  },
+  "careerProfile": {
+    "definition": "Single canonical logical profile object per user",
+    "accessibleFrom": [
+      "Career Signals",
+      "Profile/Settings"
+    ],
+    "singleObjectGuaranteed": true
+  }
+}

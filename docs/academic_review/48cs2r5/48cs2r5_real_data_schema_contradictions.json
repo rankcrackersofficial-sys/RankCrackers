@@ -1,0 +1,66 @@
+{
+  "gate": "GATE 48CS2R5",
+  "purpose": "Explicit audit comparing physical 48CS4 Agent-4 fields against built-in engine assumptions. No silent normalization.",
+  "schemaContradictions": [
+    {
+      "category": "RULE_TYPE",
+      "observedInCS4": [
+        "AGE_LIMIT",
+        "MINIMUM_AGE",
+        "UPPER_AGE_LIMIT"
+      ],
+      "engineStandard": [
+        "AGE_MIN",
+        "AGE_MAX"
+      ],
+      "impact": "Physical rules from NTA bulletins use descriptive names. Engine safely marks them UNRESOLVED in single-rule evaluation without breaking package trust boundary.",
+      "resolutionPlan": "Add canonical alias mapping for entrance exam age limits in future rule normalization update."
+    },
+    {
+      "category": "RULE_TYPE",
+      "observedInCS4": [
+        "QUALIFYING_EXAM_YEAR",
+        "EDUCATION_CUTOFF_DATE"
+      ],
+      "engineStandard": [
+        "QUALIFICATION_MIN"
+      ],
+      "impact": "Temporal and cohort-based qualification conditions observed in real notices. Currently handled via general academic match criteria.",
+      "resolutionPlan": "Introduce TEMPORAL_QUALIFICATION_RULE family in Phase 49."
+    },
+    {
+      "category": "RULE_TYPE",
+      "observedInCS4": [
+        "STATE_ELIGIBILITY"
+      ],
+      "engineStandard": [
+        "DOMICILE_REQUIRED"
+      ],
+      "impact": "In JEE Main, State of Eligibility is where Class 12 was completed, not domicile residence. Engine domicile rules strictly separate native domicile from exam state.",
+      "resolutionPlan": "Formalize QUALIFYING_STATE vs NATIVE_DOMICILE distinction in CareerProfile."
+    },
+    {
+      "category": "RESERVATION_STRUCTURE",
+      "observedInCS4": "Percentage-based vertical and horizontal quotas (10% EWS, 27% OBC, 15% SC, 7.5% ST, 5% PwBD horizontal).",
+      "engineStandard": "Row-level seat count vacancy matrices.",
+      "impact": "Entrance exams publish reservation percentages; seat counts are allocated during centralized counseling.",
+      "resolutionPlan": "Support PERCENTAGE_RESERVATION capacity model alongside ABSOLUTE_SEAT capacity model."
+    },
+    {
+      "category": "SOURCE_STATE",
+      "observedInCS4": [
+        "EXACT_DOCUMENT_RESOLVED_BYTES_ACQUIRED_SHA256_VERIFIED_SCAN_TEXT_UNRESOLVED",
+        "EXACT_DOCUMENT_TEXT_VERIFIED_CYCLE_MISMATCH_DISCLOSED",
+        "IDENTITY_CONTRADICTION"
+      ],
+      "engineStandard": [
+        "URL_FOUND",
+        "METADATA_INDEXED",
+        "BYTES_INGESTED",
+        "SHA_VERIFIED"
+      ],
+      "impact": "Agent-4 used descriptive compound verification strings.",
+      "resolutionPlan": "The real source adapter deterministically maps compound states to the canonical 4-tier lifecycle."
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "CURRENT_STUDENT_VISIBLE_MISSION_SET",
+  "generatedAt": "2026-09-10T10:39:12.872Z",
+  "measurementMethodology": {
+    "clientStreamQuery": "student_mission_catalog.where('cardVisible', '==', true).where('userPanelVisible', '==', true).where('archived', '==', false)",
+    "measuredCountUnderClientQuery": 15,
+    "measuredCountWithStatusPreparing": 14,
+    "measuredCountWithVisibilityStudentVisibleTrue": 2,
+    "noteOn14Vs15Count": "Under the canonical client query (cardVisible && userPanelVisible && !archived), exactly 15 missions are student-visible. If counting strictly status == PREPARING, exactly 14 missions qualify (NEET status is currently MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE). The actual live measured count under Firestore client contract is 15."
+  },
+  "metrics": {
+    "CURRENT_STUDENT_VISIBLE_MISSION_COUNT": 15,
+    "STATUS_PREPARING_MISSION_COUNT": 14,
+    "NEET_SPECIAL_STATUS_MISSION_COUNT": 1
+  },
+  "missions": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authorityId": "auth_in_rpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "PUBLIC_STUDENT_ELIGIBLE",
+      "examFamily": "GENERAL_COMPETITIVE",
+      "category": "competitive",
+      "variantRequired": true,
+      "variantStatus": "CONFIGURED",
+      "quickEntryEnabled": true,
+      "smartEntryEnabled": true,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "visibilityStudentVisible": true
+      }
+    },
+    {
+      "missionId": "jee_main_2026",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "ENGINEERING_ENTRANCE",
+      "category": "qualifying",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": true,
+      "smartEntryEnabled": true,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING",
+        "visibilityStudentVisible": true
+      }
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "authorityId": "auth_in_nta",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "MEDICAL_ENTRANCE",
+      "category": "category_pending",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE"
+      }
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "authorityId": "auth_in_rpsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "RJ",
+      "scopeType": "STATE_ELIGIBLE",
+      "examFamily": "CIVIL_SERVICES",
+      "category": "civil_services",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_cgl",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": true,
+      "variantStatus": "CONFIGURED",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_chsl",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_cpo",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_gd",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_je",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": true,
+      "variantStatus": "CONFIGURED",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": true,
+      "variantStatus": "CONFIGURED",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "authorityId": "auth_in_ssc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "STAFF_SELECTION",
+      "category": "staff_selection",
+      "variantRequired": true,
+      "variantStatus": "CONFIGURED",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "authorityId": "auth_in_uppsc",
+      "jurisdictionType": "STATE",
+      "regionCode": "UP",
+      "scopeType": "STATE_ELIGIBLE",
+      "examFamily": "GENERAL_COMPETITIVE",
+      "category": "civil_services",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "authorityId": "auth_in_upsc",
+      "jurisdictionType": "CENTRAL",
+      "regionCode": null,
+      "scopeType": "ALL_INDIA",
+      "examFamily": "GENERAL_COMPETITIVE",
+      "category": "civil_services",
+      "variantRequired": false,
+      "variantStatus": "NONE",
+      "quickEntryEnabled": false,
+      "smartEntryEnabled": false,
+      "academicStartReady": false,
+      "rawFlags": {
+        "cardVisible": true,
+        "userPanelVisible": true,
+        "archived": false,
+        "status": "PREPARING",
+        "catalogStatus": "PREPARING",
+        "studentPublicationState": "PREPARING"
+      }
+    }
+  ]
+}

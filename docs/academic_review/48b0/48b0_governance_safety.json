@@ -1,0 +1,22 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "auditTimestamp": "2026-09-10T10:39:12.886Z",
+  "governedFieldsProtected": [
+    "founderHold",
+    "archived",
+    "manualVisibilityOverride",
+    "manualGovernanceLock",
+    "publicationApproval"
+  ],
+  "auditResults": {
+    "totalDocumentsInspected": 48,
+    "governanceFieldsPresentInLive": {
+      "archivedTrueCount": 0,
+      "founderHoldTrueCount": 0,
+      "manualVisibilityOverrideCount": 0,
+      "manualGovernanceLockCount": 0
+    },
+    "materializerProtectionRule": "Owned-field merge semantics strictly preserve unowned governed fields from existing state store. If founderHold or archived is set, all student visibility and entry flags are forced false.",
+    "GOVERNANCE_FIELD_OVERWRITE_COUNT": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "gate": "47UI5",
+  "test_name": "SAME_UID_RELOGIN_WITHOUT_HOT_RESTART",
+  "execution": {
+    "step_1": "User logs in with authenticated account",
+    "step_2": "Mission Realm loads 12 Central Exams, 2 State/UT Exams",
+    "step_3": "User logs out via header Logout button -> lands on LoginScreen",
+    "step_4": "User logs in with SAME account credentials",
+    "step_5": "Mission Realm loads 12 Central Exams, 2 State/UT Exams WITHOUT hot restart",
+    "step_6": "Repeat logout & relogin cycle x2"
+  },
+  "results": {
+    "cycle_1_central_count": 12,
+    "cycle_1_state_count": 2,
+    "cycle_2_central_count": 12,
+    "cycle_2_state_count": 2,
+    "hot_restart_required": false
+  },
+  "metrics": {
+    "SAME_UID_RELOGIN_ZERO_CATALOG_COUNT": 0,
+    "HOT_RESTART_REQUIRED_COUNT": 0
+  },
+  "verdict": "PASSED"
+}

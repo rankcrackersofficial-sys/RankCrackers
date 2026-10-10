@@ -1,0 +1,22 @@
+{
+  "structure": {
+    "post": "String",
+    "subjectOrDiscipline": "String",
+    "region": "String",
+    "totalVacancies": "Number",
+    "verticalCategories": [
+      "UR/Open",
+      "SC",
+      "ST",
+      "OBC",
+      "EWS"
+    ],
+    "horizontalCategories": [
+      "Women",
+      "PwBD",
+      "Ex-serviceman"
+    ]
+  },
+  "preserveSourceTableStructure": true,
+  "flatteningProhibited": true
+}

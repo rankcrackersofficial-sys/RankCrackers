@@ -1,0 +1,186 @@
+{
+  "profileSchemaVersion": "1.0.0",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "canonicalExamName": "RPSC School Lecturer (School Education)",
+  "canonicalDisplayName": "RPSC 1st Grade",
+  "missionTargetYear": 2026,
+  "sourceBaselineYear": 2026,
+  "cycleRelation": "CANONICAL_CYCLE_MATCH",
+  "targetYearReconciliationNote": "Under Founder and source authority, missionTargetYear is preserved at 2026 without unverified forward projection.",
+  "authority": {
+    "organization": "Rajasthan Public Service Commission (RPSC), Ajmer",
+    "department": "Secondary Education Department, Govt. of Rajasthan",
+    "officialPortals": [
+      "https://rpsc.rajasthan.gov.in"
+    ],
+    "recruitmentFamily": "School Lecturer (School Education) Competitive Exam / प्राध्यापक (माध्यमिक शिक्षा विभाग) प्रतियोगी परीक्षा",
+    "officialAdvertisementReference": "Advt. No. 01/Exam/School Lecturer (School Edu.)/2024-26",
+    "officialNotificationTitle": "Detailed Advertisement for School Lecturer (School Education Department)",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "jurisdiction": {
+    "scope": "State of Rajasthan",
+    "serviceCadre": "Rajasthan Educational State Service",
+    "payScale": "Pay Matrix Level L-12 (Grade Pay 4800)",
+    "eligibilityRules": "Post-Graduate degree in relevant subject with minimum required percentage + B.Ed. / Recognized equivalent degree in education",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "supportedScope": {
+    "commonPaper": "Paper 1 (General Awareness & General Studies)",
+    "variantPapers": "Paper 2 (Subject Specific Discipline Papers)",
+    "totalOfficialVariantsCount": 22,
+    "scopeBoundaryReason": "RankCrackers architecture supports Paper 1 Common Foundation + Variant-specific academic mastery across all 22 official RPSC disciplines.",
+    "scopeDepthStatus": "NOT_COMPUTED",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "paperModel": {
+    "paperCount": 2,
+    "structureHierarchy": "COMMON_PAPER_PLUS_VARIANT_DISCIPLINE",
+    "papers": [
+      {
+        "paperId": "rpsc_paper_1_gk_gs",
+        "paperNumber": 1,
+        "paperName": "Paper 1: General Awareness and General Studies (सामान्य ज्ञान एवं सामान्य अध्ययन)",
+        "isCommonPaper": true,
+        "mode": "Offline (OMR Based)",
+        "durationMinutes": 90,
+        "totalQuestions": 75,
+        "totalMarks": 150,
+        "marksPerQuestion": 2,
+        "negativeMarking": "1/3 of marks assigned to that question deducted for wrong answer",
+        "sections": [
+          {
+            "sectionId": "sec_1_history_rajasthan_india",
+            "sectionTitle": "History of Rajasthan and Indian History with special emphasis on Indian National Movement",
+            "questionCount": 15,
+            "marks": 30
+          },
+          {
+            "sectionId": "sec_2_mental_ability_math_stats_language",
+            "sectionTitle": "Mental Ability Test, Statistics (Secondary Level), Mathematics (Secondary Level), Language Ability Test (Hindi & English)",
+            "questionCount": 20,
+            "marks": 40
+          },
+          {
+            "sectionId": "sec_3_current_affairs",
+            "sectionTitle": "Current Affairs (Rajasthan, National & International)",
+            "questionCount": 10,
+            "marks": 20
+          },
+          {
+            "sectionId": "sec_4_general_science_polity_geography",
+            "sectionTitle": "General Science, Indian Polity, Geography of Rajasthan",
+            "questionCount": 15,
+            "marks": 30
+          },
+          {
+            "sectionId": "sec_5_educational_management_rte",
+            "sectionTitle": "Educational Management, Educational Scenario in Rajasthan, Right to Education Act 2009",
+            "questionCount": 15,
+            "marks": 30
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      },
+      {
+        "paperId": "rpsc_paper_2_subject_discipline",
+        "paperNumber": 2,
+        "paperName": "Paper 2: Subject Concerned (संबंधित विषय)",
+        "isCommonPaper": false,
+        "isVariantSpecific": true,
+        "mode": "Offline (OMR Based)",
+        "durationMinutes": 180,
+        "totalQuestions": 150,
+        "totalMarks": 300,
+        "marksPerQuestion": 2,
+        "negativeMarking": "1/3 of marks assigned to that question deducted for wrong answer",
+        "sections": [
+          {
+            "sectionId": "sec_1_sr_secondary_knowledge",
+            "sectionTitle": "Knowledge of Subject concerned: Senior Secondary Level (उच्च माध्यमिक स्तर)",
+            "questionCount": 55,
+            "marks": 110
+          },
+          {
+            "sectionId": "sec_2_graduation_knowledge",
+            "sectionTitle": "Knowledge of Subject concerned: Graduation Level (स्नातक स्तर)",
+            "questionCount": 55,
+            "marks": 110
+          },
+          {
+            "sectionId": "sec_3_post_graduation_knowledge",
+            "sectionTitle": "Knowledge of Subject concerned: Post Graduation Level (स्नातकोत्तर स्तर)",
+            "questionCount": 10,
+            "marks": 20
+          },
+          {
+            "sectionId": "sec_4_pedagogy_psychology_ict",
+            "sectionTitle": "Educational Psychology, Pedagogy, Teaching Learning Material, Use of Computers and Information Technology in Teaching Learning",
+            "questionCount": 30,
+            "marks": 60
+          }
+        ],
+        "provenanceTag": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "variantModel": {
+    "variantDimension": "academic_subject_discipline",
+    "totalOfficialVariants": 22,
+    "currentBackendVariantsCount": 2,
+    "currentBackendVariants": ["English", "Hindi"],
+    "missingVariantsCount": 20,
+    "variantInventoryFile": "docs/academic_review/46d6_rpsc_complete_variant_inventory.json",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "languageModel": {
+    "defaultLanguage": "hi",
+    "mediumCount": 2,
+    "supportedLanguages": ["Hindi", "English"],
+    "mediumPolicy": "Paper 1 is bilingual (Hindi & English). Paper 2 is in the respective subject language or bilingual for science/commerce/arts subjects.",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "s2DocumentProfile": {
+    "expectedPapers": ["Paper 1 (GK & GS)", "Paper 2 (Subject)"],
+    "paperAliases": {
+      "Paper 1": ["Paper-I", "Paper 1", "Paper I - General Awareness and General Studies", "General Studies", "GK Paper"],
+      "Paper 2": ["Paper-II", "Paper 2", "Paper II - Subject Concerned", "Subject Paper"]
+    },
+    "expectedSubjects": [
+      "History of Rajasthan and Indian History",
+      "Mental Ability, Mathematics and Language Ability",
+      "Current Affairs",
+      "General Science, Indian Polity and Geography of Rajasthan",
+      "Educational Management and RTE",
+      "Senior Secondary Level Subject Knowledge",
+      "Graduation Level Subject Knowledge",
+      "Post Graduation Level Subject Knowledge",
+      "Educational Psychology and Pedagogy"
+    ],
+    "subjectAliases": {
+      "History": ["History", "Indian History", "Rajasthan History", "National Movement"],
+      "Polity": ["Indian Polity", "Constitution of India"],
+      "Geography": ["Geography of Rajasthan", "Rajasthan Geography"],
+      "Management": ["Educational Management", "Educational Administration", "RTE 2009"]
+    },
+    "languageScripts": ["Devanagari", "Latin"],
+    "preferredOcrLanguages": ["hin", "eng"],
+    "sourceYearPolicy": "USE_2026_CANONICAL_CYCLE",
+    "cycleRelation": "CANONICAL_CYCLE_MATCH",
+    "s2ProfileDraftReady": true,
+    "provenanceTag": "SYSTEM_DERIVED"
+  },
+  "localDocumentBinding": {
+    "notificationDocumentId": "mission_RPSC_FIRST_GRADE2026_2026_1782713222215_notification_a461e1f65845dd0a",
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "fieldAuthorityMap": {
+    "missionTargetYear": "FOUNDER_DECLARED",
+    "sourceBaselineYear": "SOURCE_VERIFIED",
+    "recruitmentFamily": "SOURCE_VERIFIED",
+    "paperStructure": "SOURCE_VERIFIED",
+    "variantModel": "SOURCE_VERIFIED",
+    "supportedScope": "SOURCE_VERIFIED",
+    "s2DocumentProfile": "SYSTEM_DERIVED"
+  }
+}

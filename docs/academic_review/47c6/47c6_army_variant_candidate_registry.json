@@ -1,0 +1,42 @@
+{
+  "missionId": "army_agniveer_cee",
+  "selectableVariants": [],
+  "variantCandidates": [
+    {
+      "variantId": "general_duty",
+      "displayName": "Agniveer General Duty",
+      "variantDimension": "TRACK",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "variantId": "technical",
+      "displayName": "Agniveer Technical",
+      "variantDimension": "TRACK",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "variantId": "office_assistant_skt",
+      "displayName": "Agniveer Office Assistant / Store Keeper Technical",
+      "variantDimension": "TRACK",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "variantId": "tradesman",
+      "displayName": "Agniveer Tradesman",
+      "variantDimension": "TRACK",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "variantId": "women_military_police",
+      "displayName": "Agniveer Women Military Police",
+      "variantDimension": "TRACK",
+      "sourceEvidenceRef": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2236356&lang=2&reg=48",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "unreadyVariantExposedAsSelectableCount": 0
+}

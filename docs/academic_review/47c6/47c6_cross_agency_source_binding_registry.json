@@ -1,0 +1,28 @@
+{
+  "relationships": [
+    {
+      "missionId": "rpf_si",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0"
+    },
+    {
+      "missionId": "rpf_constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "conductingAuthorityKey": "auth_in_rrb",
+      "sourceOwnerAuthorityKey": "auth_in_rrb",
+      "clientAuthorityKey": "auth_in_rpf",
+      "officialOwnershipEvidenceRef": "https://ser.indianrailways.gov.in/view_detail.jsp?dcd=7683&did=1710850929267DF589A403A9623BA92655669EE86B22A&id=0%2C4%2C423&lang=0"
+    },
+    {
+      "missionId": "army_agniveer_cee",
+      "canonicalAuthorityKey": "auth_in_indian_army",
+      "conductingAuthorityKey": "auth_in_indian_army",
+      "sourceOwnerAuthorityKey": "auth_in_indian_army",
+      "corroboratingPublisher": "PIB / Ministry of Defence",
+      "officialOwnershipEvidenceRef": "https://www.joinindianarmy.nic.in/"
+    }
+  ]
+}

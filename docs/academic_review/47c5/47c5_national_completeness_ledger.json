@@ -1,0 +1,84 @@
+{
+  "included": [
+    "upsc_cse_prelims",
+    "upsc_cds",
+    "upsc_nda_na",
+    "upsc_capf_ac",
+    "upsc_ese",
+    "upsc_cms",
+    "upsc_geo_scientist",
+    "ssc_cgl",
+    "ssc_chsl",
+    "ssc_mts_havaldar",
+    "ssc_gd",
+    "ssc_cpo",
+    "ssc_je",
+    "ssc_stenographer",
+    "ssc_hindi_translators",
+    "ssc_selection_post",
+    "nta_jee_main",
+    "nta_neet_ug",
+    "nta_cuet_ug",
+    "nta_cuet_pg",
+    "nta_ugc_net",
+    "nta_csir_ugc_net",
+    "rrb_ntpc",
+    "rrb_level_1",
+    "rrb_alp",
+    "rrb_technician",
+    "rrb_je",
+    "rpf_si",
+    "rpf_constable",
+    "ibps_po_mt",
+    "ibps_csa",
+    "ibps_so",
+    "ibps_rrb_officer",
+    "ibps_rrb_office_assistant",
+    "sbi_po",
+    "sbi_ja",
+    "rbi_grade_b",
+    "rbi_assistant",
+    "nabard_grade_a",
+    "afcat",
+    "army_agniveer_cee",
+    "navy_agniveer_ssr",
+    "agniveervayu"
+  ],
+  "reviewRequired": [
+    "upsc_ifos",
+    "upsc_ies_iss",
+    "nta_icar_aieea_pg",
+    "nta_nchm_jee"
+  ],
+  "consideredButExcluded": [
+    {
+      "candidate": "UPSC CSE Mains",
+      "classification": "WRITTEN_ONLY_OUTSIDE_CURRENT_SCOPE",
+      "reason": "Descriptive stage outside present MCQ delivery."
+    },
+    {
+      "candidate": "minor contractual and lateral recruitments",
+      "classification": "NOT_MAJOR_CURRENT_SCOPE",
+      "reason": "Not stable major recurring preparation targets."
+    },
+    {
+      "candidate": "departmental promotion examinations",
+      "classification": "NOT_MAJOR_CURRENT_SCOPE",
+      "reason": "Not open student missions."
+    }
+  ],
+  "unresolved": [
+    {
+      "candidate": "Army CEE Tradesman 8th/10th split",
+      "reason": "Exact current Army governing document required."
+    },
+    {
+      "candidate": "Intelligence Bureau major exam family",
+      "reason": "Canonical current official source and recurrence not finalized."
+    },
+    {
+      "candidate": "EPFO major exam family",
+      "reason": "Canonical conducting model and current official source not finalized."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "gate": "GATE_48CS2_NOTIFICATION_CANDIDATE_COMPATIBILITY",
+  "generatedAt": "2026-09-10T11:06:36.543Z",
+  "description": "Integration model showing how student notification delivery (notification_candidates) consumes reduced career signals without schema conflict.",
+  "integrationFlow": [
+    {
+      "step": 1,
+      "source": "Official Gazette / Government Website",
+      "action": "source_impact_router ingests verified document -> emits CareerSignalEvent"
+    },
+    {
+      "step": 2,
+      "source": "career_signal_reducer",
+      "action": "Event applied to RecruitmentCycle -> updates opportunitySignalActive and processUpdateSignalActive"
+    },
+    {
+      "step": 3,
+      "source": "Notification Matching Worker",
+      "action": "Queries RecruitmentCycles where (opportunitySignalActive == true OR processUpdateSignalActive == true) matching student target state/category"
+    },
+    {
+      "step": 4,
+      "source": "notification_candidates",
+      "action": "Creates individual student delivery record nc_${uid}_${cycleId} pointing to the latest event ref. Preserves read/dismissed state."
+    }
+  ],
+  "schemaMapping": {
+    "candidateDocId": "nc_${studentUid}_${cycleId}",
+    "targetOpportunityId": "recruitment_cycles.cycleId",
+    "signalType": "opportunitySignalActive ? \"NEW_OPPORTUNITY\" : \"PROCESS_UPDATE\"",
+    "sourceEventId": "career_signal_events.eventId"
+  },
+  "compatibilityGuarantee": "Zero modifications required to existing notification_candidates collection schema. The carrier layer is cleanly decoupled from the state engine."
+}

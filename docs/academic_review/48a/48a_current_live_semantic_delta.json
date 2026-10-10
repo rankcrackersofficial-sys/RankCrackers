@@ -1,0 +1,187 @@
+{
+  "censusCode": "RC_48A_CURRENT_LIVE_SEMANTIC_DELTA",
+  "generatedAt": "2026-09-10T10:34:36.155Z",
+  "observedLiveCount": 16,
+  "deltaSummary": {
+    "MATCHED_CANONICAL_LIVE_MISSIONS": 14,
+    "ORPHAN_TEST_RECORDS": 2
+  },
+  "details": [
+    {
+      "observedMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true,
+      "canonicalMatchFound": false,
+      "canonicalStatus": "UNKNOWN_ORPHAN",
+      "deltaRequired": "PURGE_OR_QUARANTINE_TEST_BRIDGE"
+    },
+    {
+      "observedMissionId": "jee_main_2026",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "neet_(ug)-2027",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": true,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "rpsc_ras_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_cgl",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_chsl",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_cpo",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_gd",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_hindi_translators",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_je",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_mts_havaldar",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_selection_post",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "ssc_stenographer",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "uppsc_pcs_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "upsc_cse_prelims",
+      "inRealms": true,
+      "inRecruitments": true,
+      "inStudentCatalog": true,
+      "isComplete3Projection": true,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": true,
+      "canonicalStatus": "CLEAN_CANONICAL",
+      "deltaRequired": "NONE_CANONICAL_MATCHED"
+    },
+    {
+      "observedMissionId": "test_mission_catalog_bridge",
+      "inRealms": false,
+      "inRecruitments": true,
+      "inStudentCatalog": false,
+      "isComplete3Projection": false,
+      "isPilotImmutable": false,
+      "canonicalMatchFound": false,
+      "canonicalStatus": "UNKNOWN_ORPHAN",
+      "deltaRequired": "PURGE_OR_QUARANTINE_TEST_BRIDGE"
+    }
+  ]
+}

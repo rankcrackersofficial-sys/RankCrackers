@@ -1,0 +1,68 @@
+{
+  "algorithm": "SHA-256",
+  "generatedLast": true,
+  "generatedOn": "2026-09-10",
+  "artifactCount": 12,
+  "artifacts": [
+    {
+      "file": "48c_article315_reclassification_result.json",
+      "sha256": "a29e4f4c66e7ab0c1b7e97e8b6214293246a4f45d9194424a8d5e3bf5c9e1b7e",
+      "byteLength": 2586
+    },
+    {
+      "file": "48c_article315_row_specific_evidence_ledger.json",
+      "sha256": "f5bda9d0bdf53d1a0ee2257ebd999763b3e9fbfc69d1286a8f5cbf481bdf84e7",
+      "byteLength": 20221
+    },
+    {
+      "file": "48c_article315_target_registry.json",
+      "sha256": "1e48fd1c5508c78764cc3a92a069be64526c559eedac99c4b3031db3e0b36495",
+      "byteLength": 4669
+    },
+    {
+      "file": "48c_final_report.md",
+      "sha256": "e17bd858b76c443674357971514b9d6496d3d84801f9299a9bb2f6cb7ea0daf0",
+      "byteLength": 1730
+    },
+    {
+      "file": "48c_judicial_identity_evidence_ledger.json",
+      "sha256": "2c376a9436f2af715547c0d1e2c41569a61bddd3643fa834eb44901baba6cb5c",
+      "byteLength": 7459
+    },
+    {
+      "file": "48c_judicial_producer_ready_handoff.json",
+      "sha256": "e8b73e3ab138b776b7d173254fd4838ff717c80b34bdd3b0c056ece1c5ac3de9",
+      "byteLength": 4448
+    },
+    {
+      "file": "48c_judicial_target_registry.json",
+      "sha256": "c1db379684f602880fb779794f7727e7a8fe2ae50fabd31ee93d7c92b53a548d",
+      "byteLength": 1763
+    },
+    {
+      "file": "48c_no_production_mutation_proof.json",
+      "sha256": "6834c60d10c69f6d5708db23b9c8254399f6928b964fe8e6b76854a0f0eb619d",
+      "byteLength": 298
+    },
+    {
+      "file": "48c_source_provenance_registry.json",
+      "sha256": "7850ff21054deb2f86b585b0a8c3e315c761fb4884b97cdfe6f80fc8ae60a2e0",
+      "byteLength": 12057
+    },
+    {
+      "file": "48c_tripura_tet_pattern_field_audit.json",
+      "sha256": "f3c17cb75abfbf9056b65c11d6b9ef2e282bc836bff3fb78f6d1c264977f77e1",
+      "byteLength": 3344
+    },
+    {
+      "file": "48c_tripura_tet_source_recovery.json",
+      "sha256": "5d67099012ab0570c13cc9a7de2e45c1117d043da7aa92e04011b0194b8e2d15",
+      "byteLength": 372
+    },
+    {
+      "file": "48c_unresolved_source_blockers.json",
+      "sha256": "52cbd06cadfd64b3a8d0d43c8acca501a423c06a514c88380753c5b055aa6a2b",
+      "byteLength": 3544
+    }
+  ]
+}

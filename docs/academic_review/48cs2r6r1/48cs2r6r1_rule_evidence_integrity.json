@@ -1,0 +1,83 @@
+{
+  "gate": "48CS2R6R1",
+  "auditTitle": "Rule Evidence Referential Integrity Audit",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "auditor": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "invariants": [
+    "Every eligibility rule must resolve to an actual declared package source document.",
+    "No dangling rule evidence: rules missing locators, page, section, or evidenceRefs fail closed to UNRESOLVED.",
+    "Referential integrity violations drop rule resolution strictly to UNRESOLVED (isSourceGap: true)."
+  ],
+  "pilotAuditResults": [
+    {
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "declaredDocId": "RPSC-FG-ADV-06-2025-26",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "RPSC-RAS-2024",
+      "declaredDocId": "DOC-RPSC-RAS-2024",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "JEE-MAIN-2026",
+      "declaredDocId": "JEE-MAIN-IB-2026",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "declaredDocId": "NEET-UG-IB-2026",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "UPSC-CSE-2026",
+      "declaredDocId": "UPSC-CSE-2026",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "SSC-CGL-2026",
+      "declaredDocId": "SSC-CGL-NOTICE-2026",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "48CS5_JEE_MAIN_2026",
+      "declaredDocId": "JEE_MAIN_IB_2026",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    },
+    {
+      "cycleId": "48CS5_SSC_CGL_2026",
+      "declaredDocId": "SSC_CGL_NOTICE",
+      "brokenRefRules": 0,
+      "isReferentiallySound": true
+    }
+  ],
+  "adversarialScenariosTested": [
+    {
+      "test": "Undeclared phantom document reference",
+      "inputRule": {
+        "ruleId": "r_ghost",
+        "sourceDocumentId": "DOC_UNDECLARED_PHANTOM"
+      },
+      "observedStatus": "UNRESOLVED",
+      "reason": "references undeclared package document: DOC_UNDECLARED_PHANTOM"
+    },
+    {
+      "test": "Locatorless rule without page/section/evidenceRefs",
+      "inputRule": {
+        "ruleId": "r_no_loc",
+        "sourceDocumentId": "DOC_OFFICIAL_BASE",
+        "evidenceRefs": []
+      },
+      "observedStatus": "UNRESOLVED",
+      "reason": "lacks locator/page/span evidence into document DOC_OFFICIAL_BASE"
+    }
+  ],
+  "verdict": "RULE_EVIDENCE_REFERENTIAL_INTEGRITY_VERIFIED"
+}

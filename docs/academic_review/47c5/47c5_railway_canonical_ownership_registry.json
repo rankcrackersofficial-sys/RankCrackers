@@ -1,0 +1,74 @@
+{
+  "missions": [
+    {
+      "missionId": "rrb_ntpc",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rrb_level_1",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rrb_alp",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rrb_technician",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rrb_je",
+      "canonicalAuthorityKey": "auth_in_rrb",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rpf_si",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    },
+    {
+      "missionId": "rpf_constable",
+      "canonicalAuthorityKey": "auth_in_rpf",
+      "regionalRrbCreatesMissionClone": false,
+      "source": {
+        "url": "https://www.rrbcdg.gov.in/employment-notices.php",
+        "title": "RRB centralised employment notices",
+        "verification": "OFFICIAL_LISTING_VERIFIED"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "reclassifiedToReviewIds": [
+    "upsssc_vdo",
+    "uk_police_constable",
+    "hppsc_police_constable",
+    "psssb_patwari",
+    "punjab_police_constable",
+    "haryana_police_constable",
+    "jk_police_constable",
+    "ladakh_police_constable",
+    "chandigarh_police_constable",
+    "delhi_police_constable",
+    "rj_police_constable",
+    "mpesb_police_constable",
+    "cg_police_constable",
+    "mh_police_constable",
+    "csbc_bihar_police_constable",
+    "jssc_police_constable",
+    "odisha_police_constable",
+    "wbpsc_clerkship",
+    "wbprb_police_constable",
+    "kpsc_kl_police_constable",
+    "mizoram_police_constable",
+    "nagaland_police_constable",
+    "sikkim_police_constable",
+    "tripura_police_constable"
+  ],
+  "metrics": {
+    "MAJOR_ACCEPTED_PRE_RECONCILIATION_COUNT": 140,
+    "MAJOR_ACCEPTED_POST_RECONCILIATION_COUNT": 116,
+    "ARTICLE315_RECLASSIFIED_TO_REVIEW_COUNT": 24,
+    "ARTICLE315_RECLASSIFIED_TO_NOT_MAJOR_COUNT": 0
+  }
+}

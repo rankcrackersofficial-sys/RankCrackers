@@ -1,0 +1,48 @@
+{
+  "auditCode": "RC_47C8V_STATE_NATIONAL_OVERLAP_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.346Z",
+  "metrics": {
+    "UNRESOLVED_STATE_NATIONAL_CANONICAL_COLLISION_COUNT": 0
+  },
+  "rows": [
+    {
+      "identity": "IBPS RRB Officers",
+      "canonicalNationalMissionId": "ibps_crp_rrb_officers",
+      "stateUt47A3R1Identity": "ibps_crp_rrb_officers",
+      "resolution": "EXACT_CANONICAL_MATCH",
+      "collision": false
+    },
+    {
+      "identity": "IBPS RRB Office Assistant",
+      "canonicalNationalMissionId": "ibps_crp_rrb_office_assistant",
+      "stateUt47A3R1Identity": "ibps_crp_rrb_office_assistant",
+      "resolution": "EXACT_CANONICAL_MATCH",
+      "collision": false
+    },
+    {
+      "identity": "SSC CPO / Delhi Police SI",
+      "canonicalNationalMissionId": "ssc_cpo",
+      "resolution": "REGIONAL_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "identity": "SSC Selection Post / Ladakh",
+      "canonicalNationalMissionId": "ssc_selection_post",
+      "resolution": "REGIONAL_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "identity": "CTET regional discovery",
+      "canonicalNationalMissionId": "cbse_ctet",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    },
+    {
+      "identity": "UPSC regional discovery",
+      "canonicalNationalMissionId": "upsc_cse_prelims",
+      "resolution": "REGIONAL_DISCOVERY_POINTER_ONLY",
+      "collision": false
+    }
+  ],
+  "verdict": "PASS"
+}

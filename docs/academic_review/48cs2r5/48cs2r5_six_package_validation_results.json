@@ -1,0 +1,167 @@
+{
+  "gate": "GATE 48CS2R5",
+  "metrics": {
+    "REAL_PACKAGE_COUNT": 6,
+    "ACCEPTED_FOR_MATCHING_COUNT": 0,
+    "PARTIAL_SOURCE_PACKAGE_COUNT": 6,
+    "REJECTED_SOURCE_PACKAGE_COUNT": 0
+  },
+  "summary": "All 6 physical packages from Agent-4 correctly validate as PARTIAL_SOURCE_PACKAGE due to incomplete rulebooks, unverified byte SHAs, or pending vacancy breakdowns. Zero packages falsely claim complete matching readiness.",
+  "packages": [
+    {
+      "packageId": "pkg_cs4_rpsc_school_lecturer_adv_06_2025_26",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "permanentMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "authorityId": "RPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_PARTIAL",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "ae6fb8a7f9c657fe60c7f3b7da373ab801db042946b3e6a16b2a9bf37b0a7d2c",
+      "warnings": [
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Amendment audit scope or auditWindowThrough is missing. Monitoring surface cannot be trusted.",
+        "Vacancy matrix incomplete: Vacancy coverage status is TOTAL_SEATS_ONLY, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    },
+    {
+      "packageId": "pkg_cs4_rpsc_ras_2024",
+      "cycleId": "RPSC-RAS-2024",
+      "permanentMissionId": "rpsc_ras_prelims",
+      "authorityId": "RPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_UNRESOLVED",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "34ad499d809d56dcc96fdc0a3a58dffb67c55d5cc57bf4dacc7f3607f8cdd061",
+      "warnings": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification sourceState is URL_FOUND. Byte-level SHA-256 verification is pending; package cannot be accepted for matching.",
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Base notification is not SHA_VERIFIED (state: URL_FOUND).",
+        "Vacancy matrix incomplete: Vacancy coverage status is UNAUDITED, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    },
+    {
+      "packageId": "pkg_cs4_jee_main_2026",
+      "cycleId": "JEE-MAIN-2026",
+      "permanentMissionId": "jee_main_2026",
+      "authorityId": "NTA",
+      "opportunityKind": "ADMISSION_ENTRANCE",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_UNRESOLVED",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "6507adaac832dca323391f919a0982a07fe1ae629e4f1a0a62f758edd5f896ad",
+      "warnings": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification sourceState is URL_FOUND. Byte-level SHA-256 verification is pending; package cannot be accepted for matching.",
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Base notification is not SHA_VERIFIED (state: URL_FOUND).",
+        "Vacancy matrix incomplete: Vacancy coverage status is UNAUDITED, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    },
+    {
+      "packageId": "pkg_cs4_neet_ug_2026_evidence_base",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "permanentMissionId": "neet_(ug)-2027",
+      "authorityId": "NTA",
+      "opportunityKind": "ADMISSION_ENTRANCE",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_UNRESOLVED",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "3ce6142583856f06a8c794ec75d2e9952373d642db41981e0a14e9f1cf96cda1",
+      "warnings": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification sourceState is URL_FOUND. Byte-level SHA-256 verification is pending; package cannot be accepted for matching.",
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Base notification is not SHA_VERIFIED (state: URL_FOUND).",
+        "Vacancy matrix incomplete: Vacancy coverage status is UNAUDITED, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    },
+    {
+      "packageId": "pkg_cs4_upsc_cse_2026",
+      "cycleId": "UPSC-CSE-2026",
+      "permanentMissionId": "upsc_cse_prelims",
+      "authorityId": "UPSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_UNRESOLVED",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "949226c217d60e23008766e9e75e9af17b586ac0cb3e0977ef7675ad7f4ed2b4",
+      "warnings": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification sourceState is URL_FOUND. Byte-level SHA-256 verification is pending; package cannot be accepted for matching.",
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Base notification is not SHA_VERIFIED (state: URL_FOUND).",
+        "Vacancy matrix incomplete: Vacancy coverage status is UNAUDITED, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    },
+    {
+      "packageId": "pkg_cs4_ssc_cgl_2026",
+      "cycleId": "SSC-CGL-2026",
+      "permanentMissionId": "ssc_cgl",
+      "authorityId": "SSC",
+      "opportunityKind": "JOB_RECRUITMENT",
+      "validationResult": "PARTIAL_SOURCE_PACKAGE",
+      "isComplete": false,
+      "unresolvedFamilies": [
+        "AGE",
+        "EDUCATION",
+        "DISCIPLINE",
+        "DOMICILE",
+        "CATEGORY_OR_RESERVATION"
+      ],
+      "amendmentStatus": "CHAIN_UNRESOLVED",
+      "vacancyCompleteness": "VACANCY_MATRIX_UNRESOLVED",
+      "packageSemanticHash": "66f84d53de150875d8514d6daeb77547e18377d55349f2248ab9572ce51d54a6",
+      "warnings": [
+        "BASE_NOTIFICATION_NOT_SHA_VERIFIED: Base notification sourceState is URL_FOUND. Byte-level SHA-256 verification is pending; package cannot be accepted for matching.",
+        "Rulebook completeness incomplete. Unresolved families: AGE, EDUCATION, DISCIPLINE, DOMICILE, CATEGORY_OR_RESERVATION",
+        "Amendment chain incomplete: Base notification is not SHA_VERIFIED (state: URL_FOUND).",
+        "Vacancy matrix incomplete: Vacancy coverage status is UNAUDITED, not COMPLETE_OFFICIAL_TABLE."
+      ],
+      "genericFactsAvailable": true
+    }
+  ]
+}

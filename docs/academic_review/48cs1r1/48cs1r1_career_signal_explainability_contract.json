@@ -1,0 +1,9 @@
+{
+  "requiredSections": [
+    "WHY_THIS_MATCHES",
+    "WHY_THIS_DOES_NOT_MATCH",
+    "WHAT_INFORMATION_IS_MISSING",
+    "WHICH_OFFICIAL_RULE_CAUSED_THE_RESULT"
+  ],
+  "opaquePercentageProhibited": true
+}

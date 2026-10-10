@@ -1,0 +1,62 @@
+{
+  "rows": [
+    {
+      "missionId": "ssc_cgl",
+      "chain": [
+        {
+          "type": "BASE_NOTIFICATION",
+          "date": "2026-05-21",
+          "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf"
+        },
+        {
+          "type": "APPLICATION_REOPENED",
+          "date": "2026-06-23",
+          "source": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/CGLE_Reopen_23062026.pdf",
+          "changes": {
+            "applicationClose": "2026-06-25 23:00",
+            "eligibilityCrucialDate": "2026-06-25",
+            "feeDeadline": "2026-06-26 23:00",
+            "correctionWindow": "2026-07-01 to 2026-07-03 23:00"
+          }
+        },
+        {
+          "type": "VACANCY_REVISION",
+          "state": "UNRESOLVED"
+        },
+        {
+          "type": "RESULT_NOTICE",
+          "state": "UNRESOLVED"
+        }
+      ]
+    },
+    {
+      "missionId": "jee_main_2026",
+      "chain": [
+        {
+          "type": "BASE_INFORMATION_BULLETIN",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2025/11/202511021649722475.pdf"
+        },
+        {
+          "type": "SESSION2_APPLICATION_NOTICE",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/20260201612425163.pdf"
+        },
+        {
+          "type": "SESSION2_CORRECTION_NOTICE",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/02/202602211726839591.pdf"
+        },
+        {
+          "type": "SESSION2_REOPENING_NOTICE",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/03/20260312579267972.pdf"
+        },
+        {
+          "type": "FINAL_ANSWER_KEY",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420409057044.pdf"
+        },
+        {
+          "type": "RESULT_DECLARED",
+          "source": "https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/04/20260420809492136.pdf"
+        }
+      ]
+    }
+  ]
+}

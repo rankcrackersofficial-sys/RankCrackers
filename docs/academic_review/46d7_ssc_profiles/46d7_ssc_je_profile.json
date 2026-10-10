@@ -1,0 +1,74 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_je",
+  "canonicalDisplayName": "SSC Junior Engineer",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["PAPER_I_CBE", "PAPER_II_CBE"],
+    "unsupportedStages": []
+  },
+  "examinationStructure": {
+    "papers": [
+      {
+        "paperId": "ssc_je_paper_1",
+        "paperName": "Paper-I: Computer Based Examination",
+        "totalQuestions": 200,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "negativeMarkingPerQuestion": 0.25,
+        "sections": [
+          { "sectionId": "gi_reasoning", "sectionName": "General Intelligence and Reasoning", "questions": 50, "marks": 50 },
+          { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 50, "marks": 50 },
+          { "sectionId": "engineering_discipline_p1", "sectionName": "General Engineering (Discipline Specific)", "questions": 100, "marks": 100, "isDisciplineDependent": true }
+        ]
+      },
+      {
+        "paperId": "ssc_je_paper_2",
+        "paperName": "Paper-II: Computer Based Examination (Domain Technical)",
+        "totalQuestions": 100,
+        "totalMarks": 300,
+        "durationMinutes": 120,
+        "marksPerQuestion": 3.0,
+        "negativeMarkingPerQuestion": 1.0,
+        "isDisciplineDependent": true
+      }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "DISCIPLINE_VARIANT",
+    "variants": [
+      {
+        "variantKey": "ssc_je_civil",
+        "variantName": "Civil & Structural Engineering",
+        "paper1EngineeringStream": "Part-A: Civil & Structural Engineering",
+        "paper2EngineeringStream": "Part-A: Civil & Structural Engineering (300 Marks Technical CBE)"
+      },
+      {
+        "variantKey": "ssc_je_electrical",
+        "variantName": "Electrical Engineering",
+        "paper1EngineeringStream": "Part-B: Electrical Engineering",
+        "paper2EngineeringStream": "Part-B: Electrical Engineering (300 Marks Technical CBE)"
+      },
+      {
+        "variantKey": "ssc_je_mechanical",
+        "variantName": "Mechanical Engineering",
+        "paper1EngineeringStream": "Part-C: Mechanical Engineering",
+        "paper2EngineeringStream": "Part-C: Mechanical Engineering (300 Marks Technical CBE)"
+      }
+    ]
+  }
+}

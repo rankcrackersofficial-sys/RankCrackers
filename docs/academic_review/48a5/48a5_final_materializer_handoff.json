@@ -1,0 +1,23 @@
+{
+  "handoffVersion": "1.5.0-48a5",
+  "gate": "GATE 48A5 — PRODUCTION MISSION MATERIALIZATION HANDOFF",
+  "generatedAt": "2026-09-10T12:30:28.132Z",
+  "metrics": {
+    "CLEAN_CANONICAL_INPUT_COUNT": 173,
+    "ALREADY_LIVE_COUNT": 14,
+    "VERIFIED_ALIAS_TO_LIVE_COUNT": 1,
+    "SHELL_MATERIALIZATION_READY_COUNT": 158,
+    "SHELL_MATERIALIZATION_HOLD_COUNT": 0,
+    "RPSC_FIRST_GRADE_DUPLICATE_CREATE_COUNT": 0,
+    "TOP_LEVEL_HANDOFF_OVERLAP_COUNT": 0,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "MISSION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "batchSummary": {
+    "batch0Count": 15,
+    "batch1Count": 33,
+    "batch2Count": 125,
+    "holdCount": 34
+  }
+}

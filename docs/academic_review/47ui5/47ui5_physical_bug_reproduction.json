@@ -1,0 +1,69 @@
+{
+  "task": "RC_47UI4_PHYSICAL_REGRESSION_REJECTION_AND_STUDENT_RUNTIME_TRUTH_CLOSURE_47UI5",
+  "gate": "47UI5",
+  "target_device": {
+    "model": "Samsung Galaxy S23",
+    "model_number": "SM-S911B",
+    "serial": "RZCW12FBFXZ",
+    "android_version": "16 (API 36)"
+  },
+  "reproduced_defects": [
+    {
+      "id": "DEFECT_01_REALM_BACK_TO_LOGIN",
+      "description": "Mission Realm back navigation exposes Login screen when user is authenticated.",
+      "pre_fix_reproduction": "Navigating back popped the route stack and exposed Login screen below Mission Realm.",
+      "root_cause": "PopScope was allowing pop to unauthenticated Login route without checking active mission state.",
+      "fix": "PopScope(canPop: false), header back button replaced with clean Logout action, preventing pop to unauthenticated routes.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_02_ZERO_MISSION_RELOGIN",
+      "description": "Re-login with same authenticated email shows Central Exams = 0, State/UT Exams = 0 until hot restart.",
+      "pre_fix_reproduction": "Logging out and logging back in left recruitmentsProvider in closed/stale stream state.",
+      "root_cause": "recruitmentsProvider was non-autoDispose StreamProvider that did not re-subscribe on authState transition.",
+      "fix": "Converted recruitmentsProvider to autoDispose and explicitly watched authStateChangesProvider to re-hydrate catalog on login.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_03_DASHBOARD_VISUAL_HIERARCHY",
+      "description": "Dashboard card names/titles are too dull; secondary Pending values dominate visually.",
+      "pre_fix_reproduction": "Card titles lacked weight and brand color hierarchy compared to status badges.",
+      "root_cause": "Style hierarchy gave equal visual weight to status badges and metric titles.",
+      "fix": "Strengthened metric titles (READINESS, COVERAGE, STREAK, RISK) with gold brand tint, bold weight, and letter spacing; muted secondary status.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_04_SYNTHETIC_4_PERCENT_READINESS",
+      "description": "Dashboard displays fake 4% readiness baseline when user has 0 preparation evidence.",
+      "pre_fix_reproduction": "Dashboard readiness card displayed 4% for fresh accounts with no completed items.",
+      "root_cause": "ReadinessEngine.calculate contained fallback formula ((100 - risk) * 0.10) where (100 - 60) * 0.10 = 4.0%.",
+      "fix": "Removed synthetic formula. When preparation evidence is 0, score returns 0.0 and status returns 'Pending Evidence'.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_05_DIGIBOOK_CRUCIBLE_FAKE_DATA",
+      "description": "DigiBook and Crucible surfaces exposed fabricated demo content/progress.",
+      "pre_fix_reproduction": "DigiBook rendered sample chapters and Crucible rendered synthetic 98-day protocol progress without real backend backing.",
+      "root_cause": "Fallback mock/demo generators were active in production consumer lanes.",
+      "fix": "Replaced fake synthetic state generators with truthful Preparing / Empty state widgets.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_06_JEE_MAIN_DISAPPEARANCE",
+      "description": "Previously visible JEE Main academic syllabus data disappeared from student view.",
+      "pre_fix_reproduction": "JEE Main syllabus tree was empty despite Firestore having nodes.",
+      "root_cause": "KnowledgeEngine.dart filtered nodes strictly with isPaper1 = (paperId == 'PAPER_1'), dropping nodes with null/empty/lowercase paper IDs.",
+      "fix": "Loosened paper filter to accept empty, null, and case-insensitive canonical variations.",
+      "status": "FIXED_AND_VERIFIED"
+    },
+    {
+      "id": "DEFECT_07_INVALID_DH_REGION_CODE",
+      "description": "Report and code referenced non-canonical DH code for Dadra and Nagar Haveli and Daman and Diu.",
+      "pre_fix_reproduction": "DH was referenced in code and fixtures.",
+      "root_cause": "Legacy code confusion between old single Dadra & Nagar Haveli code and merged UT canonical code.",
+      "fix": "Replaced DH with canonical ISO 3166-2:IN code DN in IndiaStates and all validation rules.",
+      "status": "FIXED_AND_VERIFIED"
+    }
+  ],
+  "verification_verdict": "ALL_DEFECTS_REPRODUCED_ROOT_CAUSED_AND_REPAIRED"
+}

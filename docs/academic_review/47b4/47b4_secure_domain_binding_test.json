@@ -1,0 +1,9 @@
+{
+  "testCode": "RC_47B4_SECURE_DOMAIN_BINDING_TEST",
+  "executedAt": "2026-09-10T06:57:27.640Z",
+  "lookalikeDomainRejected": true,
+  "metrics": {
+    "MALICIOUS_LOOKALIKE_DOMAIN_ACCEPTED_COUNT": 0
+  },
+  "assertionPass": true
+}

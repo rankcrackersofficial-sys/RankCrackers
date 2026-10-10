@@ -1,0 +1,40 @@
+{
+  "gate": "48CS2R6R1",
+  "auditTitle": "Real Source Adapter Semantic Heuristic Elimination Audit",
+  "targetFile": "functions/services/real_source_adapter.js",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "auditor": "AGENT-3 — CAREER SIGNAL BACKEND ENGINE",
+  "substringInferenceElimination": [
+    {
+      "targetPattern": "cycleId === 'JEE-MAIN-2026' || cycleId === 'NEET-UG-2026-EVIDENCE-BASE'",
+      "status": "ELIMINATED",
+      "replacement": "CS4_CYCLE_OPPORTUNITY_KIND_MAP",
+      "enforcement": "Exact dictionary lookup. Unknown cycleId throws UNKNOWN_CYCLE_OPPORTUNITY_KIND and fails closed."
+    },
+    {
+      "targetPattern": "s.sourceId.includes(cycleId.split('-')[0])",
+      "status": "ELIMINATED",
+      "replacement": "CS4_CYCLE_BASE_SOURCE_MAP",
+      "enforcement": "Exact cycleId-to-sourceId mapping table. Zero prefix or substring extraction."
+    },
+    {
+      "targetPattern": "e.eventId.includes(cycleId.split('-')[0])",
+      "status": "ELIMINATED",
+      "replacement": "e.missionId === cycleRow.missionId",
+      "enforcement": "Exact missionId equality binding. No eventId prefix or substring inference."
+    },
+    {
+      "targetPattern": "key.includes('jee') / key.includes('ssc')",
+      "status": "ELIMINATED",
+      "replacement": "CS5_PILOT_KEY_MAP",
+      "enforcement": "Exact lookup table. Unrecognized pilot keys strictly throw UNKNOWN_48CS5_PILOT."
+    },
+    {
+      "targetPattern": "ruleType.includes(...)",
+      "status": "CONFIRMED_ZERO_OCCURRENCE",
+      "replacement": "RULE_TYPE_NORMALIZATION",
+      "enforcement": "Zero substring checks on ruleType; exact mapping to canonical families."
+    }
+  ],
+  "verdict": "ZERO_SUBSTRING_INFERENCE_VERIFIED"
+}

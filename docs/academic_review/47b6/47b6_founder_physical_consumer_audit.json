@@ -1,0 +1,17 @@
+{
+  "auditCode": "RC_47B6_FOUNDER_PHYSICAL_CONSUMER_AUDIT",
+  "executedAt": "2026-09-10T07:08:16.416Z",
+  "physicalFileAudited": "lib/founder_mission_inventory.dart",
+  "parsedFields": [
+    "id",
+    "title",
+    "organization",
+    "status",
+    "nature",
+    "authorityGroupKey"
+  ],
+  "metrics": {
+    "FOUNDER_CONSUMER_SCHEMA_BLOCKER_COUNT": 0
+  },
+  "auditPass": true
+}

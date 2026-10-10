@@ -1,0 +1,180 @@
+{
+  "reconciliationCode": "RC_47A1_DUPLICATE_MISSION_OWNERSHIP_RECONCILIATION",
+  "executedAt": "2026-09-10T05:17:19.345Z",
+  "totalCandidatesAudited": 8,
+  "canonicalOwnershipLaw": "ONE EXAM = ONE PERMANENT MISSION. Regional discoverability references central/single permanent mission without duplicating mission documents.",
+  "candidates": [
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        },
+        {
+          "regionCode": "AN",
+          "regionName": "Andaman and Nicobar Islands"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "LA",
+          "regionName": "Ladakh"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "GA",
+          "regionName": "Goa"
+        },
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "DL",
+          "regionName": "Delhi"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        },
+        {
+          "regionCode": "PB",
+          "regionName": "Punjab"
+        },
+        {
+          "regionCode": "HR",
+          "regionName": "Haryana"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "AS",
+          "regionName": "Assam"
+        },
+        {
+          "regionCode": "AR",
+          "regionName": "Arunachal Pradesh"
+        },
+        {
+          "regionCode": "NL",
+          "regionName": "Nagaland"
+        },
+        {
+          "regionCode": "MZ",
+          "regionName": "Mizoram"
+        },
+        {
+          "regionCode": "GA",
+          "regionName": "Goa"
+        },
+        {
+          "regionCode": "DN",
+          "regionName": "Dadra and Nagar Haveli and Daman and Diu"
+        },
+        {
+          "regionCode": "PY",
+          "regionName": "Puducherry"
+        },
+        {
+          "regionCode": "LD",
+          "regionName": "Lakshadweep"
+        },
+        {
+          "regionCode": "PB",
+          "regionName": "Punjab"
+        },
+        {
+          "regionCode": "HR",
+          "regionName": "Haryana"
+        },
+        {
+          "regionCode": "CH",
+          "regionName": "Chandigarh"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "AS",
+          "regionName": "Assam"
+        },
+        {
+          "regionCode": "AR",
+          "regionName": "Arunachal Pradesh"
+        },
+        {
+          "regionCode": "MN",
+          "regionName": "Manipur"
+        },
+        {
+          "regionCode": "ML",
+          "regionName": "Meghalaya"
+        },
+        {
+          "regionCode": "MZ",
+          "regionName": "Mizoram"
+        },
+        {
+          "regionCode": "NL",
+          "regionName": "Nagaland"
+        },
+        {
+          "regionCode": "TR",
+          "regionName": "Tripura"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    },
+    {
+      "participatingRegions": [
+        {
+          "regionCode": "ALL",
+          "regionName": "All 28 States and UTs with RRBs"
+        }
+      ],
+      "reconciliationStatus": "RESOLVED_SINGLE_CANONICAL_OWNER"
+    }
+  ]
+}

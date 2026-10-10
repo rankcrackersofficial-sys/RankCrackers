@@ -1,0 +1,53 @@
+{
+  "missionId": "indian_air_force_agniveervayu",
+  "authorityKey": "auth_in_indian_air_force",
+  "sourceReady": true,
+  "currentCycle": "01/2027",
+  "notificationReady": true,
+  "schemeReady": true,
+  "objectiveOnlineTest": true,
+  "variants": [
+    "Science Subjects",
+    "Other than Science Subjects",
+    "Science Subjects and Other than Science Subjects"
+  ],
+  "medicalAssistantRelationship": "Separate Airmen Group Y recruitment, explicitly not Agniveervayu.",
+  "pyqSourceState": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+  "pyqPolicy": "Question paper, answer key and individual response are available for three days in candidate login during objection management.",
+  "sources": [
+    {
+      "url": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "title": "Agniveervayu Intake 01/2027 advertisement",
+      "role": "NOTIFICATION_SCHEME_SYLLABUS_PYQ_POLICY",
+      "verificationClass": "OFFICIAL_EXACT_DOCUMENT_VERIFIED",
+      "urlDiscovered": true,
+      "exactChildDiscovered": true,
+      "bytesAcquired": false,
+      "sha256Verified": false
+    }
+  ],
+  "attemptLedger": [
+    {
+      "missionId": "agniveervayu",
+      "method": "METHOD_07",
+      "queryOrUrl": "site:iafrecruitment.edcil.co.in Agniveervayu 01/2027",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact official PDF discovered",
+      "httpState": 200,
+      "linksDiscovered": [
+        "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+      ],
+      "nextAction": "Verify scheme and policy"
+    },
+    {
+      "missionId": "agniveervayu",
+      "method": "METHOD_04",
+      "queryOrUrl": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "timestamp": "2026-09-10T06:33:02.562Z",
+      "result": "Exact notice verifies objective Phase-I and three subject-track choices",
+      "httpState": 200,
+      "linksDiscovered": [],
+      "nextAction": "Record ephemeral question-paper policy"
+    }
+  ]
+}

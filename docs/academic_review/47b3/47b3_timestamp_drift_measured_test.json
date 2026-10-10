@@ -1,0 +1,13 @@
+{
+  "testCode": "RC_47B3_TIMESTAMP_DRIFT_MEASURED_TEST",
+  "executedAt": "2026-09-10T06:11:50.556Z",
+  "dryRun1Timestamp": "2026-09-10T06:11:50.534Z",
+  "dryRun2Timestamp": "2026-09-10T16:00:00.000Z",
+  "metrics": {
+    "DRY_RUN_2_CREATE_COUNT": 0,
+    "DRY_RUN_2_UPDATE_COUNT": 0,
+    "DRY_RUN_2_DELETE_COUNT": 0,
+    "DRY_RUN_2_TIMESTAMP_DRIFT_COUNT": 0
+  },
+  "assertionPass": true
+}

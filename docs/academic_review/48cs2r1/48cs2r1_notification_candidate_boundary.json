@@ -1,0 +1,37 @@
+{
+  "gate": "GATE_48CS2R1_NOTIFICATION_CANDIDATE_BOUNDARY",
+  "generatedAt": "2026-09-10T11:26:52.319Z",
+  "fourTierArchitecture": {
+    "NotificationCandidate": {
+      "role": "Source / Discovery Staging Candidate",
+      "storageProposal": "sentinel_drafts / staging_candidates",
+      "identity": "cand_{authority}_{docSha12}",
+      "userScoped": false,
+      "payload": "Extracted unverified or pre-verified official document draft awaiting curator review"
+    },
+    "CareerSignalEvent": {
+      "role": "Canonical Official Source-Backed Event",
+      "storageProposal": "career_signal_events (append-only ledger)",
+      "identity": "evt_{documentSha16}",
+      "userScoped": false,
+      "payload": "Cryptographically bound official government announcement, corrigendum, or result"
+    },
+    "CareerSignalView": {
+      "role": "Personalized User-Specific Interpretation",
+      "storageProposal": "career_signal_views (derived personalized query view)",
+      "identity": "{userId}_{eventId}",
+      "userScoped": true,
+      "payload": "Eligibility match result, reason codes, applicable vacancy rows, priority"
+    },
+    "NotificationEvent": {
+      "role": "Actual User Alert / Delivery Transport",
+      "storageProposal": "notification_events (delivery log)",
+      "identity": "notif_{userId}_{timestamp}",
+      "userScoped": true,
+      "payload": "Push/in-app alert delivery payload with read/dismiss status tracking"
+    }
+  },
+  "metric": {
+    "NOTIFICATION_CANDIDATE_AS_CANONICAL_DELIVERY_COUNT": 0
+  }
+}

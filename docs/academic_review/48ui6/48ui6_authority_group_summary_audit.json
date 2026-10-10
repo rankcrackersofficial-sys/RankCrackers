@@ -1,0 +1,61 @@
+{
+  "gate": "GATE_48UI6",
+  "audit": "AUTHORITY_GROUP_SUMMARY_AUDIT",
+  "timestamp": "2026-09-10T17:45:00+05:30",
+  "contract": {
+    "universal_rule": "Authority Name -> {N} exam / {N} exams (dynamically computed from visible missions)",
+    "hardcoded_authority_exam_count_count": 0,
+    "ssc_only_summary_logic_count": 0,
+    "authority_group_without_dynamic_summary_count": 0
+  },
+  "authority_groups_verified": [
+    {
+      "authorityKey": "ssc",
+      "displayName": "Staff Selection Commission (SSC)",
+      "jurisdiction": "CENTRAL",
+      "visibleMissionsCount": 9,
+      "summaryFormat": "9 exams",
+      "isDynamic": true
+    },
+    {
+      "authorityKey": "nta",
+      "displayName": "National Testing Agency (NTA)",
+      "jurisdiction": "CENTRAL",
+      "visibleMissionsCount": 2,
+      "summaryFormat": "2 exams",
+      "isDynamic": true
+    },
+    {
+      "authorityKey": "upsc",
+      "displayName": "Union Public Service Commission (UPSC)",
+      "jurisdiction": "CENTRAL",
+      "visibleMissionsCount": 1,
+      "summaryFormat": "1 exam",
+      "isDynamic": true
+    },
+    {
+      "authorityKey": "rpsc",
+      "displayName": "Rajasthan Public Service Commission (RPSC)",
+      "jurisdiction": "STATE",
+      "state": "Rajasthan",
+      "visibleMissionsCount": 2,
+      "summaryFormat": "2 exams",
+      "isDynamic": true,
+      "variantIsolation": {
+        "mission": "RPSC 1st Grade 2026",
+        "variantBadge": "28 subject variants",
+        "countedInAuthorityExamCount": false
+      }
+    },
+    {
+      "authorityKey": "uppsc",
+      "displayName": "Uttar Pradesh Public Service Commission (UPPSC)",
+      "jurisdiction": "STATE",
+      "state": "Uttar Pradesh",
+      "visibleMissionsCount": 1,
+      "summaryFormat": "1 exam",
+      "isDynamic": true
+    }
+  ],
+  "status": "PASSED"
+}

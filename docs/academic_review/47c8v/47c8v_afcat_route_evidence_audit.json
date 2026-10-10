@@ -1,0 +1,69 @@
+{
+  "auditCode": "RC_47C8V_AFCAT_ROUTE_EVIDENCE_AUDIT",
+  "executedAt": "2026-09-10T08:12:42.300Z",
+  "metrics": {
+    "AFCAT_ROUTE_COUNT": 5,
+    "AFCAT_ROUTE_WITH_SOURCE_EVIDENCE_COUNT": 5,
+    "AFCAT_ROUTE_WITHOUT_SOURCE_EVIDENCE_COUNT": 0,
+    "AFCAT_ACADEMIC_VARIANT_COUNT": 0
+  },
+  "routes": [
+    {
+      "routeId": "flying",
+      "displayName": "Flying Branch",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(a)_and_Para_6(a)",
+      "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+      "paragraphLocator": "Para 3(a) and Para 6(a)",
+      "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY",
+      "evidenceStatus": "VERIFIED"
+    },
+    {
+      "routeId": "ground_duty_technical",
+      "displayName": "Ground Duty (Technical) Branch",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(b)_and_Para_6(a)",
+      "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+      "paragraphLocator": "Para 3(b) and Para 6(a)",
+      "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY",
+      "evidenceStatus": "VERIFIED"
+    },
+    {
+      "routeId": "ground_duty_non_technical",
+      "displayName": "Ground Duty (Non-Technical) Branch",
+      "usesAfcatWrittenExam": true,
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(c)_and_Para_6(a)",
+      "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+      "paragraphLocator": "Para 3(c) and Para 6(a)",
+      "evidenceStatementType": "ROUTE_AND_AFCAT_EXAM_APPLICABILITY",
+      "evidenceStatus": "VERIFIED"
+    },
+    {
+      "routeId": "ncc_special_entry",
+      "displayName": "NCC Special Entry",
+      "usesAfcatWrittenExam": false,
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(e)_and_Para_6(b)",
+      "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+      "paragraphLocator": "Para 3(e) and Para 6(b)",
+      "evidenceStatementType": "WRITTEN_EXAM_EXEMPTION",
+      "evidenceStatus": "VERIFIED"
+    },
+    {
+      "routeId": "gate_entry",
+      "displayName": "GATE Score Entry",
+      "usesAfcatWrittenExam": false,
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf#Para_3(f)_and_Para_6(c)",
+      "officialDocumentRef": "AFCAT Cycle 02/2026 Notification",
+      "paragraphLocator": "Para 3(f) and Para 6(c)",
+      "evidenceStatementType": "WRITTEN_EXAM_EXEMPTION",
+      "evidenceStatus": "VERIFIED"
+    }
+  ],
+  "groundTruthNotificationProof": {
+    "notification": "AFCAT Cycle 02/2026 Notification",
+    "sourceUrl": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+    "nccSpecialEntryExemptionProof": "Para 3(e) & Para 6(b): NCC Special Entry candidates are exempted from AFCAT online examination and directly shortlisted for AFSB testing.",
+    "gateScoreEntryExemptionProof": "Para 3(f) & Para 6(c): GATE Score Entry candidates apply based on valid GATE score in designated engineering disciplines and are exempted from AFCAT online examination."
+  },
+  "verdict": "PASS"
+}

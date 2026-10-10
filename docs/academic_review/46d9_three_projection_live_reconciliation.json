@@ -1,0 +1,257 @@
+{
+  "generatedAt": "2026-09-09T14:56:28.047Z",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "totalAuditedMissions": 15,
+  "missions": {
+    "jee_main_2026": {
+      "missionId": "jee_main_2026",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": false
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "JEE Main",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "nta",
+      "authorityDisplayName": "National Testing Agency"
+    },
+    "neet_(ug)-2027": {
+      "missionId": "neet_(ug)-2027",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": false
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "NEET (UG)",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "nta",
+      "authorityDisplayName": "National Testing Agency"
+    },
+    "RPSC_FIRST_GRADE2026_2026_1782713222215": {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": false
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "RPSC 1st Grade",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "authorityGroupKey": "rpsc",
+      "authorityDisplayName": "Rajasthan Public Service Commission"
+    },
+    "upsc_cse_prelims": {
+      "missionId": "upsc_cse_prelims",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "UPSC Civil Services – Prelims",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "upsc",
+      "authorityDisplayName": "Union Public Service Commission"
+    },
+    "ssc_cgl": {
+      "missionId": "ssc_cgl",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC CGL",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_je": {
+      "missionId": "ssc_je",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC JE",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_selection_post": {
+      "missionId": "ssc_selection_post",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC Selection Post",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_chsl": {
+      "missionId": "ssc_chsl",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC CHSL",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_stenographer": {
+      "missionId": "ssc_stenographer",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC Stenographer",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_hindi_translators": {
+      "missionId": "ssc_hindi_translators",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC Combined Hindi Translators",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_mts_havaldar": {
+      "missionId": "ssc_mts_havaldar",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC MTS & Havaldar",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_cpo": {
+      "missionId": "ssc_cpo",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC CPO",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "ssc_gd": {
+      "missionId": "ssc_gd",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "SSC GD",
+      "jurisdictionLevel": "CENTRAL",
+      "stateCode": null,
+      "stateName": null,
+      "authorityGroupKey": "ssc",
+      "authorityDisplayName": "Staff Selection Commission"
+    },
+    "uppsc_pcs_prelims": {
+      "missionId": "uppsc_pcs_prelims",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "UPPSC PCS – Prelims",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "UP",
+      "stateName": "Uttar Pradesh",
+      "authorityGroupKey": "uppsc",
+      "authorityDisplayName": "Uttar Pradesh Public Service Commission"
+    },
+    "rpsc_ras_prelims": {
+      "missionId": "rpsc_ras_prelims",
+      "projectionsExist": {
+        "realm": true,
+        "recruitment": true,
+        "studentCatalog": true,
+        "profile": true
+      },
+      "isFullyReconciled": true,
+      "canonicalDisplayName": "RPSC RAS – Prelims",
+      "jurisdictionLevel": "STATE",
+      "stateCode": "RJ",
+      "stateName": "Rajasthan",
+      "authorityGroupKey": "rpsc",
+      "authorityDisplayName": "Rajasthan Public Service Commission"
+    }
+  },
+  "summary": {
+    "TOTAL_MISSIONS": 15,
+    "LIVE_THREE_PROJECTION_MISMATCH_COUNT": 0,
+    "YEAR_BEARING_STUDENT_DISPLAY_TITLE_COUNT_AFTER": 0,
+    "CENTRAL_MISSION_COUNT": 12,
+    "STATE_MISSION_COUNT": 3,
+    "SSC_CANONICAL_MISSION_COUNT": 9,
+    "SSC_AUTHORITY_GROUP_COUNT": 1,
+    "MISSION_MERGED_INTO_GENERIC_SSC_COUNT": 0
+  }
+}

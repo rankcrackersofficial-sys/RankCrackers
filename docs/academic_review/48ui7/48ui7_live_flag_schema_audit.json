@@ -1,0 +1,43 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "FIRESTORE FLAG SCHEMA & BACKWARD COMPATIBILITY AUDIT",
+  "schema_resolution": {
+    "quickEntryEnabled": {
+      "sources": [
+        "data['quickEntryEnabled']",
+        "data['visibility']['quickEntryEnabled']"
+      ],
+      "resolution": "data['quickEntryEnabled'] ?? visibilityMap?['quickEntryEnabled']",
+      "semantics": "Governed flag for quick entry readiness. When omitted, defaults to false, but does NOT block mission shell selection or Dashboard entry (canQuickStart)."
+    },
+    "smartEntryEnabled": {
+      "sources": [
+        "data['smartEntryEnabled']",
+        "data['visibility']['smartEntryEnabled']"
+      ],
+      "resolution": "data['smartEntryEnabled'] ?? visibilityMap?['smartEntryEnabled']",
+      "semantics": "Governed flag for smart / diagnostic entry readiness. Evaluated in canSmartStart gate strictly with fail-closed semantics."
+    },
+    "missionSelectionReady": {
+      "sources": [
+        "data['missionSelectionReady']",
+        "data['visibility']['missionSelectionReady']"
+      ],
+      "resolution": "data['missionSelectionReady'] ?? visibilityMap?['missionSelectionReady']",
+      "semantics": "Indicates mission / variant selection readiness. For single-track missions (variantRequired == false), omitting this flag does NOT block selection. For variant-required missions, variant must be selected."
+    },
+    "catalogDiscoverable": {
+      "sources": [
+        "data['catalogDiscoverable']",
+        "data['visibility']['catalogDiscoverable']"
+      ],
+      "resolution": "rawDiscoverable == true || (rawDiscoverable == null && !isArchived)",
+      "semantics": "Controls catalog visibility. Default is true for non-archived missions."
+    }
+  },
+  "implementation_files": [
+    "lib/core/models/recruitment.dart",
+    "lib/core/firebase/firestore_service.dart"
+  ],
+  "verdict": "SCHEMA_AUDIT_COMPLETE_COMPATIBILITY_RESOLVED"
+}

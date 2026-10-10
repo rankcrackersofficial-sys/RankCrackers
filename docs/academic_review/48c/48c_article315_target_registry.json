@@ -1,0 +1,151 @@
+{
+  "gate": "48C",
+  "targetCount": 24,
+  "excludedPriorVerifiedMission": "upprpb_police_constable",
+  "rows": [
+    {
+      "missionId": "upsssc_vdo",
+      "examName": "Combined Gram Panchayat Adhikari / VDO Examination",
+      "authorityId": "auth_in_up_upsssc",
+      "stateCode": "UP"
+    },
+    {
+      "missionId": "uk_police_constable",
+      "examName": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+      "authorityId": "auth_in_uk_uksssc",
+      "stateCode": "UK"
+    },
+    {
+      "missionId": "hppsc_police_constable",
+      "examName": "HP Police Constable (Male & Female)",
+      "authorityId": "auth_in_hp_hppsc",
+      "stateCode": "HP"
+    },
+    {
+      "missionId": "psssb_patwari",
+      "examName": "Revenue Patwari Recruitment Examination",
+      "authorityId": "auth_in_pb_psssb",
+      "stateCode": "PB"
+    },
+    {
+      "missionId": "punjab_police_constable",
+      "examName": "Punjab Police Constable (District and Armed Cadres)",
+      "authorityId": "auth_in_pb_punjab_police",
+      "stateCode": "PB"
+    },
+    {
+      "missionId": "haryana_police_constable",
+      "examName": "Haryana Police Constable (General Duty)",
+      "authorityId": "auth_in_hr_hssc",
+      "stateCode": "HR"
+    },
+    {
+      "missionId": "jk_police_constable",
+      "examName": "J&K Police Constable",
+      "authorityId": "auth_in_jk_jkssb",
+      "stateCode": "JK"
+    },
+    {
+      "missionId": "ladakh_police_constable",
+      "examName": "Ladakh Police Constable",
+      "authorityId": "auth_in_la_ladakh_police",
+      "stateCode": "LA"
+    },
+    {
+      "missionId": "chandigarh_police_constable",
+      "examName": "Chandigarh Police Constable (Executive / IT)",
+      "authorityId": "auth_in_ch_chandigarh_police",
+      "stateCode": "CH"
+    },
+    {
+      "missionId": "delhi_police_constable",
+      "examName": "Delhi Police Constable (Executive)",
+      "authorityId": "auth_in_dl_ssc",
+      "stateCode": "DL"
+    },
+    {
+      "missionId": "rj_police_constable",
+      "examName": "Rajasthan Police Constable",
+      "authorityId": "auth_in_rj_rajasthan_police",
+      "stateCode": "RJ"
+    },
+    {
+      "missionId": "mpesb_police_constable",
+      "examName": "MP Police Constable Recruitment Test",
+      "authorityId": "auth_in_mp_mpesb",
+      "stateCode": "MP"
+    },
+    {
+      "missionId": "cg_police_constable",
+      "examName": "Chhattisgarh Police Constable",
+      "authorityId": "auth_in_cg_cgpolice",
+      "stateCode": "CG"
+    },
+    {
+      "missionId": "mh_police_constable",
+      "examName": "Maharashtra Police Constable",
+      "authorityId": "auth_in_mh_maharashtra_police",
+      "stateCode": "MH"
+    },
+    {
+      "missionId": "csbc_bihar_police_constable",
+      "examName": "Bihar Police Constable",
+      "authorityId": "auth_in_br_csbc",
+      "stateCode": "BR"
+    },
+    {
+      "missionId": "jssc_police_constable",
+      "examName": "Jharkhand Constable Competitive Examination",
+      "authorityId": "auth_in_jh_jssc",
+      "stateCode": "JH"
+    },
+    {
+      "missionId": "odisha_police_constable",
+      "examName": "Odisha Police Civil Constable",
+      "authorityId": "auth_in_od_odisha_police",
+      "stateCode": "OD"
+    },
+    {
+      "missionId": "wbpsc_clerkship",
+      "examName": "WBPSC Clerkship Examination",
+      "authorityId": "auth_in_wb_wbpsc",
+      "stateCode": "WB"
+    },
+    {
+      "missionId": "wbprb_police_constable",
+      "examName": "West Bengal Police Constable",
+      "authorityId": "auth_in_wb_wbprb",
+      "stateCode": "WB"
+    },
+    {
+      "missionId": "kpsc_kl_police_constable",
+      "examName": "Kerala PSC Police Constable (Armed Police Battalion)",
+      "authorityId": "auth_in_kl_kpsc",
+      "stateCode": "KL"
+    },
+    {
+      "missionId": "mizoram_police_constable",
+      "examName": "Mizoram Police Constable (UB/AB)",
+      "authorityId": "auth_in_mz_mizoram_police",
+      "stateCode": "MZ"
+    },
+    {
+      "missionId": "nagaland_police_constable",
+      "examName": "Nagaland Police Constable (GD)",
+      "authorityId": "auth_in_nl_nagaland_police",
+      "stateCode": "NL"
+    },
+    {
+      "missionId": "sikkim_police_constable",
+      "examName": "Sikkim Police Constable",
+      "authorityId": "auth_in_sk_sikkim_police",
+      "stateCode": "SK"
+    },
+    {
+      "missionId": "tripura_police_constable",
+      "examName": "Tripura Police Constable / TSR Rifleman",
+      "authorityId": "auth_in_tr_tripura_police",
+      "stateCode": "TR"
+    }
+  ]
+}

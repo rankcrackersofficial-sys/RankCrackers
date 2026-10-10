@@ -1,0 +1,16 @@
+{
+  "safetyCode": "RC_47B6_FOUNDER_HOLD_SAFETY",
+  "executedAt": "2026-09-10T07:08:16.403Z",
+  "founderHeldDocOutput": {
+    "studentVisible": false,
+    "quickEntryEnabled": false,
+    "smartEntryEnabled": false,
+    "catalogStatus": "HELD_FOUNDER"
+  },
+  "metrics": {
+    "FOUNDER_HELD_STUDENT_VISIBLE_COUNT": 0,
+    "FOUNDER_HELD_QUICK_ENTRY_ENABLED_COUNT": 0,
+    "FOUNDER_HELD_SMART_ENTRY_ENABLED_COUNT": 0
+  },
+  "safetyPass": true
+}

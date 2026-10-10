@@ -1,0 +1,47 @@
+{
+  "platforms": [
+    {
+      "platformDomain": "afcat.edcil.co.in",
+      "authorityKey": "auth_in_indian_air_force",
+      "platformType": "AUTHORIZED_CURRENT_RECRUITMENT_PLATFORM",
+      "effectiveStatus": "CURRENT_EFFECTIVE",
+      "sourceEvidenceRef": "https://careerairforce.gov.in/sites/default/files/2026-05/AFCAT-Cycle-02-2026-Notification.pdf",
+      "effectiveFrom": "AFCAT_02_2026",
+      "effectiveTo": null,
+      "current": true
+    },
+    {
+      "platformDomain": "iafrecruitment.edcil.co.in",
+      "authorityKey": "auth_in_indian_air_force",
+      "platformType": "AUTHORIZED_OFFICIAL_RECRUITMENT_PLATFORM",
+      "effectiveStatus": "CURRENT_EFFECTIVE",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+      "effectiveFrom": "AGNIVEERVAYU_01_2027",
+      "effectiveTo": null,
+      "current": true
+    },
+    {
+      "platformDomain": "afcat.cdac.in",
+      "authorityKey": "auth_in_indian_air_force",
+      "platformType": "HISTORICAL_RECRUITMENT_PLATFORM",
+      "effectiveStatus": "SUPERSEDED",
+      "sourceEvidenceRef": "47C7V historical provenance finding",
+      "effectiveFrom": null,
+      "effectiveTo": "BEFORE_AFCAT_02_2026",
+      "current": false
+    }
+  ],
+  "sharedDocumentHosts": [
+    {
+      "domain": "cdnbbsr.s3waas.gov.in",
+      "classification": "SHARED_GOVERNMENT_DOCUMENT_HOST",
+      "authorizationScope": "EXACT_DOCUMENT_BINDING_ONLY",
+      "current": true
+    }
+  ],
+  "metrics": {
+    "AFCAT_CURRENT_PORTAL_ACTIVE_IN_CONTRACT": "YES",
+    "AFCAT_SUPERSEDED_PORTAL_ACTIVE_CURRENT_COUNT": 0,
+    "SHARED_HOST_IN_ACTIVE_AUTHORITY_WHITELIST_COUNT": 0
+  }
+}

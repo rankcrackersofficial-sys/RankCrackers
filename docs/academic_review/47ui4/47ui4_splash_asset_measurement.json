@@ -1,0 +1,241 @@
+{
+  "measurements": [
+    {
+      "relative_path": "drawable/android12splash.png",
+      "canvas_width": 480,
+      "canvas_height": 480,
+      "emblem_bounding_box": {
+        "min_x": 192,
+        "max_x": 287,
+        "min_y": 192,
+        "max_y": 287,
+        "width": 96,
+        "height": 96
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 4111,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-mdpi/android12splash.png",
+      "canvas_width": 240,
+      "canvas_height": 240,
+      "emblem_bounding_box": {
+        "min_x": 97,
+        "max_x": 143,
+        "min_y": 96,
+        "max_y": 143,
+        "width": 47,
+        "height": 48
+      },
+      "emblem_aspect_ratio": 0.9791666666666666,
+      "center_offset_x_px": 0.0,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.40208333333333335,
+      "emblem_canvas_fill_percentage": 19.583333333333332,
+      "non_transparent_pixel_count": 1028,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-hdpi/android12splash.png",
+      "canvas_width": 360,
+      "canvas_height": 360,
+      "emblem_bounding_box": {
+        "min_x": 145,
+        "max_x": 215,
+        "min_y": 144,
+        "max_y": 215,
+        "width": 71,
+        "height": 72
+      },
+      "emblem_aspect_ratio": 0.9861111111111112,
+      "center_offset_x_px": 0.0,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4013888888888889,
+      "emblem_canvas_fill_percentage": 19.72222222222222,
+      "non_transparent_pixel_count": 2266,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-xhdpi/android12splash.png",
+      "canvas_width": 480,
+      "canvas_height": 480,
+      "emblem_bounding_box": {
+        "min_x": 192,
+        "max_x": 287,
+        "min_y": 192,
+        "max_y": 287,
+        "width": 96,
+        "height": 96
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 4111,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-xxhdpi/android12splash.png",
+      "canvas_width": 720,
+      "canvas_height": 720,
+      "emblem_bounding_box": {
+        "min_x": 288,
+        "max_x": 431,
+        "min_y": 288,
+        "max_y": 431,
+        "width": 144,
+        "height": 144
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 9175,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-xxxhdpi/android12splash.png",
+      "canvas_width": 960,
+      "canvas_height": 960,
+      "emblem_bounding_box": {
+        "min_x": 384,
+        "max_x": 575,
+        "min_y": 384,
+        "max_y": 575,
+        "width": 192,
+        "height": 192
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 16375,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-night-mdpi/android12splash.png",
+      "canvas_width": 240,
+      "canvas_height": 240,
+      "emblem_bounding_box": {
+        "min_x": 97,
+        "max_x": 143,
+        "min_y": 96,
+        "max_y": 143,
+        "width": 47,
+        "height": 48
+      },
+      "emblem_aspect_ratio": 0.9791666666666666,
+      "center_offset_x_px": 0.0,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.40208333333333335,
+      "emblem_canvas_fill_percentage": 19.583333333333332,
+      "non_transparent_pixel_count": 1028,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-night-hdpi/android12splash.png",
+      "canvas_width": 360,
+      "canvas_height": 360,
+      "emblem_bounding_box": {
+        "min_x": 145,
+        "max_x": 215,
+        "min_y": 144,
+        "max_y": 215,
+        "width": 71,
+        "height": 72
+      },
+      "emblem_aspect_ratio": 0.9861111111111112,
+      "center_offset_x_px": 0.0,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4013888888888889,
+      "emblem_canvas_fill_percentage": 19.72222222222222,
+      "non_transparent_pixel_count": 2266,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-night-xhdpi/android12splash.png",
+      "canvas_width": 480,
+      "canvas_height": 480,
+      "emblem_bounding_box": {
+        "min_x": 192,
+        "max_x": 287,
+        "min_y": 192,
+        "max_y": 287,
+        "width": 96,
+        "height": 96
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 4111,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-night-xxhdpi/android12splash.png",
+      "canvas_width": 720,
+      "canvas_height": 720,
+      "emblem_bounding_box": {
+        "min_x": 288,
+        "max_x": 431,
+        "min_y": 288,
+        "max_y": 431,
+        "width": 144,
+        "height": 144
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 9175,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    },
+    {
+      "relative_path": "drawable-night-xxxhdpi/android12splash.png",
+      "canvas_width": 960,
+      "canvas_height": 960,
+      "emblem_bounding_box": {
+        "min_x": 384,
+        "max_x": 575,
+        "min_y": 384,
+        "max_y": 575,
+        "width": 192,
+        "height": 192
+      },
+      "emblem_aspect_ratio": 1.0,
+      "center_offset_x_px": -0.5,
+      "center_offset_y_px": -0.5,
+      "safe_margin_ratio": 0.4,
+      "emblem_canvas_fill_percentage": 20.0,
+      "non_transparent_pixel_count": 16375,
+      "android12_mask_safe": true,
+      "distortion_free": true
+    }
+  ],
+  "light_splash_clipping_risk_count": 0,
+  "dark_splash_clipping_risk_count": 0,
+  "emblem_geometry_distortion_count": 0,
+  "target_emblem_diameter_percentage": 20.0,
+  "android12_viewport_mask_safe_threshold": "20% to 50% max",
+  "status": "ALL_DENSITIES_PASSED"
+}

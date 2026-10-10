@@ -1,0 +1,9 @@
+{
+  "matchStates": {
+    "ELIGIBLE": "All mandatory known rules pass for user profile",
+    "LIKELY_ELIGIBLE": "Permitted only where official rule contract explicitly allows uncertainty",
+    "MORE_INFORMATION_NEEDED": "Required user field is missing from Career Profile",
+    "NOT_ELIGIBLE": "At least one exact mandatory official rule fails",
+    "NOT_EVALUATED": "Official rule is insufficient or unstructured for automated matching"
+  }
+}

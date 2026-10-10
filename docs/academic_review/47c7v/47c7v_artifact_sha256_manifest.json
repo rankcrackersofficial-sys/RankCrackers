@@ -1,0 +1,129 @@
+{
+  "manifestCode": "RC_47C7V_ARTIFACT_SHA256_MANIFEST",
+  "generatedAt": "2026-09-10T07:42:50.860Z",
+  "totalArtifacts": 24,
+  "files": [
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_handoff_hash_verification.json",
+      "byteLength": 2782,
+      "sha256": "a311553f92020b74e5aae6648ce1423f100b2120c981f6d1954aa4f9026ebc86"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_authority_registry_recomputation.json",
+      "byteLength": 4786,
+      "sha256": "3a8b64d82b85222927eead466ee464de3e4ff90ed8a3bd00878da21e82705dfc"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_official_domain_security_audit.json",
+      "byteLength": 5741,
+      "sha256": "dee50c9a9dce735e7c878f094a5b1f7a26b21ebd5ef523dfca0240292a6e4995"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_afcat_current_portal_audit.json",
+      "byteLength": 1747,
+      "sha256": "7b496e4f0da5d92b49f12bb22052e62c7f906c5f5a2c016bd65620c974c2b3d4"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_manifest_inventory_recomputation.json",
+      "byteLength": 12891,
+      "sha256": "e9adcbe7e0b61a9d2183ad4076cbb0e2b7e4d69357139626833c318e197dfdd5"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_materializer_validate_only_rerun.json",
+      "byteLength": 916,
+      "sha256": "4263ae54a1a6a16bba29ac68a4d6d67a65b1de9d9bcf9a9562d467a2ff771f15"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_immutable_jee_neet_identity_audit.json",
+      "byteLength": 932,
+      "sha256": "c355c4e273339d988552a7dd4a6259e2671f580e31ddb37aa716f0033d501f25"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_ctet_independent_audit.json",
+      "byteLength": 1581,
+      "sha256": "bd3ae0838df044b0bb3648143d5bb82efd23035b0856b86ad86bd28a029b2261"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_navy_ssr_mr_independent_audit.json",
+      "byteLength": 1385,
+      "sha256": "0dcc6541a591423c61fa8dc8c7e74be530d50d5d0f5c9941fc3e2c75406d7b73"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_afcat_route_evidence_audit.json",
+      "byteLength": 2267,
+      "sha256": "3715b3220821e5835fb49cd2c29c050c880d34f818d21f4dfc57d2ec68adff38"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_agniveervayu_variant_audit.json",
+      "byteLength": 1885,
+      "sha256": "afcf4574d1741cca407fadb1122c0e4301bfdcaf07abd4252599b8b5f8f42ee2"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_army_cee_audit.json",
+      "byteLength": 2096,
+      "sha256": "9af1806e88eba8af3eadfe23d834c5a6e752dcc4ace4be04f5a7fa2bc8dc8cbb"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_rpf_rrb_ownership_audit.json",
+      "byteLength": 1322,
+      "sha256": "5f1449500499c3b8cd0abb7c3d19ac67b2ff8da42dc4653c75ce49f1e01daf1d"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_ibps_identity_audit.json",
+      "byteLength": 1013,
+      "sha256": "97803758e3b25bada0d00061061ea1aefd5253ed62fe5af6000dec0dc5d82856"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_ssc_cross_lane_audit.json",
+      "byteLength": 919,
+      "sha256": "49a0df051c0ab88911ab929961f6da3669e7cca726575607552c5ab960236d66"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_review_required_set_audit.json",
+      "byteLength": 2600,
+      "sha256": "658fe8e699b236c82a2901b8bcae7137e80cec0b1881dbc6c19116c2eac2bb74"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_ib_epfo_carry_forward_audit.json",
+      "byteLength": 1691,
+      "sha256": "a51cd6419306499c1ad9eb3d09c77638fa174b775a4c99fd60b58a7e77a8f666"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_national_completeness_audit.json",
+      "byteLength": 2219,
+      "sha256": "5eaf61f20f1ee00b1b9ba8c07f3c0151251574e5d4a6d5972aee0a96d1eb3c2e"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_latest_effective_source_audit.json",
+      "byteLength": 14131,
+      "sha256": "3929f812c782d7359a82c161aadc5bebd60f698d1dbf1caf643dd4ccd02eef7b"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_pyq_truth_audit.json",
+      "byteLength": 515,
+      "sha256": "dfef6ffa245472df5309f76c8ebe33ddcdcf4933d4f36e44808222fadea95290"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_readiness_recomputation.json",
+      "byteLength": 12540,
+      "sha256": "ed43b3cdc242c9a853c82044202e7b39351d8b8b342ae0e18ff6b81bca3417e5"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_state_national_overlap_audit.json",
+      "byteLength": 1257,
+      "sha256": "2d7ed03b8d9d05aca6981fcace1983430dfc8a63f7e6ab302e5951efd7648843"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_no_production_mutation_proof.json",
+      "byteLength": 667,
+      "sha256": "5c8adefe4edd1d178b8a92b7e3f29216f94a9bfe680ff007f9273bf7efed8df8"
+    },
+    {
+      "relativePath": "docs/academic_review/47c7v/47c7v_final_report.md",
+      "byteLength": 11372,
+      "sha256": "a5c9ac75e42f4f81e02144432c5ea9e92f250257d3946da3400af8f5af157f70"
+    }
+  ],
+  "pendingGenerationHashCount": 0,
+  "mismatchCount": 0
+}

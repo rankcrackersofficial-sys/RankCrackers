@@ -1,0 +1,178 @@
+{
+  "matrixSchemaVersion": "9.0.0",
+  "gate": "RC_OFFICIAL_DOCUMENT_ACQUISITION_LIVE_MATERIALIZATION_AND_SCOPE_NORMALIZATION_46D9",
+  "generatedAt": "2026-09-09T14:57:58.807Z",
+  "summary": {
+    "TOTAL_MISSIONS": 15,
+    "S2_CONTENT_READY_MISSION_COUNT": 0,
+    "S2_CONTENT_BLOCKED_MISSION_COUNT": 15,
+    "S2_JOB_ENQUEUE_COUNT": 0
+  },
+  "matrix": [
+    {
+      "missionId": "jee_main_2026",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "BYTE_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "BYTE_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "BYTE_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "S2_EXECUTION_FROZEN_IN_46D9_GATE"
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "BYTE_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "BYTE_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "BYTE_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "S2_EXECUTION_FROZEN_IN_46D9_GATE"
+    },
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "BYTE_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "BYTE_VERIFIED",
+      "syllabusAuthorityStatus": "PORTAL_REGISTRY_VERIFIED",
+      "syllabusContentStatus": "PORTAL_REGISTRY_ONLY",
+      "s2ContentReady": false,
+      "s2BlockerReason": "28_SUBJECT_SYLLABUS_PDF_BYTES_NOT_DOWNLOADED_LOCALLY"
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_cgl",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_je",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_chsl",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_cpo",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "ssc_gd",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "notificationAuthorityStatus": "SOURCE_VERIFIED",
+      "notificationContentStatus": "PORTAL_TEXT_VERIFIED",
+      "schemeAuthorityStatus": "SOURCE_VERIFIED",
+      "schemeContentStatus": "PORTAL_TEXT_VERIFIED",
+      "syllabusAuthorityStatus": "SOURCE_VERIFIED",
+      "syllabusContentStatus": "PORTAL_TEXT_VERIFIED",
+      "s2ContentReady": false,
+      "s2BlockerReason": "OFFICIAL_PDF_BYTES_NOT_INGESTED_IN_REPOSITORY"
+    }
+  ]
+}

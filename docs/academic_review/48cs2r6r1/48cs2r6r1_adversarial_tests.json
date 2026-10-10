@@ -1,0 +1,61 @@
+{
+  "gate": "48CS2R6R1",
+  "testSuite": "functions/test/test_48cs2r6r1_adapter_trust_closure.js",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "totalTests": 10,
+  "passedTests": 10,
+  "failedTests": 0,
+  "results": [
+    {
+      "testId": 1,
+      "name": "Zero Substring Inference: exact normalization tables and fail-closed behavior",
+      "status": "PASS"
+    },
+    {
+      "testId": 2,
+      "name": "Zero Hardcoded Facts: seats, rules, and dates derived from physical files",
+      "status": "PASS"
+    },
+    {
+      "testId": 3,
+      "name": "Text-Bound Completeness Barrier: SHA bytes with unresolved text cannot achieve VERIFIED_COMPLETE",
+      "status": "PASS"
+    },
+    {
+      "testId": 4,
+      "name": "Rule Evidence Referential Integrity: unknown document or dangling evidence fails closed",
+      "status": "PASS"
+    },
+    {
+      "testId": 5,
+      "name": "Final Matching Barrier: ACCEPTED_FOR_MATCHING strictly required; partial packages emit NOT_EVALUATED",
+      "status": "PASS"
+    },
+    {
+      "testId": 6,
+      "name": "Generic Fact Verification Levels: explicit 4-tier and 5-tier evidence levels attached",
+      "status": "PASS"
+    },
+    {
+      "testId": 7,
+      "name": "Unknown Rule Type Fails Closed: unmapped rule types yield UNRESOLVED",
+      "status": "PASS"
+    },
+    {
+      "testId": 8,
+      "name": "NEET Year Safety: adversarial 2026 to 2027 promotion strictly rejected",
+      "status": "PASS"
+    },
+    {
+      "testId": 9,
+      "name": "Admission Entrance Isolation: JEE Main 2026 isolated from job vacancy matrix",
+      "status": "PASS"
+    },
+    {
+      "testId": 10,
+      "name": "Zero Production Writes & Clean Execution Invariants",
+      "status": "PASS"
+    }
+  ],
+  "verdict": "100%_PASS"
+}

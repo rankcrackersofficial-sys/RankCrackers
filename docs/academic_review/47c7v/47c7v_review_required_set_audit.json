@@ -1,0 +1,55 @@
+{
+  "auditCode": "RC_47C7V_REVIEW_REQUIRED_SET_AUDIT",
+  "executedAt": "2026-09-10T07:42:50.809Z",
+  "metrics": {
+    "REVIEW_REQUIRED_COUNT": 4,
+    "REVIEW_REQUIRED_MATERIALIZATION_ELIGIBLE_COUNT": 0
+  },
+  "reviewRequiredMissions": [
+    {
+      "missionId": "upsc_ifos",
+      "title": "Indian Forest Service Examination (Preliminary)",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "reason": "Preliminary screening shared with CSE, but specialized cadre rules, eligibility criteria, and distinct notification document required.",
+      "sourceBlocker": "Notification document not isolated as standalone entry.",
+      "identityBlocker": "NONE",
+      "qualificationBlocker": "SEPARATE_SERVICE_RULES_AND_GATEWAY",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "upsc_ies_iss",
+      "title": "Indian Economic Service / Indian Statistical Service Examination",
+      "canonicalAuthorityKey": "auth_in_upsc",
+      "reason": "Specialized postgraduate educational qualifications; examination scheme and syllabus requires independent validation.",
+      "sourceBlocker": "Current scheme and latest notification unready.",
+      "identityBlocker": "NONE",
+      "qualificationBlocker": "HIGHLY_SPECIALIZED_ACADEMIC_STREAM",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "nta_icar_aieea_pg",
+      "title": "ICAR AIEEA PG Examination",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "reason": "Postgraduate agricultural university entrance; examination pattern and major exam status requires qualification review.",
+      "sourceBlocker": "Information bulletin not verified.",
+      "identityBlocker": "NONE",
+      "qualificationBlocker": "POSTGRADUATE_ENTRANCE_SCOPE",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    },
+    {
+      "missionId": "nta_nchm_jee",
+      "title": "NCHM JEE (Hotel Management)",
+      "canonicalAuthorityKey": "auth_in_nta",
+      "reason": "Hospitality entrance examination; candidate participation scale and RankCrackers core coverage prioritization required.",
+      "sourceBlocker": "Information bulletin not verified.",
+      "identityBlocker": "NONE",
+      "qualificationBlocker": "SPECIALIZED_HOSPITALITY_STREAM",
+      "selectionImpact": "MISSION_SELECTION_BLOCKED",
+      "shellMaterializationAllowed": false
+    }
+  ],
+  "verdict": "PASS (All 4 review-required missions strictly blocked from shell and selection materialization)"
+}

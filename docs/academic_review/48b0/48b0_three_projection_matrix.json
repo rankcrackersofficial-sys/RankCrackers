@@ -1,0 +1,371 @@
+{
+  "gate": "RC_48B0_LIVE_CURRENT_MISSIONS_PROJECTION_INTEGRITY_AND_REPAIR_DRY_RUN",
+  "task": "THREE_PROJECTION_MATRIX",
+  "generatedAt": "2026-09-10T10:39:12.867Z",
+  "metrics": {
+    "LIVE_UNION_COUNT": 16,
+    "THREE_PROJECTION_COMPLETE_COUNT": 15,
+    "ORPHAN_COUNT": 1,
+    "NOTE_ON_LEGACY_VALUES": "Older gate documentation previously referenced 17 union / 13 complete / 4 orphans. Fresh live recomputation directly against Firestore project rankcrackers-55 reveals exactly 16 union, 15 complete, and 1 orphan (test_mission_catalog_bridge in recruitments)."
+  },
+  "matrix": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "5a094cb39949823747adcb6b6fcaf14da28d1a04ee5a5b4c09e2fc156f17de3e",
+        "recruitments_sha256": "e3dd479bbfd828742dfcbd81214fadf7ecc81fb767d5b8f6af9ace7ece446f1a",
+        "student_mission_catalog_sha256": "d12b497d7771b2458843916fb897c92b5ac9318c1ef9e27519f7f99099459891"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "student_mission_catalog": "PUBLIC_STUDENT_ELIGIBLE"
+        }
+      ]
+    },
+    {
+      "missionId": "jee_main_2026",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "7bccbff7cbf4ced61ef6157a2e6ce22adebafa4216bcedd3be75fc2fd2eedad4",
+        "recruitments_sha256": "813116ced3c803b63edb48a81a6e221eaa9bd738b2f01a30482b3fdc5aff0be4",
+        "student_mission_catalog_sha256": "a21929d7ee00b4f1c02fa4ce71fbbe52ce47e73acd05c5e6f1fb7add618fd591"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "neet_(ug)-2027",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "e3c7870e398941e4ceccaa1a85bd2be211ea4f7388d9b6bf2111bb2c12053a0c",
+        "recruitments_sha256": "6f3b9606911aee87b74f67ac80d0810811afb6ee969090b8ded98166b4c35a5f",
+        "student_mission_catalog_sha256": "fd680f4b81eff479b1df92494f803748f09971e8450c5d00ab14281f408b3747"
+      },
+      "semanticDifferencesCount": 2,
+      "semanticDifferences": [
+        {
+          "field": "examCategory",
+          "mission_realms": "competitive",
+          "recruitments": "competitive",
+          "student_mission_catalog": "category_pending"
+        },
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "b32804656396d4b2e0ae6caa8af1fb3028986e0fd79dabfd1af9e640819e5c7c",
+        "recruitments_sha256": "ceebfde113df032071ed43247c0138afeaf1aa52ec45f85f6f02c785b4aadcd7",
+        "student_mission_catalog_sha256": "2a79577724c6c6373884bd0a8d8f2c4e2eb173ac6933106c12414ed2cf3fc4de"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "STATE_ELIGIBLE",
+          "student_mission_catalog": "STATE_ELIGIBLE"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_cgl",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "a73b41140592f0296860c4411b902c845f0a84954cb55b61a9f09dbab1203b1c",
+        "recruitments_sha256": "204a7317bf778099df6c1fe7174e00f1d8df4ce8e314994221d79d7cb9a38362",
+        "student_mission_catalog_sha256": "fbc3956d54ea5efcd156923973f00e4fe75fed24147329023d96b9982e50e98a"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_chsl",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "425073992062d202050c4ddb298ce11888945e3b4f0c6c57d94c452dcfa98b2d",
+        "recruitments_sha256": "9581dcd50137b71060fc2df45904a891167e5ac8307832c936b73b95eef84161",
+        "student_mission_catalog_sha256": "2f1defc02c11cee03fbddb13c276b6b5b4bf2a3ef568c6974463ea0f88aa25bd"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_cpo",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "190c11ed21ce3ceba23a63a3ec765e82635555944a926e5513f0e2caf3a57c70",
+        "recruitments_sha256": "690e8cc1f13b0d9e76168ca1306621e1b8191dfe46f530d76c044e78018a1f8e",
+        "student_mission_catalog_sha256": "bcccb7cf6d04504b65e1dee77fd94f33ac9f18ee36a7ec7a18c41552de3da64e"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_gd",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "9bc0c7404183f1ae3b267f79198b6d76f8a776d1c52f15927f7a21a4254c40a8",
+        "recruitments_sha256": "d54491901716077aa532503eabc9a04d86cd4b475ec516081eea5b6134df463f",
+        "student_mission_catalog_sha256": "5ef45064c909f8bce7ca2793189fa5bdeea4911b350cea64c059d8611480f7cf"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_hindi_translators",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "482932f926cb48fa65d4cf4c3bda9ca4af316c738a51ba3dffaf0fcf53d059dc",
+        "recruitments_sha256": "5bc5006920d1d36512761c837ce59b5c17065cea9e896270e2cec730be7a0101",
+        "student_mission_catalog_sha256": "2d088b07b4bc9476fe691d835814605f105c121e4a10537a743d9ade3e3e21bc"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_je",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "a704dff2b87dd802b9a8bcb887b82c7fdccf28f6b36b05fb8c4ba2dfe0d7cffd",
+        "recruitments_sha256": "0f626df070f63c9295b9c3f8e6ca3b29fca627a20203995d157f194e8bf83f31",
+        "student_mission_catalog_sha256": "7e8b3c9af924999d8c96515803f8cf4a4c08f02b75995ddec00d1180761eaf53"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_mts_havaldar",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "c5b46d1356627c0a05788563b9eb47c52815f3539edb47dc33c9e2de49479d50",
+        "recruitments_sha256": "c534492c133a1222f4c77592574e9edae588e6c1e701a56d175fcf980e883b46",
+        "student_mission_catalog_sha256": "42cba5aa79a09eec2fa3acce56b0916ddd9c6f77d53fd2f70e73d8df69bf4d95"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_selection_post",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "53efb6c5d501415852f3817c5295bc6e034c754db0a6135f8e09d36c7a4f57ec",
+        "recruitments_sha256": "f093db33de5ff12b2a019aab869593f2baffd1fe60a66733ea1a76543dbccc47",
+        "student_mission_catalog_sha256": "d7ce594c5f46906ae60c8d7a25275f29a1d737f218cc667ad29e3f7783c8c50b"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "ssc_stenographer",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "fb6e7bdb3a585d0d00a28180c62a2108c21e3af741465714d87e5e4cb12cc40a",
+        "recruitments_sha256": "2c38a786606556cd3b19467d20664d3bca5a03c2e89472d903970c1590d7a0dc",
+        "student_mission_catalog_sha256": "bc00cf6bf406579b92b926ac57efc9b651ab86b96143f3ad6de62d4766165671"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    },
+    {
+      "missionId": "test_mission_catalog_bridge",
+      "projections": {
+        "mission_realms": false,
+        "recruitments": true,
+        "student_mission_catalog": false
+      },
+      "isThreeProjectionComplete": false,
+      "hashes": {
+        "mission_realms_sha256": null,
+        "recruitments_sha256": "801d4e2c6e9c81e577d4bd7506fd49ca03c05ed6388b16f69fe31bc4424b7480",
+        "student_mission_catalog_sha256": null
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "projection_completeness",
+          "defect": "MISSING_ONE_OR_MORE_PROJECTIONS",
+          "mission_realms_present": false,
+          "recruitments_present": true,
+          "student_mission_catalog_present": false
+        }
+      ]
+    },
+    {
+      "missionId": "uppsc_pcs_prelims",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "94f57cffd9870c9354a656e2b4d3fa309724ee6b37ebb1db20e192902fd9f5d2",
+        "recruitments_sha256": "b88a968701de9911c000f3d2b523d632100f966f94b41972da5b31b07e2a1a05",
+        "student_mission_catalog_sha256": "b7bc73c4cced606e99271aa37b0ed6d7c293db1af6172afe1c889681f5ce7570"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "STATE_ELIGIBLE",
+          "student_mission_catalog": "STATE_ELIGIBLE"
+        }
+      ]
+    },
+    {
+      "missionId": "upsc_cse_prelims",
+      "projections": {
+        "mission_realms": true,
+        "recruitments": true,
+        "student_mission_catalog": true
+      },
+      "isThreeProjectionComplete": true,
+      "hashes": {
+        "mission_realms_sha256": "3515c45f4a833afeb9ed97e51ee8a2858d9aae581c3a185e723d702c516bc8b9",
+        "recruitments_sha256": "11f35938581d48da78e5a33d524d76be71bdaee451b380f2033fb755dab6962a",
+        "student_mission_catalog_sha256": "824aa5d4edf396d0e00322153b446cf425e5712b2cb2ed5bb63dbf3d861f43c2"
+      },
+      "semanticDifferencesCount": 1,
+      "semanticDifferences": [
+        {
+          "field": "examScope",
+          "recruitments": "ALL_INDIA",
+          "student_mission_catalog": "ALL_INDIA"
+        }
+      ]
+    }
+  ]
+}

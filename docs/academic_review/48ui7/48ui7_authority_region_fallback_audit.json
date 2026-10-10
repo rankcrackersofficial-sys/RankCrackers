@@ -1,0 +1,25 @@
+{
+  "gate": "GATE 48UI7",
+  "audit": "AUTHORITY & REGION FALLBACK AUDIT",
+  "authority_logic_audit": {
+    "methods_audited": [
+      "_getAuthorityGroupKey(Recruitment r)",
+      "_getAuthorityDisplayName(Recruitment r, String groupKey)",
+      "_isCentralExam(Recruitment r)",
+      "_isRegionalExam(Recruitment r, String stateName, String stateCode)"
+    ],
+    "substring_heuristics_eliminated": true,
+    "title_or_exam_id_guessing_eliminated": true,
+    "behavior": "Prefers backend authorityGroupKey, authorityDisplayName, jurisdictionLevel, and stateCode. Compatibility fallback returns 'other' / 'Other Exams' only when data is completely absent."
+  },
+  "region_contract_audit": {
+    "canonical_code_for_telangana": "TG",
+    "silent_ts_alias_eliminated": true,
+    "state_map_clean": true
+  },
+  "metrics": {
+    "TITLE_OR_ID_HEURISTIC_CANONICAL_AUTHORITY_COUNT": 0,
+    "TS_REGION_ALIAS_RUNTIME_COUNT": 0
+  },
+  "verdict": "AUTHORITY_AND_REGION_CONTRACT_VERIFIED"
+}

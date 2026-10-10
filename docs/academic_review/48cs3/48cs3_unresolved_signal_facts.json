@@ -1,0 +1,30 @@
+{
+  "UNVERIFIED_SIGNAL_FACT_COUNT": 0,
+  "unresolvedFacts": [
+    {
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "facts": [
+        "exam occurrence",
+        "answer key",
+        "result",
+        "DV/interview",
+        "final result",
+        "latest post-amendment event"
+      ]
+    },
+    {
+      "missionId": "rpsc_ras_prelims",
+      "facts": [
+        "current interview/final result state"
+      ]
+    },
+    {
+      "missionId": "ssc_cgl",
+      "facts": [
+        "Tier-I occurrence",
+        "answer key",
+        "current-cycle result"
+      ]
+    }
+  ]
+}

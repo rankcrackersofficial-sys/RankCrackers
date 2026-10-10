@@ -1,0 +1,18 @@
+{
+  "testName": "47b_duplicate_rejection_test",
+  "executedAt": "2026-09-10T04:55:45.529Z",
+  "cases": [
+    {
+      "testCase": "duplicate_mission_id_same_manifest",
+      "expectedRejected": true,
+      "actualRejected": true,
+      "rejectedErrorMessage": "MANIFEST_VALIDATION_FAILED: 1 error(s) found:\nMission[1] (upsc_cse_prelims): Duplicate missionId 'upsc_cse_prelims' detected in manifest."
+    },
+    {
+      "testCase": "yearwise_id_for_new_mission",
+      "expectedRejected": true,
+      "actualRejected": true,
+      "rejectedErrorMessage": "MANIFEST_VALIDATION_FAILED: 1 error(s) found:\nMission[0] (upsc_cse_2027): New major mission ID 'upsc_cse_2027' violates year-less stable ID rule."
+    }
+  ]
+}

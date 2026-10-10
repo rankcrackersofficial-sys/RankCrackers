@@ -1,0 +1,12 @@
+{
+  "auditCode": "RC_47A4R2_TRIPURA_TET_EXACT_PATTERN_AUDIT",
+  "executedAt": "2026-09-10T07:49:50.932Z",
+  "tripuraMissionFound": true,
+  "pattern": null,
+  "metrics": {
+    "TRIPURA_PATTERN_FIELD_COUNT_AUDITED": 5,
+    "TRIPURA_PATTERN_FALSE_FIELD_COUNT": 0,
+    "TRIPURA_PATTERN_UNRESOLVED_FIELD_COUNT": 0
+  },
+  "patternDataHoldNote": "TRBT T-TET variant structure is verified (Paper I / Paper II), but exam pattern negative marking fields are uncertified."
+}

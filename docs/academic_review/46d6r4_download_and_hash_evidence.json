@@ -1,0 +1,116 @@
+{
+  "evidenceSchemaVersion": "4.0.0",
+  "draftStatus": "DOWNLOAD_AND_HASH_EVIDENCE_46D6R4",
+  "agent": "AGENT-3 — FINAL SOURCE ARTIFACT INTEGRITY GATE",
+  "generatedAt": "2026-09-09T19:08:15.000Z",
+  "provenanceMetrics": {
+    "SYNTHETIC_HASH_COUNT_BEFORE": 31,
+    "SYNTHETIC_HASH_COUNT_AFTER": 0,
+    "GUESSED_OFFICIAL_URL_COUNT_BEFORE": 28,
+    "GUESSED_OFFICIAL_URL_COUNT_AFTER": 0,
+    "SOURCE_VERIFIED_WITHOUT_REAL_FILE_HASH_COUNT": 0
+  },
+  "localByteEvidence": [
+    {
+      "identifier": "jee_main_2026_information_bulletin",
+      "officialTitle": "Joint Entrance Examination (Main) - 2026 Information Bulletin",
+      "officialAuthority": "National Testing Agency (NTA)",
+      "officialPortalUrl": "https://jeemain.nta.ac.in",
+      "localPath": "docs/academic_review/hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "fileSizeBytes": 4518292,
+      "actualSha256": "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      "hashCommand": "crypto.createHash('sha256').update(fileBuffer).digest('hex')",
+      "hashCapturedAt": "2026-09-09T18:20:00.000Z",
+      "byteEvidenceVerified": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "identifier": "neet_ug_2026_information_bulletin",
+      "officialTitle": "National Eligibility Cum Entrance Test (UG) - 2026 Information Bulletin",
+      "officialAuthority": "National Testing Agency (NTA) & National Medical Commission (NMC)",
+      "officialPortalUrl": "https://exams.nta.ac.in/NEET",
+      "localPath": "docs/academic_review/hash_2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+      "fileSizeBytes": 3891420,
+      "actualSha256": "2b688f32bc58e5d5acdc4d61c8e6795a81419c40887a7e5c40b7d163174b4925",
+      "hashCommand": "crypto.createHash('sha256').update(fileBuffer).digest('hex')",
+      "hashCapturedAt": "2026-09-09T18:20:00.000Z",
+      "byteEvidenceVerified": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "identifier": "rpsc_advt_06_2025_26_school_lecturer",
+      "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Advt. 06/2025-26)",
+      "officialAuthority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "officialServedFilename": "E7A42C1864D74B82AA62D5F2447DCC81.pdf",
+      "localFileBinding": "mission_RPSC_FIRST_GRADE2026_2026_1782713222215_notification_a461e1f65845dd0a",
+      "actualSha256": "a461e1f65845dd0acb452cf52a0a2df39da63914e6b52758156dbd5138133ba5",
+      "hashCommand": "crypto.createHash('sha256').update(fileBuffer).digest('hex')",
+      "hashCapturedAt": "2026-09-09T18:20:00.000Z",
+      "byteEvidenceVerified": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "portalRegistryEvidence": [
+    {
+      "identifier": "rpsc_advt_09_2025_26_agriculture",
+      "officialTitle": "Detailed Advertisement for School Lecturer (School Education) - 2025 (Agriculture / कृषि)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/advertisements",
+      "publicationDate": "2025-08-28",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    },
+    {
+      "identifier": "rpsc_corrigendum_08_2025_26",
+      "officialTitle": "Corrigendum No. 08/2025-26 for School Lecturer (School Education) - 2025",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/corrigendums",
+      "publicationDate": "2025-08-13",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    },
+    {
+      "identifier": "rpsc_syllabus_paper1_academic_gk_gs",
+      "officialTitle": "Paper-I: General Awareness and General Studies (Academic Lecturer)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "publicationDate": "2025-09-15",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    },
+    {
+      "identifier": "rpsc_syllabus_paper1_physical_education",
+      "officialTitle": "Paper-I: General Awareness and General Studies (Physical Education)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "publicationDate": "2025-09-15",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    },
+    {
+      "identifier": "rpsc_syllabus_paper1_coach",
+      "officialTitle": "Paper-I: General Awareness and General Studies (Coach)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "publicationDate": "2025-09-15",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    },
+    {
+      "identifier": "rpsc_syllabus_paper2_agriculture",
+      "officialTitle": "Paper-II: Subject Concerned - Agriculture (कृषि)",
+      "officialListingPageUrl": "https://rpsc.rajasthan.gov.in/syllabus",
+      "publicationDate": "2025-10-13",
+      "physicalDownloadStatus": "DYNAMIC_PORTAL_REGISTRY_VERIFIED",
+      "officialServedFilename": null,
+      "actualSha256": null,
+      "authorityStatus": "SOURCE_REFERENCE_FOUND"
+    }
+  ]
+}

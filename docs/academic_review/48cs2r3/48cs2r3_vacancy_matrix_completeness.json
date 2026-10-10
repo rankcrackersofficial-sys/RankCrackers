@@ -1,0 +1,22 @@
+{
+  "gate": "GATE_48CS2R3",
+  "title": "Vacancy Matrix Completeness & Partial Matrix Safety Contract",
+  "states": {
+    "VACANCY_MATRIX_COMPLETE": "All vertical categories and horizontal reservation quotas audited and verified.",
+    "VACANCY_MATRIX_PARTIAL": "Only partial categories or incomplete tables extracted.",
+    "VACANCY_MATRIX_UNRESOLVED": "Vacancy breakdown has not been audited."
+  },
+  "safetyContract": {
+    "completeMatrixWithZeroRows": {
+      "status": "NO_APPLICABLE_VACANCIES",
+      "justification": "Verified complete matrix confirms zero seats allocated for this category bucket."
+    },
+    "partialMatrixWithZeroRows": {
+      "status": "VACANCIES_PENDING_RESERVATION_DATA",
+      "justification": "Cannot conclude NO_APPLICABLE_VACANCIES from a partial table, as unextracted rows may contain applicable seats."
+    }
+  },
+  "complianceMetric": {
+    "NO_VACANCY_CONCLUSION_FROM_PARTIAL_MATRIX_COUNT": 0
+  }
+}

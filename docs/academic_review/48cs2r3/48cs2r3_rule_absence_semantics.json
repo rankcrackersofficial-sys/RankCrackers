@@ -1,0 +1,23 @@
+{
+  "gate": "GATE_48CS2R3",
+  "timestamp": "2026-09-10T11:55:40.054Z",
+  "title": "Rule Absence Semantics: Absence != Verified None",
+  "principle": "Never treat a missing extracted rule as proof that no such rule exists in the official notification.",
+  "resolutionStates": {
+    "RULE_PRESENT_VERIFIED": {
+      "definition": "An explicit rule clause was extracted and verified from authoritative notification text.",
+      "legalEffect": "Rule is active and applied directly."
+    },
+    "RULE_ABSENCE_VERIFIED": {
+      "definition": "Exhaustive official audit or explicit negative notification clause confirms no such rule exists (e.g. \"No age relaxation is permissible under any circumstances\").",
+      "legalEffect": "Rule is confirmed absent; base rule operates without exception."
+    },
+    "RULE_UNRESOLVED": {
+      "definition": "The rule clause has not been audited or extracted from official gazetted sources.",
+      "legalEffect": "Rule truth is uncertain; cannot assume rule is absent. Disqualification or false eligibility based on assumption is strictly barred."
+    }
+  },
+  "complianceMetric": {
+    "MISSING_RULE_TREATED_AS_VERIFIED_NONE_COUNT": 0
+  }
+}

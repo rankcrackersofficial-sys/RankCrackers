@@ -1,0 +1,34 @@
+{
+  "gate": "GATE_48CS2R1_CAREER_PROFILE_DOMAIN_MODEL",
+  "generatedAt": "2026-09-10T11:26:52.323Z",
+  "modelName": "CareerProfile",
+  "architecturePrinciples": [
+    "Pure domain model only; not persisted in production Firestore in this gate.",
+    "All sensitive dimensions (DOB, category, PwBD) are strictly user-provided with zero heuristic inference.",
+    "Single canonical logical object per user, reusing primary profile facts (uid, homeState) without duplicate independent identity."
+  ],
+  "sampleNormalizedInstance": {
+    "userId": "usr_verified_student_88",
+    "dateOfBirth": "1998-07-15",
+    "gender": "FEMALE",
+    "reservationCategory": "OBC_NCL",
+    "domicileState": "RJ",
+    "highestQualification": "GRADUATION",
+    "degree": "Bachelor of Technology",
+    "subjectOrDiscipline": "Computer Science and Engineering",
+    "passingStatus": "PASSED",
+    "passingYear": 2020,
+    "percentageOrCgpa": 82.5,
+    "experienceMonths": 36,
+    "isPwBD": false,
+    "pwbdType": null,
+    "pwbdPercentage": null,
+    "isExServiceman": false,
+    "exServicemanServiceYears": null,
+    "extensions": {
+      "preferredLanguage": "HINDI",
+      "nccCertificateGrade": "C"
+    },
+    "updatedAt": "2026-09-10T11:26:52.323Z"
+  }
+}

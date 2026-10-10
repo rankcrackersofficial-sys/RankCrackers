@@ -1,0 +1,36 @@
+{
+  "chainCount": 3,
+  "rows": [
+    {
+      "chainId": "RPSC-FG-2025-AMEND-01",
+      "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "documentDate": "2025-08-13",
+      "officialSourceUrl": "https://rpsc.rajasthan.gov.in/Static/PressNotes/2BEE99F8-B437-4964-9A51-F8B029223DC6.pdf",
+      "effect": "Qualification amendment; press note also states 3,225 posts and application window 14 Aug–12 Sep 2025",
+      "verificationState": "OFFICIAL_URL_VERIFIED"
+    },
+    {
+      "chainId": "SSC-CGL-2026-REOPEN-01",
+      "missionId": "ssc_cgl",
+      "cycleId": "SSC-CGL-2026",
+      "documentDate": "2026-06-23",
+      "officialSourceUrl": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/CGLE_Reopen_23062026.pdf",
+      "effect": "Application reopening/correction notice after original 21 May–22 Jun window",
+      "verificationState": "OFFICIAL_URL_VERIFIED"
+    },
+    {
+      "chainId": "NEET-UG-2026-DEADLINE-EXT-01",
+      "missionId": "neet_(ug)-2027",
+      "cycleId": "NEET-UG-2026-EVIDENCE-BASE",
+      "baseDocument": "NEET-UG-IB-2026",
+      "modifiedField": "applicationEnd",
+      "oldValue": "2026-03-08 21:00",
+      "newValue": "2026-03-11 21:00",
+      "amendingDocument": "NTA public notice dated 08 March 2026",
+      "officialSourceUrl": "https://cdnbbsr.s3waas.gov.in/s37bc1ec1d9c3426357e69acd5bf320061/uploads/2026/03/20260308653856316.pdf",
+      "effectiveDate": "2026-03-08",
+      "verificationState": "EXACT_DOCUMENT_TEXT_VERIFIED_CYCLE_MISMATCH_DISCLOSED"
+    }
+  ]
+}

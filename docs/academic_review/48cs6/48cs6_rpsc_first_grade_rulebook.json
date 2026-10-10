@@ -1,0 +1,158 @@
+{
+  "gate": "GATE 48CS6",
+  "generatedAt": "2026-09-10",
+  "targetPilotCount": 3,
+  "productionWriteCount": 0,
+  "careerSignalProductionCreateCount": 0,
+  "missionCreateCount": 0,
+  "s2JobCount": 0,
+  "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+  "permanentMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "sourceDocuments": [
+    {
+      "authorityId": "RPSC",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/advertisements",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/Static/RecruitmentAdvertisements/9C26ACB4C6014924AF100B4D7FE67C27.pdf",
+      "documentTitle": "rpsc_first_grade_advt_06_2025_26",
+      "noticeNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "permanentMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/rpsc/rpsc_first_grade_advt_06_2025_26.pdf",
+      "byteLength": 8257902,
+      "sha256": "3f230660dc55c863b5d3360a4607b02a2e930cf87e8edd7e7f8e85971bcf5be2",
+      "states": {
+        "SOURCE_SURFACE_RESOLVED": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": false
+      },
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 2,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 3,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 4,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 5,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 6,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 7,
+          "textSha256": null,
+          "charCount": 0
+        },
+        {
+          "pageNumber": 8,
+          "textSha256": null,
+          "charCount": 0
+        }
+      ]
+    },
+    {
+      "authorityId": "RPSC",
+      "officialListingPage": "https://rpsc.rajasthan.gov.in/advertisements",
+      "exactDocumentUrl": "https://rpsc.rajasthan.gov.in/Static/PressNotes/2BEE99F8-B437-4964-9A51-F8B029223DC6.pdf",
+      "documentTitle": "rpsc_first_grade_amendment",
+      "noticeNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "cycleId": "RPSC-SCHOOL-LECTURER-ADV-06-2025-26",
+      "permanentMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "localBytePath": "docs/academic_review/48cs6/source_bytes/rpsc/rpsc_first_grade_amendment.pdf",
+      "byteLength": 43091,
+      "sha256": "9a53cdf39c9426c99b52000995692db78772f6db3a18660bbfb85e682cb3b099",
+      "states": {
+        "SOURCE_SURFACE_RESOLVED": true,
+        "EXACT_DOCUMENT_RESOLVED": true,
+        "BYTES_ACQUIRED": true,
+        "SHA256_VERIFIED": true,
+        "TEXT_EXTRACTED_AND_BOUND": true
+      },
+      "pageBindings": [
+        {
+          "pageNumber": 1,
+          "textSha256": "009eb32eb99ea58a271aaa8ecb754ee8894e099e3d48d8ec0c362b161a64053e",
+          "charCount": 1040
+        }
+      ]
+    }
+  ],
+  "eligibilityRules": [],
+  "absenceAttestations": [],
+  "ruleFamilyCoverage": [
+    {
+      "family": "AGE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "EDUCATION",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "DISCIPLINE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "DOMICILE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "EXPERIENCE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "REGISTRATION",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "PHYSICAL_STANDARD",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "CATEGORY_OR_RESERVATION",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "SPECIAL_CERTIFICATE",
+      "status": "UNRESOLVED"
+    },
+    {
+      "family": "OTHER_OFFICIAL_CONDITION",
+      "status": "UNRESOLVED"
+    }
+  ],
+  "amendmentAudit": {
+    "status": "CHAIN_PARTIAL"
+  },
+  "capacityModelKind": "JOB_VACANCY",
+  "vacancyMatrix": {
+    "vacancyMatrixCompleteness": "UNRESOLVED",
+    "rows": [],
+    "totalVacancies": null
+  },
+  "matchingReadiness": "PARTIAL_SOURCE_PACKAGE"
+}

@@ -1,0 +1,62 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_cpo",
+  "canonicalDisplayName": "SSC CPO",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["PAPER_I_CBE", "PAPER_II_CBE"],
+    "unsupportedStages": [
+      { "stageName": "Physical Standard Test (PST) / Physical Endurance Test (PET)", "reason": "Physical Fitness & Measurement Screening" },
+      { "stageName": "Detailed Medical Examination (DME)", "reason": "Medical Board Assessment" }
+    ]
+  },
+  "examinationStructure": {
+    "papers": [
+      {
+        "paperId": "cpo_paper_1",
+        "paperName": "Paper-I: Computer Based Examination",
+        "totalQuestions": 200,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "negativeMarkingPerQuestion": 0.25,
+        "sections": [
+          { "sectionId": "gi_reasoning", "sectionName": "General Intelligence and Reasoning", "questions": 50, "marks": 50 },
+          { "sectionId": "general_knowledge_awareness", "sectionName": "General Knowledge and General Awareness", "questions": 50, "marks": 50 },
+          { "sectionId": "quantitative_aptitude", "sectionName": "Quantitative Aptitude", "questions": 50, "marks": 50 },
+          { "sectionId": "english_comprehension", "sectionName": "English Comprehension", "questions": 50, "marks": 50 }
+        ]
+      },
+      {
+        "paperId": "cpo_paper_2",
+        "paperName": "Paper-II: English Language & Comprehension",
+        "totalQuestions": 200,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "negativeMarkingPerQuestion": 0.25,
+        "sections": [
+          { "sectionId": "english_language_comprehension_p2", "sectionName": "English Language and Comprehension", "questions": 200, "marks": 200 }
+        ]
+      }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "SINGLE_ACADEMIC_TRACK",
+    "variants": [
+      { "variantKey": "cpo_si", "variantName": "Sub-Inspector (Executive) in Delhi Police & Sub-Inspector (GD) in CAPFs" }
+    ]
+  }
+}

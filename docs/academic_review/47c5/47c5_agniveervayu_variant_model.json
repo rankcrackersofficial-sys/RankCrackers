@@ -1,0 +1,66 @@
+{
+  "missionId": "agniveervayu",
+  "variants": [
+    {
+      "variantId": "science",
+      "displayName": "Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    },
+    {
+      "variantId": "other_than_science",
+      "displayName": "Other than Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    },
+    {
+      "variantId": "combined",
+      "displayName": "Science and Other than Science Subjects",
+      "variantDimension": "EXAM_TRACK",
+      "sourceEvidenceRef": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf"
+    }
+  ],
+  "pattern": {
+    "science": {
+      "durationMinutes": 60,
+      "subjects": [
+        "Physics",
+        "Mathematics",
+        "English"
+      ]
+    },
+    "otherThanScience": {
+      "durationMinutes": 45,
+      "subjects": [
+        "English",
+        "Reasoning and General Awareness"
+      ]
+    },
+    "combined": {
+      "durationMinutes": 85,
+      "subjects": [
+        "Physics",
+        "Mathematics",
+        "English",
+        "Reasoning and General Awareness"
+      ]
+    },
+    "marks": {
+      "correct": 1,
+      "unattempted": 0,
+      "incorrect": -0.25
+    }
+  },
+  "pyq": {
+    "state": "OFFICIAL_PYQ_ACCESS_RESTRICTED",
+    "accessMode": "AUTHENTICATED_EPHEMERAL_WINDOW",
+    "availabilityWindowDays": 3,
+    "persistentPublicArchive": false
+  },
+  "source": {
+    "url": "https://iafrecruitment.edcil.co.in/agniveervayu/pdffiles/Advt%20Agniveervayu%2001%20of%2027.pdf",
+    "title": "Agniveervayu Intake 01/2027 advertisement",
+    "verification": "OFFICIAL_EXACT_DOCUMENT_VERIFIED"
+  },
+  "variantModelReady": true
+}

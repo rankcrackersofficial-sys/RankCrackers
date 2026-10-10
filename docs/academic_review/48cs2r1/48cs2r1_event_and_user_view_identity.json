@@ -1,0 +1,22 @@
+{
+  "gate": "GATE_48CS2R1_EVENT_AND_USER_VIEW_IDENTITY",
+  "generatedAt": "2026-09-10T11:26:52.321Z",
+  "identitySeparationContract": {
+    "canonicalEventIdentity": {
+      "format": "evt_{sha256_prefix16}",
+      "determinism": "Pure hash of verified official source document content.",
+      "userIndependent": true,
+      "example": "evt_e3b0c44298fc1c14"
+    },
+    "userViewIdentity": {
+      "format": "{userId}_{eventId}",
+      "determinism": "Composite key binding specific student to specific official event.",
+      "userScoped": true,
+      "example": "warrior_uid_101_evt_e3b0c44298fc1c14"
+    },
+    "antiPatternRejected": {
+      "rejectedFormat": "{opportunityId}_signal",
+      "reason": "Collapses global event identity into a single un-versioned string, creating collisions across multiple users and multiple cycle years."
+    }
+  }
+}

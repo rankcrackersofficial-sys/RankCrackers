@@ -1,0 +1,57 @@
+{
+  "taxonomySchemaVersion": "5.0.0",
+  "draftStatus": "CANONICAL_EVIDENCE_STATUS_TAXONOMY_46D6R5",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "generatedAt": "2026-09-09T19:30:00.000Z",
+  "purpose": "Define discrete, normalized evidence levels so that variant identity authority, document listing authority, portal text authority, and physical byte authority are never conflated.",
+  "evidenceLevels": [
+    {
+      "level": "BYTE_VERIFIED",
+      "definition": "Actual physical document bytes have been downloaded locally, verified for valid file type/structure, and a real cryptographic SHA-256 digest has been computed directly from those bytes.",
+      "requiresSha256": true,
+      "requiresLocalFile": true,
+      "authorityWeight": "MAXIMUM_CRYPTOGRAPHIC_PROVENANCE"
+    },
+    {
+      "level": "PORTAL_TEXT_VERIFIED",
+      "definition": "The official authority portal/webpage returned the authoritative text/table/content that was physically read and verified, but no static downloadable byte file/hash was captured.",
+      "requiresSha256": false,
+      "requiresLocalFile": false,
+      "authorityWeight": "OFFICIAL_PORTAL_CONTENT_PROVEN"
+    },
+    {
+      "level": "PORTAL_REGISTRY_VERIFIED",
+      "definition": "The official authority portal public registry/listing proves document existence, title, publication date, and subject classification, but physical content extraction is not yet bound.",
+      "requiresSha256": false,
+      "requiresLocalFile": false,
+      "authorityWeight": "OFFICIAL_REGISTRY_METADATA_PROVEN"
+    },
+    {
+      "level": "ADVERTISEMENT_ROW_VERIFIED",
+      "definition": "The variant, post, cadre, or specialization identity is proven from an exact table row or locator inside a BYTE_VERIFIED or PORTAL_TEXT_VERIFIED official recruitment advertisement.",
+      "requiresSha256": false,
+      "requiresLocalFile": false,
+      "authorityWeight": "OFFICIAL_STATUTORY_CADRE_PROVEN"
+    },
+    {
+      "level": "REFERENCE_ONLY",
+      "definition": "An official reference or mention exists, but the document or content authority is insufficient for execution.",
+      "requiresSha256": false,
+      "requiresLocalFile": false,
+      "authorityWeight": "INSUFFICIENT_FOR_EXECUTION"
+    },
+    {
+      "level": "UNVERIFIED",
+      "definition": "Insufficient evidence or unconfirmed claim.",
+      "requiresSha256": false,
+      "requiresLocalFile": false,
+      "authorityWeight": "ZERO_AUTHORITY"
+    }
+  ],
+  "governanceLaw": {
+    "NO_CONFLATION": "A variant record whose identity is ADVERTISEMENT_ROW_VERIFIED must never be labeled BYTE_VERIFIED unless its specific syllabus bytes are also hashed.",
+    "TRUTHFUL_NULL_HASH": "A null SHA-256 is fully valid when the evidence level is legitimately PORTAL_TEXT_VERIFIED, PORTAL_REGISTRY_VERIFIED, or ADVERTISEMENT_ROW_VERIFIED.",
+    "ZERO_SYNTHESIS": "Under no circumstances may a synthetic hash, guessed URL, or fabricated filename be created."
+  }
+}

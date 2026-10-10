@@ -1,0 +1,9 @@
+{
+  "testCode": "RC_47B2_SOURCE_BYTE_SEMANTICS_TEST",
+  "executedAt": "2026-09-10T06:00:00.755Z",
+  "scenario": "exactDocumentUrl present without physical byte acquisition",
+  "exactDocumentUrlPresent": true,
+  "bytesAvailableResult": false,
+  "URL_ONLY_BYTE_TRUE_COUNT": 0,
+  "pass": true
+}

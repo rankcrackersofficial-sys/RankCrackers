@@ -1,0 +1,3810 @@
+{
+  "auditRows": [
+    {
+      "canonicalMissionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+      "missionRealmsPayload": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "authorityId": "auth_in_rj_rpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "RJ",
+        "examFamily": "TEACHING_AND_EDUCATION"
+      },
+      "recruitmentsPayload": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "title": "RPSC School Lecturer (School Education) Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_rj_rpsc",
+        "region": "RJ"
+      },
+      "studentCatalogPayload": {
+        "id": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+        "displayName": "RPSC 1st Grade Teacher / School Lecturer",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "afcat",
+      "missionRealmsPayload": {
+        "id": "afcat",
+        "authorityId": "auth_in_indian_air_force",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "afcat",
+        "title": "Air Force Common Admission Test",
+        "canonicalAuthorityKey": "auth_in_indian_air_force",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "afcat",
+        "displayName": "Air Force Common Admission Test",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "agniveervayu",
+      "missionRealmsPayload": {
+        "id": "agniveervayu",
+        "authorityId": "auth_in_indian_air_force",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "agniveervayu",
+        "title": "Indian Air Force Agniveervayu Selection Test",
+        "canonicalAuthorityKey": "auth_in_indian_air_force",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "agniveervayu",
+        "displayName": "Indian Air Force Agniveervayu Selection Test",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "appsc_arunachal_cce",
+      "missionRealmsPayload": {
+        "id": "appsc_arunachal_cce",
+        "authorityId": "auth_in_ar_appsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "AR",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "appsc_arunachal_cce",
+        "title": "Arunachal Pradesh Public Service Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_ar_appsc",
+        "region": "AR"
+      },
+      "studentCatalogPayload": {
+        "id": "appsc_arunachal_cce",
+        "displayName": "APPSC APPSCCE (Arunachal Civil Services)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group1",
+      "missionRealmsPayload": {
+        "id": "appsc_group1",
+        "authorityId": "auth_in_ap_appsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "AP",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "appsc_group1",
+        "title": "APPSC Group-I Services Examination",
+        "canonicalAuthorityKey": "auth_in_ap_appsc",
+        "region": "AP"
+      },
+      "studentCatalogPayload": {
+        "id": "appsc_group1",
+        "displayName": "APPSC Group 1",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "appsc_group2",
+      "missionRealmsPayload": {
+        "id": "appsc_group2",
+        "authorityId": "auth_in_ap_appsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "AP",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "appsc_group2",
+        "title": "APPSC Group-II Services Examination",
+        "canonicalAuthorityKey": "auth_in_ap_appsc",
+        "region": "AP"
+      },
+      "studentCatalogPayload": {
+        "id": "appsc_group2",
+        "displayName": "APPSC Group 2",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "apsc_cce",
+      "missionRealmsPayload": {
+        "id": "apsc_cce",
+        "authorityId": "auth_in_as_apsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "AS",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "apsc_cce",
+        "title": "Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_as_apsc",
+        "region": "AS"
+      },
+      "studentCatalogPayload": {
+        "id": "apsc_cce",
+        "displayName": "APSC CCE (Assam Civil Services)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_pc",
+      "missionRealmsPayload": {
+        "id": "apslprb_sct_pc",
+        "authorityId": "auth_in_ap_apslprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "AP",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "apslprb_sct_pc",
+        "title": "APSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+        "canonicalAuthorityKey": "auth_in_ap_apslprb",
+        "region": "AP"
+      },
+      "studentCatalogPayload": {
+        "id": "apslprb_sct_pc",
+        "displayName": "AP Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "apslprb_sct_si",
+      "missionRealmsPayload": {
+        "id": "apslprb_sct_si",
+        "authorityId": "auth_in_ap_apslprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "AP",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "apslprb_sct_si",
+        "title": "APSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+        "canonicalAuthorityKey": "auth_in_ap_apslprb",
+        "region": "AP"
+      },
+      "studentCatalogPayload": {
+        "id": "apslprb_sct_si",
+        "displayName": "AP Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "apssb_cgl_csle",
+      "missionRealmsPayload": {
+        "id": "apssb_cgl_csle",
+        "authorityId": "auth_in_ar_apssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "AR",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "apssb_cgl_csle",
+        "title": "Combined Graduate Level / Combined Secondary Level Examination",
+        "canonicalAuthorityKey": "auth_in_ar_apssb",
+        "region": "AR"
+      },
+      "studentCatalogPayload": {
+        "id": "apssb_cgl_csle",
+        "displayName": "APSSB CGL & CSLE (Combined Secondary Level)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "army_agniveer_cee",
+      "missionRealmsPayload": {
+        "id": "army_agniveer_cee",
+        "authorityId": "auth_in_indian_army",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "army_agniveer_cee",
+        "title": "Indian Army Agniveer Online CEE",
+        "canonicalAuthorityKey": "auth_in_indian_army",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "army_agniveer_cee",
+        "displayName": "Indian Army Agniveer Online CEE",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "arunachal_police_constable",
+      "missionRealmsPayload": {
+        "id": "arunachal_police_constable",
+        "authorityId": "auth_in_ar_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "AR",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "arunachal_police_constable",
+        "title": "Arunachal Pradesh Police Constable & Technical Cadre Recruitment",
+        "canonicalAuthorityKey": "auth_in_ar_police",
+        "region": "AR"
+      },
+      "studentCatalogPayload": {
+        "id": "arunachal_police_constable",
+        "displayName": "Arunachal Police Constable & Specialist Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_cce_prelims",
+      "missionRealmsPayload": {
+        "id": "bpsc_cce_prelims",
+        "authorityId": "auth_in_br_bpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "bpsc_cce_prelims",
+        "title": "BPSC Combined Competitive Examination (Prelims)",
+        "canonicalAuthorityKey": "auth_in_br_bpsc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bpsc_cce_prelims",
+        "displayName": "BPSC CCE Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bpsc_tre",
+      "missionRealmsPayload": {
+        "id": "bpsc_tre",
+        "authorityId": "auth_in_br_bpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "TEACHING_AND_EDUCATION"
+      },
+      "recruitmentsPayload": {
+        "id": "bpsc_tre",
+        "title": "BPSC School Teacher Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_br_bpsc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bpsc_tre",
+        "displayName": "BPSC TRE (School Teacher)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bpssc_police_si",
+      "missionRealmsPayload": {
+        "id": "bpssc_police_si",
+        "authorityId": "auth_in_br_bpssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "bpssc_police_si",
+        "title": "Bihar Police Police Sub-Inspector Examination",
+        "canonicalAuthorityKey": "auth_in_br_bpssc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bpssc_police_si",
+        "displayName": "Bihar Police SI (Daroga)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bse_odisha_otet",
+      "missionRealmsPayload": {
+        "id": "bse_odisha_otet",
+        "authorityId": "auth_in_od_bse",
+        "jurisdictionType": "STATE",
+        "regionCode": "OD",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "bse_odisha_otet",
+        "title": "Odisha Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_od_bse",
+        "region": "OD"
+      },
+      "studentCatalogPayload": {
+        "id": "bse_odisha_otet",
+        "displayName": "Odisha TET (OTET)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bseb_stet",
+      "missionRealmsPayload": {
+        "id": "bseb_stet",
+        "authorityId": "auth_in_br_bseb",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "bseb_stet",
+        "title": "Bihar Secondary Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_br_bseb",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bseb_stet",
+        "displayName": "Bihar STET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bssc_cgl",
+      "missionRealmsPayload": {
+        "id": "bssc_cgl",
+        "authorityId": "auth_in_br_bssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "bssc_cgl",
+        "title": "BSSC Graduate Level Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_br_bssc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bssc_cgl",
+        "displayName": "BSSC CGL (Graduate Level)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "bssc_inter_level",
+      "missionRealmsPayload": {
+        "id": "bssc_inter_level",
+        "authorityId": "auth_in_br_bssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "bssc_inter_level",
+        "title": "BSSC Inter Level Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_br_bssc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "bssc_inter_level",
+        "displayName": "BSSC Inter Level (10+2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "cbse_ctet",
+      "missionRealmsPayload": {
+        "id": "cbse_ctet",
+        "authorityId": "auth_in_cbse",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "cbse_ctet",
+        "title": "Central Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_cbse",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "cbse_ctet",
+        "displayName": "Central Teacher Eligibility Test",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "cgpsc_state_service",
+      "missionRealmsPayload": {
+        "id": "cgpsc_state_service",
+        "authorityId": "auth_in_cg_cgpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "CG",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "cgpsc_state_service",
+        "title": "Chhattisgarh State Service Examination",
+        "canonicalAuthorityKey": "auth_in_cg_cgpsc",
+        "region": "CG"
+      },
+      "studentCatalogPayload": {
+        "id": "cgpsc_state_service",
+        "displayName": "CGPSC State Service Exam (Prelims)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "cgvyapam_cgtet",
+      "missionRealmsPayload": {
+        "id": "cgvyapam_cgtet",
+        "authorityId": "auth_in_cg_cgvyapam",
+        "jurisdictionType": "STATE",
+        "regionCode": "CG",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "cgvyapam_cgtet",
+        "title": "Chhattisgarh Teacher Eligibility Test (CG TET)",
+        "canonicalAuthorityKey": "auth_in_cg_cgvyapam",
+        "region": "CG"
+      },
+      "studentCatalogPayload": {
+        "id": "cgvyapam_cgtet",
+        "displayName": "CG TET (Paper 1 & Paper 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_jbt_teacher",
+      "missionRealmsPayload": {
+        "id": "chandigarh_jbt_teacher",
+        "authorityId": "auth_in_ch_admin",
+        "jurisdictionType": "STATE",
+        "regionCode": "CH",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "chandigarh_jbt_teacher",
+        "title": "Direct Recruitment for Junior Basic Training (JBT) Primary Teachers",
+        "canonicalAuthorityKey": "auth_in_ch_admin",
+        "region": "CH"
+      },
+      "studentCatalogPayload": {
+        "id": "chandigarh_jbt_teacher",
+        "displayName": "Chandigarh JBT Teacher",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_asi",
+      "missionRealmsPayload": {
+        "id": "chandigarh_police_asi",
+        "authorityId": "auth_in_ch_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "CH",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "chandigarh_police_asi",
+        "title": "Recruitment for Assistant Sub-Inspectors (Executive) in Chandigarh Police",
+        "canonicalAuthorityKey": "auth_in_ch_police",
+        "region": "CH"
+      },
+      "studentCatalogPayload": {
+        "id": "chandigarh_police_asi",
+        "displayName": "Chandigarh Police ASI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_police_constable",
+      "missionRealmsPayload": {
+        "id": "chandigarh_police_constable",
+        "authorityId": "auth_in_ch_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "CH",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "chandigarh_police_constable",
+        "title": "Recruitment for Constables (Executive / IT Cadre) in Chandigarh Police",
+        "canonicalAuthorityKey": "auth_in_ch_police",
+        "region": "CH"
+      },
+      "studentCatalogPayload": {
+        "id": "chandigarh_police_constable",
+        "displayName": "Chandigarh Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "chandigarh_tgt_teacher",
+      "missionRealmsPayload": {
+        "id": "chandigarh_tgt_teacher",
+        "authorityId": "auth_in_ch_admin",
+        "jurisdictionType": "STATE",
+        "regionCode": "CH",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "chandigarh_tgt_teacher",
+        "title": "Direct Recruitment for Trained Graduate Teachers (TGT)",
+        "canonicalAuthorityKey": "auth_in_ch_admin",
+        "region": "CH"
+      },
+      "studentCatalogPayload": {
+        "id": "chandigarh_tgt_teacher",
+        "displayName": "Chandigarh TGT Teacher",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "csbc_bihar_police_constable",
+      "missionRealmsPayload": {
+        "id": "csbc_bihar_police_constable",
+        "authorityId": "auth_in_br_csbc",
+        "jurisdictionType": "STATE",
+        "regionCode": "BR",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "csbc_bihar_police_constable",
+        "title": "Bihar Police Constable Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_br_csbc",
+        "region": "BR"
+      },
+      "studentCatalogPayload": {
+        "id": "csbc_bihar_police_constable",
+        "displayName": "Bihar Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "dnhdd_ssb_group_bc",
+      "missionRealmsPayload": {
+        "id": "dnhdd_ssb_group_bc",
+        "authorityId": "auth_in_dn_ssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "DN",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "dnhdd_ssb_group_bc",
+        "title": "Dadra & Nagar Haveli and Daman & Diu SSB Combined Group 'B' & 'C' Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_dn_ssb",
+        "region": "DN"
+      },
+      "studentCatalogPayload": {
+        "id": "dnhdd_ssb_group_bc",
+        "displayName": "DNH & DD SSB Group B & Group C (LDC / Assistant / JE / Police Constable)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_pgt",
+      "missionRealmsPayload": {
+        "id": "dsssb_delhi_pgt",
+        "authorityId": "auth_in_dl_dsssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "DL",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "dsssb_delhi_pgt",
+        "title": "Combined Examination for Post Graduate Teachers (PGT)",
+        "canonicalAuthorityKey": "auth_in_dl_dsssb",
+        "region": "DL"
+      },
+      "studentCatalogPayload": {
+        "id": "dsssb_delhi_pgt",
+        "displayName": "DSSSB PGT Combined",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_prt",
+      "missionRealmsPayload": {
+        "id": "dsssb_delhi_prt",
+        "authorityId": "auth_in_dl_dsssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "DL",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "dsssb_delhi_prt",
+        "title": "Combined Examination for Primary Teachers / Assistant Teacher (Nursery/Primary)",
+        "canonicalAuthorityKey": "auth_in_dl_dsssb",
+        "region": "DL"
+      },
+      "studentCatalogPayload": {
+        "id": "dsssb_delhi_prt",
+        "displayName": "DSSSB PRT Assistant Teacher",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_delhi_tgt",
+      "missionRealmsPayload": {
+        "id": "dsssb_delhi_tgt",
+        "authorityId": "auth_in_dl_dsssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "DL",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "dsssb_delhi_tgt",
+        "title": "Combined Examination for Trained Graduate Teachers (TGT)",
+        "canonicalAuthorityKey": "auth_in_dl_dsssb",
+        "region": "DL"
+      },
+      "studentCatalogPayload": {
+        "id": "dsssb_delhi_tgt",
+        "displayName": "DSSSB TGT Combined",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "dsssb_junior_assistant_ldc",
+      "missionRealmsPayload": {
+        "id": "dsssb_junior_assistant_ldc",
+        "authorityId": "auth_in_dl_dsssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "DL",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "dsssb_junior_assistant_ldc",
+        "title": "Combined Examination for Lower Division Clerk (LDC) / Junior Assistant / Stenographer",
+        "canonicalAuthorityKey": "auth_in_dl_dsssb",
+        "region": "DL"
+      },
+      "studentCatalogPayload": {
+        "id": "dsssb_junior_assistant_ldc",
+        "displayName": "DSSSB Junior Assistant / LDC",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ga_police_recruitment",
+      "missionRealmsPayload": {
+        "id": "ga_police_recruitment",
+        "authorityId": "auth_in_ga_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "GA",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ga_police_recruitment",
+        "title": "Goa Police Police Sub-Inspector and Police Constable Direct Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_ga_police",
+        "region": "GA"
+      },
+      "studentCatalogPayload": {
+        "id": "ga_police_recruitment",
+        "displayName": "Goa Police PSI & Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gprb_lokrakshak",
+      "missionRealmsPayload": {
+        "id": "gprb_lokrakshak",
+        "authorityId": "auth_in_gj_gprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "GJ",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "gprb_lokrakshak",
+        "title": "Gujarat Police Lokrakshak (Unarmed/Armed/SRPF/Jail Sepoy) Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_gj_gprb",
+        "region": "GJ"
+      },
+      "studentCatalogPayload": {
+        "id": "gprb_lokrakshak",
+        "displayName": "Gujarat Police Constable / Lokrakshak",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_class_1_2",
+      "missionRealmsPayload": {
+        "id": "gpsc_class_1_2",
+        "authorityId": "auth_in_gj_gpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "GJ",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "gpsc_class_1_2",
+        "title": "Gujarat Administrative Service (Class 1) and Gujarat Civil Services (Class 1 & Class 2) Examination",
+        "canonicalAuthorityKey": "auth_in_gj_gpsc",
+        "region": "GJ"
+      },
+      "studentCatalogPayload": {
+        "id": "gpsc_class_1_2",
+        "displayName": "GPSC Class 1-2 (Gujarat Civil Services)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gpsc_goa_civil_service",
+      "missionRealmsPayload": {
+        "id": "gpsc_goa_civil_service",
+        "authorityId": "auth_in_ga_gpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "GA",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "gpsc_goa_civil_service",
+        "title": "Goa Civil Service (Junior Scale Officer) Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_ga_gpsc",
+        "region": "GA"
+      },
+      "studentCatalogPayload": {
+        "id": "gpsc_goa_civil_service",
+        "displayName": "Goa Civil Service (JSO / GPSC)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gpssb_talati",
+      "missionRealmsPayload": {
+        "id": "gpssb_talati",
+        "authorityId": "auth_in_gj_gpssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "GJ",
+        "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY"
+      },
+      "recruitmentsPayload": {
+        "id": "gpssb_talati",
+        "title": "Gujarat Panchayat Service Village Panchayat Secretary (Talati cum Mantri) Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_gj_gpssb",
+        "region": "GJ"
+      },
+      "studentCatalogPayload": {
+        "id": "gpssb_talati",
+        "displayName": "GPSSB Talati cum Mantri",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gssc_goa_group_c",
+      "missionRealmsPayload": {
+        "id": "gssc_goa_group_c",
+        "authorityId": "auth_in_ga_gssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "GA",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "gssc_goa_group_c",
+        "title": "Goa Staff Selection Commission Combined Group 'C' Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_ga_gssc",
+        "region": "GA"
+      },
+      "studentCatalogPayload": {
+        "id": "gssc_goa_group_c",
+        "displayName": "GSSC Goa Group C (LDC / Junior Stenographer / MTS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "gsssb_cce",
+      "missionRealmsPayload": {
+        "id": "gsssb_cce",
+        "authorityId": "auth_in_gj_gsssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "GJ",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "gsssb_cce",
+        "title": "Gujarat Subordinate Services Class-III (Group-A and Group-B) Combined Competitive Examination (CCE)",
+        "canonicalAuthorityKey": "auth_in_gj_gsssb",
+        "region": "GJ"
+      },
+      "studentCatalogPayload": {
+        "id": "gsssb_cce",
+        "displayName": "GSSSB CCE (Clerk / Head Clerk / Office Assistant)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "haryana_htet",
+      "missionRealmsPayload": {
+        "id": "haryana_htet",
+        "authorityId": "auth_in_hr_bseh",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "haryana_htet",
+        "title": "Haryana Teacher Eligibility Test (HTET Level 1, 2 & 3)",
+        "canonicalAuthorityKey": "auth_in_hr_bseh",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "haryana_htet",
+        "displayName": "HTET (PRT / TGT / PGT)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_constable",
+      "missionRealmsPayload": {
+        "id": "haryana_police_constable",
+        "authorityId": "auth_in_hr_hssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "haryana_police_constable",
+        "title": "Direct Recruitment for Male & Female Constables (General Duty) in Haryana Police",
+        "canonicalAuthorityKey": "auth_in_hr_hssc",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "haryana_police_constable",
+        "displayName": "Haryana Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "haryana_police_si",
+      "missionRealmsPayload": {
+        "id": "haryana_police_si",
+        "authorityId": "auth_in_hr_hssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "haryana_police_si",
+        "title": "Direct Recruitment for Sub-Inspectors (Male & Female) in Haryana Police",
+        "canonicalAuthorityKey": "auth_in_hr_hssc",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "haryana_police_si",
+        "displayName": "Haryana Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hp_tet",
+      "missionRealmsPayload": {
+        "id": "hp_tet",
+        "authorityId": "auth_in_hp_hpbose",
+        "jurisdictionType": "STATE",
+        "regionCode": "HP",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "hp_tet",
+        "title": "Himachal Pradesh Teacher Eligibility Test (HP TET)",
+        "canonicalAuthorityKey": "auth_in_hp_hpbose",
+        "region": "HP"
+      },
+      "studentCatalogPayload": {
+        "id": "hp_tet",
+        "displayName": "HP TET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_hpas_prelims",
+      "missionRealmsPayload": {
+        "id": "hppsc_hpas_prelims",
+        "authorityId": "auth_in_hp_hppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HP",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "hppsc_hpas_prelims",
+        "title": "Himachal Pradesh Administrative Service Combined Competitive Examination (HPAS) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_hp_hppsc",
+        "region": "HP"
+      },
+      "studentCatalogPayload": {
+        "id": "hppsc_hpas_prelims",
+        "displayName": "HPPSC HPAS – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hppsc_police_constable",
+      "missionRealmsPayload": {
+        "id": "hppsc_police_constable",
+        "authorityId": "auth_in_hp_hppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HP",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "hppsc_police_constable",
+        "title": "Direct Recruitment for Police Constables (Male & Female) in HP Police Department",
+        "canonicalAuthorityKey": "auth_in_hp_hppsc",
+        "region": "HP"
+      },
+      "studentCatalogPayload": {
+        "id": "hppsc_police_constable",
+        "displayName": "HP Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hprca_group_c_common",
+      "missionRealmsPayload": {
+        "id": "hprca_group_c_common",
+        "authorityId": "auth_in_hp_hprca",
+        "jurisdictionType": "STATE",
+        "regionCode": "HP",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "hprca_group_c_common",
+        "title": "Group C Common Computer Based Test / Screening Examination",
+        "canonicalAuthorityKey": "auth_in_hp_hprca",
+        "region": "HP"
+      },
+      "studentCatalogPayload": {
+        "id": "hprca_group_c_common",
+        "displayName": "HPRCA Group C Common",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hpsc_hcs_prelims",
+      "missionRealmsPayload": {
+        "id": "hpsc_hcs_prelims",
+        "authorityId": "auth_in_hr_hpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "hpsc_hcs_prelims",
+        "title": "Haryana Civil Services (Executive Branch) & other Allied Services Examination (HCS) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_hr_hpsc",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "hpsc_hcs_prelims",
+        "displayName": "HPSC HCS – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_c",
+      "missionRealmsPayload": {
+        "id": "hssc_cet_group_c",
+        "authorityId": "auth_in_hr_hssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "hssc_cet_group_c",
+        "title": "Common Eligibility Test (CET) Haryana - Group C",
+        "canonicalAuthorityKey": "auth_in_hr_hssc",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "hssc_cet_group_c",
+        "displayName": "HSSC CET Group C",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "hssc_cet_group_d",
+      "missionRealmsPayload": {
+        "id": "hssc_cet_group_d",
+        "authorityId": "auth_in_hr_hssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "HR",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "hssc_cet_group_d",
+        "title": "Common Eligibility Test (CET) Haryana - Group D",
+        "canonicalAuthorityKey": "auth_in_hr_hssc",
+        "region": "HR"
+      },
+      "studentCatalogPayload": {
+        "id": "hssc_cet_group_d",
+        "displayName": "HSSC CET Group D",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_office_assistant",
+      "missionRealmsPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "title": "IBPS RRB Office Assistant",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_crp_rrb_office_assistant",
+        "displayName": "IBPS RRB Office Assistant",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ibps_crp_rrb_officers",
+      "missionRealmsPayload": {
+        "id": "ibps_crp_rrb_officers",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_crp_rrb_officers",
+        "title": "IBPS RRB Officer Scale I/II/III",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_crp_rrb_officers",
+        "displayName": "IBPS RRB Officer Scale I/II/III",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ibps_csa",
+      "missionRealmsPayload": {
+        "id": "ibps_csa",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_csa",
+        "title": "IBPS CRP Customer Service Associate",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_csa",
+        "displayName": "IBPS CRP Customer Service Associate",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ibps_po_mt",
+      "missionRealmsPayload": {
+        "id": "ibps_po_mt",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_po_mt",
+        "title": "IBPS CRP PO/MT",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_po_mt",
+        "displayName": "IBPS CRP PO/MT",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ibps_so",
+      "missionRealmsPayload": {
+        "id": "ibps_so",
+        "authorityId": "auth_in_ibps",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ibps_so",
+        "title": "IBPS CRP Specialist Officer",
+        "canonicalAuthorityKey": "auth_in_ibps",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ibps_so",
+        "displayName": "IBPS CRP Specialist Officer",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jac_jtet",
+      "missionRealmsPayload": {
+        "id": "jac_jtet",
+        "authorityId": "auth_in_jh_jac",
+        "jurisdictionType": "STATE",
+        "regionCode": "JH",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "jac_jtet",
+        "title": "Jharkhand Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_jh_jac",
+        "region": "JH"
+      },
+      "studentCatalogPayload": {
+        "id": "jac_jtet",
+        "displayName": "Jharkhand TET (JTET)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jee_main_2026",
+      "missionRealmsPayload": {
+        "id": "jee_main_2026",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "ENGINEERING_ENTRANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "jee_main_2026",
+        "title": "Joint Entrance Examination Main",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "jee_main_2026",
+        "displayName": "Joint Entrance Examination Main",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_constable",
+      "missionRealmsPayload": {
+        "id": "jk_police_constable",
+        "authorityId": "auth_in_jk_jkssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "JK",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "jk_police_constable",
+        "title": "Direct Recruitment for Constables (Executive / Armed / SDRF / Telecommunication) in J&K Police",
+        "canonicalAuthorityKey": "auth_in_jk_jkssb",
+        "region": "JK"
+      },
+      "studentCatalogPayload": {
+        "id": "jk_police_constable",
+        "displayName": "J&K Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jk_police_si",
+      "missionRealmsPayload": {
+        "id": "jk_police_si",
+        "authorityId": "auth_in_jk_jkssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "JK",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "jk_police_si",
+        "title": "Direct Recruitment for Sub-Inspectors in Home Department (J&K Police)",
+        "canonicalAuthorityKey": "auth_in_jk_jkssb",
+        "region": "JK"
+      },
+      "studentCatalogPayload": {
+        "id": "jk_police_si",
+        "displayName": "J&K Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jkpsc_cce_prelims",
+      "missionRealmsPayload": {
+        "id": "jkpsc_cce_prelims",
+        "authorityId": "auth_in_jk_jkpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "JK",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "jkpsc_cce_prelims",
+        "title": "Combined Competitive Examination (CCE) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_jk_jkpsc",
+        "region": "JK"
+      },
+      "studentCatalogPayload": {
+        "id": "jkpsc_cce_prelims",
+        "displayName": "JKPSC CCE – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jkssb_graduate_level",
+      "missionRealmsPayload": {
+        "id": "jkssb_graduate_level",
+        "authorityId": "auth_in_jk_jkssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "JK",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "jkssb_graduate_level",
+        "title": "Graduate Level Combined Recruitment Examination (Panchayat Secretary, Junior Assistant, FAA)",
+        "canonicalAuthorityKey": "auth_in_jk_jkssb",
+        "region": "JK"
+      },
+      "studentCatalogPayload": {
+        "id": "jkssb_graduate_level",
+        "displayName": "JKSSB Graduate Combined",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jpsc_cce_prelims",
+      "missionRealmsPayload": {
+        "id": "jpsc_cce_prelims",
+        "authorityId": "auth_in_jh_jpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "JH",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "jpsc_cce_prelims",
+        "title": "Jharkhand Combined Civil Services Examination (Prelims)",
+        "canonicalAuthorityKey": "auth_in_jh_jpsc",
+        "region": "JH"
+      },
+      "studentCatalogPayload": {
+        "id": "jpsc_cce_prelims",
+        "displayName": "JPSC CCE Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jrbt_tripura_group_cd",
+      "missionRealmsPayload": {
+        "id": "jrbt_tripura_group_cd",
+        "authorityId": "auth_in_tr_jrbt",
+        "jurisdictionType": "STATE",
+        "regionCode": "TR",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "jrbt_tripura_group_cd",
+        "title": "JRBT Multi-Bench Direct Recruitment Examination (Group C & Group D)",
+        "canonicalAuthorityKey": "auth_in_tr_jrbt",
+        "region": "TR"
+      },
+      "studentCatalogPayload": {
+        "id": "jrbt_tripura_group_cd",
+        "displayName": "JRBT Group C & Group D Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "jssc_cgl",
+      "missionRealmsPayload": {
+        "id": "jssc_cgl",
+        "authorityId": "auth_in_jh_jssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "JH",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "jssc_cgl",
+        "title": "Jharkhand General Graduate Level Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_jh_jssc",
+        "region": "JH"
+      },
+      "studentCatalogPayload": {
+        "id": "jssc_cgl",
+        "displayName": "JSSC CGL (JGGLCCE)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kea_fda_sda",
+      "missionRealmsPayload": {
+        "id": "kea_fda_sda",
+        "authorityId": "auth_in_ka_kea",
+        "jurisdictionType": "STATE",
+        "regionCode": "KA",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "kea_fda_sda",
+        "title": "KEA General Administrative Recruitment (FDA / SDA / VAO)",
+        "canonicalAuthorityKey": "auth_in_ka_kea",
+        "region": "KA"
+      },
+      "studentCatalogPayload": {
+        "id": "kea_fda_sda",
+        "displayName": "Karnataka FDA / SDA & Village Administrative Officer",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kas_gp",
+      "missionRealmsPayload": {
+        "id": "kpsc_kas_gp",
+        "authorityId": "auth_in_ka_kpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "KA",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "kpsc_kas_gp",
+        "title": "KPSC Gazetted Probationers Examination (KAS)",
+        "canonicalAuthorityKey": "auth_in_ka_kpsc",
+        "region": "KA"
+      },
+      "studentCatalogPayload": {
+        "id": "kpsc_kas_gp",
+        "displayName": "Karnataka KAS (Gazetted Probationers)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_10th_plus2_prelims",
+      "missionRealmsPayload": {
+        "id": "kpsc_kl_10th_plus2_prelims",
+        "authorityId": "auth_in_kl_kpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "KL",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "kpsc_kl_10th_plus2_prelims",
+        "title": "Kerala PSC Common Preliminary Examination (10th / Plus Two Level)",
+        "canonicalAuthorityKey": "auth_in_kl_kpsc",
+        "region": "KL"
+      },
+      "studentCatalogPayload": {
+        "id": "kpsc_kl_10th_plus2_prelims",
+        "displayName": "Kerala PSC 10th & Plus Two Prelims (LDC / Fireman / Excise)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_degree_prelims",
+      "missionRealmsPayload": {
+        "id": "kpsc_kl_degree_prelims",
+        "authorityId": "auth_in_kl_kpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "KL",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "kpsc_kl_degree_prelims",
+        "title": "Kerala PSC Common Preliminary Examination (Graduate Level)",
+        "canonicalAuthorityKey": "auth_in_kl_kpsc",
+        "region": "KL"
+      },
+      "studentCatalogPayload": {
+        "id": "kpsc_kl_degree_prelims",
+        "displayName": "Kerala PSC Degree Level Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_kas",
+      "missionRealmsPayload": {
+        "id": "kpsc_kl_kas",
+        "authorityId": "auth_in_kl_kpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "KL",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "kpsc_kl_kas",
+        "title": "Kerala PSC Kerala Administrative Service (KAS) Examination",
+        "canonicalAuthorityKey": "auth_in_kl_kpsc",
+        "region": "KL"
+      },
+      "studentCatalogPayload": {
+        "id": "kpsc_kl_kas",
+        "displayName": "Kerala Administrative Service (KAS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "kpsc_kl_police_constable",
+      "missionRealmsPayload": {
+        "id": "kpsc_kl_police_constable",
+        "authorityId": "auth_in_kl_kpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "KL",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "kpsc_kl_police_constable",
+        "title": "Kerala PSC Police Constable (Armed Police Battalion / Civil Police Officer)",
+        "canonicalAuthorityKey": "auth_in_kl_kpsc",
+        "region": "KL"
+      },
+      "studentCatalogPayload": {
+        "id": "kpsc_kl_police_constable",
+        "displayName": "Kerala Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ksp_cpc",
+      "missionRealmsPayload": {
+        "id": "ksp_cpc",
+        "authorityId": "auth_in_ka_ksp",
+        "jurisdictionType": "STATE",
+        "regionCode": "KA",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ksp_cpc",
+        "title": "KSP Civil Police Constable (CPC)",
+        "canonicalAuthorityKey": "auth_in_ka_ksp",
+        "region": "KA"
+      },
+      "studentCatalogPayload": {
+        "id": "ksp_cpc",
+        "displayName": "Karnataka Civil Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ksp_psi",
+      "missionRealmsPayload": {
+        "id": "ksp_psi",
+        "authorityId": "auth_in_ka_ksp",
+        "jurisdictionType": "STATE",
+        "regionCode": "KA",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ksp_psi",
+        "title": "KSP Police Sub-Inspector (PSI - Civil)",
+        "canonicalAuthorityKey": "auth_in_ka_ksp",
+        "region": "KA"
+      },
+      "studentCatalogPayload": {
+        "id": "ksp_psi",
+        "displayName": "Karnataka Police Sub-Inspector (PSI)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ladakh_police_constable",
+      "missionRealmsPayload": {
+        "id": "ladakh_police_constable",
+        "authorityId": "auth_in_la_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "LA",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "ladakh_police_constable",
+        "title": "Direct Recruitment for the Post of Constable (Executive / Armed / Telecommunication Cadre)",
+        "canonicalAuthorityKey": "auth_in_la_police",
+        "region": "LA"
+      },
+      "studentCatalogPayload": {
+        "id": "ladakh_police_constable",
+        "displayName": "Ladakh Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "lahdc_dssrb_district_cadre",
+      "missionRealmsPayload": {
+        "id": "lahdc_dssrb_district_cadre",
+        "authorityId": "auth_in_la_dssrb",
+        "jurisdictionType": "STATE",
+        "regionCode": "LA",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "lahdc_dssrb_district_cadre",
+        "title": "LAHDC Leh / Kargil DSSRB Graduate & Matric Combined Recruitment Exams",
+        "canonicalAuthorityKey": "auth_in_la_dssrb",
+        "region": "LA"
+      },
+      "studentCatalogPayload": {
+        "id": "lahdc_dssrb_district_cadre",
+        "displayName": "LAHDC DSSRB District Cadre",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "meghalaya_crb_police",
+      "missionRealmsPayload": {
+        "id": "meghalaya_crb_police",
+        "authorityId": "auth_in_ml_crb",
+        "jurisdictionType": "STATE",
+        "regionCode": "ML",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "meghalaya_crb_police",
+        "title": "Meghalaya Police Central Recruitment Board Combined Examination",
+        "canonicalAuthorityKey": "auth_in_ml_crb",
+        "region": "ML"
+      },
+      "studentCatalogPayload": {
+        "id": "meghalaya_crb_police",
+        "displayName": "Meghalaya Police SI & Constable Recruitment (CRB)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mizoram_police_constable",
+      "missionRealmsPayload": {
+        "id": "mizoram_police_constable",
+        "authorityId": "auth_in_mz_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "MZ",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "mizoram_police_constable",
+        "title": "Mizoram Police Constable (UB/AB) & Specialist Recruitment",
+        "canonicalAuthorityKey": "auth_in_mz_police",
+        "region": "MZ"
+      },
+      "studentCatalogPayload": {
+        "id": "mizoram_police_constable",
+        "displayName": "Mizoram Police Constable Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_group2_subgroup4",
+      "missionRealmsPayload": {
+        "id": "mpesb_group2_subgroup4",
+        "authorityId": "auth_in_mp_mpesb",
+        "jurisdictionType": "STATE",
+        "regionCode": "MP",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "mpesb_group2_subgroup4",
+        "title": "MPESB Group-2 (Sub Group-4) Sahayak Samparikshak and Patwari Combined Recruitment Test",
+        "canonicalAuthorityKey": "auth_in_mp_mpesb",
+        "region": "MP"
+      },
+      "studentCatalogPayload": {
+        "id": "mpesb_group2_subgroup4",
+        "displayName": "MP Patwari / Group 2 Sub Group 4",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_mptet",
+      "missionRealmsPayload": {
+        "id": "mpesb_mptet",
+        "authorityId": "auth_in_mp_mpesb",
+        "jurisdictionType": "STATE",
+        "regionCode": "MP",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "mpesb_mptet",
+        "title": "Madhya Pradesh Teacher Eligibility Test (Primary / Middle / High School TET)",
+        "canonicalAuthorityKey": "auth_in_mp_mpesb",
+        "region": "MP"
+      },
+      "studentCatalogPayload": {
+        "id": "mpesb_mptet",
+        "displayName": "MP TET (Varg 1, Varg 2, Varg 3)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpesb_police_constable",
+      "missionRealmsPayload": {
+        "id": "mpesb_police_constable",
+        "authorityId": "auth_in_mp_mpesb",
+        "jurisdictionType": "STATE",
+        "regionCode": "MP",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "mpesb_police_constable",
+        "title": "Madhya Pradesh Police Constable Recruitment Test",
+        "canonicalAuthorityKey": "auth_in_mp_mpesb",
+        "region": "MP"
+      },
+      "studentCatalogPayload": {
+        "id": "mpesb_police_constable",
+        "displayName": "MP Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mppsc_state_service",
+      "missionRealmsPayload": {
+        "id": "mppsc_state_service",
+        "authorityId": "auth_in_mp_mppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "MP",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "mppsc_state_service",
+        "title": "Madhya Pradesh State Service Examination",
+        "canonicalAuthorityKey": "auth_in_mp_mppsc",
+        "region": "MP"
+      },
+      "studentCatalogPayload": {
+        "id": "mppsc_state_service",
+        "displayName": "MPPSC State Service Exam (Prelims)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_group_bc_combined",
+      "missionRealmsPayload": {
+        "id": "mpsc_group_bc_combined",
+        "authorityId": "auth_in_mh_mpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "MH",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "mpsc_group_bc_combined",
+        "title": "Maharashtra Non-Gazetted Group 'B' and Group 'C' Services Combined Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_mh_mpsc",
+        "region": "MH"
+      },
+      "studentCatalogPayload": {
+        "id": "mpsc_group_bc_combined",
+        "displayName": "MPSC Group B & C Combined Prelims (PSI / STI / ASO / Clerk)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_manipur_mcscc",
+      "missionRealmsPayload": {
+        "id": "mpsc_manipur_mcscc",
+        "authorityId": "auth_in_mn_mpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "MN",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "mpsc_manipur_mcscc",
+        "title": "Manipur Combined Competitive Examination (MCSCC)",
+        "canonicalAuthorityKey": "auth_in_mn_mpsc",
+        "region": "MN"
+      },
+      "studentCatalogPayload": {
+        "id": "mpsc_manipur_mcscc",
+        "displayName": "MPSC Manipur MCSCCE (Manipur Civil Services)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_meghalaya_mcs",
+      "missionRealmsPayload": {
+        "id": "mpsc_meghalaya_mcs",
+        "authorityId": "auth_in_ml_mpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "ML",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "mpsc_meghalaya_mcs",
+        "title": "Meghalaya Civil Services Combined Examination",
+        "canonicalAuthorityKey": "auth_in_ml_mpsc",
+        "region": "ML"
+      },
+      "studentCatalogPayload": {
+        "id": "mpsc_meghalaya_mcs",
+        "displayName": "MPSC Meghalaya Civil Services (MCS / MPS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_mizoram_mcs",
+      "missionRealmsPayload": {
+        "id": "mpsc_mizoram_mcs",
+        "authorityId": "auth_in_mz_mpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "MZ",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "mpsc_mizoram_mcs",
+        "title": "Mizoram Combined Competitive Examination (Mizoram Civil Services)",
+        "canonicalAuthorityKey": "auth_in_mz_mpsc",
+        "region": "MZ"
+      },
+      "studentCatalogPayload": {
+        "id": "mpsc_mizoram_mcs",
+        "displayName": "MPSC Mizoram Civil Services (MCS / MPS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mpsc_rajyaseva",
+      "missionRealmsPayload": {
+        "id": "mpsc_rajyaseva",
+        "authorityId": "auth_in_mh_mpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "MH",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "mpsc_rajyaseva",
+        "title": "Maharashtra Civil Services Gazetted Combined Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_mh_mpsc",
+        "region": "MH"
+      },
+      "studentCatalogPayload": {
+        "id": "mpsc_rajyaseva",
+        "displayName": "MPSC Rajyaseva / Civil Services Combined Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "mscepune_mahatet",
+      "missionRealmsPayload": {
+        "id": "mscepune_mahatet",
+        "authorityId": "auth_in_mh_mscepune",
+        "jurisdictionType": "STATE",
+        "regionCode": "MH",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "mscepune_mahatet",
+        "title": "Maharashtra Teacher Eligibility Test (MAHATET)",
+        "canonicalAuthorityKey": "auth_in_mh_mscepune",
+        "region": "MH"
+      },
+      "studentCatalogPayload": {
+        "id": "mscepune_mahatet",
+        "displayName": "MAHATET (Paper 1 & Paper 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nabard_grade_a",
+      "missionRealmsPayload": {
+        "id": "nabard_grade_a",
+        "authorityId": "auth_in_nabard",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "nabard_grade_a",
+        "title": "NABARD Grade A Assistant Manager",
+        "canonicalAuthorityKey": "auth_in_nabard",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "nabard_grade_a",
+        "displayName": "NABARD Grade A Assistant Manager",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nagaland_police_constable",
+      "missionRealmsPayload": {
+        "id": "nagaland_police_constable",
+        "authorityId": "auth_in_nl_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "NL",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "nagaland_police_constable",
+        "title": "Nagaland Police Constable (GD) & Technical Cadre Recruitment",
+        "canonicalAuthorityKey": "auth_in_nl_police",
+        "region": "NL"
+      },
+      "studentCatalogPayload": {
+        "id": "nagaland_police_constable",
+        "displayName": "Nagaland Police Constable (GD) Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_mr",
+      "missionRealmsPayload": {
+        "id": "navy_agniveer_mr",
+        "authorityId": "auth_in_indian_navy",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "navy_agniveer_mr",
+        "title": "Indian Navy Agniveer MR / INET",
+        "canonicalAuthorityKey": "auth_in_indian_navy",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "navy_agniveer_mr",
+        "displayName": "Indian Navy Agniveer MR / INET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "navy_agniveer_ssr",
+      "missionRealmsPayload": {
+        "id": "navy_agniveer_ssr",
+        "authorityId": "auth_in_indian_navy",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "navy_agniveer_ssr",
+        "title": "Indian Navy Agniveer SSR / INET",
+        "canonicalAuthorityKey": "auth_in_indian_navy",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "navy_agniveer_ssr",
+        "displayName": "Indian Navy Agniveer SSR / INET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "neet_(ug)-2027",
+      "missionRealmsPayload": {
+        "id": "neet_(ug)-2027",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "MEDICAL_ENTRANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "neet_(ug)-2027",
+        "title": "NEET UG",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "neet_(ug)-2027",
+        "displayName": "NEET UG",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "npsc_nagaland_ncs",
+      "missionRealmsPayload": {
+        "id": "npsc_nagaland_ncs",
+        "authorityId": "auth_in_nl_npsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "NL",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "npsc_nagaland_ncs",
+        "title": "Nagaland Civil Services, Police Service & Allied Services Examination",
+        "canonicalAuthorityKey": "auth_in_nl_npsc",
+        "region": "NL"
+      },
+      "studentCatalogPayload": {
+        "id": "npsc_nagaland_ncs",
+        "displayName": "NPSC NCS & NPS (Nagaland Civil Services)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nssb_nagaland_csre",
+      "missionRealmsPayload": {
+        "id": "nssb_nagaland_csre",
+        "authorityId": "auth_in_nl_nssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "NL",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "nssb_nagaland_csre",
+        "title": "Combined Staff Recruitment Examination (CSRE)",
+        "canonicalAuthorityKey": "auth_in_nl_nssb",
+        "region": "NL"
+      },
+      "studentCatalogPayload": {
+        "id": "nssb_nagaland_csre",
+        "displayName": "NSSB CSRE (Nagaland Combined Staff Recruitment)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nta_csir_ugc_net",
+      "missionRealmsPayload": {
+        "id": "nta_csir_ugc_net",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "nta_csir_ugc_net",
+        "title": "Joint CSIR UGC NET",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "nta_csir_ugc_net",
+        "displayName": "Joint CSIR UGC NET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_pg",
+      "missionRealmsPayload": {
+        "id": "nta_cuet_pg",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "ENTRANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "nta_cuet_pg",
+        "title": "CUET PG",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "nta_cuet_pg",
+        "displayName": "CUET PG",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nta_cuet_ug",
+      "missionRealmsPayload": {
+        "id": "nta_cuet_ug",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "ENTRANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "nta_cuet_ug",
+        "title": "CUET UG",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "nta_cuet_ug",
+        "displayName": "CUET UG",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "nta_ugc_net",
+      "missionRealmsPayload": {
+        "id": "nta_ugc_net",
+        "authorityId": "auth_in_nta",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "TEACHING_FELLOWSHIP"
+      },
+      "recruitmentsPayload": {
+        "id": "nta_ugc_net",
+        "title": "UGC NET",
+        "canonicalAuthorityKey": "auth_in_nta",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "nta_ugc_net",
+        "displayName": "UGC NET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "opsc_ocs_prelims",
+      "missionRealmsPayload": {
+        "id": "opsc_ocs_prelims",
+        "authorityId": "auth_in_od_opsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "OD",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "opsc_ocs_prelims",
+        "title": "Odisha Civil Services Examination (Prelims)",
+        "canonicalAuthorityKey": "auth_in_od_opsc",
+        "region": "OD"
+      },
+      "studentCatalogPayload": {
+        "id": "opsc_ocs_prelims",
+        "displayName": "OPSC OCS Prelims (OAS / OFS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ossc_cgl",
+      "missionRealmsPayload": {
+        "id": "ossc_cgl",
+        "authorityId": "auth_in_od_ossc",
+        "jurisdictionType": "STATE",
+        "regionCode": "OD",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ossc_cgl",
+        "title": "OSSC Combined Graduate Level Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_od_ossc",
+        "region": "OD"
+      },
+      "studentCatalogPayload": {
+        "id": "ossc_cgl",
+        "displayName": "OSSC CGL (CGLRE)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "osssc_cre_combined",
+      "missionRealmsPayload": {
+        "id": "osssc_cre_combined",
+        "authorityId": "auth_in_od_osssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "OD",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "osssc_cre_combined",
+        "title": "OSSSC Combined Recruitment Examination for District Cadre Posts",
+        "canonicalAuthorityKey": "auth_in_od_osssc",
+        "region": "OD"
+      },
+      "studentCatalogPayload": {
+        "id": "osssc_cre_combined",
+        "displayName": "OSSSC Combined Exam (RI / ARI / AMIN)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ppsc_pscce_prelims",
+      "missionRealmsPayload": {
+        "id": "ppsc_pscce_prelims",
+        "authorityId": "auth_in_pb_ppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "PB",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ppsc_pscce_prelims",
+        "title": "Punjab State Civil Services Combined Competitive Examination (PSCSCCE) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_pb_ppsc",
+        "region": "PB"
+      },
+      "studentCatalogPayload": {
+        "id": "ppsc_pscce_prelims",
+        "displayName": "PPSC PSCSCCE – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "psssb_clerk",
+      "missionRealmsPayload": {
+        "id": "psssb_clerk",
+        "authorityId": "auth_in_pb_psssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "PB",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "psssb_clerk",
+        "title": "Combined Examination for Clerk / Clerk IT / Clerk Accounts",
+        "canonicalAuthorityKey": "auth_in_pb_psssb",
+        "region": "PB"
+      },
+      "studentCatalogPayload": {
+        "id": "psssb_clerk",
+        "displayName": "PSSSB Clerk Combined",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "punjab_police_si",
+      "missionRealmsPayload": {
+        "id": "punjab_police_si",
+        "authorityId": "auth_in_pb_police",
+        "jurisdictionType": "STATE",
+        "regionCode": "PB",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "punjab_police_si",
+        "title": "Direct Recruitment for Sub-Inspectors in District, Armed, Investigation and Intelligence Cadres",
+        "canonicalAuthorityKey": "auth_in_pb_police",
+        "region": "PB"
+      },
+      "studentCatalogPayload": {
+        "id": "punjab_police_si",
+        "displayName": "Punjab Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "punjab_pstet",
+      "missionRealmsPayload": {
+        "id": "punjab_pstet",
+        "authorityId": "auth_in_pb_pseb",
+        "jurisdictionType": "STATE",
+        "regionCode": "PB",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "punjab_pstet",
+        "title": "Punjab State Teacher Eligibility Test (PSTET)",
+        "canonicalAuthorityKey": "auth_in_pb_pseb",
+        "region": "PB"
+      },
+      "studentCatalogPayload": {
+        "id": "punjab_pstet",
+        "displayName": "PSTET (Paper 1 & Paper 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rbi_assistant",
+      "missionRealmsPayload": {
+        "id": "rbi_assistant",
+        "authorityId": "auth_in_rbi",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "rbi_assistant",
+        "title": "RBI Assistant",
+        "canonicalAuthorityKey": "auth_in_rbi",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rbi_assistant",
+        "displayName": "RBI Assistant",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rbi_grade_b",
+      "missionRealmsPayload": {
+        "id": "rbi_grade_b",
+        "authorityId": "auth_in_rbi",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "rbi_grade_b",
+        "title": "RBI Grade B",
+        "canonicalAuthorityKey": "auth_in_rbi",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rbi_grade_b",
+        "displayName": "RBI Grade B",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rbse_reet",
+      "missionRealmsPayload": {
+        "id": "rbse_reet",
+        "authorityId": "auth_in_rj_rbse",
+        "jurisdictionType": "STATE",
+        "regionCode": "RJ",
+        "examFamily": "TEACHING_AND_EDUCATION"
+      },
+      "recruitmentsPayload": {
+        "id": "rbse_reet",
+        "title": "Rajasthan Eligibility Examination for Teachers (REET)",
+        "canonicalAuthorityKey": "auth_in_rj_rbse",
+        "region": "RJ"
+      },
+      "studentCatalogPayload": {
+        "id": "rbse_reet",
+        "displayName": "REET (Level 1 & Level 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rpf_constable",
+      "missionRealmsPayload": {
+        "id": "rpf_constable",
+        "authorityId": "auth_in_rpf",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "rpf_constable",
+        "title": "RPF Constable",
+        "canonicalAuthorityKey": "auth_in_rpf",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rpf_constable",
+        "displayName": "RPF Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rpf_si",
+      "missionRealmsPayload": {
+        "id": "rpf_si",
+        "authorityId": "auth_in_rpf",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "rpf_si",
+        "title": "RPF Sub-Inspector",
+        "canonicalAuthorityKey": "auth_in_rpf",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rpf_si",
+        "displayName": "RPF Sub-Inspector",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rpsc_ras_prelims",
+      "missionRealmsPayload": {
+        "id": "rpsc_ras_prelims",
+        "authorityId": "auth_in_rj_rpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "RJ",
+        "examFamily": "CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "rpsc_ras_prelims",
+        "title": "Rajasthan State and Subordinate Services Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_rj_rpsc",
+        "region": "RJ"
+      },
+      "studentCatalogPayload": {
+        "id": "rpsc_ras_prelims",
+        "displayName": "RPSC RAS / RTS (Prelims)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rrb_alp",
+      "missionRealmsPayload": {
+        "id": "rrb_alp",
+        "authorityId": "auth_in_rrb",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "rrb_alp",
+        "title": "RRB Assistant Loco Pilot",
+        "canonicalAuthorityKey": "auth_in_rrb",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rrb_alp",
+        "displayName": "RRB Assistant Loco Pilot",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rrb_je",
+      "missionRealmsPayload": {
+        "id": "rrb_je",
+        "authorityId": "auth_in_rrb",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "rrb_je",
+        "title": "RRB Junior Engineer",
+        "canonicalAuthorityKey": "auth_in_rrb",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rrb_je",
+        "displayName": "RRB Junior Engineer",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rrb_level_1",
+      "missionRealmsPayload": {
+        "id": "rrb_level_1",
+        "authorityId": "auth_in_rrb",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "rrb_level_1",
+        "title": "RRB Level 1",
+        "canonicalAuthorityKey": "auth_in_rrb",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rrb_level_1",
+        "displayName": "RRB Level 1",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rrb_ntpc",
+      "missionRealmsPayload": {
+        "id": "rrb_ntpc",
+        "authorityId": "auth_in_rrb",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "rrb_ntpc",
+        "title": "RRB NTPC",
+        "canonicalAuthorityKey": "auth_in_rrb",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rrb_ntpc",
+        "displayName": "RRB NTPC",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rrb_technician",
+      "missionRealmsPayload": {
+        "id": "rrb_technician",
+        "authorityId": "auth_in_rrb",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "RAILWAY_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "rrb_technician",
+        "title": "RRB Technician",
+        "canonicalAuthorityKey": "auth_in_rrb",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "rrb_technician",
+        "displayName": "RRB Technician",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_graduate",
+      "missionRealmsPayload": {
+        "id": "rssb_cet_graduate",
+        "authorityId": "auth_in_rj_rssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "RJ",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "rssb_cet_graduate",
+        "title": "Rajasthan Common Eligibility Test (Graduate Level)",
+        "canonicalAuthorityKey": "auth_in_rj_rssb",
+        "region": "RJ"
+      },
+      "studentCatalogPayload": {
+        "id": "rssb_cet_graduate",
+        "displayName": "Rajasthan CET Graduate Level",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "rssb_cet_senior_secondary",
+      "missionRealmsPayload": {
+        "id": "rssb_cet_senior_secondary",
+        "authorityId": "auth_in_rj_rssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "RJ",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "rssb_cet_senior_secondary",
+        "title": "Rajasthan Common Eligibility Test (Senior Secondary Level)",
+        "canonicalAuthorityKey": "auth_in_rj_rssb",
+        "region": "RJ"
+      },
+      "studentCatalogPayload": {
+        "id": "rssb_cet_senior_secondary",
+        "displayName": "Rajasthan CET 12th Level",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "sbi_ja",
+      "missionRealmsPayload": {
+        "id": "sbi_ja",
+        "authorityId": "auth_in_sbi",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "sbi_ja",
+        "title": "SBI Junior Associate",
+        "canonicalAuthorityKey": "auth_in_sbi",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "sbi_ja",
+        "displayName": "SBI Junior Associate",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "sbi_po",
+      "missionRealmsPayload": {
+        "id": "sbi_po",
+        "authorityId": "auth_in_sbi",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "sbi_po",
+        "title": "SBI Probationary Officer",
+        "canonicalAuthorityKey": "auth_in_sbi",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "sbi_po",
+        "displayName": "SBI Probationary Officer",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "seb_gujarattet",
+      "missionRealmsPayload": {
+        "id": "seb_gujarattet",
+        "authorityId": "auth_in_gj_seb",
+        "jurisdictionType": "STATE",
+        "regionCode": "GJ",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "seb_gujarattet",
+        "title": "Gujarat Teacher Eligibility Test (TET-I for Primary & TET-II for Upper Primary)",
+        "canonicalAuthorityKey": "auth_in_gj_seb",
+        "region": "GJ"
+      },
+      "studentCatalogPayload": {
+        "id": "seb_gujarattet",
+        "displayName": "Gujarat TET (TET-1 / TET-2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "slprb_assam_police",
+      "missionRealmsPayload": {
+        "id": "slprb_assam_police",
+        "authorityId": "auth_in_as_slprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "AS",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "slprb_assam_police",
+        "title": "Assam Police Sub-Inspector & Constable Combined Recruitment",
+        "canonicalAuthorityKey": "auth_in_as_slprb",
+        "region": "AS"
+      },
+      "studentCatalogPayload": {
+        "id": "slprb_assam_police",
+        "displayName": "Assam Police SI & Constable Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "slrc_adre",
+      "missionRealmsPayload": {
+        "id": "slrc_adre",
+        "authorityId": "auth_in_as_slrc",
+        "jurisdictionType": "STATE",
+        "regionCode": "AS",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "slrc_adre",
+        "title": "Assam Direct Recruitment Examination (ADRE Class III & IV)",
+        "canonicalAuthorityKey": "auth_in_as_slrc",
+        "region": "AS"
+      },
+      "studentCatalogPayload": {
+        "id": "slrc_adre",
+        "displayName": "ADRE Grade 3 & Grade 4 (Assam Direct Recruitment)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_cce",
+      "missionRealmsPayload": {
+        "id": "spsc_sikkim_cce",
+        "authorityId": "auth_in_sk_spsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "SK",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "spsc_sikkim_cce",
+        "title": "Sikkim State Civil Services Combined Competitive Examination",
+        "canonicalAuthorityKey": "auth_in_sk_spsc",
+        "region": "SK"
+      },
+      "studentCatalogPayload": {
+        "id": "spsc_sikkim_cce",
+        "displayName": "SPSC Sikkim Civil Services (Under Secretary / DSP)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "spsc_sikkim_police_si",
+      "missionRealmsPayload": {
+        "id": "spsc_sikkim_police_si",
+        "authorityId": "auth_in_sk_spsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "SK",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "spsc_sikkim_police_si",
+        "title": "SPSC Police Sub-Inspector & Non-Gazetted Services Examination",
+        "canonicalAuthorityKey": "auth_in_sk_spsc",
+        "region": "SK"
+      },
+      "studentCatalogPayload": {
+        "id": "spsc_sikkim_police_si",
+        "displayName": "SPSC Sikkim Police Sub-Inspector (SI)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssb_odisha_lecturer",
+      "missionRealmsPayload": {
+        "id": "ssb_odisha_lecturer",
+        "authorityId": "auth_in_od_ssb",
+        "jurisdictionType": "STATE",
+        "regionCode": "OD",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "ssb_odisha_lecturer",
+        "title": "SSB Odisha Non-Government Aided College Lecturers / PGT Recruitment",
+        "canonicalAuthorityKey": "auth_in_od_ssb",
+        "region": "OD"
+      },
+      "studentCatalogPayload": {
+        "id": "ssb_odisha_lecturer",
+        "displayName": "SSB Odisha Lecturer / PGT Recruitment",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_cgl",
+      "missionRealmsPayload": {
+        "id": "ssc_cgl",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_cgl",
+        "title": "SSC Combined Graduate Level Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_cgl",
+        "displayName": "SSC Combined Graduate Level Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_chsl",
+      "missionRealmsPayload": {
+        "id": "ssc_chsl",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_chsl",
+        "title": "SSC Combined Higher Secondary Level Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_chsl",
+        "displayName": "SSC Combined Higher Secondary Level Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_cpo",
+      "missionRealmsPayload": {
+        "id": "ssc_cpo",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_cpo",
+        "title": "SSC Sub-Inspector CPO Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_cpo",
+        "displayName": "SSC Sub-Inspector CPO Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_gd",
+      "missionRealmsPayload": {
+        "id": "ssc_gd",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_gd",
+        "title": "SSC Constable GD Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_gd",
+        "displayName": "SSC Constable GD Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_hindi_translators",
+      "missionRealmsPayload": {
+        "id": "ssc_hindi_translators",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_hindi_translators",
+        "title": "SSC Combined Hindi Translators Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_hindi_translators",
+        "displayName": "SSC Combined Hindi Translators Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_je",
+      "missionRealmsPayload": {
+        "id": "ssc_je",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_je",
+        "title": "SSC Junior Engineer Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_je",
+        "displayName": "SSC Junior Engineer Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_mts_havaldar",
+      "missionRealmsPayload": {
+        "id": "ssc_mts_havaldar",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_mts_havaldar",
+        "title": "SSC MTS / Havaldar Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_mts_havaldar",
+        "displayName": "SSC MTS / Havaldar Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_selection_post",
+      "missionRealmsPayload": {
+        "id": "ssc_selection_post",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_selection_post",
+        "title": "SSC Selection Post Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_selection_post",
+        "displayName": "SSC Selection Post Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ssc_stenographer",
+      "missionRealmsPayload": {
+        "id": "ssc_stenographer",
+        "authorityId": "auth_in_ssc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ssc_stenographer",
+        "title": "SSC Stenographer Grade C and D Examination",
+        "canonicalAuthorityKey": "auth_in_ssc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "ssc_stenographer",
+        "displayName": "SSC Stenographer Grade C and D Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group1",
+      "missionRealmsPayload": {
+        "id": "tgpsc_group1",
+        "authorityId": "auth_in_tg_tgpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tgpsc_group1",
+        "title": "TGPSC Group-I Services Examination",
+        "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgpsc_group1",
+        "displayName": "TGPSC Group 1",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group2",
+      "missionRealmsPayload": {
+        "id": "tgpsc_group2",
+        "authorityId": "auth_in_tg_tgpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tgpsc_group2",
+        "title": "TGPSC Group-II Services Examination",
+        "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgpsc_group2",
+        "displayName": "TGPSC Group 2",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group3",
+      "missionRealmsPayload": {
+        "id": "tgpsc_group3",
+        "authorityId": "auth_in_tg_tgpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tgpsc_group3",
+        "title": "TGPSC Group-III Services Examination",
+        "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgpsc_group3",
+        "displayName": "TGPSC Group 3",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgpsc_group4",
+      "missionRealmsPayload": {
+        "id": "tgpsc_group4",
+        "authorityId": "auth_in_tg_tgpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tgpsc_group4",
+        "title": "TGPSC Group-IV Services Examination",
+        "canonicalAuthorityKey": "auth_in_tg_tgpsc",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgpsc_group4",
+        "displayName": "TGPSC Group 4",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_pc",
+      "missionRealmsPayload": {
+        "id": "tgslprb_sct_pc",
+        "authorityId": "auth_in_tg_tgslprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "tgslprb_sct_pc",
+        "title": "TGSLPRB Stipendiary Cadet Trainee (SCT) Police Constable",
+        "canonicalAuthorityKey": "auth_in_tg_tgslprb",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgslprb_sct_pc",
+        "displayName": "Telangana Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tgslprb_sct_si",
+      "missionRealmsPayload": {
+        "id": "tgslprb_sct_si",
+        "authorityId": "auth_in_tg_tgslprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "tgslprb_sct_si",
+        "title": "TGSLPRB Stipendiary Cadet Trainee (SCT) Sub-Inspector",
+        "canonicalAuthorityKey": "auth_in_tg_tgslprb",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "tgslprb_sct_si",
+        "displayName": "Telangana Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group1",
+      "missionRealmsPayload": {
+        "id": "tnpsc_group1",
+        "authorityId": "auth_in_tn_tnpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tnpsc_group1",
+        "title": "TNPSC Combined Civil Services Examination-I (Group-I Services)",
+        "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tnpsc_group1",
+        "displayName": "TNPSC Group 1",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group2_2a",
+      "missionRealmsPayload": {
+        "id": "tnpsc_group2_2a",
+        "authorityId": "auth_in_tn_tnpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tnpsc_group2_2a",
+        "title": "TNPSC Combined Civil Services Examination-II (Group-II & Group-IIA Services)",
+        "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tnpsc_group2_2a",
+        "displayName": "TNPSC Group 2 / 2A",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tnpsc_group4_vao",
+      "missionRealmsPayload": {
+        "id": "tnpsc_group4_vao",
+        "authorityId": "auth_in_tn_tnpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "tnpsc_group4_vao",
+        "title": "TNPSC Combined Civil Services Examination-IV (Group-IV & VAO Services)",
+        "canonicalAuthorityKey": "auth_in_tn_tnpsc",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tnpsc_group4_vao",
+        "displayName": "TNPSC Group 4 & VAO",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tntrb_pg_assistant_tet",
+      "missionRealmsPayload": {
+        "id": "tntrb_pg_assistant_tet",
+        "authorityId": "auth_in_tn_tntrb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "tntrb_pg_assistant_tet",
+        "title": "TN TRB Direct Recruitment of Post Graduate Assistants & TNTET",
+        "canonicalAuthorityKey": "auth_in_tn_tntrb",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tntrb_pg_assistant_tet",
+        "displayName": "TN TRB PG Assistant & TNTET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_pc",
+      "missionRealmsPayload": {
+        "id": "tnusrb_pc",
+        "authorityId": "auth_in_tn_tnusrb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "tnusrb_pc",
+        "title": "TNUSRB Common Recruitment for Gr.II Police Constables, Jail Warders & Firemen",
+        "canonicalAuthorityKey": "auth_in_tn_tnusrb",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tnusrb_pc",
+        "displayName": "TNUSRB Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tnusrb_si",
+      "missionRealmsPayload": {
+        "id": "tnusrb_si",
+        "authorityId": "auth_in_tn_tnusrb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "tnusrb_si",
+        "title": "TNUSRB Joint Recruitment for Sub-Inspectors of Police (Taluk, AR, TSP)",
+        "canonicalAuthorityKey": "auth_in_tn_tnusrb",
+        "region": "TN"
+      },
+      "studentCatalogPayload": {
+        "id": "tnusrb_si",
+        "displayName": "TNUSRB Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "tpsc_tripura_tcs_tps",
+      "missionRealmsPayload": {
+        "id": "tpsc_tripura_tcs_tps",
+        "authorityId": "auth_in_tr_tpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "TR",
+        "examFamily": "COMMON_SUBORDINATE_ELIGIBILITY"
+      },
+      "recruitmentsPayload": {
+        "id": "tpsc_tripura_tcs_tps",
+        "title": "Tripura Combined Competitive Examination (TCS & TPS)",
+        "canonicalAuthorityKey": "auth_in_tr_tpsc",
+        "region": "TR"
+      },
+      "studentCatalogPayload": {
+        "id": "tpsc_tripura_tcs_tps",
+        "displayName": "TPSC Combined Competitive Exam (TCS & TPS)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "trbt_tripura_stgt_stpgt",
+      "missionRealmsPayload": {
+        "id": "trbt_tripura_stgt_stpgt",
+        "authorityId": "auth_in_tr_trbt",
+        "jurisdictionType": "STATE",
+        "regionCode": "TR",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "trbt_tripura_stgt_stpgt",
+        "title": "Selection Test for Graduate Teachers (STGT) & Post Graduate Teachers (STPGT)",
+        "canonicalAuthorityKey": "auth_in_tr_trbt",
+        "region": "TR"
+      },
+      "studentCatalogPayload": {
+        "id": "trbt_tripura_stgt_stpgt",
+        "displayName": "TRBT STGT & STPGT (Secondary Teachers)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "treirb_teaching",
+      "missionRealmsPayload": {
+        "id": "treirb_teaching",
+        "authorityId": "auth_in_tg_treirb",
+        "jurisdictionType": "STATE",
+        "regionCode": "TG",
+        "examFamily": "TEACHING_AND_EDUCATION"
+      },
+      "recruitmentsPayload": {
+        "id": "treirb_teaching",
+        "title": "TREIRB Gurukulam Teaching Cadre (TGT / PGT / JL / DL)",
+        "canonicalAuthorityKey": "auth_in_tg_treirb",
+        "region": "TG"
+      },
+      "studentCatalogPayload": {
+        "id": "treirb_teaching",
+        "displayName": "Telangana Gurukulam Teachers",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_constable",
+      "missionRealmsPayload": {
+        "id": "uk_police_constable",
+        "authorityId": "auth_in_uk_uksssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "uk_police_constable",
+        "title": "Uttarakhand Police Constable (Civil Police / PAC / IRB / Fireman)",
+        "canonicalAuthorityKey": "auth_in_uk_uksssc",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "uk_police_constable",
+        "displayName": "Uttarakhand Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uk_police_si",
+      "missionRealmsPayload": {
+        "id": "uk_police_si",
+        "authorityId": "auth_in_uk_ukpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "uk_police_si",
+        "title": "Uttarakhand Police Sub-Inspector (Civil Police / Intelligence / Fire Station Officer)",
+        "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "uk_police_si",
+        "displayName": "Uttarakhand Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uk_tet",
+      "missionRealmsPayload": {
+        "id": "uk_tet",
+        "authorityId": "auth_in_uk_ubse",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "uk_tet",
+        "title": "Uttarakhand Teacher Eligibility Test (UTET I & II)",
+        "canonicalAuthorityKey": "auth_in_uk_ubse",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "uk_tet",
+        "displayName": "UTET (Paper 1 & Paper 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_lower_subordinate_prelims",
+      "missionRealmsPayload": {
+        "id": "ukpsc_lower_subordinate_prelims",
+        "authorityId": "auth_in_uk_ukpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "SUBORDINATE_ADMINISTRATIVE"
+      },
+      "recruitmentsPayload": {
+        "id": "ukpsc_lower_subordinate_prelims",
+        "title": "Combined State Lower Subordinate Services Examination - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "ukpsc_lower_subordinate_prelims",
+        "displayName": "UKPSC Lower Subordinate – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "ukpsc_pcs_prelims",
+      "missionRealmsPayload": {
+        "id": "ukpsc_pcs_prelims",
+        "authorityId": "auth_in_uk_ukpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "ukpsc_pcs_prelims",
+        "title": "Combined State Civil/Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_uk_ukpsc",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "ukpsc_pcs_prelims",
+        "displayName": "UKPSC PCS – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uksssc_group_c_combined",
+      "missionRealmsPayload": {
+        "id": "uksssc_group_c_combined",
+        "authorityId": "auth_in_uk_uksssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UK",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "uksssc_group_c_combined",
+        "title": "Combined Graduate Level / Intermediate Level Group C Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_uk_uksssc",
+        "region": "UK"
+      },
+      "studentCatalogPayload": {
+        "id": "uksssc_group_c_combined",
+        "displayName": "UKSSSC Group C Combined",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "up_tet",
+      "missionRealmsPayload": {
+        "id": "up_tet",
+        "authorityId": "auth_in_up_pnp",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "up_tet",
+        "title": "Uttar Pradesh Teacher Eligibility Test (UPTET)",
+        "canonicalAuthorityKey": "auth_in_up_pnp",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "up_tet",
+        "displayName": "UPTET (Paper 1 & Paper 2)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_constable",
+      "missionRealmsPayload": {
+        "id": "upprpb_police_constable",
+        "authorityId": "auth_in_up_upprpb",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upprpb_police_constable",
+        "title": "Direct Recruitment for Constables (Civil Police / PAC / Fireman)",
+        "canonicalAuthorityKey": "auth_in_up_upprpb",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "upprpb_police_constable",
+        "displayName": "UP Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upprpb_police_si",
+      "missionRealmsPayload": {
+        "id": "upprpb_police_si",
+        "authorityId": "auth_in_up_upprpb",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upprpb_police_si",
+        "title": "Direct Recruitment for Sub-Inspector (Civil Police) and Platoon Commander",
+        "canonicalAuthorityKey": "auth_in_up_upprpb",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "upprpb_police_si",
+        "displayName": "UP Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uppsc_pcs_prelims",
+      "missionRealmsPayload": {
+        "id": "uppsc_pcs_prelims",
+        "authorityId": "auth_in_up_uppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "uppsc_pcs_prelims",
+        "title": "Combined State / Upper Subordinate Services Examination (PCS) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_up_uppsc",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "uppsc_pcs_prelims",
+        "displayName": "UPPSC PCS – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "uppsc_ro_aro_prelims",
+      "missionRealmsPayload": {
+        "id": "uppsc_ro_aro_prelims",
+        "authorityId": "auth_in_up_uppsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "uppsc_ro_aro_prelims",
+        "title": "Review Officer / Assistant Review Officer Examination (RO/ARO) - Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_up_uppsc",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "uppsc_ro_aro_prelims",
+        "displayName": "UPPSC RO/ARO – Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_capf_ac",
+      "missionRealmsPayload": {
+        "id": "upsc_capf_ac",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_capf_ac",
+        "title": "Central Armed Police Forces (ACs) Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_capf_ac",
+        "displayName": "Central Armed Police Forces (ACs) Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cds",
+      "missionRealmsPayload": {
+        "id": "upsc_cds",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_cds",
+        "title": "Combined Defence Services Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_cds",
+        "displayName": "Combined Defence Services Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cms",
+      "missionRealmsPayload": {
+        "id": "upsc_cms",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "MEDICAL"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_cms",
+        "title": "Combined Medical Services Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_cms",
+        "displayName": "Combined Medical Services Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_cse_prelims",
+      "missionRealmsPayload": {
+        "id": "upsc_cse_prelims",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_cse_prelims",
+        "title": "Civil Services Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_cse_prelims",
+        "displayName": "Civil Services Preliminary Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_ese",
+      "missionRealmsPayload": {
+        "id": "upsc_ese",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "ENGINEERING"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_ese",
+        "title": "Engineering Services Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_ese",
+        "displayName": "Engineering Services Preliminary Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_geo_scientist",
+      "missionRealmsPayload": {
+        "id": "upsc_geo_scientist",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "SCIENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_geo_scientist",
+        "title": "Combined Geo-Scientist Preliminary Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_geo_scientist",
+        "displayName": "Combined Geo-Scientist Preliminary Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsc_nda_na",
+      "missionRealmsPayload": {
+        "id": "upsc_nda_na",
+        "authorityId": "auth_in_upsc",
+        "jurisdictionType": "CENTRAL",
+        "regionCode": "IN",
+        "examFamily": "POLICE_AND_DEFENCE"
+      },
+      "recruitmentsPayload": {
+        "id": "upsc_nda_na",
+        "title": "National Defence Academy and Naval Academy Examination",
+        "canonicalAuthorityKey": "auth_in_upsc",
+        "region": "IN"
+      },
+      "studentCatalogPayload": {
+        "id": "upsc_nda_na",
+        "displayName": "National Defence Academy and Naval Academy Examination",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "upsssc_pet",
+      "missionRealmsPayload": {
+        "id": "upsssc_pet",
+        "authorityId": "auth_in_up_upsssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "UP",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "upsssc_pet",
+        "title": "Preliminary Eligibility Test (PET)",
+        "canonicalAuthorityKey": "auth_in_up_upsssc",
+        "region": "UP"
+      },
+      "studentCatalogPayload": {
+        "id": "upsssc_pet",
+        "displayName": "UPSSSC PET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbbpe_primary_tet",
+      "missionRealmsPayload": {
+        "id": "wbbpe_primary_tet",
+        "authorityId": "auth_in_wb_wbbpe",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "wbbpe_primary_tet",
+        "title": "West Bengal Primary Teacher Eligibility Test",
+        "canonicalAuthorityKey": "auth_in_wb_wbbpe",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbbpe_primary_tet",
+        "displayName": "WB Primary TET",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbcssc_slst_teacher",
+      "missionRealmsPayload": {
+        "id": "wbcssc_slst_teacher",
+        "authorityId": "auth_in_wb_wbcssc",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "TEACHING_RECRUITMENT"
+      },
+      "recruitmentsPayload": {
+        "id": "wbcssc_slst_teacher",
+        "title": "WBCSSC State Level Selection Test for Assistant Teachers (SLST)",
+        "canonicalAuthorityKey": "auth_in_wb_wbcssc",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbcssc_slst_teacher",
+        "displayName": "WB School Service Commission SLST (Assistant Teacher)",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_constable",
+      "missionRealmsPayload": {
+        "id": "wbprb_police_constable",
+        "authorityId": "auth_in_wb_wbprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "wbprb_police_constable",
+        "title": "West Bengal Police Constable Recruitment Examination",
+        "canonicalAuthorityKey": "auth_in_wb_wbprb",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbprb_police_constable",
+        "displayName": "WB Police Constable",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbprb_police_si",
+      "missionRealmsPayload": {
+        "id": "wbprb_police_si",
+        "authorityId": "auth_in_wb_wbprb",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "BANKING_AND_FINANCE"
+      },
+      "recruitmentsPayload": {
+        "id": "wbprb_police_si",
+        "title": "West Bengal Police Sub-Inspector (UB & AB) Examination",
+        "canonicalAuthorityKey": "auth_in_wb_wbprb",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbprb_police_si",
+        "displayName": "WB Police SI",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_clerkship",
+      "missionRealmsPayload": {
+        "id": "wbpsc_clerkship",
+        "authorityId": "auth_in_wb_wbpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "SUBORDINATE_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "wbpsc_clerkship",
+        "title": "WBPSC Clerkship Examination",
+        "canonicalAuthorityKey": "auth_in_wb_wbpsc",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbpsc_clerkship",
+        "displayName": "WBPSC Clerkship",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    },
+    {
+      "canonicalMissionId": "wbpsc_wbcs_prelims",
+      "missionRealmsPayload": {
+        "id": "wbpsc_wbcs_prelims",
+        "authorityId": "auth_in_wb_wbpsc",
+        "jurisdictionType": "STATE",
+        "regionCode": "WB",
+        "examFamily": "STATE_CIVIL_SERVICES"
+      },
+      "recruitmentsPayload": {
+        "id": "wbpsc_wbcs_prelims",
+        "title": "West Bengal Civil Service (Executive) etc. Examination (Prelims)",
+        "canonicalAuthorityKey": "auth_in_wb_wbpsc",
+        "region": "WB"
+      },
+      "studentCatalogPayload": {
+        "id": "wbpsc_wbcs_prelims",
+        "displayName": "WBCS Prelims",
+        "discoverable": false
+      },
+      "payloadCompatibilityVerified": true
+    }
+  ]
+}

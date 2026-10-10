@@ -1,0 +1,15 @@
+{
+  "auditCode": "RC_47A4R1_GENERATOR_FORENSIC_AUDIT",
+  "executedAt": "2026-09-10T07:36:25.892Z",
+  "generatorScript": "docs/academic_review/47a3r/verifier_handoff/build_47a3r_master.js",
+  "byteLength": 69520,
+  "sha256": "6f2d876b805be75365285bc38f844c3dedb61b0a97029fd939554167edd5f47c",
+  "gitHead": "2edeed741d48828450784abb05b20eaa6179e5fe",
+  "gitStatus": "DIRTY",
+  "heuristicsFound": {
+    "hardcodedPassValues": false,
+    "automaticReadiness": false,
+    "exactDocumentRules": false
+  },
+  "auditPass": true
+}

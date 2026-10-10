@@ -1,0 +1,106 @@
+{
+  "manifestCode": "RC_47A4R1_ARTIFACT_SHA256_MANIFEST",
+  "executedAt": "2026-09-10T07:36:26.005Z",
+  "totalArtifactsTracked": 19,
+  "metrics": {
+    "PENDING_GENERATION_HASH_COUNT": 0,
+    "UNHASHED_REQUIRED_ARTIFACT_COUNT": 0
+  },
+  "artifacts": [
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_handoff_hash_verification.json",
+      "byteLength": 7303,
+      "sha256": "7fd0bb82ec7c892058ecdc1b005f9b8e27e30d1fd7b1e1861c1581351a54b5a9"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_generator_forensic_audit.json",
+      "byteLength": 521,
+      "sha256": "bb1af24c5a8e8581a8ba5222d467fa7e3095e596919077800abb59ced416bc5f"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_classification_recomputation.json",
+      "byteLength": 34397,
+      "sha256": "16148bc3d4dab1e3ff0b3e9106663807e52d0e6bc16e82944f2723beab21a28e"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_major_evidence_quality_audit.json",
+      "byteLength": 27286,
+      "sha256": "c2b1638c6866ee39cb2bcce9da5e18e3b6d1e7dc3a8e4a9b28d3f5c537b00f89"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_article315_misuse_audit.json",
+      "byteLength": 928,
+      "sha256": "cd62c3f7823ca203c68ca9dacee29fa03029a5113b589b82f4d3257a940d758f"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_exact_accepted_source_audit.json",
+      "byteLength": 216,
+      "sha256": "aabc89d0cdc1c7c9893718ac479bbc1d37035ac1207a2dd20149e5492acacb80"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_judicial_identity_audit.json",
+      "byteLength": 238,
+      "sha256": "48a932b8fb9ddc91d3f37fd9ae7dab86fa0fd852971faa6af006756688020b3e"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_ssc_overlap_audit.json",
+      "byteLength": 629,
+      "sha256": "03036d2ed822dd12065b89c77b6d5319d95c7734588719bcfdc1a6d58163ccfb"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_central_id_active_output_scan.json",
+      "byteLength": 192,
+      "sha256": "6a8968384efae798991ee9c453476a7353e8b8ae6ca1dd7461e0e9d8985f3a22"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_ibps_cross_lane_warning.json",
+      "byteLength": 473,
+      "sha256": "39444fee9eab670f6dbccaf73c3329ac043acc4854c776cf9c47e9397d308c1b"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_variant_recomputation.json",
+      "byteLength": 252,
+      "sha256": "69e21259ef53ea8661757dc77ad3b87d891a4972c093b267135139a654e6b335"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_tripura_tet_pattern_audit.json",
+      "byteLength": 724,
+      "sha256": "0ffdcaf7904a6b8652a6f6c06e17a9bfd19b39079b0d6052234789106bb9c82b"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_selection_readiness_recomputation.json",
+      "byteLength": 374,
+      "sha256": "7fb7cc71220c7c315900c942900060e3b1e2a550bd4e67b2003d0784bb68b6fd"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_source_surface_count_reconciliation.json",
+      "byteLength": 368,
+      "sha256": "d6b2c22b92e9cbcc9795c317ac701175dddd5e898444aee9c2ab6001b04e8c6d"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_source_surface_reachability_audit.json",
+      "byteLength": 190,
+      "sha256": "acb523bad40f25e8c81f8dffdb5e5a13e617a5ef76d5e47998552ae9de2494a4"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_source_owner_binding_audit.json",
+      "byteLength": 193,
+      "sha256": "aeee5153edf25ef47223f2c2fe4f81761f03603c54292fa547f4d18cdfdb8d4c"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_readiness_recomputation.json",
+      "byteLength": 300,
+      "sha256": "2642b0c6fd181f1f5d23aca9b8a6e1347a10441e496c6c890473bdc2069a23a7"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_no_production_mutation_proof.json",
+      "byteLength": 230,
+      "sha256": "5a5da63f4c980824bcf4edea02631b6922a231447d4f2976967917953ef2b9ed"
+    },
+    {
+      "relativePath": "docs/academic_review/47a4r1/47a4r1_final_report.md",
+      "byteLength": 5539,
+      "sha256": "b09cca6f6d84e81e55f49f2459afda849fbb0ebf89c4eb1bd5021e33b084927f"
+    }
+  ]
+}

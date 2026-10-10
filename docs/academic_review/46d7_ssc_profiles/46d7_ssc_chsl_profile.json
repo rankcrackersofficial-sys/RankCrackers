@@ -1,0 +1,82 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "ssc_chsl",
+  "canonicalDisplayName": "SSC CHSL",
+  "examAuthority": {
+    "authorityKey": "ssc",
+    "name": "Staff Selection Commission",
+    "acronym": "SSC",
+    "officialPortalUrl": "https://ssc.gov.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": "2026-2027",
+    "officialCycleStatus": "OFFICIAL_CALENDAR_PUBLISHED",
+    "sourceBaselineCycle": "2025",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "CALENDAR_PUBLISHED_CURRENT_CYCLE"
+  },
+  "rankCrackersScope": {
+    "supportedStages": ["TIER_I_CBE", "TIER_II_CBE"],
+    "unsupportedStages": [
+      { "stageName": "Skill Test / Typing Test Module", "reason": "Physical Typing Assessment" }
+    ]
+  },
+  "examinationStructure": {
+    "tiers": [
+      {
+        "tierId": "tier_1",
+        "tierName": "Tier-I: Computer Based Examination",
+        "totalQuestions": 100,
+        "totalMarks": 200,
+        "durationMinutes": 60,
+        "negativeMarkingPerQuestion": 0.5,
+        "sections": [
+          { "sectionId": "english_language", "sectionName": "English Language (Basic Knowledge)", "questions": 25, "marks": 50 },
+          { "sectionId": "general_intelligence", "sectionName": "General Intelligence", "questions": 25, "marks": 50 },
+          { "sectionId": "quantitative_aptitude", "sectionName": "Quantitative Aptitude (Basic Arithmetic Skill)", "questions": 25, "marks": 50 },
+          { "sectionId": "general_awareness", "sectionName": "General Awareness", "questions": 25, "marks": 50 }
+        ]
+      },
+      {
+        "tierId": "tier_2",
+        "tierName": "Tier-II: Computer Based Examination",
+        "durationMinutes": 135,
+        "sections": [
+          {
+            "sectionId": "section_1",
+            "sectionName": "Mathematical Abilities & Reasoning",
+            "modules": ["Module-I: Mathematical Abilities (30 Qs)", "Module-II: Reasoning and General Intelligence (30 Qs)"],
+            "totalQuestions": 60,
+            "totalMarks": 180,
+            "negativeMarkingPerQuestion": 1.0
+          },
+          {
+            "sectionId": "section_2",
+            "sectionName": "English Language & General Awareness",
+            "modules": ["Module-I: English Language and Comprehension (40 Qs)", "Module-II: General Awareness (20 Qs)"],
+            "totalQuestions": 60,
+            "totalMarks": 180,
+            "negativeMarkingPerQuestion": 1.0
+          },
+          {
+            "sectionId": "section_3",
+            "sectionName": "Computer Knowledge Module",
+            "modules": ["Computer Knowledge (15 Qs)"],
+            "totalQuestions": 15,
+            "totalMarks": 45,
+            "negativeMarkingPerQuestion": 1.0,
+            "isQualifying": true
+          }
+        ]
+      }
+    ]
+  },
+  "variantContext": {
+    "variantDistinctionType": "SINGLE_ACADEMIC_TRACK",
+    "variants": [
+      { "variantKey": "chsl_common", "variantName": "Lower Division Clerk (LDC) / Junior Secretariat Assistant (JSA) / Data Entry Operator (DEO)" }
+    ]
+  }
+}

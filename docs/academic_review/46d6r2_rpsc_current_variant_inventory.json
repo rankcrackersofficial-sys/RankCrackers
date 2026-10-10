@@ -1,0 +1,350 @@
+{
+  "inventorySchemaVersion": "2.0.0",
+  "draftStatus": "CANONICAL_CURRENT_VARIANT_INVENTORY_46D6R2",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "sourceBaseline": {
+    "primaryAdvertisement": "Advt. No. 06/2025-26",
+    "supplementalAdvertisement": "Advt. No. 09/2025-26 (Agriculture)",
+    "recruitmentCycle": "2025",
+    "missionTargetYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE"
+  },
+  "inventoryCounts": {
+    "RPSC_ACTIVE_ACADEMIC_VARIANT_COUNT": 21,
+    "RPSC_ACTIVE_PHYSICAL_EDUCATION_ENTITY_COUNT": 1,
+    "RPSC_ACTIVE_COACH_PARENT_COUNT": 1,
+    "RPSC_ACTIVE_COACH_SPECIALIZATION_COUNT": 6,
+    "RPSC_ACTIVE_PARENT_ENTITY_COUNT": 23,
+    "RPSC_ACTIVE_STUDENT_SELECTABLE_VARIANT_COUNT": 28,
+    "RPSC_CURRENT_BACKEND_VARIANTS_COUNT": 2,
+    "RPSC_CURRENT_BACKEND_VARIANTS": ["English", "Hindi"],
+    "RPSC_MISSING_SELECTABLE_VARIANTS_COUNT": 26
+  },
+  "activeAcademicVariants": [
+    {
+      "key": "rpsc_lecturer_hindi",
+      "name": "Hindi (हिन्दी)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_hindi",
+      "medium": "Hindi",
+      "inCurrentBackend": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_english",
+      "name": "English (अंग्रेजी)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_english",
+      "medium": "English",
+      "inCurrentBackend": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_sanskrit",
+      "name": "Sanskrit (संस्कृत)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_sanskrit",
+      "medium": "Sanskrit/Devanagari",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_rajasthani",
+      "name": "Rajasthani (राजस्थानी)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_rajasthani",
+      "medium": "Rajasthani/Devanagari",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_punjabi",
+      "name": "Punjabi (पंजाबी)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_punjabi",
+      "medium": "Punjabi/Gurmukhi",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_urdu",
+      "name": "Urdu (उर्दू)",
+      "category": "LANGUAGE_LITERATURE",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_urdu",
+      "medium": "Urdu",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_history",
+      "name": "History (इतिहास)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_history",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_geography",
+      "name": "Geography (भूगोल)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_geography",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_political_science",
+      "name": "Political Science (राजनीति विज्ञान)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_political_science",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_economics",
+      "name": "Economics (अर्थशास्त्र)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_economics",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_sociology",
+      "name": "Sociology (समाजशास्त्र)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_sociology",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_public_administration",
+      "name": "Public Administration (लोक प्रशासन)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_public_administration",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_physics",
+      "name": "Physics (भौतिक विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_physics",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_chemistry",
+      "name": "Chemistry (रसायन विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_chemistry",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_biology",
+      "name": "Biology (जीव विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_biology",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_mathematics",
+      "name": "Mathematics (गणित)",
+      "category": "MATHEMATICAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_mathematics",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_commerce",
+      "name": "Commerce (वाणिज्य)",
+      "category": "COMMERCE_MANAGEMENT",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_commerce",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_music",
+      "name": "Music (संगीत)",
+      "category": "PERFORMING_ARTS",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_music",
+      "medium": "Hindi",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_drawing",
+      "name": "Drawing / Fine Arts (चित्रकला)",
+      "category": "VISUAL_ARTS",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_drawing",
+      "medium": "Hindi",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_home_science",
+      "name": "Home Science (गृह विज्ञान)",
+      "category": "APPLIED_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 06/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_home_science",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "key": "rpsc_lecturer_agriculture",
+      "name": "Agriculture (कृषि)",
+      "category": "AGRICULTURAL_SCIENCES",
+      "paperFamily": "ACADEMIC_LECTURER_FAMILY",
+      "advertisementId": "Advt. No. 09/2025-26",
+      "paper1Id": "rpsc_paper_1_gk_gs_academic",
+      "paper2Id": "rpsc_paper_2_agriculture",
+      "medium": "UNKNOWN",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "activePhysicalEducationEntity": {
+    "key": "rpsc_lecturer_physical_education",
+    "name": "Physical Education (प्राध्यापक शारीरिक शिक्षा)",
+    "category": "PHYSICAL_EDUCATION",
+    "paperFamily": "PHYSICAL_EDUCATION_FAMILY",
+    "advertisementId": "Advt. No. 06/2025-26",
+    "paper1Id": "rpsc_paper_1_physical_education",
+    "paper2Id": "rpsc_paper_2_physical_education",
+    "medium": "UNKNOWN",
+    "inCurrentBackend": false,
+    "authorityStatus": "SOURCE_VERIFIED"
+  },
+  "activeCoachParentAndSpecializations": {
+    "parentPostKey": "rpsc_lecturer_coach_parent",
+    "parentPostName": "Coach (प्रशिक्षक - विभिन्न खेल)",
+    "paperFamily": "COACH_FAMILY",
+    "advertisementId": "Advt. No. 06/2025-26",
+    "paper1Id": "rpsc_paper_1_coach",
+    "activeSpecializationsCount": 6,
+    "activeSpecializations": [
+      {
+        "specializationKey": "coach_athletics",
+        "sportName": "Athletics (एथलेटिक्स)",
+        "paper2Id": "rpsc_paper_2_coach_athletics",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "specializationKey": "coach_basketball",
+        "sportName": "Basketball (बास्केटबॉल)",
+        "paper2Id": "rpsc_paper_2_coach_basketball",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "specializationKey": "coach_handball",
+        "sportName": "Handball (हैंडबॉल)",
+        "paper2Id": "rpsc_paper_2_coach_handball",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "specializationKey": "coach_kabaddi",
+        "sportName": "Kabaddi (कबड्डी)",
+        "paper2Id": "rpsc_paper_2_coach_kabaddi",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "specializationKey": "coach_table_tennis",
+        "sportName": "Table Tennis (टेबल टेनिस)",
+        "paper2Id": "rpsc_paper_2_coach_table_tennis",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      },
+      {
+        "specializationKey": "coach_volleyball",
+        "sportName": "Volleyball (वॉलीबॉल)",
+        "paper2Id": "rpsc_paper_2_coach_volleyball",
+        "inCurrentBackend": false,
+        "authorityStatus": "SOURCE_VERIFIED"
+      }
+    ]
+  },
+  "historicalCoachSpecializationsExcluded": [
+    "Football",
+    "Gymnastics",
+    "Hockey",
+    "Kho-Kho",
+    "Wrestling"
+  ]
+}

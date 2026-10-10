@@ -1,0 +1,14 @@
+{
+  "rule": "All newly created backend mission shells default to UNPUBLISHED and fail-closed for student visibility.",
+  "defaultShellValues": {
+    "cardVisible": false,
+    "userPanelVisible": false,
+    "catalogDiscoverable": false,
+    "studentPublicationState": "INTERNAL_DRAFT",
+    "archived": false,
+    "academicStartReady": false,
+    "smartEntryReady": false,
+    "crucibleReady": false,
+    "careerPersonalizationReady": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "missionId": "cbse_ctet",
+  "variantDimension": "LEVEL",
+  "levels": [
+    {
+      "variantId": "PRIMARY_CLASSES_I_V",
+      "displayName": "Primary Level (Classes I–V) — Paper I",
+      "variantDimension": "LEVEL",
+      "paperStructure": "Paper I",
+      "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+    },
+    {
+      "variantId": "UPPER_PRIMARY_CLASSES_VI_VIII",
+      "displayName": "Upper Primary Level (Classes VI–VIII) — Paper II",
+      "variantDimension": "LEVEL",
+      "paperStructure": "Paper II",
+      "sourceEvidenceRef": "https://ctet.nic.in/document/ctet-sept-2026-information-bulletin/"
+    }
+  ],
+  "paperNumberIsCanonicalVariantId": false
+}

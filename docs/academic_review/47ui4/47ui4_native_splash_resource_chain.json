@@ -1,0 +1,130 @@
+{
+  "resource_chain": [
+    {
+      "relative_path": "drawable/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 5677,
+      "sha256": "96e61f64d321085c6e4184dd902c9f808815a9ca82c596893bb2fa94d342b9f4"
+    },
+    {
+      "relative_path": "drawable-mdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-mdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 1953,
+      "sha256": "efb21afa857d413cee1de531f3a0d5de5e99f9a3b08038bdb6fc851dd0b96b67"
+    },
+    {
+      "relative_path": "drawable-hdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-hdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 3798,
+      "sha256": "fa2ccb9c8a57931f9fbdfb35d1bc4424c3e31eb74f7e26701662bec9a8c11cc1"
+    },
+    {
+      "relative_path": "drawable-xhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-xhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 5677,
+      "sha256": "96e61f64d321085c6e4184dd902c9f808815a9ca82c596893bb2fa94d342b9f4"
+    },
+    {
+      "relative_path": "drawable-xxhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-xxhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 10539,
+      "sha256": "b448bbb883d0f39a3cc03b685cd9aa6f88e57f37d4043bd90de4a0ec0e87b9e3"
+    },
+    {
+      "relative_path": "drawable-xxxhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-xxxhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 16744,
+      "sha256": "c2dc73ddff9627c9707c70b6436f11678a0a1cf397ade7e96655fa65ebd65792"
+    },
+    {
+      "relative_path": "drawable-night-mdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-night-mdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 1953,
+      "sha256": "efb21afa857d413cee1de531f3a0d5de5e99f9a3b08038bdb6fc851dd0b96b67"
+    },
+    {
+      "relative_path": "drawable-night-hdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-night-hdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 3798,
+      "sha256": "fa2ccb9c8a57931f9fbdfb35d1bc4424c3e31eb74f7e26701662bec9a8c11cc1"
+    },
+    {
+      "relative_path": "drawable-night-xhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-night-xhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 5677,
+      "sha256": "96e61f64d321085c6e4184dd902c9f808815a9ca82c596893bb2fa94d342b9f4"
+    },
+    {
+      "relative_path": "drawable-night-xxhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-night-xxhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 10539,
+      "sha256": "b448bbb883d0f39a3cc03b685cd9aa6f88e57f37d4043bd90de4a0ec0e87b9e3"
+    },
+    {
+      "relative_path": "drawable-night-xxxhdpi/android12splash.png",
+      "full_path": "android/app/src/main/res/drawable-night-xxxhdpi/android12splash.png",
+      "type": "PNG",
+      "size_bytes": 16744,
+      "sha256": "c2dc73ddff9627c9707c70b6436f11678a0a1cf397ade7e96655fa65ebd65792"
+    },
+    {
+      "relative_path": "drawable/launch_background.xml",
+      "full_path": "android/app/src/main/res/drawable/launch_background.xml",
+      "type": "XML",
+      "size_bytes": 330,
+      "sha256": "ebb332328da8e16ce25dffb30a8698513dfa508b2a1364d950480b806eeebeff"
+    },
+    {
+      "relative_path": "drawable-v21/launch_background.xml",
+      "full_path": "android/app/src/main/res/drawable-v21/launch_background.xml",
+      "type": "XML",
+      "size_bytes": 330,
+      "sha256": "ebb332328da8e16ce25dffb30a8698513dfa508b2a1364d950480b806eeebeff"
+    },
+    {
+      "relative_path": "values/styles.xml",
+      "full_path": "android/app/src/main/res/values/styles.xml",
+      "type": "XML",
+      "size_bytes": 1273,
+      "sha256": "ad400d5305a8292d473ee60f3fd0e5ce2a38299c474ea44a77b758109903afc8"
+    },
+    {
+      "relative_path": "values-night/styles.xml",
+      "full_path": "android/app/src/main/res/values-night/styles.xml",
+      "type": "XML",
+      "size_bytes": 1272,
+      "sha256": "cb6b7d64537c92955a21cb460a5550c849381f9ac51ba93e505343b933dcd31b"
+    },
+    {
+      "relative_path": "values-v31/styles.xml",
+      "full_path": "android/app/src/main/res/values-v31/styles.xml",
+      "type": "XML",
+      "size_bytes": 1252,
+      "sha256": "01c3831bda3ded508bcb48d174a717203d16ec38ed08460508cf71b71539d8cc"
+    },
+    {
+      "relative_path": "values-night-v31/styles.xml",
+      "full_path": "android/app/src/main/res/values-night-v31/styles.xml",
+      "type": "XML",
+      "size_bytes": 1251,
+      "sha256": "b589d3817c101ca67430bf0283c7a890e688f07829dda6777b8bceea5b55ebf0"
+    }
+  ],
+  "manifest_binding": "android:theme=\"@style/LaunchTheme\"",
+  "android12_windowSplashScreenAnimatedIcon": "@drawable/android12splash",
+  "android12_windowSplashScreenBackground": {
+    "light": "@android:color/white (#FFFFFF)",
+    "night": "@color/splash_bg_dark (#0A0E17)"
+  },
+  "resource_chain_status": "PROVEN_CORRECT"
+}

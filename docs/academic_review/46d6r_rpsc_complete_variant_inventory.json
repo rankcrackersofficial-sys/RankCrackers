@@ -1,0 +1,420 @@
+{
+  "inventorySchemaVersion": "1.0.0",
+  "draftStatus": "CORRECTED_OFFICIAL_VARIANT_INVENTORY",
+  "supersedes": "docs/academic_review/46d6_rpsc_complete_variant_inventory.json",
+  "missionId": "RPSC_FIRST_GRADE2026_2026_1782713222215",
+  "recruitmentFamily": "School Lecturer (School Education Department) / प्राध्यापक (माध्यमिक शिक्षा विभाग)",
+  "authority": "Rajasthan Public Service Commission (RPSC), Ajmer",
+  "sourceRecruitmentBaseline": {
+    "advertisementNumber": "Advt. No. 06/2025-26",
+    "recruitmentCycle": "2025",
+    "missionTargetYear": 2026,
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "officialSourceUrl": "https://rpsc.rajasthan.gov.in",
+    "officialPortalDomain": "rpsc.rajasthan.gov.in",
+    "familyIntegrityNote": "Strictly limited to School Education Department. Sanskrit Education, Special Education, and Sr. Teacher (2nd Grade) are excluded from this family."
+  },
+  "correctionSummary": {
+    "supersededDeficiencies": [
+      "Previous inventory was based on older 2024 baseline instead of latest Advt. 06/2025-26.",
+      "Rajasthani was omitted from the 22-variant list despite being an official discipline in RPSC syllabus and exam records.",
+      "Coach was collapsed into a single generic variant without accounting for official sport-discipline papers (Kabaddi, Basketball, Athletics, Handball, Table Tennis, Volleyball, Gymnastics, Wrestling, Football, Kho-Kho, Hockey).",
+      "Manufactured sequential post codes (01..22) were assigned without official source backing."
+    ],
+    "correctionsApplied": [
+      "Updated baseline to Advt. No. 06/2025-26 with cycleRelation = PRIOR_OFFICIAL_BASELINE.",
+      "Explicitly included Rajasthani (राजस्थानी).",
+      "Explicitly modeled Coach (प्रशिक्षक) as PARENT_WITH_SUBVARIANTS covering 11 official sports disciplines.",
+      "Nullified all manufactured post codes (officialPostCode = null) with postCodeAuthority = NOT_ASSIGNED_IN_ADVT.",
+      "Removed blanket bilingual claims; set medium to exact source-backed language or UNKNOWN."
+    ]
+  },
+  "inventorySummary": {
+    "totalAcademicDisciplines": 21,
+    "totalPhysicalAndCoachingDisciplines": 2,
+    "totalDistinctVariantEntities": 23,
+    "coachSubvariantDisciplinesCount": 11,
+    "currentBackendVariantsCount": 2,
+    "currentBackendVariants": ["English", "Hindi"],
+    "missingAcademicVariantsCount": 19,
+    "missingCoachAndPhyEduVariantsCount": 2
+  },
+  "commonPaperArchitecture": {
+    "commonPaperId": "rpsc_paper_1_gk_gs",
+    "commonPaperTitle": "Paper 1: General Awareness and General Studies (75 Qs / 150 Marks / 90 Mins)",
+    "architecturePattern": "ONE_COMMON_PAPER_TO_N_VARIANTS",
+    "reusedAcrossAllVariants": true,
+    "provenanceTag": "SOURCE_VERIFIED"
+  },
+  "academicDisciplines": [
+    {
+      "disciplineKey": "rpsc_lecturer_hindi",
+      "officialDisciplineName": "Hindi (हिन्दी)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Hindi (संबंधित विषय - हिन्दी)",
+      "mediumRestriction": "Hindi",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_english",
+      "officialDisciplineName": "English (अंग्रेजी)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: English (संबंधित विषय - अंग्रेजी)",
+      "mediumRestriction": "English",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": true,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_sanskrit",
+      "officialDisciplineName": "Sanskrit (संस्कृत)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Sanskrit (संबंधित विषय - संस्कृत)",
+      "mediumRestriction": "Sanskrit/Devanagari",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_rajasthani",
+      "officialDisciplineName": "Rajasthani (राजस्थानी)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Rajasthani (संबंधित विषय - राजस्थानी)",
+      "mediumRestriction": "Rajasthani/Devanagari",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26, Official Syllabus 2024 & Exam Schedule 2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_punjabi",
+      "officialDisciplineName": "Punjabi (पंजाबी)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Punjabi (संबंधित विषय - पंजाबी)",
+      "mediumRestriction": "Punjabi/Gurmukhi",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_urdu",
+      "officialDisciplineName": "Urdu (उर्दू)",
+      "category": "LANGUAGE_LITERATURE",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Urdu (संबंधित विषय - उर्दू)",
+      "mediumRestriction": "Urdu",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_history",
+      "officialDisciplineName": "History (इतिहास)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: History (संबंधित विषय - इतिहास)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_geography",
+      "officialDisciplineName": "Geography (भूगोल)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Geography (संबंधित विषय - भूगोल)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_political_science",
+      "officialDisciplineName": "Political Science (राजनीति विज्ञान)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Political Science (संबंधित विषय - राजनीति विज्ञान)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_economics",
+      "officialDisciplineName": "Economics (अर्थशास्त्र)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Economics (संबंधित विषय - अर्थशास्त्र)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_sociology",
+      "officialDisciplineName": "Sociology (समाजशास्त्र)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Sociology (संबंधित विषय - समाजशास्त्र)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_public_administration",
+      "officialDisciplineName": "Public Administration (लोक प्रशासन)",
+      "category": "HUMANITIES_SOCIAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Public Administration (संबंधित विषय - लोक प्रशासन)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_physics",
+      "officialDisciplineName": "Physics (भौतिक विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Physics (संबंधित विषय - भौतिक विज्ञान)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_chemistry",
+      "officialDisciplineName": "Chemistry (रसायन विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Chemistry (संबंधित विषय - रसायन विज्ञान)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_biology",
+      "officialDisciplineName": "Biology (जीव विज्ञान)",
+      "category": "NATURAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Biology (संबंधित विषय - जीव विज्ञान)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_mathematics",
+      "officialDisciplineName": "Mathematics (गणित)",
+      "category": "MATHEMATICAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Mathematics (संबंधित विषय - गणित)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_commerce",
+      "officialDisciplineName": "Commerce (वाणिज्य)",
+      "category": "COMMERCE_MANAGEMENT",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Commerce (संबंधित विषय - वाणिज्य)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_music",
+      "officialDisciplineName": "Music (संगीत)",
+      "category": "PERFORMING_ARTS",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Music (संबंधित विषय - संगीत)",
+      "mediumRestriction": "Hindi",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_drawing",
+      "officialDisciplineName": "Drawing / Fine Arts (चित्रकला)",
+      "category": "VISUAL_ARTS",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Drawing (संबंधित विषय - चित्रकला)",
+      "mediumRestriction": "Hindi",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_home_science",
+      "officialDisciplineName": "Home Science (गृह विज्ञान)",
+      "category": "APPLIED_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Home Science (संबंधित विषय - गृह विज्ञान)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_agriculture",
+      "officialDisciplineName": "Agriculture (कृषि)",
+      "category": "AGRICULTURAL_SCIENCES",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Agriculture (संबंधित विषय - कृषि)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    }
+  ],
+  "physicalEducationAndCoachingDisciplines": [
+    {
+      "disciplineKey": "rpsc_lecturer_physical_education",
+      "officialDisciplineName": "Physical Education (प्राध्यापक शारीरिक शिक्षा)",
+      "category": "PHYSICAL_EDUCATION",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "paper2ExamTitle": "Paper 2: Physical Education (शारीरिक शिक्षा)",
+      "mediumRestriction": "UNKNOWN",
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Syllabus 2024/2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED"
+    },
+    {
+      "disciplineKey": "rpsc_lecturer_coach_parent",
+      "officialDisciplineName": "Coach (प्रशिक्षक - विभिन्न खेल)",
+      "category": "SPORTS_COACHING",
+      "officialPostCode": null,
+      "postCodeAuthority": "NOT_ASSIGNED_IN_ADVT",
+      "commonPaper": "rpsc_paper_1_gk_gs",
+      "structuralModel": "PARENT_WITH_SUBVARIANTS",
+      "disciplineSubvariantsCount": 11,
+      "sourceDocumentReference": "RPSC Advt. 06/2025-26 & Official Examination Question Papers 2025",
+      "inCurrentBackend": false,
+      "authorityStatus": "SOURCE_VERIFIED",
+      "sportsDisciplineSubvariants": [
+        {
+          "subvariantKey": "coach_athletics",
+          "sportName": "Athletics (एथलेटिक्स)",
+          "paper2ExamTitle": "Paper 2: Coach - Athletics (प्रशिक्षक - एथलेटिक्स)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_basketball",
+          "sportName": "Basketball (बास्केटबॉल)",
+          "paper2ExamTitle": "Paper 2: Coach - Basketball (प्रशिक्षक - बास्केटबॉल)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_handball",
+          "sportName": "Handball (हैंडबॉल)",
+          "paper2ExamTitle": "Paper 2: Coach - Handball (प्रशिक्षक - हैंडबॉल)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_kabaddi",
+          "sportName": "Kabaddi (कबड्डी)",
+          "paper2ExamTitle": "Paper 2: Coach - Kabaddi (प्रशिक्षक - कबड्डी)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_table_tennis",
+          "sportName": "Table Tennis (टेबल टेनिस)",
+          "paper2ExamTitle": "Paper 2: Coach - Table Tennis (प्रशिक्षक - टेबल टेनिस)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_volleyball",
+          "sportName": "Volleyball (वॉलीबॉल)",
+          "paper2ExamTitle": "Paper 2: Coach - Volleyball (प्रशिक्षक - वॉलीबॉल)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_gymnastics",
+          "sportName": "Gymnastics (जिमनास्टिक)",
+          "paper2ExamTitle": "Paper 2: Coach - Gymnastics (प्रशिक्षक - जिमनास्टिक)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_wrestling",
+          "sportName": "Wrestling (कुश्ती)",
+          "paper2ExamTitle": "Paper 2: Coach - Wrestling (प्रशिक्षक - कुश्ती)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_football",
+          "sportName": "Football (फुटबॉल)",
+          "paper2ExamTitle": "Paper 2: Coach - Football (प्रशिक्षक - फुटबॉल)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_kho_kho",
+          "sportName": "Kho-Kho (खो-खो)",
+          "paper2ExamTitle": "Paper 2: Coach - Kho-Kho (प्रशिक्षक - खो-खो)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        },
+        {
+          "subvariantKey": "coach_hockey",
+          "sportName": "Hockey (हॉकी)",
+          "paper2ExamTitle": "Paper 2: Coach - Hockey (प्रशिक्षक - हॉकी)",
+          "authorityStatus": "SOURCE_VERIFIED"
+        }
+      ]
+    }
+  ]
+}

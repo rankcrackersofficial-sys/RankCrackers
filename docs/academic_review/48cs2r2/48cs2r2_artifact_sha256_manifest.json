@@ -1,0 +1,75 @@
+{
+  "gate": "GATE_48CS2R2",
+  "timestamp": "2026-09-10T11:45:11.547Z",
+  "lane": "AGENT_3_CAREER_SIGNAL_BACKEND_ENGINE",
+  "root": "c:\\\\RankCrackers\\\\RankCrackers-55",
+  "metrics": {
+    "GLOBAL_HARDCODED_AGE_RELAXATION_COUNT": 0,
+    "UNKNOWN_PROFILE_FACT_DEFAULTED_TO_REAL_VALUE_COUNT": 0,
+    "VACANCY_ZERO_FORCED_LEGAL_INELIGIBILITY_COUNT": 0,
+    "USER_VIEW_WITH_SYNTHETIC_EVENT_ID_COUNT": 0,
+    "MULTI_EVENT_SAME_DOCUMENT_COLLISION_COUNT": 0,
+    "COMPETING_CANONICAL_STATE_COUNT": 0,
+    "CROSS_VERTICAL_FALSE_MATCH_COUNT": 0,
+    "UNSUPPORTED_OBC_CL_RESERVED_MATCH_COUNT": 0,
+    "HORIZONTAL_CATEGORY_IGNORED_COUNT": 0,
+    "VACANCY_DOUBLE_COUNT_COUNT": 0,
+    "RULE_ID_STRING_HEURISTIC_MATCH_COUNT": 0,
+    "LOCATION_PRESENT_AUTO_MATCH_COUNT": 0,
+    "PERSONAL_ELIGIBILITY_WITHOUT_SOURCE_RULE_COUNT": 0,
+    "REPORT_CODE_CONTRADICTION_COUNT": 0,
+    "PRODUCTION_WRITE_COUNT": 0,
+    "CAREER_SIGNAL_PRODUCTION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "artifacts": {
+    "48cs2r2_adversarial_test_results.json": {
+      "bytes": 3096,
+      "sha256": "e00afd1a63b83e038f02f85af8a1fecf0d7f5a4fe520c3134eaa4e2445654c79"
+    },
+    "48cs2r2_age_rule_contract.json": {
+      "bytes": 1814,
+      "sha256": "572f2c734a348ecdc3af292c378f35828aef5907efb9e165ec9b0e85d0361a04"
+    },
+    "48cs2r2_cycle_taxonomy_audit.json": {
+      "bytes": 1015,
+      "sha256": "e374c24a1ad712320ffe32f8d539abc21d1d85f4ed2bdbd8f1c712fee36aa6ec"
+    },
+    "48cs2r2_defect_reconciliation.json": {
+      "bytes": 5132,
+      "sha256": "75d4e1318a8c090faf8574aef783b9498eaab72eab175b62c88f6512d87f8560"
+    },
+    "48cs2r2_eligibility_vs_vacancy_contract.json": {
+      "bytes": 1842,
+      "sha256": "c5691ae3e2134766bb14f40bb20170abfb1de0eee7e2b0257cd2ed020b7d03a4"
+    },
+    "48cs2r2_event_identity_audit.json": {
+      "bytes": 1447,
+      "sha256": "f1e095a07b11a061f90da776c95f29310b87464a85ccbe6cb75b0456862346ed"
+    },
+    "48cs2r2_final_report.md": {
+      "bytes": 14019,
+      "sha256": "7120f7578711fd0f3d61fcbd20638665362725b9b16531a7419b4738f43fb45f"
+    },
+    "48cs2r2_match_dimension_audit.json": {
+      "bytes": 1284,
+      "sha256": "5610f9ae51659292819060d97eec4521f3fd7f5f54ebe3b597e728768ef9269e"
+    },
+    "48cs2r2_no_production_mutation_proof.json": {
+      "bytes": 622,
+      "sha256": "e82c43b18f9b6c63b9d069e76f5e66695774a8e3e5d1e039092cdc5626bc7d19"
+    },
+    "48cs2r2_profile_unknown_semantics.json": {
+      "bytes": 2296,
+      "sha256": "0e5d490d702d18ef39e348258b9d68a933c692a2de43e66a98432122ef3f488e"
+    },
+    "48cs2r2_report_code_consistency.json": {
+      "bytes": 2016,
+      "sha256": "e21d31cc7ec6a059e37202240efc1f5636ace63c6ecac85058bbe04fd661b2f2"
+    },
+    "48cs2r2_reservation_rule_engine.json": {
+      "bytes": 1553,
+      "sha256": "a2837726b24c0d7a44c6c1f8811c1964c64e9eb9bb08a8eebd8cc7b15b96d195"
+    }
+  }
+}

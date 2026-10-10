@@ -1,0 +1,16 @@
+{
+  "testCode": "RC_47B3_LEGACY_CONTAINMENT_RUNTIME_TEST",
+  "executedAt": "2026-09-10T06:11:50.491Z",
+  "legacyErrorType": "EXPECTED_DISABLEMENT_ERROR",
+  "legacyErrorMessage": "DIGIBOOK_LEGACY_MOCK_MATERIALIZATION_DISABLED",
+  "metrics": {
+    "LEGACY_MOCK_MATERIALIZER_ENABLED": false,
+    "LEGACY_MOCK_REACHABLE_FROM_NEW_FLOW": false,
+    "FAIL_CLOSED_GUARD_VERIFIED": true
+  },
+  "auditedFiles": [
+    "functions/src/academicFactory/services/materializationService.ts",
+    "functions/lib/academicFactory/services/materializationService.js"
+  ],
+  "assertionPass": true
+}

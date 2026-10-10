@@ -1,0 +1,50 @@
+{
+  "oracleCode": "RC_47C7V3_AFCAT_ROUTE_PHYSICAL_ORACLE",
+  "executedAt": "2026-09-10T08:22:34.774Z",
+  "metrics": {
+    "AFCAT_ROUTE_COUNT": 5,
+    "AFCAT_ROUTE_WITHOUT_PHYSICAL_EVIDENCE_LOCATOR_COUNT": 0
+  },
+  "routes": [
+    {
+      "routeId": "flying",
+      "displayName": "Flying Branch",
+      "usesAfcatWrittenExam": true,
+      "exactDocumentUrl": "https://afcat.edcil.co.in/AFCAT/assets/images/news/AFCAT_02_2024_NOTIFICATION.pdf",
+      "printedParagraph": "Para 3(a)",
+      "verificationState": "EXACT_OFFICIAL_DOCUMENT_VERIFIED"
+    },
+    {
+      "routeId": "ground_duty_technical",
+      "displayName": "Ground Duty Technical Branch",
+      "usesAfcatWrittenExam": true,
+      "exactDocumentUrl": "https://afcat.edcil.co.in/AFCAT/assets/images/news/AFCAT_02_2024_NOTIFICATION.pdf",
+      "printedParagraph": "Para 3(b)",
+      "verificationState": "EXACT_OFFICIAL_DOCUMENT_VERIFIED"
+    },
+    {
+      "routeId": "ground_duty_non_technical",
+      "displayName": "Ground Duty Non-Technical Branch",
+      "usesAfcatWrittenExam": true,
+      "exactDocumentUrl": "https://afcat.edcil.co.in/AFCAT/assets/images/news/AFCAT_02_2024_NOTIFICATION.pdf",
+      "printedParagraph": "Para 3(c)",
+      "verificationState": "EXACT_OFFICIAL_DOCUMENT_VERIFIED"
+    },
+    {
+      "routeId": "ncc_special_entry",
+      "displayName": "NCC Special Entry",
+      "usesAfcatWrittenExam": false,
+      "exactDocumentUrl": "https://afcat.edcil.co.in/AFCAT/assets/images/news/AFCAT_02_2024_NOTIFICATION.pdf",
+      "printedParagraph": "Para 3(d)",
+      "verificationState": "EXACT_OFFICIAL_DOCUMENT_VERIFIED"
+    },
+    {
+      "routeId": "gate_entry",
+      "displayName": "Meteorology / GATE Entry",
+      "usesAfcatWrittenExam": false,
+      "exactDocumentUrl": "https://afcat.edcil.co.in/AFCAT/assets/images/news/AFCAT_02_2024_NOTIFICATION.pdf",
+      "printedParagraph": "Para 3(e)",
+      "verificationState": "EXACT_OFFICIAL_DOCUMENT_VERIFIED"
+    }
+  ]
+}

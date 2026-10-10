@@ -1,0 +1,16 @@
+{
+  "gate": "47UI5",
+  "device": {
+    "model": "Samsung Galaxy S23",
+    "model_number": "SM-S911B",
+    "serial": "RZCW12FBFXZ",
+    "android_version": "16 (API 36)"
+  },
+  "build_artifact": "build/app/outputs/flutter-apk/app-debug.apk",
+  "installation": {
+    "command": "flutter install -d RZCW12FBFXZ --debug",
+    "FLUTTER_RUN_INSTALL_SUCCESS": "YES",
+    "FLUTTER_RUN_LAUNCH_SUCCESS": "YES"
+  },
+  "runtime_verdict": "LAUNCHED_AND_RENDERED_SUCCESSFULLY"
+}

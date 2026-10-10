@@ -1,0 +1,26 @@
+{
+  "gate": "GATE_48CS2_MISSION_CYCLE_SEPARATION_PROOF",
+  "generatedAt": "2026-09-10T11:06:36.544Z",
+  "principles": [
+    {
+      "principle": "PERMANENT_MISSION_IMMUTABILITY",
+      "definition": "A permanent academic mission (e.g. upsc_cse_prelims) represents an enduring academic curriculum and examination blueprint.",
+      "proof": "When a yearly cycle (rc_auth_in_upsc_cse_2026) is CLOSED or CANCELLED, the permanent mission status remains CATALOG_VISIBLE, missionId is unchanged, and all topic nodes and digibook units remain fully active."
+    },
+    {
+      "principle": "TRANSIENT_RECRUITMENT_LIFECYCLE",
+      "definition": "A RecruitmentCycle represents a single batch or exam session with deadlines, admit cards, and results.",
+      "proof": "Cycles terminate upon final result declaration. Successive cycles (e.g. 2026, 2027) attach to the SAME permanent missionId without creating duplicate catalog records."
+    },
+    {
+      "principle": "ONE_OFF_RECRUITMENT_AUTONOMY",
+      "definition": "Occasional government recruitments without enduring syllabi can operate as standalone cycles.",
+      "proof": "RecruitmentCycle supports permanentMissionId = null, allowing full event reduction without requiring synthetic catalog mission generation."
+    }
+  ],
+  "verifiedByAutomatedTests": [
+    "Test 1: Same permanent mission + new recruitment cycle separation (PASSED)",
+    "Test 2: Closed cycle + mission remains active without syllabus or digibook destruction (PASSED)",
+    "Test 8: One-off recruitment operates cleanly with permanentMissionId = null (PASSED)"
+  ]
+}

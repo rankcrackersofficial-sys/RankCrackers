@@ -1,0 +1,163 @@
+{
+  "profileSchemaVersion": "7.0.0",
+  "draftStatus": "CANONICAL_MISSION_PROFILE_46D7",
+  "missionFamilyId": "uppsc_pcs_prelims",
+  "canonicalDisplayName": "UPPSC PCS – Prelims",
+  "examAuthority": {
+    "authorityKey": "uppsc",
+    "name": "Uttar Pradesh Public Service Commission",
+    "acronym": "UPPSC",
+    "headquarters": "10, Kasturba Gandhi Marg, Prayagraj, Uttar Pradesh",
+    "officialPortalUrl": "https://uppsc.up.nic.in"
+  },
+  "cycleContext": {
+    "preparationTargetCycle": "2027",
+    "officialCycle": null,
+    "officialCycleStatus": "PREPARATION_TARGET_UNANNOUNCED",
+    "sourceBaselineCycle": "2026",
+    "cycleRelation": "PRIOR_OFFICIAL_BASELINE",
+    "notificationStatus": "PRIOR_CYCLE_NOTIFICATION_BOUND",
+    "baselineAdvertisement": "Advt. No. A-1/E-1/2026 (Combined State / Upper Subordinate Services (PCS) Examination 2026)"
+  },
+  "rankCrackersScope": {
+    "supportedStage": "PRELIMS_OBJECTIVE_MCQ",
+    "unsupportedStages": [
+      { "stageName": "Combined State / Upper Subordinate Services (Main) Examination", "reason": "Subjective/Descriptive Written Papers (GS-I to GS-VI, General Hindi, Essay)" },
+      { "stageName": "Personality Test / Viva-Voce", "reason": "Oral Interview Board" }
+    ]
+  },
+  "examinationStructure": {
+    "totalPapers": 2,
+    "totalMarks": 400,
+    "totalDurationMinutes": 240,
+    "languageScripts": ["LATIN", "DEVANAGARI"],
+    "preferredOcrLanguages": ["eng", "hin"],
+    "questionFormat": "OBJECTIVE_MCQ_4_CHOICES",
+    "papers": [
+      {
+        "paperId": "uppsc_pcs_prelims_paper_1",
+        "paperCode": "GS-1",
+        "officialName": "Paper-I: General Studies-I (सामान्य अध्ययन-I)",
+        "totalQuestions": 150,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "marksPerQuestion": 1.3333333333333333,
+        "negativeMarkingPerQuestion": 0.4444444444444444,
+        "negativeMarkingFactor": "ONE_THIRD",
+        "isQualifying": false,
+        "countsForMerit": true,
+        "subjects": [
+          {
+            "subjectId": "current_events_nat_intl",
+            "subjectName": "Current Events of National and International Importance",
+            "subjectAliases": ["Current Affairs", "National & International Events"]
+          },
+          {
+            "subjectId": "history_india_national_movement",
+            "subjectName": "History of India and Indian National Movement",
+            "subjectAliases": ["Ancient Indian History", "Medieval Indian History", "Modern Indian History", "Indian National Movement"]
+          },
+          {
+            "subjectId": "india_world_geography",
+            "subjectName": "India and World Geography - Physical, Social, Economic Geography of India and the World",
+            "subjectAliases": ["Indian Geography", "World Geography", "Physical Geography", "Economic Geography"]
+          },
+          {
+            "subjectId": "indian_polity_governance",
+            "subjectName": "Indian Polity and Governance - Constitution, Political System, Panchayati Raj, Public Policy, Rights Issues",
+            "subjectAliases": ["Polity", "Governance", "Constitution", "Panchayati Raj", "Public Policy"]
+          },
+          {
+            "subjectId": "economic_social_development",
+            "subjectName": "Economic and Social Development - Sustainable Development, Poverty, Inclusion, Demographics, Social Sector Initiatives",
+            "subjectAliases": ["Indian Economy", "Social Development", "Sustainable Development", "Inclusion"]
+          },
+          {
+            "subjectId": "environment_ecology_climate",
+            "subjectName": "General Issues on Environmental Ecology, Bio-diversity and Climate Change",
+            "subjectAliases": ["Environment", "Ecology", "Biodiversity", "Climate Change"]
+          },
+          {
+            "subjectId": "general_science",
+            "subjectName": "General Science",
+            "subjectAliases": ["Physics", "Chemistry", "Biology", "Science and Technology"]
+          },
+          {
+            "subjectId": "up_specific_knowledge",
+            "subjectName": "Specific Knowledge regarding History, Culture, Geography, Economy, Polity, and Heritage of Uttar Pradesh (UP Special)",
+            "subjectAliases": ["UP Special", "UP GK", "Uttar Pradesh General Knowledge", "UP History and Geography"]
+          }
+        ]
+      },
+      {
+        "paperId": "uppsc_pcs_prelims_paper_2",
+        "paperCode": "GS-2 (CSAT)",
+        "officialName": "Paper-II: General Studies-II / CSAT (सामान्य अध्ययन-II)",
+        "totalQuestions": 100,
+        "totalMarks": 200,
+        "durationMinutes": 120,
+        "marksPerQuestion": 2.0,
+        "negativeMarkingPerQuestion": 0.6666666666666666,
+        "negativeMarkingFactor": "ONE_THIRD",
+        "isQualifying": true,
+        "qualifyingThresholdPercentage": 33.0,
+        "qualifyingThresholdMarks": 66.0,
+        "countsForMerit": false,
+        "subjects": [
+          {
+            "subjectId": "comprehension",
+            "subjectName": "Comprehension",
+            "subjectAliases": ["Reading Comprehension", "Passage Analysis"]
+          },
+          {
+            "subjectId": "interpersonal_communication_skills",
+            "subjectName": "Interpersonal Skills including Communication Skills",
+            "subjectAliases": ["Communication Skills", "Interpersonal Aptitude"]
+          },
+          {
+            "subjectId": "logical_reasoning_analytical_ability",
+            "subjectName": "Logical Reasoning and Analytical Ability",
+            "subjectAliases": ["Logical Reasoning", "Analytical Ability", "Critical Thinking"]
+          },
+          {
+            "subjectId": "decision_making_problem_solving",
+            "subjectName": "Decision Making and Problem Solving",
+            "subjectAliases": ["Decision Making", "Administrative Problem Solving"]
+          },
+          {
+            "subjectId": "general_mental_ability",
+            "subjectName": "General Mental Ability",
+            "subjectAliases": ["Mental Ability", "Verbal and Non-Verbal Reasoning"]
+          },
+          {
+            "subjectId": "elementary_mathematics_class_10",
+            "subjectName": "Elementary Mathematics up to Class X Level (Arithmetic, Algebra, Geometry, Statistics)",
+            "subjectAliases": ["Basic Mathematics", "Arithmetic", "Algebra", "Geometry", "Statistics"]
+          },
+          {
+            "subjectId": "general_english_class_10",
+            "subjectName": "General English up to Class X Level",
+            "subjectAliases": ["English Grammar", "Vocabulary", "Sentence Correction", "Class 10 English"]
+          },
+          {
+            "subjectId": "general_hindi_class_10",
+            "subjectName": "General Hindi up to Class X Level (सामान्य हिन्दी)",
+            "subjectAliases": ["Hindi Grammar", "Sandhi", "Samas", "Muhavare", "Vilom", "Paryayvachi"]
+          }
+        ]
+      }
+    ]
+  },
+  "variantArchitecture": {
+    "model": "SINGLE_ACADEMIC_TRACK_ALL_CANDIDATES",
+    "academicVariants": [
+      {
+        "variantKey": "uppsc_pcs_prelims_common",
+        "variantName": "Combined State / Upper Subordinate Services (General & Special Cadres)",
+        "paper1Authority": "uppsc_pcs_prelims_paper_1",
+        "paper2Authority": "uppsc_pcs_prelims_paper_2",
+        "cadreNote": "Common preliminary screening exam for SDM, DSP, BDO, ARTO, Commercial Tax Officer, DSTO, and other executive/subordinate administrative posts."
+      }
+    ]
+  }
+}

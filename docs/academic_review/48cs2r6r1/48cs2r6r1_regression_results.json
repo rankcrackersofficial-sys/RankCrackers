@@ -1,0 +1,62 @@
+{
+  "gate": "48CS2R6R1",
+  "suiteTitle": "Full Historical Regression Suite Across All 48CS Gates",
+  "asOf": "2026-09-10T19:00:00+05:30",
+  "suites": [
+    {
+      "suite": "test_48cs2_source_impact_and_career_signal.js",
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r2_adversarial_hardening.js",
+      "total": 20,
+      "passed": 20,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r3_completeness_safety.js",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r4_trust_boundary.js",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r5_real_source_pilot.js",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r6_barrier_hardening.js",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test_48cs2r6r1_adapter_trust_closure.js",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "status": "PASS"
+    }
+  ],
+  "totalSuites": 7,
+  "totalTests": 83,
+  "totalPassed": 83,
+  "totalFailed": 0,
+  "regressionDetected": false,
+  "verdict": "ZERO_REGRESSIONS_CONFIRMED"
+}

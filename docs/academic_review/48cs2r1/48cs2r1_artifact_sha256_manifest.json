@@ -1,0 +1,82 @@
+{
+  "gate": "GATE_48CS2R1",
+  "timestamp": "2026-09-10T11:27:58.409Z",
+  "lane": "AGENT_3_BACKEND_MATERIALIZER_CAREER_SIGNAL_ENGINE",
+  "root": "c:\\\\RankCrackers\\\\RankCrackers-55",
+  "metrics": {
+    "NOTIFICATION_CANDIDATE_AS_CANONICAL_DELIVERY_COUNT": 0,
+    "USER_VIEW_COLLAPSED_INTO_EVENT_COUNT": 0,
+    "KNOWN_INELIGIBLE_MAPPED_TO_INCOMPLETE_COUNT": 0,
+    "CROSS_VERTICAL_CATEGORY_FALSE_APPLICABILITY_COUNT": 0,
+    "HORIZONTAL_VERTICAL_DOUBLE_COUNT_COUNT": 0,
+    "ACADEMIC_QUALIFICATION_FALSE_EQUIVALENCE_COUNT": 0,
+    "ARBITRARY_EXPIRY_HORIZON_COUNT": 0,
+    "PERMANENT_MISSION_REQUIRED_FOR_NON_MISSION_OPPORTUNITY_COUNT": 0,
+    "NON_JOB_OPPORTUNITY_FORCED_INTO_JOB_RECRUITMENT_COUNT": 0,
+    "TEST_SCENARIO_FAILURE_COUNT": 0,
+    "CAREER_SIGNAL_PRODUCTION_CREATE_COUNT": 0,
+    "S2_JOB_COUNT": 0
+  },
+  "artifacts": {
+    "48cs2r1_48cs2_defect_reconciliation.json": {
+      "bytes": 3136,
+      "sha256": "499cb304a9042793027839c55ac796deb9d05483d23fe7b478139fd6963f5b49"
+    },
+    "48cs2r1_career_profile_domain_model.json": {
+      "bytes": 1235,
+      "sha256": "5a0c1535a9afa2a1a5541a3635d294caf9321a301d682a0d750182ac8e9402f8"
+    },
+    "48cs2r1_event_and_user_view_identity.json": {
+      "bytes": 854,
+      "sha256": "a748deaeb471ba620ec391ed0263968ddf4b6d12031fa05ba73c3e9864ec5f53"
+    },
+    "48cs2r1_explainability_contract.json": {
+      "bytes": 766,
+      "sha256": "455d32ac5dee0a84aab278fc58952d2a1191b638daede23afba6045dabf0ec5c"
+    },
+    "48cs2r1_final_report.md": {
+      "bytes": 14191,
+      "sha256": "e121c5400bf1b16f42f4eca70d666e1eae866d3a10273d473a0241954d67befe"
+    },
+    "48cs2r1_match_state_machine.json": {
+      "bytes": 1086,
+      "sha256": "9f42b471df0e5fd5f0e2619521ab2d8682d46f38b1c8a18c4ea916d8e1c7b79d"
+    },
+    "48cs2r1_notification_candidate_boundary.json": {
+      "bytes": 1529,
+      "sha256": "8c5d48b1ce7c47caea1fc3f03387b54bedfaff7aec791ef549b293dba35f987c"
+    },
+    "48cs2r1_official_rule_model.json": {
+      "bytes": 1481,
+      "sha256": "ff97339932f91fd54c38b9614dbc9237d5f0f606369c1175806e07b34c508622"
+    },
+    "48cs2r1_opportunity_kind_contract.json": {
+      "bytes": 753,
+      "sha256": "f57d5a2f202e80dfdee72513aea2f4a2588cb803e3a3b6ecbec67d982664996e"
+    },
+    "48cs2r1_participation_state_model.json": {
+      "bytes": 922,
+      "sha256": "374d4b6cd76fcb7d349cc3ff3101e327071f9e083d86171cd6b29bfa81025c4e"
+    },
+    "48cs2r1_persistence_migration_proposal.json": {
+      "bytes": 1341,
+      "sha256": "92fb3d5a907c71a645e71d0fba225e805702879f6128a4fe0818bc4e364d5323"
+    },
+    "48cs2r1_personalization_test_results.json": {
+      "bytes": 2080,
+      "sha256": "6cf5e81baae0724f8a67122414a9dcdc4cfb095b07d29b82c8558dc946a1d697"
+    },
+    "48cs2r1_reservation_engine_contract.json": {
+      "bytes": 1690,
+      "sha256": "9dcff896a3e9187e8bbcb7bda344c2b3afa513d711a2e3737f328c8e1d9c4083"
+    },
+    "48cs2r1_source_impact_router_hardening.json": {
+      "bytes": 667,
+      "sha256": "e7875d0e1a59c662f5f4ab01fef2500258937e098c4a1dfe4ac8d616735e2b4a"
+    },
+    "48cs2r1_vacancy_matrix_model.json": {
+      "bytes": 1609,
+      "sha256": "efef918667cb91247a382bfd6042bd08cfc8d8f587a5f0c6b8ba0638be75dac0"
+    }
+  }
+}
