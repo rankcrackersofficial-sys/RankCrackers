@@ -31,3 +31,10 @@ OFFICIAL ≠ DERIVED. Official extraction never invents levels. Derived nodes mu
 SSC CGL Golden Pilot mission `ssc_cgl`, registry `rec_ssc_ssc_cgl`, authority `auth_in_ssc`, cycle `ssc_cgl_2026`. Official notice `HQ-C11018/1/2026-C-1` (2026-05-21), SHA256 `54A01DDA220CB8836F19983908E1F3FD14DDBA8286781765A02765728A89E070`. Historical held-review packet `arp_61d75c271b1b7de80c6311ba35d77b9671640c0d` was PENDING_FOUNDER_REVIEW; not proof of accepted binding.
 
 **Canonical syllabus rules:** Official Syllabus Authority (OSA) preserves published hierarchy; Derived Syllabus Decomposition (DSD) adds derived MICRO_TOPIC/ATOMIC_TOPIC only inside nearest official ancestor; MABP versioned mission depth/scope policy; Atomic Stop before pedagogy; PYQ scope exceptions require review. AI candidate is not official authority. Current deployed/implemented coverage remains to verify.
+
+## DOMAIN-A bootstrap reconciliation — 2026-10-10
+**BOOTSTRAP:** COMPLETE, READ_ONLY; GitHub SHA `a57657ea3c984f1b6ced4f72c34c7734b28c15ab`. **Source:** Domain-A room report supplied to Master; not a fresh code audit.
+
+**Direct architecture verification reported:** OSA preserves the authority's published structure without inventing missing levels. Derived Micro/Atomic nodes are separate from official levels and require nearest official ancestor; Atomic Stop is semantic, not a fixed depth/quota; MABP separates scope/depth/difficulty and governs PYQ exceptions. Earlier **mandatory exactly-five-level** assumptions conflict with the later Founder-locked OSA/DSD contract and **must not be restored** as current authority. This is an architecture-precedence observation, not a new Founder decision.
+
+**Still unverified:** OSA/DSD/DST/MABP/PYQ exception current code coverage, tests, mission-by-mission source inventory, implementation SHA, current blockers. **Next evidence task:** bounded contract-to-code classification (`IMPLEMENTED_AND_PROVEN / IMPLEMENTED_NOT_PROVEN / PARTIAL / MISSING / SUPERSEDED_LEGACY / NOT_APPLICABLE`). No implementation or authority rewrite authorized.
