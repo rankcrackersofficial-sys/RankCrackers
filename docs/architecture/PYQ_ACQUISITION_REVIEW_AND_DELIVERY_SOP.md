@@ -1,7 +1,13 @@
 # RankCrackers — PYQ Acquisition, Review & Delivery SOP v1.0
 
 ## End-to-end flow
-Authority Watch → Official Evidence → Mission Candidate → Founder Acceptance → Mission Authority → Effective Examination Blueprint → Effective Syllabus/OSA → DSD/Atomic Verification → PYQ Discovery → Paper Acquisition → Question Appearance Extraction → Final-Key Acquisition → Exact Answer Mapping → Canonicalization → Syllabus/Atom Mapping → Review → Central Question Repository → DigiBook/Crucible/Test Arena Projection.
+Authority Watch → Official Evidence → Mission Candidate → Founder Acceptance → Mission Authority → Effective Examination Blueprint → Effective Syllabus/OSA → DSD/Atomic Verification.
+
+From verified DSD/Atoms, two parallel lanes are authorized:
+- CORE TEACHING LANE: DigiBook Construction → Teaching Execution → Taught Content Authority → Crucible/Test Arena eligibility.
+- PYQ ENRICHMENT LANE: PYQ Discovery → Paper Acquisition → Question Appearance Extraction → Final-Key Acquisition → Exact Answer Mapping → Canonicalization → Syllabus/Atom Mapping → Review → Central Question Repository → optional enrichment/calibration of DigiBook, Crucible and Test Arena.
+
+PYQ acquisition/completion is NOT a prerequisite for DigiBook construction, teaching, Taught Content Authority, RankCrackers-authored question creation, Crucible or Test Arena. Missing PYQ evidence changes enrichment coverage, not Mission academic authority.
 
 ## Acquisition order
 1. Search competent authority official archives/pages/documents.
