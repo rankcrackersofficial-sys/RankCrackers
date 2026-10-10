@@ -19,3 +19,9 @@
 After a durable Founder decision, verified milestone, material blocker change, or deployment/live proof, the owning Domain proposes a bounded state update with evidence. Review and merge according to actual repository governance. Keep domain summaries concise and link to the canonical contracts.
 
 **PC repository:** `G:\RankCrackers Project\RankCrackers-55`. **GitHub:** `rankcrackersofficial-sys/RankCrackers`. **Canonical branch:** `safety/rc-g2-pre-notification-schema`. Never force push. No new worktree is required for ordinary documentation updates.
+
+
+## Founder navigation / acceptance checkpoint
+The GitHub tree is visible on this PR branch now. **Do not describe it as merged or active on the protected canonical branch.** Pull Request #2 requires at least one eligible approving review (as shown in the Founder screenshot). A reviewer with write access must approve; do not bypass policy. Once merged, PC `G:\RankCrackers Project\RankCrackers-55` must fetch/pull safely after confirming its worktree and 11 accepted local generated modifications.
+
+**Existing chat integration:** use a separate one-time command for each DOMAIN-A through DOMAIN-E, provided in [CHAT_BOOTSTRAP.md](governance/CHAT_BOOTSTRAP.md). GitHub cannot automatically inject commands into pre-existing chat sessions.
