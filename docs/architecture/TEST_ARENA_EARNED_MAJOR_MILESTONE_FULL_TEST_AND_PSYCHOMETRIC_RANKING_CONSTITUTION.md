@@ -1,8 +1,8 @@
 # RANKCRACKERS — EARNED MAJOR MILESTONE, FULL TEST AND PSYCHOMETRIC RANKING CONSTITUTION
 
 Document ID: RC-TESTARENA-EMR-001
-Version: 1.0 — FOUNDER-DIRECTION-CONSOLIDATED / NUMERIC-POLICY-PENDING
-Status: Canonical architecture candidate for implementation planning; NOT runtime implemented, NOT psychometrically validated
+Version: 1.1 — FOUNDER-DIRECTION-CONSOLIDATED / RUNTIME-AUDIT-SHARPENED / NUMERIC-POLICY-PENDING
+Status: Canonical Test Arena architecture baseline for subsequent audit/reconciliation; NOT runtime implemented, NOT psychometrically validated
 Authority: Subordinate to verified official mission/exam/syllabus authority, taught authority, question closure and Founder decisions
 Extends: TEST_ARENA_EXECUTION_CONTRACT.md; CRUCIBLE_TO_TEST_ARENA_HANDOFF_AND_FORMAL_ASSESSMENT_BOUNDARY_CONTRACT.md; CRUCIBLE_98_DAY_DAY_BY_DAY_CORE_OPERATING_SPECIFICATION.md
 Depends: Effective Exam Blueprint, Canonical Syllabus/DSD, Teaching Execution/Taught Manifest, Question Repository/Knowledge Closure, scoring/attempt evidence.
@@ -92,6 +92,7 @@ WithinFormPercentile: 100 * (# valid cohort scores <= candidate score) / N under
 EquatedScore: validated transformed score on benchmark scale, with error/uncertainty and method version.
 BenchmarkPercentile: candidate's calibrated score position relative to a FIXED declared reference population and reference period; not a universal timeless ability value. If cohort is dynamic, label LIVE_COHORT_PERCENTILE and timestamp/snapshot; it can change.
 Rank: ordinal placement among unique eligible persons in a declared cohort, not a deterministic function of percentile alone. Tie handling, precision, exclusions, identity, attempts and cutoff must be published. Percentile cannot uniquely reconstruct exact rank. Do not imply 94th percentile equals 94% correct.
+Tie policy is mandatory before rank publication: equal governed comparison scores MUST NOT receive arbitrary different competitive standing merely because of input/list order. The approved policy must define competition/dense/other justified rank convention, secondary official-merit tie-breakers where applicable, unresolved-tie behavior, and percentile treatment. A sequential `index + 1` assignment without a governed tie rule is NOT an accepted production rank algorithm.
 National pool is meaningful for all-India comparable mission cohort; State pool filters verified appropriate jurisdiction within the SAME benchmark scale and eligibility rules. State percentile/rank can differ due to population, not due to separate question scoring. Central exams may show national primary; state recruitments state primary. Show denominators, timestamp, methodology/status and minimum cohort privacy thresholds.
 Official recruitment merit rules control any permitted multi-paper aggregate: qualifying papers cannot be naively added to merit; missing papers prohibit composite rank; no cross-stage arithmetic. No simulated rank equals an official authority rank.
 
@@ -134,7 +135,7 @@ F13 six expert-balanced forms without empirical linkage produce NO cross-form ra
 F14 randomized/anchor linkage with violated assumptions blocks equated rank.
 F15 nonrandom early vs late student populations cannot be merged using raw within-form percentiles as though equivalent.
 F16 identical raw marks on different forms need not imply identical calibrated performance.
-F17 rank tie handling, one-person/one-ranked-attempt, duplicate accounts and small cohorts.
+F17 rank tie handling is deterministic and policy-governed; equal comparison scores cannot be separated by incidental list order; one-person/one-ranked-attempt, duplicate accounts and small cohorts are handled.
 F18 State and National cohorts share scale but have distinct denominators; region verification and privacy respected.
 F19 blueprint corrigendum invalidates future benchmark and preserves historical attempt binding.
 F20 item defect triggers immutable regrade and rank revision with user-facing explanation.
@@ -159,6 +160,9 @@ Gate F: independent Codex implementation/tests, Founder Web review, non-regressi
 No ranking claim before Gate D. No code changes/deployment implied by this document.
 
 ## 21. Integration conflict register for later audit
+RUNTIME-AUDIT 2026-10-10: PC forensic audit at local HEAD `ffb20f4a19d665739a5ba16414cf427e231a0db4` found `TestArenaEngine.computeEventRankings` already fail-closes on rank authority, cohort ID, ranking-policy version, governed minimum cohort size and multi-form equating status, and excludes historical attempts from live ranking. These are useful implementation candidates to preserve subject to final audit; they do NOT supersede this constitution.
+RUNTIME-AUDIT 2026-10-10: the inspected runtime computes event rank by descending raw-score order and sequential position and did not prove an explicit governed tie policy. This is a reconciliation blocker: production ranking must satisfy Section 13 tie governance before authority is granted.
+RUNTIME-AUDIT 2026-10-10: active Rank Radar is not a Test Arena ranking authority. Its current Battle Tools route leads to a governed not-ready surface; separate static ranking presentations are not accepted evidence for Test Arena or Rank Radar. Rank Radar architecture is to be governed separately as a downstream intelligence/interpretation surface and MUST NOT silently manufacture a second competing rank/percentile authority.
 LEGACY: Crucible engine 100-Day/Day99-100 Major logic conflicts with 98-day rotation and Test Arena ownership.
 LEGACY: fixed 25/50/100 question counts and JEE-2027 defaults in Micro/Macro/mission blueprint need blueprint-derived reconciliation.
 LEGACY: Test Arena major assembly currently lacks protected eligibility, milestone, calibrated form/equating, and multi-paper event orchestration; unsafe section count defaults must be reviewed.
@@ -170,7 +174,7 @@ D1 Minimum genuine tenure, minimum distinct valid Micros/Macros, Rebuild evidenc
 D2 Canonical weighted syllabus milestone construction per mission/paper and required NEW/retention breadth.
 D3 Major paper size/duration derivation and bank-depth/exposure reserves per stage/component.
 D4 Ranked administration window vs validated continuous administration; retake, missed-window and form-assignment rules.
-D5 Empirical sample/precision thresholds, calibration method, reference population and ranking visibility policy.
+D5 Empirical sample/precision thresholds, calibration method, reference population, explicit tie/rank convention and ranking visibility policy.
 D6 Full Test protected access thresholds and treatment of optional open diagnostic simulation.
 These are parameter decisions, NOT permission to replace the architecture with arbitrary constants.
 
