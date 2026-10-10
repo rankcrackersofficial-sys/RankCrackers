@@ -28,3 +28,7 @@
 
 ## Founder latest priority override — 2026-10-10
 **This section supersedes older planning-priority ordering above (it does not change architecture or accepted test evidence).** Priority is **Golden Pilot → actual implementation/integration → bounded necessary validation → deployment-readiness → governed live proof**. A one-time evidence reconciliation must remain short and focused on real source/data/security and Golden Pilot dependencies, not reopen whole-project audits. RC-PCMS documentation/PR review is operational continuity work and must not manufacture a full product hold. Sacred Archive work remains separate/parked if it is not a proven prerequisite of the Golden Pilot.
+
+
+## Founder mission population pivot — 2026-10-10
+Golden Pilot execution priority: existing `ssc_cgl` → short identity/English exam-medium and official-English-material precheck → Notification Worker official acquisition/provenance/cycle binding/structured Founder Form with source locators → governed review. Then Syllabus and PYQ workers parallel. Watch **must remain intact** for future new mission discovery and, immediately for registered missions, future official updates delivered to Founder Console review. Historical backfill is separate. Do not reopen large audits or redesign schemas. Await bounded Codex actual dependency/minimum-delta report before implementation. This documentation does not claim runtime readiness.
