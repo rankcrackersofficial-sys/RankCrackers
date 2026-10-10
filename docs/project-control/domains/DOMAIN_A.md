@@ -1,0 +1,44 @@
+# RANKCRACKERS — DOMAIN-A — Official Authority & Syllabus
+
+**DOMAIN_ID:** DOMAIN-A
+**NAME:** Official Authority / Canonical Syllabus
+**STATUS:** INITIAL_STATE_PENDING_RECONCILIATION
+**PURPOSE:** Define WHAT the verified examination authority permits.
+**BOUNDARY:** Official evidence, OSA, DSD, nearest official ancestor, Atomic Stop, MABP, PYQ exception governance. Does not create DigiBook teaching or questions.
+
+## Canonical architecture
+- [Canonical Syllabus & Derived Decomposition Contract](../../architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md)
+- Official evidence and mission-specific contracts: identify accepted latest paths during reconciliation.
+
+## Locked direction
+OFFICIAL ≠ DERIVED. Official extraction never invents levels. Derived nodes must remain within verified official scope and be separately verified. PYQ does not independently expand syllabus authority.
+
+## Current implementation / accepted milestones
+**NOT_YET_RECONCILED_AGAINST_CURRENT_GIT_HEAD.** Do not equate this with NOT_IMPLEMENTED.
+
+**ACTIVE_TASK:** None verified by this foundation setup.
+**REAL_BLOCKERS:** Not yet established.
+**TEST_DEBT:** Not yet established.
+**INFRASTRUCTURE_DEBT:** Not yet established.
+**PENDING_DECISIONS:** None newly authorized.
+**NEXT_AUTHORIZED_ACTION:** Bounded contract-to-code gap reconciliation.
+**LAST_VERIFIED_SHA:** Pending current branch check.
+**LAST_VERIFIED_AT:** Pending.
+**EVIDENCE_REFERENCES:** Existing architecture link above; runtime evidence pending.
+
+
+## Primary historical mission/source state
+SSC CGL Golden Pilot mission `ssc_cgl`, registry `rec_ssc_ssc_cgl`, authority `auth_in_ssc`, cycle `ssc_cgl_2026`. Official notice `HQ-C11018/1/2026-C-1` (2026-05-21), SHA256 `54A01DDA220CB8836F19983908E1F3FD14DDBA8286781765A02765728A89E070`. Historical held-review packet `arp_61d75c271b1b7de80c6311ba35d77b9671640c0d` was PENDING_FOUNDER_REVIEW; not proof of accepted binding.
+
+**Canonical syllabus rules:** Official Syllabus Authority (OSA) preserves published hierarchy; Derived Syllabus Decomposition (DSD) adds derived MICRO_TOPIC/ATOMIC_TOPIC only inside nearest official ancestor; MABP versioned mission depth/scope policy; Atomic Stop before pedagogy; PYQ scope exceptions require review. AI candidate is not official authority. Current deployed/implemented coverage remains to verify.
+
+## DOMAIN-A bootstrap reconciliation — 2026-10-10
+**BOOTSTRAP:** COMPLETE, READ_ONLY; GitHub SHA `a57657ea3c984f1b6ced4f72c34c7734b28c15ab`. **Source:** Domain-A room report supplied to Master; not a fresh code audit.
+
+**Direct architecture verification reported:** OSA preserves the authority's published structure without inventing missing levels. Derived Micro/Atomic nodes are separate from official levels and require nearest official ancestor; Atomic Stop is semantic, not a fixed depth/quota; MABP separates scope/depth/difficulty and governs PYQ exceptions. Earlier **mandatory exactly-five-level** assumptions conflict with the later Founder-locked OSA/DSD contract and **must not be restored** as current authority. This is an architecture-precedence observation, not a new Founder decision.
+
+**Still unverified:** OSA/DSD/DST/MABP/PYQ exception current code coverage, tests, mission-by-mission source inventory, implementation SHA, current blockers. **Next evidence task:** bounded contract-to-code classification (`IMPLEMENTED_AND_PROVEN / IMPLEMENTED_NOT_PROVEN / PARTIAL / MISSING / SUPERSEDED_LEGACY / NOT_APPLICABLE`). No implementation or authority rewrite authorized.
+
+
+## Founder decision — 2026-10-10 — Mission identity and official-English precheck
+**DOMAIN-A owns official authority/mission identity and academic source authority, not bulk document processing.** For initial mission population: official exam exists; conducting authority verified; official latest applicable English notification available; official English syllabus/scheme authority available standalone or embedded; official exam rules show English is a supported **examination medium**; no duplicate permanent mission. A bilingual/multilingual exam is eligible when English is among officially permitted mediums. English source material alone does NOT prove English exam medium. RankCrackers teaching language currently English-only. Precheck is lightweight source-availability/identity proof, NOT full extraction/hash/clause interpretation. Missing evidence → HOLD; do not fabricate. Permanent exam mission and annual cycles separate. PYQ not mandatory for registration; no PYQ may independently extend syllabus. Historical and upcoming/completed exams may qualify; population priority favors current/upcoming. Detailed official evidence and syllabus/PYQ verification belongs to respective workers. **Founder-approved direction; implementation not proven.**
