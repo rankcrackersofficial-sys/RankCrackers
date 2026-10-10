@@ -454,6 +454,11 @@ service cloud.firestore {
       allow write: if false; // Server/Admin SDK only; immutable authority records.
     }
 
+    match /eligibility_evaluations/{evaluationId} {
+      allow read: if isFounder();
+      allow write: if false; // Server/Admin SDK only; immutable authority records.
+    }
+
     function targetHasMatchingCanonicalMobile() {
       return request.resource.data.keys().hasAny(['mobile'])
           && request.resource.data.mobile is string
@@ -882,4 +887,3 @@ service cloud.firestore {
     }
   }
 }
-

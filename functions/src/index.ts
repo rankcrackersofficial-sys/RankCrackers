@@ -11,4 +11,5 @@ export { syllabusLifecycleWorker, syllabusIngestionOrchestrator, canonicalSource
 export { canonicalSourceReconciliationWorker } from './workers/canonicalSourceReconciliationWorker';
 export { finalizeTestArenaAttempt, TestArenaFinalScorerWorker } from './workers/testArenaFinalScorerWorker';
 export { ensureProfileSnapshot } from './workers/profileSnapshotWorker';
-
+export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
+export { buildCareerSignal } from './services/careerSignalAuthority';
