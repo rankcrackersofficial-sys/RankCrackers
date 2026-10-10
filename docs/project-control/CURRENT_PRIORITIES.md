@@ -24,3 +24,7 @@
 **Next bounded steps, not five independent project-wide audits:** (1) review this PR's documentation reconciliation, obtain eligible approval and merge under protection; (2) G-drive safe synchronization; (3) update each Domain's current SHA with one read-only post-merge acknowledgement; (4) collect the specific primary acceptance evidence each Domain identified during the already planned bounded canonical reconciliation. In parallel, do not stall unrelated safe development for documentation debt.
 
 **Special architecture questions:** DOMAIN-A fixed hierarchy supersession against Founder-locked OSA/DSD; DOMAIN-C universal-vs-mission-specific 98-day interpretation. Do not amend either law by assumption.
+
+
+## Founder latest priority override — 2026-10-10
+**This section supersedes older planning-priority ordering above (it does not change architecture or accepted test evidence).** Priority is **Golden Pilot → actual implementation/integration → bounded necessary validation → deployment-readiness → governed live proof**. A one-time evidence reconciliation must remain short and focused on real source/data/security and Golden Pilot dependencies, not reopen whole-project audits. RC-PCMS documentation/PR review is operational continuity work and must not manufacture a full product hold. Sacred Archive work remains separate/parked if it is not a proven prerequisite of the Golden Pilot.
