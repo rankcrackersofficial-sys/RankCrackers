@@ -13,4 +13,4 @@ Rank Cracker केवल एक application नहीं है। यह व�
 यह प्रथम edition अंतिम रूप नहीं है। Rank Cracker जैसे जीवंत project के साथ यह पुस्तक भी विकसित होगी—नए features, नए workflows, नए lessons और नए engineering decisions इसमें समय-समय पर जोड़े जाएँगे।
 
 — प्रबंध संपादक  
-Rank Cracker Book
+RankCrackers — Living Technical Product & Architecture Book

@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import subprocess
 import sys
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -21,13 +23,15 @@ DEFAULT_MANIFEST = ROOT / "docs" / "rankcrackers_book" / "github_source_manifest
 
 
 def fetch_json(url: str) -> object:
-    request = Request(
-        url,
-        headers={
-            "Accept": "application/vnd.github+json",
-            "User-Agent": "RankCrackers-Book-Tracker/1.0",
-        },
-    )
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "RankCrackers-Book-Tracker/1.0",
+    }
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    request = Request(url, headers=headers)
     with urlopen(request, timeout=20) as response:
         return json.load(response)
 
@@ -37,6 +41,71 @@ def github_commits_url(repo: str, branch: str, path: str | None = None) -> str:
     if path:
         query["path"] = path
     return f"https://api.github.com/repos/{repo}/commits?{urlencode(query)}"
+
+
+def check_via_local_git(repo: str, branch: str, manifest: dict, result: dict) -> None:
+    remote_ref = f"origin/{branch}"
+    result["tracked_sources"] = []
+    result["documentation_commits_seen"] = []
+    result["status"] = "PASS"
+    result["mode"] = "LOCAL_GIT_TRACKING"
+
+    for source in manifest.get("tracked_sources", []):
+        path = source["path"]
+        recorded_sha = source.get("latest_observed_commit")
+        cp = subprocess.run(
+            ["git", "log", "-n", "1", "--format=%H", remote_ref, "--", path],
+            capture_output=True,
+            text=True,
+            cwd=str(ROOT),
+        )
+        latest_sha = cp.stdout.strip() or None
+        source_status = "UNCHANGED" if latest_sha == recorded_sha else "REMOTE_AHEAD"
+        result["tracked_sources"].append(
+            {
+                "path": path,
+                "book_chapter": source.get("book_chapter"),
+                "recorded_commit": recorded_sha,
+                "remote_latest_commit": latest_sha,
+                "remote_latest_url": f"https://github.com/{repo}/commit/{latest_sha}" if latest_sha else None,
+                "status": source_status,
+            }
+        )
+        if source_status == "REMOTE_AHEAD":
+            result["status"] = "ACTION_REQUIRED"
+
+    cp = subprocess.run(
+        ["git", "log", "-n", "20", "--format=%H\t%s", remote_ref],
+        capture_output=True,
+        text=True,
+        cwd=str(ROOT),
+    )
+    for line in cp.stdout.splitlines():
+        if not line.strip():
+            continue
+        parts = line.split("\t", 1)
+        sha = parts[0]
+        msg = parts[1] if len(parts) > 1 else ""
+        diff_cp = subprocess.run(
+            ["git", "diff-tree", "--no-commit-id", "--name-only", "-r", sha],
+            capture_output=True,
+            text=True,
+            cwd=str(ROOT),
+        )
+        doc_files = [
+            f.strip()
+            for f in diff_cp.stdout.splitlines()
+            if f.strip().startswith("docs/") and Path(f.strip()).suffix.lower() in {".md", ".mdx", ".rst", ".txt", ".adoc"}
+        ]
+        if doc_files:
+            result["documentation_commits_seen"].append(
+                {
+                    "sha": sha,
+                    "message": msg,
+                    "html_url": f"https://github.com/{repo}/commit/{sha}",
+                    "documentation_files": doc_files,
+                }
+            )
 
 
 def main() -> int:
@@ -106,8 +175,12 @@ def main() -> int:
             if source_status == "REMOTE_AHEAD":
                 result["status"] = "ACTION_REQUIRED"
     except (HTTPError, URLError, TimeoutError, OSError, RuntimeError, KeyError, json.JSONDecodeError) as error:
-        result["status"] = "CHECK_FAILED"
-        result["error"] = str(error)
+        # Graceful fallback to local git remote-tracking ref when GitHub API rate-limits or is offline
+        try:
+            check_via_local_git(repo, branch, manifest, result)
+        except Exception as git_error:
+            result["status"] = "CHECK_FAILED"
+            result["error"] = f"{error}; Local git fallback failed: {git_error}"
 
     if args.as_json:
         print(json.dumps(result, ensure_ascii=False, indent=2))

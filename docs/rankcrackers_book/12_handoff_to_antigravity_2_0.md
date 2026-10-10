@@ -1,7 +1,7 @@
-# Rank Cracker Book — Antigravity 2.0 Handoff Document
+# RankCrackers Book — Antigravity 2.0 Handoff Document
 
 **Handoff recipient:** Antigravity 2.0  
-**Handoff purpose:** Rank Cracker Book project को व्यवस्थित रूप से आगे बढ़ाना  
+**Handoff purpose:** RankCrackers Book project को व्यवस्थित रूप से आगे बढ़ाना
 **Primary language:** हिन्दी, आवश्यक technical terminology और code English में  
 **Status:** Active long-form documentation project
 
@@ -74,7 +74,7 @@ Book manuscript folder:
 
 Canonical Google Docs living book:
 
-[Rank Cracker Book — Living Technical Reference](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
+[RankCrackers — Living Technical Product & Architecture Book](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
 
 यह document RankCrackers Official Google Drive account में बनाया गया है। इसमें title page, official logo, editorial declaration, professional contents structure और प्रारंभिक chapter summaries मौजूद हैं। आगे substantive chapters पूरे होने पर Google Docs manuscript में भी update किए जाएँ।
 
@@ -267,7 +267,7 @@ Antigravity 2.0 को audit स्वयं करना है। किसी
 
 Book को complete तभी माना जाएगा जब project के relevant source areas audit हो चुके हों, प्रत्येक domain के user और technical workflows लिखे जा चुके हों, code references जुड़े हों, security और failure states documented हों, और local तथा Google Docs manuscripts में consistency verify हो चुकी हो। Page count completion criterion नहीं है; completeness, accuracy और maintainability हैं।
 
-**Handoff conclusion:** Antigravity 2.0 को इस document को operating brief मानकर Rank Cracker Book को उसी professional, exhaustive और code-integrated standard पर आगे बढ़ाना है।
+**Handoff conclusion:** Antigravity 2.0 को इस document को operating brief मानकर RankCrackers Book को उसी professional, exhaustive और code-integrated standard पर आगे बढ़ाना है।
 
 ## 13. Chief Author directive
 

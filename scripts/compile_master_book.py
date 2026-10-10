@@ -34,7 +34,7 @@ ordered_files = [
 ]
 
 combined_md = []
-combined_md.append("# Rank Cracker Book — Living Technical-Product Reference\n\n")
+combined_md.append("# RankCrackers — Living Technical Product & Architecture Book\n\n")
 combined_md.append("**आधिकारिक संदर्भ ग्रंथ — Rank Crackers Ecosystem**\n\n")
 combined_md.append("*(Compiled Living Reference Manuscript — Preliminary References & Canonical Volumes A–I)*\n\n")
 combined_md.append("---\n\n")
@@ -85,7 +85,7 @@ html_template = f"""<!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="utf-8">
-<title>Rank Cracker Book — Living Technical Reference</title>
+<title>RankCrackers — Living Technical Product &amp; Architecture Book</title>
 <style>
   @page {{
     size: A4 portrait;
