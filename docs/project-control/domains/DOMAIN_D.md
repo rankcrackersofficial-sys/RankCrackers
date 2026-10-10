@@ -23,3 +23,9 @@ C→G migration closed and R39 green baseline reported. SSC CGL candidate/Hostin
 **LAST_VERIFIED_SHA:** Pending.
 **LAST_VERIFIED_AT:** Pending.
 **EVIDENCE_REFERENCES:** GitHub baseline `5161592ddafb42f1ecc8923cc7b7b0309934cc83` (historical).
+
+
+## Primary historical SSC CGL pilot identifiers
+Mission `ssc_cgl`; source observation `sobs_0dfefaf28a34b5b9a1fd345f`; discovery `dlin_5f7105c581eb16e361c26ee6`; held review packet `arp_61d75c271b1b7de80c6311ba35d77b9671640c0d` pending Founder decision in earlier evidence. Historical deployed candidate `3f233037aa16dc39ccec514d31d724afa0cb1926`; hosting identity and live Gate-B remained to prove in the prior report. **Historical only; not verified live today.**
+
+**Runtime safety:** Firebase project `rankcrackers-55`, Founder Web `rankcrackers.in`, function `us-central1/handleSentinelAction`. Strict hosting identity gate; no IAM escalation or unauthorized deployment. Historical R39: Functions build PASS, Jest 0/48 failed, Flutter tests PASS; not rerun here.
