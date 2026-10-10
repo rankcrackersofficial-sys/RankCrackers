@@ -287,3 +287,20 @@ Chapter 13 (`13_founder_web_operations_and_mission_control.md`) को पूर
 3. **9 Canonical Mission Pipeline Invariants:** `docs/patch_safety/rc_founder_web_canonical_backend_live_integration_20260831/` के 9 अनिवार्य सुरक्षा नियमों (Quad Identity Validation, `update_mission_variables` >=12 char reason, lifecycle fail-closed guards, official documents SHA-256 pipeline, publish readiness 5-criteria gate, और student health non-interference) को पूर्णतः संहिताबद्ध किया गया।
 4. **Live Discrepancy Heuristics:** `FounderMissionInventory` के `needsAttention` को लाइव कोडबेस (`realm == null || (!sourceReady && !sourceCandidate) || (!hasCanonicalVariables && !hasLegacyVariables)`) के अनुसार अद्यतन किया गया।
 5. **Governed Lifecycle & Deletion Preflight:** पोर्टफोलियो कार्ड के लाइफसाइकिल म्यूटेशन्स (`archive_realm`, `restore_realm`) तथा परमानेंट डिलीट प्रीफ़्लाइट (मिशन आईडी मिलान, >=12 वर्ण संस्थापक कारण, और शून्य-निर्भरता सत्यापन) को प्रामाणिक रूप से दर्ज किया गया।
+
+## 10. Crucible Protocol & 98-Day Continuous Ring Atomic Expansion — 2026-10-10
+
+Chapter 10 (`10_crucible_protocol_and_schedule_engine.md`) को GitHub Remote Architecture Branch (`origin/architecture/watch-mission-evidence-contract-20261010`) पर प्रकाशित 26 नए कैनोनिकल अनुबंधों तथा लाइव कोडबेस (`lib/features/crucible/`) के साथ पूर्णतः समेकित और विस्तारित किया गया है:
+
+1. **Fixed Cycle Law (`RC-CRUCIBLE-C98-001`):** 98 दिनों का निश्चित चक्र ($7 \text{ Phases} \times 14 \text{ Days} = 98 \text{ Days} = 8,467,200 \text{s}$) स्थापित किया गया। दिन 98 के बाद बिना किसी डेटा हानि के मोड्युलो रोटेशन ($(elapsedDays \pmod{98}) + 1$) द्वारा चक्र 1 पर लौटने की प्रक्रिया संहिताबद्ध की गई।
+2. **Global Cadence Architecture:**
+   - 42 Micro Checkpoints (प्रत्येक 14-दिवसीय फ़ेज़ के सापेक्ष दिन 2, 4, 6, 8, 10, 12 पर)।
+   - 7 Rebuild Windows (वैश्विक दिन 13, 27, 41, 55, 69, 83, 97), जहाँ कोई नया पाठ्यक्रम नहीं पेश किया जाता।
+   - 7 Macro Citadels (वैश्विक दिन 14, 28, 42, 56, 70, 84, 98), जो फ़ेज़ एकीकरण और संश्लेषण का परीक्षण करते हैं।
+3. **No Universal Topic Count Law:** "N topics per day" के पुराने स्थिर नियम को औपचारिक रूप से निरस्त किया गया; शेड्यूल इकाई को सत्यापित सिलेबस $\to$ DSD/एटम्स $\to$ पेडागॉजी वर्कलोड $\to$ रिलीज़ डिजीबुक इकाइयों $\to$ शिक्षार्थी क्षमता के संकलक लिफ़ाफ़े (Academic Workload Envelope) से व्युत्पन्न किया गया।
+4. **Assessment Eligibility Intersection (`RC-ASSESSMENT-CAE-001`):** पात्रता का 7-स्तरीय प्रतिच्छेदन सूत्र ($\text{Mission} \cap \text{Effective Blueprint} \cap \text{Current OSA/DSD} \cap \text{Verified Atoms} \cap \text{Valid Taught Authority} \cap \text{QUESTION\_KNOWLEDGE\_CLOSED} \cap \text{Crucible Policy}$) संहिताबद्ध किया गया। Zero-PYQ नीति और फेल-क्लोज़्ड बैंक घाटा नियम प्रमाणित किए गए।
+5. **Test Arena Separation & Legacy Quarantine (`RC-ASSESSMENT-CTA-001`):** मेजर टेस्ट (Major Test) को Crucible से अलग करके Test Arena के संप्रभु अधिकार क्षेत्र में स्थानांतरित किया गया। `sacred_major_test_throne.dart` (लाइन 623 पर 'DAY 99' का उल्लेख) को प्रारंभिक लेगेसी प्रोटोटाइप (`SUPERSEDED_LEGACY_PROTOTYPE / QUARANTINED`) घोषित किया गया।
+6. **9-Gate Question Eligibility Architecture:** `micro_test_engine.dart:148–340` के 9 क्रमिक गेट्स (A: Type/Schema, B: Atom Scope, C: Source Provenance, D: Human Authority, E: Academic Answer Key, F: Decoupled Solution SHA-256, G: PYQ Paper Evidence, H: Publication Ready, I: Version & Lineage) का संपूर्ण लाइन-वार ऑडिट संहिताबद्ध किया गया।
+7. **The Hour-47 Micro Trigger:** 48-घंटे के अध्ययन शेड्यूल में 47वें घंटे पर माइक्रो टेस्ट अनलॉक होने (`crucible_engine.dart:253–276`) की गणितीय संरचना दर्ज की गई।
+8. **Live Chamber Widgets & Server Evaluation Worker:** `SacredMicroTestChamber`, `SacredMacroTestCitadel`, `SacredRebuildChamber`, `BattleArenaScreen`, और `evaluate_attempt_worker.js` (दोहरे-चरणीय सत्र और अपरिवर्तनीय साक्ष्य आउटबॉक्स) के लाइव कोड अनुबंध प्रमाणित किए गए।
+
