@@ -36,3 +36,15 @@ Read existing accepted contracts under [docs/architecture](../architecture/) bef
 
 ## Next authorized planning action
 Complete one bounded repository/document-to-code reconciliation; verify PC/remote identity and domain status. Decide the next single implementation milestone using evidence. Do not repeat a project-wide audit without a genuine contradiction.
+
+
+## Historical accepted authority inventory (carry forward; verify supersession)
+- Official SSC CGL 2026 notice identity: `HQ-C11018/1/2026-C-1`, mission `ssc_cgl`, authority `auth_in_ssc`, source SHA256 `54A01DDA220CB8836F19983908E1F3FD14DDBA8286781765A02765728A89E070`; source URL `https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf`. Historical source packet was held for Founder decision; do not infer acceptance.
+- Academic chain: official verified syllabus → derived atomic boundary → Subject Teacher/Pedagogy → DigiBook → taught authority → question knowledge closure → assessment/review → Founder preview → publish → monitor.
+- Crucible: 98-day cycle, major tests in Test Arena. PYQs do not expand syllabus authority.
+- Domain-B taught authority I1: historically independently accepted with 15/15 tests; Domain-C P7A historically 60/60. Current branch supersession check pending.
+- Student Android UI remains frozen. Founder Console is `https://rankcrackers.in`.
+- GitHub governance: Founder screenshot for PR #2 demonstrates **at least one approving review required** and **merging blocked**. Do not generalize this into proof of every branch-protection setting.
+
+## Next milestone decision gate
+Bounded reconciliation must separately resolve the operational SSC CGL pilot and Sacred Archive dependency readiness. Neither is silently CLOSED or P0 by default. RC-PCMS setup is documentation-only and does not authorize product changes.
