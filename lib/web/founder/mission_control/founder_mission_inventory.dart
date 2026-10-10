@@ -19,84 +19,82 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-      stream:
-          FirebaseFirestore.instance.collection('mission_realms').snapshots(),
-      builder: (context, realmsSnapshot) =>
-          StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-        stream:
-            FirebaseFirestore.instance.collection('recruitments').snapshots(),
-        builder: (context, recruitmentsSnapshot) =>
-            StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-          stream: FirebaseFirestore.instance
-              .collection('student_mission_catalog')
-              .snapshots(),
-          builder: (context, catalogSnapshot) {
-            final error = realmsSnapshot.error ??
-                recruitmentsSnapshot.error ??
-                catalogSnapshot.error;
-            if (error != null)
-              return _InventoryMessage(
-                  'Mission inventory unavailable: $error', Colors.redAccent);
-            if (!realmsSnapshot.hasData ||
-                !recruitmentsSnapshot.hasData ||
-                !catalogSnapshot.hasData) {
-              return const Padding(
-                  padding: EdgeInsets.all(24),
-                  child: LinearProgressIndicator(minHeight: 1));
-            }
-            final rows = _reconcile(realmsSnapshot.data!.docs,
-                recruitmentsSnapshot.data!.docs, catalogSnapshot.data!.docs);
-            final visible = rows.where(_matchesFilter).toList();
-            return LayoutBuilder(builder: (context, constraints) {
-              final columns = constraints.maxWidth >= 1450
-                  ? 3
-                  : constraints.maxWidth >= 1050
-                      ? 2
-                      : 1;
-              final available =
-                  constraints.maxWidth - 40 - ((columns - 1) * 12);
-              final cardWidth = available / columns;
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(20, 6, 20, 24),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _summary(rows),
-                      const SizedBox(height: 14),
-                      Wrap(
-                          spacing: 8,
-                          runSpacing: 8,
-                          children: MissionPortfolioFilter.values
-                              .map((filter) => ChoiceChip(
-                                    label: Text(_filterLabel(filter)),
-                                    selected: _filter == filter,
-                                    onSelected: (_) =>
-                                        setState(() => _filter = filter),
-                                  ))
-                              .toList()),
-                      const SizedBox(height: 16),
-                      if (visible.isEmpty)
-                        _EmptyFilterCard(
-                            label:
-                                'No ${_filterLabel(_filter).toLowerCase()} missions.')
-                      else
-                        Wrap(
-                            spacing: 12,
-                            runSpacing: 12,
-                            children: visible
-                                .map((row) => SizedBox(
-                                      width: cardWidth,
-                                      child: _MissionPortfolioCard(
-                                          row: row,
-                                          onSelected: widget.onMissionSelected),
-                                    ))
-                                .toList()),
-                    ]),
-              );
-            });
+      stream: FirebaseFirestore.instance
+          .collection('mission_realms')
+          .snapshots(),
+      builder: (context, realmsSnapshot) {
+        final error = realmsSnapshot.error;
+        if (error != null) {
+          return _InventoryMessage(
+            'Mission inventory unavailable: $error',
+            Colors.redAccent,
+          );
+        }
+        if (!realmsSnapshot.hasData) {
+          return const Padding(
+            padding: EdgeInsets.all(24),
+            child: LinearProgressIndicator(minHeight: 1),
+          );
+        }
+        final rows = _reconcile(realmsSnapshot.data!.docs);
+        final visible = rows.where(_matchesFilter).toList();
+        return LayoutBuilder(
+          builder: (context, constraints) {
+            final columns = constraints.maxWidth >= 1450
+                ? 3
+                : constraints.maxWidth >= 1050
+                ? 2
+                : 1;
+            final available = constraints.maxWidth - 40 - ((columns - 1) * 12);
+            final cardWidth = available / columns;
+            return Padding(
+              padding: const EdgeInsets.fromLTRB(20, 6, 20, 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _summary(rows),
+                  const SizedBox(height: 14),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: MissionPortfolioFilter.values
+                        .map(
+                          (filter) => ChoiceChip(
+                            label: Text(_filterLabel(filter)),
+                            selected: _filter == filter,
+                            onSelected: (_) => setState(() => _filter = filter),
+                          ),
+                        )
+                        .toList(),
+                  ),
+                  const SizedBox(height: 16),
+                  if (visible.isEmpty)
+                    _EmptyFilterCard(
+                      label:
+                          'No ${_filterLabel(_filter).toLowerCase()} missions.',
+                    )
+                  else
+                    Wrap(
+                      spacing: 12,
+                      runSpacing: 12,
+                      children: visible
+                          .map(
+                            (row) => SizedBox(
+                              width: cardWidth,
+                              child: _MissionPortfolioCard(
+                                row: row,
+                                onSelected: widget.onMissionSelected,
+                              ),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                ],
+              ),
+            );
           },
-        ),
-      ),
+        );
+      },
     );
   }
 
@@ -105,34 +103,34 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
       (
         'LIVE',
         rows.where((r) => r.kind == MissionPortfolioFilter.live).length,
-        Colors.greenAccent
+        Colors.greenAccent,
       ),
       (
         'FOUNDER DRAFTS',
         rows.where((r) => r.kind == MissionPortfolioFilter.draft).length,
-        Colors.white70
+        Colors.white70,
       ),
       (
         'PASSIVE',
         rows.where((r) => r.kind == MissionPortfolioFilter.passive).length,
-        Colors.orangeAccent
+        Colors.orangeAccent,
       ),
       (
         'ARCHIVED',
         rows.where((r) => r.kind == MissionPortfolioFilter.archived).length,
-        Colors.white38
+        Colors.white38,
       ),
       (
         'NEEDS ATTENTION',
         rows.where((r) => r.needsAttention).length,
-        Colors.amber
+        Colors.amber,
       ),
     ];
     return Wrap(
-        spacing: 8,
-        runSpacing: 8,
-        children:
-            metrics.map((m) => _SummaryMetric(m.$1, m.$2, m.$3)).toList());
+      spacing: 8,
+      runSpacing: 8,
+      children: metrics.map((m) => _SummaryMetric(m.$1, m.$2, m.$3)).toList(),
+    );
   }
 
   bool _matchesFilter(_MissionInventoryRecord row) =>
@@ -142,40 +140,29 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
           : row.kind == _filter);
 
   String _filterLabel(MissionPortfolioFilter value) => switch (value) {
-        MissionPortfolioFilter.all => 'ALL',
-        MissionPortfolioFilter.live => 'LIVE',
-        MissionPortfolioFilter.draft => 'DRAFT',
-        MissionPortfolioFilter.passive => 'PASSIVE',
-        MissionPortfolioFilter.archived => 'ARCHIVED',
-        MissionPortfolioFilter.attention => 'NEEDS ATTENTION',
-      };
+    MissionPortfolioFilter.all => 'ALL',
+    MissionPortfolioFilter.live => 'LIVE',
+    MissionPortfolioFilter.draft => 'DRAFT',
+    MissionPortfolioFilter.passive => 'PASSIVE',
+    MissionPortfolioFilter.archived => 'ARCHIVED',
+    MissionPortfolioFilter.attention => 'NEEDS ATTENTION',
+  };
 
   List<_MissionInventoryRecord> _reconcile(
     List<QueryDocumentSnapshot<Map<String, dynamic>>> realms,
-    List<QueryDocumentSnapshot<Map<String, dynamic>>> recruitments,
-    List<QueryDocumentSnapshot<Map<String, dynamic>>> catalog,
   ) {
     final byId = <String, _MissionInventoryRecord>{};
     for (final doc in realms) {
       byId.putIfAbsent(doc.id, () => _MissionInventoryRecord(doc.id)).realm =
           doc.data();
     }
-    for (final doc in recruitments) {
-      byId
-          .putIfAbsent(doc.id, () => _MissionInventoryRecord(doc.id))
-          .recruitment = doc.data();
-    }
-    for (final doc in catalog) {
-      byId.putIfAbsent(doc.id, () => _MissionInventoryRecord(doc.id)).catalog =
-          doc.data();
-    }
     final rows = byId.values.toList()
       ..sort((a, b) {
         if (a.studentVisible != b.studentVisible)
           return a.studentVisible ? -1 : 1;
-        return a.displayName
-            .toLowerCase()
-            .compareTo(b.displayName.toLowerCase());
+        return a.displayName.toLowerCase().compareTo(
+          b.displayName.toLowerCase(),
+        );
       });
     return rows;
   }
@@ -189,16 +176,17 @@ class _MissionInventoryRecord {
   Map<String, dynamic>? catalog;
 
   bool get studentVisible =>
-      catalog?['cardVisible'] == true &&
-      catalog?['userPanelVisible'] == true &&
-      catalog?['archived'] != true;
-  String get rawStatus => (catalog?['studentPublicationState'] ??
-          catalog?['status'] ??
-          realm?['status'] ??
-          recruitment?['status'] ??
-          'DRAFT')
-      .toString()
-      .toUpperCase();
+      (realm?['cardVisible'] == true ||
+          realm?['userPanelVisible'] == true ||
+          (realm?['visibilityGate'] is Map &&
+              ((realm?['visibilityGate'] as Map)['studentVisible'] == true ||
+                  (realm?['visibilityGate'] as Map)['userPanelVisible'] ==
+                      true))) &&
+      realm?['archived'] != true;
+  String get rawStatus =>
+      (realm?['studentPublicationState'] ?? realm?['status'] ?? 'DRAFT')
+          .toString()
+          .toUpperCase();
   MissionPortfolioFilter get kind {
     if (studentVisible) return MissionPortfolioFilter.live;
     if (rawStatus == 'ARCHIVED') return MissionPortfolioFilter.archived;
@@ -208,64 +196,61 @@ class _MissionInventoryRecord {
   }
 
   bool get hasCanonicalVariables =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any((s) =>
-          s['missionVariables'] is Map &&
-          (s['missionVariables'] as Map).isNotEmpty);
+      realm?['missionVariables'] is Map &&
+      (realm?['missionVariables'] as Map).isNotEmpty;
   bool get hasLegacyVariables =>
-      catalog?['variables'] is List &&
-      (catalog?['variables'] as List).isNotEmpty;
+      realm?['variables'] is List && (realm?['variables'] as List).isNotEmpty;
   bool get sourceReady =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any((s) =>
-          s['canonicalSourceVersionId'] != null ||
-          s['sourceAuthorityState'] == 'CANONICAL');
+      realm?['canonicalSourceVersionId'] != null ||
+      realm?['sourceAuthorityState'] == 'CANONICAL' ||
+      realm?['officialSourceLocator'] != null;
   bool get sourceCandidate =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any(
-          (s) => s['sourceVersionId'] != null || s['sourceDocumentId'] != null);
+      realm?['sourceVersionId'] != null || realm?['sourceDocumentId'] != null;
   bool get needsAttention =>
       realm == null ||
       (!sourceReady && !sourceCandidate) ||
       (!hasCanonicalVariables && !hasLegacyVariables);
-  String get displayName => (catalog?['displayName'] ??
-          catalog?['title'] ??
-          realm?['exam_name'] ??
-          realm?['recruitment_name'] ??
-          recruitment?['title'] ??
-          recruitment?['recruitment_name'] ??
-          id)
-      .toString();
-  String get year => (catalog?['examYear'] ??
-          catalog?['year'] ??
-          realm?['exam_year'] ??
-          recruitment?['year'] ??
-          'YEAR PENDING')
-      .toString();
-  String get category => (catalog?['examCategory'] ??
-          catalog?['exam_category'] ??
-          realm?['exam_category'] ??
-          recruitment?['examCategory'] ??
-          'CATEGORY PENDING')
-      .toString();
+  String get displayName =>
+      (catalog?['displayName'] ??
+              realm?['exam_name'] ??
+              realm?['displayTitle'] ??
+              realm?['title'] ??
+              realm?['recruitment_name'] ??
+              id)
+          .toString();
+  String get year =>
+      (realm?['examYear'] ??
+              realm?['year'] ??
+              realm?['exam_year'] ??
+              'YEAR PENDING')
+          .toString();
+  String get category =>
+      (realm?['examCategory'] ??
+              realm?['exam_category'] ??
+              realm?['exam_category'] ??
+              'CATEGORY PENDING')
+          .toString();
   String get lifecycleLabel => switch (kind) {
-        MissionPortfolioFilter.live => 'LIVE FOR STUDENTS',
-        MissionPortfolioFilter.draft => 'FOUNDER DRAFT',
-        MissionPortfolioFilter.passive => 'PASSIVE',
-        MissionPortfolioFilter.archived => 'ARCHIVED',
-        _ => rawStatus,
-      };
+    MissionPortfolioFilter.live => 'LIVE FOR STUDENTS',
+    MissionPortfolioFilter.draft => 'FOUNDER DRAFT',
+    MissionPortfolioFilter.passive => 'PASSIVE',
+    MissionPortfolioFilter.archived => 'ARCHIVED',
+    _ => rawStatus,
+  };
   String get authorityLabel =>
       realm == null ? 'AUTHORITY REPAIR REQUIRED' : 'AUTHORITY CONNECTED';
   String get sourceLabel => sourceReady
       ? 'SOURCE CANONICAL'
       : sourceCandidate
-          ? 'SOURCE CANDIDATE'
-          : 'NO OFFICIAL SOURCE';
+      ? 'SOURCE CANDIDATE'
+      : 'NO OFFICIAL SOURCE';
   String get variablesLabel => hasCanonicalVariables
       ? 'VARIABLES READY'
       : hasLegacyVariables
-          ? 'VARIABLE REVIEW REQUIRED'
-          : 'STRUCTURE UNKNOWN';
+      ? 'VARIABLE REVIEW REQUIRED'
+      : 'STRUCTURE UNKNOWN';
   String get pipelineLabel {
-    final locks = (catalog?['contentLocks'] ?? realm?['contentLocks']) as Map?;
+    final locks = realm?['contentLocks'] as Map?;
     return locks != null && locks.values.any((v) => v == true)
         ? 'PIPELINE CONNECTED'
         : 'PIPELINE NOT READY';
@@ -279,74 +264,112 @@ class _MissionPortfolioCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Card(
-        margin: EdgeInsets.zero,
-        child: Padding(
-            padding: const EdgeInsets.all(16),
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Expanded(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      Text(row.displayName,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: Theme.of(context).textTheme.titleMedium),
-                      const SizedBox(height: 3),
-                      Text('${row.year}  •  ${row.id}',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
-                              fontSize: 10, color: Colors.white54)),
-                    ])),
-                PopupMenuButton<String>(
-                    tooltip: 'Mission actions',
-                    icon: const Icon(Icons.more_horiz, size: 18),
-                    onSelected: (action) => _handleAction(context, action),
-                    itemBuilder: (_) => [
-                          const PopupMenuItem(
-                              value: 'open', child: Text('Open mission')),
-                          if (row.kind == MissionPortfolioFilter.archived)
-                            const PopupMenuItem(
-                                value: 'restore', child: Text('Restore')),
-                          if (row.kind != MissionPortfolioFilter.archived)
-                            const PopupMenuItem(
-                                value: 'archive', child: Text('Archive')),
-                          const PopupMenuDivider(),
-                          const PopupMenuItem(
-                              value: 'delete',
-                              child: Text('Delete permanently',
-                                  style: TextStyle(color: Colors.redAccent))),
-                        ]),
-              ]),
-              const SizedBox(height: 12),
-              Wrap(spacing: 6, runSpacing: 6, children: [
-                _badge(row.lifecycleLabel,
-                    row.studentVisible ? Colors.greenAccent : Colors.white70),
-                if (row.id.toLowerCase().contains('test'))
-                  _badge('TEST', Colors.orangeAccent),
-                if (row.needsAttention) _badge('NEEDS ATTENTION', Colors.amber),
-              ]),
-              const SizedBox(height: 14),
-              _truth('MISSION AUTHORITY', row.authorityLabel,
-                  row.realm == null ? Colors.orangeAccent : Colors.white70),
-              _truth('SOURCE DOCUMENT', row.sourceLabel,
-                  row.sourceReady ? Colors.greenAccent : Colors.orangeAccent),
-              _truth(
-                  'VARIABLES / STRUCTURE',
-                  row.variablesLabel,
-                  row.hasCanonicalVariables
-                      ? Colors.greenAccent
-                      : Colors.orangeAccent),
-              _truth('PIPELINE / DELIVERY', row.pipelineLabel, Colors.white70),
-              const SizedBox(height: 14),
-              OutlinedButton.icon(
-                  onPressed: () => onSelected?.call(row.id),
-                  icon: const Icon(Icons.arrow_forward, size: 13),
-                  label: const Text('OPEN MISSION')),
-            ])),
-      );
+    margin: EdgeInsets.zero,
+    child: Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      row.displayName,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      '${row.year}  •  ${row.id}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        fontSize: 10,
+                        color: Colors.white54,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              PopupMenuButton<String>(
+                tooltip: 'Mission actions',
+                icon: const Icon(Icons.more_horiz, size: 18),
+                onSelected: (action) => _handleAction(context, action),
+                itemBuilder: (_) => [
+                  const PopupMenuItem(
+                    value: 'open',
+                    child: Text('Open mission'),
+                  ),
+                  if (row.kind == MissionPortfolioFilter.archived)
+                    const PopupMenuItem(
+                      value: 'restore',
+                      child: Text('Restore'),
+                    ),
+                  if (row.kind != MissionPortfolioFilter.archived)
+                    const PopupMenuItem(
+                      value: 'archive',
+                      child: Text('Archive'),
+                    ),
+                  const PopupMenuDivider(),
+                  const PopupMenuItem(
+                    value: 'delete',
+                    child: Text(
+                      'Delete permanently',
+                      style: TextStyle(color: Colors.redAccent),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              _badge(
+                row.lifecycleLabel,
+                row.studentVisible ? Colors.greenAccent : Colors.white70,
+              ),
+              if (row.id.toLowerCase().contains('test'))
+                _badge('TEST', Colors.orangeAccent),
+              if (row.needsAttention) _badge('NEEDS ATTENTION', Colors.amber),
+            ],
+          ),
+          const SizedBox(height: 14),
+          _truth(
+            'MISSION AUTHORITY',
+            row.authorityLabel,
+            row.realm == null ? Colors.orangeAccent : Colors.white70,
+          ),
+          _truth(
+            'SOURCE DOCUMENT',
+            row.sourceLabel,
+            row.sourceReady ? Colors.greenAccent : Colors.orangeAccent,
+          ),
+          _truth(
+            'VARIABLES / STRUCTURE',
+            row.variablesLabel,
+            row.hasCanonicalVariables
+                ? Colors.greenAccent
+                : Colors.orangeAccent,
+          ),
+          _truth('PIPELINE / DELIVERY', row.pipelineLabel, Colors.white70),
+          const SizedBox(height: 14),
+          OutlinedButton.icon(
+            onPressed: () => onSelected?.call(row.id),
+            icon: const Icon(Icons.arrow_forward, size: 13),
+            label: const Text('OPEN MISSION'),
+          ),
+        ],
+      ),
+    ),
+  );
 
   Future<void> _handleAction(BuildContext context, String action) async {
     if (action == 'open') {
@@ -357,23 +380,25 @@ class _MissionPortfolioCard extends StatelessWidget {
       await _deleteDialog(context);
       return;
     }
-    final callableAction =
-        action == 'restore' ? 'restore_realm' : 'archive_realm';
+    final callableAction = action == 'restore'
+        ? 'restore_realm'
+        : 'archive_realm';
     try {
-      await FirebaseFunctions.instanceFor(region: 'us-central1')
-          .httpsCallable('handleSentinelAction')
-          .call({
+      await FirebaseFunctions.instanceFor(
+        region: 'us-central1',
+      ).httpsCallable('handleSentinelAction').call({
         'action': callableAction,
         'recruitmentId': row.id,
         'payload': {
           'reason': 'Founder portfolio governed $action request',
-          'requestId': 'portfolio-${DateTime.now().microsecondsSinceEpoch}'
+          'requestId': 'portfolio-${DateTime.now().microsecondsSinceEpoch}',
         },
       });
     } catch (error) {
       if (context.mounted)
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('$action blocked: $error')));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('$action blocked: $error')));
     }
   }
 
@@ -381,101 +406,128 @@ class _MissionPortfolioCard extends StatelessWidget {
     final identity = TextEditingController();
     final reason = TextEditingController();
     final confirmed = await showDialog<bool>(
-        context: context,
-        builder: (dialogContext) => AlertDialog(
-              title: const Text('PERMANENT DELETE PREFLIGHT'),
-              content: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                        'Deletion is allowed only when Student history, sources, academic content, publication history and active jobs are absent.'),
-                    const SizedBox(height: 12),
-                    Text('Type ${row.id} to confirm.'),
-                    const SizedBox(height: 8),
-                    TextField(
-                        controller: identity,
-                        decoration: const InputDecoration(
-                            labelText: 'Mission ID confirmation')),
-                    const SizedBox(height: 8),
-                    TextField(
-                        controller: reason,
-                        minLines: 2,
-                        maxLines: 3,
-                        decoration: const InputDecoration(
-                            labelText:
-                                'Founder reason (minimum 12 characters)')),
-                  ]),
-              actions: [
-                TextButton(
-                    onPressed: () => Navigator.pop(dialogContext, false),
-                    child: const Text('CANCEL')),
-                FilledButton(
-                    onPressed: () {
-                      if (identity.text.trim() == row.id &&
-                          reason.text.trim().length >= 12)
-                        Navigator.pop(dialogContext, true);
-                    },
-                    style: FilledButton.styleFrom(
-                        backgroundColor: Colors.redAccent),
-                    child: const Text('RUN PREFLIGHT AND DELETE'))
-              ],
-            ));
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: const Text('PERMANENT DELETE PREFLIGHT'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Deletion is allowed only when Student history, sources, academic content, publication history and active jobs are absent.',
+            ),
+            const SizedBox(height: 12),
+            Text('Type ${row.id} to confirm.'),
+            const SizedBox(height: 8),
+            TextField(
+              controller: identity,
+              decoration: const InputDecoration(
+                labelText: 'Mission ID confirmation',
+              ),
+            ),
+            const SizedBox(height: 8),
+            TextField(
+              controller: reason,
+              minLines: 2,
+              maxLines: 3,
+              decoration: const InputDecoration(
+                labelText: 'Founder reason (minimum 12 characters)',
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext, false),
+            child: const Text('CANCEL'),
+          ),
+          FilledButton(
+            onPressed: () {
+              if (identity.text.trim() == row.id &&
+                  reason.text.trim().length >= 12)
+                Navigator.pop(dialogContext, true);
+            },
+            style: FilledButton.styleFrom(backgroundColor: Colors.redAccent),
+            child: const Text('RUN PREFLIGHT AND DELETE'),
+          ),
+        ],
+      ),
+    );
     if (confirmed != true || !context.mounted) {
       identity.dispose();
       reason.dispose();
       return;
     }
     try {
-      await FirebaseFunctions.instanceFor(region: 'us-central1')
-          .httpsCallable('handleSentinelAction')
-          .call({
+      await FirebaseFunctions.instanceFor(
+        region: 'us-central1',
+      ).httpsCallable('handleSentinelAction').call({
         'action': 'delete_realm_permanently',
         'recruitmentId': row.id,
         'payload': {
           'reason': reason.text.trim(),
           'missionIdentityConfirmation': identity.text.trim(),
           'requestId':
-              'portfolio-delete-${DateTime.now().microsecondsSinceEpoch}'
+              'portfolio-delete-${DateTime.now().microsecondsSinceEpoch}',
         },
       });
       if (context.mounted)
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text('${row.id} deleted after dependency preflight.')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('${row.id} deleted after dependency preflight.'),
+          ),
+        );
     } catch (error) {
       if (context.mounted)
-        ScaffoldMessenger.of(context)
-            .showSnackBar(SnackBar(content: Text('Delete blocked: $error')));
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Delete blocked: $error')));
     }
     identity.dispose();
     reason.dispose();
   }
 
   Widget _truth(String label, String value, Color color) => Padding(
-      padding: const EdgeInsets.only(bottom: 7),
-      child: Row(children: [
+    padding: const EdgeInsets.only(bottom: 7),
+    child: Row(
+      children: [
         SizedBox(
-            width: 126,
-            child: Text(label,
-                style: const TextStyle(
-                    fontSize: 8,
-                    color: Colors.white38,
-                    fontWeight: FontWeight.w700))),
+          width: 126,
+          child: Text(
+            label,
+            style: const TextStyle(
+              fontSize: 8,
+              color: Colors.white38,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
         Expanded(
-            child: Text(value,
-                textAlign: TextAlign.right,
-                style: TextStyle(
-                    fontSize: 9, color: color, fontWeight: FontWeight.w700))),
-      ]));
+          child: Text(
+            value,
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              fontSize: 9,
+              color: color,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
   Widget _badge(String label, Color color) => Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-          color: color.withValues(alpha: .08),
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: color.withValues(alpha: .35))),
-      child: Text(label,
-          style: TextStyle(
-              color: color, fontSize: 8, fontWeight: FontWeight.w700)));
+    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+    decoration: BoxDecoration(
+      color: color.withValues(alpha: .08),
+      borderRadius: BorderRadius.circular(999),
+      border: Border.all(color: color.withValues(alpha: .35)),
+    ),
+    child: Text(
+      label,
+      style: TextStyle(color: color, fontSize: 8, fontWeight: FontWeight.w700),
+    ),
+  );
 }
 
 class _SummaryMetric extends StatelessWidget {
@@ -485,24 +537,37 @@ class _SummaryMetric extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) => Container(
-      width: 150,
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-      decoration: BoxDecoration(
-          color: const Color(0xFF0A1018),
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: Colors.white10)),
-      child: Row(children: [
-        Text('$value',
-            style: TextStyle(
-                color: color, fontSize: 20, fontWeight: FontWeight.w800)),
+    width: 150,
+    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+    decoration: BoxDecoration(
+      color: const Color(0xFF0A1018),
+      borderRadius: BorderRadius.circular(8),
+      border: Border.all(color: Colors.white10),
+    ),
+    child: Row(
+      children: [
+        Text(
+          '$value',
+          style: TextStyle(
+            color: color,
+            fontSize: 20,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
         const SizedBox(width: 9),
         Expanded(
-            child: Text(label,
-                style: const TextStyle(
-                    color: Colors.white54,
-                    fontSize: 8,
-                    fontWeight: FontWeight.w700)))
-      ]));
+          child: Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white54,
+              fontSize: 8,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
 }
 
 class _EmptyFilterCard extends StatelessWidget {
@@ -510,13 +575,15 @@ class _EmptyFilterCard extends StatelessWidget {
   final String label;
   @override
   Widget build(BuildContext context) => Container(
-      width: 320,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: .02),
-          border: Border.all(color: Colors.white10),
-          borderRadius: BorderRadius.circular(12)),
-      child: Text(label, style: const TextStyle(color: Colors.white54)));
+    width: 320,
+    padding: const EdgeInsets.all(18),
+    decoration: BoxDecoration(
+      color: Colors.white.withValues(alpha: .02),
+      border: Border.all(color: Colors.white10),
+      borderRadius: BorderRadius.circular(12),
+    ),
+    child: Text(label, style: const TextStyle(color: Colors.white54)),
+  );
 }
 
 class _InventoryMessage extends StatelessWidget {
@@ -525,6 +592,7 @@ class _InventoryMessage extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) => Padding(
-      padding: const EdgeInsets.all(24),
-      child: Text(message, style: TextStyle(color: color)));
+    padding: const EdgeInsets.all(24),
+    child: Text(message, style: TextStyle(color: color)),
+  );
 }

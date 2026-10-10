@@ -96,22 +96,28 @@ service cloud.firestore {
 
     // 🔱 MISSION REGISTRY RULES
     match /recruitments/{recruitmentId} {
-      allow read: if resource.data.status == 'published' || isFounder();
-      allow write: if isFounder();
+      // Legacy projection: retained only for the guarded reset/migration.
+      allow read: if isFounder();
+      allow write: if false;
     }
 
     match /student_mission_catalog/{missionId} {
-      allow read: if isFounder() || (
-        request.auth != null &&
-        resource.data.cardVisible == true &&
-        resource.data.userPanelVisible == true &&
-        resource.data.archived == false
-      );
-      allow write: if false; // Writes only via Cloud Functions (Admin SDK)
+      // Legacy projection: never a student source and never writable by clients.
+      allow read: if isFounder();
+      allow write: if false;
     }
 
     match /mission_realms/{realmId} {
-      allow read: if isFounder();
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.archived != true &&
+        (
+          resource.data.cardVisible == true ||
+          resource.data.userPanelVisible == true ||
+          resource.data.visibilityGate.studentVisible == true ||
+          resource.data.visibilityGate.userPanelVisible == true
+        )
+      );
       allow write: if isFounder();
 
       match /participants/{userId} {
@@ -532,22 +538,28 @@ service cloud.firestore {
 
     // 🔱 MISSION REGISTRY RULES
     match /recruitments/{recruitmentId} {
-      allow read: if resource.data.status == 'published' || isFounder();
-      allow write: if isFounder();
+      // Legacy projection: retained only for the guarded reset/migration.
+      allow read: if isFounder();
+      allow write: if false;
     }
 
     match /student_mission_catalog/{missionId} {
-      allow read: if isFounder() || (
-        request.auth != null &&
-        resource.data.cardVisible == true &&
-        resource.data.userPanelVisible == true &&
-        resource.data.archived == false
-      );
-      allow write: if false; // Writes only via Cloud Functions (Admin SDK)
+      // Legacy projection: never a student source and never writable by clients.
+      allow read: if isFounder();
+      allow write: if false;
     }
 
     match /mission_realms/{realmId} {
-      allow read: if isFounder();
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.archived != true &&
+        (
+          resource.data.cardVisible == true ||
+          resource.data.userPanelVisible == true ||
+          resource.data.visibilityGate.studentVisible == true ||
+          resource.data.visibilityGate.userPanelVisible == true
+        )
+      );
       allow write: if isFounder();
 
       match /participants/{userId} {

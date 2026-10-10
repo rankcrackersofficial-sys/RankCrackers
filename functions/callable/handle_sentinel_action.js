@@ -3,7 +3,6 @@ const admin = require("firebase-admin");
 const { FieldValue } = require('firebase-admin/firestore');
 const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
-const { getLifecycleBlueprint } = require("../helpers/blueprints");
 const { executeUnifiedMissionCreation } = require("../services/mission_cycle_store");
 const { executeCycleAwarePublication } = require("../services/mission_cycle_lifecycle");
 const { validateOrResolveId } = require("../canonical_mission_registry");
@@ -23,6 +22,9 @@ const {
   normalizeMissionVariables,
   referencedDocumentIds,
 } = require("../services/mission_variable_authority");
+const {
+  buildCanonicalOfficialDocument,
+} = require('../services/canonical_mission_realm_store');
 const MISSION_VARIABLE_PACK_KEYS = [
   'vacancy_variables',
   'eligibility_variables',
@@ -74,13 +76,6 @@ function collectMissionVariables(...sources) {
   }
   return variables;
 }
-function normalizeMissionCategory(value) {
-  const raw = String(value || '').trim().toLowerCase();
-  if (raw === 'competitive') return 'competitive';
-  if (raw === 'qualifying') return 'qualifying';
-  return 'category_pending';
-}
-
 async function updateMissionVariables({ db, auth, missionId, payload = {} }) {
   const reason = String(payload.reason || '').trim();
   const requestId = String(payload.requestId || '').trim();
@@ -92,22 +87,18 @@ async function updateMissionVariables({ db, auth, missionId, payload = {} }) {
   const variables = normalizeMissionVariables(payload.missionVariables);
   const digest = canonicalDigest(variables);
   const realmRef = db.collection('mission_realms').doc(missionId);
-  const recruitmentRef = db.collection('recruitments').doc(missionId);
-  const catalogRef = db.collection('student_mission_catalog').doc(missionId);
   const userRef = db.collection('users').doc(auth.uid);
   const auditId = `mission_variable_${crypto.createHash('sha256').update(`${missionId}:${requestId}`).digest('hex')}`;
   const auditRef = db.collection('founder_activity_log').doc(auditId);
 
   return db.runTransaction(async transaction => {
-    const [userSnap, realmSnap, recruitmentSnap, catalogSnap] = await Promise.all([
-      transaction.get(userRef), transaction.get(realmRef), transaction.get(recruitmentRef), transaction.get(catalogRef),
+    const [userSnap, realmSnap] = await Promise.all([
+      transaction.get(userRef), transaction.get(realmRef),
     ]);
     assertFounderVariableAuthority(auth, userSnap.exists ? userSnap.data() : {});
-    if (!realmSnap.exists || !recruitmentSnap.exists || !catalogSnap.exists) throw new Error('MISSION_CONTRACT_INCOMPLETE');
+    if (!realmSnap.exists) throw new Error('MISSION_CONTRACT_INCOMPLETE');
 
     const realm = realmSnap.data() || {};
-    const recruitment = recruitmentSnap.data() || {};
-    const catalog = catalogSnap.data() || {};
     const currentVersion = Number(realm.missionVariableVersion || 0);
     const lastMutation = realm.missionVariableMutation || {};
     if (lastMutation.requestId === requestId) {
@@ -117,11 +108,11 @@ async function updateMissionVariables({ db, auth, missionId, payload = {} }) {
     if (currentVersion !== payload.expectedVersion) throw new Error('STALE_VARIABLE_VERSION');
 
     const identity = assertMissionIdentity({
-      missionId, mission: realm, recruitment,
+      missionId, mission: realm, recruitment: realm,
       expectedExamYear: payload.expectedExamYear,
       expectedExamCategory: payload.expectedExamCategory,
     });
-    assertPostPublicationSafety(catalog, collectMissionVariables(realm, recruitment), variables);
+    assertPostPublicationSafety(realm, collectMissionVariables(realm), variables);
 
     const documentIds = referencedDocumentIds(variables);
     const documentSnaps = await Promise.all(documentIds.map(id => transaction.get(realmRef.collection('official_documents').doc(id))));
@@ -143,9 +134,7 @@ async function updateMissionVariables({ db, auth, missionId, payload = {} }) {
       missionVariableUpdatedBy: auth.uid,
       missionVariableMutation: { requestId, digest, reason },
     };
-    transaction.update(realmRef, compatibility);
-    transaction.update(recruitmentRef, compatibility);
-    transaction.update(catalogRef, {
+    transaction.update(realmRef, {
       ...compatibility,
       missionVariableValidation: { status: 'VALIDATED', sourceDocumentIds: documentIds, requiresContentRevalidation: true },
     });
@@ -254,6 +243,35 @@ exports.handleSentinelAction = functions
         // If Publishing, trigger Refinery Pass 1 (Structural)
         if (action === 'publish') {
             const draftData = draftSnap.data();
+            // A finalized notification is an official document under the
+            // canonical mission realm. It must never be materialized into a
+            // parallel recruitment or student-catalog document.
+            if (draftData.linkedRealmId) {
+                const realmRef = db.collection('mission_realms').doc(draftData.linkedRealmId);
+                const realmSnap = await realmRef.get();
+                if (!realmSnap.exists) throw new Error('CANONICAL_REALM_NOT_FOUND_FOR_NOTIFICATION');
+                const documentId = String(draftData.sourceId || finalDraftId).trim();
+                const officialDocument = buildCanonicalOfficialDocument({
+                    id: documentId,
+                    sourceId: documentId,
+                    documentType: draftData.documentType || draftData.type || 'NOTIFICATION',
+                    title: draftData.title || draftData.notificationTitle || draftData.sourceName || documentId,
+                    sourceUrl: draftData.sourceUrl || draftData.url || null,
+                    sourceHash: draftData.sourceHash || draftData.hash || null,
+                    documentStatus: 'PUBLISHED',
+                    verificationState: 'FOUNDER_PUBLISHED',
+                    linkedDraftId: finalDraftId,
+                    publishedBy: auth.uid,
+                    publishedAt: FieldValue.serverTimestamp(),
+                }, draftData.linkedRealmId);
+                await realmRef.collection('official_documents').doc(documentId).set(officialDocument, { merge: true });
+                await realmRef.set({
+                    notification_ids: FieldValue.arrayUnion(documentId),
+                    latestNotificationDocumentId: documentId,
+                    updatedAt: FieldValue.serverTimestamp(),
+                    updated_at: FieldValue.serverTimestamp(),
+                }, { merge: true });
+            }
             const taskId = `struct_${finalDraftId}`;
             await db.collection('ai_queue').doc(taskId).set({
                 type: 'STRUCTURAL',
@@ -365,8 +383,6 @@ exports.handleSentinelAction = functions
     }
 
     // TRANSACTIONAL OPS (Launch & Declare)
-    let blueprintToInject = null;
-    let createdRealmId = null;
     let graduationNeeded = null;
 
     const result = await db.runTransaction(async (transaction) => {
@@ -375,7 +391,6 @@ exports.handleSentinelAction = functions
         recruitmentId = validateOrResolveId(action, payload, recruitmentId);
       }
       const realmRef = recruitmentId ? db.collection('mission_realms').doc(recruitmentId) : null;
-      const recRef = recruitmentId ? db.collection('recruitments').doc(recruitmentId) : null;
 
       // ACTION: LAUNCH EXAM MISSION
       // B5: UNIFIED MISSION CREATION - B1 identity -> B3 preflight -> B2 cycle -> draft pointer.
@@ -400,126 +415,47 @@ exports.handleSentinelAction = functions
           enrichmentTaskKey: unifiedCreation.handoff.enrichmentTaskKey,
         };
       }
-      if (action === 'launch_exam_mission') {
-        const { notificationId, syllabusId, examName, organization, year, examCategory, cycle, nature } = payload;
-        const catCode = normalizeMissionCategory(examCategory);
-        const targetYear = year || 2026;
-
-        // Resolve canonical mission ID from shared registry
-        const realmId = validateOrResolveId(action, payload);
-
-        // Transactional lookup for existing records to enforce uniqueness & identity verification
-        const existingRealmRef = db.collection('mission_realms').doc(realmId);
-        const existingRealmSnap = await transaction.get(existingRealmRef);
-        if (existingRealmSnap.exists) {
-          const existingData = existingRealmSnap.data() || {};
-          const matchName = String(existingData.exam_name || '').trim().toLowerCase() === String(examName || '').trim().toLowerCase();
-          const matchOrg = String(existingData.organization || '').trim().toLowerCase() === String(organization || '').trim().toLowerCase();
-          const matchYear = parseInt(existingData.exam_year || 0, 10) === parseInt(targetYear, 10);
-          
-          if (!matchName || !matchOrg || !matchYear) {
-            throw new Error(`FAILED_PRECONDITION: Identity mismatch detected for existing mission ID '${realmId}'.`);
-          }
-        }
-
-        // 1. READ catalog snapshot first (before any sets)
-        const catalogRef = db.collection('student_mission_catalog').doc(realmId);
-        const catalogSnap = await transaction.get(catalogRef);
-
-        const now = FieldValue.serverTimestamp();
-        const realmData = {
-          realm_id: realmId, exam_name: examName, exam_category: catCode, organization, exam_year: targetYear,
-          status: 'PASSIVE',
-          notification_ids: notificationId ? [notificationId] : [],
-          syllabus_ids: syllabusId ? [syllabusId] : [],
-          analytics: { totalAttempts: 0, qualified: 0, graduated: 0, verified: 0 },
-          launchedAt: now,
-          created_at: now,
-          updated_at: now,
-          created_by: auth.uid
-        };
-        transaction.set(db.collection('mission_realms').doc(realmId), realmData, { merge: true });
-
-        // Link Discovery Drafts to Realm
-        if (notificationId) transaction.update(db.collection('sentinel_drafts').doc(notificationId), { linkedRealmId: realmId });
-        if (syllabusId) transaction.update(db.collection('sentinel_drafts').doc(syllabusId), { linkedRealmId: realmId });
-
-        // 🔱 Forensic Fix: Recruitment Manifestation (RC-07)
-        const recruitmentData = {
-          id: realmId,
-          title: examName,
-          org: organization,
-          year: targetYear,
-          examCategory: catCode,
-          status: 'internal_draft',
-          nature: nature || 'PASSIVE',
-          createdAt: now,
-          version: '1.0.0'
-        };
-        transaction.set(db.collection('recruitments').doc(realmId), recruitmentData, { merge: true });
-
-        // Mirror to student catalog using the pre-read snapshot
-        await mirrorMissionShellToStudentCatalog(transaction, db, realmId, realmData, recruitmentData, action, catalogSnap);
-
-        blueprintToInject = getLifecycleBlueprint(catCode);
-        createdRealmId = realmId;
-      }
-
       // 🔱 ACTION: MANIFEST REALM (Candidate -> Staged)
       else if (action === 'manifest_realm') {
         if (!recruitmentId) throw new Error('RECRUITMENT_ID_REQUIRED');
 
-        // 1. READ catalog snapshot first
-        const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
-        const catalogSnap = await transaction.get(catalogRef);
-
-        const recSnap = await transaction.get(recRef);
-        if (!recSnap.exists) throw new Error('CANDIDATE_NOT_FOUND');
-        const recData = recSnap.data();
-
-        const realmData = {
-          realm_id: recruitmentId,
-          recruitment_name: recData.title,
-          organization: recData.org,
-          exam_year: recData.year,
+        const realmSnap = await transaction.get(realmRef);
+        if (!realmSnap.exists) throw new Error('CANONICAL_REALM_NOT_FOUND');
+        const realmData = realmSnap.data() || {};
+        transaction.update(realmRef, {
           status: 'STAGED',
-          manifestedAt: FieldValue.serverTimestamp()
-        };
-        transaction.set(realmRef, realmData, { merge: true });
-
-        transaction.update(recRef, { status: 'MANIFESTED' });
+          manifestedAt: FieldValue.serverTimestamp(),
+          updatedAt: FieldValue.serverTimestamp(),
+          updated_at: FieldValue.serverTimestamp(),
+        });
 
         // 🔱 Ensure source drafts are published to trigger promotion (RC-19 Fix)
         // This closes the loop between verification and manifestation.
-        if (recData.sourceDrafts) {
-            if (recData.sourceDrafts.notification) {
-                transaction.update(db.collection('sentinel_drafts').doc(recData.sourceDrafts.notification), {
+        const sourceDrafts = realmData.sourceDrafts || {};
+        if (sourceDrafts) {
+            if (sourceDrafts.notification) {
+                transaction.update(db.collection('sentinel_drafts').doc(sourceDrafts.notification), {
                     linkedRealmId: recruitmentId,
                     status: 'published' // 🔱 Auto-Publish on Manifestation
                 });
             }
-            if (recData.sourceDrafts.syllabus) {
-                transaction.update(db.collection('sentinel_drafts').doc(recData.sourceDrafts.syllabus), {
+            if (sourceDrafts.syllabus) {
+                transaction.update(db.collection('sentinel_drafts').doc(sourceDrafts.syllabus), {
                     linkedRealmId: recruitmentId,
                     status: 'published' // 🔱 Auto-Publish on Manifestation
                 });
             }
         }
-
-        // Mirror to student catalog
-        await mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, realmData, recData, action, catalogSnap);
       }
 
       // ACTION: MANAGE REALM LIFECYCLE (Hardened RC-14 Sync)
       else if (['launch_realm', 'pause_realm', 'archive_realm', 'restore_realm'].includes(action)) {
-          if (!realmRef || !recRef) throw new Error('REALM_ID_REQUIRED');
-          const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
+          if (!realmRef) throw new Error('REALM_ID_REQUIRED');
           const userRef = db.collection('users').doc(auth.uid);
           const { reason, requestId } = validateLifecycleRequest(action, payload || {});
           const auditRef = db.collection('founder_activity_log').doc(lifecycleAuditId(recruitmentId, action, requestId));
-          const [userSnap, realmSnap, recSnap, catalogSnap, auditSnap] = await Promise.all([
-            transaction.get(userRef), transaction.get(realmRef), transaction.get(recRef),
-            transaction.get(catalogRef), transaction.get(auditRef),
+          const [userSnap, realmSnap, auditSnap] = await Promise.all([
+            transaction.get(userRef), transaction.get(realmRef), transaction.get(auditRef),
           ]);
           assertActiveFounder(auth, userSnap.exists ? userSnap.data() : {});
           if (auditSnap.exists) {
@@ -527,27 +463,18 @@ exports.handleSentinelAction = functions
             if (prior.action !== action || prior.reason !== reason) throw new Error('IDEMPOTENCY_KEY_REUSED_WITH_DIFFERENT_PAYLOAD');
             return { success: true, idempotent: true, action, state: prior.nextState };
           }
-          if (!realmSnap.exists || !recSnap.exists || !catalogSnap.exists) throw new Error('MISSION_CONTRACT_INCOMPLETE');
+          if (!realmSnap.exists) throw new Error('MISSION_CONTRACT_INCOMPLETE');
           const target = lifecycleProjection(action);
           const realmData = realmSnap.data() || {};
-          const recruitmentData = recSnap.data() || {};
-          const catalogData = catalogSnap.data() || {};
           const identityValues = [
             realmData.realm_id,
             realmData.id,
-            recruitmentData.id,
-            catalogData.id,
-            catalogData.mission_id,
-            catalogData.recruitment_id,
-            catalogData.recruitmentGroupId,
           ].filter(value => value !== undefined && value !== null && String(value).trim() !== '');
           if (identityValues.some(value => String(value) !== recruitmentId)) {
             throw new Error(`FAILED_PRECONDITION: Identity mismatch detected for existing mission ID '${recruitmentId}'.`);
           }
           const previousState = {
             realm: realmSnap.data()?.status || null,
-            recruitment: recSnap.data()?.status || null,
-            catalog: catalogSnap.data()?.status || null,
           };
           const now = FieldValue.serverTimestamp();
 
@@ -567,52 +494,45 @@ exports.handleSentinelAction = functions
             });
           }
 
-          transaction.update(realmRef, {
-            status: target.realm,
-            updated_at: now,
-            ...(cyclePublication ? cyclePublication.pointerUpdate : {})
-          });
-
-          transaction.update(recRef, {
-            status: target.recruitment,
-            updatedAt: now
-          });
           const isLaunch = action === 'launch_realm';
-          transaction.update(catalogRef, {
-            status: target.catalog,
-            catalogStatus: target.catalog,
-            studentPublicationState: target.catalog,
-            archived: target.realm === 'ARCHIVED',
-            cardVisible: target.visible,
-            userPanelVisible: target.visible,
-            'visibility.studentVisible': target.visible,
-            'visibility.catalogVisible': target.visible,
-            'visibility.userPanelVisible': target.visible,
-            'visibility.quickEntryEnabled': isLaunch,
-            'visibility.smartEntryEnabled': false,
-            lifecycleMutation: { action, requestId, reason },
-            updatedAt: now,
-          });
-
-          // B5: the selected authoritative cycle becomes the published cycle.
-          if (cyclePublication) {
-            transaction.update(
-              db.collection('mission_realms').doc(recruitmentId).collection('cycles').doc(cyclePublication.cycleKey),
-              cyclePublication.cycleUpdate
-            );
+          // executeCycleAwarePublication already updates the realm atomically
+          // for launch_realm. Other lifecycle actions update that same
+          // canonical document here. No projection update is emitted.
+          if (!cyclePublication) {
+            transaction.update(realmRef, {
+              status: target.realm,
+              archived: target.realm === 'ARCHIVED',
+              cardVisible: target.visible,
+              userPanelVisible: target.visible,
+              visibilityGate: {
+                ...(realmData.visibilityGate || {}),
+                studentVisible: target.visible,
+                catalogVisible: target.visible,
+                userPanelVisible: target.visible,
+                cardVisible: target.visible,
+                quickEntryEnabled: isLaunch,
+                smartEntryEnabled: false,
+                gateStatus: target.realm,
+              },
+              lifecycleMutation: { action, requestId, reason },
+              updatedAt: now,
+              updated_at: now,
+            });
           }
+
+          // executeCycleAwarePublication already updates the selected cycle
+          // and canonical realm in this transaction.
           transaction.create(auditRef, {
             type: 'MISSION_LIFECYCLE', missionId: recruitmentId, actorId: auth.uid,
             action, requestId, reason, previousState,
-            nextState: { realm: target.realm, recruitment: target.recruitment, catalog: target.catalog },
+            nextState: { realm: target.realm },
             dependencyPreflight: { eligible: true, blockers: [] }, timestamp: now,
           });
           return { success: true, idempotent: false, action, state: target.realm };
       }
 
       else if (action === 'delete_realm_permanently') {
-          if (!realmRef || !recRef) throw new Error('REALM_ID_REQUIRED');
-          const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
+          if (!realmRef) throw new Error('REALM_ID_REQUIRED');
           const userRef = db.collection('users').doc(auth.uid);
           const { reason, requestId } = validateLifecycleRequest(action, payload || {});
           const auditRef = db.collection('founder_activity_log').doc(lifecycleAuditId(recruitmentId, action, requestId));
@@ -621,29 +541,27 @@ exports.handleSentinelAction = functions
           const queueQuery = db.collection('ai_queue').where('missionId', '==', recruitmentId).limit(1);
           const syllabusQuery = db.collection('syllabus_registry').where('missionId', '==', recruitmentId).limit(1);
           const sourceDocumentQuery = db.collection('source_documents').where('missionId', '==', recruitmentId).limit(1);
-          const [userSnap, realmSnap, recSnap, catalogSnap, auditSnap, participantsSnap, documentsSnap, queueSnap, syllabusSnap, sourceDocumentsSnap] = await Promise.all([
-            transaction.get(userRef), transaction.get(realmRef), transaction.get(recRef), transaction.get(catalogRef),
-            transaction.get(auditRef), transaction.get(participantQuery), transaction.get(documentQuery),
+          const [userSnap, realmSnap, auditSnap, participantsSnap, documentsSnap, queueSnap, syllabusSnap, sourceDocumentsSnap] = await Promise.all([
+            transaction.get(userRef), transaction.get(realmRef), transaction.get(auditRef),
+            transaction.get(participantQuery), transaction.get(documentQuery),
             transaction.get(queueQuery), transaction.get(syllabusQuery), transaction.get(sourceDocumentQuery),
           ]);
           assertActiveFounder(auth, userSnap.exists ? userSnap.data() : {});
           if (auditSnap.exists) return { success: true, idempotent: true, deleted: true };
           const realm = realmSnap.exists ? realmSnap.data() || {} : {};
-          const recruitment = recSnap.exists ? recSnap.data() || {} : {};
-          const catalog = catalogSnap.exists ? catalogSnap.data() || {} : {};
           const preflight = evaluateDeletePreflight({
             realmExists: realmSnap.exists,
-            recruitmentExists: recSnap.exists,
-            catalogStudentVisible: catalogSnap.exists && (catalog.cardVisible === true || catalog.userPanelVisible === true),
-            activeRecruitment: ['published', 'active'].includes(String(recruitment.status || '').toLowerCase()),
+            recruitmentExists: true,
+            catalogStudentVisible: realm.cardVisible === true || realm.userPanelVisible === true || realm.visibilityGate?.studentVisible === true,
+            activeRecruitment: ['published', 'active', 'live'].includes(String(realm.status || '').toLowerCase()),
             studentAssignments: !participantsSnap.empty,
             documents: !documentsSnap.empty || !sourceDocumentsSnap.empty,
-            syllabus: !syllabusSnap.empty || realm.contentLocks?.syllabusPublished === true || catalog.contentLocks?.syllabusPublished === true,
-            digibook: realm.contentLocks?.digibookPublished === true || catalog.contentLocks?.digibookPublished === true,
-            crucible: realm.contentLocks?.cruciblePublished === true || catalog.contentLocks?.cruciblePublished === true,
-            publicationHistory: catalog.publishedAt != null || catalog.publishStatus === 'published',
+            syllabus: !syllabusSnap.empty || realm.contentLocks?.syllabusPublished === true,
+            digibook: realm.contentLocks?.digibookPublished === true,
+            crucible: realm.contentLocks?.cruciblePublished === true,
+            publicationHistory: realm.publishedAt != null || realm.publishStatus === 'published' || realm.status === 'ACTIVE',
             queueJobs: !queueSnap.empty,
-            unresolvedProjection: !catalogSnap.exists,
+            unresolvedProjection: false,
           });
           if (!preflight.eligible) {
             throw new functions.https.HttpsError('failed-precondition', `DELETE_BLOCKED:${preflight.blockers.join(',')}`);
@@ -664,17 +582,15 @@ exports.handleSentinelAction = functions
               });
             }
           }
-          transaction.delete(catalogRef);
-          transaction.delete(recRef);
           transaction.delete(realmRef);
           transaction.create(auditRef, {
             type: 'MISSION_LIFECYCLE', missionId: recruitmentId, actorId: auth.uid,
-            action, requestId, reason, previousState: { realm: realm.status || null, recruitment: recruitment.status || null, catalog: catalog.status || null },
-            nextState: { realm: 'DELETED', recruitment: 'DELETED', catalog: 'DELETED' },
-            dependencyPreflight: preflight, deletedTargets: [realmRef.path, recRef.path, catalogRef.path],
+            action, requestId, reason, previousState: { realm: realm.status || null },
+            nextState: { realm: 'DELETED' },
+            dependencyPreflight: preflight, deletedTargets: [realmRef.path],
             retainedUnlinkedSources: sourceDraftRefs.map(ref => ref.path), timestamp: now,
           });
-          return { success: true, idempotent: false, deleted: true, deletedTargets: [realmRef.path, recRef.path, catalogRef.path] };
+          return { success: true, idempotent: false, deleted: true, deletedTargets: [realmRef.path] };
       }
 
       // ACTION: DECLARE RESULT
@@ -683,12 +599,8 @@ exports.handleSentinelAction = functions
           const resultDeclarationId = String(reqDeclId || resultCycle || 'cycle_1').trim();
           const completionStatus = finalStatus === 'WON' ? 'GRADUATED' : 'ARCHIVED';
 
-          // 1. READ catalog snapshot first
-          const catalogRef = db.collection('student_mission_catalog').doc(recruitmentId);
-          const catalogSnap = await transaction.get(catalogRef);
-
           const realmSnap = await transaction.get(realmRef);
-          const recSnap = await transaction.get(recRef);
+          if (!realmSnap.exists) throw new Error('CANONICAL_REALM_NOT_FOUND');
 
           const existingRealm = realmSnap.data() || {};
           const existingSideEffects = existingRealm.resultSideEffects || {};
@@ -764,11 +676,7 @@ exports.handleSentinelAction = functions
             };
           }
 
-          const realmData = { ...realmSnap.data(), completion_status: completionStatus };
-          const recruitmentData = recSnap.data() || {};
-
-          // Mirror to student catalog
-          await mirrorMissionShellToStudentCatalog(transaction, db, recruitmentId, realmData, recruitmentData, action, catalogSnap);
+          // Result state is authoritative on the canonical mission realm.
       }
 
       // ACTION: DELETE (Hardened Cleanup with Physical Storage Purge)
@@ -1002,136 +910,6 @@ exports.handleSentinelAction = functions
     throw new functions.https.HttpsError('internal', error.message);
   }
 });
-
-/**
- * Deterministic builder for student mission catalog document payload.
- */
-function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentData = {}, action = '') {
-  if (!realmId) throw new Error('CANONICAL_ID_REQUIRED');
-
-  const name = realmData.exam_name || realmData.recruitment_name || recruitmentData.title || '';
-  const year = parseInt(realmData.exam_year || recruitmentData.year || 2026, 10);
-  const category = normalizeMissionCategory(
-    realmData.exam_category ||
-    realmData.examCategory ||
-    realmData.category ||
-    recruitmentData.examCategory ||
-    recruitmentData.exam_category ||
-    recruitmentData.category ||
-    recruitmentData.missionType
-  );
-  const lifecycleStatus = realmData.status || recruitmentData.nature || 'PASSIVE';
-  const isArchived = lifecycleStatus === 'ARCHIVED' || realmData.completion_status === 'ARCHIVED';
-  const orgCode = realmData.organizationCode || recruitmentData.organizationCode || recruitmentData.org || '';
-  const normalizedState = String(realmData.state || recruitmentData.state || 'Central').trim();
-
-  return {
-    id: realmId,
-    missionId: realmId,
-    realmId: realmId,
-    sourceMissionId: realmId,
-    sourceMissionVersion: String(realmData.version || realmData.canonicalVersion || recruitmentData.version || '1'),
-    sourcePath: `mission_realms/${realmId}`,
-    sourceType: 'mission_realms',
-    studentPublicationState: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
-    title: name,
-    name: name,
-    subtitle: name,
-    displayTitle: name,
-    examName: name,
-    examYear: year,
-    missionType: category,
-    missionStructureType: realmData.missionStructureType || recruitmentData.missionStructureType || 'SINGLE_TRACK',
-    examScope: realmData.examScope || recruitmentData.examScope || 'PUBLIC_STUDENT_ELIGIBLE',
-    mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
-    supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
-    defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
-    status: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
-    catalogStatus: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
-    studentMessage: isArchived ? 'Mission archived.' : 'Mission is in internal draft preparation and is not yet published.',
-    userPanelVisible: false,
-    cardVisible: false,
-    visibility: {
-      studentVisible: false,
-      catalogVisible: false,
-      userPanelVisible: false,
-      quickEntryEnabled: false,
-      smartEntryEnabled: false
-    },
-    archived: isArchived,
-    titleHindi: realmData.titleHindi || recruitmentData.titleHindi || '',
-    state: normalizedState || 'Central',
-    examCategory: category,
-    exam_category: category,
-    target_year: year,
-    year: year,
-    exam_year: year,
-    boardId: orgCode,
-    organizationCode: orgCode,
-    priority: realmData.priority || recruitmentData.priority || 5,
-    sortOrder: realmData.priority || recruitmentData.priority || 5,
-    missionVariables: collectMissionVariables(realmData, recruitmentData),
-    source: {
-      missionRealmPath: `mission_realms/${realmId}`,
-      mirroredBy: 'handleSentinelAction',
-      mirrorPhase: 'FUP_2C_MIRROR2_AUTHMERGE1',
-      action
-    },
-    contentLocks: {
-      syllabusPublished: false,
-      topicNodesPublished: false,
-      digibookPublished: false,
-      cruciblePublished: false,
-      pyqPublished: false,
-      questionCellsPublished: false
-    },
-    updatedAt: FieldValue.serverTimestamp()
-  };
-}
-/**
- * Transactional helper to mirror mission shell to student_mission_catalog.
- */
-async function mirrorMissionShellToStudentCatalog(transaction, db, realmId, realmData = {}, recruitmentData = {}, action = '', preReadCatalogSnap = null) {
-  if (!realmId) throw new Error('CANONICAL_ID_REQUIRED');
-  
-  const catalogRef = db.collection('student_mission_catalog').doc(realmId);
-  const catalogSnap = preReadCatalogSnap || await transaction.get(catalogRef);
-  
-  if (catalogSnap.exists) {
-    const existing = catalogSnap.data() || {};
-    
-    // Check that immutable identity fields match
-    const checks = {
-      id: existing.id || existing.mission_id || realmId,
-      mission_id: existing.mission_id || existing.id || realmId,
-      recruitment_id: existing.recruitment_id || existing.recruitmentGroupId || realmId,
-      recruitmentGroupId: existing.recruitmentGroupId || existing.recruitment_id || realmId
-    };
-
-    if (checks.id !== realmId || 
-        checks.mission_id !== realmId || 
-        checks.recruitment_id !== realmId || 
-        checks.recruitmentGroupId !== realmId) {
-      throw new Error('FAILED_PRECONDITION: Identity mismatch detected for immutable fields.');
-    }
-  }
-
-  const payload = buildStudentMissionCatalogShell(realmId, realmData, recruitmentData, action);
-  
-  if (!catalogSnap.exists) {
-    // Initial creation: inject creation timestamps
-    payload.createdAt = FieldValue.serverTimestamp();
-    transaction.set(catalogRef, payload);
-  } else {
-    // Update existing: preserve immutable creation fields by omitting them
-    transaction.set(catalogRef, payload, { merge: true });
-  }
-  return payload;
-}
-
-// Export helpers for testing
-exports.buildStudentMissionCatalogShell = buildStudentMissionCatalogShell;
-exports.mirrorMissionShellToStudentCatalog = mirrorMissionShellToStudentCatalog;
 
 /**
  * Asserts whether the authenticated context is authorized to perform the action.

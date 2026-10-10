@@ -4,7 +4,7 @@
  *
  * Implements the generic fast-path input adapter:
  * When a CLEAN mission profile arrives:
- *   - Generates 3-projection mission (mission_realms, recruitments, student_mission_catalog)
+ *   - Generates one canonical mission realm (mission_realms/{missionId})
  *   - PLUS independently:
  *     - RecruitmentCycle candidate if source represents a real current cycle
  *     - CareerSignal candidate
@@ -25,8 +25,14 @@ const { routeSourceDocumentImpact } = require('./source_impact_router');
 function processCleanMissionFastPath(cleanProfile, sourceDocument, existingState = {}, options = {}) {
   const nowIso = options.nowIso || new Date().toISOString();
 
-  // 1. Generate 3-Projection Mission Projections
-  const projections = buildMissionProjections(cleanProfile, existingState, { ...options, nowIso });
+  // 1. Generate the canonical mission realm. Legacy projections are retained
+  // only inside the pure compatibility builder and are never returned to a
+  // production writer from this path.
+  const projections = buildMissionProjections(cleanProfile, existingState, {
+    ...options,
+    nowIso,
+    canonicalOnly: true,
+  });
 
   // 2. Independently Route Source Document for Career Signals & Academic Links
   let sourceImpacts = null;
@@ -43,8 +49,6 @@ function processCleanMissionFastPath(cleanProfile, sourceDocument, existingState
     permanentMissionId: projections.missionId,
     missionProjections: {
       mission_realms: projections.realmData,
-      recruitments: projections.recruitmentData,
-      student_mission_catalog: projections.catalogData
     },
     careerSignalImpact: sourceImpacts ? sourceImpacts.impacts.careerSignalImpact : null,
     academicImpactRef: sourceImpacts ? sourceImpacts.impacts.academicImpactRef : null,

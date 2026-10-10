@@ -12,9 +12,9 @@
  *     enrichmentStatus = PENDING_ENRICHMENT. Creation is NOT publication.
  *   - DUPLICATE-CYCLE GUARD: the same missionId + cycleKey must never be
  *     silently merged or duplicated — fail closed.
- *   - PROJECTION ISOLATION: creating a draft cycle must never write
- *     student_mission_catalog, recruitments, the mission_realms root document,
- *     or any publication/visibility state.
+ *   - PROJECTION ISOLATION: creating a draft cycle must never write legacy
+ *     top-level mission projections. The permanent mission realm may receive
+ *     only its governed draft pointer and stable identity shell.
  *   - EXPLICIT AUTHORITY IDENTITY INVARIANT: authorityKey is strictly mandatory in
  *     all authoritative cycle creation, builder calls, handoffs, and direct persistence.
  *     It must be a registered canonical authority key consistent with jurisdictionLevel
@@ -43,6 +43,7 @@ const {
 const {
   validateOrResolveId,
 } = require('../canonical_mission_registry');
+const { buildCanonicalMissionRealm } = require('./canonical_mission_realm_store');
 
 const ACCEPTED_VERIFICATION_STATES = ['verified', 'published']; // published implies prior governed verification
 
@@ -475,55 +476,40 @@ async function executeUnifiedMissionCreation({ transaction, db, payload = {}, ac
   });
   transaction.set(cycleRef, cycle);
 
-  // LAW 6 — PARENT MISSION + SAFE DRAFT POINTER + COMPATIBILITY SHELLS
+  // LAW 6 — CANONICAL PARENT MISSION + SAFE DRAFT POINTER
   const parentRef = db.collection('mission_realms').doc(missionId);
   const parentSnap = await transaction.get(parentRef);
   const writePaths = [cycleRef.path, parentRef.path];
   let createdParent = false;
   if (!parentSnap.exists) {
-    // NEW PERMANENT MISSION: parent + hidden/passive compatibility shells only.
+    // NEW PERMANENT MISSION: one canonical parent plus a hidden/passive cycle.
     createdParent = true;
-    transaction.set(parentRef, {
-      realm_id: missionId,
+    transaction.set(parentRef, buildCanonicalMissionRealm({
+      id: missionId,
+      missionId,
+      realmId: missionId,
       exam_name: payload.examName || '',
+      title: payload.examName || '',
+      displayTitle: payload.examName || '',
       exam_category: payload.examCategory || null,
       organization: payload.organization || '',
+      exam_year: payload.year || null,
       status: 'PASSIVE',
+      userPanelVisible: false,
+      cardVisible: false,
+      visibilityGate: {
+        studentVisible: false,
+        catalogVisible: false,
+        userPanelVisible: false,
+        cardVisible: false,
+        gateStatus: 'PASSIVE',
+      },
+      archived: false,
       latest_draft_cycle_key: cycleKey,
       created_at: recordedAt,
       updated_at: recordedAt,
       created_by: actorId,
-    });
-    transaction.set(db.collection('recruitments').doc(missionId), {
-      id: missionId,
-      title: payload.examName || '',
-      org: payload.organization || '',
-      examCategory: payload.examCategory || null,
-      status: 'internal_draft',
-      nature: 'PASSIVE',
-      createdAt: recordedAt,
-      updatedAt: recordedAt,
-      version: '1.0.0',
-    });
-    transaction.set(db.collection('student_mission_catalog').doc(missionId), {
-      id: missionId,
-      missionId,
-      sourceMissionId: missionId,
-      sourceMissionVersion: '1',
-      sourcePath: `mission_realms/${missionId}`,
-      sourceType: 'mission_realms',
-      status: 'INTERNAL_DRAFT',
-      catalogStatus: 'INTERNAL_DRAFT',
-      studentPublicationState: 'INTERNAL_DRAFT',
-      examName: payload.examName || '',
-      organization: payload.organization || '',
-      userPanelVisible: false,
-      cardVisible: false,
-      visibility: { studentVisible: false, catalogVisible: false, userPanelVisible: false, quickEntryEnabled: false, smartEntryEnabled: false },
-      contentLocks: { syllabusPublished: false, topicNodesPublished: false, digibookPublished: false, cruciblePublished: false, pyqPublished: false, questionCellsPublished: false },
-      createdAt: recordedAt,
-      updatedAt: recordedAt,
-    });
+    }, {}, recordedAt));
   } else {
     // EXISTING PERMANENT MISSION: stable identity compatibility (exam_name +
     // organization; year is cycle metadata and must NOT change the parent).

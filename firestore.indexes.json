@@ -1,6 +1,38 @@
 {
   "indexes": [
     {
+      "collectionGroup": "mission_realms",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "userPanelVisible",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "archived",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "mission_realms",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "status",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "userPanelVisible",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "archived",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
       "collectionGroup": "sentinel_drafts",
       "queryScope": "COLLECTION",
       "fields": [

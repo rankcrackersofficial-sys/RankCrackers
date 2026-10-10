@@ -6,10 +6,19 @@ import '../models/opportunity.dart';
 /// Streams all active recruitment notifications from Firestore.
 final allOpportunitiesProvider = StreamProvider<List<Opportunity>>((ref) {
   return FirebaseFirestore.instance
-      .collection('recruitments')
-      .where('status', isEqualTo: 'published')
+      .collection('mission_realms')
+      .where('userPanelVisible', isEqualTo: true)
+      .where('archived', isEqualTo: false)
       .snapshots()
-      .map((snapshot) => snapshot.docs
-          .map((doc) => Opportunity.fromMap({...doc.data(), 'id': doc.id}))
-          .toList());
+      .map(
+        (snapshot) => snapshot.docs
+            .where((doc) {
+              final data = doc.data();
+              final status = (data['status'] ?? '').toString().toUpperCase();
+              return data['archived'] != true &&
+                  (status == 'ACTIVE' || status == 'LIVE' || status == 'PUBLISHED');
+            })
+            .map((doc) => Opportunity.fromMap({...doc.data(), 'id': doc.id}))
+            .toList(),
+      );
 });

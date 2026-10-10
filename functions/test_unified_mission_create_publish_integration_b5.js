@@ -257,28 +257,15 @@ test('I1: new permanent mission + 2026 SEPARATE syllabus creates the full govern
   assert.strictEqual(cycle.authorityKey, 'auth_in_ssc');
   assert.strictEqual(cycle.enrichmentStatus, 'PENDING_ENRICHMENT');
 
-  const recShell = db._docs.get('recruitments/rec_ssc_ssc_cgl');
-  assert.ok(recShell !== undefined, 'recruitments shell must exist on new permanent mission creation');
-  assert.strictEqual(recShell.status, 'internal_draft');
-  assert.strictEqual(recShell.nature, 'PASSIVE');
-
-  const catShell = db._docs.get('student_mission_catalog/rec_ssc_ssc_cgl');
-  assert.ok(catShell !== undefined, 'student_mission_catalog shell must exist on new permanent mission creation');
-  assert.strictEqual(catShell.status, 'INTERNAL_DRAFT');
-  assert.strictEqual(catShell.catalogStatus, 'INTERNAL_DRAFT');
-  assert.strictEqual(catShell.studentPublicationState, 'INTERNAL_DRAFT');
-  assert.strictEqual(catShell.userPanelVisible, false);
-  assert.strictEqual(catShell.cardVisible, false);
-  assert.strictEqual(catShell.visibility.studentVisible, false);
-  assert.strictEqual(catShell.visibility.catalogVisible, false);
-  assert.strictEqual(catShell.visibility.userPanelVisible, false);
+  assert.strictEqual(db._docs.has('recruitments/rec_ssc_ssc_cgl'), false);
+  assert.strictEqual(db._docs.has('student_mission_catalog/rec_ssc_ssc_cgl'), false);
 
   const notifDraft = db._docs.get('sentinel_drafts/draft_notif_1');
   assert.strictEqual(notifDraft.linkedRealmId, 'rec_ssc_ssc_cgl');
   assert.strictEqual(notifDraft.linkedCycleKey, '2026');
 });
 
-test('I2: new mission creates parent + authoritative cycle + hidden compatibility shells only', async () => {
+test('I2: new mission creates only the canonical parent, cycle, and source links', async () => {
   const db = createFakeDb();
   seedVerifiedSources(db);
   const result = await runCreation(db, creationPayload());
@@ -287,7 +274,7 @@ test('I2: new mission creates parent + authoritative cycle + hidden compatibilit
   assert.ok(result.writePaths.includes('mission_realms/rec_ssc_ssc_cgl/cycles/2026'));
   assert.ok(result.writePaths.includes('sentinel_drafts/draft_notif_1'));
   assert.ok(result.writePaths.includes('sentinel_drafts/draft_syll_1'));
-  assert.strictEqual(db._writes.length, 6, 'Exact 6 physical writes on new mission creation with separate syllabus');
+  assert.strictEqual(db._writes.length, 4, 'Exact 4 physical writes on new mission creation with separate syllabus');
 });
 
 test('I3: existing permanent mission + 2027 creates the cycle + latest draft pointer only', async () => {
@@ -322,9 +309,6 @@ test('I4: existing published 2026 projection survives a 2027 draft untouched', a
     status: 'ACTIVE',
     currentPublishedCycleKey: '2026',
   });
-  db.seed('recruitments/rec_ssc_ssc_cgl', { id: 'rec_ssc_ssc_cgl', status: 'published', currentCycleKey: '2026' });
-  db.seed('student_mission_catalog/rec_ssc_ssc_cgl', { id: 'rec_ssc_ssc_cgl', catalogStatus: 'LIVE', currentCycleKey: '2026', userPanelVisible: true, visibility: { studentVisible: true } });
-
   seedVerifiedSources(db, { notifId: 'notif_2027', syllabusId: 'syll_2027' });
   await runCreation(db, creationPayload({ year: 2027, notificationId: 'notif_2027', syllabusId: 'syll_2027' }));
 
@@ -333,15 +317,8 @@ test('I4: existing published 2026 projection survives a 2027 draft untouched', a
   assert.strictEqual(parent.status, 'ACTIVE');
   assert.strictEqual(parent.latest_draft_cycle_key, '2027');
 
-  const rec = db._docs.get('recruitments/rec_ssc_ssc_cgl');
-  assert.strictEqual(rec.status, 'published');
-  assert.strictEqual(rec.currentCycleKey, '2026');
-
-  const cat = db._docs.get('student_mission_catalog/rec_ssc_ssc_cgl');
-  assert.strictEqual(cat.catalogStatus, 'LIVE');
-  assert.strictEqual(cat.currentCycleKey, '2026');
-  assert.strictEqual(cat.userPanelVisible, true);
-  assert.strictEqual(cat.visibility.studentVisible, true);
+  assert.strictEqual(db._docs.has('recruitments/rec_ssc_ssc_cgl'), false);
+  assert.strictEqual(db._docs.has('student_mission_catalog/rec_ssc_ssc_cgl'), false);
 });
 
 test('I5: duplicate 2027 cycle fails closed (no merge, no overwrite, no second draft)', async () => {

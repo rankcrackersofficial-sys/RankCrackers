@@ -21,7 +21,8 @@
  *   - No Default Exam Metadata Insertion in ACCEPTED_MANIFEST / Governed modes
  *   - Startability & Publication Dependency Contract (PREPARING != LIVE; unready startability = false)
  *   - Monitoring & Verification Timestamp Truth (monitorConfigured = false unless evidence-backed)
- *   - 3-Projection Owned-Field Merge Semantics across mission_realms, recruitments, student_mission_catalog
+ *   - Canonical mission_realms authority. Legacy projection output remains
+ *     available only for historical fixture tests when canonicalOnly is false.
  *   - Hard-Disabled APPLY Mode (APPLY mode rejected)
  *   - Measured Parity & Zero Timestamp Drift
  */
@@ -542,6 +543,7 @@ function validateManifest(manifest, options = {}) {
 function buildMissionProjections(rawMission, existingState = {}, options = {}) {
   const nowIso = options.nowIso || new Date().toISOString();
   const context = options.context || 'FIXTURE_TEST';
+  const canonicalOnly = options.canonicalOnly === true;
 
   const registry = options.authorityRegistry ? validateAuthorityRegistry(options.authorityRegistry, options) : DEFAULT_FIXTURE_AUTHORITY_REGISTRY;
 
@@ -590,8 +592,8 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
 
   // Existing documents for OWNED_FIELD_MERGE & GOVERNANCE_OWNED Preservation
   const exRealm = existingState.mission_realms?.[missionId] || {};
-  const exRec = existingState.recruitments?.[missionId] || {};
-  const exCat = existingState.student_mission_catalog?.[missionId] || {};
+  const exRec = canonicalOnly ? {} : (existingState.recruitments?.[missionId] || {});
+  const exCat = canonicalOnly ? {} : (existingState.student_mission_catalog?.[missionId] || {});
 
   // Preserve GOVERNANCE_OWNED Fields
   const isArchived = exCat.archived === true || exRealm.archived === true || mission.archived === true;
@@ -792,6 +794,10 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
     updatedAt: catUpdatedAt
   };
 
+  if (canonicalOnly) {
+    return { missionId, realmData };
+  }
+
   return {
     missionId,
     realmData,
@@ -847,11 +853,15 @@ function runGenericMissionMaterializer(manifest, currentStateStore = {}, options
     const projections = buildMissionProjections(rawMission, currentStateStore, { ...options, nowIso });
     const mId = projections.missionId;
 
-    const targets = [
-      { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
-      { col: 'recruitments', path: `recruitments/${mId}`, data: projections.recruitmentData, store: existingRecruitments },
-      { col: 'student_mission_catalog', path: `student_mission_catalog/${mId}`, data: projections.catalogData, store: existingCatalog }
-    ];
+    const targets = options.canonicalOnly === true
+      ? [
+          { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
+        ]
+      : [
+          { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
+          { col: 'recruitments', path: `recruitments/${mId}`, data: projections.recruitmentData, store: existingRecruitments },
+          { col: 'student_mission_catalog', path: `student_mission_catalog/${mId}`, data: projections.catalogData, store: existingCatalog }
+        ];
 
     targets.forEach(t => {
       const existingDoc = t.store[mId];
@@ -916,7 +926,7 @@ function runGenericMissionMaterializer(manifest, currentStateStore = {}, options
     timestamp: nowIso,
     manifestVersion: manifest.manifestVersion,
     totalMissionsEvaluated: manifest.missions.length,
-    totalProjectionsEvaluated: manifest.missions.length * 3,
+    totalProjectionsEvaluated: mutationManifest.length + semanticNoOps,
     summary: {
       semanticCreates,
       semanticUpdates,

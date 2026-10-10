@@ -108,18 +108,18 @@ function buildCyclePublicationPlan({ missionId, cycleKey, cycle, reason, request
     pointerUpdates: { currentPublishedCycleKey: cycleKey },
     historicalCyclesPreserved: true,
     projectionUpdates: {
-      mission_realms: { status: 'ACTIVE' },
-      recruitments: { status: 'published' },
-      student_mission_catalog: {
+      mission_realms: {
         status: 'ACTIVE',
-        catalogStatus: 'ACTIVE',
-        studentPublicationState: 'ACTIVE',
-        visibility: {
+        userPanelVisible: true,
+        cardVisible: true,
+        visibilityGate: {
           studentVisible: true,
           catalogVisible: true,
           userPanelVisible: true,
+          cardVisible: true,
           quickEntryEnabled: true,
           smartEntryEnabled: false,
+          gateStatus: 'ACTIVE',
         },
       },
     },
@@ -222,19 +222,18 @@ async function executeCycleAwarePublication({ transaction, db, missionId, cycleK
   });
   const cycleUpdate = { status: 'published', publishedAt: recordedAt, publishedViaRequestId: requestId.trim() };
   const pointerUpdate = { currentPublishedCycleKey: cycleKey };
-  // ATOMIC SELECTED-CYCLE PUBLICATION (STEP 16): all projection updates apply
-  // within the caller transaction. Historical cycles are never touched.
+  // ATOMIC SELECTED-CYCLE PUBLICATION (STEP 16): the selected cycle and the
+  // single canonical mission realm update together. Historical cycles are
+  // never touched and no legacy projection is written.
   transaction.update(
     db.collection('mission_realms').doc(missionId).collection('cycles').doc(cycleKey),
     cycleUpdate
   );
   transaction.update(db.collection('mission_realms').doc(missionId), {
     ...pointerUpdate,
-    status: plan.projectionUpdates.mission_realms.status,
+    ...plan.projectionUpdates.mission_realms,
     updated_at: recordedAt,
   });
-  transaction.update(db.collection('recruitments').doc(missionId), plan.projectionUpdates.recruitments);
-  transaction.update(db.collection('student_mission_catalog').doc(missionId), plan.projectionUpdates.student_mission_catalog);
   return {
     published: true,
     plan,

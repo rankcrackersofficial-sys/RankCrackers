@@ -11,6 +11,8 @@ class ArchiveRepository {
     return _firestore
         .collection('mission_realms')
         .where('status', isEqualTo: 'ACTIVE')
+        .where('userPanelVisible', isEqualTo: true)
+        .where('archived', isEqualTo: false)
         .snapshots()
         .map((snapshot) => snapshot.docs
             .map((doc) => RecruitmentRealm.fromMap(doc.data()))

@@ -60,8 +60,10 @@ class _MissionVariableAuthorityPanelState
   }
 
   void _replaceVariables(Map<String, dynamic> variables) {
-    setState(() =>
-        _editor.text = const JsonEncoder.withIndent('  ').convert(variables));
+    setState(
+      () =>
+          _editor.text = const JsonEncoder.withIndent('  ').convert(variables),
+    );
   }
 
   void _setPolicy(String policy) {
@@ -99,7 +101,9 @@ class _MissionVariableAuthorityPanelState
   }
 
   Future<void> _selectMission(
-      String id, Map<String, dynamic> catalogData) async {
+    String id,
+    Map<String, dynamic> catalogData,
+  ) async {
     final realmDoc = await FirebaseFirestore.instance
         .collection('mission_realms')
         .doc(id)
@@ -160,25 +164,27 @@ class _MissionVariableAuthorityPanelState
       final result = await FirebaseFunctions.instanceFor(region: 'us-central1')
           .httpsCallable('handleSentinelAction')
           .call({
-        'action': 'update_mission_variables',
-        'recruitmentId': id,
-        'payload': {
-          'missionVariables': variables,
-          'expectedVersion': mission['missionVariableVersion'] ?? 0,
-          'expectedExamYear':
-              mission['exam_year'] ?? mission['examYear'] ?? mission['year'],
-          'expectedExamCategory':
-              mission['exam_category'] ?? mission['examCategory'],
-          'reason': _reason.text.trim(),
-          'requestId': requestId,
-        },
-      });
+            'action': 'update_mission_variables',
+            'recruitmentId': id,
+            'payload': {
+              'missionVariables': variables,
+              'expectedVersion': mission['missionVariableVersion'] ?? 0,
+              'expectedExamYear':
+                  mission['exam_year'] ??
+                  mission['examYear'] ??
+                  mission['year'],
+              'expectedExamCategory':
+                  mission['exam_category'] ?? mission['examCategory'],
+              'reason': _reason.text.trim(),
+              'requestId': requestId,
+            },
+          });
       final data = Map<String, dynamic>.from(result.data as Map);
       setState(() {
         _mission = {
           ...mission,
           'missionVariables': variables,
-          'missionVariableVersion': data['version']
+          'missionVariableVersion': data['version'],
         };
         _message = data['idempotent'] == true
             ? 'No duplicate write: this request was already applied.'
@@ -197,12 +203,13 @@ class _MissionVariableAuthorityPanelState
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      SizedBox(
+    return Row(
+      children: [
+        SizedBox(
           width: 300,
           child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
             stream: FirebaseFirestore.instance
-                .collection('student_mission_catalog')
+                .collection('mission_realms')
                 .snapshots(),
             builder: (context, snapshot) {
               if (snapshot.hasError)
@@ -224,30 +231,38 @@ class _MissionVariableAuthorityPanelState
                 }
               }
               return ListView(
-                  children: snapshot.data!.docs.map((doc) {
-                final data = doc.data();
-                return ListTile(
-                  selected: doc.id == _missionId,
-                  title: Text((data['displayName'] ??
-                          data['title'] ??
-                          data['name'] ??
-                          doc.id)
-                      .toString()),
-                  subtitle: Text(
-                      '${data['examCategory'] ?? data['exam_category'] ?? 'Category pending'} • ${data['examYear'] ?? data['exam_year'] ?? data['year'] ?? 'Year pending'}'),
-                  trailing: Text('v${data['missionVariableVersion'] ?? 0}'),
-                  onTap: () => _selectMission(doc.id, data),
-                );
-              }).toList());
+                children: snapshot.data!.docs.map((doc) {
+                  final data = doc.data();
+                  return ListTile(
+                    selected: doc.id == _missionId,
+                    title: Text(
+                      (data['displayName'] ??
+                              data['title'] ??
+                              data['name'] ??
+                              doc.id)
+                          .toString(),
+                    ),
+                    subtitle: Text(
+                      '${data['examCategory'] ?? data['exam_category'] ?? 'Category pending'} • ${data['examYear'] ?? data['exam_year'] ?? data['year'] ?? 'Year pending'}',
+                    ),
+                    trailing: Text('v${data['missionVariableVersion'] ?? 0}'),
+                    onTap: () => _selectMission(doc.id, data),
+                  );
+                }).toList(),
+              );
             },
-          )),
-      const VerticalDivider(width: 1),
-      Expanded(
+          ),
+        ),
+        const VerticalDivider(width: 1),
+        Expanded(
           child: _missionId == null
               ? const Center(
-                  child: Text('Select a mission to manage its variables.'))
-              : _buildEditor(context)),
-    ]);
+                  child: Text('Select a mission to manage its variables.'),
+                )
+              : _buildEditor(context),
+        ),
+      ],
+    );
   }
 
   Widget _buildEditor(BuildContext context) {
@@ -255,225 +270,310 @@ class _MissionVariableAuthorityPanelState
     final policy = _policies.contains(variables['mediumPolicy'])
         ? variables['mediumPolicy'] as String
         : null;
-    final supported =
-        List<String>.from(variables['supportedMediums'] ?? const []);
+    final supported = List<String>.from(
+      variables['supportedMediums'] ?? const [],
+    );
     final allowedDefaults = supported.where(_mediums.contains).toList();
     final defaultMedium = allowedDefaults.contains(variables['defaultMedium'])
         ? variables['defaultMedium'] as String
         : null;
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 12),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-        Row(children: [
-          Expanded(
-              child: Column(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                Text('MISSION VARIABLES',
-                    style: Theme.of(context).textTheme.titleLarge),
-                Text(_missionId!,
-                    style:
-                        const TextStyle(fontSize: 10, color: Colors.white38)),
-              ])),
-          if (!_realmPresent)
-            const Chip(
-                avatar: Icon(Icons.lock_outline, size: 15),
-                label: Text('CHANGES LOCKED')),
-        ]),
-        const SizedBox(height: 12),
-        Expanded(
-            child: ListView(children: [
-          Card(
-              child: Padding(
-                  padding: const EdgeInsets.all(14),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('LANGUAGE DELIVERY',
-                            style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFFE8C766))),
-                        const SizedBox(height: 12),
-                        Row(children: [
-                          Expanded(
-                              child: DropdownButtonFormField<String>(
-                            initialValue: policy,
-                            decoration: const InputDecoration(
-                                labelText: 'Medium Policy',
-                                border: OutlineInputBorder()),
-                            items: _policies
-                                .map((value) => DropdownMenuItem(
-                                    value: value,
-                                    child: Text(value.replaceAll('_', ' '))))
-                                .toList(),
-                            onChanged: _realmPresent
-                                ? (value) {
-                                    if (value != null) _setPolicy(value);
-                                  }
-                                : null,
-                          )),
-                          const SizedBox(width: 12),
-                          Expanded(
-                              child: InputDecorator(
-                            decoration: const InputDecoration(
-                                labelText: 'Supported Mediums',
-                                border: OutlineInputBorder()),
-                            child: Text(supported.isEmpty
-                                ? 'NOT CONFIGURED'
-                                : supported.join(' + ')),
-                          )),
-                          const SizedBox(width: 12),
-                          Expanded(
-                              child: DropdownButtonFormField<String>(
-                            initialValue: defaultMedium,
-                            decoration: const InputDecoration(
-                                labelText: 'Default Medium',
-                                border: OutlineInputBorder()),
-                            items: allowedDefaults
-                                .map((value) => DropdownMenuItem(
-                                    value: value, child: Text(value)))
-                                .toList(),
-                            onChanged: _realmPresent
-                                ? (value) {
-                                    if (value != null) _setDefaultMedium(value);
-                                  }
-                                : null,
-                          )),
-                        ]),
-                      ]))),
-          const SizedBox(height: 10),
-          const Text('VARIABLE PACKS',
-              style: TextStyle(
-                  fontSize: 11,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFE8C766))),
-          const SizedBox(height: 6),
-          ..._packLabels.entries
-              .map((entry) => _packSection(entry.key, entry.value, variables)),
-          const SizedBox(height: 8),
-          ExpansionTile(
-            tilePadding: EdgeInsets.zero,
-            leading: const Icon(Icons.code, size: 18),
-            title: const Text('ADVANCED TECHNICAL VIEW'),
-            subtitle: const Text('Raw canonical data for diagnostics only.'),
-            children: [
-              SizedBox(
-                  height: 260,
-                  child: TextField(
-                    controller: _editor,
-                    expands: true,
-                    maxLines: null,
-                    minLines: null,
-                    enabled: _realmPresent,
-                    style:
-                        const TextStyle(fontFamily: 'monospace', fontSize: 11),
-                    decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Canonical data',
-                        alignLabelWithHint: true),
-                  ))
+                    Text(
+                      'MISSION VARIABLES',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    Text(
+                      _missionId!,
+                      style: const TextStyle(
+                        fontSize: 10,
+                        color: Colors.white38,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (!_realmPresent)
+                const Chip(
+                  avatar: Icon(Icons.lock_outline, size: 15),
+                  label: Text('CHANGES LOCKED'),
+                ),
             ],
           ),
-        ])),
-        const SizedBox(height: 10),
-        TextField(
+          const SizedBox(height: 12),
+          Expanded(
+            child: ListView(
+              children: [
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(14),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'LANGUAGE DELIVERY',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFFE8C766),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: DropdownButtonFormField<String>(
+                                initialValue: policy,
+                                decoration: const InputDecoration(
+                                  labelText: 'Medium Policy',
+                                  border: OutlineInputBorder(),
+                                ),
+                                items: _policies
+                                    .map(
+                                      (value) => DropdownMenuItem(
+                                        value: value,
+                                        child: Text(value.replaceAll('_', ' ')),
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: _realmPresent
+                                    ? (value) {
+                                        if (value != null) _setPolicy(value);
+                                      }
+                                    : null,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: InputDecorator(
+                                decoration: const InputDecoration(
+                                  labelText: 'Supported Mediums',
+                                  border: OutlineInputBorder(),
+                                ),
+                                child: Text(
+                                  supported.isEmpty
+                                      ? 'NOT CONFIGURED'
+                                      : supported.join(' + '),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: DropdownButtonFormField<String>(
+                                initialValue: defaultMedium,
+                                decoration: const InputDecoration(
+                                  labelText: 'Default Medium',
+                                  border: OutlineInputBorder(),
+                                ),
+                                items: allowedDefaults
+                                    .map(
+                                      (value) => DropdownMenuItem(
+                                        value: value,
+                                        child: Text(value),
+                                      ),
+                                    )
+                                    .toList(),
+                                onChanged: _realmPresent
+                                    ? (value) {
+                                        if (value != null)
+                                          _setDefaultMedium(value);
+                                      }
+                                    : null,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const Text(
+                  'VARIABLE PACKS',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFE8C766),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                ..._packLabels.entries.map(
+                  (entry) => _packSection(entry.key, entry.value, variables),
+                ),
+                const SizedBox(height: 8),
+                ExpansionTile(
+                  tilePadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.code, size: 18),
+                  title: const Text('ADVANCED TECHNICAL VIEW'),
+                  subtitle: const Text(
+                    'Raw canonical data for diagnostics only.',
+                  ),
+                  children: [
+                    SizedBox(
+                      height: 260,
+                      child: TextField(
+                        controller: _editor,
+                        expands: true,
+                        maxLines: null,
+                        minLines: null,
+                        enabled: _realmPresent,
+                        style: const TextStyle(
+                          fontFamily: 'monospace',
+                          fontSize: 11,
+                        ),
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Canonical data',
+                          alignLabelWithHint: true,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+          TextField(
             controller: _reason,
             enabled: _realmPresent,
             decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Founder change reason (required)')),
-        if (_message != null) ...[
-          const SizedBox(height: 8),
-          Text(_message!,
+              border: OutlineInputBorder(),
+              labelText: 'Founder change reason (required)',
+            ),
+          ),
+          if (_message != null) ...[
+            const SizedBox(height: 8),
+            Text(
+              _message!,
               style: TextStyle(
-                  color: _error ? Colors.orangeAccent : Colors.greenAccent)),
+                color: _error ? Colors.orangeAccent : Colors.greenAccent,
+              ),
+            ),
+          ],
+          const SizedBox(height: 10),
+          FilledButton.icon(
+            onPressed: (_saving || !_realmPresent) ? null : _save,
+            icon: _saving
+                ? const SizedBox(
+                    width: 16,
+                    height: 16,
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : const Icon(Icons.verified_user_outlined),
+            label: Text(_saving ? 'VALIDATING…' : 'REVIEW AND SAVE CHANGES'),
+          ),
         ],
-        const SizedBox(height: 10),
-        FilledButton.icon(
-          onPressed: (_saving || !_realmPresent) ? null : _save,
-          icon: _saving
-              ? const SizedBox(
-                  width: 16,
-                  height: 16,
-                  child: CircularProgressIndicator(strokeWidth: 2))
-              : const Icon(Icons.verified_user_outlined),
-          label: Text(_saving ? 'VALIDATING…' : 'REVIEW AND SAVE CHANGES'),
-        ),
-      ]),
+      ),
     );
   }
 
   Widget _packSection(
-      String key, String label, Map<String, dynamic> variables) {
+    String key,
+    String label,
+    Map<String, dynamic> variables,
+  ) {
     final pack = List<dynamic>.from(variables[key] ?? const []);
     return Card(
-        child: ExpansionTile(
-      dense: true,
-      title: Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
-      trailing: Text('${pack.length} item${pack.length == 1 ? '' : 's'}',
-          style: const TextStyle(color: Colors.white54)),
-      children: pack.isEmpty
-          ? const [
-              Padding(
+      child: ExpansionTile(
+        dense: true,
+        title: Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
+        trailing: Text(
+          '${pack.length} item${pack.length == 1 ? '' : 's'}',
+          style: const TextStyle(color: Colors.white54),
+        ),
+        children: pack.isEmpty
+            ? const [
+                Padding(
                   padding: EdgeInsets.fromLTRB(16, 0, 16, 14),
                   child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text('No source-backed items.',
-                          style: TextStyle(color: Colors.white38))))
-            ]
-          : List.generate(pack.length, (index) {
-              final item = Map<String, dynamic>.from(pack[index] as Map);
-              final statuses = ['pending', 'approved', 'edited', 'sent_back'];
-              final status =
-                  statuses.contains(item['founder_verification_status'])
-                      ? item['founder_verification_status'] as String
-                      : 'pending';
-              return Padding(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'No source-backed items.',
+                      style: TextStyle(color: Colors.white38),
+                    ),
+                  ),
+                ),
+              ]
+            : List.generate(pack.length, (index) {
+                final item = Map<String, dynamic>.from(pack[index] as Map);
+                final statuses = ['pending', 'approved', 'edited', 'sent_back'];
+                final status =
+                    statuses.contains(item['founder_verification_status'])
+                    ? item['founder_verification_status'] as String
+                    : 'pending';
+                return Padding(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
-                  child: Row(children: [
-                    Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(
                         flex: 2,
-                        child: Text(item['label']?.toString() ??
-                            item['key']?.toString() ??
-                            'Unnamed item')),
-                    const SizedBox(width: 10),
-                    Expanded(
+                        child: Text(
+                          item['label']?.toString() ??
+                              item['key']?.toString() ??
+                              'Unnamed item',
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
                         flex: 3,
                         child: TextFormField(
                           initialValue: item['value']?.toString() ?? '',
                           enabled: _realmPresent,
                           decoration: const InputDecoration(
-                              labelText: 'Value',
-                              isDense: true,
-                              border: OutlineInputBorder()),
+                            labelText: 'Value',
+                            isDense: true,
+                            border: OutlineInputBorder(),
+                          ),
                           onChanged: (value) =>
                               _updatePackItem(key, index, 'value', value),
-                        )),
-                    const SizedBox(width: 10),
-                    Expanded(
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
                         flex: 2,
                         child: DropdownButtonFormField<String>(
                           initialValue: status,
                           decoration: const InputDecoration(
-                              labelText: 'Review',
-                              isDense: true,
-                              border: OutlineInputBorder()),
+                            labelText: 'Review',
+                            isDense: true,
+                            border: OutlineInputBorder(),
+                          ),
                           items: statuses
-                              .map((value) => DropdownMenuItem(
+                              .map(
+                                (value) => DropdownMenuItem(
                                   value: value,
-                                  child: Text(value.replaceAll('_', ' '))))
+                                  child: Text(value.replaceAll('_', ' ')),
+                                ),
+                              )
                               .toList(),
                           onChanged: _realmPresent
                               ? (value) {
                                   if (value != null)
-                                    _updatePackItem(key, index,
-                                        'founder_verification_status', value);
+                                    _updatePackItem(
+                                      key,
+                                      index,
+                                      'founder_verification_status',
+                                      value,
+                                    );
                                 }
                               : null,
-                        )),
-                  ]));
-            }),
-    ));
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }),
+      ),
+    );
   }
 }

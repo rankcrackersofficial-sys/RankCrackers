@@ -20,6 +20,11 @@ class FirestoreService {
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   static const String nodeCollection = 'micro_nodes';
+
+  /// Canonical mission authority. All mission discovery and lifecycle reads
+  /// must resolve from this collection and its subcollections.
+  static const String missionRealmCollection = 'mission_realms';
+  @Deprecated('Use missionRealmCollection. Kept only for migration tooling.')
   static const String recruitmentCollection = 'recruitments';
   static const String stateRegistryCollection =
       'published_states'; // Amendment v3.0: State Registry Law
@@ -34,6 +39,9 @@ class FirestoreService {
   static const String aiQueueCollection = 'ai_queue';
   static const String notificationCandidateCollection =
       'notification_candidates';
+  @Deprecated(
+    'Student catalog is now a derived runtime view of mission_realms.',
+  )
   static const String studentMissionCatalogCollection =
       'student_mission_catalog';
 
@@ -49,7 +57,7 @@ class FirestoreService {
       'verification_candidates';
 
   // ===================================================
-  // AI WORKER OPS 
+  // AI WORKER OPS
   // ===================================================
 
   static Stream<List<Map<String, dynamic>>> streamAIQueue() {
@@ -60,11 +68,12 @@ class FirestoreService {
   }
 
   // ===================================================
-  // NOTIFICATION CANDIDATES 
+  // NOTIFICATION CANDIDATES
   // ===================================================
 
   static Future<void> saveNotificationCandidate(
-      NotificationCandidate candidate) async {
+    NotificationCandidate candidate,
+  ) async {
     await _firestore
         .collection(notificationCandidateCollection)
         .doc(candidate.id)
@@ -75,13 +84,15 @@ class FirestoreService {
     return _firestore
         .collection(notificationCandidateCollection)
         .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => NotificationCandidate.fromMap(doc.data()))
-            .toList());
+        .map(
+          (snap) => snap.docs
+              .map((doc) => NotificationCandidate.fromMap(doc.data()))
+              .toList(),
+        );
   }
 
   // ===================================================
-  // SENTINEL INTELLIGENCE 
+  // SENTINEL INTELLIGENCE
   // ===================================================
 
   static Future<void> saveSentinelDraft(SentinelDraft draft) async {
@@ -92,13 +103,19 @@ class FirestoreService {
   }
 
   static Stream<List<SentinelDraft>> streamSentinelDrafts() {
-    return _firestore.collection(sentinelDraftCollection).snapshots().map(
-        (snap) =>
-            snap.docs.map((doc) => SentinelDraft.fromMap(doc.data())).toList());
+    return _firestore
+        .collection(sentinelDraftCollection)
+        .snapshots()
+        .map(
+          (snap) => snap.docs
+              .map((doc) => SentinelDraft.fromMap(doc.data()))
+              .toList(),
+        );
   }
 
   static Stream<List<Map<String, dynamic>>> streamCollection(
-      String collection) {
+    String collection,
+  ) {
     return _firestore
         .collection(collection)
         .snapshots()
@@ -107,18 +124,22 @@ class FirestoreService {
 
   static Stream<List<Map<String, dynamic>>> streamStudentMissionCatalog() {
     return _firestore
-        .collection(studentMissionCatalogCollection)
-        .where('cardVisible', isEqualTo: true)
+        .collection(missionRealmCollection)
         .where('userPanelVisible', isEqualTo: true)
         .where('archived', isEqualTo: false)
         .snapshots()
-        .map((snap) =>
-            snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+        .map(
+          (snap) => snap.docs
+              .where(
+                (doc) => _isStudentDiscoverableRealmDoc(doc.id, doc.data()),
+              )
+              .map((doc) => {'id': doc.id, ...doc.data()})
+              .toList(),
+        );
   }
 
-
   // ===================================================
-  // QUERY OPS 
+  // QUERY OPS
   // ===================================================
   static Future<List<Map<String, dynamic>>> queryCollection(
     String collection, {
@@ -137,13 +158,15 @@ class FirestoreService {
   }
 
   // ===================================================
-  // BATCH UPLOAD HARDENING 
+  // BATCH UPLOAD HARDENING
   // ===================================================
 
   /// Performs an idempotent, atomic batch upload.
   /// Implements Duplicate Detection and All-or-Nothing Commit.
   static Future<void> uploadBatch(
-      String collection, List<Map<String, dynamic>> items) async {
+    String collection,
+    List<Map<String, dynamic>> items,
+  ) async {
     final batch = _firestore.batch();
     final colRef = _firestore.collection(collection);
 
@@ -158,8 +181,7 @@ class FirestoreService {
 
     try {
       await batch.commit();
-      debugPrint(
-          'BATCH COMMIT SUCCESS: $collection (${items.length} items)');
+      debugPrint('BATCH COMMIT SUCCESS: $collection (${items.length} items)');
     } catch (e) {
       debugPrint('BATCH COMMIT FAILED: $e');
       rethrow; // Ensure upper layers can handle rollback logic
@@ -167,24 +189,35 @@ class FirestoreService {
   }
 
   // ===================================================
-  // UPLOAD NODE 
+  // UPLOAD NODE
   // ===================================================
   static Future<void> uploadNode(MicroTopicNode node) async {
     await _firestore.collection(nodeCollection).doc(node.id).set(node.toMap());
   }
 
   // ===================================================
-  // UPLOAD RECRUITMENT 
+  // UPLOAD RECRUITMENT
   // ===================================================
   static Future<void> uploadRecruitment(Recruitment recruitment) async {
     await _firestore
-        .collection(recruitmentCollection)
+        .collection(missionRealmCollection)
         .doc(recruitment.id)
-        .set(recruitment.toMap());
+        .set({
+          ...recruitment.toMap(),
+          'id': recruitment.id,
+          'realm_id': recruitment.id,
+          'missionId': recruitment.id,
+          'title': recruitment.title,
+          'exam_name': recruitment.title,
+          'status': recruitment.status,
+          'userPanelVisible': recruitment.status.toLowerCase() == 'published',
+          'cardVisible': recruitment.status.toLowerCase() == 'published',
+          'updatedAt': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true));
   }
 
   // ===================================================
-  // STATE REGISTRY 
+  // STATE REGISTRY
   // ===================================================
   static Future<void> registerPublishedState(String state) async {
     await _firestore
@@ -194,8 +227,9 @@ class FirestoreService {
   }
 
   static void addStateRegistryToBatch(WriteBatch batch, String state) {
-    final ref =
-        _firestore.collection(stateRegistryCollection).doc(state.toLowerCase());
+    final ref = _firestore
+        .collection(stateRegistryCollection)
+        .doc(state.toLowerCase());
     batch.set(ref, {'name': state, 'updatedAt': FieldValue.serverTimestamp()});
   }
 
@@ -205,7 +239,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // UPLOAD VARIANT 
+  // UPLOAD VARIANT
   // ===================================================
   static Future<void> uploadVariant(MissionVariant variant) async {
     await _firestore
@@ -215,10 +249,12 @@ class FirestoreService {
   }
 
   // ===================================================
-  // PROTOCOL STATE 
+  // PROTOCOL STATE
   // ===================================================
   static Future<void> saveProtocolState(
-      String uid, CrucibleProtocolState state) async {
+    String uid,
+    CrucibleProtocolState state,
+  ) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -228,19 +264,23 @@ class FirestoreService {
   }
 
   static Stream<CrucibleProtocolState?> streamProtocolState(
-      String uid, String recruitmentId) {
+    String uid,
+    String recruitmentId,
+  ) {
     return _firestore
         .collection('users')
         .doc(uid)
         .collection(protocolCollection)
         .doc(recruitmentId)
         .snapshots()
-        .map((snap) =>
-            snap.exists ? CrucibleProtocolState.fromMap(snap.data()!) : null);
+        .map(
+          (snap) =>
+              snap.exists ? CrucibleProtocolState.fromMap(snap.data()!) : null,
+        );
   }
 
   // ===================================================
-  // SCHEDULES 
+  // SCHEDULES
   // ===================================================
   static Future<void> saveSchedule(CrucibleSchedule schedule) async {
     await _firestore
@@ -255,13 +295,15 @@ class FirestoreService {
         .where('recruitmentId', isEqualTo: recruitmentId)
         .orderBy('scheduleIndex')
         .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => CrucibleSchedule.fromMap(doc.data()))
-            .toList());
+        .map(
+          (snap) => snap.docs
+              .map((doc) => CrucibleSchedule.fromMap(doc.data()))
+              .toList(),
+        );
   }
 
   // ===================================================
-  // UPLOAD BLUEPRINT 
+  // UPLOAD BLUEPRINT
   // ===================================================
   static Future<void> uploadBlueprint(ExamBlueprint blueprint) async {
     await _firestore
@@ -271,31 +313,21 @@ class FirestoreService {
   }
 
   // ===================================================
-  // FETCH RECRUITMENTS 
+  // FETCH RECRUITMENTS
   // ===================================================
   static Future<List<Recruitment>> fetchRecruitments() async {
-    final snapshot = await _firestore.collection(recruitmentCollection).get();
-    return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
+    final snapshot = await _firestore.collection(missionRealmCollection).get();
+    return snapshot.docs
+        .map((doc) => _missionRealmDocToRecruitment(doc.id, doc.data()))
+        .toList();
   }
 
   static Future<List<Recruitment>> fetchPublishedRecruitments() async {
-    final snapshot = await _firestore
-        .collection(recruitmentCollection)
-        .where('status', isEqualTo: 'published')
-        .get();
-    return snapshot.docs.map((doc) => Recruitment.fromMap(doc.data())).toList();
+    return streamMissionRealmRecruitments().first;
   }
 
   static Stream<List<Recruitment>> streamPublishedRecruitments() {
-    return _firestore
-        .collection(recruitmentCollection)
-        .where('status', isEqualTo: 'published')
-        .snapshots()
-        .map((snapshot) {
-      return snapshot.docs
-          .map((doc) => Recruitment.fromMap(doc.data()))
-          .toList();
-    });
+    return streamMissionRealmRecruitments();
   }
 
   static const List<String> _missionVariablePackKeys = [
@@ -373,19 +405,21 @@ class FirestoreService {
   }
 
   static bool _hasCanonicalMissionLineage(
-      String docId, Map<String, dynamic> data) {
+    String docId,
+    Map<String, dynamic> data,
+  ) {
     final sourcePath = _catalogSourcePath(docId, data);
     final directSourceMissionId = _catalogString(data, 'sourceMissionId');
     final sourceMissionId = directSourceMissionId.isNotEmpty
         ? directSourceMissionId
         : sourcePath.startsWith('mission_realms/')
-            ? sourcePath.substring('mission_realms/'.length).split('/').first
-            : '';
+        ? sourcePath.substring('mission_realms/'.length).split('/').first
+        : '';
     final sourceType = _catalogString(data, 'sourceType').isNotEmpty
         ? _catalogString(data, 'sourceType')
         : sourcePath.startsWith('mission_realms/')
-            ? 'mission_realms'
-            : '';
+        ? 'mission_realms'
+        : '';
 
     return sourceType == 'mission_realms' &&
         sourcePath == 'mission_realms/$sourceMissionId' &&
@@ -393,8 +427,10 @@ class FirestoreService {
         sourceMissionId == docId;
   }
 
-  static Recruitment _studentCatalogDocToRecruitment(
-      String docId, Map<String, dynamic> data) {
+  static Recruitment _missionRealmDataToRecruitment(
+    String docId,
+    Map<String, dynamic> data,
+  ) {
     final title =
         (data['displayName'] ?? data['title'] ?? data['name'] ?? docId)
             .toString();
@@ -403,17 +439,17 @@ class FirestoreService {
     final sourceMissionId = directSourceMissionId.isNotEmpty
         ? directSourceMissionId
         : sourcePath.startsWith('mission_realms/')
-            ? sourcePath.substring('mission_realms/'.length).split('/').first
-            : docId;
+        ? sourcePath.substring('mission_realms/'.length).split('/').first
+        : docId;
     final sourceType = _catalogString(data, 'sourceType').isNotEmpty
         ? _catalogString(data, 'sourceType')
         : 'mission_realms';
     final sourceMissionVersion =
         _catalogString(data, 'sourceMissionVersion').isNotEmpty
-            ? _catalogString(data, 'sourceMissionVersion')
-            : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
-                ? _catalogString(data, 'canonicalKnowledgeVersion')
-                : _catalogString(data, 'version');
+        ? _catalogString(data, 'sourceMissionVersion')
+        : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
+        ? _catalogString(data, 'canonicalKnowledgeVersion')
+        : _catalogString(data, 'version');
     final normalizedState = (data['state'] ?? data['examState'] ?? 'Central')
         .toString()
         .trim();
@@ -425,30 +461,54 @@ class FirestoreService {
     final blueprintValue = (data['examBlueprintId'] ?? '').toString();
     final publicationState =
         _catalogString(data, 'studentPublicationState').isNotEmpty
-            ? _catalogString(data, 'studentPublicationState')
-            : _catalogString(data, 'catalogStatus').isNotEmpty
-                ? _catalogString(data, 'catalogStatus')
-                : _catalogString(data, 'status');
+        ? _catalogString(data, 'studentPublicationState')
+        : _catalogString(data, 'catalogStatus').isNotEmpty
+        ? _catalogString(data, 'catalogStatus')
+        : _catalogString(data, 'status');
 
-    final rawJurisdiction = (data['jurisdictionLevel'] ?? data['jurisdictionType'])?.toString().toUpperCase();
-    final rawRegion = (data['regionCode'] ?? data['region'] ?? data['stateCode'])?.toString().toUpperCase();
+    final rawJurisdiction =
+        (data['jurisdictionLevel'] ?? data['jurisdictionType'])
+            ?.toString()
+            .toUpperCase();
+    final rawRegion =
+        (data['regionCode'] ?? data['region'] ?? data['stateCode'])
+            ?.toString()
+            .toUpperCase();
     final jurisdiction = rawJurisdiction != null && rawJurisdiction.isNotEmpty
         ? rawJurisdiction
-        : (rawRegion == 'IN' || normalizedState.toLowerCase() == 'central' ? 'CENTRAL' : 'STATE');
-    final stateCode = data['stateCode']?.toString() ?? (rawRegion != 'IN' ? rawRegion : null);
-    final stateName = data['stateName']?.toString() ??
-        (normalizedState != 'Central' ? normalizedState : (stateCode != null ? IndiaStates.getStateName(stateCode) : null));
-    final authorityGroupKey = (data['authorityGroupKey'] ?? data['authorityId'] ?? data['canonicalAuthorityKey'] ?? '').toString().toLowerCase();
-    final authorityDisplayName = (data['authorityDisplayName'] ?? data['authorityName'] ?? '').toString();
+        : (rawRegion == 'IN' || normalizedState.toLowerCase() == 'central'
+              ? 'CENTRAL'
+              : 'STATE');
+    final stateCode =
+        data['stateCode']?.toString() ?? (rawRegion != 'IN' ? rawRegion : null);
+    final stateName =
+        data['stateName']?.toString() ??
+        (normalizedState != 'Central'
+            ? normalizedState
+            : (stateCode != null ? IndiaStates.getStateName(stateCode) : null));
+    final authorityGroupKey =
+        (data['authorityGroupKey'] ??
+                data['authorityId'] ??
+                data['canonicalAuthorityKey'] ??
+                '')
+            .toString()
+            .toLowerCase();
+    final authorityDisplayName =
+        (data['authorityDisplayName'] ?? data['authorityName'] ?? '')
+            .toString();
     final rawStatus = (data['status'] ?? 'CATALOG_VISIBLE').toString();
     final upperStatus = rawStatus.toUpperCase();
     final pubUpper = publicationState.toUpperCase();
 
-    final isArchived = data['archived'] == true || upperStatus == 'ARCHIVED' || pubUpper == 'ARCHIVED';
+    final isArchived =
+        data['archived'] == true ||
+        upperStatus == 'ARCHIVED' ||
+        pubUpper == 'ARCHIVED';
     final isFounderHold = data['founderHold'] == true || upperStatus == 'HOLD';
     final isGovernanceLock = data['manualGovernanceLock'] == true;
 
-    final isNonStartableStatus = upperStatus == 'PREPARING' ||
+    final isNonStartableStatus =
+        upperStatus == 'PREPARING' ||
         upperStatus == 'COMING_SOON' ||
         upperStatus == 'HOLD' ||
         upperStatus == 'DRAFT' ||
@@ -462,39 +522,49 @@ class FirestoreService {
         isFounderHold ||
         isGovernanceLock;
 
-    final visibilityMap = data['visibility'] is Map ? data['visibility'] as Map : null;
-    final rawQuickEntry = data['quickEntryEnabled'] ?? visibilityMap?['quickEntryEnabled'];
-    final rawSmartEntry = data['smartEntryEnabled'] ?? visibilityMap?['smartEntryEnabled'];
-    final rawSelectionReady = data['missionSelectionReady'] ?? visibilityMap?['missionSelectionReady'];
-    final rawDiscoverable = data['catalogDiscoverable'] ?? visibilityMap?['catalogDiscoverable'];
+    final visibilityMap = data['visibility'] is Map
+        ? data['visibility'] as Map
+        : null;
+    final rawQuickEntry =
+        data['quickEntryEnabled'] ?? visibilityMap?['quickEntryEnabled'];
+    final rawSmartEntry =
+        data['smartEntryEnabled'] ?? visibilityMap?['smartEntryEnabled'];
+    final rawSelectionReady =
+        data['missionSelectionReady'] ??
+        visibilityMap?['missionSelectionReady'];
+    final rawDiscoverable =
+        data['catalogDiscoverable'] ?? visibilityMap?['catalogDiscoverable'];
 
     final bool quickEnabled = !isNonStartableStatus && (rawQuickEntry == true);
     final bool smartEnabled = !isNonStartableStatus && (rawSmartEntry == true);
-    final bool selectionReady = !isNonStartableStatus && (rawSelectionReady == true);
+    final bool selectionReady =
+        !isNonStartableStatus && (rawSelectionReady == true);
 
     return Recruitment(
       id: docId,
-      recruitmentGroupId: 'student_mission_catalog',
+      recruitmentGroupId: 'mission_realms',
       boardId: (data['boardId'] ?? '').toString(),
       examId: missionId,
-      examBlueprintId:
-          blueprintValue.isEmpty ? '${missionId}_blueprint' : blueprintValue,
+      examBlueprintId: blueprintValue.isEmpty
+          ? '${missionId}_blueprint'
+          : blueprintValue,
       title: title,
       titleHindi: (data['titleHindi'] ?? title).toString(),
       year: year,
       state: normalizedState.isEmpty ? 'Central' : normalizedState,
-      examCategory: (data['examCategory'] ??
-              data['exam_category'] ??
-              data['missionType'] ??
-              data['category'] ??
-              data['type'] ??
-              'category_pending')
-          .toString(),
+      examCategory:
+          (data['examCategory'] ??
+                  data['exam_category'] ??
+                  data['missionType'] ??
+                  data['category'] ??
+                  data['type'] ??
+                  'category_pending')
+              .toString(),
       status: rawStatus,
       examDifficulty: 0.6,
       variantCode: (data['variantCode'] ?? missionId).toString(),
       missionVariables: _extractMissionVariables(data),
-      version: 'student_mission_catalog',
+      version: 'mission_realms',
       sourceMissionId: sourceMissionId,
       sourceMissionVersion: sourceMissionVersion,
       sourcePath: sourcePath,
@@ -508,7 +578,8 @@ class FirestoreService {
       quickEntryEnabled: quickEnabled,
       smartEntryEnabled: smartEnabled,
       missionSelectionReady: selectionReady,
-      catalogDiscoverable: rawDiscoverable == true || (rawDiscoverable == null && !isArchived),
+      catalogDiscoverable:
+          rawDiscoverable == true || (rawDiscoverable == null && !isArchived),
       archived: isArchived,
       founderHold: isFounderHold,
       manualGovernanceLock: isGovernanceLock,
@@ -517,7 +588,9 @@ class FirestoreService {
   }
 
   static bool _isStudentDiscoverableCatalogDoc(
-      String docId, Map<String, dynamic> data) {
+    String docId,
+    Map<String, dynamic> data,
+  ) {
     if (!_hasCanonicalMissionLineage(docId, data)) return false;
 
     // Direct boolean guard
@@ -529,7 +602,10 @@ class FirestoreService {
     if (data['manualGovernanceLock'] == true) return false;
 
     // Publication state guard (Strict non-leak for INTERNAL_DRAFT)
-    final pubState = _catalogString(data, 'studentPublicationState').toUpperCase();
+    final pubState = _catalogString(
+      data,
+      'studentPublicationState',
+    ).toUpperCase();
     if (pubState == 'INTERNAL_DRAFT' ||
         pubState == 'DRAFT' ||
         pubState == 'INTERNAL' ||
@@ -558,59 +634,140 @@ class FirestoreService {
   }
 
   static Stream<List<Recruitment>> streamStudentMissionCatalogRecruitments() {
+    return streamMissionRealmRecruitments();
+  }
+
+  /// Canonical student mission stream.
+  ///
+  /// The old method name remains as a source-compatible shim for callers that
+  /// have not yet been renamed. It deliberately reads only mission_realms.
+  static Stream<List<Recruitment>> streamMissionRealmRecruitments() {
     return _firestore
-        .collection(studentMissionCatalogCollection)
-        .where('cardVisible', isEqualTo: true)
+        .collection(missionRealmCollection)
         .where('userPanelVisible', isEqualTo: true)
         .where('archived', isEqualTo: false)
         .snapshots()
         .map((snapshot) {
       return snapshot.docs
-          .where((doc) => _isStudentDiscoverableCatalogDoc(doc.id, doc.data()))
-          .map((doc) => _studentCatalogDocToRecruitment(doc.id, doc.data()))
+          .where((doc) => _isStudentDiscoverableRealmDoc(doc.id, doc.data()))
+          .map((doc) => _missionRealmDocToRecruitment(doc.id, doc.data()))
           .toList();
     });
+  }
+
+  static Recruitment _missionRealmDocToRecruitment(
+    String docId,
+    Map<String, dynamic> data,
+  ) {
+    final visibility = data['visibilityGate'] is Map
+        ? Map<String, dynamic>.from(data['visibilityGate'] as Map)
+        : <String, dynamic>{};
+    final normalized = <String, dynamic>{
+      ...data,
+      'displayName':
+          data['displayName'] ??
+          data['displayTitle'] ??
+          data['title'] ??
+          data['exam_name'] ??
+          data['name'] ??
+          docId,
+      'title': data['title'] ?? data['exam_name'] ?? data['name'] ?? docId,
+      'year': data['year'] ?? data['exam_year'] ?? data['examYear'],
+      'status': data['status'] ?? 'PREPARING',
+      'studentPublicationState':
+          data['studentPublicationState'] ??
+          visibility['gateStatus'] ??
+          data['status'] ??
+          'PREPARING',
+      'cardVisible': data['cardVisible'] ?? visibility['cardVisible'],
+      'userPanelVisible':
+          data['userPanelVisible'] ?? visibility['userPanelVisible'],
+      'catalogDiscoverable':
+          data['catalogDiscoverable'] ?? visibility['catalogVisible'],
+      'sourcePath': 'mission_realms/$docId',
+      'sourceMissionId': docId,
+      'sourceType': 'mission_realms',
+    };
+    return _missionRealmDataToRecruitment(docId, normalized);
+  }
+
+  static bool _isStudentDiscoverableRealmDoc(
+    String docId,
+    Map<String, dynamic> data,
+  ) {
+    final visibility = data['visibilityGate'] is Map
+        ? Map<String, dynamic>.from(data['visibilityGate'] as Map)
+        : <String, dynamic>{};
+    final studentVisible =
+        data['userPanelVisible'] == true ||
+        data['cardVisible'] == true ||
+        visibility['studentVisible'] == true ||
+        visibility['userPanelVisible'] == true;
+    if (!studentVisible ||
+        data['archived'] == true ||
+        data['founderHold'] == true) {
+      return false;
+    }
+    if (data['catalogDiscoverable'] == false ||
+        data['manualGovernanceLock'] == true ||
+        visibility['catalogVisible'] == false) {
+      return false;
+    }
+    final status = (data['status'] ?? visibility['gateStatus'] ?? '')
+        .toString()
+        .toUpperCase();
+    return !{
+      'DRAFT',
+      'INTERNAL_DRAFT',
+      'INTERNAL',
+      'UNPUBLISHED',
+      'ARCHIVED',
+      'HOLD',
+      'BLOCKED',
+    }.contains(status);
   }
 
   static Future<Recruitment?> fetchRecruitment(String id) async {
-    final doc =
-        await _firestore.collection(recruitmentCollection).doc(id).get();
+    final doc = await _firestore
+        .collection(missionRealmCollection)
+        .doc(id)
+        .get();
     if (!doc.exists) return null;
-    return Recruitment.fromMap(doc.data()!);
+    return _missionRealmDocToRecruitment(doc.id, doc.data()!);
   }
 
   // ===================================================
-  // LIVE RECRUITMENT STREAM 
+  // LIVE RECRUITMENT STREAM
   // ===================================================
   static Stream<List<Recruitment>> streamRecruitments() {
-    return _firestore
-        .collection(recruitmentCollection)
-        .snapshots()
-        .map((snapshot) {
+    return _firestore.collection(missionRealmCollection).snapshots().map((
+      snapshot,
+    ) {
       return snapshot.docs
-          .map((doc) => Recruitment.fromMap(doc.data()))
+          .map((doc) => _missionRealmDocToRecruitment(doc.id, doc.data()))
           .toList();
     });
   }
 
   // ===================================================
-  // FETCH BLUEPRINT 
+  // FETCH BLUEPRINT
   // ===================================================
   static Future<ExamBlueprint?> fetchBlueprint(String blueprintId) async {
-    final doc =
-        await _firestore.collection(blueprintCollection).doc(blueprintId).get();
+    final doc = await _firestore
+        .collection(blueprintCollection)
+        .doc(blueprintId)
+        .get();
     if (!doc.exists) return null;
     return ExamBlueprint.fromMap(doc.data()!);
   }
 
   // ===================================================
-  // LIVE BLUEPRINT STREAM 
+  // LIVE BLUEPRINT STREAM
   // ===================================================
   static Stream<List<ExamBlueprint>> streamBlueprints() {
-    return _firestore
-        .collection(blueprintCollection)
-        .snapshots()
-        .map((snapshot) {
+    return _firestore.collection(blueprintCollection).snapshots().map((
+      snapshot,
+    ) {
       return snapshot.docs
           .map((doc) => ExamBlueprint.fromMap(doc.data()))
           .toList();
@@ -618,7 +775,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // FETCH NODES 
+  // FETCH NODES
   // ===================================================
   static Future<List<MicroTopicNode>> fetchNodes() async {
     final snapshot = await _firestore.collection(nodeCollection).get();
@@ -638,10 +795,12 @@ class FirestoreService {
   }
 
   // ===================================================
-  // NOTIFICATIONS 
+  // NOTIFICATIONS
   // ===================================================
   static Future<void> saveNotification(
-      String uid, NotificationEvent event) async {
+    String uid,
+    NotificationEvent event,
+  ) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -657,13 +816,15 @@ class FirestoreService {
         .collection('notifications')
         .orderBy('timestamp', descending: true)
         .snapshots()
-        .map((snapshot) => snapshot.docs
-            .map((e) => NotificationEvent.fromMap(e.data()))
-            .toList());
+        .map(
+          (snapshot) => snapshot.docs
+              .map((e) => NotificationEvent.fromMap(e.data()))
+              .toList(),
+        );
   }
 
   // ===================================================
-  // LIVE NODE STREAM 
+  // LIVE NODE STREAM
   // ===================================================
   static Stream<List<MicroTopicNode>> streamNodes() {
     return _firestore.collection(nodeCollection).snapshots().map((snapshot) {
@@ -680,24 +841,31 @@ class FirestoreService {
         .where('examId', isEqualTo: examId)
         .snapshots()
         .map((snapshot) {
-      return snapshot.docs
-          .map((doc) => MicroTopicNode.fromMap({'id': doc.id, ...doc.data()}))
-          .toList();
-    });
+          return snapshot.docs
+              .map(
+                (doc) => MicroTopicNode.fromMap({'id': doc.id, ...doc.data()}),
+              )
+              .toList();
+        });
   }
 
   /// Sovereign Hierarchy Retrieval
-  static Stream<List<Map<String, dynamic>>> streamStructuredNodes(String missionId) {
+  static Stream<List<Map<String, dynamic>>> streamStructuredNodes(
+    String missionId,
+  ) {
     return _firestore
         .collection('mission_realms')
         .doc(missionId)
         .collection('structured_nodes')
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+        .map(
+          (snap) =>
+              snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList(),
+        );
   }
 
   // ===================================================
-  // STREAM PROGRESS 
+  // STREAM PROGRESS
   // ===================================================
   static Stream<List<Map<String, dynamic>>> streamProgress(String uid) {
     return _firestore
@@ -709,7 +877,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SAVE USER PROGRESS 
+  // SAVE USER PROGRESS
   // ===================================================
   static Future<void> saveProgress({
     required String uid,
@@ -725,7 +893,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // LOAD USER PROGRESS 
+  // LOAD USER PROGRESS
   // ===================================================
   static Future<List<Map<String, dynamic>>> loadProgress(String uid) async {
     final snapshot = await _firestore
@@ -737,7 +905,7 @@ class FirestoreService {
   }
 
   // ===================================================
-  // SAVE USER PROFILE 
+  // SAVE USER PROFILE
   // ===================================================
   static Future<void> saveUserProfile({
     required String uid,
@@ -790,10 +958,12 @@ class FirestoreService {
   }
 
   // ===================================================
-  // ATOMIC MASTERY 
+  // ATOMIC MASTERY
   // ===================================================
   static Future<void> saveAtomicMastery(
-      String uid, AtomicMasteryState state) async {
+    String uid,
+    AtomicMasteryState state,
+  ) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -808,16 +978,20 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicMasteryCollection)
         .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => AtomicMasteryState.fromMap(doc.data()))
-            .toList());
+        .map(
+          (snap) => snap.docs
+              .map((doc) => AtomicMasteryState.fromMap(doc.data()))
+              .toList(),
+        );
   }
 
   // ===================================================
-  // ATOMIC COVERAGE 
+  // ATOMIC COVERAGE
   // ===================================================
   static Future<void> saveAtomicCoverage(
-      String uid, AtomicCoverageState state) async {
+    String uid,
+    AtomicCoverageState state,
+  ) async {
     await _firestore
         .collection('users')
         .doc(uid)
@@ -832,13 +1006,15 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicCoverageCollection)
         .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => AtomicCoverageState.fromMap(doc.data()))
-            .toList());
+        .map(
+          (snap) => snap.docs
+              .map((doc) => AtomicCoverageState.fromMap(doc.data()))
+              .toList(),
+        );
   }
 
   // ===================================================
-  // ATOMIC RISK 
+  // ATOMIC RISK
   // ===================================================
   static Future<void> saveAtomicRisk(String uid, AtomicRiskState state) async {
     await _firestore
@@ -855,8 +1031,10 @@ class FirestoreService {
         .doc(uid)
         .collection(atomicRiskCollection)
         .snapshots()
-        .map((snap) => snap.docs
-            .map((doc) => AtomicRiskState.fromMap(doc.data()))
-            .toList());
+        .map(
+          (snap) => snap.docs
+              .map((doc) => AtomicRiskState.fromMap(doc.data()))
+              .toList(),
+        );
   }
 }
