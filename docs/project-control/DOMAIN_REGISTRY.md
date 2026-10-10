@@ -21,3 +21,7 @@ Each existing chat must display its exact **DOMAIN-A**, **DOMAIN-B**, **DOMAIN-C
 
 ## Verified one-time Chat bootstrap acknowledgements — 2026-10-10
 The Founder supplied explicit read-only acknowledgement reports for **DOMAIN-A, DOMAIN-B, DOMAIN-C, DOMAIN-D and DOMAIN-E**; all referenced review SHA `a57657ea3c984f1b6ced4f72c34c7734b28c15ab` and the expected individual files. **Do not confuse one-time read acknowledgement with automatic two-way synchronization or canonical merge.** Each room's fuller current/historical evidence classification is in its respective Domain State file. Future update protocol remains event-driven through reviewed Git changes.
+
+
+## Cross-domain feature ownership checkpoint — Founder direction 2026-10-10
+**Sacred Archive:** `CROSS_DOMAIN_MASTER_GOVERNED`; permanent Domain assignment `PENDING_FOUNDER_DECISION`. Do not silently assign to DOMAIN-C or DOMAIN-D. **Rank Radar / Qualified Ranking / Learning State / Revision Desk / PYQ Vault / Career Signals:** reference their accepted authority contracts and existing owners; do not infer that DOMAIN-C owns all of them simply because Test Arena produces competitive evidence. Permanent DOMAIN-A through DOMAIN-E identifiers remain unchanged.
