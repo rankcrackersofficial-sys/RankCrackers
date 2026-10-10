@@ -1,4 +1,4 @@
-import { buildCareerSignal } from '../services/careerSignalAuthority';
+import { buildCareerSignal, isEligibilityPositive } from '../services/careerSignalAuthority';
 
 const evaluation = {
   evaluationId: 'eval-1', state: 'ELIGIBLE' as const, recruitmentEventId: 'recruitment-1',
@@ -6,6 +6,10 @@ const evaluation = {
 };
 
 describe('career signal authority handoff', () => {
+  test('positive authority is exactly the canonical ELIGIBLE state', () => {
+    expect(isEligibilityPositive('ELIGIBLE')).toBe(true);
+    expect(isEligibilityPositive('INTEGRITY_HOLD')).toBe(false);
+  });
   test('CS01 eligible evaluation permits qualified signal', () => expect(buildCareerSignal({ evaluation }).eligibilityQualified).toBe(true));
   test.each(['NOT_ELIGIBLE', 'MORE_INFORMATION_REQUIRED', 'OFFICIAL_RULE_UNRESOLVED', 'SOURCE_STALE_OR_SUPERSEDED', 'INTEGRITY_HOLD'] as const)('CS02-CS06 %s cannot become eligible', state => {
     const signal = buildCareerSignal({ evaluation: { ...evaluation, state }, legacyEligible: true, legacyMatchScore: 100 });

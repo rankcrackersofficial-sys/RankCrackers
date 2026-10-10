@@ -25,12 +25,16 @@ export interface CareerSignalInput {
   revisionDebt?: number;
 }
 
+export function isEligibilityPositive(state: CareerSignalEligibilityState): boolean {
+  return state === 'ELIGIBLE';
+}
+
 export function buildCareerSignal(input: CareerSignalInput) {
   const evaluation = input.evaluation;
   if (!evaluation || !evaluation.evaluationId) {
     return { kind: 'CAREER_SIGNAL', eligibilityQualified: false, eligibilityState: 'INTEGRITY_HOLD' as const, reasonCode: 'AUTHORITY_MISSING' };
   }
-  const positive = evaluation.state === 'ELIGIBLE';
+  const positive = isEligibilityPositive(evaluation.state);
   return {
     kind: 'CAREER_SIGNAL', eligibilityQualified: positive, eligibilityState: evaluation.state,
     evaluationId: evaluation.evaluationId, recruitmentEventId: evaluation.recruitmentEventId ?? null,
