@@ -7,7 +7,7 @@ const ev = [{ evidenceId: 'e1', missionId: 'm1', knowledgeId: 'k1', reasonCode: 
 
 describe('Revision Desk canonical convergence', () => {
   test('RD01 canonical debt appears in Revision Desk', () => expect(resolveRevisionCandidate('s1', state, ev)).not.toBeNull());
-  test('RD02 legacy weakness cannot create canonical debt without state', () => expect(resolveRevisionCandidate('s1', { ...state, revisionDebt: { open: false, reasonCodes: [], evidenceIds: [] } }, [])).not.toBeNull());
+  test('RD02 legacy weakness cannot create canonical debt without state', () => expect(resolveRevisionCandidate('s1', { ...state, revisionDebt: { open: false, reasonCodes: [], evidenceIds: [] } }, [])).toBeNull());
   test('RD03 untaught content stays out of authoritative debt', () => expect(resolveRevisionCandidate('s1', deriveCanonicalLearningState({ ...state, evidence: [] }), [])).toBeNull());
   test('RD04-RD05 candidate preserves evidence and reason explanation', () => { const c = resolveRevisionCandidate('s1', state, ev)!; expect(c.evidenceIds).toContain('e1'); expect(revisionDeskExplanation(c).why).toBe('QUALIFIED_EVIDENCE_DEBT'); });
   test('RD06 related events compress without losing evidence', () => { const a = resolveRevisionCandidate('s1', state, ev)!; const b = { ...a, candidateId: 'other', evidenceIds: ['e2'] }; expect(compressRevisionCandidates([a,b])).toHaveLength(1); expect(compressRevisionCandidates([a,b])[0].evidenceIds).toEqual(expect.arrayContaining(['e1','e2'])); });
