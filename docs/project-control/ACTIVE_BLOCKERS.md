@@ -18,3 +18,7 @@
 
 ## Do not conflate
 `MERGE_BLOCKED_BY_REVIEW` is distinct from `SOURCE_DEFECT`, `PREDEPLOYMENT_GATE`, `INFRASTRUCTURE_DEBT` and `NONBLOCKING_LINT_DEBT`.
+
+
+## Bootstrap findings are not fresh blockers
+DOMAIN-A through DOMAIN-E each reported successful read-only bootstrap. Primary evidence gaps in their state files are **EVIDENCE_PENDING**, not automatic P0 development blockers. DOMAIN-C raised a bounded 98-day scope/precedence ambiguity; **requires architecture reconciliation**, not speculative implementation. DOMAIN-D historically reported hosting identity resolved but **current live Gate-B unknown**. DOMAIN-E current Founder read-model/source-prep truth also requires evidence. Pull Request #2 approval remains a **documentation merge gate**, separate from production/source defects.
