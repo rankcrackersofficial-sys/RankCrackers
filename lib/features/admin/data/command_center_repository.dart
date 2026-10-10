@@ -6,15 +6,19 @@ class CommandCenterRepository {
   static final _firestore = FirebaseFirestore.instance;
 
   // ===================================================
-  // BUSINESS METRICS 
+  // BUSINESS METRICS
   // ===================================================
 
   static Stream<int> streamActiveMissionsCount() {
     return _firestore
-        .collection('recruitments')
-        .where('status', isEqualTo: 'published')
+        .collection('mission_realms')
         .snapshots()
-        .map((snap) => snap.size);
+        .map((snap) => snap.docs.where((doc) {
+              final data = doc.data();
+              final status = (data['status'] ?? '').toString().toUpperCase();
+              return data['archived'] != true &&
+                  (status == 'ACTIVE' || status == 'LIVE' || status == 'PUBLISHED');
+            }).length);
   }
 
   static Stream<int> streamPublishedDigiBooksCount() {
@@ -35,18 +39,22 @@ class CommandCenterRepository {
 
   static Stream<int> streamTotalPendingReviews() {
     // Optimization: Use a dedicated system_metrics document for high-scale counters
-    return _firestore.collection('system_metrics').doc('content_summary').snapshots().map((snap) {
-      if (!snap.exists) return 0;
-      final data = snap.data()!;
-      return (data['pendingDigibooks'] ?? 0) + 
-             (data['pendingQuestions'] ?? 0) + 
-             (data['pendingNodes'] ?? 0) + 
-             (data['pendingSentinel'] ?? 0);
-    });
+    return _firestore
+        .collection('system_metrics')
+        .doc('content_summary')
+        .snapshots()
+        .map((snap) {
+          if (!snap.exists) return 0;
+          final data = snap.data()!;
+          return (data['pendingDigibooks'] ?? 0) +
+              (data['pendingQuestions'] ?? 0) +
+              (data['pendingNodes'] ?? 0) +
+              (data['pendingSentinel'] ?? 0);
+        });
   }
 
   // ===================================================
-  // BUDGET & SYSTEM METRICS 
+  // BUDGET & SYSTEM METRICS
   // ===================================================
 
   static Stream<int> streamAiBudgetUsage() {
@@ -69,10 +77,7 @@ class CommandCenterRepository {
           online++;
         }
       }
-      return {
-        'online': online,
-        'total': snap.size,
-      };
+      return {'online': online, 'total': snap.size};
     });
   }
 
@@ -90,7 +95,10 @@ class CommandCenterRepository {
     return _firestore
         .collection('worker_registry')
         .snapshots()
-        .map((snap) => snap.docs.map((doc) => {...doc.data(), 'id': doc.id}).toList());
+        .map(
+          (snap) =>
+              snap.docs.map((doc) => {...doc.data(), 'id': doc.id}).toList(),
+        );
   }
 
   static Future<void> toggleWorker(String workerId, bool enabled) async {
@@ -129,7 +137,7 @@ class CommandCenterRepository {
   }
 
   // ===================================================
-  // PEOPLE & ACCESS METRICS 
+  // PEOPLE & ACCESS METRICS
   // ===================================================
 
   static Stream<Map<String, int>> streamAccessMetrics() {
@@ -163,15 +171,21 @@ class CommandCenterRepository {
   }
 
   // ===================================================
-  // SYSTEM HEALTH METRICS 
+  // SYSTEM HEALTH METRICS
   // ===================================================
 
   static Stream<int> streamAIQueueSize() {
-    return _firestore.collection('ai_queue').snapshots().map((snap) => snap.size);
+    return _firestore
+        .collection('ai_queue')
+        .snapshots()
+        .map((snap) => snap.size);
   }
 
   static Stream<int> streamAIFailuresCount() {
-    return _firestore.collection('ai_failed_tasks').snapshots().map((snap) => snap.size);
+    return _firestore
+        .collection('ai_failed_tasks')
+        .snapshots()
+        .map((snap) => snap.size);
   }
 
   static Stream<int> streamPendingDiscoveriesCount() {

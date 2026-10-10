@@ -45,46 +45,37 @@ exports.sentinelPromotionWorker = functions.firestore
       // TYPE: RECRUITMENT NOTIFICATION (Auto-Launch)
       // ===================================================
       if (type === "recruitment_notification" || type === "recruitment") {
-        const { title, org, year, lastDate, vacancies } = rawData;
+        // Legacy recruitment projections are retired. A notification may only
+        // be promoted after Founder has linked it to an existing canonical
+        // mission realm. Final publication is handled by handleSentinelAction
+        // and writes mission_realms/{missionId}/official_documents/{documentId}.
+        const linkedRealmId = String(draft.linkedRealmId || '').trim();
+        if (!linkedRealmId) {
+          console.warn(`PROMOTION BLOCKED: ${draftId} has no linked canonical realm.`);
+          return;
+        }
 
-        // 🔱 RC-IDENTITY FIX: Canonical ID Alignment
-        // Format: rec_org_exam_year
-        const cleanOrg = (org || 'unknown').toLowerCase().replace(/\s/g, '_');
-        const cleanTitle = (title || 'mission').toLowerCase().replace(/\s/g, '_');
-        const targetYear = year || new Date().getFullYear();
-        const recruitmentId = `rec_${cleanOrg}_${cleanTitle}_${targetYear}`;
+        const realmRef = admin.firestore().collection('mission_realms').doc(linkedRealmId);
+        const realmSnap = await realmRef.get();
+        if (!realmSnap.exists) {
+          console.warn(`PROMOTION BLOCKED: canonical realm ${linkedRealmId} does not exist.`);
+          return;
+        }
 
-        const recruitmentRef = admin.firestore().collection("recruitments").doc(recruitmentId);
-
-        batch.set(recruitmentRef, {
-            id: recruitmentId,
-            title: title,
-            titleHindi: title,
-            boardId: org,
-            org: org, // Alignment Fix
-            state: 'Detected',
-            year: targetYear,
-            examCategory: rawData.examCategory || 'competitive',
-            lastDate: lastDate || '',
-            vacancies: vacancies || 0,
-            status: 'review',
-            version: 1,
-            sourceDrafts: {
-                notification: draftId
-            },
-            updatedAt: admin.firestore.FieldValue.serverTimestamp()
+        batch.set(realmRef, {
+          notification_ids: admin.firestore.FieldValue.arrayUnion(draft.sourceId || draftId),
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          updated_at: admin.firestore.FieldValue.serverTimestamp(),
         }, { merge: true });
-
-        // Update draft with linked ID for traceability
         batch.update(change.after.ref, {
-            recruitmentId: recruitmentId,
-            promotedAt: admin.firestore.FieldValue.serverTimestamp()
+          linkedRealmId,
+          promotedAt: admin.firestore.FieldValue.serverTimestamp(),
         });
 
         await logFounderActivity({
-          type: 'MISSION_AUTO_LAUNCH',
-          message: `Mission Realm "${title}" initialized from discovery. ID: ${recruitmentId}`,
-          metadata: { org, vacancies, recruitmentId }
+          type: 'MISSION_NOTIFICATION_LINKED',
+          message: `Notification ${draftId} linked to canonical mission realm ${linkedRealmId}.`,
+          metadata: { linkedRealmId, sourceId: draft.sourceId || draftId },
         });
       }
 

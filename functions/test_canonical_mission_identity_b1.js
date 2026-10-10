@@ -16,6 +16,7 @@ const {
   GOVERNED_AUTHORITY_ALIASES,
   GOVERNED_EXAM_ALIASES,
   GOVERNED_EXAM_AUTHORITY_COMPATIBILITY,
+  CANONICAL_MISSION_REALM_MANIFEST,
   normalizeCanonicalToken,
   stripYearDecoration,
   assertRegistryIntegrity,
@@ -81,12 +82,12 @@ test('P7: UPSC + RPSC First Grade FAILS CLOSED (no legacy pair, no generic dupli
   assert.throws(() => resolvePayload('RPSC First Grade', 'UPSC'), /_IDENTITY|PAIR_MISMATCH/);
 });
 
-test('P8: UPSC + UPSC CSE Prelims builds governed generic permanent ID', () => {
-  assert.strictEqual(resolvePayload('UPSC CSE Prelims', 'UPSC'), 'rec_upsc_upsc_cse_prelims');
+test('P8: existing UPSC CSE mission resolves to its preserved realm id', () => {
+  assert.strictEqual(resolvePayload('UPSC CSE Prelims', 'UPSC'), 'upsc_cse_prelims');
 });
 
-test('P9: SSC + SSC CGL builds governed generic permanent ID', () => {
-  assert.strictEqual(resolvePayload('SSC CGL', 'SSC'), 'rec_ssc_ssc_cgl');
+test('P9: existing SSC CGL mission resolves to its preserved realm id', () => {
+  assert.strictEqual(resolvePayload('SSC CGL', 'SSC'), 'ssc_cgl');
 });
 
 test('P10: Indian Air Force + AFCAT builds governed generic permanent ID', () => {
@@ -255,8 +256,20 @@ test('P23b: KNOWN_PILOT_IDS read view is iteration- and size-compatible', () => 
     'RPSC_FIRST_GRADE2026_2026_1782713222215',
     'jee_main_2026',
     'neet_(ug)-2027',
+    'rpsc_ras_prelims',
+    'ssc_cgl',
+    'ssc_chsl',
+    'ssc_cpo',
+    'ssc_gd',
+    'ssc_hindi_translators',
+    'ssc_je',
+    'ssc_mts_havaldar',
+    'ssc_selection_post',
+    'ssc_stenographer',
+    'uppsc_pcs_prelims',
+    'upsc_cse_prelims',
   ]);
-  assert.strictEqual(KNOWN_PILOT_IDS.size, 3);
+  assert.strictEqual(KNOWN_PILOT_IDS.size, 15);
 });
 
 // ===========================================================================
@@ -321,7 +334,7 @@ test('P27: future years do not change governed generic permanent identity', () =
   const y2027 = resolvePayload('UPSC CSE Prelims 2027', 'UPSC');
   const y2028 = resolvePayload('UPSC CSE Prelims 2028', 'UPSC');
   const y2029 = resolvePayload('UPSC CSE Prelims 2029', 'UPSC');
-  assert.strictEqual(y2027, 'rec_upsc_upsc_cse_prelims');
+  assert.strictEqual(y2027, 'upsc_cse_prelims');
   assert.strictEqual(y2028, y2027);
   assert.strictEqual(y2029, y2027);
 });
@@ -330,7 +343,7 @@ test('P28: cycle labels do not change identity', () => {
   const c1 = resolveCanonicalMissionId({ examName: 'SSC CGL', organization: 'SSC', cycle: 'cycle_1' });
   const c9 = resolveCanonicalMissionId({ examName: 'SSC CGL', organization: 'SSC', cycle: 'cycle_9' });
   assert.strictEqual(c1, c9);
-  assert.strictEqual(c1, 'rec_ssc_ssc_cgl');
+  assert.strictEqual(c1, 'ssc_cgl');
 });
 
 test('P29: legacy permanent parents stable across future cycles (all three families)', () => {
@@ -424,7 +437,15 @@ test('P36: generic exam resolver strips only the trailing year for matching', ()
 
 test('P37: governance is case-insensitive but identity output stays canonical', () => {
   assert.strictEqual(resolvePayload('Jee Main', 'NtA'), 'jee_main_2026');
-  assert.strictEqual(resolvePayload('SSC CGL', 'staff selection commission'), 'rec_ssc_ssc_cgl');
+  assert.strictEqual(resolvePayload('SSC CGL', 'staff selection commission'), 'ssc_cgl');
+});
+
+test('P37b: the 18-card live inventory is represented by one immutable manifest', () => {
+  assert.strictEqual(CANONICAL_MISSION_REALM_MANIFEST.length, 18);
+  assert.strictEqual(new Set(CANONICAL_MISSION_REALM_MANIFEST.map((m) => m.missionId)).size, 18);
+  const quarantined = CANONICAL_MISSION_REALM_MANIFEST.filter((m) => String(m.identityStatus || '').startsWith('QUARANTINED_'));
+  assert.strictEqual(quarantined.length, 3);
+  assert.ok(quarantined.every((m) => m.studentMissionEligible === false));
 });
 
 test('P38: registry integrity validation is deterministic across repeated loads', () => {

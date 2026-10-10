@@ -83,14 +83,14 @@ test('L6: publication plan selects exactly the requested cycle and moves the poi
   assert.strictEqual(plan.historicalCyclesPreserved, true);
 });
 
-test('L7: plan projection matches the governed lifecycle projection', () => {
+test('L7: plan projection matches the canonical realm lifecycle projection', () => {
   const plan = buildCyclePublicationPlan({ ...PLAN_BASE, cycle: eligibleCycle() });
   assert.strictEqual(plan.projectionUpdates.mission_realms.status, 'ACTIVE');
-  assert.strictEqual(plan.projectionUpdates.recruitments.status, 'published');
-  assert.strictEqual(plan.projectionUpdates.student_mission_catalog.studentPublicationState, 'ACTIVE');
-  assert.strictEqual(plan.projectionUpdates.student_mission_catalog.visibility.studentVisible, true);
-  assert.strictEqual(plan.projectionUpdates.student_mission_catalog.visibility.quickEntryEnabled, true);
-  assert.strictEqual(plan.projectionUpdates.student_mission_catalog.visibility.smartEntryEnabled, false);
+  assert.strictEqual(plan.projectionUpdates.mission_realms.userPanelVisible, true);
+  assert.strictEqual(plan.projectionUpdates.mission_realms.cardVisible, true);
+  assert.strictEqual(plan.projectionUpdates.mission_realms.visibilityGate.studentVisible, true);
+  assert.strictEqual(plan.projectionUpdates.mission_realms.visibilityGate.quickEntryEnabled, true);
+  assert.strictEqual(plan.projectionUpdates.mission_realms.visibilityGate.smartEntryEnabled, false);
 });
 
 test('L8: governed reason and requestId are mandatory', () => {
@@ -108,7 +108,7 @@ test('L9: an ineligible cycle can never produce a publication plan', () => {
 test('L10: the plan is deeply frozen (immutable evidence artifact)', () => {
   const plan = buildCyclePublicationPlan({ ...PLAN_BASE, cycle: eligibleCycle() });
   assert.ok(Object.isFrozen(plan));
-  assert.ok(Object.isFrozen(plan.projectionUpdates.student_mission_catalog.visibility));
+  assert.ok(Object.isFrozen(plan.projectionUpdates.mission_realms.visibilityGate));
 });
 
 // --- isolation ---------------------------------------------------------------

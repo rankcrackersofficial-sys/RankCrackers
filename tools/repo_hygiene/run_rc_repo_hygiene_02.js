@@ -37,17 +37,22 @@ const missionRepairChecks = {
     'sourceType',
     'studentPublicationState',
   ]),
-  firestoreLineageGuard: textHas('lib/core/firebase/firestore_service.dart', [
-    '_hasCanonicalMissionLineage',
-    "sourceType == 'mission_realms'",
-    "sourceMissionId == docId",
-    "sourcePath == 'mission_realms/$sourceMissionId'",
+  firestoreCanonicalReadPath: textHas('lib/core/firebase/firestore_service.dart', [
+    "missionRealmCollection = 'mission_realms'",
+    'streamMissionRealmRecruitments',
+    "sourcePath = 'mission_realms/$docId'",
+    "const sourceType = 'mission_realms'",
   ]),
   jee2027NoLegacyAlias: textHas('functions/canonical_mission_registry.js', [
     'targetYear === 2026',
     'Later Founder-created missions such as JEE Main 2027 must keep their own identity.',
   ]),
-  missionMirrorTestPresent: exists('functions/test_mission_mirror.js') && read('functions/test_mission_mirror.js').includes('JEE Main 2027'),
+  legacyMissionSurfaceAbsent: [
+    'functions/test_mission_mirror.js',
+    'functions/backfill_student_mission_catalog.js',
+    'functions/apply_student_catalog_readiness.js',
+    'functions/generic_authority_mission_materializer.js',
+  ].every((file) => !exists(file)),
   flutterMissionLinkTestPresent: exists('test/features/mission_link/rc_mission_link_01_test.dart'),
 };
 const missionRepairSemanticsPresentOnHead = Object.values(missionRepairChecks).every(Boolean);
@@ -62,11 +67,8 @@ const previewAssetAutoLoadRemoved = !previewText.includes('assets/data/preview')
   previewText.includes('Local preview') &&
   previewText.includes('not production authority');
 
-const emulatorFixtureFile = 'lib/core/backend/recruitment_repository.dart';
-const emulatorText = read(emulatorFixtureFile);
-const emulatorFixtureGated = emulatorText.includes("bool.fromEnvironment('RC_USE_FIREBASE_EMULATOR')") &&
-  emulatorText.includes('if (!_useFirebaseEmulator) return const []') &&
-  emulatorText.includes('assets/data/emulator/founder_mission_exact_production_inventory_20260811065513.json');
+const emulatorFixtureFile = 'assets/data/emulator/founder_mission_exact_production_inventory_20260811065513.json';
+const emulatorFixtureGated = !exists(emulatorFixtureFile);
 
 const legacyRefs = [];
 const fixtureRefs = [];
@@ -161,7 +163,7 @@ const report = {
   filesDeleted: 0,
   filesMoved: 0,
   filesModified: 4,
-  missionMirrorTests: 'PENDING',
+  legacyMissionSurface: 'ABSENT',
   missionLinkTests: 'PENDING',
   hygieneTests: 'PENDING',
   flutterAnalyze: 'PENDING',
@@ -186,14 +188,13 @@ if (!missionRepairSemanticsPresentOnHead || legacyRefs.length || fixtureRefs.len
 
 writeJson('lineage_precheck.json', { headBefore, missionRepairChecks, missionRepairSemanticsPresentOnHead });
 writeJson('runtime_reachability_manifest.json', { productionDartAndCallable, legacyRefs, fixtureRefs, demoRefs });
-writeJson('fixture_demo_runtime_cleanup.json', { previewAssetAutoLoadRemoved, emulatorFixtureGated, previewScreen, emulatorFixtureFile });
+writeJson('fixture_demo_runtime_cleanup.json', { previewAssetAutoLoadRemoved, emulatorFixtureRemoved: emulatorFixtureGated, previewScreen, emulatorFixtureFile });
 writeJson('legacy_mission_runtime_cleanup.json', { legacyRefs, allowedLegacyMissionRegistry: 'functions/canonical_mission_registry.js targetYear 2026 only' });
 writeJson('engine_authority_consolidation.json', { multipleActiveEngineAuthorities: false, activeMissionAuthority: 'mission_realms/{missionId}', note: 'Domain engines are indexed as domain authorities, not competing mission authorities.' });
 writeJson('firebase_reference_reconciliation.json', { deployableRuntimeNonCurrentProjectRefs: unexplainedFirebaseProjectReferences, allProjectRefsClassified: allProjectRefs });
 writeJson('synthetic_generator_taxonomy.json', { totalSyntheticReportGenerators: generatorFiles.length, ...syntheticCategories, syntheticGeneratorUsedAsAuthority: 0 });
-writeJson('post_hygiene02_validation_plan.json', { missionMirrorTests: report.missionMirrorTests, missionLinkTests: report.missionLinkTests, hygieneTests: report.hygieneTests, flutterAnalyze: report.flutterAnalyze, runtimeSmoke: report.postHygiene02RuntimeSmoke });
+writeJson('post_hygiene02_validation_plan.json', { legacyMissionSurface: report.legacyMissionSurface, missionLinkTests: report.missionLinkTests, hygieneTests: report.hygieneTests, flutterAnalyze: report.flutterAnalyze, runtimeSmoke: report.postHygiene02RuntimeSmoke });
 writeJson('governance_counters.json', report);
 writeJson('RC_REPO_HYGIENE_02_REPORT.json', report);
-fs.writeFileSync(path.join(outDir, 'RC_REPO_HYGIENE_02_REPORT.md'), `# RC Repo Hygiene 02\n\nVerdict: **${report.verdict}**\n\n## Runtime P0 Counters\n- Mission repair semantics present on HEAD: ${missionRepairSemanticsPresentOnHead}\n- Legacy mission authority runtime reachable: ${legacyRefs.length}\n- Production-reachable fixture: ${fixtureRefs.length}\n- Production-reachable demo data: ${demoRefs.length}\n- Multiple active engine authorities: false\n- Unexplained Firebase project references in deployable runtime source: ${unexplainedFirebaseProjectReferences.length}\n\n## Cleanup\n- Deleted files: 0\n- Moved files: 0\n- Modified files: 4\n\nLocal preview asset auto-load was removed from Founder preview runtime. Emulator mission fixture remains allowed only behind \`RC_USE_FIREBASE_EMULATOR\`.\n`);
+fs.writeFileSync(path.join(outDir, 'RC_REPO_HYGIENE_02_REPORT.md'), `# RC Repo Hygiene 02\n\nVerdict: **${report.verdict}**\n\n## Runtime P0 Counters\n- Mission repair semantics present on HEAD: ${missionRepairSemanticsPresentOnHead}\n- Legacy mission authority runtime reachable: ${legacyRefs.length}\n- Production-reachable fixture: ${fixtureRefs.length}\n- Production-reachable demo data: ${demoRefs.length}\n- Multiple active engine authorities: false\n- Unexplained Firebase project references in deployable runtime source: ${unexplainedFirebaseProjectReferences.length}\n\n## Cleanup\n- Deleted files: 0\n- Moved files: 0\n- Modified files: 4\n\nLocal preview asset auto-load was removed from Founder preview runtime. The stale three-mission emulator fixture was removed from the project.\n`);
 console.log(JSON.stringify(report, null, 2));
-

@@ -14,15 +14,16 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 
 class AdminUploadEngine {
-
   static void _requireDebug() {
     if (!kDebugMode) {
-      throw Exception('COMMAND DENIED: Physical seeding prohibited in release student paths.');
+      throw Exception(
+        'COMMAND DENIED: Physical seeding prohibited in release student paths.',
+      );
     }
   }
 
   // ===================================================
-  // PRODUCTION SEEDING 
+  // PRODUCTION SEEDING
   // ===================================================
 
   /// Injects canonical "Golden Path" datasets directly into production.
@@ -51,10 +52,16 @@ class AdminUploadEngine {
     }
 
     // Execute Idempotent Batch Uploads
-    await FirestoreService.uploadBatch(FirestoreService.recruitmentCollection, recruitments);
-    await FirestoreService.uploadBatch(FirestoreService.blueprintCollection, blueprints);
+    await FirestoreService.uploadBatch(
+      FirestoreService.missionRealmCollection,
+      recruitments,
+    );
+    await FirestoreService.uploadBatch(
+      FirestoreService.blueprintCollection,
+      blueprints,
+    );
     await FirestoreService.uploadBatch(FirestoreService.nodeCollection, nodes);
-    
+
     print('PRODUCTION SEEDING COMPLETE: Punjab and UGC NET live.');
   }
 
@@ -62,7 +69,7 @@ class AdminUploadEngine {
   static Future<void> runStressTest() async {
     _requireDebug();
     final stressData = StressTestEngine.generateStressDataset();
-    
+
     final List<MicroTopicNode> nodes = stressData['nodes'];
 
     // Inject Recruitment & Blueprint
@@ -70,17 +77,22 @@ class AdminUploadEngine {
     await FirestoreService.uploadBlueprint(stressData['blueprint']);
 
     // Batch Inject Nodes (Split into chunks of 500 for Firestore limits)
-    final List<Map<String, dynamic>> nodeMaps = nodes.map((n) => n.toMap()).toList();
+    final List<Map<String, dynamic>> nodeMaps = nodes
+        .map((n) => n.toMap())
+        .toList();
     for (var i = 0; i < nodeMaps.length; i += 500) {
       final end = (i + 500 < nodeMaps.length) ? i + 500 : nodeMaps.length;
-      await FirestoreService.uploadBatch(FirestoreService.nodeCollection, nodeMaps.sublist(i, end));
+      await FirestoreService.uploadBatch(
+        FirestoreService.nodeCollection,
+        nodeMaps.sublist(i, end),
+      );
     }
-    
+
     print('STRESS TEST INJECTION COMPLETE: 1000 nodes live.');
   }
 
   // ===================================================
-  // PUBLISH RECRUITMENT 
+  // PUBLISH RECRUITMENT
   // ===================================================
 
   /// Validates and publishes a recruitment.
@@ -90,13 +102,21 @@ class AdminUploadEngine {
     // 1. Authority Enforcement (FLAG-C)
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
-      throw Exception('COMMAND DENIED: Publication requires authenticated authority.');
+      throw Exception(
+        'COMMAND DENIED: Publication requires authenticated authority.',
+      );
     }
     final adminId = user.uid;
 
-    final blueprint = await FirestoreService.fetchBlueprint(recruitment.examBlueprintId);
-    final missionNodes = await FirestoreService.fetchNodesByExam(recruitment.examId);
-    final digiBookBlocks = await DigiBookRepository.fetchByMission(recruitment.examId);
+    final blueprint = await FirestoreService.fetchBlueprint(
+      recruitment.examBlueprintId,
+    );
+    final missionNodes = await FirestoreService.fetchNodesByExam(
+      recruitment.examId,
+    );
+    final digiBookBlocks = await DigiBookRepository.fetchByMission(
+      recruitment.examId,
+    );
     final questions = await QuestionRepository.fetchByExam(recruitment.examId);
 
     // 2. Run Publish Eligibility Engine
@@ -130,17 +150,21 @@ class AdminUploadEngine {
 
       // 4. Assemble and Batch Payloads
       for (final node in missionNodes) {
-        final nodeBlocks = digiBookBlocks.where((b) => b.atomicTopicId == node.id).toList();
-        
+        final nodeBlocks = digiBookBlocks
+            .where((b) => b.atomicTopicId == node.id)
+            .toList();
+
         final result = DigiBookPublicationEngine.assemble(
-          node: node, 
-          blocks: nodeBlocks, 
+          node: node,
+          blocks: nodeBlocks,
           adminId: adminId,
           version: recruitment.version, // G5: Version alignment
         );
 
         // Physical Write: Current Payload
-        final payloadRef = FirebaseFirestore.instance.collection('content_payloads').doc(node.contentRegistryId);
+        final payloadRef = FirebaseFirestore.instance
+            .collection('content_payloads')
+            .doc(node.contentRegistryId);
         batch.set(payloadRef, result.payload.toMap());
         operationCount++;
 
@@ -152,12 +176,16 @@ class AdminUploadEngine {
         operationCount++;
 
         // Physical Write: Audit (G4: Separate Collection)
-        final auditRef = FirebaseFirestore.instance.collection('payload_publication_audits').doc(result.audit['id']);
+        final auditRef = FirebaseFirestore.instance
+            .collection('payload_publication_audits')
+            .doc(result.audit['id']);
         batch.set(auditRef, result.audit);
         operationCount++;
 
         // Physical Write: Node Status Update
-        final nodeRef = FirebaseFirestore.instance.collection(FirestoreService.nodeCollection).doc(node.id);
+        final nodeRef = FirebaseFirestore.instance
+            .collection(FirestoreService.nodeCollection)
+            .doc(node.id);
         batch.update(nodeRef, {'status': 'published'});
         operationCount++;
 
@@ -168,7 +196,9 @@ class AdminUploadEngine {
       }
 
       // 5. Batch Recruitment Update
-      final recruitRef = FirebaseFirestore.instance.collection(FirestoreService.recruitmentCollection).doc(recruitment.id);
+      final recruitRef = FirebaseFirestore.instance
+          .collection(FirestoreService.missionRealmCollection)
+          .doc(recruitment.id);
       batch.update(recruitRef, {'status': 'published'});
       operationCount++;
 
@@ -181,7 +211,6 @@ class AdminUploadEngine {
 
       print('MISSION MOBILIZED: ${recruitment.title} is now LIVE at scale.');
       return true;
-
     } catch (e) {
       print('CRITICAL PUBLICATION FAILURE: $e');
       return false;
@@ -192,7 +221,9 @@ class AdminUploadEngine {
   static Future<void> updateRecruitmentStatus(String id, String status) async {
     final recruitment = await FirestoreService.fetchRecruitment(id);
     if (recruitment != null) {
-      await FirestoreService.uploadRecruitment(recruitment.copyWith(status: status));
+      await FirestoreService.uploadRecruitment(
+        recruitment.copyWith(status: status),
+      );
     }
   }
 
@@ -202,21 +233,21 @@ class AdminUploadEngine {
   }
 
   // ===================================================
-  // UPLOAD BLUEPRINT 
+  // UPLOAD BLUEPRINT
   // ===================================================
   static Future<void> uploadBlueprint(ExamBlueprint blueprint) async {
     await FirestoreService.uploadBlueprint(blueprint);
   }
 
   // ===================================================
-  // UPLOAD VARIANT 
+  // UPLOAD VARIANT
   // ===================================================
   static Future<void> uploadVariant(MissionVariant variant) async {
     await FirestoreService.uploadVariant(variant);
   }
 
   // ===================================================
-  // UPLOAD NODE 
+  // UPLOAD NODE
   // ===================================================
   static Future<void> uploadNode({
     required String exam,
@@ -226,14 +257,14 @@ class AdminUploadEngine {
     String category = 'competitive', // Amendment v3.0
   }) async {
     final nodeId = topic.replaceAll(' ', '_').toUpperCase();
-    
+
     final node = MicroTopicNode(
       id: nodeId,
       examId: exam,
       subjectId: subject,
       chapterId: chapter,
       title: topic,
-      titleHindi: topic, 
+      titleHindi: topic,
       subjectHindi: subject,
       chapterHindi: chapter,
       description: '$topic description',

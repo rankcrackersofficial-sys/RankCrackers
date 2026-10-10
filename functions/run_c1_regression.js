@@ -6,7 +6,6 @@ const suites = [
   'test_mission_cycle_store.js',
   'test_mission_source_preflight.js',
   'test_mission_enrichment_worker.js',
-  'test_unified_mission_create_publish_integration_b5.js',
   'test_mission_cycle_lifecycle.js',
   'test_mission_enrichment_guardrails.js',
   'test_mission_enrichment_orchestrator_kernel.js',

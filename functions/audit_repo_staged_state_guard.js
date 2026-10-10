@@ -8,16 +8,18 @@ const blockedPatterns = [
   /^functions\/audit_rc_x4e_p15_/,
   /RC_X4E_R14/i,
   /IR4/i,
-  /unrelated_validation_generated\.json$/i
+  /unrelated_validation_generated\.json$/i,
+  /^functions\/(backfill_student_mission_catalog|apply_student_catalog_readiness|generic_authority_mission_materializer)\.js$/,
+  /^functions\/workers\/recruitment_engine_worker\.js$/,
+  /^functions\/(audit_mission_catalog_shell_contract|audit_mission_mirror_current_flow|audit_rankcrackers_path_and_rules|audit_platform_boundary|test_mission_mirror|test_unified_mission_create_publish_integration_b5)\.js$/,
+  /^functions\/tmp_seed_r4e_r3_student_mission_catalog_emulator\.js$/,
+  /^assets\/data\/emulator\/founder_mission_exact_production_inventory_20260811065513\.json$/
 ];
 
 const allowedPatterns = [
   /^functions\/audit_repo_staged_state_guard\.js$/,
   /^functions\/audit_repo_head_freeze_guard\.js$/,
-  /^functions\/audit_mission_catalog_shell_contract\.js$/,
-  /^functions\/audit_mission_mirror_current_flow\.js$/,
   /^functions\/callable\/handle_sentinel_action\.js$/,
-  /^functions\/backfill_student_mission_catalog\.js$/,
   /^docs\/patch_safety\/FUP_2C_REPOGUARD4_/,
   /^docs\/patch_safety\/FUP_2C_REPOLOCK3_/,
   /^docs\/patch_safety\/FUP_2C_MIRROR2_/,
@@ -29,7 +31,7 @@ const allowedPatterns = [
   /^firebase\.json$/,
   /^firestore\.rules$/,
   /^lib\/core\/firebase\/firestore_service\.dart$/,
-  /^functions\/test_mission_mirror\.js$/
+  /^functions\/audit_canonical_mission_boundary\.js$/
 ];
 
 function stagedFiles() {

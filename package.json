@@ -5,7 +5,7 @@
         "audit:worker-training:safe-auto-dry-run": "node functions/audit_worker_training_safe_auto_dry_run.js",
         "build:web:founder": "flutter build web -t lib/main_web.dart --release",
         "deploy:web:founder": "flutter build web -t lib/main_web.dart --release && firebase deploy --only hosting",
-        "audit:rankcrackers:guard": "node functions/audit_rankcrackers_path_and_rules.js",
+        "audit:rankcrackers:guard": "node functions/audit_canonical_mission_boundary.js",
         "audit:notification:schema": "node functions/audit_notification_schema_system.js",
         "audit:notification:contract": "node functions/audit_notification_extraction_contract.js",
         "audit:notification:source": "node functions/audit_notification_source_readiness.js",
@@ -94,8 +94,7 @@
         "audit:rcx4e:p15-auth-state": "node functions/audit_rc_x4e_p15_authorization_state.js",
         "apply:rcx4e:p15-authorized": "node functions/apply_rc_x4e_p15_authorized_pagewise_native.js",
         "audit:rcx4e:p15-authorized-result": "node functions/audit_rc_x4e_p15_authorized_apply_result.js",
-        "audit:mission:mirror-current-flow": "node functions/audit_mission_mirror_current_flow.js",
-        "audit:mission:catalog-shell-contract": "node functions/audit_mission_catalog_shell_contract.js",
+        "audit:mission:canonical-boundary": "node functions/audit_canonical_mission_boundary.js",
         "run:wave2:parallel:factory": "node tools/student_pillars_r2_fasttrack/run_wave2_parallel_factory.js"
     },
     "dependencies": {

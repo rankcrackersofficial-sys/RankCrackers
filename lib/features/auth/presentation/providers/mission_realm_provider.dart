@@ -10,9 +10,8 @@ final recruitmentsProvider = StreamProvider.autoDispose<List<Recruitment>>((ref)
   return RecruitmentRepository.streamPublished();
 });
 
-/// Student Mission Realm uses student_mission_catalog as the canonical
-/// student-facing mission source. The name is preserved for older tests/routes,
-/// but this no longer means recruitments(status == published).
+/// Student Mission Realm uses mission_realms as the canonical student-facing
+/// mission source. The provider name is preserved for older routes only.
 final publishedRecruitmentsProvider = Provider.autoDispose<List<Recruitment>>((ref) {
   return ref.watch(recruitmentsProvider).value ?? const <Recruitment>[];
 });
