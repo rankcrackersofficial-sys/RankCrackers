@@ -14,3 +14,4 @@ export { ensureProfileSnapshot } from './workers/profileSnapshotWorker';
 export { ensureEligibilityEvaluation } from './workers/careerEligibilityWorker';
 export { buildCareerSignal } from './services/careerSignalAuthority';
 export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscoverySignal } from './services/careerSignalsRuntime';
+export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
