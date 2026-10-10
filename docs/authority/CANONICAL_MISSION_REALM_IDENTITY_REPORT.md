@@ -60,7 +60,7 @@ The three unclassified records are represented for audit visibility only. They a
 
 The checked-in implementation already subscribes once to `mission_realms`, derives cards from that snapshot, and computes the scope summary from the same rows. Therefore the checked-in implementation cannot legitimately produce one list of 18 and an aggregate of 17.
 
-The live site is running an older/deployed artifact, not PR #4 HEAD `14413b143af991b5d89dcf8df604ba5ab835e4e1`. The old artifact is mixing an inventory surface with a realm aggregate. The orphaned `TEST Mission Catalog Bridge` card is also explicitly shown as missing its `mission_realms` authority document. This is the direct mismatch mechanism; it is not a valid second source of truth.
+The live site is running an older/deployed artifact, not the current PR #4 HEAD `caba614c76decc202a317276153014d5bab18990`. The old artifact is mixing an inventory surface with a realm aggregate. The orphaned `TEST Mission Catalog Bridge` card is also explicitly shown as missing its `mission_realms` authority document. This is the direct mismatch mechanism; it is not a valid second source of truth.
 
 After the canonical build is deployed, the only valid invariant is:
 
