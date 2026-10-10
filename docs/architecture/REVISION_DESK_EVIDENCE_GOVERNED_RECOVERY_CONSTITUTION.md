@@ -1,7 +1,7 @@
 # RANKCRACKERS — REVISION DESK EVIDENCE-GOVERNED RECOVERY CONSTITUTION
 
 Document ID: RC-REVISION-DESK-001
-Version: 1.0 — FOUNDER-DIRECTION-CONSOLIDATED / PC-AUDIT-GROUNDED / NUMERIC-POLICY-PENDING
+Version: 1.1 — WORLD-CLASS RECOVERY CONTROL MODEL / FOUNDER-DIRECTION-CONSOLIDATED / PC-AUDIT-GROUNDED / NUMERIC-POLICY-PENDING
 Status: Canonical architecture baseline for implementation planning; NOT runtime implemented
 Authority: Subordinate to verified Syllabus, Taught Authority, DigiBook/Taught Manifest, Question Repository, Crucible, Test Arena, PYQ Vault and later explicit Founder corrections
 Conflict rule: Revision Desk owns recovery orchestration, not academic truth, teaching authority, formal assessment truth or competitive rank.
@@ -429,7 +429,226 @@ D8 exact recovery evidence by debt class.
 
 Runtime must not invent these as silent defaults.
 
-## 30. Closure statement
+## 30. Four-stage recovery control loop
+Every required academic recovery follows four semantically separate stages:
+
+DETECT -> DIAGNOSE -> REPAIR -> VERIFY.
+
+DETECT identifies a qualified attention signal. Detection is not a diagnosis.
+DIAGNOSE determines the most defensible cause class from available evidence and may return CAUSE_NOT_ESTABLISHED.
+REPAIR selects a bounded intervention matched to the diagnosed or safely-known need.
+VERIFY requires new qualified evidence sufficient for the debt class before recovery is claimed.
+
+No stage may be silently skipped merely to produce a simpler UI.
+
+## 31. Signal versus diagnosis
+A wrong answer, omission, slow response, retention estimate or repeated failure is a signal.
+It does not by itself prove misconception, carelessness, memory failure or missing prerequisite.
+
+Diagnosis records:
+- supporting evidence IDs;
+- candidate cause class;
+- confidence/qualification;
+- alternative plausible causes where material;
+- diagnostic policy version;
+- CAUSE_NOT_ESTABLISHED when evidence is insufficient.
+
+Student-facing language must not overstate inferred causes.
+
+## 32. Repair evidence versus recovery evidence
+REPAIR_EVIDENCE proves that an intervention occurred, for example:
+- eligible DigiBook relearning completed;
+- worked explanation reviewed;
+- targeted practice session performed.
+
+RECOVERY_EVIDENCE proves subsequent capability through policy-qualified retrieval/application evidence.
+
+REPAIR_EVIDENCE != RECOVERY_EVIDENCE.
+A debt may move from repair to VERIFY_PENDING without being RESOLVED.
+Independent delayed recheck may be required by debt class/policy.
+
+## 33. Root-prerequisite recovery
+When a weakness may originate in a prerequisite, Revision Desk may evaluate the governed knowledge-dependency graph.
+
+It must distinguish:
+OBSERVED_TARGET_FAILURE
+from
+INFERRED_ROOT_PREREQUISITE.
+
+A prerequisite cannot be declared the root cause solely because a graph edge exists.
+Root-cause recommendations require supporting evidence and confidence/qualification.
+
+When supported, recovery ordering may be:
+ROOT PREREQUISITE -> DEPENDENT KNOWLEDGE -> APPLICATION VERIFICATION.
+
+This mechanism must remain inside verified/current/taught eligibility.
+
+## 34. Evidence compression and recovery objectives
+The Student UI must not mechanically convert every evidence event into a separate backlog card.
+
+Multiple qualified evidence events may be grouped into one RecoveryObjective only when they share a defensible knowledge/dependency target and compatible recovery path.
+
+Compression preserves every source event and never destroys provenance.
+
+RecoveryObjective records:
+- objective ID;
+- constituent RevisionDebt/evidence IDs;
+- target knowledge/dependency;
+- grouping policy/version;
+- reason for grouping;
+- recommended repair;
+- verification requirement.
+
+MANY EVIDENCE EVENTS -> ONE EXPLAINABLE RECOVERY OBJECTIVE is permitted.
+MANY UNRELATED FAILURES -> ONE VAGUE "WEAK CHAPTER" is prohibited.
+
+## 35. Workload and backlog governance
+Raw debt count is an internal evidence fact, not automatically the primary Student UI.
+
+The system should produce a bounded TODAY workload from eligible objectives while preserving the complete auditable backlog.
+
+Queue capacity, daily load and deferral policy remain pending numeric policy, but the following laws are fixed:
+- no impossible daily queue;
+- no guilt/shame framing;
+- overdue count cannot manufacture academic severity;
+- deferral does not silently erase debt;
+- high-value prerequisite repair may outrank many low-value cards;
+- accessibility/time constraints may shape presentation without falsifying academic evidence.
+
+## 36. Repair-action resolver
+Recovery action must fit the evidence-supported need.
+
+Possible governed action classes:
+RELEARN_TAUGHT_MATERIAL
+TARGETED_RETRIEVAL
+TARGETED_APPLICATION
+TIMED_EXECUTION_PRACTICE
+PYQ_APPLICATION_REVISIT
+PREREQUISITE_REPAIR
+DELAYED_RETENTION_RECHECK
+EVIDENCE_GATHERING_DIAGNOSTIC
+PERSONAL_REVISIT
+
+A generic "revise chapter" action is insufficient when a more precise governed target is available.
+
+Each action binds:
+why selected,
+eligible content/question references,
+source debt/objective,
+action policy version,
+what completion proves,
+what it does NOT prove,
+verification requirement.
+
+## 37. Explainability contract
+Every required Student-facing recovery objective must be able to answer:
+WHY THIS?
+WHAT EVIDENCE?
+WHAT EXACT KNOWLEDGE?
+WHAT SHOULD I DO?
+WHY THIS ACTION?
+WHAT WILL COUNT AS RECOVERED?
+WHEN/WHY WILL IT BE CHECKED AGAIN?
+
+Where the system cannot establish a cause, it says so rather than fabricating precision.
+
+Retention/mastery estimates must expose appropriate qualification and never imply direct observation of memory.
+
+## 38. Recovery verification and transfer
+Verification should prefer evidence that is not merely a replay of the repair step.
+
+Depending on debt class, policy may require:
+- fresh retrieval;
+- changed-context application;
+- delayed recheck;
+- prerequisite plus dependent-item success;
+- timing/execution evidence.
+
+Immediate repetition of the identical item may demonstrate correction but is not automatically durable recovery.
+
+Verification policy must prevent answer memorization from masquerading as knowledge recovery.
+
+## 39. Recovery lifecycle
+Canonical conceptual lifecycle:
+
+SIGNAL_DETECTED
+-> ELIGIBILITY_CHECK
+-> DIAGNOSIS_PENDING
+-> DIAGNOSED or CAUSE_NOT_ESTABLISHED
+-> RECOVERY_OBJECTIVE_READY
+-> REPAIR_IN_PROGRESS
+-> VERIFY_PENDING
+-> RECOVERED
+-> RECHECK_SCHEDULED
+
+Side states:
+EVIDENCE_NEEDED
+BLOCKED_UNTAUGHT
+BLOCKED_STALE_VERSION
+BLOCKED_SOURCE_INVALID
+DEFERRED
+REOPENED
+SUPERSEDED.
+
+Existing queue states may be mapped during implementation; this constitution does not require destructive schema renaming.
+
+## 40. Recovery effectiveness feedback
+Revision Desk may evaluate whether an intervention produced later qualified recovery evidence.
+
+This is intervention-effectiveness evidence, not permission for uncontrolled self-modifying policy.
+
+Policy/model changes require versioning, validation and governance.
+The system must not silently optimize for easy short-term completion at the expense of durable learning.
+
+## 41. Additional world-class acceptance fixtures
+R31 repeated errors sharing one dependency -> may compress into one objective while retaining all source events.
+R32 unrelated errors in same chapter -> must not be collapsed into vague chapter weakness.
+R33 repair content opened/completed -> VERIFY_PENDING, not automatically RECOVERED.
+R34 identical question immediately repeated correctly -> correction evidence; durable recovery not automatically proven.
+R35 delayed independent retrieval succeeds -> may satisfy policy-qualified recovery.
+R36 prerequisite graph edge without supporting failure evidence -> no asserted root cause.
+R37 supported prerequisite weakness -> prerequisite repair may precede dependent target.
+R38 cause evidence insufficient -> CAUSE_NOT_ESTABLISHED, no fabricated "careless" label.
+R39 147 raw debt events -> Student TODAY view remains bounded; evidence history remains intact.
+R40 overdue item -> lateness alone does not increase mastery deficit.
+R41 action recommendation -> must state what completion proves and verification still required.
+R42 recovery objective -> constituent evidence remains reconstructable.
+R43 successful repair followed by later failure -> debt may reopen without erasing prior recovery evidence.
+R44 Rank Radar routing hint without underlying academic evidence -> no required recovery objective.
+R45 repair action uses stale/untaught content -> blocked.
+R46 estimated retention shown -> qualified as estimate, not observed memory.
+R47 recovery verification uses alternate valid application -> accepted when policy-qualified.
+R48 grouping policy changes -> old objective remains historically reconstructable.
+R49 Student defers permitted item -> debt persists without shame penalty.
+R50 intervention effectiveness signal -> cannot silently rewrite policy/model.
+
+## 42. Additional logical entities
+RecoverySignal
+RecoveryDiagnosis
+RecoveryObjective
+RecoveryAction
+RepairEvidence
+RecoveryVerification
+RecoveryEffectivenessObservation
+DebtGroupingDecision
+
+These are logical contracts and do not mandate one database collection per entity.
+
+## 43. Updated implementation gates
+Gate A: constitution and cross-domain authority boundaries.
+Gate B: reconcile governed personalization contracts and legacy engines; select one runtime authority path.
+Gate C: source-event ingestion and immutable lineage.
+Gate D: taught-content eligibility + canonical RevisionDebt/RecoverySignal.
+Gate E: diagnosis contract, cause qualification and root-prerequisite safety.
+Gate F: RecoveryObjective grouping/compression + explainable priority/workload policy.
+Gate G: repair-action resolver + exact deep links into governed learning/practice.
+Gate H: recovery verification, delayed recheck and reopen semantics.
+Gate I: server-authoritative persistence/history/UTC/security/offline idempotency.
+Gate J: Student UX/accessibility/psychology validation.
+Gate K: comprehensive tests including R01-R50.
+Gate L: independent live Student audit + explicit deployment approval.
+
+## 44. Closure statement
 REVISION DESK != TAUGHT AUTHORITY.
 REVISION DESK != CRUCIBLE REBUILD.
 REVISION DESK != TEST ARENA.
@@ -442,3 +661,9 @@ BOOKMARK != KNOWLEDGE DEFICIT.
 CYCLE ROLLOVER != HISTORY RESET.
 ESTIMATED RETENTION != OBSERVED MEMORY.
 DOCUMENTED != IMPLEMENTED.
+DETECTION != DIAGNOSIS.
+REPAIR != RECOVERY.
+ACTIVITY COMPLETION != RECOVERY PROOF.
+MANY ERRORS != MANY STUDENT CARDS.
+GRAPH DEPENDENCY != PROVEN ROOT CAUSE.
+RECOVERY MUST BE EXPLAINABLE, BOUNDED AND VERIFYABLE.
