@@ -263,6 +263,11 @@ This section is the machine-auditable handoff for the next audit. A row is “li
 | `RC-B02-19-005` | Ch 19 §11.6 | `BattleSession.recordQuestionOutcome` | no current method; `BattleSession.toMap/fromMap/copyWith` | `battle_session.dart:34–108` | `UNRESOLVED / HISTORICAL` | model is immutable; former mutator symbol not found |
 | `RC-B02-20-001` | Ch 20 Appendix E | old callable table | live callable/helper index | `20_master_reference_appendices.md:230–250` | `CORRECTED` | inaccurate payloads and outputs replaced; helper rows separated from callable rows |
 | `RC-B02-20-002` | Ch 20 Appendix G | `evaluateAttempt`/`createAttemptSession` as old assessment.ts | `functions/workers/evaluate_attempt_worker.js` | 9–55,57–217,219–220 | `CORRECTED` | old aggregate path remains historical only; live helper replacement recorded |
+| `RC-B02-10-001` | Ch 10 §1.1 | 100-Day linear schedule / Day 99 | `lib/features/crucible/core/crucible_clock_engine.dart:187–208` & `RC-CRUCIBLE-C98-001` | 187–208 | `CORRECTED / RATIFIED` | 98-day continuous modulo ring ($7 \times 14 = 98$d); 42 micros, 7 rebuilds, 7 macros; wraps Day 98 to Day 1 |
+| `RC-B02-10-002` | Ch 10 §1.3 | Crucible test eligibility | `lib/features/crucible/core/micro_test_engine.dart:148–340` & `RC-ASSESSMENT-CAE-001` | 148–340 | `VERIFIED CONTRACT` | 7-criterion eligibility intersection; zero-PYQ valid; fail-closed bank depth (<50 returns []); immutable attempts |
+| `RC-B02-10-003` | Ch 10 §1.4 | `sacred_major_test_throne.dart` as live Crucible test | `lib/features/crucible/presentation/widgets/sacred_major_test_throne.dart:623` & `RC-ASSESSMENT-CTA-001` | 1–762 | `SUPERSEDED_PROTOTYPE / QUARANTINED` | Major Test excluded from Crucible; belongs to Test Arena; Day 99 prototype quarantined |
+| `RC-B02-10-004` | Ch 10 §6.1 | 5-gate eligibility | `lib/features/crucible/core/micro_test_engine.dart:148–340` | 148–340 | `VERIFIED ENGINE` | 9-gate pipeline (Gates A–I): type, atom scope, fact provenance, Human Authority, answer key, SHA-256 solution, PYQ proof, publication, lineage |
+| `RC-B02-10-005` | Ch 10 §5.2 | schedule window | `lib/features/crucible/core/crucible_engine.dart:253–276` | 253–276 | `VERIFIED ENGINE` | Hour-47 Micro Trigger (`learningStart + 47h` to `+ 48h`); 48h dual-day cadence |
 
 ### 8.1 Fresh census rules and result
 

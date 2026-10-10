@@ -1,4 +1,4 @@
-# Rank Cracker Book — Living Technical Reference
+# RankCrackers — Living Technical Product & Architecture Book
 
 यह Rank Cracker project की आधिकारिक, क्रमबद्ध और निरंतर विकसित की जाने वाली विस्तृत तकनीकी-उत्पाद पुस्तक (Living Technical-Product Reference Book) है। इसका उद्देश्य short summary बनाना नहीं, बल्कि project का complete professional reference तैयार करना है—जिसमें project का उद्देश्य, प्रत्येक user experience, technical architecture, source mapping, development process, संचालन, सुरक्षा, academic system और भविष्य की दिशा स्रोत कोड साक्ष्य के साथ दर्ज हो।
 
