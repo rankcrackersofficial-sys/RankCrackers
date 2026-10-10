@@ -48,3 +48,17 @@ Complete one bounded repository/document-to-code reconciliation; verify PC/remot
 
 ## Next milestone decision gate
 Bounded reconciliation must separately resolve the operational SSC CGL pilot and Sacred Archive dependency readiness. Neither is silently CLOSED or P0 by default. RC-PCMS setup is documentation-only and does not authorize product changes.
+
+
+## RC-PCMS DOMAIN-A to DOMAIN-E bootstrap intake — 2026-10-10
+**Evidence:** Founder supplied reports from five existing Domain chats, all read-only; each reports GitHub read of `docs/rc-pcms-foundation-r1` at `a57657ea3c984f1b6ced4f72c34c7734b28c15ab`. GitHub state files have since been extended in this PR; therefore the bootstrap read SHA is a *historical baseline*, not the latest branch head.
+
+| Room | Bootstrap | Most material reconciliation |
+|---|---|---|
+| **DOMAIN-A** | COMPLETE / READ_ONLY | Current Founder-locked OSA/DSD forbids artificial official levels; old mandatory five-level interpretation conflicts |
+| **DOMAIN-B** | COMPLETE / READ_ONLY | Reported P8A acceptance commit `d53030d944f225512964501113a1b55f2416ded4`, 75/75 and 9 plugins need primary evidence links |
+| **DOMAIN-C** | COMPLETE / READ_ONLY | 98-day globally locked vs mission-blueprint-configurable scope needs explicit document precedence review; Major exclusively Test Arena |
+| **DOMAIN-D** | COMPLETE / READ_ONLY | Historical hosting-identity proof and candidate deployment should not be mistaken for current live Gate-B acceptance |
+| **DOMAIN-E** | COMPLETE / READ_ONLY | Founder presentation and human candidate disposition do not grant academic verification/publication authority |
+
+All five Domain state files now record these as **bootstrap-reported findings**, with historical/current verification distinguished. No acceptance of missing primary evidence is implied. **Remaining gate:** PR #2 eligible reviewer approval/merge, safe PC Git synchronization, then repeat read from canonical branch. No blanket source-development hold is authorized.
