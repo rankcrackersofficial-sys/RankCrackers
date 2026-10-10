@@ -25,9 +25,8 @@ const { routeSourceDocumentImpact } = require('./source_impact_router');
 function processCleanMissionFastPath(cleanProfile, sourceDocument, existingState = {}, options = {}) {
   const nowIso = options.nowIso || new Date().toISOString();
 
-  // 1. Generate the canonical mission realm. Legacy projections are retained
-  // only inside the pure compatibility builder and are never returned to a
-  // production writer from this path.
+  // 1. Generate the canonical mission realm. The materializer is explicitly
+  // fail-closed against the retired recruitment/catalog projection mode.
   const projections = buildMissionProjections(cleanProfile, existingState, {
     ...options,
     nowIso,

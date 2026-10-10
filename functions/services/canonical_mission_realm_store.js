@@ -4,8 +4,8 @@
  * Canonical Mission Realm boundary.
  *
  * mission_realms/{missionId} is the only authoritative mission document.
- * recruitments/{missionId} and student_mission_catalog/{missionId} are legacy
- * projections and must not be created by new mission or notification flows.
+ * Historical recruitment/catalog projections are retired and must not be
+ * created by new mission or notification flows.
  */
 
 function canonicalMissionPath(missionId) {

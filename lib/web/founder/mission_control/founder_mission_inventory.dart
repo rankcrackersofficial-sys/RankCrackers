@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/material.dart';
+import 'mission_inventory_summary.dart';
 
 enum MissionPortfolioFilter { all, live, draft, passive, archived, attention }
 
@@ -37,6 +38,9 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
           );
         }
         final rows = _reconcile(realmsSnapshot.data!.docs);
+        final scopeSummary = MissionInventorySummary.fromRealms(
+          rows.map((row) => row.realm ?? const <String, dynamic>{}),
+        );
         final visible = rows.where(_matchesFilter).toList();
         return LayoutBuilder(
           builder: (context, constraints) {
@@ -52,6 +56,8 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  _scopeSummary(scopeSummary),
+                  const SizedBox(height: 10),
                   _summary(rows),
                   const SizedBox(height: 14),
                   Wrap(
@@ -130,6 +136,24 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
       spacing: 8,
       runSpacing: 8,
       children: metrics.map((m) => _SummaryMetric(m.$1, m.$2, m.$3)).toList(),
+    );
+  }
+
+  Widget _scopeSummary(MissionInventorySummary summary) {
+    return Wrap(
+      spacing: 8,
+      runSpacing: 8,
+      children: [
+        _SummaryMetric('TOTAL MISSIONS', summary.total, Colors.white),
+        _SummaryMetric('CENTRAL REALMS', summary.central, Colors.cyanAccent),
+        _SummaryMetric('STATE REALMS', summary.state, Colors.amber),
+        _SummaryMetric('UT REALMS', summary.ut, Colors.greenAccent),
+        _SummaryMetric(
+          'UNCLASSIFIED',
+          summary.unclassified,
+          summary.unclassified == 0 ? Colors.white38 : Colors.orangeAccent,
+        ),
+      ],
     );
   }
 

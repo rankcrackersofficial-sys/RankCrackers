@@ -43,7 +43,7 @@ The old top-level collections are not alternate mission sources anymore:
 6. Firestore rules allow student reads only for visible canonical realms and
    deny client writes to both legacy collections. Founder reads remain
    available temporarily for migration census.
-7. The old emulator fixture is no longer a runtime fallback, so a stale
+7. The old emulator fixture and its seeder were removed, so a stale
    three-mission snapshot cannot silently override the live source.
 
 ## Why the counts previously disagreed
@@ -54,6 +54,28 @@ while an academic reconciliation document described fifteen mission families.
 The website's reported eighteen therefore could not be treated as one database
 count. The canonical count must now be the number of documents returned from
 `mission_realms`, filtered by the canonical visibility gate for student views.
+
+## 2026-10-10 mismatch forensic finding
+
+The live Founder screen showed two different answers because the deployed web
+artifact was not the same revision as this checkout. Its inventory cards showed
+18 records, while the top scope widget showed 17. The checked-out source did
+not contain that older `TOTAL MISSIONS / CENTRAL REALMS / STATE REALMS /
+UT REALMS` widget at all. This proves the 17 counter was an older deployed
+aggregate path, not a second valid count of the current 18-card snapshot.
+
+The fix is now explicit: the Founder inventory subscribes once to
+`mission_realms`, builds the card list and all scope counters from that same
+snapshot, and fails if the bucket invariant is not exhaustive:
+
+```text
+TOTAL = CENTRAL + STATE + UT + UNCLASSIFIED
+```
+
+The repository guard also blocks the retired recruitment engine, student
+catalog seeder, old platform audit, and stale three-mission emulator fixture.
+They were removed so a future audit, test harness, or manual seed cannot bring
+the discarded three-mission inventory back into the project.
 
 ## Reset procedure
 

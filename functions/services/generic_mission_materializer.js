@@ -21,8 +21,8 @@
  *   - No Default Exam Metadata Insertion in ACCEPTED_MANIFEST / Governed modes
  *   - Startability & Publication Dependency Contract (PREPARING != LIVE; unready startability = false)
  *   - Monitoring & Verification Timestamp Truth (monitorConfigured = false unless evidence-backed)
- *   - Canonical mission_realms authority. Legacy projection output remains
- *     available only for historical fixture tests when canonicalOnly is false.
+ *   - Canonical mission_realms authority only. The former recruitment and
+ *     student-catalog projection mode has been retired and is fail-closed.
  *   - Hard-Disabled APPLY Mode (APPLY mode rejected)
  *   - Measured Parity & Zero Timestamp Drift
  */
@@ -541,9 +541,11 @@ function validateManifest(manifest, options = {}) {
  * Implements OWNED_FIELD_MERGE semantics & Field Ownership Classes.
  */
 function buildMissionProjections(rawMission, existingState = {}, options = {}) {
+  if (options.canonicalOnly !== true) {
+    throw new Error('LEGACY_MISSION_PROJECTION_PATH_RETIRED: canonicalOnly=true is required');
+  }
   const nowIso = options.nowIso || new Date().toISOString();
   const context = options.context || 'FIXTURE_TEST';
-  const canonicalOnly = options.canonicalOnly === true;
 
   const registry = options.authorityRegistry ? validateAuthorityRegistry(options.authorityRegistry, options) : DEFAULT_FIXTURE_AUTHORITY_REGISTRY;
 
@@ -592,12 +594,9 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
 
   // Existing documents for OWNED_FIELD_MERGE & GOVERNANCE_OWNED Preservation
   const exRealm = existingState.mission_realms?.[missionId] || {};
-  const exRec = canonicalOnly ? {} : (existingState.recruitments?.[missionId] || {});
-  const exCat = canonicalOnly ? {} : (existingState.student_mission_catalog?.[missionId] || {});
-
   // Preserve GOVERNANCE_OWNED Fields
-  const isArchived = exCat.archived === true || exRealm.archived === true || mission.archived === true;
-  const isFounderHold = exRealm.founderHold === true || exCat.founderHold === true || mission.founderHold === true;
+  const isArchived = exRealm.archived === true || mission.archived === true;
+  const isFounderHold = exRealm.founderHold === true || mission.founderHold === true;
 
   // FOUNDER HOLD LAW: Founder hold explicitly blocks student visibility and startability
   const isBlockedByGovernance = isArchived || isFounderHold;
@@ -620,10 +619,6 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
 
   // Preparing Publication Semantics (PREPARING != LIVE)
   const publicationState = isArchived ? 'ARCHIVED' : (isFounderHold ? 'HELD_FOUNDER' : (isAcademicReady ? 'LIVE' : 'PREPARING'));
-  const studentMsg = isArchived ? 'Mission archived.' :
-    (isFounderHold ? 'Mission held by Founder governance.' :
-    (isAcademicReady ? 'Mission is live and accessible!' : 'Mission is being prepared. Content will unlock soon.'));
-
   // Monitoring Truth (monitorConfigured != monitorRuntimeProven; no fake runtime monitors)
   const monitoringRef = {
     monitoringRegistryPath: `mission_realms/${missionId}/source_monitoring_registry`,
@@ -635,12 +630,6 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
   // Preserve timestamps & lastVerifiedDate if present on existing docs
   const realmCreatedAt = exRealm.createdAt || mission.createdAt || nowIso;
   const realmUpdatedAt = exRealm.createdAt ? (exRealm.updatedAt || nowIso) : nowIso;
-
-  const recCreatedAt = exRec.createdAt || mission.createdAt || nowIso;
-  const recUpdatedAt = exRec.createdAt ? (exRec.updatedAt || nowIso) : nowIso;
-
-  const catCreatedAt = exCat.createdAt || mission.createdAt || nowIso;
-  const catUpdatedAt = exCat.createdAt ? (exCat.updatedAt || nowIso) : nowIso;
 
   // Source Verification Timestamp Truth: Do NOT generate lastVerifiedDate = nowIso unless evidence-backed!
   const lastVerifiedDate = mission.latestEffectiveSource?.lastVerifiedDate || exRealm.latestOfficialSource?.lastVerifiedDate || null;
@@ -711,99 +700,7 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
     updatedAt: realmUpdatedAt
   };
 
-  // 2. PROJECTION: recruitments/{missionId}
-  const recruitmentData = {
-    ...exRec, // OWNED_FIELD_MERGE
-    id: missionId,
-    recruitmentId: missionId,
-    missionId: missionId,
-    title: title,
-    examName: title,
-    organization: authObj.authorityOfficialName,
-    organizationCode: authObj.authorityShortName,
-    authorityGroupKey: authorityGroupKey,
-    canonicalAuthorityKey: authKey,
-    authorityDisplayName: authObj.authorityOfficialName,
-    jurisdictionLevel: jurLevel,
-    stateCode: stateCode,
-    stateName: stateName,
-    region: region,
-    sector: sector,
-    examCategory: examCategory,
-    examScope: examScope,
-    studentHierarchyPath: hierarchyPath,
-    readiness: readiness,
-    status: isArchived ? 'archived' : (isFounderHold ? 'held' : (isAcademicReady ? 'published' : 'draft')),
-    nature: isArchived ? 'ARCHIVED' : (isFounderHold ? 'HELD' : (isAcademicReady ? 'ACTIVE' : 'PASSIVE')),
-    createdAt: recCreatedAt,
-    updatedAt: recUpdatedAt
-  };
-
-  // 3. PROJECTION: student_mission_catalog/{missionId}
-  const catalogData = {
-    ...exCat, // OWNED_FIELD_MERGE
-    id: missionId,
-    missionId: missionId,
-    realmId: missionId,
-    sourceMissionId: missionId,
-    sourcePath: `mission_realms/${missionId}`,
-    sourceType: 'mission_realms',
-    title: title,
-    name: title,
-    displayTitle: title,
-    examName: title,
-    authorityGroupKey: authorityGroupKey,
-    canonicalAuthorityKey: authKey,
-    authorityDisplayName: authObj.authorityOfficialName,
-    organizationCode: authObj.authorityShortName,
-    boardId: authObj.authorityShortName,
-    jurisdictionLevel: jurLevel,
-    state: stateName || 'Central',
-    stateCode: stateCode,
-    stateName: stateName,
-    region: region,
-    sector: sector,
-    examCategory: examCategory,
-    missionType: examCategory,
-    missionStructureType: mission.missionStructureType || 'SINGLE_TRACK',
-    examScope: examScope,
-    studentHierarchyPath: hierarchyPath,
-    readiness: readiness,
-    status: publicationState,
-    catalogStatus: publicationState,
-    studentPublicationState: publicationState,
-    studentMessage: studentMsg,
-    userPanelVisible: studentVisible,
-    cardVisible: studentVisible,
-    visibility: {
-      studentVisible: studentVisible,
-      catalogVisible: catalogDiscoverable,
-      userPanelVisible: studentVisible,
-      cardVisible: studentVisible,
-      quickEntryEnabled: quickEntryEnabled,
-      smartEntryEnabled: smartEntryEnabled
-    },
-    archived: isArchived,
-    founderHold: isFounderHold,
-    source: {
-      missionRealmPath: `mission_realms/${missionId}`,
-      mirroredBy: 'generic_mission_materializer_47b6',
-      materializerPhase: '47B6_PRODUCTION_ENGINE'
-    },
-    createdAt: catCreatedAt,
-    updatedAt: catUpdatedAt
-  };
-
-  if (canonicalOnly) {
-    return { missionId, realmData };
-  }
-
-  return {
-    missionId,
-    realmData,
-    recruitmentData,
-    catalogData
-  };
+  return { missionId, realmData };
 }
 
 /**
@@ -811,6 +708,9 @@ function buildMissionProjections(rawMission, existingState = {}, options = {}) {
  * Note: APPLY mode is HARD-DISABLED in Gate 47B4/47B5/47B6!
  */
 function runGenericMissionMaterializer(manifest, currentStateStore = {}, options = {}) {
+  if (options.canonicalOnly !== true) {
+    throw new Error('LEGACY_MISSION_PROJECTION_PATH_RETIRED: canonicalOnly=true is required');
+  }
   const mode = String(options.mode || 'DRY_RUN').toUpperCase();
 
   // HARD-DISABLE APPLY MODE IN THIS GATE
@@ -840,8 +740,6 @@ function runGenericMissionMaterializer(manifest, currentStateStore = {}, options
   const mutationManifest = [];
 
   const existingRealms = currentStateStore.mission_realms || {};
-  const existingRecruitments = currentStateStore.recruitments || {};
-  const existingCatalog = currentStateStore.student_mission_catalog || {};
 
   let semanticCreates = 0;
   let semanticUpdates = 0;
@@ -853,15 +751,9 @@ function runGenericMissionMaterializer(manifest, currentStateStore = {}, options
     const projections = buildMissionProjections(rawMission, currentStateStore, { ...options, nowIso });
     const mId = projections.missionId;
 
-    const targets = options.canonicalOnly === true
-      ? [
-          { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
-        ]
-      : [
-          { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
-          { col: 'recruitments', path: `recruitments/${mId}`, data: projections.recruitmentData, store: existingRecruitments },
-          { col: 'student_mission_catalog', path: `student_mission_catalog/${mId}`, data: projections.catalogData, store: existingCatalog }
-        ];
+    const targets = [
+      { col: 'mission_realms', path: `mission_realms/${mId}`, data: projections.realmData, store: existingRealms },
+    ];
 
     targets.forEach(t => {
       const existingDoc = t.store[mId];
@@ -946,14 +838,15 @@ function runGenericMissionMaterializer(manifest, currentStateStore = {}, options
 function applyToSimulatorState(currentStateStore = {}, dryRunResult) {
   const nextState = {
     mission_realms: { ...(currentStateStore.mission_realms || {}) },
-    recruitments: { ...(currentStateStore.recruitments || {}) },
-    student_mission_catalog: { ...(currentStateStore.student_mission_catalog || {}) }
   };
 
   dryRunResult.plannedOperations.forEach(op => {
     if (op.operation === 'CREATE' || op.operation === 'UPDATE') {
       const col = op.collection;
       const docId = op.documentId;
+      if (col !== 'mission_realms') {
+        throw new Error(`LEGACY_MISSION_PROJECTION_WRITE_BLOCKED:${op.targetPath}`);
+      }
       nextState[col][docId] = JSON.parse(JSON.stringify(op.diff.after));
     }
   });

@@ -24,8 +24,6 @@ class FirestoreService {
   /// Canonical mission authority. All mission discovery and lifecycle reads
   /// must resolve from this collection and its subcollections.
   static const String missionRealmCollection = 'mission_realms';
-  @Deprecated('Use missionRealmCollection. Kept only for migration tooling.')
-  static const String recruitmentCollection = 'recruitments';
   static const String stateRegistryCollection =
       'published_states'; // Amendment v3.0: State Registry Law
   static const String variantCollection = 'mission_variants';
@@ -39,11 +37,6 @@ class FirestoreService {
   static const String aiQueueCollection = 'ai_queue';
   static const String notificationCandidateCollection =
       'notification_candidates';
-  @Deprecated(
-    'Student catalog is now a derived runtime view of mission_realms.',
-  )
-  static const String studentMissionCatalogCollection =
-      'student_mission_catalog';
 
   // EXTRACTION REALM (Document 50J)
   static const String semanticUnitCollection = 'semantic_units';
@@ -122,7 +115,7 @@ class FirestoreService {
         .map((snap) => snap.docs.map((doc) => doc.data()).toList());
   }
 
-  static Stream<List<Map<String, dynamic>>> streamStudentMissionCatalog() {
+  static Stream<List<Map<String, dynamic>>> streamStudentVisibleMissions() {
     return _firestore
         .collection(missionRealmCollection)
         .where('userPanelVisible', isEqualTo: true)
@@ -385,46 +378,9 @@ class FirestoreService {
     return variables;
   }
 
-  static String _catalogString(Map<String, dynamic> data, String key) {
+  static String _missionString(Map<String, dynamic> data, String key) {
     final value = data[key];
     return value == null ? '' : value.toString().trim();
-  }
-
-  static String _catalogSourcePath(String docId, Map<String, dynamic> data) {
-    final direct = _catalogString(data, 'sourcePath');
-    if (direct.isNotEmpty) return direct;
-    final source = data['source'];
-    if (source is Map) {
-      final missionRealmPath = source['missionRealmPath'];
-      if (missionRealmPath != null &&
-          missionRealmPath.toString().trim().isNotEmpty) {
-        return missionRealmPath.toString().trim();
-      }
-    }
-    return 'mission_realms/$docId';
-  }
-
-  static bool _hasCanonicalMissionLineage(
-    String docId,
-    Map<String, dynamic> data,
-  ) {
-    final sourcePath = _catalogSourcePath(docId, data);
-    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
-    final sourceMissionId = directSourceMissionId.isNotEmpty
-        ? directSourceMissionId
-        : sourcePath.startsWith('mission_realms/')
-        ? sourcePath.substring('mission_realms/'.length).split('/').first
-        : '';
-    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
-        ? _catalogString(data, 'sourceType')
-        : sourcePath.startsWith('mission_realms/')
-        ? 'mission_realms'
-        : '';
-
-    return sourceType == 'mission_realms' &&
-        sourcePath == 'mission_realms/$sourceMissionId' &&
-        sourceMissionId.isNotEmpty &&
-        sourceMissionId == docId;
   }
 
   static Recruitment _missionRealmDataToRecruitment(
@@ -434,22 +390,15 @@ class FirestoreService {
     final title =
         (data['displayName'] ?? data['title'] ?? data['name'] ?? docId)
             .toString();
-    final sourcePath = _catalogSourcePath(docId, data);
-    final directSourceMissionId = _catalogString(data, 'sourceMissionId');
-    final sourceMissionId = directSourceMissionId.isNotEmpty
-        ? directSourceMissionId
-        : sourcePath.startsWith('mission_realms/')
-        ? sourcePath.substring('mission_realms/'.length).split('/').first
-        : docId;
-    final sourceType = _catalogString(data, 'sourceType').isNotEmpty
-        ? _catalogString(data, 'sourceType')
-        : 'mission_realms';
+    final sourcePath = 'mission_realms/$docId';
+    final sourceMissionId = docId;
+    const sourceType = 'mission_realms';
     final sourceMissionVersion =
-        _catalogString(data, 'sourceMissionVersion').isNotEmpty
-        ? _catalogString(data, 'sourceMissionVersion')
-        : _catalogString(data, 'canonicalKnowledgeVersion').isNotEmpty
-        ? _catalogString(data, 'canonicalKnowledgeVersion')
-        : _catalogString(data, 'version');
+        _missionString(data, 'sourceMissionVersion').isNotEmpty
+        ? _missionString(data, 'sourceMissionVersion')
+        : _missionString(data, 'canonicalKnowledgeVersion').isNotEmpty
+        ? _missionString(data, 'canonicalKnowledgeVersion')
+        : _missionString(data, 'version');
     final normalizedState = (data['state'] ?? data['examState'] ?? 'Central')
         .toString()
         .trim();
@@ -460,11 +409,11 @@ class FirestoreService {
         : int.tryParse(yearValue?.toString() ?? '') ?? 0;
     final blueprintValue = (data['examBlueprintId'] ?? '').toString();
     final publicationState =
-        _catalogString(data, 'studentPublicationState').isNotEmpty
-        ? _catalogString(data, 'studentPublicationState')
-        : _catalogString(data, 'catalogStatus').isNotEmpty
-        ? _catalogString(data, 'catalogStatus')
-        : _catalogString(data, 'status');
+        _missionString(data, 'studentPublicationState').isNotEmpty
+        ? _missionString(data, 'studentPublicationState')
+        : _missionString(data, 'catalogStatus').isNotEmpty
+        ? _missionString(data, 'catalogStatus')
+        : _missionString(data, 'status');
 
     final rawJurisdiction =
         (data['jurisdictionLevel'] ?? data['jurisdictionType'])
@@ -587,56 +536,6 @@ class FirestoreService {
     );
   }
 
-  static bool _isStudentDiscoverableCatalogDoc(
-    String docId,
-    Map<String, dynamic> data,
-  ) {
-    if (!_hasCanonicalMissionLineage(docId, data)) return false;
-
-    // Direct boolean guard
-    if (data['archived'] == true) return false;
-    if (data['cardVisible'] == false) return false;
-    if (data['userPanelVisible'] == false) return false;
-    if (data['catalogDiscoverable'] == false) return false;
-    if (data['founderHold'] == true) return false;
-    if (data['manualGovernanceLock'] == true) return false;
-
-    // Publication state guard (Strict non-leak for INTERNAL_DRAFT)
-    final pubState = _catalogString(
-      data,
-      'studentPublicationState',
-    ).toUpperCase();
-    if (pubState == 'INTERNAL_DRAFT' ||
-        pubState == 'DRAFT' ||
-        pubState == 'INTERNAL' ||
-        pubState == 'UNPUBLISHED' ||
-        pubState == 'ARCHIVED') {
-      return false;
-    }
-
-    final catStatus = _catalogString(data, 'catalogStatus').toUpperCase();
-    if (catStatus == 'INTERNAL_DRAFT' ||
-        catStatus == 'DRAFT' ||
-        catStatus == 'INTERNAL' ||
-        catStatus == 'UNPUBLISHED' ||
-        catStatus == 'ARCHIVED') {
-      return false;
-    }
-
-    final rawStatus = _catalogString(data, 'status').toUpperCase();
-    if (rawStatus == 'INTERNAL_DRAFT' ||
-        rawStatus == 'DRAFT' ||
-        rawStatus == 'ARCHIVED') {
-      return false;
-    }
-
-    return true;
-  }
-
-  static Stream<List<Recruitment>> streamStudentMissionCatalogRecruitments() {
-    return streamMissionRealmRecruitments();
-  }
-
   /// Canonical student mission stream.
   ///
   /// The old method name remains as a source-compatible shim for callers that
@@ -648,11 +547,13 @@ class FirestoreService {
         .where('archived', isEqualTo: false)
         .snapshots()
         .map((snapshot) {
-      return snapshot.docs
-          .where((doc) => _isStudentDiscoverableRealmDoc(doc.id, doc.data()))
-          .map((doc) => _missionRealmDocToRecruitment(doc.id, doc.data()))
-          .toList();
-    });
+          return snapshot.docs
+              .where(
+                (doc) => _isStudentDiscoverableRealmDoc(doc.id, doc.data()),
+              )
+              .map((doc) => _missionRealmDocToRecruitment(doc.id, doc.data()))
+              .toList();
+        });
   }
 
   static Recruitment _missionRealmDocToRecruitment(

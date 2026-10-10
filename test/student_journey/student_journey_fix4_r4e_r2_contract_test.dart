@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -12,71 +11,52 @@ void main() {
   const dashboardPath =
       'lib/features/dashboard/presentation/screens/dashboard_screen.dart';
   const commandHeaderPath = 'lib/shared/widgets/command_header.dart';
-  const fixturePath =
-      'assets/data/emulator/founder_mission_exact_production_inventory_20260811065513.json';
-
-  test('student_mission_catalog is the primary Student Mission Realm source',
-      () {
+  test('mission_realms is the only Student Mission Realm source', () {
     final repo = File(repoPath).readAsStringSync();
     final provider = File(providerPath).readAsStringSync();
 
-    expect(repo, contains('streamStudentMissionCatalogRecruitments'));
-    expect(provider, contains('student_mission_catalog'));
+    expect(repo, contains('streamMissionRealmRecruitments'));
+    expect(provider, contains('mission_realms'));
+    expect(repo, isNot(contains('student_mission_catalog')));
     expect(repo, isNot(contains('assessment_preview_manifest.json')));
     expect(repo, isNot(contains('_loadEmulatorPreviewMissions')));
   });
 
-  test('emulator fixture preserves exact exported mission identities', () {
-    final fixture = jsonDecode(File(fixturePath).readAsStringSync())
-        as Map<String, dynamic>;
-    final missions = fixture['missions'] as List<dynamic>;
+  test(
+    'Mission Realm restores source-backed category filters without guessing',
+    () {
+      final source = File(missionRealmPath).readAsStringSync();
+      final firestore = File(
+        'lib/core/firebase/firestore_service.dart',
+      ).readAsStringSync();
 
-    expect(fixture['source'], 'ONE_TIME_PRODUCTION_EXPORT_DERIVED');
-    expect(fixture['environment'], 'EMULATOR_ONLY');
-    expect(
-        missions.map((m) => m['realmId']),
-        containsAll(<String>[
-          'jee_main_2026',
-          'neet_(ug)-2027',
-          'RPSC_FIRST_GRADE2026_2026_1782713222215',
-        ]));
-    expect(missions.length, 3);
-    for (final mission in missions.cast<Map<String, dynamic>>()) {
-      expect(mission['category'], isNull);
-      expect(mission['userPanelVisible'], true);
-      expect(mission['cardVisible'], true);
-    }
-  });
-
-  test('Mission Realm restores source-backed category filters without guessing',
-      () {
-    final source = File(missionRealmPath).readAsStringSync();
-    final firestore =
-        File('lib/core/firebase/firestore_service.dart').readAsStringSync();
-
-    expect(source, contains('AVAILABLE MISSIONS'));
-    expect(source, contains('COMPETITIVE MISSIONS'));
-    expect(source, contains('QUALIFYING MISSIONS'));
-    expect(source, contains('CATEGORY PENDING VERIFICATION'));
-    expect(source, contains("category == 'competitive'"));
-    expect(source, contains("category == 'qualifying'"));
-    expect(source, isNot(contains("category.contains('competitive')")));
-    expect(source, isNot(contains("category.contains('qualifying')")));
-    expect(source, isNot(contains('selectedCategory')));
-    expect(firestore, contains("data['examCategory']"));
-    expect(firestore, contains("data['exam_category']"));
-    expect(firestore, contains("data['missionType']"));
-  });
+      expect(source, contains('AVAILABLE MISSIONS'));
+      expect(source, contains('COMPETITIVE MISSIONS'));
+      expect(source, contains('QUALIFYING MISSIONS'));
+      expect(source, contains('CATEGORY PENDING VERIFICATION'));
+      expect(source, contains("category == 'competitive'"));
+      expect(source, contains("category == 'qualifying'"));
+      expect(source, isNot(contains("category.contains('competitive')")));
+      expect(source, isNot(contains("category.contains('qualifying')")));
+      expect(source, isNot(contains('selectedCategory')));
+      expect(firestore, contains("data['examCategory']"));
+      expect(firestore, contains("data['exam_category']"));
+      expect(firestore, contains("data['missionType']"));
+    },
+  );
 
   test('Founder mission variables are projected without local guessing', () {
     final model = File('lib/core/models/recruitment.dart').readAsStringSync();
-    final firestore =
-        File('lib/core/firebase/firestore_service.dart').readAsStringSync();
+    final firestore = File(
+      'lib/core/firebase/firestore_service.dart',
+    ).readAsStringSync();
     final missionRealm = File(missionRealmPath).readAsStringSync();
-    final callable =
-        File('functions/callable/handle_sentinel_action.js').readAsStringSync();
-    final backfill = File('functions/backfill_student_mission_catalog.js')
-        .readAsStringSync();
+    final callable = File(
+      'functions/callable/handle_sentinel_action.js',
+    ).readAsStringSync();
+    final canonicalStore = File(
+      'functions/services/canonical_mission_realm_store.js',
+    ).readAsStringSync();
 
     expect(model, contains('missionVariables'));
     expect(firestore, contains('_extractMissionVariables'));
@@ -84,10 +64,13 @@ void main() {
     expect(firestore, contains("'paper_variables'"));
     expect(firestore, contains("data['variablePacks']"));
     expect(callable, contains('collectMissionVariables'));
-    expect(backfill, contains('collectMissionVariables'));
+    expect(canonicalStore, contains('mission_realms/{missionId}'));
+    expect(canonicalStore, isNot(contains('student_mission_catalog')));
     expect(missionRealm, contains('MISSION VARIABLES'));
     expect(
-        missionRealm, contains('Mission variables pending Founder projection'));
+      missionRealm,
+      contains('Mission variables pending Founder projection'),
+    );
     expect(missionRealm, contains("'subject_variables': 'SUBJECTS'"));
     expect(missionRealm, contains("'paper_variables': 'PAPERS'"));
   });
@@ -110,8 +93,11 @@ void main() {
     final source = File(missionRealmPath).readAsStringSync();
     const badCodeUnits = <int>[0x00c3, 0x00f0, 0x0178, 0x00e2];
     for (final codeUnit in badCodeUnits) {
-      expect(source.contains(String.fromCharCode(codeUnit)), isFalse,
-          reason: 'mojibake code unit $codeUnit');
+      expect(
+        source.contains(String.fromCharCode(codeUnit)),
+        isFalse,
+        reason: 'mojibake code unit $codeUnit',
+      );
     }
   });
 }
