@@ -22,3 +22,7 @@
 
 ## Bootstrap findings are not fresh blockers
 DOMAIN-A through DOMAIN-E each reported successful read-only bootstrap. Primary evidence gaps in their state files are **EVIDENCE_PENDING**, not automatic P0 development blockers. DOMAIN-C raised a bounded 98-day scope/precedence ambiguity; **requires architecture reconciliation**, not speculative implementation. DOMAIN-D historically reported hosting identity resolved but **current live Gate-B unknown**. DOMAIN-E current Founder read-model/source-prep truth also requires evidence. Pull Request #2 approval remains a **documentation merge gate**, separate from production/source defects.
+
+
+## Founder priority correction — 2026-10-10
+Sacred Archive `NOT_MERGED` and PR reviewer gates are **feature/repository merge status**, not automatic Golden Pilot P0 blockers. Domain-C mission-adaptive V3 vs 98-day target is a bounded **contract alignment issue**, not permission for AI to redesign or silently edit constitution. A real source/data/security defect can block its affected release; documentation or stale historical references alone cannot block unrelated safe implementation.
