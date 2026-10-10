@@ -26,3 +26,7 @@ C1–C4 and P7A reported accepted/closed; P7A reported 60/60 PASS; P7B/P8B on HO
 **LAST_VERIFIED_SHA:** Pending.
 **LAST_VERIFIED_AT:** Pending.
 **EVIDENCE_REFERENCES:** Architecture link above; historical C milestone evidence to locate.
+
+
+## Primary historical milestones
+C1–C4 historically accepted CLOSED; P7A historically accepted CLOSED with 60/60 PASS. P7B and P8B earlier HOLD. C5 Macro final status not established in earlier handoff. Question Factory is bounded by verified syllabus AND actually taught material; PYQ is not syllabus authority. Crucible has seven 14-day phases (98 days) with wrap Day 98 → Day 1, Micro/Macro cycle; Major Test is Test Arena only. Smart Entry Novice/Middle/Pro precedes cycle. No live academic question counter may be inferred from test fixtures. Current implementation and any superseding accepted milestone require evidence.
