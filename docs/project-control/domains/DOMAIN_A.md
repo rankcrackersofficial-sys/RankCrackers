@@ -25,3 +25,9 @@ OFFICIAL ≠ DERIVED. Official extraction never invents levels. Derived nodes mu
 **LAST_VERIFIED_SHA:** Pending current branch check.
 **LAST_VERIFIED_AT:** Pending.
 **EVIDENCE_REFERENCES:** Existing architecture link above; runtime evidence pending.
+
+
+## Primary historical mission/source state
+SSC CGL Golden Pilot mission `ssc_cgl`, registry `rec_ssc_ssc_cgl`, authority `auth_in_ssc`, cycle `ssc_cgl_2026`. Official notice `HQ-C11018/1/2026-C-1` (2026-05-21), SHA256 `54A01DDA220CB8836F19983908E1F3FD14DDBA8286781765A02765728A89E070`. Historical held-review packet `arp_61d75c271b1b7de80c6311ba35d77b9671640c0d` was PENDING_FOUNDER_REVIEW; not proof of accepted binding.
+
+**Canonical syllabus rules:** Official Syllabus Authority (OSA) preserves published hierarchy; Derived Syllabus Decomposition (DSD) adds derived MICRO_TOPIC/ATOMIC_TOPIC only inside nearest official ancestor; MABP versioned mission depth/scope policy; Atomic Stop before pedagogy; PYQ scope exceptions require review. AI candidate is not official authority. Current deployed/implemented coverage remains to verify.
