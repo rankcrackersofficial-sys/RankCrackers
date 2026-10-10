@@ -25,3 +25,10 @@ Handoffs are snapshots only and must identify `CANONICAL_STATE_REFERENCE`, `VALI
 
 ## Repository safety
 Existing G repo only. Reuse existing branches/worktrees where safe. No force push, no unapproved production mutation, no secrets, no duplicate canonical contracts. GitHub records do not replace runtime data stores or official academic authorities.
+
+
+## Required verification before a state update
+A Domain update must identify: permanent DOMAIN_ID, exact canonical document path, actual branch/HEAD, change reason, authority for the decision, evidence link or SHA, old status, new status, and whether the new state is historical, currently verified, or proposed. Proposed memory changes go through review; never write unverified agent output as accepted Founder truth.
+
+## PR #2 governance observation
+The Founder-provided screenshot shows one approving review with write access is required and merging blocked. Keep this gate. It does **not** prove every branch-protection configuration setting.
