@@ -29,12 +29,31 @@ android {
         versionName = flutter.versionName
     }
 
+    // Never store Android release signing credentials or keystore paths in Git.
+    // Debug builds need no release secrets; release builds must fail closed.
+    val releaseKeyAlias = providers.environmentVariable("RC_ANDROID_KEY_ALIAS").orNull
+    val releaseKeyPassword = providers.environmentVariable("RC_ANDROID_KEY_PASSWORD").orNull
+    val releaseStorePath = providers.environmentVariable("RC_ANDROID_STORE_FILE").orNull
+    val releaseStorePassword = providers.environmentVariable("RC_ANDROID_STORE_PASSWORD").orNull
+    val hasReleaseSigning = listOf(
+        releaseKeyAlias, releaseKeyPassword, releaseStorePath, releaseStorePassword
+    ).all { !it.isNullOrBlank() }
+    val isReleaseInvocation = gradle.startParameter.taskNames.any {
+        it.contains("Release", ignoreCase = true)
+    }
+
+    if (isReleaseInvocation && !hasReleaseSigning) {
+        throw GradleException("RC_ANDROID_RELEASE_SIGNING_REQUIRED: configure all RC_ANDROID_* signing variables")
+    }
+
     signingConfigs {
-        create("release") {
-            keyAlias = "rank_crackers"
-            keyPassword = "rankcrackers"
-            storeFile = file("rank_crackers.jks")
-            storePassword = "rankcrackers"
+        if (hasReleaseSigning) {
+            create("release") {
+                keyAlias = releaseKeyAlias!!
+                keyPassword = releaseKeyPassword!!
+                storeFile = file(releaseStorePath!!)
+                storePassword = releaseStorePassword!!
+            }
         }
     }
 
@@ -42,7 +61,8 @@ android {
         release {
             isMinifyEnabled = false
             isShrinkResources = false
-            signingConfig = signingConfigs.getByName("release")
+            // Do not silently sign a release with debug/default credentials.
+            signingConfig = if (hasReleaseSigning) signingConfigs.getByName("release") else null
         }
         debug {
         }
