@@ -1,6 +1,6 @@
 export { queueWorker } from './workers/queueWorker';
 export { storageTrigger } from './workers/storageTrigger';
-export { ingestionTrigger } from './workers/ingestionTrigger';
+// Legacy exam-specific founder_uploads conveyor retired; no trigger export.
 export { aafQueueWorker, aafQueueScheduler } from './workers/aafQueueWorker';
 export { genericB3Worker } from './workers/genericB3Worker';
 export { genericB4Worker } from './workers/genericB4Worker';
