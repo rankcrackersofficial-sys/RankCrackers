@@ -45,4 +45,4 @@ test('binding, storage and domain mismatches fail closed', async()=>{
   await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,sourceUrl:'https://example.com/a.pdf'}}),/DOMAIN_NOT_APPROVED/);
 });
 
-test('verifier refuses manufactured or missing language evidence',async()=>{const source=makeSource();delete source.language;await assert.rejects(()=>verifyOfficialSource({storage:storageFor(PDF),source,preflight:()=>({status:'PASS'})}),/LANGUAGE_EVIDENCE_REQUIRED/);});
+test('verifier refuses manufactured or missing language evidence',async()=>{const withoutLanguage={...source};delete withoutLanguage.language;await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:withoutLanguage,preflight:()=>({status:'PASS'})}),/LANGUAGE_EVIDENCE_REQUIRED/);});
