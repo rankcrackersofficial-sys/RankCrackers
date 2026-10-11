@@ -66,8 +66,9 @@ test('same idempotency request is stable; changed identity or cycle gets a diffe
   assert.throws(() => plan({ missionId: 'ssc_cgl_other' }), /CANONICAL_ID_MISMATCH/);
 });
 
-test('requires distinct official notification and syllabus mode and canonical cycle year', () => {
-  assert.throws(() => plan({ syllabusBindingMode: 'EMBEDDED' }), /REQUIRES_SEPARATE/);
+test('supports governed separate or embedded source binding and canonical cycle year', () => {
+  assert.equal(plan({ syllabusBindingMode: 'EMBEDDED' }).realm.missionSetup.syllabusBindingMode, 'EMBEDDED');
+  assert.throws(() => plan({ syllabusBindingMode: 'PENDING' }), /SOURCE_BINDING_MODE_UNSUPPORTED|BINDING_MODE/);
   assert.throws(() => plan({ year: '2027-28' }), /CYCLE_KEY_INVALID/);
   assert.throws(() => plan({ requestId: 'x' }), /REQUEST_ID_INVALID/);
 
