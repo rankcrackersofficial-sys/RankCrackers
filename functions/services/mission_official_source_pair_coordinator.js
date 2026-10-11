@@ -54,6 +54,15 @@ async function executeOfficialSourcePairCoordinator({ transaction, db, missionId
   if (!realmSnap.exists) throw new Error('PAIR_COORDINATOR_REALM_NOT_FOUND');
   const realm = realmSnap.data() || {};
   if (realm.authorityKey !== plan.pair.authorityKey) throw new Error('PAIR_COORDINATOR_REALM_AUTHORITY_MISMATCH');
+  const gate = realm.visibilityGate || {};
+  const legacy = realm.visibility || {};
+  if (realm.studentVisible === true || realm.catalogVisible === true || realm.userPanelVisible === true
+      || realm.cardVisible === true || realm.catalogDiscoverable === true || realm.visibility === 'PUBLIC'
+      || gate.studentVisible === true || gate.catalogVisible === true || gate.userPanelVisible === true
+      || gate.cardVisible === true || legacy.studentVisible === true || legacy.catalogVisible === true
+      || legacy.userPanelVisible === true || legacy.cardVisible === true) {
+    throw new Error('PAIR_COORDINATOR_STUDENT_VISIBILITY_FORBIDDEN');
+  }
   if (!notificationSnap.exists || !syllabusSnap.exists) throw new Error('PAIR_COORDINATOR_SOURCE_RECORD_MISSING');
   assertStoredSource(notificationSnap.data(), plan.pair.sources.notification, 'notification');
   assertStoredSource(syllabusSnap.data(), plan.pair.sources.syllabus, 'syllabus');
