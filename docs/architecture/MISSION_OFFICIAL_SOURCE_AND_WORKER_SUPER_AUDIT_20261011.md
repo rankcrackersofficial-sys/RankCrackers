@@ -35,7 +35,7 @@ This audit uses repository code and accepted source/authority contracts, includi
 | Answer authority + repository | Accepted contract requires separate question-paper and answer-key evidence, exact appearance matching, latest effective final/revised-final precedence, and explicit unresolved/restricted states. QuestionRepository.save() writes directly to published_questions; QuestionModel lacks the full evidence/appearance/key-version/current-scope chain. | **Governed staging/promotion and required provenance schema remain blockers.** |
 | Student/product projection | Existing PYQ contract keeps PYQ optional and enforces verified syllabus + taught-content gates for scored learning. No automatic projection should be enabled before review and those gates. | **Keep blocked until upstream record authority is implemented.** |
 
-The source-preflight module exports PRODUCTION_SOURCE_CREATE_READY as false, but the repository contains no runtime branch that reads this flag; it is descriptive, not an enforced creation gate. Actual safety currently depends on callers invoking the preflight and on the missing server finalizer doing physical-byte verification.
+The source-preflight module exports PRODUCTION_SOURCE_CREATE_READY as false, but the repository contains no runtime branch that reads this flag; it is descriptive, not an enforced creation gate. The new internal staging boundary performs physical-byte verification, but its authorized production upload/read adapter and invocation are not wired yet.
 
 ## Changes made in this remediation chain
 
@@ -67,7 +67,7 @@ These changes prevent the wrong path from accepting or appearing to process offi
 
 ## Verification state
 
-GitHub readback confirmed the edited files and rules on the remediation branch. Focused checks: source-pair tests 6/6, backend-staging tests 5/5, and mission-shell transaction tests 8/8 passed after the verification follow-up; `node --check` passed for the callable and source services/tests. The staging tests use an in-memory transaction and injected reader/authorization adapter; they do not access production. GitHub reports no workflow runs for the updated head. Full Flutter build, Firestore/Storage emulator rules, and end-to-end worker tests remain outside this slice. **No merge or deployment was performed.**
+GitHub readback confirmed the edited files and rules on the remediation branch. Focused checks: source-pair tests 6/6, backend-staging tests 6/6, and mission-shell transaction tests 8/8 passed after the verification follow-up; `node --check` passed for the callable and source services/tests. The staging tests use an in-memory transaction and injected reader/authorization adapter; they do not access production. GitHub reports no workflow runs for the updated head. Full Flutter build, Firestore/Storage emulator rules, and end-to-end worker tests remain outside this slice. **No merge or deployment was performed.**
 
 ## Decision
 
