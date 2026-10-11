@@ -3,6 +3,7 @@
 const crypto = require('crypto');
 const { resolveCanonicalMissionId } = require('../canonical_mission_registry');
 const { buildCanonicalMissionRealm } = require('./canonical_mission_realm_store');
+const { resolveCanonicalAuthorityKey } = require('./mission_source_preflight');
 const {
   assertJurisdictionLevel,
   assertSyllabusBindingMode,
@@ -28,7 +29,13 @@ function buildMissionShellBootstrapPlan({ payload = {}, actorId, recordedAt }) {
   const examName = requiredString(payload.examName, 'MISSION_BOOTSTRAP_EXAM_NAME_REQUIRED');
   const examCategory = requiredString(payload.examCategory, 'MISSION_BOOTSTRAP_EXAM_CATEGORY_REQUIRED');
   const organization = requiredString(payload.organization, 'MISSION_BOOTSTRAP_ORGANIZATION_REQUIRED');
-  const authorityKey = requiredString(payload.authorityKey, 'MISSION_BOOTSTRAP_AUTHORITY_REQUIRED');
+  const authorityKeyInput = requiredString(payload.authorityKey, 'MISSION_BOOTSTRAP_AUTHORITY_REQUIRED');
+  const authorityKey = resolveCanonicalAuthorityKey(authorityKeyInput);
+  if (!authorityKey) throw new Error('MISSION_BOOTSTRAP_AUTHORITY_UNRESOLVED');
+  const organizationAuthorityKey = resolveCanonicalAuthorityKey(organization);
+  if (!organizationAuthorityKey || organizationAuthorityKey !== authorityKey) {
+    throw new Error('MISSION_BOOTSTRAP_AUTHORITY_ORGANIZATION_MISMATCH');
+  }
   const jurisdictionLevel = assertJurisdictionLevel(payload.jurisdictionLevel);
   const syllabusBindingMode = assertSyllabusBindingMode(payload.syllabusBindingMode);
   if (syllabusBindingMode !== 'SEPARATE') throw new Error('MISSION_BOOTSTRAP_REQUIRES_SEPARATE_OFFICIAL_SOURCES');
@@ -38,7 +45,12 @@ function buildMissionShellBootstrapPlan({ payload = {}, actorId, recordedAt }) {
     targetYear: payload.year,
     cycleDiscriminator: payload.cycleDiscriminator || '',
   });
-  const stateCode = payload.stateCode == null ? null : String(payload.stateCode).trim().toUpperCase();
+  const stateCode = payload.stateCode == null || String(payload.stateCode).trim() === ''
+    ? null : String(payload.stateCode).trim().toUpperCase();
+  if (jurisdictionLevel === 'CENTRAL' && stateCode !== null) throw new Error('MISSION_BOOTSTRAP_STATE_CODE_FORBIDDEN');
+  if (jurisdictionLevel !== 'CENTRAL' && (!stateCode || !/^[A-Z]{2}$/.test(stateCode))) {
+    throw new Error('MISSION_BOOTSTRAP_STATE_CODE_REQUIRED');
+  }
   const identityPayload = {
     examName,
     examCategory,
