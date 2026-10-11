@@ -5,7 +5,7 @@ const { executeAuthorizedForcePipeline } = require('./mission_force_pipeline_run
 const { verifyOfficialSource } = require('./mission_official_source_verifier');
 const { preflightSourceBinding } = require('./mission_source_preflight');
 const { executeOfficialSourcePairCoordinator } = require('./mission_official_source_pair_coordinator');
-const { finalizeOfficialSource } = require('./mission_official_source_finalizer');
+const { computeSha256, finalizeOfficialSource } = require('./mission_official_source_finalizer');
 
 async function authorizeFounderExecutor({ db, transaction, auth }) {
   if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
@@ -46,7 +46,7 @@ async function runTrustedForcePipeline({
 
   const persistedBytes = Buffer.from((await storage.bucket().file(finalized.storagePath).download())[0]);
   if (persistedBytes.length !== finalized.byteLength) throw new Error('FORCE_PIPELINE_FINALIZED_BYTE_LENGTH_MISMATCH');
-  const persistedSha = require('./mission_official_source_finalizer').computeSha256(persistedBytes);
+  const persistedSha = computeSha256(persistedBytes);
   if (persistedSha !== finalized.contentSha256) throw new Error('FORCE_PIPELINE_FINALIZED_SHA_MISMATCH');
   const serverRequest = Object.freeze({
     ...request,
