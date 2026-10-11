@@ -1,5 +1,7 @@
 'use strict';
 
+const { ORIGIN_PROOF_METHOD } = require('./mission_official_origin_provenance');
+
 const PAGE_BATCH_SIZE = 20;
 const MAX_SOURCE_PAGES = 4000;
 const PAIR_ID = /^mission_source_pair_[a-f0-9]{64}$/;
@@ -54,6 +56,12 @@ function assertPagewiseTaskAuthority({ taskId, task, pair, source, realm, parent
       || (source.documentId !== role + '_' + sha && source.documentId !== sha)
       || task.sourceSha256 !== sha || task.expectedSha256 !== sha) {
     throw new Error('PAGEWISE_SHA_AUTHORITY_INVALID');
+  }
+  if (source.originProofState !== 'OFFICIAL_URL_BYTES_MATCHED'
+      || source.originProofMethod !== ORIGIN_PROOF_METHOD
+      || source.originSha256 !== sha || typeof source.sourceUrl !== 'string'
+      || source.originUrl !== source.sourceUrl) {
+    throw new Error('PAGEWISE_SOURCE_ORIGIN_NOT_CORROBORATED');
   }
   const physicalId = source.embeddedFromDocumentId || documentId;
   const canonicalPath = 'mission_realms/' + missionId + '/official_documents/' + physicalId + '/source.pdf';
