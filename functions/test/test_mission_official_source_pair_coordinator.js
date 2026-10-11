@@ -105,7 +105,7 @@ test('coordinator refuses persisted records without independent source URL byte 
     { originSha256: '0'.repeat(64) },
     { originProofMethod: 'CLAIMED_ONLY' },
   ]) {
-    assert.throws(() => assertStoredSource({ ...n, ...changed }, n, 'notification'),
+    assert.throws(() => assertStoredSource({ ...n, ...changed }, { ...n, sha256: n.actualSha256 }, 'notification'),
       /PAIR_COORDINATOR_SOURCE_ORIGIN_ATTESTATION_REQUIRED/);
   }
 });
