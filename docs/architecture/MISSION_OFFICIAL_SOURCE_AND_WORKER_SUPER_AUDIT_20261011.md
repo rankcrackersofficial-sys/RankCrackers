@@ -44,6 +44,7 @@ The source-preflight module exports PRODUCTION_SOURCE_CREATE_READY as false, but
 - Notification and syllabus screens no longer show legacy generic queue panels as if they were the authoritative worker state.
 - Storage rules deny direct client writes under official mission-document paths, matching the Firestore server-only evidence-write boundary.
 - The PYQ-specific and this end-to-end audit are recorded as architecture/audit files, separate from the book.
+- The pure source-pair idempotency digest now includes `authorityKey`, and a regression test proves a changed authority creates a distinct task identity.
 
 These changes prevent the wrong path from accepting or appearing to process official mission sources. They do **not** claim that the intended source pair, B3/B4 or PYQ workers are now implemented.
 
@@ -60,7 +61,7 @@ These changes prevent the wrong path from accepting or appearing to process offi
 
 ## Verification state
 
-GitHub readback confirmed the edited files and rules on the remediation branch. PR #6 currently has no associated check runs; full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
+GitHub readback confirmed the edited files and rules on the remediation branch. The focused source-pair test file was executed directly against the branch readback (6/6 passed), including the authority-key regression. GitHub reports no workflow runs for the updated head; full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
 
 ## Decision
 
