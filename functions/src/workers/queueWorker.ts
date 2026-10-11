@@ -17,6 +17,7 @@ const {
 } = require('./queueExecutionPolicy');
 const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
 const { executeMissionSourcePair } = require('../../services/mission_official_source_pair_consumer');
+const { assertGovernedPagewiseTask } = require('../../services/mission_pagewise_job_authority');
 const { preflightSourceBinding } = require('../../services/mission_source_preflight');
 
 if (admin.apps.length === 0) {
@@ -473,6 +474,25 @@ export const queueWorker = functions.firestore
     // Allow only the verified page-extraction route outside Jest. Do not
     // unquarantine the legacy generic queue as a side effect of this repair.
     if (taskType === 'pagewise_text_extraction_batch') {
+      // Domain-M children must be traceable to the coordinator's persisted,
+      // dispatched pair and VERIFIED mission-scoped official source.
+      const governedSourceJob = data.type === 'OFFICIAL_NOTIFICATION'
+        || data.type === 'OFFICIAL_SYLLABUS'
+        || String(data.parentTaskId || '').startsWith('mission_source_pair_');
+      if (governedSourceJob) {
+        try {
+          await assertGovernedPagewiseTask({ firestore: admin.firestore(), taskId, task: data });
+        } catch (error: any) {
+          console.error('Governed official page task failed authority check:', taskId, error);
+          await taskRef.update({
+            status: 'failed',
+            failure_reason: 'PAGEWISE_GOVERNED_AUTHORITY_REJECTED',
+            error: error.message || 'PAGEWISE_GOVERNED_AUTHORITY_REJECTED',
+            failedAt: admin.firestore.FieldValue.serverTimestamp()
+          });
+          return;
+        }
+      }
       if (shouldBypassQueueForTest(process.env.JEST_WORKER_ID)) {
         console.log("QUEUE: Bypassing page extraction during Jest.");
         return;
