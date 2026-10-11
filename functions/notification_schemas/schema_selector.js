@@ -37,6 +37,7 @@ function selectNotificationSchema(input = {}) {
   const text = corpus(input);
   const documentType = String(input.document_type || '').toLowerCase();
   const isRpsc = hasAny(text, ['rpsc', 'rajasthan public service commission']);
+  const isSscCgl = hasAny(text, ['ssc cgl', 'combined graduate level examination', 'combined graduate level exam', 'cgle']);
   const amendment = hasAny(text, ['amendment', 'correction', 'corrigendum', 'revised']) || hasAny(documentType, ['amendment', 'correction']);
   const resultNotice = hasAny(text, ['result', 'cutoff', 'cut-off', 'answer key', 'answer-key']) || hasAny(documentType, ['result', 'cutoff', 'answer_key', 'answer key']);
 
@@ -45,6 +46,15 @@ function selectNotificationSchema(input = {}) {
   }
   if (hasAny(text, ['neet', 'medical entrance', 'nta medical'])) {
     return buildResult('entrance_exam_single', 'Matched NEET / Medical entrance / NTA Medical keywords.', 0.96);
+  }
+  if (isSscCgl && amendment) {
+    return buildResult('amendment_notice', 'Matched an SSC CGL amendment/corrigendum; preserve its parent-notice lineage.', 0.94);
+  }
+  if (isSscCgl && resultNotice) {
+    return buildResult('result_cutoff_answer_key_notice', 'Matched an SSC CGL result/cutoff/answer-key notice.', 0.94);
+  }
+  if (isSscCgl) {
+    return buildResult('ssc_cgl_recruitment', 'Matched SSC Combined Graduate Level recruitment notice.', 0.98);
   }
   if (isRpsc && amendment) {
     return buildResult('amendment_notice', 'Matched RPSC amendment/correction notice.', 0.94);

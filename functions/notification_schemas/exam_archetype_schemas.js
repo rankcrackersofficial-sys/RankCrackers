@@ -54,6 +54,50 @@ const EXAM_ARCHETYPE_SCHEMAS = {
       section('service_rules', 'Service Rules', [field('service_rules', 'Service Rules', 'structured_text', 'conditional')]),
     ],
   },
+  ssc_cgl_recruitment: {
+    archetype: 'ssc_cgl_recruitment',
+    label: 'SSC Combined Graduate Level Recruitment',
+    use_cases: ['SSC CGL', 'Combined Graduate Level Examination'],
+    sections: [
+      section('recruitment_identity', 'Recruitment Identity', [
+        field('notification_number', 'Notification Number', 'string', 'conditional'),
+        field('notification_release_date', 'Notification Release Date', 'date', 'conditional'),
+        field('recruitment_cycle', 'Recruitment Cycle', 'string', 'conditional'),
+      ]),
+      section('vacancy', 'Vacancy', [
+        field('vacancy_status', 'Vacancy Status', 'enum', 'conditional'),
+        field('total_vacancies', 'Tentative Total Vacancies', 'number', 'conditional'),
+        field('post_wise_vacancies', 'Post-wise Vacancies', 'array', 'conditional'),
+        field('vacancy_breakup_status', 'Post/category Breakup Status', 'string', 'conditional'),
+      ]),
+      section('post_eligibility', 'Post-specific Eligibility', [
+        field('post_wise_age_limits', 'Post-wise Age Limits', 'array', 'conditional'),
+        field('age_reference_date', 'Age Reference Date', 'date', 'conditional'),
+        field('age_relaxation_rules', 'Age Relaxation Rules', 'array', 'conditional'),
+        field('post_wise_educational_qualifications', 'Post-wise Educational Qualifications', 'array', 'conditional'),
+        field('special_eligibility_conditions', 'Special Eligibility Conditions', 'array', 'conditional'),
+        field('physical_medical_requirements', 'Physical / Medical Requirements', 'array', 'conditional'),
+      ]),
+      section('examination_scheme', 'Tier and Paper Scheme', [
+        field('tier_scheme', 'Tier Scheme', 'array', 'conditional'),
+        field('paper_eligibility_gates', 'Post-dependent Paper Eligibility', 'array', 'conditional'),
+        field('sectional_timers', 'Sectional Timers', 'array', 'conditional'),
+        field('negative_marking_rules', 'Negative Marking Rules', 'array', 'conditional'),
+      ]),
+      section('official_syllabus', 'Official Syllabus', [
+        field('tier_i_syllabus', 'Tier-I Syllabus', 'structured_text', 'conditional'),
+        field('tier_ii_paper_i_syllabus', 'Tier-II Paper-I Syllabus', 'structured_text', 'conditional'),
+        field('tier_ii_paper_ii_statistics_syllabus', 'Tier-II Paper-II Statistics Syllabus', 'structured_text', 'conditional'),
+        field('tier_ii_paper_iii_finance_economics_syllabus', 'Tier-II Paper-III Finance and Economics Syllabus', 'structured_text', 'conditional'),
+        field('syllabus_status', 'Syllabus Status / Indicative Label', 'string', 'conditional'),
+      ]),
+      section('application_and_amendments', 'Application and Amendment Lineage', [
+        field('application_windows', 'Application Windows', 'array', 'conditional'),
+        field('correction_windows', 'Correction Windows', 'array', 'conditional'),
+        field('amendment_lineage', 'Amendment Lineage', 'array', 'conditional'),
+      ]),
+    ],
+  },
   amendment_notice: {
     archetype: 'amendment_notice',
     label: 'Amendment / Correction Notice',

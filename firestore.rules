@@ -141,9 +141,14 @@ service cloud.firestore {
       }
 
       match /official_documents/{docId} {
-        allow read, write: if isFounder();
+        // Official-source trust metadata is server-authored after byte/domain verification.
+        // Clients (including Founder clients) may not self-certify or rewrite source evidence.
+        allow read: if isFounder();
+        allow write: if false;
         match /page_extractions/{pageId} {
-          allow read, write: if isFounder();
+          // Page text and page proof are worker-authored; clients cannot forge extraction evidence.
+          allow read: if isFounder();
+          allow write: if false;
         }
         match /cycles/{cycleKey} {
           allow read: if isFounder();

@@ -11,6 +11,11 @@ import { derivePhysicalPageAuthority, assertPersistablePageAuthority } from '../
 const { classifyRouting } = require('../../services/routing_classifier');
 const { extractScannedPage } = require('../../services/scanned_extraction_service');
 const { PDFParse } = require('pdf-parse');
+const {
+  shouldBypassQueueForTest,
+  shouldQuarantineLegacyQueueInProduction,
+} = require('./queueExecutionPolicy');
+const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
@@ -176,18 +181,8 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     }
 
     // 3. 🛡️ P06 BYTE SHA-256 BINDING (ORDERING PROTECTION: Must occur before any parser call or Firestore write)
-    let expectedSha = data.document_id || '';
-    if (expectedSha.startsWith('hash_')) {
-      expectedSha = expectedSha.substring(5);
-    }
-    expectedSha = expectedSha.trim().toLowerCase();
-
-    if (!expectedSha) {
-      throw new Error('RC_SYLLABUS_P06_BLOCKED_EXPECTED_SHA_MISSING: Expected SHA-256 is empty');
-    }
-    if (expectedSha.length !== 64 || !/^[0-9a-f]{64}$/.test(expectedSha)) {
-      throw new Error('RC_SYLLABUS_P06_BLOCKED_EXPECTED_SHA_INVALID: Expected SHA-256 is malformed');
-    }
+    // Document identity and byte digest are separate authority values.
+    const expectedSha = resolveExpectedSourceSha(data);
 
     // Fetch PDF Bytes
     let bytes: Buffer;
@@ -233,7 +228,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
         const ocrResult = await extractScannedPage({
           missionId: data.mission_id,
           documentId: data.document_id,
-          sourceSha256: data.document_id,
+          sourceSha256: actualSha,
           pdfBytes: bytes,
           pageNumber: p
         });
@@ -446,21 +441,25 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
 export const queueWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onCreate(async (snap, context) => {
-    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
-    if (!process.env.JEST_WORKER_ID) {
-      console.log("QUEUE: Bypassing background trigger execution in emulator process.");
-      return;
-    }
     const data = snap.data();
     if (!data) return;
 
     const taskId = context.params.taskId;
     const taskRef = snap.ref;
-
-    // Route pagewise text extraction batch tasks to B1 consumer
     const taskType = data.task_type || data.type;
+
+    // Allow only the verified page-extraction route outside Jest. Do not
+    // unquarantine the legacy generic queue as a side effect of this repair.
     if (taskType === 'pagewise_text_extraction_batch') {
+      if (shouldBypassQueueForTest(process.env.JEST_WORKER_ID)) {
+        console.log("QUEUE: Bypassing page extraction during Jest.");
+        return;
+      }
       await handlePagewiseTextExtraction(taskId, taskRef, data);
+      return;
+    }
+    if (shouldQuarantineLegacyQueueInProduction(taskType, process.env.JEST_WORKER_ID)) {
+      console.log(`QUEUE QUARANTINE: Legacy task ${taskId} remains disabled outside Jest.`);
       return;
     }
 
