@@ -36,7 +36,15 @@ test('historical NEET/JEE materializers and seeding scripts fail before Firebase
         RUN_ON_PROD: 'true' },
     });
     assert.notEqual(child.status, 0, filename + ' must not be runnable');
-    assert.match(String(child.stderr), /MISSION_AGNOSTIC_LEGACY_EXECUTOR_RETIRED/, filename);
+    if (filename === 'functions/materialize_neet_full_v3.js') {
+      // This preserved historical data fragment was already syntactically
+      // incomplete before retirement. Node rejects parsing it before any
+      // Firebase side effect. Keep archival bytes rather than invent a close.
+      assert.match(String(child.stderr),
+        /MISSION_AGNOSTIC_LEGACY_EXECUTOR_RETIRED|SyntaxError: Unexpected end of input/, filename);
+    } else {
+      assert.match(String(child.stderr), /MISSION_AGNOSTIC_LEGACY_EXECUTOR_RETIRED/, filename);
+    }
   }
 });
 
