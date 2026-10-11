@@ -1,3 +1,6 @@
+// Retired legacy exam-specific executable. Data remains archived for audit.
+require('./services/mission_agnostic_policy').rejectLegacyMissionSpecificExecution('materialize_neet_syllabus_final.js');
+
 const admin = require('firebase-admin');
 const { atoms } = require('./materialize_neet_full_v3');
 const PROJECT_ID = 'rankcrackers-55';
