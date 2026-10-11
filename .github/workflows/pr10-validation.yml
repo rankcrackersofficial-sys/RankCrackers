@@ -108,7 +108,7 @@ jobs:
       GCLOUD_PROJECT: demo-rankcrackers-rules
       GOOGLE_CLOUD_PROJECT: demo-rankcrackers-rules
       FIRESTORE_EMULATOR_HOST: 127.0.0.1:8188
-      CLOUDSDK_CONFIG: ${{ runner.temp }}/rankcrackers-no-credentials
+      CLOUDSDK_CONFIG: /tmp/rankcrackers-demo-only-cloudsdk-config
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
