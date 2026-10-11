@@ -192,3 +192,29 @@ test('missing source-pair identity or unsupported mode is rejected before Storag
     assert.equal(environment.documents.size, initialDocuments);
   }
 });
+
+
+test('mission authority, hidden visibility and missing realm reject before Storage finalization', async () => {
+  const bytes = await goldenPdf();
+  const cases = [
+    env => { env.documents.get('mission_realms/ssc_cgl').authorityKey = 'auth_in_rj_rpsc'; },
+    env => { env.documents.get('mission_realms/ssc_cgl').studentVisible = true; },
+    env => { env.documents.get('mission_realms/ssc_cgl').catalogDiscoverable = true; },
+    env => { env.documents.get('mission_realms/ssc_cgl').visibilityGate.catalogVisible = true; },
+    env => { env.documents.get('mission_realms/ssc_cgl').visibility = 'PUBLIC'; },
+    env => { env.documents.delete('mission_realms/ssc_cgl'); },
+  ];
+  for (const change of cases) {
+    const environment = createMemoryEmulators(bytes);
+    change(environment);
+    const objectsBefore = environment.objects.size;
+    const documentsBefore = environment.documents.size;
+    const call = goldenAdapters(environment, { uid: 'founder-local', token: { founder: true } });
+    await assert.rejects(() => runTrustedForcePipeline(call),
+      /FORCE_PIPELINE_(MISSION_AUTHORITY_MISMATCH|STUDENT_VISIBILITY_FORBIDDEN|MISSION_MISSING)/);
+    assert.equal(environment.counters.storageWrites, 0);
+    assert.equal(environment.objects.size, objectsBefore);
+    assert.equal(environment.documents.size, documentsBefore);
+    assert.equal(environment.counters.transactions, 0);
+  }
+});
