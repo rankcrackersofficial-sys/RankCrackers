@@ -32,6 +32,7 @@ jobs:
           npm run test:mission-source-pair-coordinator
           npm run test:mission-source-pair-consumer
           npm run test:mission-physical-page-authority
+          npm run test:mission-pagewise-job-authority
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
           npm run test:ingestion-authority
