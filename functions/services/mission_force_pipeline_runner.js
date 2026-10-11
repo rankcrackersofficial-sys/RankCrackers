@@ -34,13 +34,10 @@ function verifyServerSource(request) {
   const finalized = buildFinalizedOfficialSource({ missionId: request.missionId, cycleKey: request.cycleKey, authorityKey: request.authorityKey, sourceType: request.sourceType, sourceUrl: request.sourceUrl, bytes: request.bytes, recordedAt: request.recordedAt || new Date().toISOString() });
   const actualSha256 = verifySha256Hex(request.bytes);
   if (actualSha256 !== finalized.contentSha256) throw new Error('FORCE_PIPELINE_SERVER_SHA_MISMATCH');
-  const verified = { ...finalized, status: 'VERIFIED', verificationState: 'verified', governanceStatus: 'ACTIVE', verifiedBy: 'mission_source_pair_verifier_v1', actualSha256, contentSha256: actualSha256, boundMissionId: request.missionId, boundCycleKey: request.cycleKey, isOfficial: true, language: 'english' };
-  const report = preflightSourceBinding({ source: { sourceId: verified.documentId, sourceType: verified.sourceType, verificationState: verified.verificationState, governanceStatus: verified.governanceStatus, isOfficial: true, officialDomain: verified.officialDomain, authorityKey: verified.authorityKey, language: verified.language, expectedSha256: verified.contentSha256, actualSha256: verified.actualSha256, boundMissionId: verified.missionId, boundCycleKey: verified.cycleKey }, expectation: { missionId: request.missionId, cycleKey: request.cycleKey, sourceType: request.sourceType, authorityKey: request.authorityKey, expectedSha256: actualSha256 } });
-  if (report.status !== 'PASS') throw new Error(`FORCE_PIPELINE_SOURCE_VERIFICATION_FAILED:${report.failures.map(f => f.code).join(',')}`);
-  return Object.freeze(verified);
+  return Object.freeze({ ...finalized, actualSha256, contentSha256: actualSha256, boundMissionId: request.missionId, boundCycleKey: request.cycleKey, isOfficial: true, language: 'english' });
 }
 
-async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, handoffPair }) {
+async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, verifySource, handoffPair }) {
   const plan = buildRunnerRequest(request);
   const existing = await resolveMission(plan.missionId);
   let mission = existing;
@@ -52,9 +49,12 @@ async function executeAuthorizedForcePipeline({ request, resolveMission, createH
   }
   if (mission.studentVisible === true || mission.cardVisible === true || mission.userPanelVisible === true) throw new Error('FORCE_PIPELINE_STUDENT_VISIBILITY_FORBIDDEN');
   if (mission.authorityKey && mission.authorityKey !== plan.authorityKey) throw new Error('FORCE_PIPELINE_MISSION_AUTHORITY_MISMATCH');
-  const verified = verifyServerSource(plan);
-  const stored = await ingestSource({ mission, source: verified, bytes: plan.bytes, actor: RUNNER_ACTOR });
-  const pairResult = await handoffPair({ mission, notification: plan.sourceType === 'notification' ? stored : null, syllabus: plan.syllabusBindingMode === 'EMBEDDED' ? { ...stored, sourceType: 'syllabus', documentId: `syllabus_${stored.contentSha256}`, storagePath: stored.storagePath.replace(stored.documentId, `syllabus_${stored.contentSha256}`) } : stored, cycleKey: plan.cycleKey, authorityKey: plan.authorityKey, actor: RUNNER_ACTOR });
+  if (typeof verifySource !== 'function') throw new Error('FORCE_PIPELINE_VERIFIER_REQUIRED');
+  const pending = verifyServerSource(plan);
+  const storedPending = await ingestSource({ mission, source: pending, bytes: plan.bytes, actor: RUNNER_ACTOR });
+  const stored = await verifySource({ mission, source: storedPending, actor: RUNNER_ACTOR });
+  if (!stored || stored.status !== 'VERIFIED' || stored.verifiedBy !== 'mission_source_pair_verifier_v1') throw new Error('FORCE_PIPELINE_GOVERNED_VERIFICATION_REQUIRED');
+  const pairResult = await handoffPair({ mission, notification: plan.sourceType === 'notification' ? stored : null, syllabus: plan.syllabusBindingMode === 'EMBEDDED' ? { ...stored, sourceType: 'syllabus', documentId: `syllabus_${stored.contentSha256}`, storagePath: stored.storagePath } : stored, cycleKey: plan.cycleKey, authorityKey: plan.authorityKey, actor: RUNNER_ACTOR });
   return Object.freeze({ missionId: plan.missionId, cycleKey: plan.cycleKey, missionState, sourceState: 'VERIFIED', pairResult, studentVisible: false });
 }
 
