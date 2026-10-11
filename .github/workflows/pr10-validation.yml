@@ -38,6 +38,7 @@ jobs:
           npm run test:mission-scanned-ocr-guard
           npm run test:mission-agnostic-execution
           npm run test:mission-neutral-projection
+          npm run test:android-release-signing-governance
           npm run test:mission-storage-rules-scope
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
@@ -58,3 +59,38 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
       - run: flutter build web -t lib/main_web.dart --release
+
+  # Separate Student/Android acceptance. A green backend cannot mask a
+  # broken Android application or cross-platform source contract.
+  student-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Resolve Flutter dependencies
+        run: flutter pub get
+      - name: Analyze Student entrypoint and routing
+        id: analyze
+        continue-on-error: true
+        run: flutter analyze lib/main.dart lib/core/router lib/core/ai lib/core/firebase
+      - name: Run Student and shared Flutter tests
+        id: tests
+        continue-on-error: true
+        run: flutter test --no-pub
+      - name: Build Student Android debug APK
+        id: android
+        continue-on-error: true
+        run: flutter build apk --debug --no-pub
+      - name: Enforce all Student acceptance results
+        if: always()
+        run: |
+          echo "Student analyze: ${{ steps.analyze.outcome }}"
+          echo "Student Flutter tests: ${{ steps.tests.outcome }}"
+          echo "Student Android build: ${{ steps.android.outcome }}"
+          test "${{ steps.analyze.outcome }}" = "success"
+          test "${{ steps.tests.outcome }}" = "success"
+          test "${{ steps.android.outcome }}" = "success"
