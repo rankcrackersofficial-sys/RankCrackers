@@ -330,6 +330,7 @@ class _MissionCreationCenterState extends State<MissionCreationCenter> {
       if (errorMsg.contains('MISSION_ALREADY_EXISTS')) {
         errorMsg = "IDENTITY CLASH: This mission already exists in the realm.";
       }
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorMsg)));
     } finally {
       if (mounted) setState(() => isLaunching = false);
