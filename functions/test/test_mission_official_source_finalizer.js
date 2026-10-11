@@ -1,7 +1,8 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { computeSha256, buildFinalizedOfficialSource, buildSourcePairTask } = require('../services/mission_official_source_finalizer');
+const { PDFDocument } = require('pdf-lib');
+const { computeSha256, readPdfPageCount, buildFinalizedOfficialSource, buildSourcePairTask } = require('../services/mission_official_source_finalizer');
 
 const PDF = Buffer.from('%PDF-1.7\nRankCrackers official source fixture\n%%EOF');
 const SHA = computeSha256(PDF);
@@ -13,3 +14,5 @@ test('server bytes determine content digest while role identity stays distinct',
 test('non-authority host fails closed',()=> assert.throws(()=>buildFinalizedOfficialSource({...base,sourceType:'notification',sourceUrl:'https://example.com/a.pdf',bytes:PDF}),/DOMAIN_NOT_APPROVED/));
 test('non-pdf bytes fail closed',()=> assert.throws(()=>buildFinalizedOfficialSource({...base,sourceType:'syllabus',sourceUrl:'https://ssc.gov.in/a.pdf',bytes:Buffer.from('html'),mimeType:'application/pdf'}),/PDF_SIGNATURE_INVALID/));
 test('unverified source pair fails closed',()=> assert.throws(()=>buildSourcePairTask({...base,notification:source('notification'),syllabus:source('syllabus'),preflight}),/GOVERNED_VERIFICATION_REQUIRED/));
+
+test('page count is derived from actual PDF bytes',async()=>{const pdf=await PDFDocument.create();pdf.addPage();pdf.addPage();assert.equal(await readPdfPageCount(Buffer.from(await pdf.save())),2);await assert.rejects(()=>readPdfPageCount(Buffer.from('%PDF-invalid')),/PAGE_COUNT_UNREADABLE/);});
