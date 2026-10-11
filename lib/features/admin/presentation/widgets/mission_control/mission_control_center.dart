@@ -187,10 +187,11 @@ class _MissionCandidateTileState extends State<_MissionCandidateTile> {
       ).httpsCallable('handleSentinelAction');
       await callable.call({'action': action, 'recruitmentId': widget.id});
     } catch (e) {
-      if (mounted)
+      if (mounted) {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text("Action Failed: $e")));
+      }
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
@@ -347,7 +348,9 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
                 : null,
             onPressed: () {
               if (reasonController.text.trim().length < 12 ||
-                  (action == 'launch_realm' && cycleKeyController.text.trim().isEmpty)) return;
+                  (action == 'launch_realm' && cycleKeyController.text.trim().isEmpty)) {
+                return;
+              }
               Navigator.pop(dialogContext, true);
             },
             child: Text(
@@ -382,6 +385,7 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
         );
       }
     } catch (e) {
+      if (!mounted) return;
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(SnackBar(content: Text('$label blocked: $e')));
@@ -511,7 +515,7 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 DropdownButtonFormField<String>(
-                  value: selectedType,
+                  initialValue: selectedType,
                   dropdownColor: AppColors.surface,
                   style: const TextStyle(color: Colors.white, fontSize: 12),
                   decoration: const InputDecoration(
@@ -578,6 +582,7 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
                     },
                   });
                 } catch (e) {
+                  if (!mounted) return;
                   ScaffoldMessenger.of(
                     context,
                   ).showSnackBar(SnackBar(content: Text("Post Failed: $e")));
