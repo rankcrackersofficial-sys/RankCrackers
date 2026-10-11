@@ -33,7 +33,7 @@ class _PyqPipelineNotice extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(Icons.lock_clock_outlined, color: Theme.of(context).colorScheme.secondary),
+            Icon(Icons.lock_outline, color: Theme.of(context).colorScheme.secondary),
             const SizedBox(height: 16),
             Text(
               "AUTOMATED OFFICIAL INGESTION NOT YET ENABLED",
