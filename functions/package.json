@@ -32,7 +32,8 @@
     "test:mission-official-origin-provenance": "node --test test/test_mission_official_origin_provenance.js",
     "test:mission-agnostic-execution": "node --test test/test_mission_agnostic_execution.js",
     "test:mission-neutral-projection": "node --test test/test_mission_neutral_projection.js",
-    "test:android-release-signing-governance": "node --test test/test_android_release_signing_governance.js"
+    "test:android-release-signing-governance": "node --test test/test_android_release_signing_governance.js",
+    "test:firestore-rule-dedup-profile-safety": "node --test test/test_firestore_rule_dedup_and_profile_safety.js"
   },
   "engines": {
     "node": "22"
