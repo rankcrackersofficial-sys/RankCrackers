@@ -4,6 +4,7 @@ import * as admin from 'firebase-admin';
 import * as path from 'path';
 import * as fs from 'fs';
 import { generateGemini } from '../providers/geminiProvider';
+import { resolveB4TaskAuthority } from '../syllabus/b4TaskAuthority';
 
 export interface B4Input {
   missionId: string;
@@ -345,8 +346,7 @@ export const genericB4Worker = functions.firestore
       if (!claimed) return;
 
       const payload = task.payload || task;
-      const { missionId, documentId, sourceSha256 } = require('../syllabus/b4TaskAuthority')
-        .resolveB4TaskAuthority(payload);
+      const { missionId, documentId, sourceSha256 } = resolveB4TaskAuthority(payload);
       const runId = payload.run_id || payload.runId;
       const authorizedScope = payload.authorizedScope;
 
