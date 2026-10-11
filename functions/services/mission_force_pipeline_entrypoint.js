@@ -53,18 +53,29 @@ async function runTrustedForcePipeline({
     bytes: persistedBytes,
   });
 
-  return db.runTransaction(async transaction => {
+  // All Firestore reads must precede writes within each transaction. Each
+  // phase below reauthorizes the Founder independently and is retry-safe.
+  const authorizedTransaction = operation => db.runTransaction(async transaction => {
     await authorizeFounderExecutor({ db, transaction, auth });
-    return executeAuthorizedForcePipeline({
-      request: serverRequest,
-      resolveMission: missionId => resolveMission({ transaction, db, missionId }),
-      createHiddenMission: plan => createHiddenMission({ transaction, db, plan, auth, recordedAt }),
-      ingestSource: async args => {
-        if (args.source.missionId !== finalized.missionId || args.source.cycleKey !== finalized.cycleKey
-            || args.source.authorityKey !== finalized.authorityKey || args.source.sourceType !== finalized.sourceType
-            || args.source.contentSha256 !== finalized.contentSha256) {
-          throw new Error('FORCE_PIPELINE_FINALIZER_BINDING_MISMATCH');
-        }
+    return operation(transaction);
+  });
+
+  return executeAuthorizedForcePipeline({
+    request: serverRequest,
+    resolveMission: missionId => authorizedTransaction(transaction =>
+      resolveMission({ transaction, db, missionId })),
+    createHiddenMission: plan => authorizedTransaction(async transaction => {
+      const existing = await resolveMission({ transaction, db, missionId: plan.missionId });
+      if (existing) throw new Error('FORCE_PIPELINE_MISSION_ALREADY_EXISTS_RETRY');
+      return createHiddenMission({ transaction, db, plan, auth, recordedAt });
+    }),
+    ingestSource: async args => {
+      if (args.source.missionId !== finalized.missionId || args.source.cycleKey !== finalized.cycleKey
+          || args.source.authorityKey !== finalized.authorityKey || args.source.sourceType !== finalized.sourceType
+          || args.source.contentSha256 !== finalized.contentSha256) {
+        throw new Error('FORCE_PIPELINE_FINALIZER_BINDING_MISMATCH');
+      }
+      return authorizedTransaction(async transaction => {
         const ref = db.collection('mission_realms').doc(finalized.missionId)
           .collection('official_documents').doc(finalized.documentId);
         const snap = await transaction.get(ref);
@@ -72,7 +83,8 @@ async function runTrustedForcePipeline({
           const old = snap.data() || {};
           if (old.contentSha256 !== finalized.contentSha256 || old.storagePath !== finalized.storagePath
               || old.missionId !== finalized.missionId || old.cycleKey !== finalized.cycleKey
-              || old.authorityKey !== finalized.authorityKey || old.sourceType !== finalized.sourceType) {
+              || old.authorityKey !== finalized.authorityKey || old.sourceType !== finalized.sourceType
+              || !['PENDING_SOURCE_VERIFICATION', 'VERIFIED'].includes(old.status)) {
             throw new Error('FORCE_PIPELINE_SOURCE_RECORD_CONFLICT');
           }
         } else {
@@ -82,15 +94,32 @@ async function runTrustedForcePipeline({
           await ingestSource({ transaction, db, storage, source: finalized, recordedAt });
         }
         return finalized;
-      },
-      verifySource: async ({ source }) => {
-        const verified = await verifyOfficialSource({ storage, source, preflight: preflightSourceBinding });
+      });
+    },
+    verifySource: async ({ source }) => {
+      // Storage reads and byte-hash verification occur outside the transaction.
+      const verified = await verifyOfficialSource({ storage, source, preflight: preflightSourceBinding });
+      return authorizedTransaction(async transaction => {
         const ref = db.collection('mission_realms').doc(verified.missionId)
           .collection('official_documents').doc(verified.documentId);
         const snap = await transaction.get(ref);
         if (!snap.exists) throw new Error('FORCE_PIPELINE_VERIFIED_SOURCE_RECORD_MISSING');
         const current = snap.data() || {};
-        if (current.status !== 'PENDING_SOURCE_VERIFICATION' || current.verifiedBy != null) {
+        if (current.status === 'VERIFIED') {
+          if (current.verifiedBy !== verified.verifiedBy || current.actualSha256 !== verified.actualSha256
+              || current.storagePath !== verified.storagePath || current.sourceType !== verified.sourceType
+              || current.missionId !== verified.missionId || current.cycleKey !== verified.cycleKey
+              || current.authorityKey !== verified.authorityKey
+              || current.verificationState !== 'verified' || current.governanceStatus !== 'ACTIVE') {
+            throw new Error('FORCE_PIPELINE_VERIFIED_SOURCE_STATE_CONFLICT');
+          }
+          return verified;
+        }
+        if (current.status !== 'PENDING_SOURCE_VERIFICATION' || current.verifiedBy != null
+            || current.contentSha256 !== verified.contentSha256
+            || current.storagePath !== verified.storagePath || current.sourceType !== verified.sourceType
+            || current.missionId !== verified.missionId || current.cycleKey !== verified.cycleKey
+            || current.authorityKey !== verified.authorityKey) {
           throw new Error('FORCE_PIPELINE_VERIFIED_SOURCE_STATE_CONFLICT');
         }
         transaction.update(ref, {
@@ -104,37 +133,55 @@ async function runTrustedForcePipeline({
           updatedAt: recordedAt,
         });
         return verified;
-      },
-      materializeEmbeddedRole: async ({ mission, notification }) => {
-        const syllabus = Object.freeze({
-          ...notification,
-          documentId: `syllabus_${notification.contentSha256}`,
-          sourceType: 'syllabus',
-          storagePath: notification.storagePath,
-        });
+      });
+    },
+    materializeEmbeddedRole: async ({ notification }) => {
+      const syllabus = Object.freeze({
+        ...notification,
+        documentId: 'syllabus_' + notification.contentSha256,
+        sourceType: 'syllabus',
+        storagePath: notification.storagePath,
+        embeddedFromDocumentId: notification.documentId,
+      });
+      return authorizedTransaction(async transaction => {
+        const notificationRef = db.collection('mission_realms').doc(notification.missionId)
+          .collection('official_documents').doc(notification.documentId);
         const ref = db.collection('mission_realms').doc(syllabus.missionId)
           .collection('official_documents').doc(syllabus.documentId);
-        const snap = await transaction.get(ref);
-        if (snap.exists) {
-          const old = snap.data() || {};
+        const [notificationSnap, syllabusSnap] = await Promise.all([
+          transaction.get(notificationRef), transaction.get(ref),
+        ]);
+        const persistedNotification = notificationSnap.exists ? notificationSnap.data() || {} : {};
+        if (persistedNotification.status !== 'VERIFIED'
+            || persistedNotification.verifiedBy !== 'mission_source_pair_verifier_v1'
+            || persistedNotification.contentSha256 !== notification.contentSha256
+            || persistedNotification.storagePath !== notification.storagePath
+            || persistedNotification.verificationState !== 'verified'
+            || persistedNotification.governanceStatus !== 'ACTIVE') {
+          throw new Error('FORCE_PIPELINE_EMBEDDED_NOTIFICATION_NOT_VERIFIED');
+        }
+        if (syllabusSnap.exists) {
+          const old = syllabusSnap.data() || {};
           if (old.contentSha256 !== syllabus.contentSha256 || old.storagePath !== syllabus.storagePath
-              || old.sourceType !== 'syllabus' || old.verifiedBy !== syllabus.verifiedBy) {
+              || old.sourceType !== 'syllabus' || old.verifiedBy !== syllabus.verifiedBy
+              || old.embeddedFromDocumentId !== notification.documentId
+              || old.verificationState !== 'verified' || old.governanceStatus !== 'ACTIVE') {
             throw new Error('FORCE_PIPELINE_EMBEDDED_ROLE_CONFLICT');
           }
         } else {
-          transaction.create(ref, { ...syllabus, embeddedFromDocumentId: notification.documentId, createdAt: recordedAt, updatedAt: recordedAt });
+          transaction.create(ref, { ...syllabus, createdAt: recordedAt, updatedAt: recordedAt });
         }
         return syllabus;
-      },
-      handoffPair: async ({ mission, notification, syllabus, cycleKey, authorityKey }) => {
-        if (!notification || !syllabus) throw new Error('FORCE_PIPELINE_SOURCE_PAIR_INCOMPLETE');
-        return executeOfficialSourcePairCoordinator({
-          transaction, db, missionId: mission.missionId || mission.id || request.missionId,
-          cycleKey, authorityKey, notification, syllabus,
-          preflight: preflightSourceBinding, recordedAt,
-        });
-      },
-    });
+      });
+    },
+    handoffPair: async ({ mission, notification, syllabus, cycleKey, authorityKey }) => {
+      if (!notification || !syllabus) throw new Error('FORCE_PIPELINE_SOURCE_PAIR_INCOMPLETE');
+      return authorizedTransaction(transaction => executeOfficialSourcePairCoordinator({
+        transaction, db, missionId: mission.missionId || mission.id || request.missionId,
+        cycleKey, authorityKey, notification, syllabus,
+        preflight: preflightSourceBinding, recordedAt,
+      }));
+    },
   });
 }
 
