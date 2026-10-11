@@ -22,6 +22,7 @@ All exam missions (existing or future) use the same governed, capability-based i
 7. `functions/services/mission_force_pipeline_runner.js`: removes SSC CGL default constant; accepts explicit, validated mission/authority/cycle fields only.
 8. `functions/src/test/fix_jee_hierarchy_data.ts`: retire direct production JEE catalog updates, micro-node deletion and hard-coded paper rewrites; preserve historical evidence in Git history.
 9. Six exam-named NEET/JEE Firestore diagnostic scripts are similarly retired; ongoing diagnostics must use universal read-only query tooling with explicit mission identity, not dedicated per-exam scripts.
+10. `functions/src/workers/projectionAdapterWorker.ts`: remove JEE-specific run and Physics/PAPER_1 defaults; every Student Reader projection must have an explicit source-bound run, subject, and optional paper, with a common fail-closed contract for all missions.
 
 ## Compatibility boundary
 Existing year-suffixed mission IDs and historical official source records may be preserved to avoid identity corruption. Preservation is **not** a separate worker or exam-specific schedule. Do not delete or rename production records as part of this policy.
