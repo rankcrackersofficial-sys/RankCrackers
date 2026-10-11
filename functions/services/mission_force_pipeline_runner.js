@@ -10,14 +10,14 @@ const SSC_CGL = Object.freeze({ missionId: 'ssc_cgl', authorityKey: 'auth_in_ssc
 function required(value, code) { if (typeof value !== 'string' || !value.trim()) throw new Error(code); return value.trim(); }
 
 function buildRunnerRequest(input = {}) {
-  const missionId = required(input.missionId || SSC_CGL.missionId, 'FORCE_PIPELINE_MISSION_REQUIRED');
-  const authorityKey = required(input.authorityKey || SSC_CGL.authorityKey, 'FORCE_PIPELINE_AUTHORITY_REQUIRED');
+  const missionId = required(input.missionId, 'FORCE_PIPELINE_MISSION_REQUIRED');
+  const authorityKey = required(input.authorityKey, 'FORCE_PIPELINE_AUTHORITY_REQUIRED');
   canonicalAuthorityRegistry.getByKey(authorityKey, true);
   const cycleKey = required(input.cycleKey, 'FORCE_PIPELINE_CYCLE_REQUIRED');
   const sourceUrl = required(input.officialSourceUrl, 'FORCE_PIPELINE_SOURCE_URL_REQUIRED');
   if (!Buffer.isBuffer(input.bytes) || input.bytes.length === 0) throw new Error('FORCE_PIPELINE_SERVER_BYTES_REQUIRED');
-  const syllabusBindingMode = input.syllabusBindingMode || SSC_CGL.syllabusBindingMode;
-  if (!['SEPARATE', 'EMBEDDED', 'PENDING'].includes(syllabusBindingMode)) throw new Error('FORCE_PIPELINE_BINDING_MODE_INVALID');
+  const syllabusBindingMode = required(input.syllabusBindingMode, 'FORCE_PIPELINE_BINDING_MODE_REQUIRED');
+  if (!['SEPARATE', 'EMBEDDED'].includes(syllabusBindingMode)) throw new Error('FORCE_PIPELINE_BINDING_MODE_INVALID');
   const sourceLanguage = required(input.sourceLanguage, 'FORCE_PIPELINE_SOURCE_LANGUAGE_REQUIRED').toLowerCase();
   if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_SOURCE_LANGUAGE_UNSUPPORTED');
   return Object.freeze({ missionId, cycleKey, authorityKey, sourceUrl, bytes: input.bytes, sourceLanguage, syllabusBindingMode, sourceType: input.sourceType || 'notification', requestId: required(input.requestId, 'FORCE_PIPELINE_REQUEST_ID_REQUIRED') });
@@ -33,6 +33,11 @@ function verifyServerSource(request) {
 
 async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, verifySource, materializeEmbeddedRole, handoffPair }) {
   const plan = buildRunnerRequest(request);
+  // This single-source pilot creates the syllabus only when officially embedded.
+  // SEPARATE source pairs need an independent two-upload coordinator and must
+  // never be misrepresented as a completed force pipeline.
+  if (plan.syllabusBindingMode !== 'EMBEDDED') throw new Error('FORCE_PIPELINE_SEPARATE_PAIR_NOT_IMPLEMENTED');
+  if (plan.sourceType !== 'notification') throw new Error('FORCE_PIPELINE_EMBEDDED_REQUIRES_NOTIFICATION');
   const existing = await resolveMission(plan.missionId);
   let mission = existing;
   let missionState = 'EXISTING_MISSION_REUSED';
