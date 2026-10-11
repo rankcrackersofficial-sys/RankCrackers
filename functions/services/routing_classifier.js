@@ -1,47 +1,27 @@
+'use strict';
+
 /**
- * Governed Multi-Signal Routing Classifier
- * Responsibility: Classifies a PDF page into NATIVE, SCANNED, AMBIGUOUS, or INVALID
+ * Mission-agnostic PDF page routing.
+ * A page is classified exclusively by structural/text-layer evidence,
+ * never by an exam name, authority, school subject or page offset.
  */
 function classifyRouting(pageNumber, nativeText, totalPages) {
-  if (typeof pageNumber !== 'number' || typeof totalPages !== 'number') {
-    return 'INVALID';
-  }
-  if (pageNumber < 1 || pageNumber > totalPages) {
-    return 'INVALID';
-  }
+  if (!Number.isSafeInteger(pageNumber) || !Number.isSafeInteger(totalPages)
+      || totalPages < 1 || pageNumber < 1 || pageNumber > totalPages) return 'INVALID';
+  if (typeof nativeText !== 'string') return nativeText == null ? 'SCANNED' : 'INVALID';
+  const trimmed = nativeText.trim();
+  if (!trimmed) return 'SCANNED';
 
-  const trimmedText = (nativeText || '').trim();
-  if (!trimmedText) {
-    return 'SCANNED'; // No text layer at all
-  }
-
-  // 1. Clean out the standard template header and footer blocks
-  const cleanedText = trimmedText
-    .replace(/राष्ट्रीय परीक्षा एजेंसी/g, '')
-    .replace(/National Testing Agency/g, '')
-    .replace(/Excellence in Assessment/g, '')
-    .replace(/INFORMATION BULLETIN NEET \(UG\)-2026\s*\d*/gi, '')
-    .replace(/File No\..*$/gim, '')
-    .replace(/--\s*\d+\s*of\s*\d+\s*--/gi, '') // Clean "-- 1 of 1 --"
+  // Only generic page-counter furniture may be ignored. Do not strip
+  // organization names, bulletin titles, paper names or academic content.
+  const content = trimmed
+    .replace(/^\s*(?:--\s*)?(?:page\s*)?\d+\s+(?:of|\/)\s+\d+\s*(?:--)?\s*$/gim, '')
     .replace(/\s+/g, ' ')
     .trim();
-
-  // 2. Extract alphabetical/word characters to verify if there is a genuine text layer
-  const lettersOnly = cleanedText.replace(/[^a-zA-Z\u0900-\u097F]/g, '');
-  const bodyLength = cleanedText.length;
-
-  // 3. Classify based on genuine text presence and length
-  if (lettersOnly.length === 0) {
-    return 'SCANNED'; // Only template artifacts/numbers/punctuation remain
-  }
-
-  if (bodyLength < 100) {
-    return 'AMBIGUOUS'; // Very short text layer (held for verification)
-  }
-
+  const letters = content.match(/\p{L}/gu) || [];
+  if (letters.length === 0) return 'SCANNED';
+  if (content.length < 100) return 'AMBIGUOUS';
   return 'NATIVE';
 }
 
-module.exports = {
-  classifyRouting
-};
+module.exports = { classifyRouting };
