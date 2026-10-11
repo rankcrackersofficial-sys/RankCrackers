@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('crypto');
+const { ORIGIN_PROOF_METHOD } = require('./mission_official_origin_provenance');
 
 const SOURCE_TYPES = Object.freeze(['notification', 'syllabus']);
 const SHA256_HEX = /^[a-f0-9]{64}$/i;
@@ -45,6 +46,13 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
     throw new Error('OFFICIAL_SOURCE_SHA_MISMATCH');
   }
 
+  if (source.originProofState !== 'OFFICIAL_URL_BYTES_MATCHED'
+      || source.originProofMethod !== ORIGIN_PROOF_METHOD
+      || source.originSha256 !== actualSha256
+      || typeof source.sourceUrl !== 'string'
+      || source.originUrl !== source.sourceUrl) {
+    throw new Error('OFFICIAL_SOURCE_ORIGIN_ATTESTATION_REQUIRED');
+  }
   if (!['en', 'eng', 'english'].includes(String(source.language || '').trim().toLowerCase())) {
     throw new Error('OFFICIAL_SOURCE_LANGUAGE_UNSUPPORTED');
   }
