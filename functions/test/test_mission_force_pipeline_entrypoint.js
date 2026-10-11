@@ -27,6 +27,8 @@ test('founder authorization rejects inactive accounts before trusted execution',
 // without Firebase credentials or a production project.
 const { PDFDocument } = require('pdf-lib');
 const { runTrustedForcePipeline } = require('../services/mission_force_pipeline_entrypoint');
+// Standalone Node test process; production never accepts an injected origin fetcher.
+process.env.NODE_ENV = 'test';
 
 function createMemoryEmulators(pdfBytes, userStatus = 'ACTIVE') {
   const documents = new Map([
@@ -117,6 +119,9 @@ function goldenAdapters(environment, auth) {
     storage: environment.storage,
     auth,
     request: goldenRequest(),
+    // Test-only official origin simulator. Production uses independent HTTPS
+    // retrieval; this fixture is NOT real SSC material.
+    officialBytesFetcher: async () => Buffer.from(environment.objects.get('mission_source_staging/ssc-cgl-test.pdf')),
     recordedAt: '2026-10-11T14:00:00.000Z',
     resolveMission: async ({ transaction, db, missionId }) => {
       const snap = await transaction.get(db.collection('mission_realms').doc(missionId));
@@ -139,6 +144,8 @@ test('transaction lifecycle is read-before-write and embedded replay is determin
   assert.equal(notification.status, 'VERIFIED');
   assert.equal(notification.verificationState, 'verified');
   assert.equal(notification.verifiedBy, 'mission_source_pair_verifier_v1');
+  assert.equal(notification.originProofState, 'OFFICIAL_URL_BYTES_MATCHED');
+  assert.equal(notification.originSha256, notification.contentSha256);
   assert.equal(syllabus.status, 'VERIFIED');
   assert.equal(syllabus.embeddedFromDocumentId, notification.documentId);
   assert.equal(syllabus.storagePath, notification.storagePath);
@@ -217,4 +224,17 @@ test('mission authority, hidden visibility and missing realm reject before Stora
     assert.equal(environment.documents.size, documentsBefore);
     assert.equal(environment.counters.transactions, 0);
   }
+});
+
+
+test('unrelated PDF bytes at an approved URL are rejected before Storage writes', async () => {
+  const environment = createMemoryEmulators(await goldenPdf());
+  const different = await PDFDocument.create();
+  different.addPage([600, 600]);
+  const call = goldenAdapters(environment, { uid: 'founder-local', token: { founder: true } });
+  call.officialBytesFetcher = async () => Buffer.from(await different.save());
+  await assert.rejects(() => runTrustedForcePipeline(call), /OFFICIAL_ORIGIN_BYTES_MISMATCH/);
+  assert.equal(environment.counters.storageWrites, 0);
+  assert.equal(environment.counters.transactions, 0);
+  assert.equal([...environment.documents.keys()].filter(x => x.includes('/official_documents/')).length, 0);
 });
