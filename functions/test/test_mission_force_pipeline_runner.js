@@ -19,3 +19,27 @@ test('embedded mode fails closed without logical syllabus materialization',async
 test('runner refuses missing server bytes',async()=>{const {bytes,...withoutBytes}=base;await assert.rejects(()=>executeAuthorizedForcePipeline({request:withoutBytes,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{},ingestSource:async x=>x.source,verifySource:governedVerify,materializeEmbeddedRole:async()=>({}),handoffPair:async()=>({})}),/SERVER_BYTES_REQUIRED/);});
 
 test('runner refuses missing or unsupported language evidence',()=>{const {sourceLanguage,...missing}=base;assert.throws(()=>buildRunnerRequest(missing),/SOURCE_LANGUAGE_REQUIRED/);assert.throws(()=>buildRunnerRequest({...base,sourceLanguage:'unknown'}),/SOURCE_LANGUAGE_UNSUPPORTED/);});
+
+
+test('pilot never defaults a missing mission, authority or source-pair binding', () => {
+  const { missionId, ...missingMission } = base;
+  const { authorityKey, ...missingAuthority } = base;
+  const { syllabusBindingMode, ...missingMode } = base;
+  assert.throws(() => buildRunnerRequest(missingMission), /MISSION_REQUIRED/);
+  assert.throws(() => buildRunnerRequest(missingAuthority), /AUTHORITY_REQUIRED/);
+  assert.throws(() => buildRunnerRequest(missingMode), /BINDING_MODE_REQUIRED/);
+  assert.throws(() => buildRunnerRequest({ ...base, syllabusBindingMode: 'PENDING' }), /BINDING_MODE_INVALID/);
+});
+
+test('one-source pilot rejects unsupported separate upload before resolving or mutating a mission', async () => {
+  let calls = 0;
+  await assert.rejects(() => executeAuthorizedForcePipeline({
+    request: { ...base, syllabusBindingMode: 'SEPARATE' },
+    resolveMission: async () => { calls++; return null; },
+    createHiddenMission: async () => { calls++; },
+    ingestSource: async () => { calls++; },
+    verifySource: async () => { calls++; },
+    handoffPair: async () => { calls++; },
+  }), /SEPARATE_PAIR_NOT_IMPLEMENTED/);
+  assert.equal(calls, 0);
+});
