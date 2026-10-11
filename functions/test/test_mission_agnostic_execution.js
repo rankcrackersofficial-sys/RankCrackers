@@ -55,6 +55,12 @@ test('obsolete founder-upload trigger cannot fabricate NEET atoms or export a Fi
   assert.doesNotMatch(index, /export\s*\{\s*ingestionTrigger\s*\}/);
 });
 
+test('retired JEE hierarchy mutator has no direct Student/catalog or Firestore side effects', () => {
+  const source = fs.readFileSync(path.resolve(ROOT, 'functions/src/test/fix_jee_hierarchy_data.ts'), 'utf8');
+  assert.match(source, /LEGACY_JEE_HIERARCHY_MUTATOR_RETIRED/);
+  assert.doesNotMatch(source, /admin\.firestore\(|batch\.delete|\.update\(|\.commit\(|run\(\)\.catch/);
+});
+
 test('PDF routing uses identical classification rules irrespective of exam or authority', () => {
   const body = 'The official notification details procedures, examination scope, official instructions, evidence and verification requirements. ';
   for (const header of ['National Testing Agency', 'SSC CGL', 'NEET (UG) 2027', 'RPSC First Grade']) {
