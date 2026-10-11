@@ -28,6 +28,7 @@ jobs:
       - name: Domain-M regression
         run: |
           npm run test:mission-source-finalizer
+          npm run test:mission-official-origin-provenance
           npm run test:mission-source-pair
           npm run test:mission-source-pair-coordinator
           npm run test:mission-source-pair-consumer
