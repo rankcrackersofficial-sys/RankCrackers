@@ -182,8 +182,9 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
     }
     final rows = byId.values.toList()
       ..sort((a, b) {
-        if (a.studentVisible != b.studentVisible)
+        if (a.studentVisible != b.studentVisible) {
           return a.studentVisible ? -1 : 1;
+        }
         return a.displayName.toLowerCase().compareTo(
           b.displayName.toLowerCase(),
         );
@@ -214,8 +215,9 @@ class _MissionInventoryRecord {
   MissionPortfolioFilter get kind {
     if (studentVisible) return MissionPortfolioFilter.live;
     if (rawStatus == 'ARCHIVED') return MissionPortfolioFilter.archived;
-    if (rawStatus == 'PASSIVE' || rawStatus == 'HIDDEN')
+    if (rawStatus == 'PASSIVE' || rawStatus == 'HIDDEN') {
       return MissionPortfolioFilter.passive;
+    }
     return MissionPortfolioFilter.draft;
   }
 
@@ -436,10 +438,11 @@ class _MissionPortfolioCard extends StatelessWidget {
         },
       });
     } catch (error) {
-      if (context.mounted)
+      if (context.mounted) {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('$action blocked: $error')));
+      }
     }
   }
 
@@ -485,8 +488,9 @@ class _MissionPortfolioCard extends StatelessWidget {
           FilledButton(
             onPressed: () {
               if (identity.text.trim() == row.id &&
-                  reason.text.trim().length >= 12)
+                  reason.text.trim().length >= 12) {
                 Navigator.pop(dialogContext, true);
+              }
             },
             style: FilledButton.styleFrom(backgroundColor: Colors.redAccent),
             child: const Text('RUN PREFLIGHT AND DELETE'),
@@ -512,17 +516,19 @@ class _MissionPortfolioCard extends StatelessWidget {
               'portfolio-delete-${DateTime.now().microsecondsSinceEpoch}',
         },
       });
-      if (context.mounted)
+      if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('${row.id} deleted after dependency preflight.'),
           ),
         );
+      }
     } catch (error) {
-      if (context.mounted)
+      if (context.mounted) {
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text('Delete blocked: $error')));
+      }
     }
     identity.dispose();
     reason.dispose();
