@@ -39,7 +39,13 @@ function assertBinding(input: PhysicalPageAuthorityInput, sourceSha256: string):
   if (input.expectedDocumentId && input.documentId !== input.expectedDocumentId) {
     throw new Error('PAGE_AUTHORITY_DOCUMENT_MISMATCH');
   }
-  const documentSha = normalizeSha(input.documentId);
+  // Official source documents use role-addressed IDs while EMBEDDED mode
+  // deliberately shares one verified physical PDF across two logical roles.
+  // Normalize ONLY the recognized role prefixes; keep the parent source SHA
+  // independent from the logical document identity.
+  const documentSha = normalizeSha(
+    String(input.documentId).replace(/^(notification_|syllabus_)/, '')
+  );
   if (documentSha !== sourceSha256) throw new Error('PAGE_AUTHORITY_DOCUMENT_SHA_MISMATCH');
 }
 
