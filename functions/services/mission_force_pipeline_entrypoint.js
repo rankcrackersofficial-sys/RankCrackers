@@ -30,6 +30,9 @@ async function runTrustedForcePipeline({
     throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
   }
 
+  const sourceLanguage = typeof request.sourceLanguage === 'string' ? request.sourceLanguage.trim().toLowerCase() : '';
+  if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_ENGLISH_SOURCE_EVIDENCE_REQUIRED');
+
   const finalizedBase = await finalizeOfficialSource({
     storage,
     missionId: request.missionId,
@@ -41,8 +44,6 @@ async function runTrustedForcePipeline({
     mimeType: request.mimeType || 'application/pdf',
     recordedAt,
   });
-  const sourceLanguage = typeof request.sourceLanguage === 'string' ? request.sourceLanguage.trim().toLowerCase() : '';
-  if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_ENGLISH_SOURCE_EVIDENCE_REQUIRED');
   const finalized = Object.freeze({ ...finalizedBase, language: sourceLanguage });
 
   const serverRequest = Object.freeze({
