@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test');
 const assert=require('node:assert/strict');
-const { authorizeFounderExecutor }=require('../services/mission_force_pipeline_entrypoint');
+const { assertRequestAuthority, authorizeFounderExecutor }=require('../services/mission_force_pipeline_entrypoint');
 
 function tx(user){return {get:async()=>({exists:!!user,data:()=>user})};}
 const db={collection:()=>({doc:()=>({})})};
@@ -18,3 +18,5 @@ test('payload authority claims are irrelevant to trusted authorization',async()=
  const ok=await authorizeFounderExecutor({db,transaction:tx({status:'ACTIVE'}),auth:{uid:'founder',token:{founder:true}},request:{internal:true,actorType:'AUTHORIZED_AGENT',permission:'mission.source.ingest'}});
  assert.equal(ok.uid,'founder');
 });
+
+test('staged source path cannot be reached without founder claim',()=>{assert.throws(()=>assertRequestAuthority({uid:'u',token:{founder:false}}),/EXECUTOR_AUTHORITY_MISSING/);assert.equal(assertRequestAuthority({uid:'u',token:{founder:true}}),true);});
