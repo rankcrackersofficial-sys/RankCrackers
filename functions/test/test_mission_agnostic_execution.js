@@ -18,6 +18,12 @@ const legacyExecutors = [
   'tools/academic_factory/generate_neet_slice.js',
   'tools/academic_factory/quarantine_neet_slice.js',
   'tools/academic_factory/seed_jee_state.js',
+  'functions/check_neet_draft.js',
+  'functions/get_neet_docs.js',
+  'functions/get_neet_tasks.js',
+  'functions/read_neet_123.js',
+  'functions/search_neet_atoms.js',
+  'functions/find_3_jee_p15_tasks.js',
 ];
 
 test('historical NEET/JEE materializers and seeding scripts fail before Firebase is loaded', () => {
