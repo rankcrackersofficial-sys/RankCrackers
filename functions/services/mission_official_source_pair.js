@@ -46,6 +46,8 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
     source: {
       sourceId: documentId,
       sourceType,
+      missionId,
+      cycleKey,
       governanceStatus: 'verified',
       verificationState: 'verified',
       isOfficial: true,
