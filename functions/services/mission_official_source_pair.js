@@ -20,6 +20,7 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
   if (!source || typeof source !== 'object') throw new Error('OFFICIAL_SOURCE_MISSING');
   if (!SOURCE_TYPES.includes(sourceType) || source.sourceType !== sourceType) throw new Error('OFFICIAL_SOURCE_TYPE_MISMATCH');
   if (source.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_NOT_VERIFIED');
+  if (source.verifiedBy !== 'mission_source_pair_verifier_v1') throw new Error('OFFICIAL_SOURCE_BACKEND_ATTESTATION_REQUIRED');
   if (source.missionId !== missionId || source.cycleKey !== cycleKey) throw new Error('OFFICIAL_SOURCE_CYCLE_BINDING_MISMATCH');
   if (source.authorityKey !== authorityKey) throw new Error('OFFICIAL_SOURCE_AUTHORITY_MISMATCH');
   if (source.isOfficial !== true) throw new Error('OFFICIAL_SOURCE_DOMAIN_UNPROVEN');
