@@ -608,7 +608,7 @@ export class GenericB3Worker {
   private detectPaper(line: string, input: B3Input): string | null {
     if (!input.authorizedScope.papersEnabled) {
       // A label is structural evidence, not permission to invent a paper scope.
-      return /^paper[\\s_-]+[a-z0-9]+$/i.test(line.trim()) ? 'UNSCOPED_PAPER_LABEL' : null;
+      return /^paper[\s_-]+[a-z0-9]+$/i.test(line.trim()) ? 'UNSCOPED_PAPER_LABEL' : null;
     }
     const normalizedLine = line.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '');
     for (const paperId of Object.keys(input.authorizedScope.paperDefinitions || {})) {
