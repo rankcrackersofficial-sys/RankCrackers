@@ -2,7 +2,7 @@
 const test=require('node:test'); const assert=require('node:assert/strict');
 const {buildPairCoordinatorPlan,assertStoredSource}=require('../services/mission_official_source_pair_coordinator');
 const crypto=require('crypto');
-function s(type,text){const h=crypto.createHash('sha256').update(text).digest('hex');return {documentId:h,sourceType:type,missionId:'ssc_cgl',cycleKey:'2026',authorityKey:'auth_in_ssc',storagePath:`mission_realms/ssc_cgl/official_documents/${h}/source.pdf`,expectedSha256:h,actualSha256:h,status:'VERIFIED',verificationState:'verified',governanceStatus:'ACTIVE',verifiedBy:'mission_source_pair_verifier_v1',isOfficial:true,officialDomain:'ssc.gov.in',language:'english'};}
+function s(type,text){const h=crypto.createHash('sha256').update(text).digest('hex');return {documentId:h,sourceType:type,missionId:'ssc_cgl',cycleKey:'2026',authorityKey:'auth_in_ssc',storagePath:`mission_realms/ssc_cgl/official_documents/${h}/source.pdf`,expectedSha256:h,actualSha256:h,status:'VERIFIED',verificationState:'verified',governanceStatus:'ACTIVE',verifiedBy:'mission_source_pair_verifier_v1',isOfficial:true,officialDomain:'ssc.gov.in',sourceUrl:'https://ssc.gov.in/official.pdf',originUrl:'https://ssc.gov.in/official.pdf',originProofState:'OFFICIAL_URL_BYTES_MATCHED',originProofMethod:'TRUSTED_HTTPS_200_SAME_BYTES_SHA256_NO_REDIRECT',originSha256:h,language:'english'};}
 const n=s('notification','n'), y=s('syllabus','s');
 const preflight=()=>({status:'PASS'});
 test('coordinator plan is deterministic and mission scoped',()=>{const a=buildPairCoordinatorPlan({missionId:'ssc_cgl',cycleKey:'2026',authorityKey:'auth_in_ssc',notification:n,syllabus:y,preflight});const b=buildPairCoordinatorPlan({missionId:'ssc_cgl',cycleKey:'2026',authorityKey:'auth_in_ssc',notification:n,syllabus:y,preflight});assert.equal(a.pair.taskId,b.pair.taskId);assert.match(a.queueRef,/^ai_queue\/mission_source_pair_/);});
@@ -95,5 +95,17 @@ test('coordinator fails closed on revoked, mismatched and partial replay', async
     mutate(h);
     await assert.rejects(() => h.execute(), /PAIR_COORDINATOR_/);
     assert.equal(h.writes, 3, 'Conflicted replay must make zero writes');
+  }
+});
+
+
+test('coordinator refuses persisted records without independent source URL byte proof', () => {
+  for (const changed of [
+    { originProofState: 'PENDING' },
+    { originSha256: '0'.repeat(64) },
+    { originProofMethod: 'CLAIMED_ONLY' },
+  ]) {
+    assert.throws(() => assertStoredSource({ ...n, ...changed }, n, 'notification'),
+      /PAIR_COORDINATOR_SOURCE_ORIGIN_ATTESTATION_REQUIRED/);
   }
 });
