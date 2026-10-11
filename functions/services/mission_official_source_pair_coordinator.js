@@ -73,28 +73,61 @@ async function executeOfficialSourcePairCoordinator({ transaction, db, missionId
     schemaVersion: plan.pair.schemaVersion, sources: plan.pair.sources,
     status: 'READY_FOR_WORKER', createdAt: recordedAt, updatedAt: recordedAt,
   };
+  // An existing pair is authoritative immutable history. A revoked/failed
+  // pair must never be resurrected by a replay of the original upload.
+  if (pairSnap.exists !== queueSnap.exists) {
+    throw new Error('PAIR_COORDINATOR_PARTIAL_REPLAY_CONFLICT');
+  }
   if (pairSnap.exists) {
     const existing = pairSnap.data() || {};
-    if (existing.missionId !== pairRecord.missionId || existing.cycleKey !== pairRecord.cycleKey
+    const existingJob = queueSnap.data() || {};
+    if (existing.taskId !== pairRecord.taskId || existing.contractVersion !== pairRecord.contractVersion
+        || existing.schemaVersion !== pairRecord.schemaVersion
+        || existing.missionId !== pairRecord.missionId || existing.cycleKey !== pairRecord.cycleKey
         || existing.authorityKey !== pairRecord.authorityKey
+        || existing.sources?.notification?.documentId !== pairRecord.sources.notification.documentId
+        || existing.sources?.syllabus?.documentId !== pairRecord.sources.syllabus.documentId
         || existing.sources?.notification?.sha256 !== pairRecord.sources.notification.sha256
-        || existing.sources?.syllabus?.sha256 !== pairRecord.sources.syllabus.sha256) {
+        || existing.sources?.syllabus?.sha256 !== pairRecord.sources.syllabus.sha256
+        || existing.sources?.notification?.storagePath !== pairRecord.sources.notification.storagePath
+        || existing.sources?.syllabus?.storagePath !== pairRecord.sources.syllabus.storagePath) {
       throw new Error('PAIR_COORDINATOR_IDEMPOTENCY_CONFLICT');
     }
-  } else {
-    transaction.create(pairRef, pairRecord);
-  }
-
-  if (!queueSnap.exists) transaction.create(queueRef, { ...plan.pair.job, createdAt: recordedAt });
-  else {
-    const existingJob = queueSnap.data() || {};
-    if (existingJob.type !== plan.pair.job.type || existingJob.payload?.missionId !== plan.pair.missionId
+    if (!['READY_FOR_WORKER', 'DISPATCHED'].includes(existing.status)) {
+      throw new Error('PAIR_COORDINATOR_REPLAY_STATE_FORBIDDEN');
+    }
+    if (existingJob.type !== plan.pair.job.type
+        || existingJob.queueContract !== plan.pair.job.queueContract
+        || existingJob.payload?.missionId !== plan.pair.missionId
+        || existingJob.payload?.cycleKey !== plan.pair.cycleKey
+        || existingJob.payload?.authorityKey !== plan.pair.authorityKey
+        || existingJob.payload?.schemaVersion !== plan.pair.schemaVersion
+        || existingJob.payload?.notificationDocumentId !== plan.pair.sources.notification.documentId
+        || existingJob.payload?.syllabusDocumentId !== plan.pair.sources.syllabus.documentId
         || existingJob.payload?.notificationSha256 !== plan.pair.sources.notification.sha256
-        || existingJob.payload?.syllabusSha256 !== plan.pair.sources.syllabus.sha256) {
+        || existingJob.payload?.syllabusSha256 !== plan.pair.sources.syllabus.sha256
+        || existingJob.payload?.notificationStoragePath !== plan.pair.sources.notification.storagePath
+        || existingJob.payload?.syllabusStoragePath !== plan.pair.sources.syllabus.storagePath) {
       throw new Error('PAIR_COORDINATOR_QUEUE_IDEMPOTENCY_CONFLICT');
     }
+    if (existing.status === 'DISPATCHED' && existingJob.status !== 'DISPATCHED') {
+      throw new Error('PAIR_COORDINATOR_DISPATCH_REPLAY_CONFLICT');
+    }
+    if (existing.status === 'READY_FOR_WORKER' &&
+        !['received', 'DISPATCHED'].includes(existingJob.status)) {
+      throw new Error('PAIR_COORDINATOR_QUEUE_REPLAY_STATE_FORBIDDEN');
+    }
+    // Keep the actual persisted lifecycle state. Do not reset a dispatched
+    // pair's realm to READY_FOR_WORKER or recreate missing/revoked queue jobs.
+    return {
+      success: true, idempotent: true, taskId: plan.pair.taskId,
+      missionId: plan.pair.missionId,
+      state: existing.status === 'DISPATCHED' ? 'OFFICIAL_SOURCE_PAIR_DISPATCHED' : 'OFFICIAL_SOURCE_PAIR_READY',
+    };
   }
 
+  transaction.create(pairRef, pairRecord);
+  transaction.create(queueRef, { ...plan.pair.job, createdAt: recordedAt });
   transaction.update(realmRef, {
     missionSetupStatus: 'OFFICIAL_SOURCE_PAIR_READY',
     'missionSetup.sourcePairStatus': 'READY_FOR_WORKER',
@@ -103,7 +136,10 @@ async function executeOfficialSourcePairCoordinator({ transaction, db, missionId
     'missionSetup.syllabusDocumentId': plan.pair.sources.syllabus.documentId,
     updated_at: recordedAt,
   });
-  return { success: true, idempotent: pairSnap.exists && queueSnap.exists, taskId: plan.pair.taskId, missionId: plan.pair.missionId, state: 'OFFICIAL_SOURCE_PAIR_READY' };
+  return {
+    success: true, idempotent: false, taskId: plan.pair.taskId,
+    missionId: plan.pair.missionId, state: 'OFFICIAL_SOURCE_PAIR_READY',
+  };
 }
 
 module.exports = { assertStoredSource, buildPairCoordinatorPlan, executeOfficialSourcePairCoordinator };
