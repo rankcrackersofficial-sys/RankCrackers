@@ -25,7 +25,8 @@
     "test:mission-force-pipeline-entrypoint": "node --test test/test_mission_force_pipeline_entrypoint.js",
     "test:mission-source-verifier": "node --test test/test_mission_official_source_verifier.js",
     "test:mission-physical-page-authority": "node --test test/test_mission_physical_page_authority.js",
-    "test:mission-pagewise-job-authority": "node --test test/test_mission_pagewise_job_authority.js"
+    "test:mission-pagewise-job-authority": "node --test test/test_mission_pagewise_job_authority.js",
+    "test:mission-storage-rules-scope": "node --test test/test_mission_storage_rules_scope.js"
   },
   "engines": {
     "node": "22"
