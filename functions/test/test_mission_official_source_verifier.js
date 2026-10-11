@@ -17,6 +17,7 @@ const source = {
   storagePath: `mission_realms/ssc_cgl/official_documents/notification_${SHA}/source.pdf`,
   actualSha256: SHA,
   contentSha256: SHA,
+  pageCount: 1,
   language: 'english',
   isOfficial: true,
   status: 'PENDING_SOURCE_VERIFICATION',
