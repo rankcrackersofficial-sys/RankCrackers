@@ -104,3 +104,23 @@ test('B3 missing subjects and unapproved aliases fail closed rather than choosin
   await assert.rejects(() => worker.materializeSyllabusStructure(b3Input('new_exam', ['Mathematics'])),
     /B3_REJECT: unauthorized subject/);
 });
+
+
+test('historical pilot rulebook adapters have no live examination-specific dispatch path', () => {
+  const pilot = require('../services/real_source_adapter');
+  const productionLike = [
+    () => pilot.adapt48CS4PilotToRulebookPackage('NEET-UG-2026-EVIDENCE-BASE'),
+    () => pilot.adapt48CS5PilotToRulebookPackage('jee_main_2026'),
+    () => pilot.buildAllSixPilotPackages(),
+    () => pilot.buildAll48CS5PilotPackages(),
+  ];
+  for (const execute of productionLike) {
+    assert.throws(execute, /MISSION_AGNOSTIC_HARDCODED_PILOT_ADAPTER_RETIRED/);
+  }
+});
+
+test('force pipeline runner never exports a particular examination as fallback identity', () => {
+  const runner = require('../services/mission_force_pipeline_runner');
+  assert.equal(Object.prototype.hasOwnProperty.call(runner, 'SSC_CGL'), false);
+  assert.throws(() => runner.buildRunnerRequest({}), /FORCE_PIPELINE_MISSION_REQUIRED/);
+});
