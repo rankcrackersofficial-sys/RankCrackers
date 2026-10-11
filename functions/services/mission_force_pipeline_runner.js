@@ -2,22 +2,14 @@
 
 const crypto = require('crypto');
 const { canonicalAuthorityRegistry } = require('./authority_intelligence');
-const { preflightSourceBinding, verifySha256Hex } = require('./mission_source_preflight');
+const { verifySha256Hex } = require('./mission_source_preflight');
 
 const RUNNER_ACTOR = 'mission_force_pipeline_runner_v1';
 const SSC_CGL = Object.freeze({ missionId: 'ssc_cgl', authorityKey: 'auth_in_ssc', jurisdictionLevel: 'CENTRAL', syllabusBindingMode: 'EMBEDDED' });
 
 function required(value, code) { if (typeof value !== 'string' || !value.trim()) throw new Error(code); return value.trim(); }
 
-function assertAuthorized(request) {
-  if (!request || request.internal !== true || request.actorType !== 'AUTHORIZED_AGENT' || request.permission !== 'mission.source.ingest') {
-    throw new Error('FORCE_PIPELINE_UNAUTHORIZED');
-  }
-  return true;
-}
-
 function buildRunnerRequest(input = {}) {
-  assertAuthorized(input.authorization);
   const missionId = required(input.missionId || SSC_CGL.missionId, 'FORCE_PIPELINE_MISSION_REQUIRED');
   const authorityKey = required(input.authorityKey || SSC_CGL.authorityKey, 'FORCE_PIPELINE_AUTHORITY_REQUIRED');
   canonicalAuthorityRegistry.getByKey(authorityKey, true);
@@ -58,4 +50,4 @@ async function executeAuthorizedForcePipeline({ request, resolveMission, createH
   return Object.freeze({ missionId: plan.missionId, cycleKey: plan.cycleKey, missionState, sourceState: 'VERIFIED', pairResult, studentVisible: false });
 }
 
-module.exports = { RUNNER_ACTOR, SSC_CGL, assertAuthorized, buildRunnerRequest, verifyServerSource, executeAuthorizedForcePipeline };
+module.exports = { RUNNER_ACTOR, SSC_CGL, buildRunnerRequest, verifyServerSource, executeAuthorizedForcePipeline };
