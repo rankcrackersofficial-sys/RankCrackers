@@ -51,6 +51,16 @@ async function corroborateOfficialOrigin({
     throw new Error('OFFICIAL_ORIGIN_STAGED_BYTES_INVALID');
   }
   if (typeof officialBytesFetcher !== 'function') throw new Error('OFFICIAL_ORIGIN_FETCHER_REQUIRED');
+  // An emulator Golden Slice must be hermetic. Explicit trusted fixture
+  // adapters are allowed in test/demo mode, but the default provider must
+  // never reach a live government website from a demo process.
+  if (officialBytesFetcher === defaultOfficialBytesFetcher) {
+    const projectIds = [process.env.GCLOUD_PROJECT, process.env.GOOGLE_CLOUD_PROJECT];
+    if (process.env.FIRESTORE_EMULATOR_HOST || process.env.FIREBASE_STORAGE_EMULATOR_HOST
+        || projectIds.some(id => typeof id === 'string' && id.startsWith('demo-'))) {
+      throw new Error('OFFICIAL_ORIGIN_EXTERNAL_FETCH_FORBIDDEN_IN_EMULATOR');
+    }
+  }
   let officialBytes;
   try {
     officialBytes = await officialBytesFetcher(validatedUrl);
