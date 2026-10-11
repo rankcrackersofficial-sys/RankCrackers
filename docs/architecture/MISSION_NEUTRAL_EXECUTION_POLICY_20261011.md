@@ -20,6 +20,7 @@ All exam missions (existing or future) use the same governed, capability-based i
 5. `functions/materialize_neet_full*.js`, `functions/materialize_neet_syllabus*.js`, `tools/academic_factory/generate_neet_slice.js`, `quarantine_neet_slice.js`, `seed_jee_state.js`: fail-closed execution guards before Firebase initialization or any writes; historical source remains in Git.
 6. `functions/services/real_source_adapter.js`: hard-coded CS4/CS5 exam-pilot adaptation not authorized as live processing. Available only as explicitly scoped read-only archival fixture in test environment.
 7. `functions/services/mission_force_pipeline_runner.js`: removes SSC CGL default constant; accepts explicit, validated mission/authority/cycle fields only.
+8. `functions/src/test/fix_jee_hierarchy_data.ts`: retire direct production JEE catalog updates, micro-node deletion and hard-coded paper rewrites; preserve historical evidence in Git history.
 
 ## Compatibility boundary
 Existing year-suffixed mission IDs and historical official source records may be preserved to avoid identity corruption. Preservation is **not** a separate worker or exam-specific schedule. Do not delete or rename production records as part of this policy.
