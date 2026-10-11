@@ -42,10 +42,19 @@ async function runTrustedForcePipeline({
     recordedAt,
   });
 
+  const serverRequest = Object.freeze({
+    ...request,
+    bytes: Buffer.from((await storage.bucket().file(finalized.storagePath).download())[0]),
+    expectedSha256: finalized.contentSha256,
+    actualSha256: finalized.contentSha256,
+    contentSha256: finalized.contentSha256,
+  });
+  if (serverRequest.bytes.length !== finalized.byteLength) throw new Error('FORCE_PIPELINE_FINALIZED_BYTE_LENGTH_MISMATCH');
+
   return db.runTransaction(async transaction => {
     await authorizeFounderExecutor({ db, transaction, auth });
     return executeAuthorizedForcePipeline({
-      request,
+      request: serverRequest,
       resolveMission: missionId => resolveMission({ transaction, db, missionId }),
       createHiddenMission: plan => createHiddenMission({ transaction, db, plan, auth, recordedAt }),
       ingestSource: async args => {
