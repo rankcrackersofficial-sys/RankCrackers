@@ -49,6 +49,27 @@ async function runTrustedForcePipeline({
         });
         return verified;
       },
+      materializeEmbeddedRole: async ({ mission, notification }) => {
+        const syllabus = Object.freeze({
+          ...notification,
+          documentId: `syllabus_${notification.contentSha256}`,
+          sourceType: 'syllabus',
+          storagePath: notification.storagePath,
+        });
+        const ref = db.collection('mission_realms').doc(syllabus.missionId)
+          .collection('official_documents').doc(syllabus.documentId);
+        const snap = await transaction.get(ref);
+        if (snap.exists) {
+          const old = snap.data() || {};
+          if (old.contentSha256 !== syllabus.contentSha256 || old.storagePath !== syllabus.storagePath
+              || old.sourceType !== 'syllabus' || old.verifiedBy !== syllabus.verifiedBy) {
+            throw new Error('FORCE_PIPELINE_EMBEDDED_ROLE_CONFLICT');
+          }
+        } else {
+          transaction.create(ref, { ...syllabus, embeddedFromDocumentId: notification.documentId, createdAt: recordedAt, updatedAt: recordedAt });
+        }
+        return syllabus;
+      },
       handoffPair: async ({ mission, notification, syllabus, cycleKey, authorityKey }) => {
         if (!notification || !syllabus) throw new Error('FORCE_PIPELINE_SOURCE_PAIR_INCOMPLETE');
         return executeOfficialSourcePairCoordinator({
