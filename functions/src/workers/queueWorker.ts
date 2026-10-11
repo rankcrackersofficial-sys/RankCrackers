@@ -438,22 +438,25 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
 export const queueWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onCreate(async (snap, context) => {
-    // 🛡️ TEST ISOLATION GATE: bypass only while a Jest worker is running.
-    // Production and ordinary emulator invocations must execute the queue consumer.
-    if (shouldBypassQueueForTest(process.env.JEST_WORKER_ID)) {
-      console.log("QUEUE: Bypassing background trigger execution during Jest.");
-      return;
-    }
     const data = snap.data();
     if (!data) return;
 
     const taskId = context.params.taskId;
     const taskRef = snap.ref;
-
-    // Route pagewise text extraction batch tasks to B1 consumer
     const taskType = data.task_type || data.type;
+
+    // Allow only the verified page-extraction route outside Jest. Do not
+    // unquarantine the legacy generic queue as a side effect of this repair.
     if (taskType === 'pagewise_text_extraction_batch') {
+      if (shouldBypassQueueForTest(process.env.JEST_WORKER_ID)) {
+        console.log("QUEUE: Bypassing page extraction during Jest.");
+        return;
+      }
       await handlePagewiseTextExtraction(taskId, taskRef, data);
+      return;
+    }
+    if (!process.env.JEST_WORKER_ID) {
+      console.log(`QUEUE QUARANTINE: Legacy task ${taskId} remains disabled outside Jest.`);
       return;
     }
 
