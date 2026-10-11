@@ -47,6 +47,7 @@ The source-preflight module exports PRODUCTION_SOURCE_CREATE_READY as false, but
 - The pure source-pair idempotency digest now includes `authorityKey`, and a regression test proves a changed authority creates a distinct task identity.
 - Added `bootstrap_mission_shell`: a Founder-only, idempotent hidden-shell transaction with canonical identity/authority/jurisdiction checks. It rejects existing unrelated or visible realms and never creates a cycle/source record.
 - Added eight bootstrap tests covering visibility, existing-realm conflicts, cycle derivation, active-Founder authorization, no-write rejection, and idempotent replay; exposed them as `npm run test:mission-shell-bootstrap`.
+- Verification follow-up added fail-closed checks for top-level/legacy student and catalog visibility flags, plus exact authority-to-state matching for regional authorities; both have regression coverage.
 
 These changes prevent the wrong path from accepting or appearing to process official mission sources. They do **not** claim that the intended source pair, B3/B4 or PYQ workers are now implemented.
 
@@ -63,7 +64,7 @@ These changes prevent the wrong path from accepting or appearing to process offi
 
 ## Verification state
 
-GitHub readback confirmed the edited files and rules on the remediation branch. Focused checks: source-pair tests 6/6 and mission-shell transaction tests 8/8 passed against branch readback; `node --check` passed for the callable and shell service. GitHub reports no workflow runs for the updated head. Full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
+GitHub readback confirmed the edited files and rules on the remediation branch. Focused checks: source-pair tests 6/6 and mission-shell transaction tests 8/8 passed after the verification follow-up; `node --check` passed for the callable and shell service. GitHub reports no workflow runs for the updated head. Full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
 
 ## Decision
 

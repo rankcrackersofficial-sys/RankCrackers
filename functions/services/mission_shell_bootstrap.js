@@ -56,6 +56,9 @@ function buildMissionShellBootstrapPlan({ payload = {}, actorId, recordedAt }) {
   if (jurisdictionLevel !== 'CENTRAL' && (!stateCode || !/^[A-Z]{2}$/.test(stateCode))) {
     throw new Error('MISSION_BOOTSTRAP_STATE_CODE_REQUIRED');
   }
+  if (jurisdictionLevel !== 'CENTRAL' && authority.stateCode !== stateCode) {
+    throw new Error('MISSION_BOOTSTRAP_AUTHORITY_STATE_MISMATCH');
+  }
   const identityPayload = {
     examName,
     examCategory,
@@ -160,9 +163,14 @@ function assertExistingShellReplay(existingRealm, plan) {
     throw new Error('MISSION_SHELL_ALREADY_EXISTS_REQUIRES_REUSE_REVIEW');
   }
   const visibility = existingRealm.visibilityGate || {};
-  if (existingRealm.userPanelVisible === true || existingRealm.cardVisible === true
-      || existingRealm.catalogDiscoverable === true || visibility.studentVisible === true || visibility.catalogVisible === true
-      || visibility.userPanelVisible === true || visibility.cardVisible === true) {
+  const legacyVisibility = existingRealm.visibility || {};
+  if (existingRealm.studentVisible === true || existingRealm.catalogVisible === true
+      || existingRealm.userPanelVisible === true || existingRealm.cardVisible === true
+      || existingRealm.catalogDiscoverable === true || visibility.studentVisible === true
+      || visibility.catalogVisible === true || visibility.userPanelVisible === true
+      || visibility.cardVisible === true || legacyVisibility.studentVisible === true
+      || legacyVisibility.catalogVisible === true || legacyVisibility.userPanelVisible === true
+      || legacyVisibility.cardVisible === true) {
     throw new Error('MISSION_SHELL_VISIBILITY_CONFLICT');
   }
   return true;

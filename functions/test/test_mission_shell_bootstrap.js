@@ -70,6 +70,26 @@ test('requires distinct official notification and syllabus mode and canonical cy
   assert.throws(() => plan({ syllabusBindingMode: 'EMBEDDED' }), /REQUIRES_SEPARATE/);
   assert.throws(() => plan({ year: '2027-28' }), /CYCLE_KEY_INVALID/);
   assert.throws(() => plan({ requestId: 'x' }), /REQUEST_ID_INVALID/);
+
+  const regional = {
+    ...payload,
+    requestId: 'rpsc-ras-2027-01',
+    examName: 'RPSC RAS – Prelims',
+    organization: 'Rajasthan Public Service Commission',
+    authorityKey: 'auth_in_rj_rpsc',
+    jurisdictionLevel: 'STATE',
+    stateCode: 'RJ',
+  };
+  assert.equal(buildMissionShellBootstrapPlan({
+    payload: regional,
+    actorId: 'founder-1',
+    recordedAt: '2026-10-11T08:00:00.000Z',
+  }).missionId, 'rpsc_ras_prelims');
+  assert.throws(() => buildMissionShellBootstrapPlan({
+    payload: { ...regional, stateCode: 'UP' },
+    actorId: 'founder-1',
+    recordedAt: '2026-10-11T08:00:00.000Z',
+  }), /AUTHORITY_STATE_MISMATCH/);
 });
 
 test('request replay must match exactly', () => {
@@ -82,6 +102,8 @@ test('existing shell can only be reused for the exact hidden bootstrap identity'
   const current = plan();
   assert.equal(assertExistingShellReplay(current.realm, current), true);
   assert.throws(() => assertExistingShellReplay({ ...current.realm, missionSetup: {} }, current), /REUSE_REVIEW/);
+  assert.throws(() => assertExistingShellReplay({ ...current.realm, studentVisible: true }, current), /VISIBILITY_CONFLICT/);
+  assert.throws(() => assertExistingShellReplay({ ...current.realm, catalogVisible: true }, current), /VISIBILITY_CONFLICT/);
   assert.throws(() => assertExistingShellReplay({ ...current.realm, userPanelVisible: true }, current), /VISIBILITY_CONFLICT/);
   assert.throws(() => assertExistingShellReplay({ ...current.realm, catalogDiscoverable: true }, current), /VISIBILITY_CONFLICT/);
 });
@@ -147,4 +169,30 @@ test('existing mission with unrelated or visible authority is never overwritten'
     /REUSE_REVIEW/,
   );
   assert.equal(store.writes.length, 0);
+
+  const visibleStudent = fakeStore({
+    'users/founder-1': { status: 'ACTIVE' },
+    [`mission_realms/${current.missionId}`]: { ...current.realm, studentVisible: true },
+  });
+  await assert.rejects(
+    () => executeMissionShellBootstrap({
+      transaction: visibleStudent.transaction, db: visibleStudent.db, payload,
+      auth: { uid: 'founder-1', token: { founder: true } }, recordedAt: 'now',
+    }),
+    /VISIBILITY_CONFLICT/,
+  );
+  assert.equal(visibleStudent.writes.length, 0);
+
+  const visibleCatalog = fakeStore({
+    'users/founder-1': { status: 'ACTIVE' },
+    [`mission_realms/${current.missionId}`]: { ...current.realm, catalogVisible: true },
+  });
+  await assert.rejects(
+    () => executeMissionShellBootstrap({
+      transaction: visibleCatalog.transaction, db: visibleCatalog.db, payload,
+      auth: { uid: 'founder-1', token: { founder: true } }, recordedAt: 'now',
+    }),
+    /VISIBILITY_CONFLICT/,
+  );
+  assert.equal(visibleCatalog.writes.length, 0);
 });
