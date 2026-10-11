@@ -10,7 +10,7 @@ This audit uses repository code and accepted source/authority contracts, includi
 
 ## Required runtime flow
 
-1. Codex/orchestrator creates a hidden canonical mission shell using a stable request/idempotency key.
+1. A protected Founder-authenticated `bootstrap_mission_shell` action creates a hidden canonical shell using a stable request/idempotency key. Codex service-to-service invocation is not integrated yet; no cycle is created at this step.
 2. Codex acquires and uploads exactly one official notification and one official syllabus for the same permanent exam identity, authority and cycle. A backend finalizer verifies the stored bytes and independently computes hashes before recording immutable evidence.
 3. Notification and syllabus processors consume only those pinned mission-scoped bytes/extractions. They create separate evidence-backed form/syllabus drafts for review; they do not acquire substitute sources or publish.
 4. B1 page extraction, B3 structure and B4 atomic decomposition run from current verified source authority. Stale source versions cannot continue.
@@ -22,7 +22,7 @@ This audit uses repository code and accepted source/authority contracts, includi
 
 | Stage | Current code evidence | Audit status |
 |---|---|---|
-| Canonical mission authority | mission_realms is canonical in the accepted migration contract. handle_sentinel_action imports executeUnifiedMissionCreation; that operation requires existing notification and syllabus source IDs and preflights them before creating the cycle. No separate deployed “create hidden mission shell first” + idempotent bootstrap action was found. | **Missing requested order.** Mission shell → upload pair is not an operational callable flow. |
+| Canonical mission authority | `functions/callable/handle_sentinel_action.js` now exposes Founder-only `bootstrap_mission_shell`, backed by `functions/services/mission_shell_bootstrap.js`. It resolves the permanent mission ID, validates canonical authority/jurisdiction and cycle identity, creates a hidden `PASSIVE` parent, and transactionally records an idempotency request. It does not create a cycle or upload sources. It is not yet invoked by a Codex service identity. The separate `launch_exam_mission` path still requires already-existing extracted source drafts. | **Shell primitive implemented; requested automated order remains incomplete.** |
 | Notification + syllabus upload | MissionAssetForm called UniversalIngestionService.registerSource with recruitmentId AUTO_DETECT; that writes the generic ingestion_refinery route. It is not a canonical mission/cycle pair upload. | **Unsafe legacy route; now disabled for core source types on this branch.** |
 | Official source-pair validator | functions/services/mission_official_source_pair.js checks pair shape, role, mission/cycle/authority, declared SHA consistency, language and preflight, and creates deterministic pair task identity. It has focused unit tests. | **Useful pure contract, not runtime-integrated.** It trusts a backend attestation and supplied digest; a deployed finalizer must read bytes and compute the digest itself. No callable, transaction coordinator or queue adapter calls it. |
 | Firestore/Storage authority | Firestore rules deny client writes to official document records and page extractions. Storage previously allowed Founder-client writes beneath mission_realms/{id}/official_documents/**. | **Mismatch fixed on this branch:** direct client Storage writes to official source bytes now fail closed; trusted backend writes remain possible through Admin SDK. |
@@ -45,12 +45,14 @@ The source-preflight module exports PRODUCTION_SOURCE_CREATE_READY as false, but
 - Storage rules deny direct client writes under official mission-document paths, matching the Firestore server-only evidence-write boundary.
 - The PYQ-specific and this end-to-end audit are recorded as architecture/audit files, separate from the book.
 - The pure source-pair idempotency digest now includes `authorityKey`, and a regression test proves a changed authority creates a distinct task identity.
+- Added `bootstrap_mission_shell`: a Founder-only, idempotent hidden-shell transaction with canonical identity/authority/jurisdiction checks. It rejects existing unrelated or visible realms and never creates a cycle/source record.
+- Added eight bootstrap tests covering visibility, existing-realm conflicts, cycle derivation, active-Founder authorization, no-write rejection, and idempotent replay; exposed them as `npm run test:mission-shell-bootstrap`.
 
 These changes prevent the wrong path from accepting or appearing to process official mission sources. They do **not** claim that the intended source pair, B3/B4 or PYQ workers are now implemented.
 
 ## Launch blockers and implementation order
 
-1. Add a protected, idempotent server mission-shell bootstrap that uses canonical permanent identity and leaves the mission hidden. Define authorized Codex-orchestrator identity; do not trust client actor/source flags.
+1. Integrate the new Founder callable with the authorized Codex-orchestrator service identity. The current callable does not yet authenticate Codex service-to-service requests; do not pass client actor/source flags as proof.
 2. Add scoped source upload/finalization for notification and syllabus. Verify registered official host, mission/cycle/role, file type/size, server-read bytes and computed SHA. Persist immutable object + source record. Reject mismatches and stale replacements.
 3. Call the pair validator from a transactionally idempotent pair coordinator. Enqueue only after both source objects are read back and validated. Worker receives document IDs/hashes/storage paths, never arbitrary external URLs.
 4. Connect official page extraction to the notification schema/form-draft builder and verified syllabus corpus. Persist field/atom page proof and route uncertainty/missing required fields to review.
@@ -61,7 +63,7 @@ These changes prevent the wrong path from accepting or appearing to process offi
 
 ## Verification state
 
-GitHub readback confirmed the edited files and rules on the remediation branch. The focused source-pair test file was executed directly against the branch readback (6/6 passed), including the authority-key regression. GitHub reports no workflow runs for the updated head; full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
+GitHub readback confirmed the edited files and rules on the remediation branch. Focused checks: source-pair tests 6/6 and mission-shell transaction tests 8/8 passed against branch readback; `node --check` passed for the callable and shell service. GitHub reports no workflow runs for the updated head. Full Flutter build, Functions build, Firestore/Storage emulator rules, and end-to-end worker tests have not been executed in this session. **No merge or deployment was performed.**
 
 ## Decision
 
