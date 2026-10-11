@@ -1,6 +1,6 @@
 # Mission + Official Notification + Official Syllabus → AI Worker Processing Contract
 
-**State:** refined implementation contract; runtime code not changed  
+**State:** refined contract plus first code step (pure pair validator and unit tests); not wired into upload/callable/worker runtime, so the end-to-end mechanism is still incomplete  
 **Date:** 2026-10-11  
 **Repository:** `rankcrackersofficial-sys/RankCrackers`  
 **Branch:** `codex/force-mission-docs-ai-worker-20261011`  
@@ -113,6 +113,6 @@ Prefer existing canonical state fields where they meet these semantics. If a new
 
 ## Readiness decision
 
-**Not ready for production until the acceptance gate passes.** Existing code has useful canonical mission and source-proof foundations, but its current generic upload/worker path does not satisfy this contract. Do not enable autonomy or publish while the pair processor is incomplete.
+**Not ready for production until the acceptance gate passes.** A pure pair validator now exists at `functions/services/mission_official_source_pair.js`, with six focused tests at `functions/test/test_mission_official_source_pair.js` and an explicit `npm run test:mission-source-pair` command. It enforces exactly one verified notification and one verified syllabus for the same mission/cycle/authority, checks SHA/content-addressed IDs, requires canonical mission-scoped storage paths and source preflight, and builds a deterministic job payload containing no source URLs. It is not yet called by a deployed callable or worker; existing generic upload/worker paths therefore still do not satisfy this contract. Do not enable autonomy or publish while the pair processor is incomplete.
 
 This implementation branch starts from PR #4's canonical mission head. Keep it isolated from the default safety branch until PR #4 is accepted; do not rebase lifecycle changes onto the old preparation branch and create a competing mission authority.
