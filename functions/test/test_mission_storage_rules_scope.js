@@ -53,3 +53,16 @@ test('emulator ports are distinct for Auth, Storage, Firestore and Functions', (
   });
   assert.equal(new Set(ports).size, ports.length);
 });
+
+
+test('canonical source pairs are Founder-readable and never client-writable', () => {
+  const rules = fs.readFileSync(path.resolve(__dirname, '../../firestore.rules'), 'utf8');
+  const realmStart = rules.indexOf('match /mission_realms/{realmId} {');
+  const pairStart = rules.indexOf('match /source_pairs/{pairId} {', realmStart);
+  assert.ok(realmStart >= 0 && pairStart > realmStart, 'Mission-scoped source-pair rule required');
+  const pairEnd = rules.indexOf('}', pairStart);
+  const scopedRule = rules.slice(pairStart, pairEnd);
+  assert.match(scopedRule, /request\.auth\.token\.founder\s*==\s*true/);
+  assert.match(scopedRule, /allow\s+write:\s*if\s+false\s*;/);
+  assert.doesNotMatch(scopedRule, /allow\s+(create|update|delete)/);
+});
