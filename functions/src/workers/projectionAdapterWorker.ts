@@ -1,6 +1,7 @@
 import * as admin from 'firebase-admin';
 import { FieldValue } from 'firebase-admin/firestore';
 const { classifyWorkerAuthority } = require('../../services/canonical_source_authority');
+const { buildMissionNeutralProjectionNode } = require('../../services/mission_neutral_projection');
 
 export interface CutoverRequest {
   missionId: string;
@@ -47,34 +48,32 @@ export async function projectSyllabusToStudentReader(
     .doc(request.missionId)
     .collection('structured_nodes');
 
-  const batch = db.batch();
-  let count = 0;
-
+  // Validate the entire projection BEFORE staging any Firestore write.
+  // A missing runId, subject or paper must never be filled with JEE defaults.
+  const projections: Array<{ nodeId: string; data: any }> = [];
   for (const doc of projSnap.docs) {
-    const data = doc.data();
-    const nodeId = data.id || doc.id;
-
-    // Project EXACT expected document shape for Student Reader contract
-    const projectedDoc = {
-      id: nodeId,
-      nodeId: nodeId,
-      nodeType: data.nodeType || 'topic',
-      paperId: data.paperId || 'PAPER_1',
-      runId: 'run_jee_full_materialization',
-      subjectId: data.subjectId || 'Physics',
-      parentId: data.parentId || data.parentKey || null,
-      canonicalTitle: data.canonicalTitle || data.title || '',
-      sourceOrder: data.sourceOrder || count,
-      sourceVersionId: request.sourceVersionId,
-      sourceSha256: request.sourceSha256,
-      activationEpoch: request.activationEpoch,
-      updatedAt: FieldValue.serverTimestamp()
-    };
-
-    batch.set(structuredRef.doc(nodeId), projectedDoc, { merge: true });
-    count++;
+    const node = doc.data();
+    const nodeId = node.id || doc.id;
+    try {
+      const projected = buildMissionNeutralProjectionNode({ node, nodeId, request });
+      projections.push({ nodeId, data: projected });
+    } catch (error: any) {
+      return {
+        success: false,
+        projectedNodesCount: 0,
+        status: 'PROJECTION_AUTHORITY_BLOCKED_' + (error?.message || 'UNKNOWN')
+      };
+    }
   }
 
+  const batch = db.batch();
+  for (const projection of projections) {
+    batch.set(structuredRef.doc(projection.nodeId), {
+      ...projection.data,
+      updatedAt: FieldValue.serverTimestamp()
+    }, { merge: true });
+  }
+  const count = projections.length;
   await batch.commit();
 
   return { success: true, projectedNodesCount: count, status: 'STUDENT_READER_CUTOVER_COMPLETE' };
