@@ -17,7 +17,8 @@
     "test:mission-shell-bootstrap": "node test/test_mission_shell_bootstrap.js",
     "test:ssc-cgl-notification-schema": "node --test test/ssc_cgl_notification_schema.test.js",
     "test:ingestion-authority": "node --test test/ingestion_execution_authority.test.js",
-    "test:mission-source-finalizer": "node --test test/test_mission_official_source_finalizer.js"
+    "test:mission-source-finalizer": "node --test test/test_mission_official_source_finalizer.js",
+    "test:mission-source-pair-coordinator": "node --test test/test_mission_official_source_pair_coordinator.js"
   },
   "engines": {
     "node": "22"
@@ -36,7 +37,7 @@
     "pdf-parse": "^2.4.5",
     "qrcode": "^1.5.4",
     "xlsx": "^0.18.5",
-    "@google/genai": "^0.24.1"
+    "@google/genai": "^2.16.0"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.1.0",
