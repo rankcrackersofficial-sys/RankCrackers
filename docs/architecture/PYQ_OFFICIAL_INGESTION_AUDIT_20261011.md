@@ -38,8 +38,9 @@ No official final key means the paper can remain official evidence, but its answ
 
 - Removed the manual uploader and upload queue from the PYQ admin center. It now says automated official ingestion is not yet enabled and states the evidence gates required before publication.
 - Replaced the client worker's hardcoded SSC GD “analysis” with explicit `not_processed` / `rejected` statuses and no academic metadata.
+- Added a tested upstream backend-staged notification/syllabus finalization boundary that computes byte hashes and records canonical provenance. This does not create a PYQ task, acquire PYQs, or make PYQ readiness claims.
 
-These changes stop false PYQ claims and accidental manual course upload; they do **not** implement server-side acquisition.
+These changes stop false PYQ claims and accidental manual course upload; the new upstream boundary still does **not** implement server-side PYQ acquisition.
 
 ## Required implementation before launch
 

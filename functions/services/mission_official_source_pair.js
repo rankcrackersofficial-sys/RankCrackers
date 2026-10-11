@@ -49,7 +49,9 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
       sourceType,
       missionId,
       cycleKey,
-      governanceStatus: 'verified',
+      // The source has been attested by the backend pair verifier, but the
+      // governance gate is a separate explicit ACTIVE requirement.
+      governanceStatus: 'ACTIVE',
       verificationState: 'verified',
       isOfficial: true,
       officialDomain: source.officialDomain,
