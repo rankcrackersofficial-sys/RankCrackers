@@ -97,10 +97,12 @@ class AIWorkerRouter {
   }
 
   static Future<void> _handleGemini(AITaskType task, Map<String, dynamic> payload) async {
-    // Worker logic for Gemini (Only supported API provider)
+    // Never report success for a task that has no implemented provider.
+    // A real backend path must pass explicit task/caller authority checks.
+    throw UnsupportedError('AI_TASK_NOT_IMPLEMENTED: ${task.name}');
   }
 
   static Future<void> _handleLocal(AITaskType task, Map<String, dynamic> payload) async {
-    // Worker logic for Local Processing
+    throw UnsupportedError('AI_TASK_NOT_IMPLEMENTED: ${task.name}');
   }
 }
