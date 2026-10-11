@@ -7,11 +7,6 @@ const { preflightSourceBinding } = require('./mission_source_preflight');
 const { executeOfficialSourcePairCoordinator } = require('./mission_official_source_pair_coordinator');
 const { finalizeOfficialSource } = require('./mission_official_source_finalizer');
 
-function assertRequestAuthority(auth) {
-  if (!auth || !auth.uid || auth.token?.founder !== true) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
-  return true;
-}
-
 async function authorizeFounderExecutor({ db, transaction, auth }) {
   if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
   const userRef = db.collection('users').doc(auth.uid);
@@ -25,10 +20,13 @@ async function runTrustedForcePipeline({
 }) {
   if (!db || typeof db.runTransaction !== 'function') throw new Error('FORCE_PIPELINE_DB_REQUIRED');
   if (!storage || typeof storage.bucket !== 'function') throw new Error('FORCE_PIPELINE_STORAGE_REQUIRED');
-  assertRequestAuthority(auth);
+  if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
   if (!request || typeof request.stagedStoragePath !== 'string' || request.stagedStoragePath.trim() === '') {
     throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
   }
+
+  const userSnap = await db.collection('users').doc(auth.uid).get();
+  assertActiveFounder(auth, userSnap.exists ? userSnap.data() : {});
 
   const sourceLanguage = typeof request.sourceLanguage === 'string' ? request.sourceLanguage.trim().toLowerCase() : '';
   if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_ENGLISH_SOURCE_EVIDENCE_REQUIRED');
@@ -137,4 +135,4 @@ async function runTrustedForcePipeline({
   });
 }
 
-module.exports = { assertRequestAuthority, authorizeFounderExecutor, runTrustedForcePipeline };
+module.exports = { authorizeFounderExecutor, runTrustedForcePipeline };
