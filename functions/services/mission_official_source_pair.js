@@ -19,7 +19,7 @@ function normalizeSha256(value, code) {
 function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourceType, preflight }) {
   if (!source || typeof source !== 'object') throw new Error('OFFICIAL_SOURCE_MISSING');
   if (!SOURCE_TYPES.includes(sourceType) || source.sourceType !== sourceType) throw new Error('OFFICIAL_SOURCE_TYPE_MISMATCH');
-  if (source.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_NOT_VERIFIED');
+  if (source.status !== 'VERIFIED' || source.verificationState !== 'verified' || source.governanceStatus !== 'ACTIVE') throw new Error('OFFICIAL_SOURCE_NOT_VERIFIED');
   if (source.verifiedBy !== 'mission_source_pair_verifier_v1') throw new Error('OFFICIAL_SOURCE_BACKEND_ATTESTATION_REQUIRED');
   if (source.missionId !== missionId) throw new Error('OFFICIAL_SOURCE_MISSION_BINDING_MISMATCH');
   if (source.cycleKey !== cycleKey) throw new Error('OFFICIAL_SOURCE_CYCLE_BINDING_MISMATCH');
@@ -53,8 +53,8 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
       sourceType,
       missionId,
       cycleKey,
-      governanceStatus: 'ACTIVE',
-      verificationState: 'verified',
+      governanceStatus: source.governanceStatus,
+      verificationState: source.verificationState,
       isOfficial: true,
       officialDomain: source.officialDomain,
       language: source.language,
