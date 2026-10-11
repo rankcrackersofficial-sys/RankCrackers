@@ -166,3 +166,29 @@ test('inactive founder is rejected before any official storage or source mutatio
   assert.equal(environment.documents.size, initialDocuments);
   assert.equal(environment.counters.transactions, 0);
 });
+
+
+test('missing source-pair identity or unsupported mode is rejected before Storage mutation', async () => {
+  const bytes = await goldenPdf();
+  const mutations = [
+    request => { delete request.missionId; },
+    request => { delete request.cycleKey; },
+    request => { delete request.authorityKey; },
+    request => { delete request.syllabusBindingMode; },
+    request => { request.syllabusBindingMode = 'SEPARATE'; },
+    request => { request.sourceType = 'syllabus'; },
+  ];
+  for (const mutate of mutations) {
+    const environment = createMemoryEmulators(bytes);
+    const call = goldenAdapters(environment, { uid: 'founder-local', token: { founder: true } });
+    call.request = { ...call.request };
+    mutate(call.request);
+    const initialObjects = environment.objects.size;
+    const initialDocuments = environment.documents.size;
+    await assert.rejects(() => runTrustedForcePipeline(call));
+    assert.equal(environment.counters.storageWrites, 0);
+    assert.equal(environment.counters.transactions, 0);
+    assert.equal(environment.objects.size, initialObjects);
+    assert.equal(environment.documents.size, initialDocuments);
+  }
+});
