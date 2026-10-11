@@ -345,9 +345,8 @@ export const genericB4Worker = functions.firestore
       if (!claimed) return;
 
       const payload = task.payload || task;
-      const missionId = payload.mission_id || payload.missionId;
-      const documentId = payload.document_id || payload.documentId;
-      const sourceSha256 = payload.source_document_id || payload.sourceDocumentId || payload.sourceSha256;
+      const { missionId, documentId, sourceSha256 } = require('../syllabus/b4TaskAuthority')
+        .resolveB4TaskAuthority(payload);
       const runId = payload.run_id || payload.runId;
       const authorizedScope = payload.authorizedScope;
 
