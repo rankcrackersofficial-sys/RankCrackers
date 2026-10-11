@@ -30,7 +30,8 @@
     "test:mission-scanned-page-numbering": "node --test test/test_mission_scanned_page_numbering.js",
     "test:mission-scanned-ocr-guard": "node --test test/test_mission_scanned_ocr_guard.js",
     "test:mission-official-origin-provenance": "node --test test/test_mission_official_origin_provenance.js",
-    "test:mission-agnostic-execution": "node --test test/test_mission_agnostic_execution.js"
+    "test:mission-agnostic-execution": "node --test test/test_mission_agnostic_execution.js",
+    "test:mission-neutral-projection": "node --test test/test_mission_neutral_projection.js"
   },
   "engines": {
     "node": "22"
