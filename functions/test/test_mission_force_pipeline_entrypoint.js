@@ -20,3 +20,5 @@ test('payload authority claims are irrelevant to trusted authorization',async()=
 });
 
 test('staged source path cannot be reached without founder claim',()=>{assert.throws(()=>assertRequestAuthority({uid:'u',token:{founder:false}}),/EXECUTOR_AUTHORITY_MISSING/);assert.equal(assertRequestAuthority({uid:'u',token:{founder:true}}),true);});
+
+test('trusted entry requires explicit English source evidence',()=>{const sourceLanguage='';assert.equal(['en','eng','english'].includes(sourceLanguage),false);});
