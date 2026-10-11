@@ -50,8 +50,8 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
     sourceUrl: normalizedUrl, officialDomain, mimeType, byteLength: bytes.length,
     expectedSha256: sha256, actualSha256: sha256, sha256,
     storagePath, language: 'english', isOfficial: true,
-    status: 'VERIFIED', verifiedBy: 'mission_source_pair_verifier_v1',
-    verificationBasis: 'SERVER_BYTES_SHA256_AND_AUTHORITY_DOMAIN',
+    status: 'PENDING_SOURCE_VERIFICATION', verifiedBy: null,
+    verificationBasis: 'SERVER_BYTES_SHA256_AND_AUTHORITY_DOMAIN_PREFLIGHT_ONLY',
     recordedAt: recordedAt || null,
   });
 }
@@ -74,6 +74,7 @@ async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityK
   return source;
 }
 function buildSourcePairTask({ missionId, cycleKey, authorityKey, notification, syllabus, preflight, schemaVersion = 'mission_source_pair_v1' }) {
+  if (notification?.status !== 'VERIFIED' || syllabus?.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_PAIR_GOVERNED_VERIFICATION_REQUIRED');
   return assertVerifiedOfficialSourcePair({ missionId, cycleKey, authorityKey, sources: [notification, syllabus], preflight, schemaVersion });
 }
 module.exports = { ALLOWED_SOURCE_TYPES, MAX_SOURCE_BYTES, computeSha256, buildFinalizedOfficialSource, finalizeOfficialSource, buildSourcePairTask };
