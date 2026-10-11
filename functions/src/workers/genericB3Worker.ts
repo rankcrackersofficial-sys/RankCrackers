@@ -435,6 +435,9 @@ export class GenericB3Worker {
   }
 
   private validateInputs(input: B3Input) {
+    if (!input?.authorizedScope || typeof input.authorizedScope !== 'object') {
+      throw new Error('B3_REJECT: authorized scope required');
+    }
     if (!input.missionId) throw new Error("B3_REJECT: missing missionId");
     if (!input.documentId) throw new Error("B3_REJECT: missing documentId");
     if (!input.sourceSha256) throw new Error("B3_REJECT: missing sourceSha256");
@@ -669,14 +672,16 @@ export class GenericB3Worker {
   }
 
   private normalizeSubjectId(title: string, input: B3Input): string {
-    const candidate = title.trim().toUpperCase();
-    for (const [alias, canonical] of Object.entries(input.authorizedScope.subjectAliases || {})) {
-      if (alias.trim().toUpperCase() === candidate) return canonical;
-    }
+    const sourceCandidate = title.trim().toUpperCase();
+    const aliasEntry = Object.entries(input.authorizedScope.subjectAliases || {})
+      .find(([alias]) => alias.trim().toUpperCase() === sourceCandidate);
+    const candidate = aliasEntry ? String(aliasEntry[1]).trim().toUpperCase() : sourceCandidate;
     const allowed = [
       ...(input.authorizedScope.allowedSubjects || []),
       ...Object.values(input.authorizedScope.paperDefinitions || {}).flatMap(d => d.allowedSubjects || []),
     ];
+    // A configured alias is not itself source authority; its resolved subject
+    // must still be explicitly approved for this mission's scope.
     const match = allowed.find(s => s.trim().toUpperCase() === candidate);
     if (!match) throw new Error('B3_REJECT: unauthorized subject ' + title);
     return match.trim();
