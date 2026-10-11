@@ -34,6 +34,7 @@ jobs:
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
           npm run test:ingestion-authority
+          npm run test:mission-source-preflight
 
   founder-web:
     runs-on: ubuntu-latest
