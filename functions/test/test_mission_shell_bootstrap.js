@@ -13,7 +13,7 @@ const payload = {
   examName: 'SSC CGL',
   examCategory: 'government',
   organization: 'Staff Selection Commission',
-  authorityKey: 'ssc',
+  authorityKey: 'auth_in_ssc',
   jurisdictionLevel: 'CENTRAL',
   syllabusBindingMode: 'SEPARATE',
   year: '2027',
