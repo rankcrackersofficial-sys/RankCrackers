@@ -76,13 +76,20 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   });
   const existingPair = pairSnap.exists ? pairSnap.data() || {} : {};
   if (existingPair.taskId && existingPair.taskId !== taskId) throw new Error('PAIR_CONSUMER_IDEMPOTENCY_CONFLICT');
-  for (const child of children) {
-    const ref = db.collection('ai_queue').doc(child.id);
-    const snap = await transaction.get(ref);
+  // Firestore forbids reads after the first write in a transaction.
+  // Resolve ALL deterministic child refs and snapshots before creating any job.
+  const childRefs = children.map(child => db.collection('ai_queue').doc(child.id));
+  const childSnaps = await Promise.all(childRefs.map(ref => transaction.get(ref)));
+  for (let index = 0; index < children.length; index++) {
+    const child = children[index];
+    const ref = childRefs[index];
+    const snap = childSnaps[index];
     if (snap.exists) {
       const old = snap.data() || {};
       if (old.parentTaskId !== taskId || old.sourceSha256 !== child.sourceSha256) throw new Error('PAIR_CONSUMER_CHILD_CONFLICT');
-    } else transaction.create(ref, child);
+    } else {
+      transaction.create(ref, child);
+    }
   }
   if (!pairSnap.exists) transaction.create(pairRef, { taskId, status: 'DISPATCHED', missionId, cycleKey: pair.cycleKey, authorityKey: pair.authorityKey, sources: pair.sources, childTaskIds: children.map(c => c.id), createdAt: recordedAt, updatedAt: recordedAt });
   else transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
