@@ -104,7 +104,7 @@ function assertVerifiedOfficialSourcePair({ missionId, cycleKey, authorityKey, s
   });
 
   const pairDigest = crypto.createHash('sha256')
-    .update([missionId, cycleKey, notification.sha256, syllabus.sha256, schemaVersion].join('\n'))
+    .update([missionId, cycleKey, authorityKey, notification.sha256, syllabus.sha256, schemaVersion].join('\n'))
     .digest('hex');
   const taskId = `mission_source_pair_${pairDigest}`;
 
