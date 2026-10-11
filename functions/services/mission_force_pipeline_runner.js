@@ -29,7 +29,7 @@ function verifyServerSource(request) {
   return Object.freeze({ ...finalized, actualSha256, contentSha256: actualSha256, boundMissionId: request.missionId, boundCycleKey: request.cycleKey, isOfficial: true, language: 'english' });
 }
 
-async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, verifySource, handoffPair }) {
+async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, verifySource, materializeEmbeddedRole, handoffPair }) {
   const plan = buildRunnerRequest(request);
   const existing = await resolveMission(plan.missionId);
   let mission = existing;
@@ -46,7 +46,14 @@ async function executeAuthorizedForcePipeline({ request, resolveMission, createH
   const storedPending = await ingestSource({ mission, source: pending, bytes: plan.bytes, actor: RUNNER_ACTOR });
   const stored = await verifySource({ mission, source: storedPending, actor: RUNNER_ACTOR });
   if (!stored || stored.status !== 'VERIFIED' || stored.verifiedBy !== 'mission_source_pair_verifier_v1') throw new Error('FORCE_PIPELINE_GOVERNED_VERIFICATION_REQUIRED');
-  const pairResult = await handoffPair({ mission, notification: plan.sourceType === 'notification' ? stored : null, syllabus: plan.syllabusBindingMode === 'EMBEDDED' ? { ...stored, sourceType: 'syllabus', documentId: `syllabus_${stored.contentSha256}`, storagePath: stored.storagePath } : stored, cycleKey: plan.cycleKey, authorityKey: plan.authorityKey, actor: RUNNER_ACTOR });
+  let notification = plan.sourceType === 'notification' ? stored : null;
+  let syllabus = plan.sourceType === 'syllabus' ? stored : null;
+  if (plan.syllabusBindingMode === 'EMBEDDED') {
+    if (plan.sourceType !== 'notification') throw new Error('FORCE_PIPELINE_EMBEDDED_REQUIRES_NOTIFICATION');
+    if (typeof materializeEmbeddedRole !== 'function') throw new Error('FORCE_PIPELINE_EMBEDDED_ROLE_MATERIALIZER_REQUIRED');
+    syllabus = await materializeEmbeddedRole({ mission, notification: stored, actor: RUNNER_ACTOR });
+  }
+  const pairResult = await handoffPair({ mission, notification, syllabus, cycleKey: plan.cycleKey, authorityKey: plan.authorityKey, actor: RUNNER_ACTOR });
   return Object.freeze({ missionId: plan.missionId, cycleKey: plan.cycleKey, missionState, sourceState: 'VERIFIED', pairResult, studentVisible: false });
 }
 
