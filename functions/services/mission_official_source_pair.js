@@ -34,7 +34,10 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
 
   const expectedSha256 = normalizeSha256(source.expectedSha256, 'OFFICIAL_SOURCE_EXPECTED_SHA_INVALID');
   const actualSha256 = normalizeSha256(source.actualSha256, 'OFFICIAL_SOURCE_ACTUAL_SHA_INVALID');
-  if (expectedSha256 !== actualSha256 || documentId !== actualSha256) {
+  const contentSha256 = normalizeSha256(source.contentSha256 || actualSha256, 'OFFICIAL_SOURCE_CONTENT_SHA_INVALID');
+  const roleAddressedId = `${sourceType}_${actualSha256}`;
+  if (expectedSha256 !== actualSha256 || contentSha256 !== actualSha256
+      || (documentId !== actualSha256 && documentId !== roleAddressedId)) {
     throw new Error('OFFICIAL_SOURCE_SHA_MISMATCH');
   }
 
@@ -72,6 +75,7 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
     authorityKey,
     storagePath,
     sha256: actualSha256,
+    contentSha256,
     officialDomain: requiredString(source.officialDomain, 'OFFICIAL_SOURCE_DOMAIN_REQUIRED'),
     language: String(source.language).trim().toLowerCase(),
   });

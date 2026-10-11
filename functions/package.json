@@ -18,7 +18,9 @@
     "test:ssc-cgl-notification-schema": "node --test test/ssc_cgl_notification_schema.test.js",
     "test:ingestion-authority": "node --test test/ingestion_execution_authority.test.js",
     "test:mission-source-finalizer": "node --test test/test_mission_official_source_finalizer.js",
-    "test:mission-source-pair-coordinator": "node --test test/test_mission_official_source_pair_coordinator.js"
+    "test:mission-source-pair-coordinator": "node --test test/test_mission_official_source_pair_coordinator.js",
+    "test:mission-source-pair-consumer": "node --test test/test_mission_source_pair_consumer.js",
+    "test:mission-source-preflight": "node test_mission_source_preflight.js"
   },
   "engines": {
     "node": "22"

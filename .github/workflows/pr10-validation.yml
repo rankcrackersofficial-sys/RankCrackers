@@ -1,0 +1,49 @@
+name: PR10 validation
+
+on:
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  functions:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: functions
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install Functions dependencies
+        run: npm install --ignore-scripts --no-package-lock
+      - name: Build Functions
+        run: npm run build
+      - name: Domain-M regression
+        run: |
+          npm run test:mission-source-finalizer
+          npm run test:mission-source-pair
+          npm run test:mission-source-pair-coordinator
+          npm run test:mission-source-pair-consumer
+          npm run test:mission-shell-bootstrap
+          npm run test:ssc-cgl-notification-schema
+          npm run test:ingestion-authority
+          npm run test:mission-source-preflight
+
+  founder-web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - run: flutter pub get
+      - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
+      - run: flutter build web -t lib/main_web.dart --release

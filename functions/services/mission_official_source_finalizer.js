@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('crypto');
+const { PDFDocument } = require('pdf-lib');
 const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const { assertVerifiedOfficialSourcePair } = require('./mission_official_source_pair');
 
@@ -35,6 +36,14 @@ function assertPdf(bytes, mimeType) {
   if (bytes.length > MAX_SOURCE_BYTES) throw new Error('OFFICIAL_SOURCE_TOO_LARGE');
   if (bytes.subarray(0, 5).toString('ascii') !== '%PDF-') throw new Error('OFFICIAL_SOURCE_PDF_SIGNATURE_INVALID');
 }
+async function readPdfPageCount(bytes) {
+  let document;
+  try { document = await PDFDocument.load(bytes); } catch (_) { throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_UNREADABLE'); }
+  const pageCount = document.getPageCount();
+  if (!Number.isSafeInteger(pageCount) || pageCount < 1 || pageCount > 4000) throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_OUT_OF_RANGE');
+  return pageCount;
+}
+
 function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType = 'application/pdf', recordedAt }) {
   requiredString(missionId, 'MISSION_ID_REQUIRED');
   requiredString(cycleKey, 'CYCLE_KEY_REQUIRED');
@@ -44,11 +53,14 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
   const officialDomain = assertOfficialUrl(normalizedUrl, authorityKey);
   assertPdf(bytes, mimeType);
   const sha256 = computeSha256(bytes);
-  const storagePath = `mission_realms/${missionId}/official_documents/${sha256}/source.pdf`;
+  // Content identity is deliberately separate from role identity: identical
+  // bytes may legitimately be used for notification and syllabus roles.
+  const documentId = `${sourceType}_${sha256}`;
+  const storagePath = `mission_realms/${missionId}/official_documents/${documentId}/source.pdf`;
   return Object.freeze({
-    documentId: sha256, sourceType, missionId, cycleKey, authorityKey,
+    documentId, sourceType, missionId, cycleKey, authorityKey,
     sourceUrl: normalizedUrl, officialDomain, mimeType, byteLength: bytes.length,
-    expectedSha256: sha256, actualSha256: sha256, sha256,
+    expectedSha256: sha256, actualSha256: sha256, contentSha256: sha256, sha256,
     storagePath, language: 'english', isOfficial: true,
     status: 'PENDING_SOURCE_VERIFICATION', verifiedBy: null,
     verificationBasis: 'SERVER_BYTES_SHA256_AND_AUTHORITY_DOMAIN_PREFLIGHT_ONLY',
@@ -63,10 +75,10 @@ async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityK
   const [metadata] = await file.getMetadata();
   const effectiveMime = mimeType || metadata.contentType || '';
   const [bytes] = await file.download();
-  const source = buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType: effectiveMime, recordedAt });
+  const source = Object.freeze({ ...buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType: effectiveMime, recordedAt }), pageCount: await readPdfPageCount(bytes) });
   const destination = storage.bucket().file(source.storagePath);
   const [exists] = await destination.exists();
-  if (!exists) await destination.save(bytes, { resumable: false, metadata: { contentType: effectiveMime, metadata: { sourceSha256: source.sha256, missionId, cycleKey, authorityKey, sourceType } } });
+  if (!exists) await destination.save(bytes, { resumable: false, metadata: { contentType: effectiveMime, metadata: { sourceSha256: source.sha256, missionId, cycleKey, authorityKey, sourceType, pageCount: String(source.pageCount) } } });
   else {
     const [existing] = await destination.download();
     if (computeSha256(existing) !== source.sha256) throw new Error('OFFICIAL_SOURCE_IMMUTABLE_OBJECT_CONFLICT');
@@ -77,4 +89,4 @@ function buildSourcePairTask({ missionId, cycleKey, authorityKey, notification, 
   if (notification?.status !== 'VERIFIED' || syllabus?.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_PAIR_GOVERNED_VERIFICATION_REQUIRED');
   return assertVerifiedOfficialSourcePair({ missionId, cycleKey, authorityKey, sources: [notification, syllabus], preflight, schemaVersion });
 }
-module.exports = { ALLOWED_SOURCE_TYPES, MAX_SOURCE_BYTES, computeSha256, buildFinalizedOfficialSource, finalizeOfficialSource, buildSourcePairTask };
+module.exports = { ALLOWED_SOURCE_TYPES, MAX_SOURCE_BYTES, computeSha256, readPdfPageCount, buildFinalizedOfficialSource, finalizeOfficialSource, buildSourcePairTask };
