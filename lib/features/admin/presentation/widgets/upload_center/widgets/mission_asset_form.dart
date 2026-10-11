@@ -30,6 +30,8 @@ class _MissionAssetFormState extends State<MissionAssetForm> {
 
   @override
   Widget build(BuildContext context) {
+    if (_requiresMissionSourcePipeline) return _missionSourcePipelineNotice();
+
     // Rules (Constitution v1.0):
     // Zero Manual Classification for core assets.
     // Founder only provides the raw PDF.
@@ -102,6 +104,38 @@ class _MissionAssetFormState extends State<MissionAssetForm> {
     );
   }
 
+  bool get _requiresMissionSourcePipeline =>
+      widget.assetType == 'notification' ||
+      widget.assetType == 'syllabus' ||
+      widget.assetType == 'pyq';
+
+  Widget _missionSourcePipelineNotice() {
+    return DarkCard(
+      padding: const EdgeInsets.all(24),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(Icons.lock_outline, color: AppColors.gold, size: 28),
+          const SizedBox(height: 16),
+          Text(
+            "MISSION-BOUND OFFICIAL SOURCE UPLOAD IS NOT CONNECTED",
+            style: AppTypography.label.copyWith(color: AppColors.gold, fontSize: 12),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            "Notification, syllabus, and PYQ files must enter through the authorized "
+            "mission/cycle source-pair flow with server-verified official domain, "
+            "stored-byte SHA-256, and immutable source identity. This legacy form uses "
+            "AUTO_DETECT and generic ingestion records, so it cannot safely bind or "
+            "process an official mission source. Upload is disabled here until the "
+            "protected server upload/finalization path is connected.",
+            style: AppTypography.label.copyWith(fontSize: 11, color: Colors.white70),
+          ),
+        ],
+      ),
+    );
+  }
+
   String _getInstructionText() {
     switch (widget.assetType) {
       case 'notification': return "AI will extract Recruitment Identity, Vacancy, and Eligibility.";
@@ -129,6 +163,7 @@ class _MissionAssetFormState extends State<MissionAssetForm> {
   }
 
   Future<void> _pickAndUpload() async {
+    if (_requiresMissionSourcePipeline) return;
     if (widget.assetType == 'notice' && selectedNoticeType == 'amendment' && selectedAmendmentFor == null) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('AMENDMENT PARENT REQUIRED')));
       return;
