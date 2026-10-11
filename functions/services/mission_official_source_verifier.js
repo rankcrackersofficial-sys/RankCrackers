@@ -3,6 +3,7 @@
 const { computeSha256 } = require('./mission_official_source_finalizer');
 const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const { preflightSourceBinding } = require('./mission_source_preflight');
+const { corroborateOfficialOrigin, ORIGIN_PROOF_METHOD } = require('./mission_official_origin_provenance');
 
 const VERIFIER_ID = 'mission_source_pair_verifier_v1';
 
@@ -11,7 +12,7 @@ function requiredString(value, code) {
   return value.trim();
 }
 
-async function verifyOfficialSource({ storage, source, preflight = preflightSourceBinding }) {
+async function verifyOfficialSource({ storage, source, preflight = preflightSourceBinding, officialBytesFetcher }) {
   if (!storage || typeof storage.bucket !== 'function') throw new Error('OFFICIAL_SOURCE_VERIFIER_STORAGE_REQUIRED');
   if (!source || typeof source !== 'object') throw new Error('OFFICIAL_SOURCE_VERIFIER_SOURCE_REQUIRED');
   if (source.status !== 'PENDING_SOURCE_VERIFICATION' || source.verifiedBy != null) {
@@ -43,6 +44,22 @@ async function verifyOfficialSource({ storage, source, preflight = preflightSour
     throw new Error('OFFICIAL_SOURCE_PERSISTED_BYTES_MISSING');
   }
   const persistedSha = computeSha256(bytes);
+  // Trust producer and verifier must independently corroborate official
+  // origin bytes. A caller-supplied URL/domain/sha pair is not origin proof.
+  if (source.originProofState !== 'OFFICIAL_URL_BYTES_MATCHED'
+      || source.originProofMethod !== ORIGIN_PROOF_METHOD
+      || source.originSha256 !== persistedSha
+      || source.originUrl !== url.toString()) {
+    throw new Error('OFFICIAL_SOURCE_ORIGIN_ATTESTATION_REQUIRED');
+  }
+  const verifiedOrigin = await corroborateOfficialOrigin({
+    sourceUrl: source.sourceUrl, authorityKey, bytes: Buffer.from(bytes), officialBytesFetcher,
+  });
+  if (verifiedOrigin.originSha256 !== persistedSha
+      || verifiedOrigin.originUrl !== source.originUrl
+      || verifiedOrigin.originProofMethod !== source.originProofMethod) {
+    throw new Error('OFFICIAL_SOURCE_ORIGIN_CORROBORATION_CONFLICT');
+  }
   const expectedValues = [source.expectedSha256, source.actualSha256, source.contentSha256, source.sha256]
     .filter(v => typeof v === 'string' && v.trim() !== '')
     .map(v => v.trim().toLowerCase());
