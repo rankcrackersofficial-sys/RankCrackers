@@ -60,7 +60,7 @@ test('canonical source pairs are Founder-readable and never client-writable', ()
   const realmStart = rules.indexOf('match /mission_realms/{realmId} {');
   const pairStart = rules.indexOf('match /source_pairs/{pairId} {', realmStart);
   assert.ok(realmStart >= 0 && pairStart > realmStart, 'Mission-scoped source-pair rule required');
-  const pairEnd = rules.indexOf('}', pairStart);
+  const pairEnd = rules.indexOf('\n      }', pairStart);
   const scopedRule = rules.slice(pairStart, pairEnd);
   assert.match(scopedRule, /request\.auth\.token\.founder\s*==\s*true/);
   assert.match(scopedRule, /allow\s+write:\s*if\s+false\s*;/);
