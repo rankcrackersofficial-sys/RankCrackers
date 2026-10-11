@@ -3,7 +3,11 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { resolveExpectedSourceSha } = require('../src/syllabus/sourceShaAuthority');
-const { shouldBypassQueueForTest } = require('../src/workers/queueExecutionPolicy');
+const {
+  PAGE_EXTRACTION_TASK,
+  shouldBypassQueueForTest,
+  shouldQuarantineLegacyQueueInProduction,
+} = require('../src/workers/queueExecutionPolicy');
 
 const SHA = 'a'.repeat(64);
 
@@ -11,6 +15,13 @@ test('queue execution is bypassed in Jest and allowed in production/emulator con
   assert.equal(shouldBypassQueueForTest('3'), true);
   assert.equal(shouldBypassQueueForTest(undefined), false);
   assert.equal(shouldBypassQueueForTest(''), false);
+});
+
+test('only the page extraction task is allowed through the production queue boundary', () => {
+  assert.equal(shouldQuarantineLegacyQueueInProduction(PAGE_EXTRACTION_TASK, undefined), false);
+  assert.equal(shouldQuarantineLegacyQueueInProduction('pdfParse', undefined), true);
+  assert.equal(shouldQuarantineLegacyQueueInProduction('mcq', undefined), true);
+  assert.equal(shouldQuarantineLegacyQueueInProduction('pdfParse', '3'), false);
 });
 
 test('source digest comes from explicit sourceSha256, not an unrelated document ID', () => {
