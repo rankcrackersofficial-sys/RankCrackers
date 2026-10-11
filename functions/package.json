@@ -26,7 +26,8 @@
     "test:mission-source-verifier": "node --test test/test_mission_official_source_verifier.js",
     "test:mission-physical-page-authority": "node --test test/test_mission_physical_page_authority.js",
     "test:mission-pagewise-job-authority": "node --test test/test_mission_pagewise_job_authority.js",
-    "test:mission-storage-rules-scope": "node --test test/test_mission_storage_rules_scope.js"
+    "test:mission-storage-rules-scope": "node --test test/test_mission_storage_rules_scope.js",
+    "test:mission-scanned-page-numbering": "node --test test/test_mission_scanned_page_numbering.js"
   },
   "engines": {
     "node": "22"
