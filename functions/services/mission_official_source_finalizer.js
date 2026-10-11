@@ -44,11 +44,14 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
   const officialDomain = assertOfficialUrl(normalizedUrl, authorityKey);
   assertPdf(bytes, mimeType);
   const sha256 = computeSha256(bytes);
-  const storagePath = `mission_realms/${missionId}/official_documents/${sha256}/source.pdf`;
+  // Content identity is deliberately separate from role identity: identical
+  // bytes may legitimately be used for notification and syllabus roles.
+  const documentId = `${sourceType}_${sha256}`;
+  const storagePath = `mission_realms/${missionId}/official_documents/${documentId}/source.pdf`;
   return Object.freeze({
-    documentId: sha256, sourceType, missionId, cycleKey, authorityKey,
+    documentId, sourceType, missionId, cycleKey, authorityKey,
     sourceUrl: normalizedUrl, officialDomain, mimeType, byteLength: bytes.length,
-    expectedSha256: sha256, actualSha256: sha256, sha256,
+    expectedSha256: sha256, actualSha256: sha256, contentSha256: sha256, sha256,
     storagePath, language: 'english', isOfficial: true,
     status: 'PENDING_SOURCE_VERIFICATION', verifiedBy: null,
     verificationBasis: 'SERVER_BYTES_SHA256_AND_AUTHORITY_DOMAIN_PREFLIGHT_ONLY',

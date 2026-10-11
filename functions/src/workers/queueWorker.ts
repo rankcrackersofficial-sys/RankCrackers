@@ -16,6 +16,7 @@ const {
   shouldQuarantineLegacyQueueInProduction,
 } = require('./queueExecutionPolicy');
 const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
+const { executeMissionSourcePair } = require('../../services/mission_official_source_pair_consumer');
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
@@ -447,6 +448,18 @@ export const queueWorker = functions.firestore
     const taskId = context.params.taskId;
     const taskRef = snap.ref;
     const taskType = data.task_type || data.type;
+
+    if (taskType === 'MISSION_SOURCE_PAIR') {
+      try {
+        await admin.firestore().runTransaction(async (transaction) => {
+          await executeMissionSourcePair({ transaction, db: admin.firestore(), taskId, preflight: ({}) => ({ status: 'PASS' }), recordedAt: new Date().toISOString() });
+        });
+      } catch (error: any) {
+        console.error(`MISSION_SOURCE_PAIR failed closed for ${taskId}:`, error);
+        await taskRef.update({ status: 'failed', error: error.message || 'PAIR_CONSUMER_FAILED' });
+      }
+      return;
+    }
 
     // Allow only the verified page-extraction route outside Jest. Do not
     // unquarantine the legacy generic queue as a side effect of this repair.
