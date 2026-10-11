@@ -112,6 +112,16 @@ test('inactive founder and reused request with changed cycle fail before writes'
   );
   assert.equal(inactive.writes.length, 0);
 
+  const unauthorized = fakeStore({ 'users/founder-1': { status: 'ACTIVE' } });
+  await assert.rejects(
+    () => executeMissionShellBootstrap({
+      transaction: unauthorized.transaction, db: unauthorized.db, payload,
+      auth: { uid: 'founder-1', token: { founder: false } }, recordedAt: 'now',
+    }),
+    /PERMISSION_DENIED/,
+  );
+  assert.equal(unauthorized.writes.length, 0);
+
   const store = fakeStore({ 'users/founder-1': { status: 'ACTIVE' } });
   const auth = { uid: 'founder-1', token: { founder: true } };
   const args = { transaction: store.transaction, db: store.db, payload, auth, recordedAt: 'now' };
