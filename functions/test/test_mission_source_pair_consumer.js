@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const { executeMissionSourcePair } = require('../services/mission_official_source_pair_consumer');
 
 const sha = crypto.createHash('sha256').update('%PDF-identical').digest('hex');
-const taskId = `mission_source_pair_${crypto.createHash('sha256').update(['ssc_cgl','2026','auth_in_ssc',sha,sha,'mission_source_pair_v1'].join('\\n')).digest('hex')}`;
+const taskId = `mission_source_pair_${crypto.createHash('sha256').update(['ssc_cgl','2026','auth_in_ssc',sha,sha,'mission_source_pair_v1'].join('\n')).digest('hex')}`;
 function source(type) { return { documentId: `${type}_${sha}`, sourceType:type, missionId:'ssc_cgl', cycleKey:'2026', authorityKey:'auth_in_ssc', status:'VERIFIED', verifiedBy:'mission_source_pair_verifier_v1', isOfficial:true, officialDomain:'ssc.gov.in', language:'english', expectedSha256:sha, actualSha256:sha, contentSha256:sha, storagePath:`mission_realms/ssc_cgl/official_documents/${type}_${sha}/source.pdf` }; }
 class Ref { constructor(store,path){this.store=store;this.path=path;} get(){return Promise.resolve({exists:Object.prototype.hasOwnProperty.call(this.store,this.path),data:()=>this.store[this.path]});} }
 class DB { constructor(store){this.store=store;} collection(c){return {doc:(id)=>{const ref=new Ref(this.store,`${c}/${id}`);ref.collection=(sub)=>({doc:(child)=>new Ref(this.store,`${c}/${id}/${sub}/${child}`)});return ref;},};} }
