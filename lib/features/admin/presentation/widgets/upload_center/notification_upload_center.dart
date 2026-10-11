@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../shared/center_header.dart';
 import 'widgets/mission_asset_form.dart';
-import 'upload_queue_panel.dart';
 
 class NotificationUploadCenter extends StatelessWidget {
   const NotificationUploadCenter({super.key});
@@ -13,12 +12,10 @@ class NotificationUploadCenter extends StatelessWidget {
       children: const [
         CenterHeader(
           title: "NOTIFICATION COMMAND",
-          subtitle: "Ingest official notices to trigger machine extraction.",
+          subtitle: "Official notification ingestion is locked to the mission source-pair workflow.",
         ),
         SizedBox(height: 24),
         MissionAssetForm(assetType: 'notification'),
-        SizedBox(height: 32),
-        UploadQueuePanel(assetType: 'recruitment_notification'),
       ],
     );
   }

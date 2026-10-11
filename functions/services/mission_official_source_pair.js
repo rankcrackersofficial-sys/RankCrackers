@@ -49,7 +49,9 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
       sourceType,
       missionId,
       cycleKey,
-      governanceStatus: 'verified',
+      // The source has been attested by the backend pair verifier, but the
+      // governance gate is a separate explicit ACTIVE requirement.
+      governanceStatus: 'ACTIVE',
       verificationState: 'verified',
       isOfficial: true,
       officialDomain: source.officialDomain,
@@ -104,7 +106,7 @@ function assertVerifiedOfficialSourcePair({ missionId, cycleKey, authorityKey, s
   });
 
   const pairDigest = crypto.createHash('sha256')
-    .update([missionId, cycleKey, notification.sha256, syllabus.sha256, schemaVersion].join('\n'))
+    .update([missionId, cycleKey, authorityKey, notification.sha256, syllabus.sha256, schemaVersion].join('\n'))
     .digest('hex');
   const taskId = `mission_source_pair_${pairDigest}`;
 

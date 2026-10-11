@@ -66,6 +66,21 @@ test('same pair produces same idempotency key; new source hash produces a new ke
   assert.equal(pair().taskId, pair().taskId);
   const replacement = pair([source('notification', 'c'.repeat(64)), source('syllabus', SYLLABUS_SHA)]);
   assert.notEqual(pair().taskId, replacement.taskId);
+
+  const differentAuthority = assertVerifiedOfficialSourcePair({
+    missionId: MISSION,
+    cycleKey: CYCLE,
+    authorityKey: 'nta_alternate',
+    schemaVersion: 'source_pair_schema_v1',
+    sources: [
+      source('notification', NOTIFICATION_SHA, { authorityKey: 'nta_alternate' }),
+      source('syllabus', SYLLABUS_SHA, { authorityKey: 'nta_alternate' }),
+    ],
+    preflight: ({ source: item, expectation }) => ({
+      status: item.authorityKey === expectation.authorityKey ? 'PASS' : 'FAIL',
+    }),
+  });
+  assert.notEqual(pair().taskId, differentAuthority.taskId);
 });
 
 test('rejects wrong mission, cycle, authority, type, and unverified records', () => {

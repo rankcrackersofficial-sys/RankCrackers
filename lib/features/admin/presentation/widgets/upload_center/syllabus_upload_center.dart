@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../shared/center_header.dart';
 import 'widgets/mission_asset_form.dart';
-import 'upload_queue_panel.dart';
 
 class SyllabusUploadCenter extends StatelessWidget {
   const SyllabusUploadCenter({super.key});
@@ -13,12 +12,10 @@ class SyllabusUploadCenter extends StatelessWidget {
       children: const [
         CenterHeader(
           title: "SYLLABUS COMMAND",
-          subtitle: "Atomize and map mission knowledge structures.",
+          subtitle: "Syllabus extraction starts only from the verified mission source pair.",
         ),
         SizedBox(height: 24),
         MissionAssetForm(assetType: 'syllabus'),
-        SizedBox(height: 32),
-        UploadQueuePanel(assetType: 'syllabus'),
       ],
     );
   }
