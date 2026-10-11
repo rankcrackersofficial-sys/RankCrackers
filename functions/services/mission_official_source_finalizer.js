@@ -61,7 +61,7 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
     documentId, sourceType, missionId, cycleKey, authorityKey,
     sourceUrl: normalizedUrl, officialDomain, mimeType, byteLength: bytes.length,
     expectedSha256: sha256, actualSha256: sha256, contentSha256: sha256, sha256,
-    storagePath, language: 'english', isOfficial: true,
+    storagePath, isOfficial: true,
     status: 'PENDING_SOURCE_VERIFICATION', verifiedBy: null,
     verificationBasis: 'SERVER_BYTES_SHA256_AND_AUTHORITY_DOMAIN_PREFLIGHT_ONLY',
     recordedAt: recordedAt || null,
