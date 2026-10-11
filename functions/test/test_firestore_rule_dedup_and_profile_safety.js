@@ -43,3 +43,20 @@ test('verified source authority cannot be overwritten by client Firestore writes
   const sourcePairBlock = rules.split('match /source_pairs/{pairId} {')[1]?.split('\n      }')[0] || '';
   assert.match(sourcePairBlock, /allow\s+write:\s*if false/);
 });
+
+
+test('hidden mission subcollections require parent Student visibility', () => {
+  assert.match(rules, /function isStudentVisibleMission\(realmId\)/);
+  const snippets = [
+    'match /mission_realms/{realmId}', 'match /structured_nodes/{nodeId}',
+    'match /timeline/{milestoneId}', 'match /updates/{updateId}',
+  ];
+  for (const snippet of snippets) {
+    const start = rules.indexOf(snippet);
+    assert.ok(start >= 0, snippet);
+    const end = rules.indexOf('\n      }', start);
+    const block = rules.slice(start, end < start ? start + 500 : end);
+    assert.match(block, /isStudentVisibleMission\(realmId\)/,
+      'Student access must follow parent realm: ' + snippet);
+  }
+});
