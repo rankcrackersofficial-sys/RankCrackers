@@ -1,3 +1,6 @@
+// Retired legacy exam-specific executable. Data remains archived for audit.
+require('../../functions/services/mission_agnostic_policy').rejectLegacyMissionSpecificExecution('generate_neet_slice.js');
+
 "use strict";
 
 // Conditionally configure host before loading firebase-admin to connect to local emulator unless RUN_ON_PROD is true
