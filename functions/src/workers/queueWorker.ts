@@ -17,6 +17,7 @@ const {
 } = require('./queueExecutionPolicy');
 const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
 const { executeMissionSourcePair } = require('../../services/mission_official_source_pair_consumer');
+const { preflightSourceBinding } = require('../../services/mission_source_preflight');
 
 if (admin.apps.length === 0) {
   admin.initializeApp();
@@ -452,7 +453,7 @@ export const queueWorker = functions.firestore
     if (taskType === 'MISSION_SOURCE_PAIR') {
       try {
         await admin.firestore().runTransaction(async (transaction) => {
-          await executeMissionSourcePair({ transaction, db: admin.firestore(), taskId, preflight: ({}) => ({ status: 'PASS' }), recordedAt: new Date().toISOString() });
+          await executeMissionSourcePair({ transaction, db: admin.firestore(), taskId, preflight: preflightSourceBinding, recordedAt: new Date().toISOString() });
         });
       } catch (error: any) {
         console.error(`MISSION_SOURCE_PAIR failed closed for ${taskId}:`, error);
