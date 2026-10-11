@@ -14,7 +14,7 @@ This is a code-and-test assessment. The downstream book is not an authority sour
 | Governed B3 job completion | `functions/src/workers/syllabusLifecycleWorker.ts` and `functions/src/test/syllabusB3LifecycleCompletion.test.ts` | Completion proof is validated, but the AAF registry and launch-retirement tests intentionally quarantine `SYLLABUS_B3`. There is no accepted job producer that builds the executor input from verified backend documents. |
 | Legacy B3 structure worker | `functions/src/workers/genericB3Worker.ts`, `functions/src/services/genericStructuredSyllabus.ts` | Accepts caller-provided scope and writes `structured_nodes`; it is not the governed B3 persistence/proof path. Do not use it as the production substitute. |
 | Decomposition worker | `functions/src/workers/genericB4Worker.ts` | Uses Gemini with topic/subject prompt and writes `atomic_syllabus` rows marked `UNVERIFIED`. No governed B4 AAF adapter or proposal/review contract is wired. This is not an approved operational decomposition pipeline. |
-| Firebase entrypoints | `functions/package.json` sets root `index.js`; `firebase.json` runs the TS build; root `functions/index.js` exports `queueWorker` but not the B3/B4/lifecycle/AAF triggers. | `functions/src/index.ts` exports a different set; compilation alone does not change the deployed root entrypoint. Also `queueWorker` currently returns when `JEST_WORKER_ID` is absent, so its normal production path is bypassed. Do not flip this global gate to launch syllabus processing: it also controls unrelated generic queue work. |
+| Firebase entrypoints and queue | `functions/package.json` uses root `index.js`; root `functions/index.js` exports `queueWorker`, but not B3/B4/lifecycle/AAF triggers. | Branch patch now allows only `pagewise_text_extraction_batch` through the queue outside Jest; unrelated legacy task types remain quarantined. The SHA authority resolver reads explicit `sourceSha256` (legacy `hash_<sha>` fallback only), and scanned-page OCR is bound to the computed byte digest. This does not create page-count dispatch, turn the UI `pdfParse` job into a canonical source-pair job, or export the governed B3/B4 path. |
 | B4 source binding | `functions/src/workers/syllabusLifecycleWorker.ts` supplies both `document_id` and `sourceSha256`; old B4 trigger preferred `source_document_id` as the SHA. | Fixed in this branch by requiring a 64-hex `sourceSha256`/ `source_sha256` independently from the document ID. Regression cases were added in `functions/src/test/b4TaskAuthority.test.ts`. |
 
 ## Strict launch design
@@ -33,9 +33,17 @@ This is a code-and-test assessment. The downstream book is not an authority sour
 - Add tests for actual production exports from root `functions/index.js`, not only TypeScript module imports. Fix the production bypass at the correct trigger boundary without activating unrelated legacy tasks.
 - Run Functions build, focused B3/B4 Jest tests, Firestore emulator integration tests and an end-to-end official-documents-to-review-proposal run on the PC repository checkout. Verify deployed function inventory after approved deployment.
 
+## Implementation prepared on the remediation branch
+
+- Fixed queue isolation so the pagewise extraction consumer can run outside Jest without opening legacy generic tasks.
+- Separated document ID from source byte SHA-256 and bound OCR page evidence to the verified computed digest.
+- Added pure policy helpers and regression tests for Jest isolation, production legacy-task quarantine, explicit SHA binding, hash-addressed legacy compatibility, and malformed-digest rejection.
+- Added an SSC CGL-specific notification form schema and selector, including post-specific age/qualification, vacancy status, paper eligibility, tier/section timers, Tier-I and conditional Tier-II syllabus fields, and amendment lineage. Added schema-selection tests and npm scripts.
+- These are preparation-branch commits only. They do not complete backend upload/source-pair coordination, page-count worker routing, PDF fact extraction, B3 dispatch, B4 governed proposal flow, or deployment exports.
+
 ## Verification recorded
 
 - Branch base is the canonical-mission remediation PR branch; this branch remains a draft preparation branch.
-- B4 authority parser regression tests added, but cannot be run in this workspace: the repository checkout, TypeScript, Jest and Firebase emulator are unavailable here.
-- No GitHub Actions workflow run is associated with the current branch head.
-- No deployment was performed. The branch is not launch-ready until every remaining gate above has test evidence.
+- B4 authority parser tests and new queue/SHA/CGL-schema tests are committed; the repository checkout and Firebase test runtime are not available in this session, so the new tests have not been executed here.
+- No deployment was performed. Verify CI status against the current branch head before treating any test as passed.
+- The branch is not launch-ready until the remaining source-pair coordinator, PDF extraction, B3/B4 orchestration, deployed exports and emulator end-to-end gates above have passing evidence.
