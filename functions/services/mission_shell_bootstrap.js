@@ -3,7 +3,7 @@
 const crypto = require('crypto');
 const { resolveCanonicalMissionId } = require('../canonical_mission_registry');
 const { buildCanonicalMissionRealm } = require('./canonical_mission_realm_store');
-const { resolveCanonicalAuthorityKey } = require('./mission_source_preflight');
+const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const {
   assertJurisdictionLevel,
   assertSyllabusBindingMode,
@@ -29,14 +29,18 @@ function buildMissionShellBootstrapPlan({ payload = {}, actorId, recordedAt }) {
   const examName = requiredString(payload.examName, 'MISSION_BOOTSTRAP_EXAM_NAME_REQUIRED');
   const examCategory = requiredString(payload.examCategory, 'MISSION_BOOTSTRAP_EXAM_CATEGORY_REQUIRED');
   const organization = requiredString(payload.organization, 'MISSION_BOOTSTRAP_ORGANIZATION_REQUIRED');
-  const authorityKeyInput = requiredString(payload.authorityKey, 'MISSION_BOOTSTRAP_AUTHORITY_REQUIRED');
-  const authorityKey = resolveCanonicalAuthorityKey(authorityKeyInput);
-  if (!authorityKey) throw new Error('MISSION_BOOTSTRAP_AUTHORITY_UNRESOLVED');
-  const organizationAuthorityKey = resolveCanonicalAuthorityKey(organization);
-  if (!organizationAuthorityKey || organizationAuthorityKey !== authorityKey) {
+  const authorityKey = requiredString(payload.authorityKey, 'MISSION_BOOTSTRAP_AUTHORITY_REQUIRED');
+  const authority = canonicalAuthorityRegistry.getByKey(authorityKey, false);
+  if (!authority) throw new Error('MISSION_BOOTSTRAP_AUTHORITY_UNRESOLVED');
+  const normalizedOrganization = organization.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const knownAuthorityNames = [authority.fullName, authority.shortName]
+    .filter(value => typeof value === 'string' && value.trim() !== '')
+    .map(value => value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim());
+  if (!knownAuthorityNames.includes(normalizedOrganization)) {
     throw new Error('MISSION_BOOTSTRAP_AUTHORITY_ORGANIZATION_MISMATCH');
   }
   const jurisdictionLevel = assertJurisdictionLevel(payload.jurisdictionLevel);
+  if (authority.jurisdiction !== jurisdictionLevel) throw new Error('MISSION_BOOTSTRAP_AUTHORITY_JURISDICTION_MISMATCH');
   const syllabusBindingMode = assertSyllabusBindingMode(payload.syllabusBindingMode);
   if (syllabusBindingMode !== 'SEPARATE') throw new Error('MISSION_BOOTSTRAP_REQUIRES_SEPARATE_OFFICIAL_SOURCES');
   if (!recordedAt) throw new Error('MISSION_BOOTSTRAP_RECORDED_AT_REQUIRED');
