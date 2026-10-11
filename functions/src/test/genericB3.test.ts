@@ -81,7 +81,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
   test('B3H-T05: Paper optional contract', async () => {
     const optionalInput = {
       ...baseInput,
-      authorizedScope: { papersEnabled: false }
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['Mathematics'] }
     };
     const res = await worker.materializeSyllabusStructure(optionalInput);
     expect(res[0].paperId).toBeNull();
@@ -91,7 +91,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
   test('B3H-T06: mission->subject hierarchy works', async () => {
     const optionalInput = {
       ...baseInput,
-      authorizedScope: { papersEnabled: false }
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['Mathematics'] }
     };
     const res = await worker.materializeSyllabusStructure(optionalInput);
     const mathNode = res.find(n => n.nodeType === 'subject' && n.subjectId === 'Mathematics');
@@ -224,7 +224,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
     const neetInput = {
       ...baseInput,
       missionId: "neet_(ug)-2027",
-      authorizedScope: { papersEnabled: false }
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['Mathematics'] }
     };
     const res = await worker.materializeSyllabusStructure(neetInput);
     expect(res.length).toBeGreaterThan(0);
@@ -235,7 +235,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
     const rpscInput = {
       ...baseInput,
       missionId: "rpsc_2027",
-      authorizedScope: { papersEnabled: false }
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['Mathematics'] }
     };
     const res = await worker.materializeSyllabusStructure(rpscInput);
     expect(res.length).toBeGreaterThan(0);
@@ -264,6 +264,23 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
   test('B3H-T24: malformed response / input fails closed', async () => {
     const badInput = { ...baseInput, documentType: "invalid_type" };
     await expect(worker.materializeSyllabusStructure(badInput)).rejects.toThrow("B3_REJECT");
+  });
+
+  test('mission-independent scope cannot invent JEE subjects from an empty authority', async () => {
+    const bad = { ...baseInput, authorizedScope: { papersEnabled: false } };
+    await expect(worker.materializeSyllabusStructure(bad)).rejects.toThrow('authorized subjects required');
+  });
+
+  test('arbitrary declared subject is eligible without exam-name privileges', async () => {
+    const input = {
+      ...baseInput,
+      missionId: 'new_unknown_exam',
+      verifiedPageCorpus: [{ pageNumber: 1, text: 'SUBJECT: Philosophy\\nUNIT: Ethics\\nTOPIC: Duty', isVerified: true, pageDigest: 'digest' }],
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['Philosophy'] },
+    };
+    const parsed = await worker.materializeSyllabusStructure(input);
+    expect(parsed.some(n => n.subjectId === 'Philosophy')).toBe(true);
+    expect(parsed.every(n => n.missionId === 'new_unknown_exam')).toBe(true);
   });
 
   // B3H-T25: Regression tests for paper scope schema normalization & Unit 14 fix
