@@ -293,6 +293,9 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
     bool destructive = false,
   }) async {
     final reasonController = TextEditingController();
+    final cycleKeyController = TextEditingController(
+      text: (widget.data['cycleKey'] ?? widget.data['exam_year'] ?? '').toString(),
+    );
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (dialogContext) => AlertDialog(
@@ -320,6 +323,17 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
                 border: OutlineInputBorder(),
               ),
             ),
+            if (action == 'launch_realm') ...[
+              const SizedBox(height: 12),
+              TextField(
+                controller: cycleKeyController,
+                keyboardType: TextInputType.number,
+                decoration: const InputDecoration(
+                  labelText: 'Selected cycle year (required)',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+            ],
           ],
         ),
         actions: [
@@ -332,7 +346,8 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
                 ? FilledButton.styleFrom(backgroundColor: Colors.redAccent)
                 : null,
             onPressed: () {
-              if (reasonController.text.trim().length < 12) return;
+              if (reasonController.text.trim().length < 12 ||
+                  (action == 'launch_realm' && cycleKeyController.text.trim().isEmpty)) return;
               Navigator.pop(dialogContext, true);
             },
             child: Text(
@@ -344,6 +359,8 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
     );
     final reason = reasonController.text.trim();
     reasonController.dispose();
+    final cycleKey = cycleKeyController.text.trim();
+    cycleKeyController.dispose();
     if (confirmed != true) return;
     setState(() => _isProcessing = true);
     try {
@@ -355,6 +372,7 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
         'recruitmentId': widget.id,
         'payload': {
           'reason': reason,
+          if (action == 'launch_realm') 'cycleKey': cycleKey,
           'requestId': 'web-life-${DateTime.now().microsecondsSinceEpoch}',
         },
       });

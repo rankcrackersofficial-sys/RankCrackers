@@ -282,6 +282,10 @@ class _MissionCreationCenterState extends State<MissionCreationCenter> {
       'org': (rawData['organization'] ?? rawData['org'] ?? '').toString(),
       'year': (rawData['year'] ?? rawData['exam_year'] ?? '').toString(),
       'category': (rawData['exam_category'] ?? '').toString(),
+      'authorityKey': (rawData['authorityKey'] ?? rawData['authority_key'] ?? '').toString(),
+      'jurisdictionLevel': (rawData['jurisdictionLevel'] ?? rawData['jurisdiction_level'] ?? 'CENTRAL').toString(),
+      'stateCode': (rawData['stateCode'] ?? rawData['state_code'] ?? '').toString(),
+      'syllabusBindingMode': (rawData['syllabusBindingMode'] ?? rawData['syllabus_binding_mode'] ?? 'OFFICIAL_PAIR').toString(),
     };
   }
 
@@ -289,6 +293,11 @@ class _MissionCreationCenterState extends State<MissionCreationCenter> {
     setState(() => isLaunching = true);
     try {
       final meta = _getMetadata(selectedNotificationData);
+      final cycleKey = (meta['year'] ?? '').trim();
+      if (cycleKey.isEmpty || int.tryParse(cycleKey) == null ||
+          (meta['authorityKey'] ?? '').isEmpty) {
+        throw StateError('Canonical authority and cycle fields are required.');
+      }
       final callable = FirebaseFunctions.instanceFor(region: 'us-central1').httpsCallable('handleSentinelAction');
       await callable.call({
         'action': 'launch_exam_mission',
@@ -298,7 +307,12 @@ class _MissionCreationCenterState extends State<MissionCreationCenter> {
           'nature': nature,
           'examName': meta['name'],
           'organization': meta['org'],
-          'year': int.tryParse(meta['year'] ?? '') ?? 2026,
+          'year': int.parse(cycleKey),
+          'cycleKey': cycleKey,
+          'authorityKey': meta['authorityKey'],
+          'jurisdictionLevel': meta['jurisdictionLevel'],
+          if ((meta['stateCode'] ?? '').isNotEmpty) 'stateCode': meta['stateCode'],
+          'syllabusBindingMode': meta['syllabusBindingMode'],
           'examCategory': meta['category'],
         }
       });
