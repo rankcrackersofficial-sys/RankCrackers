@@ -582,7 +582,7 @@ class _MissionRealmTileState extends State<_MissionRealmTile> {
                     },
                   });
                 } catch (e) {
-                  if (!mounted) return;
+                  if (!context.mounted) return;
                   ScaffoldMessenger.of(
                     context,
                   ).showSnackBar(SnackBar(content: Text("Post Failed: $e")));
