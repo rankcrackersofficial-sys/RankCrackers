@@ -46,3 +46,5 @@ test('binding, storage and domain mismatches fail closed', async()=>{
 });
 
 test('verifier refuses manufactured or missing language evidence',async()=>{const withoutLanguage={...source};delete withoutLanguage.language;await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:withoutLanguage,preflight:()=>({status:'PASS'})}),/LANGUAGE_EVIDENCE_REQUIRED/);});
+
+test('verifier refuses missing page-count authority',async()=>{const bad={...source};delete bad.pageCount;await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:bad,preflight:()=>({status:'PASS'})}),/PAGE_COUNT_INVALID/);});
