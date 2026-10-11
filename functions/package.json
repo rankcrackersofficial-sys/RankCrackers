@@ -29,7 +29,8 @@
     "test:mission-storage-rules-scope": "node --test test/test_mission_storage_rules_scope.js",
     "test:mission-scanned-page-numbering": "node --test test/test_mission_scanned_page_numbering.js",
     "test:mission-scanned-ocr-guard": "node --test test/test_mission_scanned_ocr_guard.js",
-    "test:mission-official-origin-provenance": "node --test test/test_mission_official_origin_provenance.js"
+    "test:mission-official-origin-provenance": "node --test test/test_mission_official_origin_provenance.js",
+    "test:mission-agnostic-execution": "node --test test/test_mission_agnostic_execution.js"
   },
   "engines": {
     "node": "22"
