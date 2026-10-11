@@ -5,6 +5,7 @@ const { executeAuthorizedForcePipeline } = require('./mission_force_pipeline_run
 const { verifyOfficialSource } = require('./mission_official_source_verifier');
 const { preflightSourceBinding } = require('./mission_source_preflight');
 const { executeOfficialSourcePairCoordinator } = require('./mission_official_source_pair_coordinator');
+const { finalizeOfficialSource } = require('./mission_official_source_finalizer');
 
 async function authorizeFounderExecutor({ db, transaction, auth }) {
   if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
@@ -19,6 +20,9 @@ async function runTrustedForcePipeline({
 }) {
   if (!db || typeof db.runTransaction !== 'function') throw new Error('FORCE_PIPELINE_DB_REQUIRED');
   if (!storage || typeof storage.bucket !== 'function') throw new Error('FORCE_PIPELINE_STORAGE_REQUIRED');
+  if (!request || typeof request.stagedStoragePath !== 'string' || request.stagedStoragePath.trim() === '') {
+    throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
+  }
 
   return db.runTransaction(async transaction => {
     await authorizeFounderExecutor({ db, transaction, auth });
@@ -26,7 +30,36 @@ async function runTrustedForcePipeline({
       request,
       resolveMission: missionId => resolveMission({ transaction, db, missionId }),
       createHiddenMission: plan => createHiddenMission({ transaction, db, plan, auth, recordedAt }),
-      ingestSource: args => ingestSource({ transaction, db, storage, ...args, recordedAt }),
+      ingestSource: async args => {
+        const finalized = await finalizeOfficialSource({
+          storage,
+          missionId: args.source.missionId,
+          cycleKey: args.source.cycleKey,
+          authorityKey: args.source.authorityKey,
+          sourceType: args.source.sourceType,
+          sourceUrl: args.source.sourceUrl,
+          stagedStoragePath: request.stagedStoragePath,
+          mimeType: request.mimeType || 'application/pdf',
+          recordedAt,
+        });
+        const ref = db.collection('mission_realms').doc(finalized.missionId)
+          .collection('official_documents').doc(finalized.documentId);
+        const snap = await transaction.get(ref);
+        if (snap.exists) {
+          const old = snap.data() || {};
+          if (old.contentSha256 !== finalized.contentSha256 || old.storagePath !== finalized.storagePath
+              || old.missionId !== finalized.missionId || old.cycleKey !== finalized.cycleKey
+              || old.authorityKey !== finalized.authorityKey || old.sourceType !== finalized.sourceType) {
+            throw new Error('FORCE_PIPELINE_SOURCE_RECORD_CONFLICT');
+          }
+        } else {
+          transaction.create(ref, { ...finalized, createdAt: recordedAt, updatedAt: recordedAt });
+        }
+        if (typeof ingestSource === 'function') {
+          await ingestSource({ transaction, db, storage, source: finalized, recordedAt });
+        }
+        return finalized;
+      },
       verifySource: async ({ source }) => {
         const verified = await verifyOfficialSource({ storage, source, preflight: preflightSourceBinding });
         const ref = db.collection('mission_realms').doc(verified.missionId)
