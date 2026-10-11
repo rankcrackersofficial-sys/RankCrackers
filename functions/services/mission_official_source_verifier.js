@@ -38,8 +38,10 @@ async function verifyOfficialSource({ storage, source, preflight = preflightSour
     throw new Error('OFFICIAL_SOURCE_PERSISTED_BYTES_MISSING');
   }
   const persistedSha = computeSha256(bytes);
-  const expectedSha = String(source.contentSha256 || source.actualSha256 || source.sha256 || '').toLowerCase();
-  if (!expectedSha || persistedSha !== expectedSha) throw new Error('OFFICIAL_SOURCE_PERSISTED_BYTES_MISMATCH');
+  const expectedValues = [source.expectedSha256, source.actualSha256, source.contentSha256, source.sha256]
+    .filter(v => typeof v === 'string' && v.trim() !== '')
+    .map(v => v.trim().toLowerCase());
+  if (expectedValues.length === 0 || expectedValues.some(v => v !== persistedSha)) throw new Error('OFFICIAL_SOURCE_PERSISTED_BYTES_MISMATCH');
 
   const candidate = {
     ...source,
