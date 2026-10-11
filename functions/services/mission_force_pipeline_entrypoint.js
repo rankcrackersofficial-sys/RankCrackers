@@ -16,10 +16,23 @@ async function authorizeFounderExecutor({ db, transaction, auth }) {
 }
 
 async function runTrustedForcePipeline({
-  db, storage, auth, request, resolveMission, createHiddenMission, ingestSource, recordedAt,
+  db, storage, auth, request, resolveMission, createHiddenMission, ingestSource, recordedAt, officialBytesFetcher,
 }) {
   if (!db || typeof db.runTransaction !== 'function') throw new Error('FORCE_PIPELINE_DB_REQUIRED');
   if (!storage || typeof storage.bucket !== 'function') throw new Error('FORCE_PIPELINE_STORAGE_REQUIRED');
+  // Trusted origin fetch overrides exist only for unit tests and hermetic
+  // demo emulators. They must never be supplied by a production callable.
+  if (officialBytesFetcher !== undefined) {
+    const projectId = process.env.GCLOUD_PROJECT || process.env.GOOGLE_CLOUD_PROJECT || '';
+    const loopback = value => /^(?:127\\.0\\.0\\.1|localhost):[0-9]+$/.test(String(value || ''));
+    const isolatedDemo = projectId.startsWith('demo-')
+      && loopback(process.env.FIRESTORE_EMULATOR_HOST)
+      && loopback(process.env.FIREBASE_STORAGE_EMULATOR_HOST);
+    if (typeof officialBytesFetcher !== 'function'
+        || (process.env.NODE_ENV !== 'test' && !isolatedDemo)) {
+      throw new Error('FORCE_PIPELINE_ORIGIN_FETCH_OVERRIDE_FORBIDDEN');
+    }
+  }
   if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
   if (!request || typeof request.stagedStoragePath !== 'string' || request.stagedStoragePath.trim() === '') {
     throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
@@ -87,6 +100,7 @@ async function runTrustedForcePipeline({
     stagedStoragePath: request.stagedStoragePath,
     mimeType: request.mimeType || 'application/pdf',
     recordedAt,
+    officialBytesFetcher,
   });
   const finalized = Object.freeze({ ...finalizedBase, language: sourceLanguage });
 
@@ -144,7 +158,7 @@ async function runTrustedForcePipeline({
     },
     verifySource: async ({ source }) => {
       // Storage reads and byte-hash verification occur outside the transaction.
-      const verified = await verifyOfficialSource({ storage, source, preflight: preflightSourceBinding });
+      const verified = await verifyOfficialSource({ storage, source, preflight: preflightSourceBinding, officialBytesFetcher });
       return authorizedTransaction(async transaction => {
         const ref = db.collection('mission_realms').doc(verified.missionId)
           .collection('official_documents').doc(verified.documentId);
