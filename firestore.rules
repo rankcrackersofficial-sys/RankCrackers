@@ -156,6 +156,14 @@ service cloud.firestore {
         }
 
       }
+      // Domain-M coordinator/worker authority is server-owned. Founder may
+      // inspect readiness and dispatch evidence but cannot forge/revoke pairs
+      // through client Firestore writes. Hidden from Student clients.
+      match /source_pairs/{pairId} {
+        allow read: if request.auth != null && request.auth.token.founder == true;
+        allow write: if false;
+      }
+
       // Canonical source pointers and immutable versions are server-write authority.
       match /source_slots/{slotId} {
         allow read: if isFounder();
