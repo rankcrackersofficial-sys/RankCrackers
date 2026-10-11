@@ -105,7 +105,7 @@ test('rejects source hash mismatch, wrong content-addressed ID, and noncanonical
     source('syllabus', SYLLABUS_SHA),
   ]), /SHA_MISMATCH/);
   assert.throws(() => pair([
-    source('notification', NOTIFICATION_SHA, { documentId: 'different-id' }),
+    source('notification', NOTIFICATION_SHA, { documentId: 'different-id', storagePath: `mission_realms/${MISSION}/official_documents/different-id/source.pdf` }),
     source('syllabus', SYLLABUS_SHA),
   ]), /SHA_MISMATCH/);
   assert.throws(() => pair([
