@@ -41,6 +41,10 @@ function createMemoryEmulators(pdfBytes, userStatus = 'ACTIVE') {
   const counters = { transactions: 0, storageWrites: 0 };
   const ref = path => ({
     path,
+    get: async () => {
+      const value = documents.get(path);
+      return { exists: value !== undefined, data: () => value ? { ...value } : undefined };
+    },
     collection: name => ({ doc: id => ref(path + '/' + name + '/' + id) }),
   });
   const db = {
