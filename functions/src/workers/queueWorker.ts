@@ -352,10 +352,16 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
       };
 
       if (ocrAudit) {
+        // Persist provenance of the unmodified, review-pending OCR text.
+        // Printed folios are advisory unless a verified mapping was supplied.
         payload.ocr_audit = {
           provider: ocrAudit.provider,
           pageDigest: ocrAudit.pageDigest,
-          correctionsCount: ocrAudit.corrections.length
+          correctionsCount: ocrAudit.corrections.length,
+          validationState: ocrAudit.validationState,
+          correctionState: ocrAudit.correctionState,
+          printedPageEvidence: ocrAudit.printedPageEvidence,
+          rawTextSha256: crypto.createHash('sha256').update(String(ocrAudit.rawText || '')).digest('hex')
         };
       }
 
