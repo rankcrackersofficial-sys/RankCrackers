@@ -18,7 +18,9 @@ function buildRunnerRequest(input = {}) {
   if (!Buffer.isBuffer(input.bytes) || input.bytes.length === 0) throw new Error('FORCE_PIPELINE_SERVER_BYTES_REQUIRED');
   const syllabusBindingMode = input.syllabusBindingMode || SSC_CGL.syllabusBindingMode;
   if (!['SEPARATE', 'EMBEDDED', 'PENDING'].includes(syllabusBindingMode)) throw new Error('FORCE_PIPELINE_BINDING_MODE_INVALID');
-  return Object.freeze({ missionId, cycleKey, authorityKey, sourceUrl, bytes: input.bytes, syllabusBindingMode, sourceType: input.sourceType || 'notification', requestId: required(input.requestId, 'FORCE_PIPELINE_REQUEST_ID_REQUIRED') });
+  const sourceLanguage = required(input.sourceLanguage, 'FORCE_PIPELINE_SOURCE_LANGUAGE_REQUIRED').toLowerCase();
+  if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_SOURCE_LANGUAGE_UNSUPPORTED');
+  return Object.freeze({ missionId, cycleKey, authorityKey, sourceUrl, bytes: input.bytes, sourceLanguage, syllabusBindingMode, sourceType: input.sourceType || 'notification', requestId: required(input.requestId, 'FORCE_PIPELINE_REQUEST_ID_REQUIRED') });
 }
 
 function verifyServerSource(request) {
@@ -26,7 +28,7 @@ function verifyServerSource(request) {
   const finalized = buildFinalizedOfficialSource({ missionId: request.missionId, cycleKey: request.cycleKey, authorityKey: request.authorityKey, sourceType: request.sourceType, sourceUrl: request.sourceUrl, bytes: request.bytes, recordedAt: request.recordedAt || new Date().toISOString() });
   const actualSha256 = verifySha256Hex(request.bytes);
   if (actualSha256 !== finalized.contentSha256) throw new Error('FORCE_PIPELINE_SERVER_SHA_MISMATCH');
-  return Object.freeze({ ...finalized, actualSha256, contentSha256: actualSha256, boundMissionId: request.missionId, boundCycleKey: request.cycleKey, isOfficial: true, language: 'english' });
+  return Object.freeze({ ...finalized, actualSha256, contentSha256: actualSha256, boundMissionId: request.missionId, boundCycleKey: request.cycleKey, isOfficial: true, language: request.sourceLanguage });
 }
 
 async function executeAuthorizedForcePipeline({ request, resolveMission, createHiddenMission, ingestSource, verifySource, materializeEmbeddedRole, handoffPair }) {
