@@ -4,6 +4,7 @@ const crypto = require('crypto');
 const { PDFDocument } = require('pdf-lib');
 const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const { assertVerifiedOfficialSourcePair } = require('./mission_official_source_pair');
+const { corroborateOfficialOrigin } = require('./mission_official_origin_provenance');
 
 const ALLOWED_SOURCE_TYPES = Object.freeze(['notification', 'syllabus']);
 const ALLOWED_MIME_TYPES = new Set(['application/pdf']);
@@ -67,7 +68,7 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
     recordedAt: recordedAt || null,
   });
 }
-async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityKey, sourceType, sourceUrl, stagedStoragePath, mimeType, recordedAt }) {
+async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityKey, sourceType, sourceUrl, stagedStoragePath, mimeType, recordedAt, officialBytesFetcher }) {
   if (!storage || typeof storage.bucket !== 'function') throw new Error('OFFICIAL_SOURCE_STORAGE_REQUIRED');
   const staged = requiredString(stagedStoragePath, 'OFFICIAL_SOURCE_STAGED_PATH_REQUIRED');
   if (!staged.startsWith('mission_source_staging/') || staged.includes('..')) throw new Error('OFFICIAL_SOURCE_STAGED_PATH_INVALID');
@@ -75,7 +76,15 @@ async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityK
   const [metadata] = await file.getMetadata();
   const effectiveMime = mimeType || metadata.contentType || '';
   const [bytes] = await file.download();
-  const source = Object.freeze({ ...buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType: effectiveMime, recordedAt }), pageCount: await readPdfPageCount(bytes) });
+  const base = buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType: effectiveMime, recordedAt });
+  const pageCount = await readPdfPageCount(bytes);
+  // Independently download the approved HTTPS source and compare its bytes
+  // BEFORE any official Storage object is created. URL ownership alone is
+  // never sufficient proof that a Founder upload came from that authority.
+  const originProof = await corroborateOfficialOrigin({
+    sourceUrl: base.sourceUrl, authorityKey, bytes, officialBytesFetcher,
+  });
+  const source = Object.freeze({ ...base, ...originProof, pageCount });
   const destination = storage.bucket().file(source.storagePath);
   const [exists] = await destination.exists();
   if (!exists) await destination.save(bytes, { resumable: false, metadata: { contentType: effectiveMime, metadata: { sourceSha256: source.sha256, missionId, cycleKey, authorityKey, sourceType, pageCount: String(source.pageCount) } } });
