@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 const { PDFDocument } = require('pdf-lib');
 const vision = require('@google-cloud/vision');
-const { correctScientificText } = require('./scientific_corrector');
+const { assertExternalOcrAllowed, buildGovernedOcrDraft } = require('./mission_scanned_ocr_guard');
 const { assessPrintedPageEvidence } = require('./mission_scanned_page_numbering');
 
 /**
@@ -61,7 +61,8 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
     throw new Error('RC_SYLLABUS_P1_BLOCKED_PAGE_DIGEST_FAILED');
   }
 
-  // 6. Execute governed OCR call via Google Cloud Vision API
+  // 6. Never invoke a real Cloud Vision provider in a local/demo emulator.
+  assertExternalOcrAllowed();
   const client = new vision.ImageAnnotatorClient();
   const request = {
     requests: [
@@ -123,8 +124,10 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
       + expectedPrintedPageNumber + ', detected ' + (printedPageEvidence.detected ?? 'NONE'));
   }
 
-  // 9. Call the Scientific Corrector to verify/fix notation (Second-pass transcription)
-  const { correctedText, corrections } = await correctScientificText(rawText, pageNumber);
+  // 9. Preserve raw official OCR as an unverified transcription draft.
+  // Scientific corrections require separate, source-bound Founder review;
+  // NEET-specific page heuristics cannot mutate SSC or other mission pages.
+  const { correctedText, corrections, correctionState } = buildGovernedOcrDraft(rawText);
 
   // 10. Return structured response including raw OCR text, verified transcription, and audit trail
   return {
@@ -137,6 +140,7 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
     pageDigest,
     provider: 'google-cloud-vision-api',
     printedPageEvidence,
+    correctionState,
     validationState: 'draft_unverified'
   };
 }
