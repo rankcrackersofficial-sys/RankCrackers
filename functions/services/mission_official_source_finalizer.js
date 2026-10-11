@@ -75,6 +75,7 @@ async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityK
 }
 function buildSourcePairTask({ missionId, cycleKey, authorityKey, notification, syllabus, preflight, schemaVersion = 'mission_source_pair_v1' }) {
   if (notification?.status !== 'VERIFIED' || syllabus?.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_PAIR_GOVERNED_VERIFICATION_REQUIRED');
+  if (notification?.status !== 'VERIFIED' || syllabus?.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_PAIR_GOVERNED_VERIFICATION_REQUIRED');
   return assertVerifiedOfficialSourcePair({ missionId, cycleKey, authorityKey, sources: [notification, syllabus], preflight, schemaVersion });
 }
 module.exports = { ALLOWED_SOURCE_TYPES, MAX_SOURCE_BYTES, computeSha256, buildFinalizedOfficialSource, finalizeOfficialSource, buildSourcePairTask };
