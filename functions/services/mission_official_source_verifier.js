@@ -24,6 +24,9 @@ async function verifyOfficialSource({ storage, source, preflight = preflightSour
   const sourceType = requiredString(source.sourceType, 'OFFICIAL_SOURCE_TYPE_REQUIRED');
   const language = requiredString(source.language, 'OFFICIAL_SOURCE_LANGUAGE_EVIDENCE_REQUIRED').toLowerCase();
   if (!['en','eng','english'].includes(language)) throw new Error('OFFICIAL_SOURCE_LANGUAGE_EVIDENCE_UNSUPPORTED');
+  if (!Number.isSafeInteger(source.pageCount) || source.pageCount < 1 || source.pageCount > 4000) {
+    throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_INVALID');
+  }
   const storagePath = requiredString(source.storagePath, 'OFFICIAL_SOURCE_STORAGE_PATH_REQUIRED');
   const expectedPath = `mission_realms/${missionId}/official_documents/${source.documentId}/source.pdf`;
   if (storagePath !== expectedPath || storagePath.includes('..')) throw new Error('OFFICIAL_SOURCE_STORAGE_PATH_MISMATCH');
