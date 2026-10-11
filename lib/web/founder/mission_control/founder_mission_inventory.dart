@@ -225,9 +225,26 @@ class _MissionInventoryRecord {
   bool get hasLegacyVariables =>
       realm?['variables'] is List && (realm?['variables'] as List).isNotEmpty;
   bool get sourceReady =>
+      _domainMSourcePairReady ||
       realm?['canonicalSourceVersionId'] != null ||
       realm?['sourceAuthorityState'] == 'CANONICAL' ||
       realm?['officialSourceLocator'] != null;
+  /// Founder projection only. The backend mission realm remains authoritative;
+  /// this prevents a verified Domain-M pair from being mislabelled by legacy
+  /// parent-field compatibility checks.
+  bool get _domainMSourcePairReady {
+    final setup = realm?['missionSetup'];
+    final setupStatus = realm?['missionSetupStatus']?.toString();
+    final pairStatus = setup is Map ? setup['sourcePairStatus']?.toString() : null;
+    const ready = {
+      'OFFICIAL_SOURCE_PAIR_READY',
+      'READY_FOR_WORKER',
+      'DISPATCHED',
+      'EXTRACTION_IN_PROGRESS',
+      'EXTRACTION_READY',
+    };
+    return ready.contains(setupStatus) || ready.contains(pairStatus);
+  }
   bool get sourceCandidate =>
       realm?['sourceVersionId'] != null || realm?['sourceDocumentId'] != null;
   bool get needsAttention =>
