@@ -176,9 +176,11 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     }
 
     // 3. 🛡️ P06 BYTE SHA-256 BINDING (ORDERING PROTECTION: Must occur before any parser call or Firestore write)
-    let expectedSha = data.document_id || '';
-    if (expectedSha.startsWith('hash_')) {
-      expectedSha = expectedSha.substring(5);
+    // Bind bytes to the explicit source digest. A document ID is not a digest;
+    // accept the legacy hash_<sha256> document key only as a compatibility fallback.
+    let expectedSha = typeof data.sourceSha256 === 'string' ? data.sourceSha256 : '';
+    if (!expectedSha && typeof data.document_id === 'string' && data.document_id.startsWith('hash_')) {
+      expectedSha = data.document_id.substring(5);
     }
     expectedSha = expectedSha.trim().toLowerCase();
 
@@ -233,7 +235,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
         const ocrResult = await extractScannedPage({
           missionId: data.mission_id,
           documentId: data.document_id,
-          sourceSha256: data.document_id,
+          sourceSha256: actualSha,
           pdfBytes: bytes,
           pageNumber: p
         });
@@ -446,9 +448,10 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
 export const queueWorker = functions.firestore
   .document('ai_queue/{taskId}')
   .onCreate(async (snap, context) => {
-    // 🛡️ TEST ISOLATION GATE: Avoid executing background triggers in the emulator process during Jest runs
-    if (!process.env.JEST_WORKER_ID) {
-      console.log("QUEUE: Bypassing background trigger execution in emulator process.");
+    // 🛡️ TEST ISOLATION GATE: bypass only while a Jest worker is running.
+    // Production and ordinary emulator invocations must execute the queue consumer.
+    if (process.env.JEST_WORKER_ID) {
+      console.log("QUEUE: Bypassing background trigger execution during Jest.");
       return;
     }
     const data = snap.data();
