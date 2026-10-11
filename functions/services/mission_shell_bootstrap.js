@@ -161,7 +161,7 @@ function assertExistingShellReplay(existingRealm, plan) {
   }
   const visibility = existingRealm.visibilityGate || {};
   if (existingRealm.userPanelVisible === true || existingRealm.cardVisible === true
-      || visibility.studentVisible === true || visibility.catalogVisible === true
+      || existingRealm.catalogDiscoverable === true || visibility.studentVisible === true || visibility.catalogVisible === true
       || visibility.userPanelVisible === true || visibility.cardVisible === true) {
     throw new Error('MISSION_SHELL_VISIBILITY_CONFLICT');
   }
