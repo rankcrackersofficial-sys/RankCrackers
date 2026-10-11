@@ -33,6 +33,7 @@ jobs:
           npm run test:mission-source-pair-consumer
           npm run test:mission-physical-page-authority
           npm run test:mission-pagewise-job-authority
+          npm run test:mission-scanned-page-numbering
           npm run test:mission-storage-rules-scope
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
