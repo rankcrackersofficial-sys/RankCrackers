@@ -55,6 +55,18 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
     schemaVersion: payload.schemaVersion || 'mission_source_pair_v1',
   });
   if (pair.taskId !== taskId) throw new Error('PAIR_CONSUMER_TASK_ID_MISMATCH');
+  // A queue document alone is insufficient authority to launch page extraction.
+  // Require the coordinator's persisted READY_FOR_WORKER pair, or a verified
+  // replay of its already-dispatched state.
+  if (!pairSnap.exists) throw new Error('PAIR_CONSUMER_COORDINATOR_PAIR_REQUIRED');
+  const persistedPair = pairSnap.data() || {};
+  if (persistedPair.taskId !== taskId || persistedPair.missionId !== missionId
+      || persistedPair.cycleKey !== pair.cycleKey || persistedPair.authorityKey !== pair.authorityKey
+      || persistedPair.sources?.notification?.sha256 !== pair.sources.notification.sha256
+      || persistedPair.sources?.syllabus?.sha256 !== pair.sources.syllabus.sha256
+      || !['READY_FOR_WORKER', 'DISPATCHED'].includes(persistedPair.status)) {
+    throw new Error('PAIR_CONSUMER_COORDINATOR_PAIR_CONFLICT');
+  }
   const children = ['notification', 'syllabus'].flatMap(role => {
     const source = pair.sources[role];
     const sourceRecord = role === 'notification' ? notificationSnap.data() : syllabusSnap.data();
@@ -74,8 +86,7 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
         expected_output: 'page_extractions', review_status: 'pending_founder_verification', createdAt: recordedAt };
     });
   });
-  const existingPair = pairSnap.exists ? pairSnap.data() || {} : {};
-  if (existingPair.taskId && existingPair.taskId !== taskId) throw new Error('PAIR_CONSUMER_IDEMPOTENCY_CONFLICT');
+  // All authoritative records and child job snapshots have been read above.
   // Firestore forbids reads after the first write in a transaction.
   // Resolve ALL deterministic child refs and snapshots before creating any job.
   const childRefs = children.map(child => db.collection('ai_queue').doc(child.id));
@@ -91,8 +102,7 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
       transaction.create(ref, child);
     }
   }
-  if (!pairSnap.exists) transaction.create(pairRef, { taskId, status: 'DISPATCHED', missionId, cycleKey: pair.cycleKey, authorityKey: pair.authorityKey, sources: pair.sources, childTaskIds: children.map(c => c.id), createdAt: recordedAt, updatedAt: recordedAt });
-  else transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
+  transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
   transaction.update(queueRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
   return Object.freeze({ taskId, childTaskIds: children.map(c => c.id), idempotent: pairSnap.exists });
 }
