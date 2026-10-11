@@ -30,6 +30,23 @@ async function runTrustedForcePipeline({
 
   const sourceLanguage = typeof request.sourceLanguage === 'string' ? request.sourceLanguage.trim().toLowerCase() : '';
   if (!['en','eng','english'].includes(sourceLanguage)) throw new Error('FORCE_PIPELINE_ENGLISH_SOURCE_EVIDENCE_REQUIRED');
+  // Fail before Storage finalization when the request cannot form a governed
+  // official notification + embedded syllabus pair. Do not default identity.
+  if (typeof request.missionId !== 'string' || !request.missionId.trim()) {
+    throw new Error('FORCE_PIPELINE_MISSION_REQUIRED');
+  }
+  if (typeof request.cycleKey !== 'string' || !request.cycleKey.trim()) {
+    throw new Error('FORCE_PIPELINE_CYCLE_REQUIRED');
+  }
+  if (typeof request.authorityKey !== 'string' || !request.authorityKey.trim()) {
+    throw new Error('FORCE_PIPELINE_AUTHORITY_REQUIRED');
+  }
+  if (request.syllabusBindingMode !== 'EMBEDDED') {
+    throw new Error('FORCE_PIPELINE_SEPARATE_PAIR_NOT_IMPLEMENTED');
+  }
+  if (request.sourceType && request.sourceType !== 'notification') {
+    throw new Error('FORCE_PIPELINE_EMBEDDED_REQUIRES_NOTIFICATION');
+  }
 
   const finalizedBase = await finalizeOfficialSource({
     storage,
