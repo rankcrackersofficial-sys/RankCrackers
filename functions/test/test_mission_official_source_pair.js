@@ -15,6 +15,7 @@ function source(sourceType, sha256, overrides = {}) {
     documentId: sha256,
     sourceType,
     status: 'VERIFIED',
+    verifiedBy: 'mission_source_pair_verifier_v1',
     missionId: MISSION,
     cycleKey: CYCLE,
     authorityKey: AUTHORITY,
@@ -73,6 +74,7 @@ test('rejects wrong mission, cycle, authority, type, and unverified records', ()
     source('notification', NOTIFICATION_SHA, { cycleKey: '2028' }),
     source('notification', NOTIFICATION_SHA, { authorityKey: 'ssc' }),
     source('notification', NOTIFICATION_SHA, { status: 'UPLOADED' }),
+    source('notification', NOTIFICATION_SHA, { verifiedBy: 'client' }),
     source('notification', NOTIFICATION_SHA, { sourceType: 'syllabus' }),
   ];
   for (const badNotification of cases) {
