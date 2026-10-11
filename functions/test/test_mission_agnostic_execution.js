@@ -136,3 +136,21 @@ test('force pipeline runner never exports a particular examination as fallback i
   assert.equal(Object.prototype.hasOwnProperty.call(runner, 'SSC_CGL'), false);
   assert.throws(() => runner.buildRunnerRequest({}), /FORCE_PIPELINE_MISSION_REQUIRED/);
 });
+
+
+test('B3 subject aliases never authorize undeclared curricula', async () => {
+  const worker = new GenericB3Worker();
+  const spoofed = b3Input('unseen_mission', ['Philosophy']);
+  spoofed.authorizedScope.subjectAliases = { Philosophy: 'Physics' };
+  await assert.rejects(() => worker.materializeSyllabusStructure(spoofed), /B3_REJECT: unauthorized subject/);
+
+  const verified = b3Input('unseen_mission', ['Physics']);
+  verified.authorizedScope.subjectAliases = { Philosophy: 'Physics' };
+  const rows = await worker.materializeSyllabusStructure(verified);
+  assert.ok(rows.some(row => row.nodeType === 'subject' && row.subjectId === 'Physics'));
+
+  const missing = b3Input('unseen_mission');
+  delete missing.authorizedScope;
+  await assert.rejects(() => worker.materializeSyllabusStructure(missing),
+    /B3_REJECT: authorized scope required/);
+});
