@@ -4,6 +4,14 @@ const { assertVerifiedOfficialSourcePair } = require('./mission_official_source_
 
 function required(value, code) { if (typeof value !== 'string' || !value) throw new Error(code); return value; }
 
+const PAGE_BATCH_SIZE = 20;
+const MAX_SOURCE_PAGES = 4000;
+function requiredPageCount(source) {
+  const value = source && source.pageCount;
+  if (!Number.isSafeInteger(value) || value < 1 || value > MAX_SOURCE_PAGES) throw new Error('PAIR_CONSUMER_PAGE_COUNT_REQUIRED');
+  return value;
+}
+
 // Server-only consumer. It re-reads every authoritative record in one
 // transaction before creating the two deterministic pagewise child jobs.
 async function executeMissionSourcePair({ transaction, db, taskId, preflight, recordedAt }) {
@@ -33,16 +41,24 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
     schemaVersion: payload.schemaVersion || 'mission_source_pair_v1',
   });
   if (pair.taskId !== taskId) throw new Error('PAIR_CONSUMER_TASK_ID_MISMATCH');
-  const children = ['notification', 'syllabus'].map((role, index) => {
+  const children = ['notification', 'syllabus'].flatMap(role => {
     const source = pair.sources[role];
-    const id = `${taskId}_${role}`;
-    return { id, type: role === 'notification' ? 'OFFICIAL_NOTIFICATION' : 'OFFICIAL_SYLLABUS',
-      task_type: 'pagewise_text_extraction_batch', status: 'queued', parentTaskId: taskId,
-      mission_id: missionId, document_id: source.documentId, source_document_id: source.documentId,
-      document_type: role, source_path: source.storagePath, sourceSha256: source.sha256,
-      expectedSha256: source.sha256, language: source.language, page_start: 1, page_end: 1,
-      page_batch_index: index, total_batches: 1, expected_output: 'page_extractions',
-      review_status: 'pending_founder_verification', createdAt: recordedAt };
+    const sourceRecord = role === 'notification' ? notificationSnap.data() : syllabusSnap.data();
+    const pageCount = requiredPageCount(sourceRecord);
+    const totalBatches = Math.ceil(pageCount / PAGE_BATCH_SIZE);
+    return Array.from({ length: totalBatches }, (_, offset) => {
+      const batchIndex = offset + 1;
+      const pageStart = offset * PAGE_BATCH_SIZE + 1;
+      const pageEnd = Math.min(pageCount, pageStart + PAGE_BATCH_SIZE - 1);
+      const id = `${taskId}_${role}_b${String(batchIndex).padStart(4, '0')}`;
+      return { id, type: role === 'notification' ? 'OFFICIAL_NOTIFICATION' : 'OFFICIAL_SYLLABUS',
+        task_type: 'pagewise_text_extraction_batch', status: 'queued', parentTaskId: taskId,
+        mission_id: missionId, document_id: source.documentId, source_document_id: source.documentId,
+        document_type: role, source_path: source.storagePath, sourceSha256: source.sha256,
+        expectedSha256: source.sha256, language: source.language, page_start: pageStart, page_end: pageEnd,
+        expected_physical_pages: pageCount, page_batch_index: batchIndex, total_batches: totalBatches,
+        expected_output: 'page_extractions', review_status: 'pending_founder_verification', createdAt: recordedAt };
+    });
   });
   const existingPair = pairSnap.exists ? pairSnap.data() || {} : {};
   if (existingPair.taskId && existingPair.taskId !== taskId) throw new Error('PAIR_CONSUMER_IDEMPOTENCY_CONFLICT');
