@@ -1,3 +1,6 @@
+// Retired legacy exam-specific executable. Data remains archived for audit.
+require('../../functions/services/mission_agnostic_policy').rejectLegacyMissionSpecificExecution('quarantine_neet_slice.js');
+
 "use strict";
 
 process.env.FIRESTORE_EMULATOR_HOST = "127.0.0.1:8080";
