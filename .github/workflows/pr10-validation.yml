@@ -36,6 +36,7 @@ jobs:
           npm run test:mission-pagewise-job-authority
           npm run test:mission-scanned-page-numbering
           npm run test:mission-scanned-ocr-guard
+          npm run test:mission-agnostic-execution
           npm run test:mission-storage-rules-scope
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
