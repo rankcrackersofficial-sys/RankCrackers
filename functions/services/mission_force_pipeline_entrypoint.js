@@ -24,7 +24,7 @@ async function runTrustedForcePipeline({
   // demo emulators. They must never be supplied by a production callable.
   if (officialBytesFetcher !== undefined) {
     const projectId = process.env.GCLOUD_PROJECT || process.env.GOOGLE_CLOUD_PROJECT || '';
-    const loopback = value => /^(?:127\\.0\\.0\\.1|localhost):[0-9]+$/.test(String(value || ''));
+    const loopback = value => /^(?:127[.]0[.]0[.]1|localhost):[0-9]+$/.test(String(value || ''));
     const isolatedDemo = projectId.startsWith('demo-')
       && loopback(process.env.FIRESTORE_EMULATOR_HOST)
       && loopback(process.env.FIREBASE_STORAGE_EMULATOR_HOST);
