@@ -15,6 +15,8 @@ function source(sourceType, sha256, overrides = {}) {
     documentId: sha256,
     sourceType,
     status: 'VERIFIED',
+    verificationState: 'verified',
+    governanceStatus: 'ACTIVE',
     verifiedBy: 'mission_source_pair_verifier_v1',
     missionId: MISSION,
     cycleKey: CYCLE,
