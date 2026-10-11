@@ -22,30 +22,52 @@ const source = {
   isOfficial: true,
   status: 'PENDING_SOURCE_VERIFICATION',
   verifiedBy: null,
+  originProofState: 'OFFICIAL_URL_BYTES_MATCHED',
+  originProofMethod: 'TRUSTED_HTTPS_200_SAME_BYTES_SHA256_NO_REDIRECT',
+  originSha256: SHA,
+  originUrl: 'https://ssc.gov.in/official.pdf',
 };
 function storage(bytes=BYTES, fail=false) {
   return { bucket:()=>({file:()=>({download:async()=>{if(fail) throw new Error('missing'); return [bytes];}})}) };
 }
+
+const verify = args => verifyOfficialSource({ officialBytesFetcher: async () => BYTES, ...args });
 test('canonical verifier alone promotes persisted official bytes', async()=>{
-  const v=await verifyOfficialSource({storage:storage(),source});
+  const v=await verify({storage:storage(),source});
   assert.equal(v.status,'VERIFIED');
   assert.equal(v.verifiedBy,VERIFIER_ID);
   assert.equal(v.contentSha256,SHA);
 });
 test('caller-declared verified state cannot bypass verifier', async()=>{
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,status:'VERIFIED'}}),/STATE_INVALID/);
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,verifiedBy:VERIFIER_ID}}),/STATE_INVALID/);
+  await assert.rejects(()=>verify({storage:storage(),source:{...source,status:'VERIFIED'}}),/STATE_INVALID/);
+  await assert.rejects(()=>verify({storage:storage(),source:{...source,verifiedBy:VERIFIER_ID}}),/STATE_INVALID/);
 });
 test('missing or corrupted persisted bytes fail closed', async()=>{
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(BYTES,true),source}),/PERSISTED_BYTES_MISSING/);
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(Buffer.from('%PDF-corrupt')),source}),/PERSISTED_BYTES_MISMATCH/);
+  await assert.rejects(()=>verify({storage:storage(BYTES,true),source}),/PERSISTED_BYTES_MISSING/);
+  await assert.rejects(()=>verify({storage:storage(Buffer.from('%PDF-corrupt')),source}),/PERSISTED_BYTES_MISMATCH/);
 });
 test('binding, storage and domain mismatches fail closed', async()=>{
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,missionId:'other'}}),/STORAGE_PATH_MISMATCH|VERIFICATION_FAILED/);
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,storagePath:'mission_realms/ssc_cgl/official_documents/wrong/source.pdf'}}),/STORAGE_PATH_MISMATCH/);
-  await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:{...source,sourceUrl:'https://example.com/a.pdf'}}),/DOMAIN_NOT_APPROVED/);
+  await assert.rejects(()=>verify({storage:storage(),source:{...source,missionId:'other'}}),/STORAGE_PATH_MISMATCH|VERIFICATION_FAILED/);
+  await assert.rejects(()=>verify({storage:storage(),source:{...source,storagePath:'mission_realms/ssc_cgl/official_documents/wrong/source.pdf'}}),/STORAGE_PATH_MISMATCH/);
+  await assert.rejects(()=>verify({storage:storage(),source:{...source,sourceUrl:'https://example.com/a.pdf'}}),/DOMAIN_NOT_APPROVED/);
 });
 
-test('verifier refuses manufactured or missing language evidence',async()=>{const withoutLanguage={...source};delete withoutLanguage.language;await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:withoutLanguage,preflight:()=>({status:'PASS'})}),/LANGUAGE_EVIDENCE_REQUIRED/);});
+test('verifier refuses manufactured or missing language evidence',async()=>{const withoutLanguage={...source};delete withoutLanguage.language;await assert.rejects(()=>verify({storage:storage(),source:withoutLanguage,preflight:()=>({status:'PASS'})}),/LANGUAGE_EVIDENCE_REQUIRED/);});
 
-test('verifier refuses missing page-count authority',async()=>{const bad={...source};delete bad.pageCount;await assert.rejects(()=>verifyOfficialSource({storage:storage(),source:bad,preflight:()=>({status:'PASS'})}),/PAGE_COUNT_INVALID/);});
+test('verifier refuses missing page-count authority',async()=>{const bad={...source};delete bad.pageCount;await assert.rejects(()=>verify({storage:storage(),source:bad,preflight:()=>({status:'PASS'})}),/PAGE_COUNT_INVALID/);});
+
+
+test('independent official origin evidence is required, not just an approved URL', async () => {
+  await assert.rejects(() => verify({
+    storage:storage(), source:{...source, originProofState: undefined},
+  }), /ORIGIN_ATTESTATION_REQUIRED/);
+  await assert.rejects(() => verify({
+    storage:storage(), source:{...source, originSha256: '0'.repeat(64)},
+  }), /ORIGIN_ATTESTATION_REQUIRED/);
+  await assert.rejects(() => verify({
+    storage:storage(), source:{...source, originUrl: 'https://ssc.gov.in/different.pdf'},
+  }), /ORIGIN_ATTESTATION_REQUIRED/);
+  await assert.rejects(() => verify({
+    storage:storage(), source, officialBytesFetcher: async () => Buffer.from('%PDF-different official document'),
+  }), /OFFICIAL_ORIGIN_BYTES_MISMATCH/);
+});
