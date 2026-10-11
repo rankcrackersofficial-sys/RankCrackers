@@ -83,6 +83,7 @@ test('existing shell can only be reused for the exact hidden bootstrap identity'
   assert.equal(assertExistingShellReplay(current.realm, current), true);
   assert.throws(() => assertExistingShellReplay({ ...current.realm, missionSetup: {} }, current), /REUSE_REVIEW/);
   assert.throws(() => assertExistingShellReplay({ ...current.realm, userPanelVisible: true }, current), /VISIBILITY_CONFLICT/);
+  assert.throws(() => assertExistingShellReplay({ ...current.realm, catalogDiscoverable: true }, current), /VISIBILITY_CONFLICT/);
 });
 
 test('transaction creates hidden shell and idempotency record exactly once', async () => {
