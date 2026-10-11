@@ -44,11 +44,14 @@ async function runTrustedForcePipeline({
   });
   const finalized = Object.freeze({ ...finalizedBase, language: sourceLanguage });
 
+  const persistedBytes = Buffer.from((await storage.bucket().file(finalized.storagePath).download())[0]);
+  if (persistedBytes.length !== finalized.byteLength) throw new Error('FORCE_PIPELINE_FINALIZED_BYTE_LENGTH_MISMATCH');
+  const persistedSha = require('./mission_official_source_finalizer').computeSha256(persistedBytes);
+  if (persistedSha !== finalized.contentSha256) throw new Error('FORCE_PIPELINE_FINALIZED_SHA_MISMATCH');
   const serverRequest = Object.freeze({
     ...request,
-    bytes: Buffer.from((await storage.bucket().file(finalized.storagePath).download())[0]),
+    bytes: persistedBytes,
   });
-  if (serverRequest.bytes.length !== finalized.byteLength) throw new Error('FORCE_PIPELINE_FINALIZED_BYTE_LENGTH_MISMATCH');
 
   return db.runTransaction(async transaction => {
     await authorizeFounderExecutor({ db, transaction, auth });
