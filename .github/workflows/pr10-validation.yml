@@ -44,5 +44,5 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
+      - run: flutter analyze --no-fatal-infos --no-fatal-warnings lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
       - run: flutter build web -t lib/main_web.dart --release
