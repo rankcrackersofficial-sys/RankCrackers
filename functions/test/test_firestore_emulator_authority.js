@@ -101,3 +101,46 @@ test('Student profile requires canonical verified phone and protects roles', asy
   await assertFails(updateDoc(signedProfile, { onboardingCompleted: true, mobile: '+919999999999' }));
   await assertSucceeds(updateDoc(signedProfile, { onboardingCompleted: true }));
 });
+
+
+test('Test Arena owner and immutable paper/event/clock bindings survive student updates', async () => {
+  await env.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'test_arena_attempts', 'immutable_attempt'), {
+      attemptId: 'immutable_attempt', uid: 'arena_owner', status: 'active',
+      eventId: 'event_1', paperId: 'paper_1', paperVersionHash: 'hash_1',
+      scoringPolicyVersion: 'policy_1', startedAt: 100, targetEndAt: 500,
+      responses: {},
+    });
+  });
+  const owner = env.authenticatedContext('arena_owner').firestore();
+  const other = env.authenticatedContext('arena_other').firestore();
+  const attempt = doc(owner, 'test_arena_attempts', 'immutable_attempt');
+  for (const patch of [
+    { uid: 'arena_other' }, { eventId: 'event_2' }, { paperId: 'paper_2' },
+    { paperVersionHash: 'hash_2' }, { scoringPolicyVersion: 'policy_2' },
+    { startedAt: 0 }, { targetEndAt: 999999 },
+  ]) await assertFails(updateDoc(attempt, patch));
+  await assertFails(updateDoc(doc(other, 'test_arena_attempts', 'immutable_attempt'),
+    { status: 'submitted' }));
+  await assertSucceeds(updateDoc(attempt, { responses: { q1: { selectedOptionIndex: 1 } } }));
+  await assertSucceeds(updateDoc(attempt, { status: 'submitted' }));
+});
+
+test('opportunity match cannot be seized by replacing its owner uid', async () => {
+  await env.withSecurityRulesDisabled(async context => {
+    await setDoc(doc(context.firestore(), 'opportunity_matches', 'victim_match'),
+      { uid: 'victim', score: 1 });
+  });
+  const attacker = env.authenticatedContext('attacker').firestore();
+  const victim = env.authenticatedContext('victim').firestore();
+  const founder = env.authenticatedContext('founder1', { founder: true }).firestore();
+  const attackerTarget = doc(attacker, 'opportunity_matches', 'victim_match');
+  await assertFails(getDoc(attackerTarget));
+  await assertFails(updateDoc(attackerTarget, { uid: 'attacker', score: 99 }));
+  await assertFails(setDoc(attackerTarget, { uid: 'attacker', score: 99 }));
+  await assertSucceeds(updateDoc(doc(victim, 'opportunity_matches', 'victim_match'), { score: 2 }));
+  await assertFails(updateDoc(doc(victim, 'opportunity_matches', 'victim_match'), { uid: 'attacker' }));
+  await assertSucceeds(setDoc(doc(attacker, 'opportunity_matches', 'attacker_match'),
+    { uid: 'attacker', score: 1 }));
+  await assertSucceeds(updateDoc(doc(founder, 'opportunity_matches', 'victim_match'), { score: 3 }));
+});

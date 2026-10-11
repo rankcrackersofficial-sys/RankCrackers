@@ -60,3 +60,21 @@ test('hidden mission subcollections require parent Student visibility', () => {
       'Student access must follow parent realm: ' + snippet);
   }
 });
+
+
+test('Test Arena updates cannot transfer ownership or alter immutable paper and clock identity', () => {
+  const block = rules.split('match /test_arena_attempts/{attemptId} {')[1]?.split('match /test_arena_results/')[0] || '';
+  assert.match(block, /request\.resource\.data\.uid == request\.auth\.uid/);
+  for (const key of ['attemptId', 'eventId', 'paperId', 'paperVersionHash',
+    'scoringPolicyVersion', 'startedAt', 'targetEndAt']) {
+    assert.ok(block.includes("'" + key + "'"), key + ' must be immutable');
+  }
+});
+
+test('opportunity matches require both existing and proposed ownership', () => {
+  const block = rules.split('match /opportunity_matches/{matchId} {')[1]?.split('match /users/')[0] || '';
+  assert.match(block, /allow update:\s*if isFounder\(\)/);
+  assert.match(block, /resource\.data\.uid == request\.auth\.uid/);
+  assert.match(block, /request\.resource\.data\.uid == request\.auth\.uid/);
+  assert.doesNotMatch(block, /allow write:/);
+});
