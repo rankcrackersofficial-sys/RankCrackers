@@ -4,11 +4,7 @@ const { FieldValue } = require('firebase-admin/firestore');
 const crypto = require("crypto");
 const { logFounderActivity } = require("../services/audit_service");
 const { executeUnifiedMissionCreation } = require("../services/mission_cycle_store");
-const {
-  assertBootstrapRequestReplay,
-  assertExistingShellReplay,
-  buildMissionShellBootstrapPlan,
-} = require('../services/mission_shell_bootstrap');
+const { executeMissionShellBootstrap } = require('../services/mission_shell_bootstrap');
 const { executeCycleAwarePublication } = require("../services/mission_cycle_lifecycle");
 const { validateOrResolveId } = require("../canonical_mission_registry");
 const {
@@ -399,35 +395,13 @@ exports.handleSentinelAction = functions
 
       // ACTION: BOOTSTRAP HIDDEN MISSION SHELL BEFORE OFFICIAL SOURCE UPLOAD
       if (action === 'bootstrap_mission_shell') {
-        const plan = buildMissionShellBootstrapPlan({
+        return executeMissionShellBootstrap({
+          transaction,
+          db,
           payload: payload || {},
-          actorId: auth.uid,
+          auth,
           recordedAt: FieldValue.serverTimestamp(),
         });
-        const requestRef = db.collection('mission_bootstrap_requests').doc(plan.requestKeyHash);
-        const parentRef = db.collection('mission_realms').doc(plan.missionId);
-        const userRef = db.collection('users').doc(auth.uid);
-        const [userSnap, requestSnap, parentSnap] = await Promise.all([
-          transaction.get(userRef), transaction.get(requestRef), transaction.get(parentRef),
-        ]);
-        assertActiveFounder(auth, userSnap.exists ? userSnap.data() : {});
-
-        if (requestSnap.exists) {
-          assertBootstrapRequestReplay(requestSnap.data() || {}, plan);
-          if (!parentSnap.exists) throw new Error('MISSION_BOOTSTRAP_REALM_MISSING');
-          assertExistingShellReplay(parentSnap.data() || {}, plan);
-          return { success: true, idempotent: true, missionId: plan.missionId, cycleKey: plan.cycleKey, state: 'AWAITING_OFFICIAL_SOURCE_PAIR' };
-        }
-
-        if (parentSnap.exists) {
-          assertExistingShellReplay(parentSnap.data() || {}, plan);
-          transaction.create(requestRef, plan.requestRecord);
-          return { success: true, idempotent: true, missionId: plan.missionId, cycleKey: plan.cycleKey, state: 'AWAITING_OFFICIAL_SOURCE_PAIR' };
-        }
-
-        transaction.create(parentRef, plan.realm);
-        transaction.create(requestRef, plan.requestRecord);
-        return { success: true, idempotent: false, missionId: plan.missionId, cycleKey: plan.cycleKey, state: 'AWAITING_OFFICIAL_SOURCE_PAIR' };
       }
 
       // ACTION: LAUNCH EXAM MISSION
