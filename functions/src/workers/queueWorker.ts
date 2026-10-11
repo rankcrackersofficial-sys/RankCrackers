@@ -11,7 +11,10 @@ import { derivePhysicalPageAuthority, assertPersistablePageAuthority } from '../
 const { classifyRouting } = require('../../services/routing_classifier');
 const { extractScannedPage } = require('../../services/scanned_extraction_service');
 const { PDFParse } = require('pdf-parse');
-const { shouldBypassQueueForTest } = require('./queueExecutionPolicy');
+const {
+  shouldBypassQueueForTest,
+  shouldQuarantineLegacyQueueInProduction,
+} = require('./queueExecutionPolicy');
 const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
 
 if (admin.apps.length === 0) {
@@ -455,7 +458,7 @@ export const queueWorker = functions.firestore
       await handlePagewiseTextExtraction(taskId, taskRef, data);
       return;
     }
-    if (!process.env.JEST_WORKER_ID) {
+    if (shouldQuarantineLegacyQueueInProduction(taskType, process.env.JEST_WORKER_ID)) {
       console.log(`QUEUE QUARANTINE: Legacy task ${taskId} remains disabled outside Jest.`);
       return;
     }
