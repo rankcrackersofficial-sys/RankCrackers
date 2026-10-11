@@ -275,7 +275,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
     const input = {
       ...baseInput,
       missionId: 'new_unknown_exam',
-      verifiedPageCorpus: [{ pageNumber: 1, text: 'SUBJECT: Philosophy\\nUNIT: Ethics\\nTOPIC: Duty', isVerified: true, pageDigest: 'digest' }],
+      verifiedPageCorpus: [{ pageNumber: 1, text: 'SUBJECT: Philosophy\nUNIT: Ethics\nTOPIC: Duty', isVerified: true, pageDigest: 'digest' }],
       authorizedScope: { papersEnabled: false, allowedSubjects: ['Philosophy'] },
     };
     const parsed = await worker.materializeSyllabusStructure(input);
