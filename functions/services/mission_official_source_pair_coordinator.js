@@ -1,6 +1,7 @@
 'use strict';
 
 const { assertVerifiedOfficialSourcePair } = require('./mission_official_source_pair');
+const { ORIGIN_PROOF_METHOD } = require('./mission_official_origin_provenance');
 
 function requiredString(value, code) {
   if (typeof value !== 'string' || value.trim() === '') throw new Error(code);
@@ -35,6 +36,13 @@ function assertStoredSource(source, expected, sourceType) {
   if (source.verificationState !== 'verified' || source.governanceStatus !== 'ACTIVE') throw new Error('PAIR_COORDINATOR_SOURCE_STATE_INVALID');
   if (String(source.actualSha256 || '').toLowerCase() !== expected.sha256
       || String(source.contentSha256 || source.actualSha256 || '').toLowerCase() !== expected.sha256) throw new Error('PAIR_COORDINATOR_SOURCE_SHA_MISMATCH');
+  if (source.originProofState !== 'OFFICIAL_URL_BYTES_MATCHED'
+      || source.originProofMethod !== ORIGIN_PROOF_METHOD
+      || source.originSha256 !== expected.sha256
+      || typeof source.sourceUrl !== 'string'
+      || source.originUrl !== source.sourceUrl) {
+    throw new Error('PAIR_COORDINATOR_SOURCE_ORIGIN_ATTESTATION_REQUIRED');
+  }
 }
 
 async function executeOfficialSourcePairCoordinator({ transaction, db, missionId, cycleKey, authorityKey, notification, syllabus, preflight, schemaVersion, recordedAt }) {
