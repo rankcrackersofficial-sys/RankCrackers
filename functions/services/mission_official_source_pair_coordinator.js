@@ -32,6 +32,7 @@ function assertStoredSource(source, expected, sourceType) {
   if (source.sourceType !== sourceType || source.missionId !== expected.missionId || source.cycleKey !== expected.cycleKey || source.authorityKey !== expected.authorityKey) {
     throw new Error('PAIR_COORDINATOR_SOURCE_BINDING_MISMATCH');
   }
+  if (source.verificationState !== 'verified' || source.governanceStatus !== 'ACTIVE') throw new Error('PAIR_COORDINATOR_SOURCE_STATE_INVALID');
   if (String(source.actualSha256 || '').toLowerCase() !== expected.sha256
       || String(source.contentSha256 || source.actualSha256 || '').toLowerCase() !== expected.sha256) throw new Error('PAIR_COORDINATOR_SOURCE_SHA_MISMATCH');
 }
