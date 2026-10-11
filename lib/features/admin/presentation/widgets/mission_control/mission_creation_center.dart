@@ -285,7 +285,7 @@ class _MissionCreationCenterState extends State<MissionCreationCenter> {
       'authorityKey': (rawData['authorityKey'] ?? rawData['authority_key'] ?? '').toString(),
       'jurisdictionLevel': (rawData['jurisdictionLevel'] ?? rawData['jurisdiction_level'] ?? 'CENTRAL').toString(),
       'stateCode': (rawData['stateCode'] ?? rawData['state_code'] ?? '').toString(),
-      'syllabusBindingMode': (rawData['syllabusBindingMode'] ?? rawData['syllabus_binding_mode'] ?? 'OFFICIAL_PAIR').toString(),
+      'syllabusBindingMode': (rawData['syllabusBindingMode'] ?? rawData['syllabus_binding_mode'] ?? 'SEPARATE').toString(),
     };
   }
 
