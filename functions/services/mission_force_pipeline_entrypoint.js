@@ -24,6 +24,18 @@ async function runTrustedForcePipeline({
     throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
   }
 
+  const finalized = await finalizeOfficialSource({
+    storage,
+    missionId: request.missionId,
+    cycleKey: request.cycleKey,
+    authorityKey: request.authorityKey,
+    sourceType: request.sourceType || 'notification',
+    sourceUrl: request.officialSourceUrl,
+    stagedStoragePath: request.stagedStoragePath,
+    mimeType: request.mimeType || 'application/pdf',
+    recordedAt,
+  });
+
   return db.runTransaction(async transaction => {
     await authorizeFounderExecutor({ db, transaction, auth });
     return executeAuthorizedForcePipeline({
@@ -31,17 +43,11 @@ async function runTrustedForcePipeline({
       resolveMission: missionId => resolveMission({ transaction, db, missionId }),
       createHiddenMission: plan => createHiddenMission({ transaction, db, plan, auth, recordedAt }),
       ingestSource: async args => {
-        const finalized = await finalizeOfficialSource({
-          storage,
-          missionId: args.source.missionId,
-          cycleKey: args.source.cycleKey,
-          authorityKey: args.source.authorityKey,
-          sourceType: args.source.sourceType,
-          sourceUrl: args.source.sourceUrl,
-          stagedStoragePath: request.stagedStoragePath,
-          mimeType: request.mimeType || 'application/pdf',
-          recordedAt,
-        });
+        if (args.source.missionId !== finalized.missionId || args.source.cycleKey !== finalized.cycleKey
+            || args.source.authorityKey !== finalized.authorityKey || args.source.sourceType !== finalized.sourceType
+            || args.source.contentSha256 !== finalized.contentSha256) {
+          throw new Error('FORCE_PIPELINE_FINALIZER_BINDING_MISMATCH');
+        }
         const ref = db.collection('mission_realms').doc(finalized.missionId)
           .collection('official_documents').doc(finalized.documentId);
         const snap = await transaction.get(ref);
