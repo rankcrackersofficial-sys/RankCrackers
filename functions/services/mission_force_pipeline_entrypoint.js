@@ -47,6 +47,35 @@ async function runTrustedForcePipeline({
   if (request.sourceType && request.sourceType !== 'notification') {
     throw new Error('FORCE_PIPELINE_EMBEDDED_REQUIRES_NOTIFICATION');
   }
+  if (typeof resolveMission !== 'function') throw new Error('FORCE_PIPELINE_MISSION_RESOLVER_REQUIRED');
+  if (request.allowForceCreate === true && typeof createHiddenMission !== 'function') {
+    throw new Error('FORCE_PIPELINE_HIDDEN_MISSION_CREATOR_REQUIRED');
+  }
+
+  // Avoid creating even an orphaned Storage object for a mission which the
+  // governed pipeline would reject. Repeat these checks transactionally later:
+  // this early gate protects Storage, but is NOT the final realm authority.
+  const realmSnap = await db.collection('mission_realms').doc(request.missionId).get();
+  if (!realmSnap.exists) {
+    if (request.allowForceCreate !== true) throw new Error('FORCE_PIPELINE_MISSION_MISSING');
+  } else {
+    const realm = realmSnap.data() || {};
+    const gate = realm.visibilityGate || {};
+    const legacy = realm.visibility || {};
+    if (realm.authorityKey !== request.authorityKey ||
+        (realm.missionId && realm.missionId !== request.missionId)) {
+      throw new Error('FORCE_PIPELINE_MISSION_AUTHORITY_MISMATCH');
+    }
+    if (realm.studentVisible === true || realm.catalogVisible === true ||
+        realm.userPanelVisible === true || realm.cardVisible === true ||
+        realm.catalogDiscoverable === true || realm.visibility === 'PUBLIC' ||
+        gate.studentVisible === true || gate.catalogVisible === true ||
+        gate.userPanelVisible === true || gate.cardVisible === true ||
+        legacy.studentVisible === true || legacy.catalogVisible === true ||
+        legacy.userPanelVisible === true || legacy.cardVisible === true) {
+      throw new Error('FORCE_PIPELINE_STUDENT_VISIBILITY_FORBIDDEN');
+    }
+  }
 
   const finalizedBase = await finalizeOfficialSource({
     storage,
