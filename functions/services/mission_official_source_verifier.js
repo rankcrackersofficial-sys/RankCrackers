@@ -22,6 +22,8 @@ async function verifyOfficialSource({ storage, source, preflight = preflightSour
   const cycleKey = requiredString(source.cycleKey, 'CYCLE_KEY_REQUIRED');
   const authorityKey = requiredString(source.authorityKey, 'AUTHORITY_KEY_REQUIRED');
   const sourceType = requiredString(source.sourceType, 'OFFICIAL_SOURCE_TYPE_REQUIRED');
+  const language = requiredString(source.language, 'OFFICIAL_SOURCE_LANGUAGE_EVIDENCE_REQUIRED').toLowerCase();
+  if (!['en','eng','english'].includes(language)) throw new Error('OFFICIAL_SOURCE_LANGUAGE_EVIDENCE_UNSUPPORTED');
   const storagePath = requiredString(source.storagePath, 'OFFICIAL_SOURCE_STORAGE_PATH_REQUIRED');
   const expectedPath = `mission_realms/${missionId}/official_documents/${source.documentId}/source.pdf`;
   if (storagePath !== expectedPath || storagePath.includes('..')) throw new Error('OFFICIAL_SOURCE_STORAGE_PATH_MISMATCH');
@@ -50,7 +52,7 @@ async function verifyOfficialSource({ storage, source, preflight = preflightSour
     verificationState: 'verified',
     governanceStatus: 'ACTIVE',
     isOfficial: true,
-    language: source.language || 'english',
+    language,
     boundMissionId: missionId,
     boundCycleKey: cycleKey,
   };
