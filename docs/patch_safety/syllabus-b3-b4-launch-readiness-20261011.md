@@ -44,6 +44,6 @@ This is a code-and-test assessment. The downstream book is not an authority sour
 ## Verification recorded
 
 - Branch base is the canonical-mission remediation PR branch; this branch remains a draft preparation branch.
-- B4 authority parser tests and new queue/SHA/CGL-schema tests are committed; the repository checkout and Firebase test runtime are not available in this session, so the new tests have not been executed here.
-- No deployment was performed. Verify CI status against the current branch head before treating any test as passed.
-- The branch is not launch-ready until the remaining source-pair coordinator, PDF extraction, B3/B4 orchestration, deployed exports and emulator end-to-end gates above have passing evidence.
+- The new pure queue/SHA authority tests (5 cases) and SSC CGL schema-selector tests (3 cases) passed in isolation from the exact committed branch files: 8/8 assertions, 0 failures. This did not compile the complete Functions project or run Firebase emulators.
+- No deployment was performed. The session has no repository checkout, Firebase CLI, or configured production deploy path; no GitHub Actions run is associated with this head.
+- The branch is not launch-ready until source-pair coordination, PDF fact extraction, page-count dispatch, governed B3/B4 orchestration, deployed exports and emulator end-to-end gates have passing evidence.
