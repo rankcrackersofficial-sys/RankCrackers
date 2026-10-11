@@ -82,9 +82,9 @@ test('coordinator fails closed on revoked, mismatched and partial replay', async
   const mutations = [
     h => { h.docs.get(h.plan.pairRef).status = 'REVOKED'; },
     h => { h.docs.get(h.plan.pairRef).status = 'FAILED'; },
-    h => { h.docs.get(h.plan.pairRef).sources.notification.storagePath = 'tampered'; },
-    h => { h.docs.get(h.plan.queueRef).payload.notificationDocumentId = 'tampered'; },
-    h => { h.docs.get(h.plan.queueRef).payload.syllabusStoragePath = 'tampered'; },
+    h => { const p = h.docs.get(h.plan.pairRef); h.docs.set(h.plan.pairRef, { ...p, sources: { ...p.sources, notification: { ...p.sources.notification, storagePath: 'tampered' } } }); },
+    h => { const q = h.docs.get(h.plan.queueRef); h.docs.set(h.plan.queueRef, { ...q, payload: { ...q.payload, notificationDocumentId: 'tampered' } }); },
+    h => { const q = h.docs.get(h.plan.queueRef); h.docs.set(h.plan.queueRef, { ...q, payload: { ...q.payload, syllabusStoragePath: 'tampered' } }); },
     h => { h.docs.delete(h.plan.pairRef); },
     h => { h.docs.delete(h.plan.queueRef); },
     h => { h.docs.get(h.plan.pairRef).status = 'DISPATCHED'; },
