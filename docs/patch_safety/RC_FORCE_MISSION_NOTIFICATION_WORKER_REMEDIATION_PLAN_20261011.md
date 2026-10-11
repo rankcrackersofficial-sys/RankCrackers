@@ -1,3 +1,5 @@
+> **SUPERSEDED 2026-10-11:** This earlier notification-only preparation plan is obsolete. The current contract requires Codex to upload both official notification and official syllabus before the AI Worker processes either. Use the canonical-base implementation branch and its refined contract: https://github.com/rankcrackersofficial-sys/RankCrackers/blob/codex/force-mission-docs-ai-worker-20261011/docs/patch_safety/RC_FORCE_MISSION_NOTIFICATION_WORKER_REMEDIATION_PLAN_20261011.md
+
 # Force-Created Mission → Official Notification → AI Worker Form: Remediation Plan
 
 **Status:** implementation preparation only; no runtime code changed  
