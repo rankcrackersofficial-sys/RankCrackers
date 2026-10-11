@@ -15,6 +15,7 @@
     "test:academic-handoff": "node --experimental-vm-modules node_modules/jest/bin/jest.js test/governed_academic_handoff/governed_academic_handoff.test.js",
     "test:mission-source-pair": "node --test test/test_mission_official_source_pair.js",
     "test:mission-source-staging": "node --test test/test_mission_official_source_staging.js",
+    "test:mission-codex-invocation": "node --test test/test_mission_official_source_codex_invocation.js",
     "test:mission-shell-bootstrap": "node test/test_mission_shell_bootstrap.js",
     "test:ssc-cgl-notification-schema": "node --test test/ssc_cgl_notification_schema.test.js",
     "test:ingestion-authority": "node --test test/ingestion_execution_authority.test.js"
