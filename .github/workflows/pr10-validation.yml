@@ -40,6 +40,7 @@ jobs:
           npm run test:mission-neutral-projection
           npm run test:android-release-signing-governance
           npm run test:firestore-rule-dedup-profile-safety
+          npm run test:secure-asset-scope
           npm run test:mission-storage-rules-scope
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
