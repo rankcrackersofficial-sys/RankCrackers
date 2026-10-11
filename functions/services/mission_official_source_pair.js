@@ -29,7 +29,10 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
   const documentId = requiredString(source.documentId || source.id, 'OFFICIAL_SOURCE_ID_REQUIRED');
   const storagePath = requiredString(source.storagePath, 'OFFICIAL_SOURCE_STORAGE_PATH_REQUIRED');
   const safePrefix = `mission_realms/${missionId}/official_documents/`;
-  if (!storagePath.startsWith(safePrefix) || storagePath.includes('..')) {
+  const canonicalRolePath = `${safePrefix}${documentId}/source.pdf`;
+  const embeddedSharedPath = source.embeddedFromDocumentId
+    ? `${safePrefix}${source.embeddedFromDocumentId}/source.pdf` : null;
+  if ((storagePath !== canonicalRolePath && storagePath !== embeddedSharedPath) || storagePath.includes('..')) {
     throw new Error('OFFICIAL_SOURCE_STORAGE_PATH_MISMATCH');
   }
 
