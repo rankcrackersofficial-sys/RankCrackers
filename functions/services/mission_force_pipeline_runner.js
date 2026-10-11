@@ -5,7 +5,6 @@ const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const { verifySha256Hex } = require('./mission_source_preflight');
 
 const RUNNER_ACTOR = 'mission_force_pipeline_runner_v1';
-const SSC_CGL = Object.freeze({ missionId: 'ssc_cgl', authorityKey: 'auth_in_ssc', jurisdictionLevel: 'CENTRAL', syllabusBindingMode: 'EMBEDDED' });
 
 function required(value, code) { if (typeof value !== 'string' || !value.trim()) throw new Error(code); return value.trim(); }
 
@@ -64,4 +63,4 @@ async function executeAuthorizedForcePipeline({ request, resolveMission, createH
   return Object.freeze({ missionId: plan.missionId, cycleKey: plan.cycleKey, missionState, sourceState: 'VERIFIED', pairResult, studentVisible: false });
 }
 
-module.exports = { RUNNER_ACTOR, SSC_CGL, buildRunnerRequest, verifyServerSource, executeAuthorizedForcePipeline };
+module.exports = { RUNNER_ACTOR, buildRunnerRequest, verifyServerSource, executeAuthorizedForcePipeline };
