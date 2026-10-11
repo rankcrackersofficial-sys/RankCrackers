@@ -32,8 +32,22 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   ]);
   if (!realmSnap.exists) throw new Error('PAIR_CONSUMER_REALM_NOT_FOUND');
   const realm = realmSnap.data() || {};
-  if (realm.studentVisible === true || realm.visibility === 'PUBLIC') throw new Error('PAIR_CONSUMER_STUDENT_VISIBILITY_FORBIDDEN');
+  const gate = realm.visibilityGate || {};
+  const legacy = realm.visibility || {};
+  if (realm.studentVisible === true || realm.catalogVisible === true || realm.userPanelVisible === true
+      || realm.cardVisible === true || realm.catalogDiscoverable === true || realm.visibility === 'PUBLIC'
+      || gate.studentVisible === true || gate.catalogVisible === true || gate.userPanelVisible === true
+      || gate.cardVisible === true || legacy.studentVisible === true || legacy.catalogVisible === true
+      || legacy.userPanelVisible === true || legacy.cardVisible === true) {
+    throw new Error('PAIR_CONSUMER_STUDENT_VISIBILITY_FORBIDDEN');
+  }
   if (!notificationSnap.exists || !syllabusSnap.exists) throw new Error('PAIR_CONSUMER_DOCUMENT_MISSING');
+  for (const record of [notificationSnap.data() || {}, syllabusSnap.data() || {}]) {
+    if (record.status !== 'VERIFIED' || record.verificationState !== 'verified'
+        || record.governanceStatus !== 'ACTIVE' || record.verifiedBy !== 'mission_source_pair_verifier_v1') {
+      throw new Error('PAIR_CONSUMER_SOURCE_TRUST_INVALID');
+    }
+  }
   const pair = assertVerifiedOfficialSourcePair({
     missionId, cycleKey: required(payload.cycleKey, 'PAIR_CONSUMER_CYCLE_REQUIRED'),
     authorityKey: required(payload.authorityKey, 'PAIR_CONSUMER_AUTHORITY_REQUIRED'),
