@@ -206,7 +206,8 @@ export const genericB4Worker = functions.firestore
         runId,
         authorizedScope
       };
-      const atomicNodes = await workerInstance.decomposeSyllabus(input, firestore);
+      const derivedNodes = await workerInstance.decomposeSyllabus(input, firestore);
+      if (derivedNodes.length > 450) throw new Error('DSD_REVIEW_CANDIDATE_BATCH_TOO_LARGE');
 
       await firestore.runTransaction(async (transaction) => {
         const doc = await transaction.get(taskRef);
@@ -218,17 +219,18 @@ export const genericB4Worker = functions.firestore
           return;
         }
 
-        for (const node of atomicNodes) {
+        for (const node of derivedNodes) {
           const nodeRef = db.collection('mission_realms')
             .doc(node.missionId)
-            .collection('atomic_syllabus')
-            .doc(node.atomicNodeId); // Use atomicNodeId
-          transaction.set(nodeRef, node);
+            .collection('derived_syllabus_candidates')
+            .doc(node.nodeId);
+          transaction.set(nodeRef, node, { merge: false });
         }
 
         transaction.update(taskRef, {
-          status: 'completed',
-          completed_at: admin.firestore.FieldValue.serverTimestamp(),
+          status: 'review_required',
+          reviewState: 'PENDING_FACULTY_REVIEW',
+          outputCount: derivedNodes.length,
           updatedAt: admin.firestore.FieldValue.serverTimestamp()
         });
       });
