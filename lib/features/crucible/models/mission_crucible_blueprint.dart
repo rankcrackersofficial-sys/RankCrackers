@@ -101,9 +101,9 @@ class MissionCrucibleBlueprint extends Equatable {
   final int hoursPerSchedule; // e.g. 48
   final int learningHoursPerSchedule; // e.g. 47
   final int microHoursPerSchedule; // e.g. 1
-  final int rebuildDurationHours; // e.g. 23
-  final int macroDurationHours; // e.g. 2
-  final int recoveryDurationHours; // e.g. 23
+  final int rebuildDurationHours; // Founder-locked inter-block Rebuild window
+  final int macroDurationHours; // Founder-locked Macro window
+  final int recoveryDurationHours; // 0 when next schedule starts immediately after Macro
   final SmartEntryBlueprint smartEntryBlueprint;
   final MicroPolicy microPolicy;
   final MacroPolicy macroPolicy;
@@ -139,9 +139,9 @@ class MissionCrucibleBlueprint extends Equatable {
     hoursPerSchedule: 48,
     learningHoursPerSchedule: 47,
     microHoursPerSchedule: 1,
-    rebuildDurationHours: 24, // Exact 1 calendar day (24h)
-    macroDurationHours: 2, // 120 minutes assessment
-    recoveryDurationHours: 22, // 22h non-exclusive post-test buffer (2h + 22h = 24h calendar day)
+    rebuildDurationHours: 47, // After Micro-6: continuous Rebuild until the final pre-Macro hour
+    macroDurationHours: 1, // 60-minute Macro boundary
+    recoveryDurationHours: 0, // No recovery gap: next schedule starts immediately after Macro
     smartEntryBlueprint: SmartEntryBlueprint(
       domainIds: ['physics', 'chemistry', 'mathematics'],
       calibrationItemsPerDomain: 5,
@@ -161,7 +161,7 @@ class MissionCrucibleBlueprint extends Equatable {
     ),
     macroPolicy: MacroPolicy(
       attemptQuestionCount: 50,
-      attemptDurationMinutes: 120,
+      attemptDurationMinutes: 60,
       minimumVerifiedPhaseBankDepth: 100,
       schedulesIntegrated: 6,
     ),
