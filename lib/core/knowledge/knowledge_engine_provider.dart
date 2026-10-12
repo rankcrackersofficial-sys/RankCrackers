@@ -9,25 +9,30 @@ final knowledgeEngineProvider = ChangeNotifierProvider<KnowledgeEngine>((ref) {
   return KnowledgeEngine.instance;
 });
 
+/// Keeps the singleton engine's cached graph from leaking across mission switches.
+List<MicroTopicNode> missionScopedCachedNodes({
+  required String selectedExamId,
+  required String? engineExamId,
+  required List<MicroTopicNode> cachedNodes,
+}) {
+  if (selectedExamId.isEmpty || engineExamId != selectedExamId) {
+    return <MicroTopicNode>[];
+  }
+  return cachedNodes.where((node) => node.examId == selectedExamId).toList();
+}
+
 /// LIVE SYLLABUS PROVIDER (G2 Alignment)
 /// Streams syllabus nodes directly from Firestore based on the active exam.
 final liveNodesProvider = StreamProvider<List<MicroTopicNode>>((ref) {
-  final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
-  final examId = sessionUser?.examId;
-  
-  if (examId == null || examId.isEmpty) {
+  final examId = ref.watch(activeSessionUserProvider).examId;
+
+  if (examId.isEmpty) {
     return Stream.value(<MicroTopicNode>[]);
   }
-  
-  return FirestoreService.streamNodesByExam(examId).map((nodes) {
-    return nodes.where((node) {
-      final status = node.status.toLowerCase();
-      final isPublished = status == 'published' || status == 'active' || status == 'live' || status.isEmpty;
-      // Strict Paper-1 Scope for JEE
-      final isPaper1 = node.examId != 'jee_main_2026' || node.paperId == 'PAPER_1' || node.paperId.isEmpty;
-      return isPublished && isPaper1;
-    }).toList();
-  });
+
+  // This is the same activated, mission-scoped projection written by the
+  // governed B3/B4 cutover worker. Never substitute global legacy nodes.
+  return FirestoreService.streamStudentNodesByMission(examId);
 });
 
 final allNodesProvider = Provider<List<MicroTopicNode>>((ref) {
@@ -35,8 +40,13 @@ final allNodesProvider = Provider<List<MicroTopicNode>>((ref) {
   final liveNodes = ref.watch(liveNodesProvider).valueOrNull;
   if (liveNodes != null && liveNodes.isNotEmpty) return liveNodes;
 
+  final selectedExamId = ref.watch(activeSessionUserProvider).examId;
   final engine = ref.watch(knowledgeEngineProvider);
-  return engine.allNodes;
+  return missionScopedCachedNodes(
+    selectedExamId: selectedExamId,
+    engineExamId: engine.activeRecruitment?.examId,
+    cachedNodes: engine.allNodes,
+  );
 });
 
 final nodeStatesProvider = Provider<Map<String, NodeRuntimeState>>((ref) {

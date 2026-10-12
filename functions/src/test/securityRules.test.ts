@@ -234,4 +234,63 @@ describe('FIRESTORE SECURITY RULES (Tactical Protocol)', () => {
     const founderDb = testEnv.authenticatedContext('founder-123', { founder: true }).firestore();
     await testing.assertSucceeds(founderDb.collection('micro_nodes').doc('synth_ff01_founder').get());
   });
+
+  test('🛡️ Student syllabus: only the atomically active projection epoch is readable', async () => {
+    await testEnv.withSecurityRulesDisabled(async (ctx) => {
+      const realm = ctx.firestore().collection('mission_realms').doc('mission-alpha');
+      await realm.set({
+        userPanelVisible: true,
+        archived: false,
+        studentProjectionActivationEpoch: 8,
+      });
+      await realm.collection('structured_nodes').doc('current-topic').set({
+        id: 'current-topic',
+        activationEpoch: 8,
+        canonicalTitle: 'Current topic',
+      });
+      await realm.collection('structured_nodes').doc('stale-topic').set({
+        id: 'stale-topic',
+        activationEpoch: 7,
+        canonicalTitle: 'Stale topic',
+      });
+      await realm.collection('structured_nodes').doc('unactivated-b3-node').set({
+        id: 'unactivated-b3-node',
+        canonicalTitle: 'Raw B3 structure',
+      });
+    });
+
+    const studentDb = testEnv.authenticatedContext('student-123').firestore();
+    const nodes = studentDb
+        .collection('mission_realms')
+        .doc('mission-alpha')
+        .collection('structured_nodes');
+
+    await testing.assertSucceeds(nodes.doc('current-topic').get());
+    await testing.assertFails(nodes.doc('stale-topic').get());
+    await testing.assertFails(nodes.doc('unactivated-b3-node').get());
+
+    const activeQuery = await testing.assertSucceeds(
+      nodes.where('activationEpoch', '==', 8).get(),
+    );
+    expect(activeQuery.docs.map((doc) => doc.id), ['current-topic']);
+  });
+
+  test('🛡️ Student syllabus: visible mission without an activated projection exposes no raw nodes', async () => {
+    await testEnv.withSecurityRulesDisabled(async (ctx) => {
+      const realm = ctx.firestore().collection('mission_realms').doc('mission-beta');
+      await realm.set({ userPanelVisible: true, archived: false });
+      await realm.collection('structured_nodes').doc('raw-node').set({
+        id: 'raw-node',
+        canonicalTitle: 'Not cut over',
+      });
+    });
+
+    const studentDb = testEnv.authenticatedContext('student-123').firestore();
+    const rawNode = studentDb
+        .collection('mission_realms')
+        .doc('mission-beta')
+        .collection('structured_nodes')
+        .doc('raw-node');
+    await testing.assertFails(rawNode.get());
+  });
 });

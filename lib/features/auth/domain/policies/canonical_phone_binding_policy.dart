@@ -77,6 +77,16 @@ class CanonicalPhoneBindingPolicy {
     return null;
   }
 
+  /// Requires editable profile input to match the phone already verified by Firebase Auth.
+  static bool inputMatchesVerifiedPhone({
+    required String? rawInput,
+    required String? verifiedPhone,
+  }) {
+    final input = normalizeE164Phone(rawInput);
+    final verified = normalizeE164Phone(verifiedPhone);
+    return input != null && verified != null && input == verified;
+  }
+
   /// Single Phone Masking Law:
   /// Standard Student-safe display format: `+91 ******1234`
   static String maskPhone(String? phone) {

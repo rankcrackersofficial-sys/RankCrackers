@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import '../../data/india_states.dart';
@@ -14,6 +15,7 @@ import '../models/atomic_risk_state.dart';
 import '../models/sentinel_draft.dart';
 import '../models/notification_candidate.dart';
 import '../../features/profile/data/models/user_profile_model.dart';
+import '../../features/syllabus/data/structured_syllabus_mapper.dart';
 import '../constants/founder_identity.dart';
 
 class FirestoreService {
@@ -754,15 +756,66 @@ class FirestoreService {
   static Stream<List<Map<String, dynamic>>> streamStructuredNodes(
     String missionId,
   ) {
-    return _firestore
-        .collection('mission_realms')
-        .doc(missionId)
-        .collection('structured_nodes')
-        .snapshots()
-        .map(
-          (snap) =>
-              snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList(),
+    final controller = StreamController<List<Map<String, dynamic>>>();
+    final missionRef =
+        _firestore.collection(missionRealmCollection).doc(missionId);
+    final nodesRef = missionRef.collection('structured_nodes');
+    StreamSubscription<DocumentSnapshot<Map<String, dynamic>>>? missionSub;
+    StreamSubscription<QuerySnapshot<Map<String, dynamic>>>? nodesSub;
+    var generation = 0;
+
+    missionSub = missionRef.snapshots().listen(
+      (missionSnapshot) async {
+        final currentGeneration = ++generation;
+        await nodesSub?.cancel();
+        nodesSub = null;
+        if (controller.isClosed || currentGeneration != generation) return;
+
+        final activationEpoch =
+            missionSnapshot.data()?['studentProjectionActivationEpoch'];
+        if (!missionSnapshot.exists || activationEpoch is! int) {
+          controller.add(<Map<String, dynamic>>[]);
+          return;
+        }
+
+        nodesSub = nodesRef
+            .where('activationEpoch', isEqualTo: activationEpoch)
+            .snapshots()
+            .listen(
+          (snapshot) {
+            if (controller.isClosed || currentGeneration != generation) return;
+            controller.add(
+              snapshot.docs
+                  .map((doc) => {'id': doc.id, ...doc.data()})
+                  .toList(),
+            );
+          },
+          onError: controller.addError,
         );
+      },
+      onError: controller.addError,
+    );
+
+    controller.onCancel = () async {
+      generation++;
+      await nodesSub?.cancel();
+      await missionSub?.cancel();
+    };
+    return controller.stream;
+  }
+
+  /// Student syllabus source: only the current, activated mission projection.
+  /// Legacy global micro_nodes remain available to old tools but are not used
+  /// as a Student Panel syllabus fallback.
+  static Stream<List<MicroTopicNode>> streamStudentNodesByMission(
+    String missionId,
+  ) {
+    return streamStructuredNodes(missionId).map(
+      (documents) => StructuredSyllabusMapper.toStudentNodes(
+        missionId: missionId,
+        documents: documents,
+      ),
+    );
   }
 
   // ===================================================

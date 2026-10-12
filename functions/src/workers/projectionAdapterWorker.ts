@@ -66,6 +66,16 @@ export async function projectSyllabusToStudentReader(
     }
   }
 
+  // Keep publication atomic: one Firestore batch contains at most 499 node
+  // writes plus the active mission pointer. Oversized projections fail closed.
+  if (projections.length > 499) {
+    return {
+      success: false,
+      projectedNodesCount: 0,
+      status: 'PROJECTION_TOO_LARGE_FOR_ATOMIC_CUTOVER'
+    };
+  }
+
   const batch = db.batch();
   for (const projection of projections) {
     batch.set(structuredRef.doc(projection.nodeId), {
@@ -74,6 +84,12 @@ export async function projectSyllabusToStudentReader(
     }, { merge: true });
   }
   const count = projections.length;
+  batch.set(slotRef.parent.parent!, {
+    studentProjectionActivationEpoch: request.activationEpoch,
+    studentProjectionSourceVersionId: request.sourceVersionId,
+    studentProjectionSourceSha256: request.sourceSha256,
+    studentProjectionActivatedAt: FieldValue.serverTimestamp()
+  }, { merge: true });
   await batch.commit();
 
   return { success: true, projectedNodesCount: count, status: 'STUDENT_READER_CUTOVER_COMPLETE' };

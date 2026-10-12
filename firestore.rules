@@ -24,7 +24,15 @@ service cloud.firestore {
           );
     }
 
-    // 🔱 GOVERNED DIGIBOOK PUBLICATION CONTRACT
+function isCurrentStudentSyllabusProjection(realmId, data) {
+      let mission = get(/databases/$(database)/documents/mission_realms/$(realmId)).data;
+      return data != null
+          && data.keys().hasAny(['activationEpoch'])
+          && data.activationEpoch is int
+          && mission.get('studentProjectionActivationEpoch', -1) == data.activationEpoch;
+    }
+
+        // 🔱 GOVERNED DIGIBOOK PUBLICATION CONTRACT
     function isGovernedStudentReadable(data) {
       return request.auth != null &&
              data != null &&
@@ -132,7 +140,12 @@ service cloud.firestore {
       }
 
       match /structured_nodes/{nodeId} {
-        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        // Raw B3 nodes stay hidden until the governed projection atomically
+        // publishes their activation epoch on the mission realm.
+        allow read: if isFounder() || (
+          isStudentVisibleMission(realmId)
+          && isCurrentStudentSyllabusProjection(realmId, resource.data)
+        );
         allow write: if isFounder();
       }
 

@@ -17,6 +17,7 @@ import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
+import 'package:rank_crackers/features/auth/domain/policies/canonical_phone_binding_policy.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -74,8 +75,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             .child('${user.uid}.jpg');
         await storageRef.putFile(File(image.path));
         final url = await storageRef.getDownloadURL();
-        await SessionManager.saveStudentPhoto(url);
+        await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+          'photoUrl': url,
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
         await user.updatePhotoURL(url);
+        await SessionManager.saveStudentPhoto(url);
         if (!mounted) return;
         ref.invalidate(sessionUserProvider);
         ScaffoldMessenger.of(context).showSnackBar(
@@ -112,17 +117,31 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
           TextButton(
             onPressed: () async {
-              if (controller.text.isEmpty) return;
+              final name = controller.text.trim();
+              if (name.isEmpty) return;
               final user = FirebaseAuth.instance.currentUser;
-              if (user != null) {
-                await user.updateDisplayName(controller.text);
-                await SessionManager.saveStudentName(controller.text);
-                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
-                  'name': controller.text,
+              if (user == null) return;
+              try {
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(user.uid)
+                    .update({
+                  'name': name,
+                  'updatedAt': FieldValue.serverTimestamp(),
                 });
+                await user.updateDisplayName(name);
+                await SessionManager.saveStudentName(name);
                 ref.invalidate(sessionUserProvider);
+                if (context.mounted) Navigator.pop(context);
+              } catch (_) {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Profile name could not be saved.'),
+                    ),
+                  );
+                }
               }
-              if (context.mounted) Navigator.pop(context);
             },
             child: const Text("SAVE", style: TextStyle(color: AppColors.gold)),
           ),
@@ -167,16 +186,46 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
           TextButton(
             onPressed: () async {
-              if (controller.text.isEmpty) return;
               final user = FirebaseAuth.instance.currentUser;
-              if (user != null) {
-                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
-                  'phone': controller.text,
-                });
-                await SessionManager.saveStudentMobile(controller.text);
-                ref.invalidate(sessionUserProvider);
+              final verifiedPhone =
+                  CanonicalPhoneBindingPolicy.canonicalVerifiedPhone(user);
+              if (user == null ||
+                  !CanonicalPhoneBindingPolicy.inputMatchesVerifiedPhone(
+                    rawInput: controller.text,
+                    verifiedPhone: verifiedPhone,
+                  )) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      'Use the mobile number verified with this account.',
+                    ),
+                  ),
+                );
+                return;
               }
-              if (context.mounted) Navigator.pop(context);
+
+              try {
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(user.uid)
+                    .update({
+                  'mobile': verifiedPhone,
+                  'updatedAt': FieldValue.serverTimestamp(),
+                });
+                await SessionManager.saveStudentMobile(
+                  verifiedPhone!.substring(3),
+                );
+                ref.invalidate(sessionUserProvider);
+                if (context.mounted) Navigator.pop(context);
+              } catch (_) {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Mobile number could not be saved.'),
+                    ),
+                  );
+                }
+              }
             },
             child: const Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
           ),
