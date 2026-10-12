@@ -36,11 +36,12 @@ test.before(async () => {
       await setDoc(realm, {
         missionId: id, archived: false, cardVisible: visible,
         userPanelVisible: false,
+        ...(visible ? { studentProjectionActivationEpoch: 1 } : {}),
         visibilityGate: { studentVisible: visible, userPanelVisible: false },
       });
       for (const collectionName of ['structured_nodes', 'timeline', 'updates']) {
         await setDoc(doc(db, 'mission_realms', id, collectionName, 'one'),
-          { missionId: id, status: 'draft', content: 'Founder review pending' });
+          { missionId: id, status: 'draft', content: 'Founder review pending', ...(collectionName === 'structured_nodes' && visible ? { activationEpoch: 1 } : {}) });
       }
     }
     await setDoc(doc(db, 'mission_realms/m_hidden/official_documents/doc1'), {
