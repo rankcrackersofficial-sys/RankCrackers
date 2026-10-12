@@ -1,18 +1,75 @@
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-/// Fail-closed invitation entry.
+/// Secure Admin invitation acceptance screen.
 ///
-/// The existing manageUserAccess callable implements role grants/revocations,
-/// not invitation validation/acceptance. Until the backend has an authenticated,
-/// one-time invitation contract, this screen must never reveal bearer tokens,
-/// claim an invitation was accepted, or grant access on the client.
-class AdminInviteScreen extends StatelessWidget {
+/// Plaintext bearer tokens are never disclosed in the UI or written to logs.
+/// Acceptance is cryptographically verified by the server-side callable.
+class AdminInviteScreen extends StatefulWidget {
   final String token;
   const AdminInviteScreen({super.key, required this.token});
 
   @override
+  State<AdminInviteScreen> createState() => _AdminInviteScreenState();
+}
+
+class _AdminInviteScreenState extends State<AdminInviteScreen> {
+  bool _loading = false;
+  bool _accepted = false;
+  String? _errorMessage;
+  List<String> _grantedScopes = const [];
+
+  Future<void> _handleAccept() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      setState(() {
+        _errorMessage = 'Authentication required. Sign in with your authorized email first.';
+      });
+      return;
+    }
+
+    setState(() {
+      _loading = true;
+      _errorMessage = null;
+    });
+
+    try {
+      final callable = FirebaseFunctions.instance.httpsCallable('acceptAdminInvite');
+      final result = await callable.call<Map<String, dynamic>>({
+        'token': widget.token.trim(),
+      });
+      final data = result.data;
+      final scopes = (data['scopes'] as List? ?? []).cast<String>();
+
+      if (mounted) {
+        setState(() {
+          _accepted = true;
+          _grantedScopes = scopes;
+        });
+      }
+    } on FirebaseFunctionsException catch (e) {
+      if (mounted) {
+        setState(() {
+          _errorMessage = e.message ?? e.code;
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _errorMessage = e.toString();
+        });
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _loading = false);
+      }
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final hasInvite = token.trim().isNotEmpty;
+    final hasInvite = widget.token.trim().isNotEmpty;
     return Scaffold(
       backgroundColor: const Color(0xFF070A12),
       body: Center(
@@ -23,26 +80,72 @@ class AdminInviteScreen extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Icon(Icons.verified_user_outlined,
-                    size: 42, color: Color(0xFFB39B5D)),
+                Icon(
+                  _accepted ? Icons.check_circle_outline : Icons.verified_user_outlined,
+                  size: 42,
+                  color: _accepted ? Colors.green : const Color(0xFFB39B5D),
+                ),
                 const SizedBox(height: 16),
-                const Text('Secure Admin Invitation',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20)),
-                const SizedBox(height: 12),
-                Text(
-                  hasInvite
-                      ? 'Invitation acceptance is unavailable until secure server verification is enabled. Contact the Founder.'
-                      : 'A valid invitation link is required. Contact the Founder.',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(color: Colors.white70, fontSize: 13),
+                const Text(
+                  'Secure Admin Invitation',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
                 ),
                 const SizedBox(height: 12),
-                const Text('No invitation has been accepted and no access has been granted.',
+                if (!_accepted) ...[
+                  Text(
+                    hasInvite
+                        ? 'Single-use invitation token detected. Secure server verification is required to activate Admin privileges.'
+                        : 'A valid invitation link is required. Contact the Founder.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white54, fontSize: 12)),
+                    style: const TextStyle(color: Colors.white70, fontSize: 13),
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'No invitation has been accepted and no access has been granted.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.white54, fontSize: 12),
+                  ),
+                  if (hasInvite) ...[
+                    const SizedBox(height: 24),
+                    if (_loading)
+                      const CircularProgressIndicator(color: Color(0xFFB39B5D))
+                    else
+                      ElevatedButton(
+                        onPressed: _handleAccept,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFB39B5D),
+                          foregroundColor: Colors.black,
+                          minimumSize: const Size(double.infinity, 44),
+                        ),
+                        child: const Text('ACCEPT INVITATION',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ),
+                  ],
+                  if (_errorMessage != null) ...[
+                    const SizedBox(height: 16),
+                    Text(
+                      _errorMessage!,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(color: Colors.redAccent, fontSize: 12),
+                    ),
+                  ],
+                ] else ...[
+                  const Text(
+                    'Invitation Accepted: Admin privileges activated.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.greenAccent, fontSize: 14, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 12),
+                  Text(
+                    'Explicit scopes assigned: ${_grantedScopes.join(", ")}',
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                  ),
+                ],
               ],
             ),
           ),

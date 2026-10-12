@@ -188,3 +188,35 @@ test('Student-owned users profile cannot self-grant Admin permissions', async ()
     permissions: { 'mission.view': true },
   }));
 });
+
+test('admin_invitations collection fails closed for Students and is read-only for Founders', async () => {
+  const inviteHash = 'a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2';
+  await env.withSecurityRulesDisabled(async context => {
+    const db = context.firestore();
+    await setDoc(doc(db, 'admin_invitations', inviteHash), {
+      inviteHash,
+      targetEmail: 'admin@test.com',
+      role: 'admin',
+      scopes: ['DOCUMENTS_VIEW'],
+      redeemed: false,
+    });
+  });
+
+  const unauth = env.unauthenticatedContext().firestore();
+  const student = env.authenticatedContext('student_attacker', { phone_number: '+919876543212' }).firestore();
+  const founder = env.authenticatedContext('founder_user', { founder: true }).firestore();
+
+  // 1. Unauthenticated reading and writing denied
+  await assertFails(getDoc(doc(unauth, 'admin_invitations', inviteHash)));
+  await assertFails(setDoc(doc(unauth, 'admin_invitations', 'fake_hash'), { role: 'admin' }));
+
+  // 2. Student reading and writing denied
+  await assertFails(getDoc(doc(student, 'admin_invitations', inviteHash)));
+  await assertFails(setDoc(doc(student, 'admin_invitations', 'fake_hash'), { role: 'admin' }));
+  await assertFails(updateDoc(doc(student, 'admin_invitations', inviteHash), { redeemed: true }));
+
+  // 3. Founder reading allowed, but direct client write denied (Admin SDK only)
+  await assertSucceeds(getDoc(doc(founder, 'admin_invitations', inviteHash)));
+  await assertFails(setDoc(doc(founder, 'admin_invitations', 'direct_hash'), { role: 'admin' }));
+  await assertFails(updateDoc(doc(founder, 'admin_invitations', inviteHash), { redeemed: true }));
+});

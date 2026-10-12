@@ -7,8 +7,8 @@ const admin = require("firebase-admin");
 
 admin.initializeApp();
 
-// 🔱 CALLABLE EXPORTS (Founder Command Center)
-const { manageUserAccess } = require("./callable/manage_access");
+const { manageUserAccess, manageAdminScopes } = require("./callable/manage_access");
+const { issueAdminInvite, acceptAdminInvite } = require("./callable/admin_invitations");
 const { toggleAiSystem } = require("./callable/toggle_ai_system");
 const { getSystemHealth } = require("./callable/system_health");
 const { processAITask } = require("./callable/process_ai_task");
@@ -18,6 +18,9 @@ const { getSecureAssetUrl } = require("./callable/secure_download");
 const { setSovereignClaims } = require("./index_legacy"); // Keeping legacy for bootstrapping if needed
 
 exports.manageUserAccess = manageUserAccess;
+exports.manageAdminScopes = manageAdminScopes;
+exports.issueAdminInvite = issueAdminInvite;
+exports.acceptAdminInvite = acceptAdminInvite;
 exports.toggleAiSystem = toggleAiSystem;
 exports.getSystemHealth = getSystemHealth;
 exports.processAITask = processAITask;

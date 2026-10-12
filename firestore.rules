@@ -63,6 +63,14 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    match /admin_invitations/{inviteHash} {
+      // 🔱 ADMIN INVITATION VAULT (P0)
+      // Only readable by Founders. Writes are strictly forbidden to all clients.
+      // Creation and single-use redemption MUST originate from Admin SDK / Cloud Functions.
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
     match /worker_registry/{workerId} {
       allow read, write: if isFounder();
     }
