@@ -39,7 +39,9 @@
     "test:secure-asset-scope": "node --test test/test_secure_asset_scope.js",
     "test:founder-access-mutation-guard": "node --test test/test_founder_access_mutation_guard.js",
     "test:admin-scope-authority": "node --test test/test_admin_scope_authority.js",
-    "test:admin-invitations": "node --test test/test_admin_invitations.js"
+    "test:admin-invitations": "node --test test/test_admin_invitations.js",
+    "test:admin-tasks": "node --test test/test_admin_tasks.js",
+    "test:domain-m-golden-slice": "node --test test/test_domain_m_golden_slice_e2e.js"
   },
   "engines": {
     "node": "22"

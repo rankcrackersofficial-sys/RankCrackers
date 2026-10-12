@@ -52,6 +52,10 @@ jobs:
           npm run test:mission-source-verifier
           npm run test:mission-force-pipeline-runner
           npm run test:mission-force-pipeline-entrypoint
+          npm run test:admin-scope-authority
+          npm run test:admin-invitations
+          npm run test:admin-tasks
+          npm run test:domain-m-golden-slice
 
   founder-web:
     runs-on: ubuntu-latest
