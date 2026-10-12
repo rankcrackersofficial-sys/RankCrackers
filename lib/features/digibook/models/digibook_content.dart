@@ -1,5 +1,5 @@
-import '../../../../core/models/atomic_fact.dart';
-import '../../../../core/models/question_model.dart';
+import 'package:rank_crackers/core/models/atomic_fact.dart';
+import 'package:rank_crackers/core/models/question_model.dart';
 
 /// DIGIBOOK CONTENT PAYLOAD
 /// Decoupled heavy content layer for HyperScale performance.

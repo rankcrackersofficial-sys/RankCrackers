@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/theme/app_colors.dart';
-import '../../../../core/theme/app_typography.dart';
-import '../../../../core/widgets/dark_card.dart';
+import 'package:rank_crackers/core/theme/app_colors.dart';
+import 'package:rank_crackers/core/theme/app_typography.dart';
+import 'package:rank_crackers/core/widgets/dark_card.dart';
 
 class CategoryTile extends StatelessWidget {
   final String category;
