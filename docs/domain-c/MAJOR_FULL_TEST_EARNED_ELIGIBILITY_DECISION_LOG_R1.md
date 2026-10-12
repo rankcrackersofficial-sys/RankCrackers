@@ -1,241 +1,61 @@
-# DOMAIN-C — Global Major / Full Test Earned Eligibility Rulebook R1
+# DOMAIN-C — Earned Major / Full Test Rulebook R2
 
-Status: FOUNDER LOCKED — DOCUMENTATION AUTHORITY; CODE IMPLEMENTATION PENDING
+Status: FOUNDER LOCKED — CANONICAL GOVERNANCE; IMPLEMENTATION VERIFICATION PENDING
 Locked: 2026-10-12
-Scope: Crucible global clock + earned Test Arena Major/Full eligibility
-Code mutation in this change: NO
+Temporal authority: CRUCIBLE_TEMPORAL_CONTRACT_R1.md (content is R2)
 
-## 1. Sovereign-clock law
-There is ONE mission-global Crucible clock. Micro, Macro, Major and Full Test milestones are mission-global events, never personal schedules.
+## Global principle
+Micro, Macro, Major and Full Test operate on one mission-global Crucible clock. No student receives a personal test date.
 
-A learner joining late does not restart, pause, shift or regenerate any event. Event date/time and paper identity are common to every learner in that mission.
+Major/Full are earned higher assessment lanes at selected global Macro junctions. Macro remains the fallback opportunity for a learner who has not earned the higher lane.
 
-The only learner-specific state is an eligibility ledger recording which required governed assessment events the learner actually attempted.
+## Junctions
+There is no exact-30-day rule. Existing Macro junctions are the authority.
 
-NO_PERSONAL_TEST_SCHEDULE = true
-NO_MANUAL_ELIGIBILITY_EXCEPTION = true
-NO_HIGH_SCORE_SHORTCUT = true
-NO_LATE_JOIN_CLOCK_RESET = true
+- Phase-2 Macro / Day 29 08:00-10:00: Macro fallback + Major-1 opportunity.
+- Phase-4 Macro / Day 57 08:00-10:00: Macro fallback + Major-2 opportunity.
+- Phase-7 Macro / Day 99 08:00-10:00: Macro fallback + Major-3 opportunity + Full-Test opportunity.
 
-## 2. Crucible base cadence
-One orbit = 98 days = seven 14-day phases.
+## Eligibility philosophy
+Eligibility is deterministic and universal.
+Time/account age alone is insufficient.
+High marks do not create a shortcut.
+A governed submitted/auto-submitted eligible attempt counts; merely opening a test does not.
+Late joiners never receive reconstructed historical events.
 
-Each phase:
-- 6 normal schedules × 48h = 288h.
-- each schedule = 47h Learning + 1h Micro.
-- after Micro-6 = 47h Rebuild + 1h Macro.
-- phase = 336h = 14 days.
-- no separate Recovery window.
+The exact numeric cumulative Micro/Macro participation thresholds for R2 higher-test eligibility remain IMPLEMENTATION-PENDING and MUST NOT silently inherit the superseded R1 Day-28/56/84 threshold table.
 
-One orbit therefore contains:
-- 42 Micro events;
-- 7 Macro events;
-- 7 phase boundaries.
+Locked progression dependency:
+- Major-1 requires sufficient prior Micro + Macro participation under the final versioned threshold.
+- Major-2 requires sufficient cumulative Micro + Macro participation and prior Major-1 attempt.
+- At the final junction, Full Test requires sufficient cumulative Micro + Macro participation AND both prior Major-1 and Major-2 attempts AND full-paper authority/content readiness.
+- A learner who is not Full-eligible but satisfies the governed Major lane may take Major-3.
+- A learner who is not Major-eligible takes Macro.
 
-## 3. Global Major schedule
-Major Tests are cumulative milestone assessments and belong operationally to Test Arena, but their global milestone is declared by the Crucible clock from Day 1.
+## Final-junction lane selection
+FULL_ELIGIBLE -> Full Test.
+else MAJOR_ELIGIBLE -> Major-3.
+else -> Macro.
 
-R1 Major milestones:
-- MAJOR-1: after Phase 2 / Day 28 boundary.
-- MAJOR-2: after Phase 4 / Day 56 boundary.
-- MAJOR-3: after Phase 6 / Day 84 boundary.
+These are parallel eligibility lanes attached to the same sovereign junction, not sequential tests.
 
-Major paper scope is cumulative verified + actually taught mission coverage through its milestone. Major is NOT automatically the official full-paper geometry.
+## Opportunity law
+RankCrackers does not artificially ration governed assessment opportunities. Every active learner at a selected escalation junction has an applicable assessment lane. Higher-stakes access is earned; assessment opportunity is preserved.
 
-## 4. Earned Major eligibility
-A learner may sit a scheduled Major only when the learner has actually attempted the minimum prior global Crucible events.
+## Duration
+Micro = 60 minutes.
+Macro = 120 minutes.
+Major/Full = mission-specific Test Arena/official paper contract duration. No universal duration may be invented by Crucible.
 
-MAJOR-1 gate:
-- at least 10 Micro attempts from the 12 Micros available before Major-1; AND
-- both prior Macros attempted: 2/2.
+## Joining
+For the current 48h schedule, joining from 10:00 through 22:00 inclusive permits the current Micro; after 22:00 the current Micro is skipped non-punitively. The global ring never moves.
 
-MAJOR-2 gate:
-- at least 20 cumulative Micro attempts from the 24 Micros available before Major-2; AND
-- at least 3 of the 4 prior Macros attempted; AND
-- at least 1 prior Major attempted (Major-1).
+## No exceptions
+No Founder override, VIP bypass, paid bypass, score shortcut, personal Major/Full date, synthetic historical attempt or private replacement event.
 
-MAJOR-3 gate:
-- at least 30 cumulative Micro attempts from the 36 Micros available before Major-3; AND
-- at least 5 of the 6 prior Macros attempted; AND
-- both prior Majors attempted: 2/2.
+## Supersession
+The former R1 fixed Day-28 / Day-56 / Day-84 Major table and Day-98 Full rule are superseded.
+The former 47h Rebuild + 1h Macro timing is superseded.
+R2 uses 46h Rebuild + 2h Macro while preserving exact 336h phases and the 98-day orbit.
 
-Attempt means a governed submitted/auto-submitted eligible assessment attempt. Merely opening an assessment, app attendance, elapsed account age or idle tenure does not count.
-
-Scores do not create a shortcut. These gates measure participation/exposure, not a pass mark.
-
-## 5. Global Full Test schedule
-FULL TEST is separate from Major.
-
-The first Full Test milestone is declared at the end of the first 98-day orbit, after Phase 7 / Day 98. It is a Test Arena event linked to the mission's complete governed official exam/paper contract.
-
-A Full Test may only be offered when the official full-paper contract and required verified question inventory are launchable. Learner eligibility cannot override paper/content/authority readiness.
-
-## 6. Earned Full Test eligibility
-For the Day-98 Full Test, a learner must have:
-- at least 35 cumulative Micro attempts from the 42 orbit Micros; AND
-- at least 6 of the 7 orbit Macros attempted; AND
-- all three scheduled Majors attempted: 3/3.
-
-All conditions are AND gates.
-
-Therefore:
-FULL_ELIGIBLE = MICRO_35_OF_42
-             AND MACRO_6_OF_7
-             AND MAJOR_3_OF_3
-             AND FULL_PAPER_AUTHORITY_READY.
-
-There is no score-based bypass and no manual exception.
-
-## 7. Late joiners
-Late joiners enter the running sovereign ring at its current global position.
-
-Past events are never recreated personally. A late learner who cannot accumulate the required prior event counts before a scheduled Major/Full simply remains NOT_ELIGIBLE for that event.
-
-The learner continues accumulating valid attempts on the same global clock and may earn a later globally scheduled event, including milestones in a subsequent 98-day orbit.
-
-Missed historical events are not Fail, Zero or Absent unless a separate assessment-result rule explicitly says so. For eligibility they simply contribute zero to the required attempt count.
-
-## 8. Orbit rollover
-At Day 98 the mission clock rolls directly into Orbit N+1 Day 1. The global schedule repeats; learner eligibility history does not reset.
-
-Eligibility ledger is cumulative across orbits, while each Test Arena event remains a distinct global event/version.
-
-A learner who missed a Full Test gate in Orbit N may earn a later global Full Test in Orbit N+1 after satisfying the same deterministic rulebook.
-
-## 9. No-exception law
-The same rules apply to every learner:
-- no Founder override;
-- no VIP bypass;
-- no paid-tier bypass;
-- no rank/score shortcut;
-- no personalized Major/Full date;
-- no backdated synthetic attempt;
-- no private replacement event to manufacture eligibility.
-
-Any future change to thresholds must be a versioned mission-wide rulebook change, never an individual exception.
-
-## 10. Authority separation
-Crucible owns the sovereign progression clock and publishes the milestone/eligibility state.
-Test Arena owns Major/Full paper delivery, attempt lifecycle, scoring, result and governed ranking.
-DigiBook/taught-content authority controls what has actually been taught.
-Canonical syllabus authority controls what may be assessed.
-Question readiness remains fail-closed.
-
-## 11. R1 deterministic milestone table
-
-| Global milestone | Available prior evidence | Earned learner gate |
-|---|---|---|
-| Day 28 / Major-1 | 12 Micro + 2 Macro | >=10 Micro AND 2/2 Macro |
-| Day 56 / Major-2 | 24 Micro + 4 Macro + Major-1 | >=20 Micro AND >=3 Macro AND Major-1 attempted |
-| Day 84 / Major-3 | 36 Micro + 6 Macro + Major-1/2 | >=30 Micro AND >=5 Macro AND both prior Majors attempted |
-| Day 98 / Full Test | 42 Micro + 7 Macro + 3 Major | >=35 Micro AND >=6 Macro AND all 3 Majors attempted + full-paper authority ready |
-
-This document finalizes the R1 governance structure. Runtime/code implementation remains a separate bounded task.
-
-
----
-
-## Founder Amendment Discussion — 2026-10-12 — R2 CANDIDATE (NOT YET LOCKED)
-
-The Founder has proposed replacing the earlier fixed "three Majors then Day-98 Full" progression with a recurring approximately-30-day milestone model.
-
-### Core proposed law
-Every learner remains on the same mission-global clock. On a global Major/Full milestone, the event time is common, but the learner's earned eligibility selects the assessment lane:
-
-- learner eligible for the milestone Major -> MAJOR lane;
-- learner not yet eligible for that Major -> MACRO fallback lane;
-- learner who has already completed the required prior Major progression and is Full-eligible -> FULL TEST lane;
-- learner not Full-eligible -> governed Major or Macro lane according to the same deterministic progression rules.
-
-No learner receives a private rescheduled Major, Full, or Macro event.
-
-### Proposed cadence
-Treat the 98-day orbit as approximately three 30-day progression bands for Major planning, while preserving the exact 98-day sovereign clock.
-
-Candidate milestone targets:
-- around Day 30: Major milestone 1;
-- around Day 60: Major milestone 2;
-- around Day 90: Major milestone 3 / Full-Test substitution opportunity.
-
-The exact clock-safe placement must be reconciled with the existing 14-day phase/Macro boundaries before implementation. "Around Day 30/60/90" must not create a second drifting clock.
-
-### Proposed Full-Test substitution
-At the third approximately-30-day milestone:
-- a learner who has earned and actually attempted the first two required Majors may become eligible for FULL TEST instead of taking Major-3, subject to all Micro/Macro participation gates and full-paper authority/content readiness;
-- a learner who has not earned that Full-Test ability follows the lower earned lane (Major or Macro) without exception.
-
-### Important unresolved rule
-The exact minimum Micro/Macro counts for Major-1, Major-2, Major-3 and Full Test must be recalculated after the final global milestone days are selected.
-
-### Safety invariant
-A milestone must never leave a late joiner without an assessment. The fallback Macro must be pre-built and governed for the same global window.
-
-This amendment supersedes the assumption that every learner necessarily follows Major-1 -> Major-2 -> Major-3 -> Full on fixed personal progression dates. It does NOT yet supersede R1 thresholds until the Founder locks the exact milestone days and counts.
-
-Code mutation: NONE.
-
-
----
-
-## Founder Clarification — Macro Junction Is the Authority — 2026-10-12
-
-Status: FOUNDER DIRECTION LOCKED FOR DESIGN; exact junction numbers/eligibility thresholds still to be reconciled before code.
-
-### 30-day language is NOT a temporal rule
-"Approximately 30 days" is only a spacing intention for Major opportunities. There is NO independent Day-30/60/90 clock and no new cadence that may drift against Crucible.
-
-The canonical event anchor is an EXISTING GLOBAL MACRO TEST JUNCTION.
-
-### Assessment-junction law
-On selected global Macro junctions, multiple governed Test Arena opportunities coexist:
-
-- MACRO remains available for learners who have not earned the higher assessment.
-- MAJOR is available at that same junction to learners who have earned Major eligibility.
-- FULL TEST is available at the designated final/highest junction to learners who have earned Full eligibility.
-- At a Full-capable junction, Major remains available for a learner who is Major-eligible but not Full-eligible.
-- No active learner is intentionally left without an assessment opportunity because they joined late.
-
-The system therefore does NOT cancel Macro when Major/Full exists. It provides parallel eligibility lanes bound to the same sovereign junction.
-
-### Progression intent
-- Select the Macro junction nearest roughly one month of progression for the first Major opportunity.
-- Select a later Macro junction roughly another month onward for the second Major opportunity.
-- At the final 98-day/orbit-close Macro junction, preserve Macro and also expose the governed Major and Full Test lanes according to earned eligibility.
-
-### Full-Test intent
-A learner who has completed/earned the required first and second Major progression may be allowed to take Full Test at the final junction, subject to the final universal Micro/Macro/Major participation rule and full-paper authority/content readiness.
-
-### Opportunity principle
-RankCrackers should not artificially ration assessments after the governed question/test engine is available. Repeated governed opportunities for learners to measure themselves are a product capability, while progression into higher-stakes assessment types remains earned and deterministic.
-
-### Non-negotiables
-- one mission-global clock;
-- no personal test schedule;
-- no independent 30-day clock;
-- no exception/bypass;
-- Macro fallback always exists at a selected Major/Full junction;
-- Major/Full never removes the assessment opportunity for a late joiner;
-- exact thresholds are universal and versioned;
-- paper/content authority remains fail-closed.
-
-Code mutation: NONE.
-
-
----
-
-## Exact 98-Day Calendar Reconciliation — 2026-10-12
-
-The hour-by-hour R1 calendar has now been expanded without temporal shorthand.
-
-Canonical arithmetic from Day 1 10:00:
-- 98 x 24h = 2352h, therefore the exact orbit closes at Day 99 10:00.
-- Founder-requested display continues one additional hour through Day 99 11:00.
-- Phase Macro junctions occur at Day 15, 29, 43, 57, 71, 85 and 99, each 09:00-10:00.
-- Major escalation junction A = Phase-2 Macro, Day 29 09:00-10:00: Macro fallback + Major-1 eligibility lane.
-- Major escalation junction B = Phase-4 Macro, Day 57 09:00-10:00: Macro fallback + Major-2 eligibility lane.
-- Final escalation junction = Phase-7 Macro, Day 99 09:00-10:00: Macro fallback + Major-3 lane + Full-Test lane according to earned eligibility.
-- Major/Full paper duration is NOT set by Crucible; mission Test Arena paper authority controls actual duration. Crucible controls the sovereign junction/start authority.
-
-The complete generated schedule contains 2,353 explicit one-hour rows covering Day 1 10:00 through Day 99 11:00, including all 42 Micro tests, 7 Rebuild windows and 7 Macro junctions.
-
-Code mutation: NONE.
+Code/runtime claims are not implied by this governance document. Tests must prove implementation separately.
