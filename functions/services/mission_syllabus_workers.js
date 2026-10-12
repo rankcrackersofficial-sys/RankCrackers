@@ -172,9 +172,12 @@ function composeMissionSyllabus({ binding, boundaryProfile, officialNodes, propo
     return node;
   };
 
+  const coveredTopicIds = new Set();
   for (const proposal of proposals) {
     const official = officialById.get(requiredString(proposal.officialTopicId, 'DSD_OFFICIAL_TOPIC_ID_REQUIRED'));
     if (!official) throw new Error('DSD_PROPOSAL_OUTSIDE_VERIFIED_OFFICIAL_TOPICS');
+    if (coveredTopicIds.has(official.nodeId)) throw new Error('DSD_OFFICIAL_TOPIC_DUPLICATE_PROPOSAL');
+    coveredTopicIds.add(official.nodeId);
     const micros = proposal.microTopics;
     if (!Array.isArray(micros)) throw new Error('DSD_MICRO_TOPICS_REQUIRED');
     const microKeys = new Set();
@@ -195,6 +198,7 @@ function composeMissionSyllabus({ binding, boundaryProfile, officialNodes, propo
       for (let ai = 0; ai < atoms.length; ai += 1) addCandidate(atoms[ai], 'ATOMIC_TOPIC', micro, ai);
     }
   }
+  if (coveredTopicIds.size !== officialById.size) throw new Error('DSD_TOPIC_COVERAGE_INCOMPLETE');
   return Object.freeze({
     missionId: source.missionId, sourceVersionId: source.sourceVersionId,
     sourceSha256: source.sourceSha256, boundaryProfileVersion: profile.profileVersion,
