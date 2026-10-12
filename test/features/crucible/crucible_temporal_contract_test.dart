@@ -35,19 +35,19 @@ void main() {
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 48))), 'LEARNING');
     });
 
-    test('phase closes with 47h Rebuild then 1h Macro and no recovery gap', () {
+    test('phase closes with 46h Rebuild then 2h Macro and no recovery gap', () {
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 288))), 'REBUILD');
-      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 334))), 'REBUILD');
-      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 335))), 'MACRO');
+      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 333))), 'REBUILD');
+      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 334))), 'MACRO');
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 336))), 'LEARNING');
     });
 
-    test('final Macro is on Day 98, never Day 99', () {
+    test('final 2h Macro closes exactly at the 98-day orbit boundary', () {
       final phase7Start = start.add(const Duration(days: 84));
-      final finalMacroStart = phase7Start.add(const Duration(hours: 335));
-      final finalMacroEnd = finalMacroStart.add(const Duration(hours: 1));
+      final finalMacroStart = phase7Start.add(const Duration(hours: 334));
+      final finalMacroEnd = finalMacroStart.add(const Duration(hours: 2));
       final orbit2Start = start.add(const Duration(days: 98));
-      expect(finalMacroStart, start.add(const Duration(days: 97, hours: 23)));
+      expect(finalMacroStart, start.add(const Duration(days: 97, hours: 22)));
       expect(finalMacroEnd, start.add(const Duration(days: 98)));
       expect(orbit2Start, start.add(const Duration(hours: 2352)));
       expect(finalMacroEnd, orbit2Start);
