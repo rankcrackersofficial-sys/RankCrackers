@@ -48,7 +48,7 @@ For a phase starting Day 1 10:00:
 - Macro Day 15 08:00-10:00 = 2h.
 - next phase begins Day 15 10:00.
 
-## 4. 98-day orbit
+## 4. Endless 98-day sovereign orbit
 Seven phases x 336h = 2352h = 98 days.
 One orbit contains exactly:
 - 42 normal schedules;
@@ -65,6 +65,8 @@ Phase 5: Day 71 08:00-10:00.
 Phase 6: Day 85 08:00-10:00.
 Phase 7: Day 99 08:00-10:00; orbit closes at 10:00.
 
+The close of Orbit N is simultaneously the start boundary of Orbit N+1. There is no terminal orbit while the mission remains active. Orbit numbers are N = 1, 2, 3, ... without a configured maximum. The same 2352-hour geometry repeats indefinitely; learner maturity, participation and valid assessment history do NOT reset at an orbit boundary.
+
 ## 5. Joining and current-Micro eligibility
 Joining never changes the global clock.
 
@@ -76,21 +78,34 @@ For any 48h schedule beginning at 10:00:
 
 Past global events are never recreated as private replacement events.
 
-## 6. Assessment-junction law
-There is NO independent 30-day clock.
+## 6. Endless assessment-maturity law
+There is NO independent 30-day clock and NO four-orbit cap.
 
-Major opportunities are attached only to selected existing Macro junctions nearest the intended roughly-monthly progression spacing:
-- Junction A = Phase-2 Macro, Day 29 08:00-10:00.
-- Junction B = Phase-4 Macro, Day 57 08:00-10:00.
-- Final Junction = Phase-7 Macro, Day 99 08:00-10:00.
+Orbit 1 is the qualification orbit:
+- Phase-1 through Phase-6 Macro junctions: Macro only for first-orbit learners.
+- Orbit-1 final Phase-7 Macro junction: first possible Major opportunity.
+- Major requires at least one completed 98-day orbit plus the final versioned participation/content gates.
 
-At a selected junction, Macro is never removed. Eligibility selects a parallel lane:
+Orbit 2 and every later orbit:
+- selected existing Macro junctions nearest the intended roughly-monthly spacing are Phase-2, Phase-4 and Phase-7;
+- Major-qualified learners may receive the Major lane at those selected junctions;
+- Macro remains the applicable lane for learners who have not earned Major.
+
+Full Test maturity:
+- Full is NEVER available merely from one completed orbit;
+- first possible Full opportunity is Orbit-2 final Phase-7 junction, after two complete 98-day orbits;
+- Full additionally requires the governed Major history, participation gates and 100% official paper/content readiness;
+- from Orbit 3 onward, Full-qualified learners may receive Full at governed selected junctions under the same mission-wide rulebook and paper-readiness gate.
+
+The sequence continues for Orbit 3, 4, 5, ... indefinitely while the mission is active. No learner's maturity/history resets because a new orbit begins.
+
+At any higher-assessment junction the lanes are parallel:
 - not Major-eligible => Macro;
-- Major-eligible => Major;
-- at final junction, Major-eligible but not Full-eligible => Major-3;
-- Full-eligible => Full Test.
+- Major-eligible but not Full-eligible => Major;
+- Full-eligible and Full paper ready => Full;
+- Full-eligible but Full paper not ready => governed lower available lane; never fabricate an unready Full paper.
 
-Major/Full belong operationally to Test Arena. Crucible supplies the sovereign junction and eligibility state.
+Major/Full belong operationally to Test Arena. Crucible supplies the sovereign junction, completed-orbit maturity and eligibility state.
 
 ## 7. Test duration authority
 Micro duration = 60 minutes.
