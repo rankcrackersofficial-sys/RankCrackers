@@ -220,3 +220,91 @@ test('admin_invitations collection fails closed for Students and is read-only fo
   await assertFails(setDoc(doc(founder, 'admin_invitations', 'direct_hash'), { role: 'admin' }));
   await assertFails(updateDoc(doc(founder, 'admin_invitations', inviteHash), { redeemed: true }));
 });
+
+test('ordinary delegated Admin cannot read Founder-only invitation records, system config, activity logs, or budget', async () => {
+  const inviteHash = 'b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3';
+  await env.withSecurityRulesDisabled(async context => {
+    const db = context.firestore();
+    await setDoc(doc(db, 'admin_invitations', inviteHash), {
+      inviteHash,
+      targetEmail: 'secret@rankcrackers.com',
+      role: 'admin',
+      scopes: ['DOCUMENTS_VIEW'],
+      redeemed: false,
+    });
+    await setDoc(doc(db, 'system_config', 'global'), { maintenance: false });
+    await setDoc(doc(db, 'founder_activity_log', 'log123'), { type: 'FOUNDER_AUDIT', msg: 'Confidential' });
+    await setDoc(doc(db, 'system_budget', '2026-10'), { monthlyCeilingUsd: 5000 });
+  });
+
+  const adminUser = env.authenticatedContext('admin_bob', { admin: true }).firestore();
+  const founderUser = env.authenticatedContext('founder_alice', { founder: true }).firestore();
+
+  // 1. Ordinary delegated admin is strictly denied read access to sensitive Founder vaults
+  await assertFails(getDoc(doc(adminUser, 'admin_invitations', inviteHash)));
+  await assertFails(getDoc(doc(adminUser, 'system_config', 'global')));
+  await assertFails(getDoc(doc(adminUser, 'founder_activity_log', 'log123')));
+  await assertFails(getDoc(doc(adminUser, 'system_budget', '2026-10')));
+
+  // 2. Actual Founder is granted read access
+  await assertSucceeds(getDoc(doc(founderUser, 'admin_invitations', inviteHash)));
+  await assertSucceeds(getDoc(doc(founderUser, 'system_config', 'global')));
+  await assertSucceeds(getDoc(doc(founderUser, 'founder_activity_log', 'log123')));
+  await assertSucceeds(getDoc(doc(founderUser, 'system_budget', '2026-10')));
+});
+
+test('admin_tasks collection enforces assigned-reader scoping and forbids all direct client writes', async () => {
+  const taskId = 'task_assigned_to_bob';
+  await env.withSecurityRulesDisabled(async context => {
+    const db = context.firestore();
+    await setDoc(doc(db, 'admin_tasks', taskId), {
+      taskId,
+      assignedToUid: 'admin_bob',
+      title: 'Review syllabus atoms',
+      status: 'OPEN',
+      requiredScope: 'SYLLABUS_REVIEW',
+    });
+  });
+
+  const assignedAdmin = env.authenticatedContext('admin_bob', { admin: true }).firestore();
+  const otherAdmin = env.authenticatedContext('admin_charlie', { admin: true }).firestore();
+  const student = env.authenticatedContext('student1').firestore();
+  const founder = env.authenticatedContext('founder1', { founder: true }).firestore();
+
+  // 1. Assigned admin CAN read their own task
+  await assertSucceeds(getDoc(doc(assignedAdmin, 'admin_tasks', taskId)));
+
+  // 2. Other admin CANNOT read a task not assigned to them
+  await assertFails(getDoc(doc(otherAdmin, 'admin_tasks', taskId)));
+
+  // 3. Student CANNOT read admin tasks
+  await assertFails(getDoc(doc(student, 'admin_tasks', taskId)));
+
+  // 4. Founder CAN read all admin tasks
+  await assertSucceeds(getDoc(doc(founder, 'admin_tasks', taskId)));
+
+  // 5. Direct client writes are forbidden for everyone (server-owned via callables)
+  await assertFails(updateDoc(doc(assignedAdmin, 'admin_tasks', taskId), { status: 'DONE' }));
+  await assertFails(updateDoc(doc(founder, 'admin_tasks', taskId), { status: 'DONE' }));
+  await assertFails(setDoc(doc(assignedAdmin, 'admin_tasks', 'new_task'), { title: 'Self created' }));
+  await assertFails(setDoc(doc(founder, 'admin_tasks', 'new_task'), { title: 'Direct write' }));
+});
+
+test('delegated Admin cannot directly mutate users collection documents from client', async () => {
+  const victimUid = 'student_victim_1';
+  await env.withSecurityRulesDisabled(async context => {
+    const db = context.firestore();
+    await setDoc(doc(db, 'users', victimUid), {
+      mobile: '+919876543299',
+      onboardingCompleted: true,
+      role: 'student',
+    });
+  });
+
+  const adminUser = env.authenticatedContext('admin_attacker', { admin: true }).firestore();
+
+  // Ordinary admin cannot overwrite victim user
+  await assertFails(updateDoc(doc(adminUser, 'users', victimUid), { role: 'admin' }));
+  await assertFails(setDoc(doc(adminUser, 'users', 'arbitrary_new_user'), { role: 'admin' }));
+});
+

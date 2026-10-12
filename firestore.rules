@@ -3,10 +3,20 @@ service cloud.firestore {
   match /databases/{database}/documents {
 
     // 🔱 CONSTITUTIONAL HELPERS
-    function isFounder() {
+    function isActualFounder() {
       return request.auth != null &&
-             (('admin' in request.auth.token && request.auth.token.admin == true) || 
-              ('founder' in request.auth.token && request.auth.token.founder == true));
+             'founder' in request.auth.token &&
+             request.auth.token.founder == true;
+    }
+
+    function isDelegatedAdmin() {
+      return request.auth != null &&
+             'admin' in request.auth.token &&
+             request.auth.token.admin == true;
+    }
+
+    function isFounder() {
+      return isActualFounder() || isDelegatedAdmin();
     }
 
     // Every Student mission subcollection must inherit the parent realm's
@@ -52,22 +62,30 @@ service cloud.firestore {
           && request.auth.token.phone_number.matches('^\\+91[6-9][0-9]{9}$');
     }
     match /system_config/global {
-      allow read: if isFounder();
+      allow read: if isActualFounder();
       allow write: if false; // Only via Cloud Functions
     }
 
     match /founder_activity_log/{logId} {
       // 🔱 AUDIT IMMUTABILITY: Immutable Ledger (Document 102)
       // Clients can only read logs. Writes must originate from Admin SDK / Cloud Functions.
-      allow read: if isFounder();
+      allow read: if isActualFounder();
       allow write: if false;
     }
 
     match /admin_invitations/{inviteHash} {
       // 🔱 ADMIN INVITATION VAULT (P0)
-      // Only readable by Founders. Writes are strictly forbidden to all clients.
+      // Strictly readable by actual Founders only. Ordinary delegated Admins have zero read access.
       // Creation and single-use redemption MUST originate from Admin SDK / Cloud Functions.
-      allow read: if isFounder();
+      allow read: if isActualFounder();
+      allow write: if false;
+    }
+
+    match /admin_tasks/{taskId} {
+      // 🔱 GOVERNED ADMIN WORK QUEUE (P0)
+      // Actual Founders can read all tasks. Delegated Admins may only read tasks assigned directly to them.
+      // All writes remain server-owned via callables. Direct client write is forbidden.
+      allow read: if isActualFounder() || (isDelegatedAdmin() && resource.data.assignedToUid == request.auth.uid);
       allow write: if false;
     }
 
@@ -76,7 +94,7 @@ service cloud.firestore {
     }
 
     match /system_budget/{monthId} {
-      allow read: if isFounder();
+      allow read: if isActualFounder();
       allow write: if false; // Only via workers/services
     }
 
@@ -461,8 +479,8 @@ service cloud.firestore {
     match /users/{userId} {
       // 🔱 Audit Fix & 18P-A2 Server-Side Canonical Phone Authority Law
       allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
-      allow create: if isFounder() || isSafeStudentProfileCreate(userId);
-      allow update: if isFounder() || isSafeStudentProfileUpdate(userId);
+      allow create: if isActualFounder() || isSafeStudentProfileCreate(userId);
+      allow update: if isActualFounder() || isSafeStudentProfileUpdate(userId);
 
       match /progress/{nodeId} {
         allow read, write: if request.auth != null && request.auth.uid == userId;
