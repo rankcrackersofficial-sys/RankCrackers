@@ -33,7 +33,7 @@ void main() {
     final arenaCard = File(
       'lib/features/dashboard/presentation/widgets/battle_tools/test_arena_card.dart',
     ).readAsStringSync();
-    expect(RegExp(r'TestArenaCard\\(\\)').allMatches(grid).length, 1);
+    expect(grid.split('TestArenaCard()').length - 1, 1);
     expect(arenaCard, contains('route: AppRoutes.testArena'));
     expect(arenaCard, contains('toolKey: "test_arena"'));
   });
