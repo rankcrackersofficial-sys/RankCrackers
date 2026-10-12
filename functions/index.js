@@ -9,6 +9,7 @@ admin.initializeApp();
 
 const { manageUserAccess, manageAdminScopes } = require("./callable/manage_access");
 const { issueAdminInvite, acceptAdminInvite } = require("./callable/admin_invitations");
+const { transitionAdminTask, createAdminTask } = require("./callable/admin_tasks");
 const { toggleAiSystem } = require("./callable/toggle_ai_system");
 const { getSystemHealth } = require("./callable/system_health");
 const { processAITask } = require("./callable/process_ai_task");
@@ -21,6 +22,8 @@ exports.manageUserAccess = manageUserAccess;
 exports.manageAdminScopes = manageAdminScopes;
 exports.issueAdminInvite = issueAdminInvite;
 exports.acceptAdminInvite = acceptAdminInvite;
+exports.transitionAdminTask = transitionAdminTask;
+exports.createAdminTask = createAdminTask;
 exports.toggleAiSystem = toggleAiSystem;
 exports.getSystemHealth = getSystemHealth;
 exports.processAITask = processAITask;

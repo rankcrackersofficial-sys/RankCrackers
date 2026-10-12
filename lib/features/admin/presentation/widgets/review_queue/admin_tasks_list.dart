@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/admin/admin_permission_resolver.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../../core/theme/app_typography.dart';
 
 /// Governed Admin Work Queue.
 /// Displays assigned tasks for the authenticated Admin user, with fail-closed
@@ -349,10 +349,11 @@ class AdminTasksList extends StatelessWidget {
   }
 
   Future<void> _updateTask(String taskId, String status, String note) async {
-    await FirebaseFirestore.instance.collection('admin_tasks').doc(taskId).set({
-      'status': status,
+    final callable = FirebaseFunctions.instance.httpsCallable('transitionAdminTask');
+    await callable.call({
+      'taskId': taskId,
+      'nextStatus': status,
       'adminNote': note,
-      'updatedAt': FieldValue.serverTimestamp(),
-    }, SetOptions(merge: true));
+    });
   }
 }
