@@ -70,4 +70,33 @@ void main() {
       '*': true, 'mission': {'*': true},
     }), isFalse);
   });
+
+  test('canonical uppercase scopes grant access to their respective modules', () {
+    expect(AdminPermissionResolver.canSeeIngestion({
+      'scopes': [AdminPermissionResolver.scopeDocumentsView],
+    }), isTrue);
+    expect(AdminPermissionResolver.canUploadDocuments({
+      'scopes': [AdminPermissionResolver.scopeDocumentsUpload],
+    }), isTrue);
+    expect(AdminPermissionResolver.canSeeSyllabusReview({
+      'scopes': [AdminPermissionResolver.scopeSyllabusReview],
+    }), isTrue);
+    expect(AdminPermissionResolver.canSeePyqReview({
+      'scopes': [AdminPermissionResolver.scopePyqReview],
+    }), isTrue);
+    expect(AdminPermissionResolver.canSeeMissionControl({
+      'scopes': [AdminPermissionResolver.scopeMissionCreate],
+    }), isTrue);
+    expect(AdminPermissionResolver.canSeeStudyMaster({
+      'scopes': [AdminPermissionResolver.scopeStudyMaster],
+    }), isTrue);
+
+    // Direct map entries with uppercase scopes also work
+    expect(AdminPermissionResolver.canSeeIngestion({
+      AdminPermissionResolver.scopeDocumentsView: true,
+    }), isTrue);
+    expect(AdminPermissionResolver.canSeeSyllabusReview({
+      AdminPermissionResolver.scopeSyllabusReview: true,
+    }), isTrue);
+  });
 }

@@ -35,4 +35,22 @@ function assertTargetClaimTransition({ targetClaims, role, action }) {
   return true;
 }
 
-module.exports = { assertAccessMutationRequest, assertTargetClaimTransition };
+function assertAdminScopesMutationRequest({ auth, targetUid, action, scopes }) {
+  if (auth?.token?.founder !== true) {
+    throw new Error('ACCESS_FOUNDER_ONLY_MUTATION');
+  }
+  if (typeof targetUid !== 'string' || !targetUid.trim() ||
+      targetUid.includes('/') || targetUid.length > 128) {
+    throw new Error('ACCESS_TARGET_UID_INVALID');
+  }
+  if (!['grant', 'revoke', 'set'].includes(action)) {
+    throw new Error('ACCESS_ROLE_OR_ACTION_INVALID');
+  }
+  return true;
+}
+
+module.exports = {
+  assertAccessMutationRequest,
+  assertTargetClaimTransition,
+  assertAdminScopesMutationRequest,
+};
