@@ -16,6 +16,7 @@ function requiredPageCount(source) {
 // transaction before creating the two deterministic pagewise child jobs.
 async function executeMissionSourcePair({ transaction, db, taskId, preflight, recordedAt }) {
   if (!transaction || !db) throw new Error('PAIR_CONSUMER_TRANSACTION_REQUIRED');
+  if (!recordedAt) throw new Error('PAIR_CONSUMER_RECORDED_AT_REQUIRED');
   const queueRef = db.collection('ai_queue').doc(required(taskId, 'PAIR_CONSUMER_TASK_REQUIRED'));
   const queueSnap = await transaction.get(queueRef);
   if (!queueSnap.exists) throw new Error('PAIR_CONSUMER_QUEUE_NOT_FOUND');
@@ -32,6 +33,7 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   ]);
   if (!realmSnap.exists) throw new Error('PAIR_CONSUMER_REALM_NOT_FOUND');
   const realm = realmSnap.data() || {};
+  if (realm.authorityKey !== payload.authorityKey) throw new Error('PAIR_CONSUMER_REALM_AUTHORITY_MISMATCH');
   const gate = realm.visibilityGate || {};
   const legacy = realm.visibility || {};
   if (realm.studentVisible === true || realm.catalogVisible === true || realm.userPanelVisible === true
@@ -55,6 +57,10 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
     schemaVersion: payload.schemaVersion || 'mission_source_pair_v1',
   });
   if (pair.taskId !== taskId) throw new Error('PAIR_CONSUMER_TASK_ID_MISMATCH');
+  if (job.id !== pair.job.id || job.type !== pair.job.type || job.queueContract !== pair.job.queueContract
+      || Object.keys(pair.job.payload).some(key => payload[key] !== pair.job.payload[key])) {
+    throw new Error('PAIR_CONSUMER_QUEUE_BINDING_CONFLICT');
+  }
   // A queue document alone is insufficient authority to launch page extraction.
   // Require the coordinator's persisted READY_FOR_WORKER pair, or a verified
   // replay of its already-dispatched state.
@@ -62,10 +68,15 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   const persistedPair = pairSnap.data() || {};
   if (persistedPair.taskId !== taskId || persistedPair.missionId !== missionId
       || persistedPair.cycleKey !== pair.cycleKey || persistedPair.authorityKey !== pair.authorityKey
-      || persistedPair.sources?.notification?.sha256 !== pair.sources.notification.sha256
-      || persistedPair.sources?.syllabus?.sha256 !== pair.sources.syllabus.sha256
+      || persistedPair.contractVersion !== pair.contractVersion || persistedPair.schemaVersion !== pair.schemaVersion
+      || ['notification', 'syllabus'].some(role => Object.keys(pair.sources[role])
+        .some(key => persistedPair.sources?.[role]?.[key] !== pair.sources[role][key]))
       || !['READY_FOR_WORKER', 'DISPATCHED'].includes(persistedPair.status)) {
     throw new Error('PAIR_CONSUMER_COORDINATOR_PAIR_CONFLICT');
+  }
+  const replay = persistedPair.status === 'DISPATCHED';
+  if (job.status !== (replay ? 'DISPATCHED' : 'received')) {
+    throw new Error('PAIR_CONSUMER_LIFECYCLE_CONFLICT');
   }
   const children = ['notification', 'syllabus'].flatMap(role => {
     const source = pair.sources[role];
@@ -91,20 +102,34 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   // Resolve ALL deterministic child refs and snapshots before creating any job.
   const childRefs = children.map(child => db.collection('ai_queue').doc(child.id));
   const childSnaps = await Promise.all(childRefs.map(ref => transaction.get(ref)));
+  const childTaskIds = children.map(child => child.id);
+  if (replay && [persistedPair.childTaskIds, job.childTaskIds].some(ids =>
+    !Array.isArray(ids) || ids.length !== childTaskIds.length || ids.some((id, index) => id !== childTaskIds[index]))) {
+    throw new Error('PAIR_CONSUMER_DISPATCH_BINDING_CONFLICT');
+  }
+  // Validate the complete set before writing any child. A dispatched replay
+  // cannot resurrect a missing job or overwrite its progress or timestamps.
   for (let index = 0; index < children.length; index++) {
     const child = children[index];
-    const ref = childRefs[index];
     const snap = childSnaps[index];
     if (snap.exists) {
       const old = snap.data() || {};
-      if (old.parentTaskId !== taskId || old.sourceSha256 !== child.sourceSha256) throw new Error('PAIR_CONSUMER_CHILD_CONFLICT');
-    } else {
-      transaction.create(ref, child);
+      const mutable = ['status', 'review_status', 'createdAt'];
+      if (Object.keys(child).filter(key => !mutable.includes(key)).some(key => old[key] !== child[key])) {
+        throw new Error('PAIR_CONSUMER_CHILD_CONFLICT');
+      }
+    } else if (replay) {
+      throw new Error('PAIR_CONSUMER_DISPATCH_CHILD_MISSING');
     }
   }
-  transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
-  transaction.update(queueRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
-  return Object.freeze({ taskId, childTaskIds: children.map(c => c.id), idempotent: pairSnap.exists });
+  if (!replay) {
+    for (let index = 0; index < children.length; index++) {
+      if (!childSnaps[index].exists) transaction.create(childRefs[index], children[index]);
+    }
+    transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds, updatedAt: recordedAt });
+    transaction.update(queueRef, { status: 'DISPATCHED', childTaskIds, updatedAt: recordedAt });
+  }
+  return Object.freeze({ taskId, childTaskIds, idempotent: replay });
 }
 
 module.exports = { executeMissionSourcePair };

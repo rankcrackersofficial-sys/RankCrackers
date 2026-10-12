@@ -144,3 +144,19 @@ test('opportunity match cannot be seized by replacing its owner uid', async () =
     { uid: 'attacker', score: 1 }));
   await assertSucceeds(updateDoc(doc(founder, 'opportunity_matches', 'victim_match'), { score: 3 }));
 });
+
+test('Warrior Profile path and embedded uid must agree for every writer', async () => {
+  const owner = env.authenticatedContext('profile_owner').firestore();
+  const attacker = env.authenticatedContext('profile_attacker').firestore();
+  const founder = env.authenticatedContext('founder1', { founder: true }).firestore();
+  const profile = doc(owner, 'warrior_profiles', 'profile_owner');
+  await assertFails(setDoc(profile, { uid: 'profile_victim' }));
+  await assertFails(setDoc(profile, { category: 'General' }));
+  await assertSucceeds(setDoc(profile, { uid: 'profile_owner', category: 'General' }));
+  await assertFails(updateDoc(profile, { uid: 'profile_victim' }));
+  await assertFails(getDoc(doc(attacker, 'warrior_profiles', 'profile_owner')));
+  await assertFails(setDoc(doc(attacker, 'warrior_profiles', 'profile_owner'), { uid: 'profile_attacker' }));
+  await assertFails(updateDoc(doc(founder, 'warrior_profiles', 'profile_owner'), { uid: 'profile_victim' }));
+  await assertSucceeds(updateDoc(profile, { category: 'OBC' }));
+  await assertSucceeds(updateDoc(doc(founder, 'warrior_profiles', 'profile_owner'), { category: 'General' }));
+});
