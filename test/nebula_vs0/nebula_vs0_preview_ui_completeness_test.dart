@@ -8,8 +8,14 @@ import 'package:rank_crackers/core/theme/app_theme.dart';
 import 'package:rank_crackers/features/preview/presentation/screens/nebula_founder_preview_screen.dart';
 
 Future<void> loadGoogleFontFamiliesForTest() async {
-  final fontFile = File(
-      'E:/Programs/Flutter/flutter/bin/cache/artifacts/material_fonts/roboto-regular.ttf');
+  final flutterRoot = Platform.environment['FLUTTER_ROOT'];
+  if (flutterRoot == null || flutterRoot.isEmpty) {
+    throw StateError('FLUTTER_ROOT is required for portable visual-test fonts');
+  }
+  final fontFile = File('$flutterRoot/bin/cache/artifacts/material_fonts/roboto-regular.ttf');
+  if (!fontFile.existsSync()) {
+    throw StateError('Flutter material test font missing: ${fontFile.path}');
+  }
   final bytes = await fontFile.readAsBytes();
   Future<void> loadFamily(String family) async {
     final loader = FontLoader(family)
