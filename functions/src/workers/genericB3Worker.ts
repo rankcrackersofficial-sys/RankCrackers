@@ -43,7 +43,9 @@ export interface StructuredNode {
   sourceTextAnchor: string;
   sourceOrder: number;
   materializationVersion: string;
-  verificationState: 'verified' | 'draft';
+  verificationState: 'PENDING_REVIEW' | 'draft';
+  provenance: 'OFFICIAL_CANDIDATE';
+  reviewState: 'PENDING_REVIEW';
   workerRevision: string;
   runId: string;
   isVirtual?: boolean;
