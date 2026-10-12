@@ -131,3 +131,45 @@ Question readiness remains fail-closed.
 | Day 98 / Full Test | 42 Micro + 7 Macro + 3 Major | >=35 Micro AND >=6 Macro AND all 3 Majors attempted + full-paper authority ready |
 
 This document finalizes the R1 governance structure. Runtime/code implementation remains a separate bounded task.
+
+
+---
+
+## Founder Amendment Discussion — 2026-10-12 — R2 CANDIDATE (NOT YET LOCKED)
+
+The Founder has proposed replacing the earlier fixed "three Majors then Day-98 Full" progression with a recurring approximately-30-day milestone model.
+
+### Core proposed law
+Every learner remains on the same mission-global clock. On a global Major/Full milestone, the event time is common, but the learner's earned eligibility selects the assessment lane:
+
+- learner eligible for the milestone Major -> MAJOR lane;
+- learner not yet eligible for that Major -> MACRO fallback lane;
+- learner who has already completed the required prior Major progression and is Full-eligible -> FULL TEST lane;
+- learner not Full-eligible -> governed Major or Macro lane according to the same deterministic progression rules.
+
+No learner receives a private rescheduled Major, Full, or Macro event.
+
+### Proposed cadence
+Treat the 98-day orbit as approximately three 30-day progression bands for Major planning, while preserving the exact 98-day sovereign clock.
+
+Candidate milestone targets:
+- around Day 30: Major milestone 1;
+- around Day 60: Major milestone 2;
+- around Day 90: Major milestone 3 / Full-Test substitution opportunity.
+
+The exact clock-safe placement must be reconciled with the existing 14-day phase/Macro boundaries before implementation. "Around Day 30/60/90" must not create a second drifting clock.
+
+### Proposed Full-Test substitution
+At the third approximately-30-day milestone:
+- a learner who has earned and actually attempted the first two required Majors may become eligible for FULL TEST instead of taking Major-3, subject to all Micro/Macro participation gates and full-paper authority/content readiness;
+- a learner who has not earned that Full-Test ability follows the lower earned lane (Major or Macro) without exception.
+
+### Important unresolved rule
+The exact minimum Micro/Macro counts for Major-1, Major-2, Major-3 and Full Test must be recalculated after the final global milestone days are selected.
+
+### Safety invariant
+A milestone must never leave a late joiner without an assessment. The fallback Macro must be pre-built and governed for the same global window.
+
+This amendment supersedes the assumption that every learner necessarily follows Major-1 -> Major-2 -> Major-3 -> Full on fixed personal progression dates. It does NOT yet supersede R1 thresholds until the Founder locks the exact milestone days and counts.
+
+Code mutation: NONE.
