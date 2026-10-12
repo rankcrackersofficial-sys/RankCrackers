@@ -39,7 +39,7 @@ export const reviewSyllabusCandidate = functions.https.onCall(async (data, conte
   if (!reviewer.subjectScopes.includes(subject)) {
     throw new functions.https.HttpsError('permission-denied', 'REVIEWER_SUBJECT_SCOPE_MISMATCH');
   }
-  if (candidate.missionId !== missionId || candidate.verificationState !== 'PENDING_REVIEW'
+  if (candidate.missionId !== missionId || !['PENDING_REVIEW', 'CANDIDATE'].includes(candidate.verificationState)
       || !['OFFICIAL_CANDIDATE', 'DERIVED'].includes(candidate.provenance)) {
     throw new functions.https.HttpsError('failed-precondition', 'CANDIDATE_NOT_REVIEWABLE');
   }
@@ -67,7 +67,7 @@ export const reviewSyllabusCandidate = functions.https.onCall(async (data, conte
   const nextState = decision === 'APPROVE' ? 'VERIFIED' : 'REJECTED';
   await db.runTransaction(async (tx) => {
     const current = await tx.get(ref);
-    if (!current.exists || current.data()?.verificationState !== 'PENDING_REVIEW') {
+    if (!current.exists || !['PENDING_REVIEW', 'CANDIDATE'].includes(current.data()?.verificationState)) {
       throw new functions.https.HttpsError('aborted', 'CANDIDATE_CHANGED_DURING_REVIEW');
     }
     tx.update(ref, {
@@ -82,5 +82,26 @@ export const reviewSyllabusCandidate = functions.https.onCall(async (data, conte
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
   });
+
+  if (isOfficial && decision === 'APPROVE' && candidate.sourceVersionId) {
+    const allSnap = await db.collection('mission_realms').doc(missionId)
+      .collection('official_syllabus_candidates')
+      .where('sourceVersionId', '==', candidate.sourceVersionId).get();
+    const sourceNodes = allSnap.docs.map((doc) => doc.data());
+    const allApproved = sourceNodes.length > 0
+      && sourceNodes.every((node) => node.verificationState === 'VERIFIED' && node.provenance === 'OFFICIAL');
+    if (allApproved) {
+      const taskId = `syllabus_b4_${missionId}_${candidate.sourceVersionId}`;
+      await db.collection('ai_queue').doc(taskId).create({
+        id: taskId, task_type: 'SYLLABUS_B4', mission_id: missionId,
+        document_id: candidate.documentId, sourceVersionId: candidate.sourceVersionId,
+        sourceSha256: candidate.sourceSha256, run_id: candidate.runId || taskId,
+        status: 'queued', createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        expected_output: 'derived_syllabus_candidates',
+      }).catch((error: any) => {
+        if (error?.code !== 6 && error?.code !== 'already-exists') throw error;
+      });
+    }
+  }
   return { success: true, missionId, nodeId, verificationState: nextState };
 });
