@@ -379,7 +379,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
       authorizedScope: { papersEnabled: false, allowedSubjects: ['History'] },
       verifiedPageCorpus: [{
         pageNumber: 1,
-        text: 'SUBJECT: History\\nTOPIC: Ancient trade routes',
+        text: 'SUBJECT: History\nTOPIC: Ancient trade routes',
         isVerified: true,
         pageDigest: 'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
       }],
