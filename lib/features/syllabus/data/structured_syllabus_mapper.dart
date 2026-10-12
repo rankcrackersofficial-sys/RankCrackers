@@ -31,10 +31,26 @@ class StructuredSyllabusMapper {
         .where((document) => document['activationEpoch'] == activeEpoch)
         .toList()
       ..sort((a, b) => _sourceOrder(a).compareTo(_sourceOrder(b)));
+    final activeIds = ordered
+        .map((document) => (document['id'] ?? document['nodeId'] ?? '').toString())
+        .where((id) => id.isNotEmpty)
+        .toSet();
+    final parentIds = ordered
+        .map((document) => (document['parentId'] ?? '').toString())
+        .where((id) => id.isNotEmpty)
+        .toSet();
     final output = <MicroTopicNode>[];
 
     for (final document in ordered) {
-      if ((document['nodeType'] ?? '').toString().toLowerCase() != 'topic') {
+      final type = (document['nodeType'] ?? '').toString().toLowerCase();
+      final isDisplayLeaf =
+          const {'topic', 'group', 'unit'}.contains(type) &&
+          !parentIds.contains(
+            (document['id'] ?? document['nodeId'] ?? '').toString(),
+          );
+      if (!isDisplayLeaf || !activeIds.contains(
+        (document['id'] ?? document['nodeId'] ?? '').toString(),
+      )) {
         continue;
       }
       final id = (document['id'] ?? document['nodeId'] ?? '').toString().trim();
