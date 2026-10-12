@@ -11,6 +11,7 @@ export interface B3Input {
   missionId: string;
   documentId: string;
   sourceSha256: string;
+  sourceVersionId?: string;
   verifiedPageCorpus: Array<{
     pageNumber: number;
     text: string;
@@ -174,6 +175,7 @@ export class GenericB3Worker {
               missionId: input.missionId,
               documentId: input.documentId,
               sourceSha256: input.sourceSha256,
+              ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
               paperId: currentPaperId,
               subjectId: currentSubjectId,
               nodeType: 'subject',
@@ -221,6 +223,7 @@ export class GenericB3Worker {
                 missionId: input.missionId,
                 documentId: input.documentId,
                 sourceSha256: input.sourceSha256,
+                ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
                 paperId: currentPaperId,
                 subjectId: currentSubjectId,
                 nodeType: 'unit',
@@ -272,6 +275,7 @@ export class GenericB3Worker {
               missionId: input.missionId,
               documentId: input.documentId,
               sourceSha256: input.sourceSha256,
+              ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
               paperId: currentPaperId,
               subjectId: currentSubjectId,
               nodeType: 'unit',
