@@ -17,6 +17,7 @@ import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
+import 'package:rank_crackers/features/auth/domain/policies/canonical_phone_binding_policy.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -167,16 +168,46 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
           TextButton(
             onPressed: () async {
-              if (controller.text.isEmpty) return;
               final user = FirebaseAuth.instance.currentUser;
-              if (user != null) {
-                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
-                  'phone': controller.text,
-                });
-                await SessionManager.saveStudentMobile(controller.text);
-                ref.invalidate(sessionUserProvider);
+              final verifiedPhone =
+                  CanonicalPhoneBindingPolicy.canonicalVerifiedPhone(user);
+              if (user == null ||
+                  !CanonicalPhoneBindingPolicy.inputMatchesVerifiedPhone(
+                    rawInput: controller.text,
+                    verifiedPhone: verifiedPhone,
+                  )) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text(
+                      'Use the mobile number verified with this account.',
+                    ),
+                  ),
+                );
+                return;
               }
-              if (context.mounted) Navigator.pop(context);
+
+              try {
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(user.uid)
+                    .update({
+                  'mobile': verifiedPhone,
+                  'updatedAt': FieldValue.serverTimestamp(),
+                });
+                await SessionManager.saveStudentMobile(
+                  verifiedPhone!.substring(3),
+                );
+                ref.invalidate(sessionUserProvider);
+                if (context.mounted) Navigator.pop(context);
+              } catch (_) {
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Mobile number could not be saved.'),
+                    ),
+                  );
+                }
+              }
             },
             child: const Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
           ),
