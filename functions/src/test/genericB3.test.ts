@@ -381,7 +381,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
         pageNumber: 1,
         text: 'SUBJECT: History\\nTOPIC: Ancient trade routes',
         isVerified: true,
-        pageDigest: 'page-digest-1',
+        pageDigest: 'dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd',
       }],
     };
 
