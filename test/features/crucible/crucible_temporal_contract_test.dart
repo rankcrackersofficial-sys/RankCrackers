@@ -8,7 +8,15 @@ void main() {
   final start = DateTime(2026, 11, 1, 10);
   final state = CrucibleProtocolState(
     recruitmentId: 'jee_main_2027',
+    phaseIndex: 1,
+    scheduleIndex: 1,
+    currentScheduleId: 's01',
+    status: 'study',
+    scheduleStartTime: start,
     protocolStartTime: start,
+    currentBoundaryTime: start,
+    isVIP: false,
+    isStalled: false,
   );
 
   group('Crucible canonical 98-day temporal contract', () {
