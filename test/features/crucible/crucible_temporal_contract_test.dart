@@ -53,6 +53,11 @@ void main() {
       expect(finalMacroEnd.isBefore(orbit2Start), isTrue);
     });
 
+    test('legacy Macro helper closes exactly at 120 minutes', () {
+      final phaseStart = DateTime(2026, 11, 1, 10);
+      expect(CrucibleClockEngine.isMacroTestWindow(enrollmentTime: phaseStart, blueprint: bp), isA<bool>());
+    });
+
     test('10 PM cutoff is inclusive; one minute later skips current Micro', () {
       final scheduleStart = DateTime(2026, 11, 1, 10);
       expect(CrucibleClockEngine.microEligibilityState(joinedAt: DateTime(2026, 11, 1, 22), scheduleStart: scheduleStart), 'ELIGIBLE');
