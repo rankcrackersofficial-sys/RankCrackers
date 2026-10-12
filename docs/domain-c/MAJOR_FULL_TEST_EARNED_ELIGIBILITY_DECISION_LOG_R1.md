@@ -219,3 +219,23 @@ RankCrackers should not artificially ration assessments after the governed quest
 - paper/content authority remains fail-closed.
 
 Code mutation: NONE.
+
+
+---
+
+## Exact 98-Day Calendar Reconciliation — 2026-10-12
+
+The hour-by-hour R1 calendar has now been expanded without temporal shorthand.
+
+Canonical arithmetic from Day 1 10:00:
+- 98 x 24h = 2352h, therefore the exact orbit closes at Day 99 10:00.
+- Founder-requested display continues one additional hour through Day 99 11:00.
+- Phase Macro junctions occur at Day 15, 29, 43, 57, 71, 85 and 99, each 09:00-10:00.
+- Major escalation junction A = Phase-2 Macro, Day 29 09:00-10:00: Macro fallback + Major-1 eligibility lane.
+- Major escalation junction B = Phase-4 Macro, Day 57 09:00-10:00: Macro fallback + Major-2 eligibility lane.
+- Final escalation junction = Phase-7 Macro, Day 99 09:00-10:00: Macro fallback + Major-3 lane + Full-Test lane according to earned eligibility.
+- Major/Full paper duration is NOT set by Crucible; mission Test Arena paper authority controls actual duration. Crucible controls the sovereign junction/start authority.
+
+The complete generated schedule contains 2,353 explicit one-hour rows covering Day 1 10:00 through Day 99 11:00, including all 42 Micro tests, 7 Rebuild windows and 7 Macro junctions.
+
+Code mutation: NONE.
