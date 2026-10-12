@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../../core/models/node_runtime_state.dart';
 import '../../../../core/models/readiness_state.dart';
+import '../../../../shared/providers/session_provider.dart';
 
 /// Progress metrics are private to the signed-in user and selected mission.
 bool hasCurrentSessionMissionMetrics({
