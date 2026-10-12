@@ -185,9 +185,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                         children: [
                           Expanded(
                             child: _compactPillarCard(
-                              Icons.bolt_rounded,
-                              'TEST ARENA',
-                              () => context.push(AppRoutes.testArena),
+                              Icons.fact_check_outlined,
+                              'SYLLABUS',
+                              () => context.go(AppRoutes.syllabus),
                               color: AppColors.gold,
                               secondary: true,
                             ),
