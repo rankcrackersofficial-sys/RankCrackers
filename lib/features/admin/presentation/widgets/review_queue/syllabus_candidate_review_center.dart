@@ -40,7 +40,10 @@ class _SyllabusCandidateReviewCenterState extends State<SyllabusCandidateReviewC
         ],
       ),
     );
-    if (accepted != true || reason.text.trim().isEmpty) { reason.dispose(); return; }
+    if (accepted != true || reason.text.trim().isEmpty) {
+      reason.dispose();
+      return;
+    }
     setState(() => _loading = true);
     try {
       await FirebaseFunctions.instance.httpsCallable('reviewSyllabusCandidate').call({
@@ -51,7 +54,7 @@ class _SyllabusCandidateReviewCenterState extends State<SyllabusCandidateReviewC
       });
     } on FirebaseFunctionsException catch (error) {
       if (mounted) { ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Review denied: ${error.message ?? error.code}')),
+      if (mounted) { ScaffoldMessenger.of(context).showSnackBar(
       ); }
     } catch (error) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(
