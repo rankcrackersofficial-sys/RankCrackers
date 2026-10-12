@@ -11,18 +11,19 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
       missionId: "jee_main_2026",
       documentId: "hash_7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
       sourceSha256: "7cad9da2a12065444828f744bd9f1a93a2dd0d9bd54c32a6d92d94a769e4f905",
+      sourceVersionId: "jee-main-2026-v1",
       verifiedPageCorpus: [
         {
           pageNumber: 1,
           text: "Paper 1\nSUBJECT: Mathematics\nUNIT: Sets and Relations\nTOPIC: Sets representation\nTOPIC: Equivalence relations",
           isVerified: true,
-          pageDigest: "digest1"
+          pageDigest: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
         },
         {
           pageNumber: 12,
           text: "Paper 2A\nSUBJECT: Mathematics\nUNIT: Calculus\nTOPIC: Limits and Continuity",
           isVerified: true,
-          pageDigest: "digest12"
+          pageDigest: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
         }
       ],
       authorizedScope: {
@@ -134,7 +135,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
     const p2BOnlyInput = {
       ...baseInput,
       verifiedPageCorpus: [
-        { pageNumber: 15, text: "Paper 2B\nSUBJECT: Mathematics\nUNIT: Planning Theory", isVerified: true, pageDigest: "digest15" }
+        { pageNumber: 15, text: "Paper 2B\nSUBJECT: Mathematics\nUNIT: Planning Theory", isVerified: true, pageDigest: "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" }
       ],
       authorizedScope: { ...baseInput.authorizedScope, allowedPaperIds: ["PAPER_2B"] }
     };
@@ -310,13 +311,13 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
             pageNumber: 1,
             text: "Paper 1\nSUBJECT: Mathematics\nUNIT: Sets and Relations\nTOPIC: Sets representation",
             isVerified: true,
-            pageDigest: "digest1"
+            pageDigest: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
           },
           {
             pageNumber: 12,
             text: "Paper 2A\nSUBJECT: Mathematics\nUNIT: Sets and Relations\nTOPIC: Sets representation",
             isVerified: true,
-            pageDigest: "digest12"
+            pageDigest: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
           }
         ]
       };
@@ -340,7 +341,7 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
             pageNumber: 1,
             text: "Paper 1\nSUBJECT: Chemistry\nUNIT 13: PURIFICATION\nTOPIC: Crystallization\nUNIT 14: SOME BASIC PRINCIPLES OF ORGANIC CHEMISTRY\nTOPIC: Tetravalency of carbon\nTOPIC: Homologous series",
             isVerified: true,
-            pageDigest: "digest1"
+            pageDigest: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
           }
         ],
         authorizedScope: {
