@@ -56,121 +56,11 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   int _ingestionTab = 0; // 0: Review Board, 1: Unified Registry
   String? _activeTaskId;
 
-  // Existing upload state
-  static const _categories = {
-    'Notification': 'recruitment_notification',
-    'Syllabus': 'syllabus',
-    'PYQ': 'pyq',
-    'Study Material': 'study_material',
-    'Update / Notice': 'notice',
-  };
-  String _category = 'recruitment_notification';
-  bool _uploading = false;
-  String? _message;
-
   @override
   void initState() {
     super.initState();
     _activeTaskId = widget.initialTaskId;
     // For admin, landing should be Work Queue (index 0 in filtered list)
-  }
-
-  Future<void> _upload() async {
-    if (widget.roleMode == ConsoleRoleMode.admin) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-            content: Text(
-                'Source ingestion is restricted to Founder access in this phase.')),
-      );
-      return;
-    }
-
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: [
-        'pdf',
-        'docx',
-        'xlsx',
-        'json',
-        'csv',
-        'txt',
-        'png',
-        'jpg',
-        'jpeg',
-        'webp',
-      ],
-      withData: true,
-    );
-    final file = result?.files.single;
-    final bytes = file?.bytes;
-    if (file == null || bytes == null) return;
-
-    setState(() {
-      _uploading = true;
-      _message = null;
-    });
-
-    try {
-      final hash = sha256.convert(bytes).toString();
-      final ext = file.extension?.toLowerCase() ??
-          file.name.split('.').last.toLowerCase();
-      final sourceId = 'hash_$hash';
-      final storagePath = 'ingestion_refinery/$hash.$ext';
-      final metadata = SettableMetadata(contentType: mimeForExtension(ext));
-      await FirebaseStorage.instance.ref(storagePath).putData(bytes, metadata);
-      final downloadUrl =
-          await FirebaseStorage.instance.ref(storagePath).getDownloadURL();
-
-      final now = FieldValue.serverTimestamp();
-      await FirebaseFirestore.instance
-          .collection('ingestion_refinery')
-          .doc(sourceId)
-          .set({
-        'id': sourceId,
-        'sourceId': sourceId,
-        'fileName': file.name,
-        'fileType': ext,
-        'mimeType': mimeForExtension(ext),
-        'fileSize': bytes.length,
-        'fileHash': hash,
-        'assetType': _category,
-        'status': 'uploaded',
-        'documentStatus': _category == 'pyq' ? 'HISTORICAL' : 'LIVE',
-        'sourceUrl': downloadUrl,
-        'storagePath': storagePath,
-        'createdAt': now,
-        'updatedAt': now,
-        'uploadedFrom': 'rankcrackers_web_unified',
-      }, SetOptions(merge: true));
-
-      await FirebaseFirestore.instance.collection('ai_queue').add({
-        'type': 'pdfParse',
-        'provider': 'gemini',
-        'payload': {
-          'id': sourceId,
-          'fileName': file.name,
-          'filePath': downloadUrl,
-          'storagePath': storagePath,
-          'fileType': ext,
-          'mimeType': mimeForExtension(ext),
-          'intent': _category,
-          'fileHash': hash,
-          'mediumPolicy': 'ENGLISH_ONLY',
-        },
-        'status': 'received',
-        'manualTrigger': true,
-        'createdAt': now,
-        'triggeredFrom': 'rankcrackers_web_unified',
-      });
-
-      setState(
-        () => _message = 'Upload queued. Extraction worker should pick it up.',
-      );
-    } catch (e) {
-      setState(() => _message = 'Upload failed: $e');
-    } finally {
-      if (mounted) setState(() => _uploading = false);
-    }
   }
 
   @override
@@ -369,25 +259,42 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Container(
-          width: 8,
-          height: 8,
-          decoration: const BoxDecoration(
-            color: rcGreen,
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(color: rcGreen, blurRadius: 4, spreadRadius: 1),
-            ],
-          ),
-        ),
-        const SizedBox(width: 8),
-        const Text(
-          'SYSTEM ONLINE',
-          style: TextStyle(
-              color: rcGreen,
-              fontSize: 10,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 0.5),
+        StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+          stream: FirebaseFirestore.instance
+              .collection('system_health_pings')
+              .doc('heartbeat')
+              .snapshots(),
+          builder: (context, snapshot) {
+            final hasData = snapshot.hasData && (snapshot.data?.exists ?? false);
+            final statusColor = hasData ? rcGreen : const Color(0xFFE5A93C);
+            final statusLabel = hasData ? 'SYSTEM MONITORED' : 'SYSTEM STANDBY';
+            return Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 8,
+                  height: 8,
+                  decoration: BoxDecoration(
+                    color: statusColor,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(color: statusColor, blurRadius: 4, spreadRadius: 1),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  statusLabel,
+                  style: TextStyle(
+                    color: statusColor,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ],
+            );
+          },
         ),
         const SizedBox(width: 20),
         const VerticalDivider(
@@ -505,7 +412,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       items: [
         _LandingItem(
           title: 'Crucible Planner',
-          subtitle: '100-Day mission schedule generation.',
+          subtitle: '98-Day mission schedule generation.',
           icon: Icons.calendar_month_rounded,
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {

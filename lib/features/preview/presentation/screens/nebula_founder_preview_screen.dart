@@ -200,7 +200,7 @@ class _NebulaFounderPreviewScreenState
             style: _heroStyle.copyWith(fontSize: 25)),
         const SizedBox(height: 6),
         const Text(
-          'The verified syllabus inventory is available. The 100-day Crucible structure is ready for preview. Pilot DigiBook content is available for Mechanics Foundations. Reviewed assessments are still being prepared.',
+          'The verified syllabus inventory is available. The 98-day Crucible structure is ready for preview. Pilot DigiBook content is available for Mechanics Foundations. Reviewed assessments are still being prepared.',
           style: TextStyle(color: Colors.white70, height: 1.35),
         ),
       ]),
@@ -228,7 +228,7 @@ class _NebulaFounderPreviewScreenState
               style: _heroStyle.copyWith(fontSize: 28)),
           const SizedBox(height: 8),
           const Text(
-            'Your preparation system is being built around the official syllabus, a 100-day Crucible plan and premium DigiBook learning units.',
+            'Your preparation system is being built around the official syllabus, a 98-day Crucible plan and premium DigiBook learning units.',
             style: TextStyle(color: Colors.white70, height: 1.4),
           ),
           const SizedBox(height: 14),
@@ -236,7 +236,7 @@ class _NebulaFounderPreviewScreenState
             ['Verified topics', inventory['previewEligibleAtoms'] ?? 417],
             [
               'Crucible plan',
-              '${crucible['cycleDays'] ?? 100} days / ${crucible['scheduleCount'] ?? 42} schedules'
+              '${crucible['cycleDays'] ?? 98} days / ${crucible['scheduleCount'] ?? 42} schedules'
             ],
             ['Pilot DigiBook', unit['title'] ?? 'Mechanics Foundations'],
             ['Reviewed tests', 'In progress'],
@@ -436,7 +436,7 @@ class _NebulaFounderPreviewScreenState
               'All preview-eligible atoms are allocated exactly once. Tests remain structural slots until reviewed question pools exist.'),
           const SizedBox(height: 12),
           _metrics([
-            ['100-Day Plan', '${plan['cycleDays']} days'],
+            ['98-Day Plan', '${plan['cycleDays']} days'],
             ['Learning phases', plan['phaseCount']],
             ['Focused schedules', plan['scheduleCount']],
             [
