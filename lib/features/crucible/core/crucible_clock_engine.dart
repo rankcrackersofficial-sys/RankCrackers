@@ -6,7 +6,6 @@ import '../models/mission_crucible_blueprint.dart';
 /// Consumes MissionCrucibleBlueprint for mission-specific cycle lengths, phases, and schedule boundaries.
 class CrucibleClockEngine {
   static const int courseStartHour = 10;
-  static const int testStartHour = 10;
   static const int lateJoinCutoffHours = 12;
 
   // ===================================================
@@ -242,9 +241,8 @@ class CrucibleClockEngine {
       return 'REBUILD';
     } else if (elapsedWithinPhase < macroEnd) {
       return 'MACRO';
-    } else if (elapsedWithinPhase < phaseEnd) {
-      return 'RECOVERY';
     } else {
+      // No recovery window: phase boundary advances directly into next schedule.
       return 'LEARNING';
     }
   }
@@ -310,9 +308,9 @@ class CrucibleClockEngine {
       };
     } else {
       return {
-        'type': 'RECOVERY',
-        'start': phaseStart.add(macroEnd),
-        'end': phaseStart.add(phaseEnd),
+        'type': 'LEARNING',
+        'start': phaseStart.add(phaseEnd),
+        'end': phaseStart.add(phaseEnd).add(Duration(hours: bp.learningHoursPerSchedule)),
       };
     }
   }
