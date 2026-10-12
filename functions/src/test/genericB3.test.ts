@@ -370,4 +370,29 @@ describe('🔱 GENERIC B3 SYLLABUS STRUCTURE SUITE (B3H-T01 to B3H-T24)', () => 
       expect(paperNullTopic).toBeUndefined();
     });
   });
+
+  test('B3 preserves a missing Unit level and never invents Micro/Atomic official nodes', async () => {
+    const input: B3Input = {
+      ...baseInput,
+      missionId: 'generic_mission',
+      authorizedScope: { papersEnabled: false, allowedSubjects: ['History'] },
+      verifiedPageCorpus: [{
+        pageNumber: 1,
+        text: 'SUBJECT: History\\nTOPIC: Ancient trade routes',
+        isVerified: true,
+        pageDigest: 'page-digest-1',
+      }],
+    };
+
+    const result = await worker.materializeSyllabusStructure(input);
+    const subject = result.find((node) => node.nodeType === 'subject');
+    const topic = result.find((node) => node.nodeType === 'topic');
+
+    expect(result.some((node) => node.nodeType === 'unit')).toBe(false);
+    expect(topic?.parentId).toBe(subject?.nodeId);
+    expect(topic?.ancestorIds).toEqual([subject?.nodeId]);
+    expect(result.every((node) => node.provenance === 'OFFICIAL_CANDIDATE')).toBe(true);
+    expect(result.every((node) => node.verificationState === 'PENDING_REVIEW')).toBe(true);
+    expect(result.some((node) => (node.nodeType as string).includes('atomic'))).toBe(false);
+  });
 });
