@@ -173,3 +173,49 @@ A milestone must never leave a late joiner without an assessment. The fallback M
 This amendment supersedes the assumption that every learner necessarily follows Major-1 -> Major-2 -> Major-3 -> Full on fixed personal progression dates. It does NOT yet supersede R1 thresholds until the Founder locks the exact milestone days and counts.
 
 Code mutation: NONE.
+
+
+---
+
+## Founder Clarification — Macro Junction Is the Authority — 2026-10-12
+
+Status: FOUNDER DIRECTION LOCKED FOR DESIGN; exact junction numbers/eligibility thresholds still to be reconciled before code.
+
+### 30-day language is NOT a temporal rule
+"Approximately 30 days" is only a spacing intention for Major opportunities. There is NO independent Day-30/60/90 clock and no new cadence that may drift against Crucible.
+
+The canonical event anchor is an EXISTING GLOBAL MACRO TEST JUNCTION.
+
+### Assessment-junction law
+On selected global Macro junctions, multiple governed Test Arena opportunities coexist:
+
+- MACRO remains available for learners who have not earned the higher assessment.
+- MAJOR is available at that same junction to learners who have earned Major eligibility.
+- FULL TEST is available at the designated final/highest junction to learners who have earned Full eligibility.
+- At a Full-capable junction, Major remains available for a learner who is Major-eligible but not Full-eligible.
+- No active learner is intentionally left without an assessment opportunity because they joined late.
+
+The system therefore does NOT cancel Macro when Major/Full exists. It provides parallel eligibility lanes bound to the same sovereign junction.
+
+### Progression intent
+- Select the Macro junction nearest roughly one month of progression for the first Major opportunity.
+- Select a later Macro junction roughly another month onward for the second Major opportunity.
+- At the final 98-day/orbit-close Macro junction, preserve Macro and also expose the governed Major and Full Test lanes according to earned eligibility.
+
+### Full-Test intent
+A learner who has completed/earned the required first and second Major progression may be allowed to take Full Test at the final junction, subject to the final universal Micro/Macro/Major participation rule and full-paper authority/content readiness.
+
+### Opportunity principle
+RankCrackers should not artificially ration assessments after the governed question/test engine is available. Repeated governed opportunities for learners to measure themselves are a product capability, while progression into higher-stakes assessment types remains earned and deterministic.
+
+### Non-negotiables
+- one mission-global clock;
+- no personal test schedule;
+- no independent 30-day clock;
+- no exception/bypass;
+- Macro fallback always exists at a selected Major/Full junction;
+- Major/Full never removes the assessment opportunity for a late joiner;
+- exact thresholds are universal and versioned;
+- paper/content authority remains fail-closed.
+
+Code mutation: NONE.
