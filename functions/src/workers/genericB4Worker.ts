@@ -124,7 +124,7 @@ export class GenericB4Worker {
           profileVersion: profile.profileVersion,
         },
       }),
-    ].join('\\n');
+    ].join('\n');
 
     let responseText = '';
     try {
