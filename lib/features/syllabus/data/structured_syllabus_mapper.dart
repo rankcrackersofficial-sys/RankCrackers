@@ -17,7 +17,19 @@ class StructuredSyllabusMapper {
       if (id.isNotEmpty) byId[id] = document;
     }
 
-    final ordered = byId.values.toList()
+    final activeEpochs = byId.values
+        .map((document) => document['activationEpoch'])
+        .whereType<int>()
+        .toList();
+    if (activeEpochs.isEmpty) return const <MicroTopicNode>[];
+    var activeEpoch = activeEpochs.first;
+    for (final epoch in activeEpochs.skip(1)) {
+      if (epoch > activeEpoch) activeEpoch = epoch;
+    }
+
+    final ordered = byId.values
+        .where((document) => document['activationEpoch'] == activeEpoch)
+        .toList()
       ..sort((a, b) => _sourceOrder(a).compareTo(_sourceOrder(b)));
     final output = <MicroTopicNode>[];
 
