@@ -791,8 +791,20 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             color: Colors.white,
           ),
         ),
+        const SizedBox(height: 6),
+        Text(
+          "तेजस्वि नावधीतमस्तु।",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.notoSans(
+            fontSize: ResponsiveHelper.sp(context, 14),
+            fontWeight: FontWeight.w700,
+            color: goldAccent.withValues(alpha: 0.95),
+          ),
+        ),
+        const SizedBox(height: 4),
         Text(
           "May Our Learning Be Radiant.",
+          textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
             fontSize: 11,
             fontWeight: FontWeight.w500,
@@ -941,13 +953,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   )
                 else
                   Image.asset(
-                    "assets/images/Google.png",
+                    "assets/images/google.png",
                     width: 20,
-                    errorBuilder: (context, error, stackTrace) => const Icon(
-                      Icons.g_mobiledata_rounded,
-                      color: Colors.white,
-                      size: 20,
-                    ),
+                    height: 20,
+                    fit: BoxFit.contain,
                   ),
                 const SizedBox(width: 12),
                 Flexible(
