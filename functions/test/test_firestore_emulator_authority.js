@@ -43,6 +43,18 @@ test.before(async () => {
           { missionId: id, status: 'draft', content: 'Founder review pending' });
       }
     }
+    await setDoc(doc(db, 'reviewer_registry/sme_math'), {
+      authorityId: 'sme_math', active: true,
+      reviewDecisionSigningMethod: 'SECURE_JWT_AUDITED_SESSION',
+      missionScopes: ['m_hidden'], subjectScopes: ['Mathematics'],
+      credentialEvidenceRef: 'offline/verified_math_credentials',
+    });
+    for (const [missionId, subjectId] of [['m_hidden', 'Mathematics'], ['m_hidden', 'Physics'], ['m_visible', 'Mathematics']]) {
+      await setDoc(doc(db, 'mission_realms', missionId, 'official_syllabus_candidates', subjectId), {
+        missionId, subjectId, nodeType: 'topic', reviewState: 'PENDING_REVIEW',
+        provenance: 'OFFICIAL_CANDIDATE',
+      });
+    }
     await setDoc(doc(db, 'mission_realms/m_hidden/official_documents/doc1'), {
       documentId: 'doc1', status: 'VERIFIED',
     });
@@ -85,6 +97,22 @@ test('Founder may review hidden mission but cannot falsify verified source evide
   await assertFails(setDoc(doc(db,'mission_realms','m_hidden','source_pairs','pair2'), { status: 'VERIFIED' }));
   await assertFails(updateDoc(doc(db,'mission_realms','m_hidden','official_documents','doc1'),
     { status: 'VERIFIED_BY_CLIENT' }));
+});
+
+
+test('Syllabus candidates are readable only by assigned mission and subject reviewers', async () => {
+  const scoped = env.authenticatedContext('reviewer_uid', { academicReviewerId: 'sme_math' }).firestore();
+  const unregistered = env.authenticatedContext('unregistered', { academicReviewerId: 'sme_unknown' }).firestore();
+  const student = env.authenticatedContext('student_syllabus').firestore();
+  await assertSucceeds(getDoc(doc(scoped, 'mission_realms/m_hidden/official_syllabus_candidates/Mathematics')));
+  await assertFails(getDoc(doc(scoped, 'mission_realms/m_hidden/official_syllabus_candidates/Physics')));
+  await assertFails(getDoc(doc(scoped, 'mission_realms/m_visible/official_syllabus_candidates/Mathematics')));
+  await assertFails(getDoc(doc(unregistered, 'mission_realms/m_hidden/official_syllabus_candidates/Mathematics')));
+  await assertFails(getDoc(doc(student, 'mission_realms/m_hidden/official_syllabus_candidates/Mathematics')));
+  await assertFails(updateDoc(doc(scoped, 'mission_realms/m_hidden/official_syllabus_candidates/Mathematics'),
+    { verificationState: 'VERIFIED' }));
+  await assertSucceeds(getDoc(doc(env.authenticatedContext('founder1', { founder: true }).firestore(),
+    'mission_realms/m_hidden/official_syllabus_candidates/Physics')));
 });
 
 test('Student profile requires canonical verified phone and protects roles', async () => {
