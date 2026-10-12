@@ -1,93 +1,77 @@
 # DOMAIN-C — Crucible Temporal Contract R1
 
-Status: Founder-locked temporal structure  
-Scope: Crucible clock, schedules, Micro eligibility, Rebuild, Macro, orbit rollover  
+Status: Founder-corrected temporal structure  
+Scope: global Crucible clock, schedules, Micro eligibility, Rebuild, Macro, orbit rollover  
 Major: Test Arena only
 
-## 1. Sovereign mission clock
+## 1. Global ring law
+One mission has one continuous global Crucible clock. Student enrollment never creates a private Day 1, restarts the ring, or pauses it. Each learner instead carries a personal coverage/mastery ledger.
 
-One mission has one continuous global Crucible clock. Student enrollment never restarts, pauses, or shifts the mission ring. Each learner has a separate personal coverage/mastery ledger.
+Canonical schedule boundary: 10:00 AM mission-local time.
 
-The canonical Crucible day boundary is 10:00 AM mission-local time.
+## 2. Normal 48-hour schedule
+A normal tactical schedule is 48 hours:
+- Hour 0: schedule begins at 10:00 AM.
+- Hours 0–47: learning.
+- Hours 47–48: Micro, normally 09:00–10:00.
+- Hour 48: next schedule starts immediately.
 
-## 2. 48-hour tactical schedule
+Thus a schedule starting Day 1 at 10:00 reaches its Micro on Day 3 at 09:00–10:00 and the next schedule begins at 10:00.
 
-Each study schedule is exactly 48 hours:
+## 3. Six-schedule block and Rebuild/Macro
+Six normal schedules consume 6 × 48 = 288 hours.
 
-- Hour 0: schedule starts at 10:00 AM.
-- Hours 0–47: Learning window.
-- Hour 47: Micro starts at 09:00 AM two calendar dates after schedule start.
-- Hours 47–48: Micro window, 60 minutes.
-- Hour 48: Micro closes at 10:00 AM and the next schedule starts immediately.
+Immediately after Micro-6 closes:
+- Rebuild begins.
+- Rebuild runs for 47 hours.
+- The next 1 hour is the Macro.
+- Macro completion is the next block boundary.
+- There is NO separate Recovery window.
 
-No gap exists between schedules.
+Arithmetic:
+288h schedules + 47h Rebuild + 1h Macro = 336h = 14 days.
 
-## 3. Fourteen-day phase
+Using a block anchored at Day 1 10:00:
+- S1: Day 1 10:00 → Day 3 10:00; Micro Day 3 09:00–10:00.
+- S2: Day 3 10:00 → Day 5 10:00; Micro Day 5 09:00–10:00.
+- S3: Day 5 10:00 → Day 7 10:00; Micro Day 7 09:00–10:00.
+- S4: Day 7 10:00 → Day 9 10:00; Micro Day 9 09:00–10:00.
+- S5: Day 9 10:00 → Day 11 10:00; Micro Day 11 09:00–10:00.
+- S6: Day 11 10:00 → Day 13 10:00; Micro Day 13 09:00–10:00.
+- Rebuild: Day 13 10:00 → Day 15 09:00 (47h).
+- Macro: Day 15 09:00–10:00 (1h).
+- S7 / next block: begins immediately Day 15 10:00.
 
-Each phase is exactly 336 hours:
+The Founder has explicitly allowed a future post-Macro schedule to be up to one hour shorter if a specific operational Macro boundary is later placed at 10:00–11:00. That exception must be explicit; it must not silently distort the normal 47h-learning + 1h-Micro rule.
 
-| Window | Phase hours | Duration |
-|---|---:|---:|
-| Schedule 1 | 0–48 | 48h |
-| Schedule 2 | 48–96 | 48h |
-| Schedule 3 | 96–144 | 48h |
-| Schedule 4 | 144–192 | 48h |
-| Schedule 5 | 192–240 | 48h |
-| Schedule 6 | 240–288 | 48h |
-| Rebuild | 288–312 | 24h |
-| Macro | 312–314 | 2h |
-| Recovery/transition | 314–336 | 22h |
+## 4. 98-day continuous orbit
+Seven 336-hour blocks = 2,352 hours = 98 days.
+Each block has six schedules, therefore one orbit has 42 schedules and 42 Micros.
+Each block has one Rebuild and one Macro, therefore one orbit has seven Rebuilds and seven Macros.
 
-Therefore: 288 + 24 + 2 + 22 = 336 hours = 14 days.
+At exactly orbit hour 2352, the final Macro closes and Orbit N+1 begins immediately. There is no terminal Day 99 and no recovery gap.
 
-For a phase beginning at 10:00 AM:
-- Micro windows are 09:00–10:00 at hours 47, 95, 143, 191, 239 and 287.
-- Rebuild is Day 13 10:00 AM through Day 14 10:00 AM.
-- Macro is Day 14 10:00 AM–12:00 PM.
-- Recovery is Day 14 12:00 PM through the next phase boundary at 10:00 AM.
+## 5. Late-entry / Micro eligibility
+For a schedule beginning at 10:00 AM:
+- join 10:00 AM through 10:00 PM inclusive → current Micro ELIGIBLE;
+- join after 10:00 PM → current Micro NOT_ELIGIBLE_LATE_ENTRY;
+- late-entry skip is never Fail, Zero or Absent;
+- student stays on the global ring and proceeds toward the next Micro.
 
-## 4. Ninety-eight-day ring
-
-Seven phases × 14 days = 98 days = 2,352 hours.
-Six schedules × seven phases = 42 schedules and 42 Micro windows.
-There are seven Rebuild windows and seven Macro windows.
-
-Phase boundaries:
-- Phase 1: Days 1–14; Macro Day 14.
-- Phase 2: Days 15–28; Macro Day 28.
-- Phase 3: Days 29–42; Macro Day 42.
-- Phase 4: Days 43–56; Macro Day 56.
-- Phase 5: Days 57–70; Macro Day 70.
-- Phase 6: Days 71–84; Macro Day 84.
-- Phase 7: Days 85–98; Macro Day 98.
-
-The final Macro begins at the Day-98 boundary (orbit hour 2328) and ends two hours later. Recovery then runs for 22 hours. At orbit hour 2352 / the next 10:00 AM boundary, Orbit N+1 Day 1 begins. There is no terminal Day 99.
-
-## 5. Late-entry and Micro eligibility
-
-The global ring always remains fixed.
-
-For any 48-hour schedule beginning at 10:00 AM:
-- Join from 10:00 AM through 10:00 PM inclusive: current Micro = ELIGIBLE.
-- Join after 10:00 PM: current Micro = NOT_ELIGIBLE_LATE_ENTRY.
-- A skipped Micro due solely to late entry is not Fail, Zero, or Absent.
-- The learner remains on the running global ring and is eligible from the next schedule's Micro under the normal rule.
-
-This is a Founder-defined 12-hour schedule-entry cutoff. It must not be reinterpreted as an exact “24 hours before Micro” formula.
+This Founder-defined cutoff is the operational rule. It is not to be replaced by a separate per-student Crucible clock.
 
 ## 6. Authority separation
+Global clock = WHAT schedule/window is live.
+Personal ledger = WHAT the learner has actually covered/missed/mastered.
+Personalization changes HOW the learner trains, not the mission's global temporal position.
 
-Global clock answers: what scope/window is live for the mission now?
-Personal ledger answers: what this learner has actually covered, missed, rebuilt, or mastered?
+Micro and Macro are formative Crucible assessments. Major belongs exclusively to Test Arena.
 
-Personalization may change HOW the live scope is trained; it must not create a private Crucible clock or change WHAT the mission ring says is live.
-
-Micro and Macro are formative Crucible assessments and do not generate public AIR. Major is excluded from Crucible and belongs exclusively to Test Arena.
-
-## 7. Arithmetic invariants
-
-- learningHoursPerSchedule + microHoursPerSchedule = hoursPerSchedule = 48.
-- schedulesPerPhase × hoursPerSchedule = 288.
-- 288 + rebuildDurationHours + macroDurationHours + recoveryDurationHours = 336.
-- phaseCount × 336 = cycleLengthDays × 24 = 2352.
-- Orbit rollover occurs exactly at 2352 hours.
+## 7. Hard invariants
+- Normal schedule: 47h learning + 1h Micro = 48h.
+- Six schedules: 288h.
+- Inter-block close: 47h Rebuild + 1h Macro = 48h.
+- Block: 288 + 47 + 1 = 336h = 14 days.
+- Seven blocks: 2352h = 98 days.
+- Recovery duration: 0h.
+- Next schedule/block starts immediately when Macro closes.
