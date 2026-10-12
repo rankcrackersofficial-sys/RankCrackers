@@ -92,6 +92,24 @@ jobs:
         id: android
         continue-on-error: true
         run: flutter build apk --debug --no-pub
+      # A successful debug build must be retrievable for actual on-device
+      # visual review, even when unrelated legacy Student tests remain red.
+      - name: Record APK build provenance
+        if: steps.android.outcome == 'success'
+        run: |
+          echo "GitHub commit: ${{ github.sha }}" > student-pr18-apk-provenance.txt
+          echo "Branch: ${{ github.head_ref }}" >> student-pr18-apk-provenance.txt
+          sha256sum build/app/outputs/flutter-apk/app-debug.apk >> student-pr18-apk-provenance.txt
+      - name: Upload debug APK for Founder device review
+        if: steps.android.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rankcrackers-student-pr18-debug-apk
+          path: |
+            build/app/outputs/flutter-apk/app-debug.apk
+            student-pr18-apk-provenance.txt
+          retention-days: 7
+          if-no-files-found: error
       - name: Enforce all Student acceptance results
         if: always()
         run: |
