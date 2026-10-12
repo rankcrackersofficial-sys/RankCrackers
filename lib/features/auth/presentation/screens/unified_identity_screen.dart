@@ -15,6 +15,7 @@ import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/firebase/firestore_service.dart';
 import '../../../../data/india_states.dart';
 import '../providers/auth_provider.dart';
+import '../../domain/policies/canonical_phone_binding_policy.dart';
 
 class UnifiedIdentityScreen extends ConsumerStatefulWidget {
   const UnifiedIdentityScreen(
@@ -389,7 +390,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
     final name = nameController.text.trim();
     final rawMobile = mobileController.text.trim();
-    final mobile = normalizeIndianMobile(rawMobile);
+    final canonicalMobile =
+        CanonicalPhoneBindingPolicy.normalizeE164Phone(rawMobile);
+    final mobile = canonicalMobile == null ? '' : canonicalMobile.substring(3);
     final rawState = stateController.text.trim();
     final canonicalState = IndiaStates.statesAndUTs.firstWhere(
       (s) => s.toLowerCase() == rawState.toLowerCase(),
@@ -406,8 +409,18 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
       _showSnackBar("Please enter your name");
       return;
     }
-    if (mobile.length != 10) {
+    if (canonicalMobile == null || mobile.length != 10) {
       _showSnackBar("Please enter a valid 10-digit mobile number");
+      return;
+    }
+    if (!SessionManager.disableFirebaseForTest &&
+        !CanonicalPhoneBindingPolicy.inputMatchesVerifiedPhone(
+          rawInput: rawMobile,
+          verifiedPhone:
+              CanonicalPhoneBindingPolicy.canonicalVerifiedPhone(user),
+        )) {
+      _showSnackBar(
+          "Use the mobile number verified with this account to continue");
       return;
     }
     if (canonicalState.isEmpty ||
@@ -433,7 +446,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         'state': canonicalState,
         if (stateCode.isNotEmpty) 'stateCode': stateCode,
         if (canonicalState.isNotEmpty) 'stateName': canonicalState,
-        'mobile': mobile,
+        'mobile': canonicalMobile,
         'onboardingCompleted': true,
         'updatedAt': FieldValue.serverTimestamp(),
         'email': user.email,
