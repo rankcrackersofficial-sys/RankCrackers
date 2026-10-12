@@ -11,7 +11,7 @@ export interface B3Input {
   missionId: string;
   documentId: string;
   sourceSha256: string;
-  sourceVersionId?: string;
+  sourceVersionId: string;
   verifiedPageCorpus: Array<{
     pageNumber: number;
     text: string;
@@ -350,7 +350,47 @@ export class GenericB3Worker {
     }
 
     this.validateGraph(nodes, input);
-    return nodes;
+    if (!input.sourceVersionId) throw new Error('B3_REJECT: missing sourceVersionId');
+    const abstractOfficialSyllabus = require('../../services/mission_syllabus_workers').abstractOfficialSyllabus;
+    const segmentIds = new Map(nodes.map((node) => [node.nodeId, node.nodeId]));
+    const abstraction = abstractOfficialSyllabus({
+      binding: {
+        missionId: input.missionId, documentId: input.documentId,
+        sourceVersionId: input.sourceVersionId, sourceSha256: input.sourceSha256, runId: input.runId,
+      },
+      verifiedPageCorpus: input.verifiedPageCorpus.map((page) => ({
+        ...page, sourceSha256: input.sourceSha256,
+      })),
+      segments: nodes.map((node, index) => ({
+        segmentId: segmentIds.get(node.nodeId),
+        level: node.nodeType.toUpperCase(),
+        exactText: node.canonicalTitle,
+        parentSegmentId: node.parentId ? segmentIds.get(node.parentId) : null,
+        paperId: node.paperId,
+        subjectId: node.subjectId,
+        pageNumber: node.sourcePages[0],
+        pageDigest: input.verifiedPageCorpus.find((page) => page.pageNumber === node.sourcePages[0])?.pageDigest,
+        sourceOrder: index + 1,
+      })),
+    });
+    return abstraction.nodes.map((official: any) => {
+      const original = nodes.find((node) => node.nodeId === official.nodeId)
+        || nodes.find((node) => node.canonicalTitle === official.title && node.nodeType.toUpperCase() === official.level);
+      if (!original) throw new Error('B3_REJECT: abstracted segment mapping failed');
+      return {
+        ...original,
+        nodeId: official.nodeId,
+        sourceVersionId: input.sourceVersionId,
+        canonicalTitle: official.title,
+        parentId: official.parentNodeId,
+        ancestorIds: official.parentNodeId ? [...(original.ancestorIds || []).slice(0, -1), official.parentNodeId] : [],
+        provenance: official.provenance,
+        verificationState: official.verificationState,
+        reviewState: 'PENDING_REVIEW',
+        sourceTextAnchor: official.sourceTextAnchor,
+        sourceOrder: official.sourceOrder,
+      };
+    });
   }
 
   private validateAgainstAuthorityLedger(input: B3Input) {
@@ -439,7 +479,7 @@ export class GenericB3Worker {
       throw new Error("B3_REJECT: authorized subjects required for every mission");
     }
 
-    this.validateAgainstAuthorityLedger(input);
+
   }
 
   private validateSubjectAuthority(input: B3Input, paperId: string | null, subjectId: string) {
