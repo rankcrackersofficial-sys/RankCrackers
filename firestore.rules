@@ -15,7 +15,17 @@ service cloud.firestore {
       let reviewer = get(/databases/$(database)/documents/reviewer_registry/$(authorityId)).data;
       return request.auth != null
           && authorityId is string
-          && authorityId.matches('^sme_[a-z0-9_]+
+          && authorityId.matches('^sme_[a-z0-9_]+$')
+          && reviewer.active == true
+          && reviewer.reviewDecisionSigningMethod == 'SECURE_JWT_AUDITED_SESSION'
+          && reviewer.missionScopes is list
+          && reviewer.missionScopes.hasAny([realmId])
+          && reviewer.subjectScopes is list
+          && candidate.subjectId is string
+          && reviewer.subjectScopes.hasAny([candidate.subjectId]);
+    }
+
+    // Every Student mission subcollection must inherit the parent realm's
     // visibility authority. Authentication alone never exposes hidden realms.
     function isStudentVisibleMission(realmId) {
       let mission = get(/databases/$(database)/documents/mission_realms/$(realmId)).data;
