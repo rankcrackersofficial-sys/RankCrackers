@@ -348,7 +348,11 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       }
 
       list.add(_ConsoleModule(
-          label: 'My Access', builder: (_) => const AdminMyAccessPanel()));
+          label: 'My Access',
+          builder: (_) => AdminMyAccessPanel(
+            permissions: perms,
+            userDoc: widget.userDoc,
+          )));
     }
 
     return list;
