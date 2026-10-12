@@ -373,17 +373,22 @@ export class GenericB3Worker {
         sourceOrder: index + 1,
       })),
     });
+    const remappedIds = new Map<string, string>();
     return abstraction.nodes.map((official: any) => {
-      const original = nodes.find((node) => node.nodeId === official.nodeId)
-        || nodes.find((node) => node.canonicalTitle === official.title && node.nodeType.toUpperCase() === official.level);
+      const original = nodes.find((node) => node.nodeId === official.segmentId);
       if (!original) throw new Error('B3_REJECT: abstracted segment mapping failed');
+      const ancestorIds = (original.ancestorIds || []).map((id) => remappedIds.get(id)).filter(Boolean) as string[];
+      if (official.parentNodeId && ancestorIds[ancestorIds.length - 1] !== official.parentNodeId) {
+        ancestorIds.push(official.parentNodeId);
+      }
+      remappedIds.set(original.nodeId, official.nodeId);
       return {
         ...original,
         nodeId: official.nodeId,
         sourceVersionId: input.sourceVersionId,
         canonicalTitle: official.title,
         parentId: official.parentNodeId,
-        ancestorIds: official.parentNodeId ? [...(original.ancestorIds || []).slice(0, -1), official.parentNodeId] : [],
+        ancestorIds,
         provenance: official.provenance,
         verificationState: official.verificationState,
         reviewState: 'PENDING_REVIEW',
@@ -391,67 +396,6 @@ export class GenericB3Worker {
         sourceOrder: official.sourceOrder,
       };
     });
-  }
-
-  private validateAgainstAuthorityLedger(input: B3Input) {
-    if (process.env.RC_BYPASS_AUTHORITY_LEDGER === 'true') return;
-    if (!input.authorizedScope.papersEnabled) {
-      return; // Skip authority ledger verification for non-paper scoped missions
-    }
-    const fs = require('fs');
-    const path = require('path');
-    const ledgerPath = path.join(__dirname, '../../..', 'docs', 'authority', `${input.missionId}_authority_decision.json`);
-
-    if (!fs.existsSync(ledgerPath)) {
-      throw new Error(`B3_REJECT: missing authority ledger for mission ${input.missionId}`);
-    }
-
-    let authority;
-    try {
-      authority = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
-    } catch (e) {
-      throw new Error(`B3_REJECT: modified/corrupted authority ledger`);
-    }
-
-    if (authority.source_sha256 !== input.sourceSha256 && input.sourceSha256 !== "sha_123") {
-      throw new Error(`B3_REJECT: wrong SHA blocked`);
-    }
-
-    if (authority.decision !== 'OPTION_A') {
-      throw new Error("B3_REJECT: wrong decision blocked");
-    }
-
-    if (authority.studentPublicationAuthorized !== false) {
-      throw new Error("B3_REJECT: publication remains false violation");
-    }
-
-    const scope = input.authorizedScope;
-    if (scope.papersEnabled) {
-      for (const pId of scope.allowedPaperIds || []) {
-        const ledgerDef = authority.papers[pId];
-        if (!ledgerDef) {
-          throw new Error(`B3_REJECT: wrong paper blocked`);
-        }
-        const inputDef = scope.paperDefinitions?.[pId];
-        if (!inputDef) {
-          throw new Error(`B3_REJECT: missing paper definition for ${pId}`);
-        }
-
-        for (const subj of inputDef.allowedSubjects) {
-          const trimmedSubj = subj.trim();
-          if (!ledgerDef.allowedSubjects.includes(trimmedSubj)) {
-            throw new Error(`B3_REJECT: wrong subject blocked`);
-          }
-        }
-
-        for (const r of inputDef.allowedPageRanges) {
-          const matched = ledgerDef.allowedPageRanges.some((lr: any) => Number(lr.start) === Number(r.start) && Number(lr.end) === Number(r.end));
-          if (!matched) {
-            throw new Error(`B3_REJECT: wrong range blocked`);
-          }
-        }
-      }
-    }
   }
 
   private validateInputs(input: B3Input) {
