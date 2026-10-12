@@ -90,7 +90,7 @@ function abstractOfficialSyllabus({ binding, verifiedPageCorpus, segments }) {
 
     const nodeId = stableId([source.missionId, source.sourceVersionId, paperId, level, parentNodeId || '', normalizeLabel(title)]);
     const node = Object.freeze({
-      nodeId, missionId: source.missionId, documentId: source.documentId,
+      nodeId, segmentId, missionId: source.missionId, documentId: source.documentId,
       sourceVersionId: source.sourceVersionId, sourceSha256: source.sourceSha256,
       level, paperId: paperId || null, subjectId: segment.subjectId || null, parentNodeId, nearestOfficialAncestorId: level === 'SUBJECT' ? nodeId : (parent?.nearestOfficialAncestorId || parent?.nodeId),
       title, normalizedTitle: normalizeLabel(title),
