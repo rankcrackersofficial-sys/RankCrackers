@@ -265,3 +265,69 @@ test('custom claims merger preserves existing trusted claims without spreading t
   assert.equal('sub' in mergedClaims, false);
 });
 
+
+
+test('production invitation callable rejects unsupported states before assigning claims', async () => {
+  const Module = require('node:module');
+  const originalLoad = Module._load;
+  const token = '0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef';
+  const hash = crypto.createHash('sha256').update(token).digest('hex');
+  const writes = [];
+  const inviteRef = { update: async (value) => writes.push(value) };
+  const db = {
+    collection: (name) => ({ doc: (id) => name === 'admin_invitations' && id === hash ? inviteRef : {} }),
+    runTransaction: async (callback) => callback({
+      get: async () => ({ exists: true, data: () => ({
+        status: 'REVOKED', redeemed: false, targetEmail: 'candidate@example.com',
+        expiresAt: { toMillis: () => Date.now() + 60000 }, claimedByUid: null,
+      }) }),
+      update: (_ref, value) => writes.push(value),
+      set: () => {},
+    }),
+  };
+  let claimsAssigned = false;
+  const fakeAdmin = {
+    firestore: Object.assign(() => db, { FieldValue: { serverTimestamp: () => 'NOW' } }),
+    auth: () => ({
+      getUser: async () => ({ customClaims: {} }),
+      setCustomUserClaims: async () => { claimsAssigned = true; },
+    }),
+  };
+  const fakeFunctions = {
+    https: {
+      onCall: (handler) => handler,
+      HttpsError: class HttpsError extends Error {
+        constructor(code, message) { super(message); this.code = code; }
+      },
+    },
+  };
+  Module._load = function(request, parent, isMain) {
+    if (request === 'firebase-functions') return fakeFunctions;
+    if (request === 'firebase-admin') return fakeAdmin;
+    if (request === '../utils/sovereign_logic' && parent.filename.endsWith('/admin_invitations.js')) {
+      return { ensureFounderClaims: async () => {} };
+    }
+    if (request === '../services/audit_service' && parent.filename.endsWith('/admin_invitations.js')) {
+      return { logFounderActivity: async () => {} };
+    }
+    if (request === '../services/admin_scope_authority' && parent.filename.endsWith('/admin_invitations.js')) {
+      return { CANONICAL_ADMIN_SCOPES: [], normalizeScopes: (scopes) => scopes };
+    }
+    return originalLoad.call(this, request, parent, isMain);
+  };
+
+  try {
+    const callablePath = require.resolve('../callable/admin_invitations');
+    delete require.cache[callablePath];
+    const { acceptAdminInvite } = require(callablePath);
+    await assert.rejects(
+      acceptAdminInvite({ token }, { auth: {
+        uid: 'candidate', token: { email: 'candidate@example.com', email_verified: true },
+      } }),
+      (error) => error.code === 'failed-precondition' && /INVITATION_STATE_INVALID/.test(error.message)
+    );
+    assert.equal(claimsAssigned, false);
+  } finally {
+    Module._load = originalLoad;
+  }
+});

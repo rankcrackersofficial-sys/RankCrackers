@@ -48,6 +48,7 @@ exports.transitionAdminTask = functions.https.onCall(async (data, context) => {
   const taskRef = db.collection('admin_tasks').doc(taskId.trim());
 
   let updatedTask;
+  let previousStatus;
   await db.runTransaction(async (txn) => {
     const taskSnap = await txn.get(taskRef);
     if (!taskSnap.exists) {
@@ -56,6 +57,7 @@ exports.transitionAdminTask = functions.https.onCall(async (data, context) => {
 
     const task = taskSnap.data();
     const currentStatus = (task.status || 'OPEN').toUpperCase();
+    previousStatus = currentStatus;
 
     // 1. Assignee verification: Delegated Admins can only transition their own assigned tasks
     if (!isFounder) {
@@ -108,7 +110,7 @@ exports.transitionAdminTask = functions.https.onCall(async (data, context) => {
 
   await logFounderActivity({
     type: 'ADMIN_TASK_TRANSITIONED',
-    message: `Admin ${auth.uid} moved task '${taskId}' from ${updatedTask.status} to ${normalizedNextStatus}`,
+    message: `Admin ${auth.uid} moved task '${taskId}' from ${previousStatus} to ${normalizedNextStatus}`,
     metadata: {
       taskId: taskId.trim(),
       nextStatus: normalizedNextStatus,

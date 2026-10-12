@@ -197,3 +197,52 @@ test('founder can transition any task regardless of assignee or scope', () => {
   assert.equal(res.status, 'IN_PROGRESS');
   assert.equal(res.lastUpdatedByUid, 'founder_1');
 });
+
+
+test('production task callable logs the actual previous status', async () => {
+  const Module = require('node:module');
+  const originalLoad = Module._load;
+  const activity = [];
+  const task = { status: 'OPEN', assignedToUid: 'admin_1', requiredScope: 'SCOPE' };
+  const updated = [];
+  const db = {
+    collection: () => ({ doc: () => ({}) }),
+    runTransaction: async (callback) => callback({
+      get: async () => ({ exists: true, data: () => task }),
+      update: (_ref, payload) => updated.push(payload),
+    }),
+  };
+  const fakeAdmin = {
+    firestore: Object.assign(() => db, { FieldValue: { serverTimestamp: () => 'NOW' } }),
+  };
+  const fakeFunctions = {
+    https: {
+      onCall: (handler) => handler,
+      HttpsError: class HttpsError extends Error {
+        constructor(code, message) { super(message); this.code = code; }
+      },
+    },
+  };
+  Module._load = function(request, parent, isMain) {
+    if (request === 'firebase-functions') return fakeFunctions;
+    if (request === 'firebase-admin') return fakeAdmin;
+    if (request === '../services/audit_service' && parent.filename.endsWith('/admin_tasks.js')) {
+      return { logFounderActivity: async (entry) => activity.push(entry) };
+    }
+    return originalLoad.call(this, request, parent, isMain);
+  };
+
+  try {
+    const callablePath = require.resolve('../callable/admin_tasks');
+    delete require.cache[callablePath];
+    const { transitionAdminTask } = require(callablePath);
+    await transitionAdminTask(
+      { taskId: 'task-1', nextStatus: 'IN_PROGRESS' },
+      { auth: { uid: 'admin_1', token: { admin: true, scopes: ['SCOPE'] } } }
+    );
+    assert.equal(updated[0].status, 'IN_PROGRESS');
+    assert.match(activity[0].message, /from OPEN to IN_PROGRESS/);
+  } finally {
+    Module._load = originalLoad;
+  }
+});
