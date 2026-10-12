@@ -23,8 +23,9 @@ class CrucibleClockEngine {
       final bp = MissionCrucibleBlueprintRegistry.getBlueprint(missionId);
       if (bp != null) return bp;
     }
-    // Default to registered baseline profile for backward compatibility
-    return MissionCrucibleBlueprint.jeeMain2027Blueprint;
+    throw StateError(
+      'CRUCIBLE_BLUEPRINT_NOT_CONFIGURED: explicit blueprint or registered missionId required',
+    );
   }
 
   // ===================================================
@@ -95,7 +96,12 @@ class CrucibleClockEngine {
     int? cycleLengthDays,
   }) {
     if (now.isBefore(protocolStartTime)) return 1;
-    final cycleDays = cycleLengthDays ?? blueprint?.cycleLengthDays ?? MissionCrucibleBlueprint.jeeMain2027Blueprint.cycleLengthDays;
+    final cycleDays = cycleLengthDays ?? blueprint?.cycleLengthDays;
+    if (cycleDays == null) {
+      throw StateError(
+        'CRUCIBLE_BLUEPRINT_NOT_CONFIGURED: cycleLengthDays or explicit blueprint required',
+      );
+    }
     final elapsed = now.difference(protocolStartTime);
     return (elapsed.inSeconds ~/ (cycleDays * 24 * 3600)) + 1;
   }
