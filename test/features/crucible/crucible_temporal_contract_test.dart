@@ -53,6 +53,26 @@ void main() {
       expect(finalMacroEnd, orbit2Start);
     });
 
+    test('orbit arithmetic is unbounded and does not stop at four orbits', () {
+      expect(CrucibleClockEngine.getOrbitNumber(
+        protocolStartTime: start,
+        now: start.add(const Duration(days: 98 * 4)),
+        blueprint: bp,
+      ), 5);
+      expect(CrucibleClockEngine.getOrbitNumber(
+        protocolStartTime: start,
+        now: start.add(const Duration(days: 98 * 10000)),
+        blueprint: bp,
+      ), 10001);
+
+      // The sovereign temporal geometry repeats by modulo arithmetic at any N.
+      expect(CrucibleClockEngine.getWindowType(
+        state: state,
+        now: start.add(const Duration(days: 98 * 10000, hours: 47)),
+        blueprint: bp,
+      ), 'MICRO');
+    });
+
     test('10 PM cutoff is inclusive; one minute later skips current Micro', () {
       final scheduleStart = DateTime(2026, 11, 1, 10);
       expect(CrucibleClockEngine.microEligibilityState(joinedAt: DateTime(2026, 11, 1, 22), scheduleStart: scheduleStart), 'ELIGIBLE');
