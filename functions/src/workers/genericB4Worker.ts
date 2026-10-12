@@ -200,7 +200,7 @@ export const genericB4Worker = functions.firestore
       }
 
       const parentState = parentDoc.data()?.lifecycle_state || parentDoc.data()?.status || '';
-      const allowedStates = ['APPROVED', 'review_ready', 'B3_COMPLETE', 'B4_PLANNED', 'B4_IN_PROGRESS', 'B4_COMPLETE'];
+      const allowedStates = ['APPROVED', 'review_ready', 'ACADEMIC_CORPUS_VERIFIED', 'B3_REVIEW_COMPLETE', 'B3_COMPLETE', 'B4_PLANNED', 'B4_IN_PROGRESS', 'B4_COMPLETE'];
       if (!allowedStates.includes(parentState)) {
         throw new Error(`B4_REJECT: invalid parent status/state: ${parentState}`);
       }
