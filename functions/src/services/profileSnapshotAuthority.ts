@@ -74,8 +74,10 @@ export async function getOrCreateProfileSnapshot(studentId: string): Promise<Pro
   const profileRef = db.collection('warrior_profiles').doc(studentId);
   const profileSnap = await profileRef.get();
   if (!profileSnap.exists) throw new Error('PROFILE_NOT_FOUND');
+  const profile = profileSnap.data() as AnyRecord;
+  if (profile.uid !== studentId) throw new Error('PROFILE_UID_BINDING_MISMATCH');
 
-  const facts = extractMaterialFacts(profileSnap.data() as AnyRecord);
+  const facts = extractMaterialFacts(profile);
   const fingerprint = materialFactsFingerprint(facts);
   const snapshotId = snapshotIdentity(studentId, fingerprint);
   const snapshotRef = db.collection('profile_snapshots').doc(snapshotId);
