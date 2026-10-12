@@ -83,15 +83,16 @@ function abstractOfficialSyllabus({ binding, verifiedPageCorpus, segments }) {
     }
 
     const parentNodeId = parent?.nodeId || null;
-    const siblingKey = [parentNodeId || '', level, normalizeLabel(title)].join('|');
+    const paperId = segment.paperId == null ? '' : requiredString(segment.paperId, 'SYLLABUS_PAPER_ID_INVALID');
+    const siblingKey = [paperId, parentNodeId || '', level, normalizeLabel(title)].join('|');
     if (siblingKeys.has(siblingKey)) throw new Error('SYLLABUS_DUPLICATE_OFFICIAL_CANDIDATE');
     siblingKeys.add(siblingKey);
 
-    const nodeId = stableId([source.missionId, source.sourceVersionId, level, parentNodeId || '', normalizeLabel(title)]);
+    const nodeId = stableId([source.missionId, source.sourceVersionId, paperId, level, parentNodeId || '', normalizeLabel(title)]);
     const node = Object.freeze({
       nodeId, missionId: source.missionId, documentId: source.documentId,
       sourceVersionId: source.sourceVersionId, sourceSha256: source.sourceSha256,
-      level, parentNodeId, nearestOfficialAncestorId: level === 'SUBJECT' ? nodeId : (parent?.nearestOfficialAncestorId || parent?.nodeId),
+      level, paperId: paperId || null, subjectId: segment.subjectId || null, parentNodeId, nearestOfficialAncestorId: level === 'SUBJECT' ? nodeId : (parent?.nearestOfficialAncestorId || parent?.nodeId),
       title, normalizedTitle: normalizeLabel(title),
       provenance: 'OFFICIAL_CANDIDATE', verificationState: 'PENDING_REVIEW',
       sourcePage: pageNumber, sourcePageDigest: page.pageDigest,
