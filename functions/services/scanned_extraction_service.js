@@ -1,13 +1,14 @@
 const crypto = require('crypto');
 const { PDFDocument } = require('pdf-lib');
 const vision = require('@google-cloud/vision');
-const { correctScientificText } = require('./scientific_corrector');
+const { assertExternalOcrAllowed, buildGovernedOcrDraft } = require('./mission_scanned_ocr_guard');
+const { assessPrintedPageEvidence } = require('./mission_scanned_page_numbering');
 
 /**
  * Governed Scanned-Page Extraction Service
  * Responsibility: SCANNED PDF PAGE -> VERIFIED OCR TEXT
  */
-async function extractScannedPage({ missionId, documentId, sourceSha256, pdfBytes, pageNumber }) {
+async function extractScannedPage({ missionId, documentId, sourceSha256, pdfBytes, pageNumber, expectedPrintedPageNumber = null }) {
   if (!pdfBytes || !Buffer.isBuffer(pdfBytes)) {
     throw new Error('RC_SYLLABUS_P1_BLOCKED_INVALID_PDF_BYTES');
   }
@@ -60,7 +61,8 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
     throw new Error('RC_SYLLABUS_P1_BLOCKED_PAGE_DIGEST_FAILED');
   }
 
-  // 6. Execute governed OCR call via Google Cloud Vision API
+  // 6. Never invoke a real Cloud Vision provider in a local/demo emulator.
+  assertExternalOcrAllowed();
   const client = new vision.ImageAnnotatorClient();
   const request = {
     requests: [
@@ -111,39 +113,21 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
     throw new Error('RC_SYLLABUS_P1_BLOCKED_SIMULATED_CONTENT_DETECTED');
   }
 
-  // 8. Bind Page Identity (Check printed page footer)
-  // For NEET Bulletin, the printed page number is typically pageNumber - 5.
-  const isNeet = (missionId && missionId.toLowerCase().includes('neet')) || 
-                 (documentId && documentId.toLowerCase().includes('neet'));
-  if (pageNumber >= 6 && pageNumber < totalPages) {
-    const expectedPrintedNumber = isNeet ? (pageNumber - 5) : pageNumber;
-    const lines = rawText.trim().split('\n');
-    const lastThreeLines = lines.slice(-4).map(line => line.trim());
-
-    const foundPrintedNumber = lastThreeLines.some(line => {
-      const match = line.match(/^(\d+)\b/);
-      return match && String(match[1]) === String(expectedPrintedNumber);
-    });
-
-    if (!foundPrintedNumber) {
-      let detectedNumber = null;
-      for (const line of lastThreeLines) {
-        const match = line.match(/^(\d+)\b/);
-        if (match) {
-          detectedNumber = match[1];
-          break;
-        }
-      }
-      // If we are in the last page and it is blank, we might not find a number.
-      // But for academic safety, we throw if mismatch in primary range.
-      throw new Error(`RC_SYLLABUS_P1_BLOCKED_PAGE_IDENTITY_MISMATCH: Requested page ${pageNumber} (Expected printed footer ${expectedPrintedNumber}), but found printed footer ${detectedNumber || 'NONE'}`);
-    }
-  } else {
-    console.log(`   - Skipping identity check for cover/TOC/back page ${pageNumber}`);
+  // 8. Physical-page authority comes from the SHA-verified parent PDF and
+  // the exact page slice index above. Printed page numbers are editorial
+  // evidence only. An explicit, verified mapping may require a matching folio,
+  // but NEVER invent a global pageOffset (including NEET cover-page offsets).
+  const printedPageEvidence = assessPrintedPageEvidence(rawText, expectedPrintedPageNumber);
+  if (expectedPrintedPageNumber !== null && printedPageEvidence.status !== 'MATCH') {
+    throw new Error('RC_SYLLABUS_P1_BLOCKED_PAGE_IDENTITY_MISMATCH: '
+      + 'physical page ' + pageNumber + ', expected printed page '
+      + expectedPrintedPageNumber + ', detected ' + (printedPageEvidence.detected ?? 'NONE'));
   }
 
-  // 9. Call the Scientific Corrector to verify/fix notation (Second-pass transcription)
-  const { correctedText, corrections } = await correctScientificText(rawText, pageNumber);
+  // 9. Preserve raw official OCR as an unverified transcription draft.
+  // Scientific corrections require separate, source-bound Founder review;
+  // NEET-specific page heuristics cannot mutate SSC or other mission pages.
+  const { correctedText, corrections, correctionState } = buildGovernedOcrDraft(rawText);
 
   // 10. Return structured response including raw OCR text, verified transcription, and audit trail
   return {
@@ -155,6 +139,8 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
     sourceSha256: canonicalActual,
     pageDigest,
     provider: 'google-cloud-vision-api',
+    printedPageEvidence,
+    correctionState,
     validationState: 'draft_unverified'
   };
 }

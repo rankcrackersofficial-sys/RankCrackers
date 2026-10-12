@@ -687,7 +687,7 @@ function validateCareerRulebookPackage(rawPackage = {}) {
     : null;
 
   if (realAuthorityAudit?.unknownRuleTypes.length) errors.push('UNKNOWN_RULE_TYPE: ' + realAuthorityAudit.unknownRuleTypes.join(', ') + '. Real-source rules fail closed.');
-  if (realAuthorityAudit?.priorCycleViolation) errors.push('CYCLE_MISMATCH: NEET-UG-2026-EVIDENCE-BASE must remain PRIOR_CYCLE_REFERENCE for neet_(ug)-2027.');
+  if (realAuthorityAudit?.priorCycleViolation) errors.push('CYCLE_MISMATCH: prior-cycle source evidence must remain a reference and cannot become current-cycle authority for any mission.');
   if (realAuthorityAudit?.opportunityModelViolation) errors.push('OPPORTUNITY_MODEL_CONTRADICTION: ADMISSION_ENTRANCE cannot use a JOB_VACANCY matrix.');
   if (errors.length > 0) return { validationResult: PACKAGE_VALIDATION_RESULT.REJECTED_SOURCE_PACKAGE, isValid: false, errors, warnings, derivedCompleteness, derivedAmendmentStatus: derivedAmendment.amendmentSearchStatus, derivedVacancyCompleteness: derivedVacancy.vacancyMatrixCompleteness, packageSemanticHash, genericCycleFacts: null, realAuthorityAudit };
 

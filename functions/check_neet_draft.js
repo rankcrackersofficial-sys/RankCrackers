@@ -1,3 +1,6 @@
+// Retired exam-named diagnostic. Use universal mission-scoped read-only audit tooling.
+require('./services/mission_agnostic_policy').rejectLegacyMissionSpecificExecution('check_neet_draft.js');
+
 const admin = require('firebase-admin');
 const { getFirestore } = require('firebase-admin/firestore');
 

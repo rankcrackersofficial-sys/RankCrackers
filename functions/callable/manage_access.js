@@ -2,6 +2,7 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const { logFounderActivity } = require("../services/audit_service");
 const { ensureFounderClaims } = require("../utils/sovereign_logic");
+const { assertAccessMutationRequest, assertTargetClaimTransition } = require('../services/founder_access_mutation_guard');
 
 /**
  * 🔱 SOVEREIGN ACCESS MANAGEMENT (v5.5 Hardened)
@@ -23,12 +24,14 @@ exports.manageUserAccess = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('permission-denied', '🔱 ACCESS DENIED: Founder clearance required.');
   }
 
-  const { targetUid, role, action } = data;
+  const { targetUid, role, action } = data || {};
   const db = admin.firestore();
 
   try {
+    assertAccessMutationRequest({ auth, targetUid, role, action });
     const targetUser = await admin.auth().getUser(targetUid);
     const targetClaims = targetUser.customClaims || {};
+    assertTargetClaimTransition({ targetClaims, role, action });
 
     // 🔱 P1: FOUNDER PROTECTION LAWS
     if (role === 'founder' && !isFounder) {
@@ -90,7 +93,12 @@ exports.manageUserAccess = functions.https.onCall(async (data, context) => {
     return { success: true, newClaims };
 
   } catch (error) {
-    console.error(`🔱 ACCESS_MGMT_ERROR: ${error.message}`);
-    throw new functions.https.HttpsError('internal', error.message);
+    console.error('ACCESS_MGMT_ERROR:', error.message);
+    if (error instanceof functions.https.HttpsError) throw error;
+    if (typeof error?.message === 'string' && error.message.startsWith('ACCESS_')) {
+      const code = error.message.includes('_INVALID') ? 'invalid-argument' : 'permission-denied';
+      throw new functions.https.HttpsError(code, error.message);
+    }
+    throw new functions.https.HttpsError('internal', 'Access management failed.');
   }
 });

@@ -43,7 +43,7 @@ function buildMissionShellBootstrapPlan({ payload = {}, actorId, recordedAt }) {
   const jurisdictionLevel = assertJurisdictionLevel(payload.jurisdictionLevel);
   if (authority.jurisdiction !== jurisdictionLevel) throw new Error('MISSION_BOOTSTRAP_AUTHORITY_JURISDICTION_MISMATCH');
   const syllabusBindingMode = assertSyllabusBindingMode(payload.syllabusBindingMode);
-  if (syllabusBindingMode !== 'SEPARATE') throw new Error('MISSION_BOOTSTRAP_REQUIRES_SEPARATE_OFFICIAL_SOURCES');
+  if (!['SEPARATE', 'EMBEDDED'].includes(syllabusBindingMode)) throw new Error('MISSION_BOOTSTRAP_SOURCE_BINDING_MODE_UNSUPPORTED');
   if (!recordedAt) throw new Error('MISSION_BOOTSTRAP_RECORDED_AT_REQUIRED');
 
   const cycleKey = deriveCycleKey({

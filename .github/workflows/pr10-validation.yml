@@ -27,14 +27,31 @@ jobs:
         run: npm run build
       - name: Domain-M regression
         run: |
+          npm run test:sentinel-pdf-text
+          npm run test:sentinel-queue-ownership
           npm run test:mission-source-finalizer
+          npm run test:mission-official-origin-provenance
           npm run test:mission-source-pair
           npm run test:mission-source-pair-coordinator
           npm run test:mission-source-pair-consumer
+          npm run test:mission-physical-page-authority
+          npm run test:mission-pagewise-job-authority
+          npm run test:mission-scanned-page-numbering
+          npm run test:mission-scanned-ocr-guard
+          npm run test:mission-agnostic-execution
+          npm run test:mission-neutral-projection
+          npm run test:android-release-signing-governance
+          npm run test:firestore-rule-dedup-profile-safety
+          npm run test:secure-asset-scope
+          npm run test:founder-access-mutation-guard
+          npm run test:mission-storage-rules-scope
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
           npm run test:ingestion-authority
           npm run test:mission-source-preflight
+          npm run test:mission-source-verifier
+          npm run test:mission-force-pipeline-runner
+          npm run test:mission-force-pipeline-entrypoint
 
   founder-web:
     runs-on: ubuntu-latest
@@ -47,3 +64,65 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
       - run: flutter build web -t lib/main_web.dart --release
+
+  # Separate Student/Android acceptance. A green backend cannot mask a
+  # broken Android application or cross-platform source contract.
+  student-android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Resolve Flutter dependencies
+        run: flutter pub get
+      - name: Analyze Student entrypoint and routing
+        id: analyze
+        continue-on-error: true
+        run: flutter analyze lib/main.dart lib/core/router lib/core/ai lib/core/firebase
+      - name: Run Student and shared Flutter tests
+        id: tests
+        continue-on-error: true
+        run: flutter test --no-pub
+      - name: Build Student Android debug APK
+        id: android
+        continue-on-error: true
+        run: flutter build apk --debug --no-pub
+      - name: Enforce all Student acceptance results
+        if: always()
+        run: |
+          echo "Student analyze: ${{ steps.analyze.outcome }}"
+          echo "Student Flutter tests: ${{ steps.tests.outcome }}"
+          echo "Student Android build: ${{ steps.android.outcome }}"
+          test "${{ steps.analyze.outcome }}" = "success"
+          test "${{ steps.tests.outcome }}" = "success"
+          test "${{ steps.android.outcome }}" = "success"
+
+  # Local-only compiler and live allow/deny tests. Never load production ADC
+  # or start the Functions emulator here.
+  firestore-rules-emulator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: ""
+      GCLOUD_PROJECT: demo-rankcrackers-rules
+      GOOGLE_CLOUD_PROJECT: demo-rankcrackers-rules
+      FIRESTORE_EMULATOR_HOST: 127.0.0.1:8188
+      CLOUDSDK_CONFIG: /tmp/rankcrackers-demo-only-cloudsdk-config
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Install Rules test dependencies
+        run: npm --prefix functions install --ignore-scripts --no-package-lock --no-audit --no-fund
+      - name: Compile rules and test Student/Founder permissions on demo emulator
+        run: npx --yes firebase-tools@15.22.3 emulators:exec --non-interactive --project demo-rankcrackers-rules --only firestore "node functions/test/test_firestore_emulator_authority.js"

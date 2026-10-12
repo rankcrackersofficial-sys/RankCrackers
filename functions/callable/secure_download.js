@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const { resolveStorageAssetPath, authorizeSecureAssetPath } = require('../services/secure_asset_scope');
 
 /**
  * 🔱 SECURE ASSET DOWNLOAD (Hardened v1.1 - Audit Hardened)
@@ -21,12 +22,23 @@ exports.getSecureAssetUrl = functions.https.onCall(async (data, context) => {
     const db = admin.firestore();
 
     const bucket = admin.storage().bucket();
-    let filePath = assetUrl;
-
-    // 🔱 Logic: Resolve storage path from Firebase public URL
-    if (assetUrl.includes('firebasestorage.googleapis.com')) {
-      const parts = assetUrl.split('/o/')[1].split('?')[0];
-      filePath = decodeURIComponent(parts);
+    let filePath;
+    try {
+      filePath = resolveStorageAssetPath(assetUrl, bucket.name);
+      let realm = null;
+      // An Admin SDK signed URL bypasses Storage rules. For public mission
+      // assets, independently require an actually visible canonical realm.
+      if (auth.token.founder !== true && auth.token.admin !== true
+          && filePath.startsWith('assets/')) {
+        const realmSnap = await db.collection('mission_realms').doc(realmId).get();
+        realm = realmSnap.exists ? realmSnap.data() : null;
+      }
+      authorizeSecureAssetPath({
+        filePath, uid: auth.uid, claims: auth.token, realmId, realm,
+      });
+    } catch (policyError) {
+      throw new functions.https.HttpsError('permission-denied',
+        '🔱 Asset request is not authorized.');
     }
 
     const file = bucket.file(filePath);

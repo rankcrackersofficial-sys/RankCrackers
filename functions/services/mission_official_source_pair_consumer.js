@@ -32,8 +32,22 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
   ]);
   if (!realmSnap.exists) throw new Error('PAIR_CONSUMER_REALM_NOT_FOUND');
   const realm = realmSnap.data() || {};
-  if (realm.studentVisible === true || realm.visibility === 'PUBLIC') throw new Error('PAIR_CONSUMER_STUDENT_VISIBILITY_FORBIDDEN');
+  const gate = realm.visibilityGate || {};
+  const legacy = realm.visibility || {};
+  if (realm.studentVisible === true || realm.catalogVisible === true || realm.userPanelVisible === true
+      || realm.cardVisible === true || realm.catalogDiscoverable === true || realm.visibility === 'PUBLIC'
+      || gate.studentVisible === true || gate.catalogVisible === true || gate.userPanelVisible === true
+      || gate.cardVisible === true || legacy.studentVisible === true || legacy.catalogVisible === true
+      || legacy.userPanelVisible === true || legacy.cardVisible === true) {
+    throw new Error('PAIR_CONSUMER_STUDENT_VISIBILITY_FORBIDDEN');
+  }
   if (!notificationSnap.exists || !syllabusSnap.exists) throw new Error('PAIR_CONSUMER_DOCUMENT_MISSING');
+  for (const record of [notificationSnap.data() || {}, syllabusSnap.data() || {}]) {
+    if (record.status !== 'VERIFIED' || record.verificationState !== 'verified'
+        || record.governanceStatus !== 'ACTIVE' || record.verifiedBy !== 'mission_source_pair_verifier_v1') {
+      throw new Error('PAIR_CONSUMER_SOURCE_TRUST_INVALID');
+    }
+  }
   const pair = assertVerifiedOfficialSourcePair({
     missionId, cycleKey: required(payload.cycleKey, 'PAIR_CONSUMER_CYCLE_REQUIRED'),
     authorityKey: required(payload.authorityKey, 'PAIR_CONSUMER_AUTHORITY_REQUIRED'),
@@ -41,6 +55,18 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
     schemaVersion: payload.schemaVersion || 'mission_source_pair_v1',
   });
   if (pair.taskId !== taskId) throw new Error('PAIR_CONSUMER_TASK_ID_MISMATCH');
+  // A queue document alone is insufficient authority to launch page extraction.
+  // Require the coordinator's persisted READY_FOR_WORKER pair, or a verified
+  // replay of its already-dispatched state.
+  if (!pairSnap.exists) throw new Error('PAIR_CONSUMER_COORDINATOR_PAIR_REQUIRED');
+  const persistedPair = pairSnap.data() || {};
+  if (persistedPair.taskId !== taskId || persistedPair.missionId !== missionId
+      || persistedPair.cycleKey !== pair.cycleKey || persistedPair.authorityKey !== pair.authorityKey
+      || persistedPair.sources?.notification?.sha256 !== pair.sources.notification.sha256
+      || persistedPair.sources?.syllabus?.sha256 !== pair.sources.syllabus.sha256
+      || !['READY_FOR_WORKER', 'DISPATCHED'].includes(persistedPair.status)) {
+    throw new Error('PAIR_CONSUMER_COORDINATOR_PAIR_CONFLICT');
+  }
   const children = ['notification', 'syllabus'].flatMap(role => {
     const source = pair.sources[role];
     const sourceRecord = role === 'notification' ? notificationSnap.data() : syllabusSnap.data();
@@ -60,18 +86,23 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
         expected_output: 'page_extractions', review_status: 'pending_founder_verification', createdAt: recordedAt };
     });
   });
-  const existingPair = pairSnap.exists ? pairSnap.data() || {} : {};
-  if (existingPair.taskId && existingPair.taskId !== taskId) throw new Error('PAIR_CONSUMER_IDEMPOTENCY_CONFLICT');
-  for (const child of children) {
-    const ref = db.collection('ai_queue').doc(child.id);
-    const snap = await transaction.get(ref);
+  // All authoritative records and child job snapshots have been read above.
+  // Firestore forbids reads after the first write in a transaction.
+  // Resolve ALL deterministic child refs and snapshots before creating any job.
+  const childRefs = children.map(child => db.collection('ai_queue').doc(child.id));
+  const childSnaps = await Promise.all(childRefs.map(ref => transaction.get(ref)));
+  for (let index = 0; index < children.length; index++) {
+    const child = children[index];
+    const ref = childRefs[index];
+    const snap = childSnaps[index];
     if (snap.exists) {
       const old = snap.data() || {};
       if (old.parentTaskId !== taskId || old.sourceSha256 !== child.sourceSha256) throw new Error('PAIR_CONSUMER_CHILD_CONFLICT');
-    } else transaction.create(ref, child);
+    } else {
+      transaction.create(ref, child);
+    }
   }
-  if (!pairSnap.exists) transaction.create(pairRef, { taskId, status: 'DISPATCHED', missionId, cycleKey: pair.cycleKey, authorityKey: pair.authorityKey, sources: pair.sources, childTaskIds: children.map(c => c.id), createdAt: recordedAt, updatedAt: recordedAt });
-  else transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
+  transaction.update(pairRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
   transaction.update(queueRef, { status: 'DISPATCHED', childTaskIds: children.map(c => c.id), updatedAt: recordedAt });
   return Object.freeze({ taskId, childTaskIds: children.map(c => c.id), idempotent: pairSnap.exists });
 }

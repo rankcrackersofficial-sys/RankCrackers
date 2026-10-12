@@ -14,9 +14,16 @@ const _goldenDir =
 
 Future<void> loadRealApplicationFontFamiliesForTest() async {
   GoogleFonts.config.allowRuntimeFetching = false;
+  final flutterRoot = Platform.environment['FLUTTER_ROOT'];
+  if (flutterRoot == null || flutterRoot.isEmpty) {
+    throw StateError('FLUTTER_ROOT is required for portable visual-test fonts');
+  }
   final materialFontDir = Directory(
-    'E:/Programs/Flutter/flutter/bin/cache/artifacts/material_fonts',
+    '$flutterRoot/bin/cache/artifacts/material_fonts',
   );
+  if (!materialFontDir.existsSync()) {
+    throw StateError('Flutter material font directory missing: ${materialFontDir.path}');
+  }
 
   Future<ByteData> fontBytes(String name) async {
     final bytes = await File('${materialFontDir.path}/$name').readAsBytes();

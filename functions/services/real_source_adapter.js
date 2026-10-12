@@ -43,6 +43,17 @@ const { RULE_TYPE_NORMALIZATION, CANONICAL_RULE_FAMILY, deriveFactVerificationLe
 
 const CS4_DIR = path.resolve(__dirname, '../../docs/academic_review/48cs4');
 const CS5_DIR = path.resolve(__dirname, '../../docs/academic_review/48cs5');
+/**
+ * CS4/CS5 adapters are historical pilot EVIDENCE FIXTURES, not an authorized
+ * mission routing engine. The active platform must use the common governed
+ * source/mission contract; no named exam receives a special adapter.
+ */
+function assertHistoricalPilotFixtureOnly(options) {
+  if (process.env.NODE_ENV !== 'test' || options?.executionContext !== 'ARCHIVAL_FIXTURE_READ_ONLY') {
+    throw new Error('MISSION_AGNOSTIC_HARDCODED_PILOT_ADAPTER_RETIRED');
+  }
+}
+
 
 function loadCs4Json(filename) {
   const p = path.join(CS4_DIR, filename);
@@ -133,6 +144,7 @@ function mapSourceState(rawState, sha256) {
  * Builds CareerRulebookPackage for a specific 48CS4 pilot.
  */
 function adapt48CS4PilotToRulebookPackage(cycleId, options = {}) {
+  assertHistoricalPilotFixtureOnly(options);
   const cycleRegistry = loadCs4Json('48cs4_cycle_identity_registry.json');
   const sourceRegistry = loadCs4Json('48cs4_source_provenance_registry.json');
   const notifRegistry = loadCs4Json('48cs4_notification_rulebook_registry.json');
@@ -394,6 +406,7 @@ function adapt48CS4PilotToRulebookPackage(cycleId, options = {}) {
  * Builds all 6 real pilot packages.
  */
 function buildAllSixPilotPackages(options = {}) {
+  assertHistoricalPilotFixtureOnly(options);
   const pilotIds = [
     'RPSC-SCHOOL-LECTURER-ADV-06-2025-26',
     'RPSC-RAS-2024',
@@ -411,6 +424,7 @@ function buildAllSixPilotPackages(options = {}) {
  * Eliminates all substring logic and hardcoded rules/facts.
  */
 function adapt48CS5PilotToRulebookPackage(pilotKey, options = {}) {
+  assertHistoricalPilotFixtureOnly(options);
   if (!Object.prototype.hasOwnProperty.call(CS5_PILOT_KEY_MAP, pilotKey)) {
     throw new Error('UNKNOWN_48CS5_PILOT: ' + pilotKey);
   }
@@ -688,6 +702,7 @@ function adapt48CS5PilotToRulebookPackage(pilotKey, options = {}) {
  * Builds all 48CS5 pilot packages.
  */
 function buildAll48CS5PilotPackages(options = {}) {
+  assertHistoricalPilotFixtureOnly(options);
   return [
     adapt48CS5PilotToRulebookPackage('ssc_cgl', options),
     adapt48CS5PilotToRulebookPackage('jee_main_2026', options)

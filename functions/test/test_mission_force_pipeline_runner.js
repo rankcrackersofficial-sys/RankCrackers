@@ -3,8 +3,43 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { buildRunnerRequest, executeAuthorizedForcePipeline, verifyServerSource } = require('../services/mission_force_pipeline_runner');
 const PDF = Buffer.from('%PDF-1.7\nSSC CGL official fixture\n%%EOF');
-const auth = { internal:true, actorType:'AUTHORIZED_AGENT', permission:'mission.source.ingest' };
-const base = { authorization:auth, missionId:'ssc_cgl', cycleKey:'2026', authorityKey:'auth_in_ssc', officialSourceUrl:'https://ssc.gov.in/official.pdf', bytes:PDF, requestId:'ssc-cgl-pilot-2026', sourceType:'notification', syllabusBindingMode:'EMBEDDED' };
-test('reuses existing ssc_cgl and reaches verified pair handoff with server SHA', async () => { const calls=[]; const result=await executeAuthorizedForcePipeline({request:base,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{throw new Error('must not create');},ingestSource:async x=>{calls.push(x);return x.source;},handoffPair:async x=>({taskId:'deterministic',notification:x.notification?.documentId,syllabus:x.syllabus?.documentId})}); assert.equal(result.missionState,'EXISTING_MISSION_REUSED'); assert.equal(result.sourceState,'VERIFIED'); assert.equal(result.studentVisible,false); assert.equal(calls[0].source.status,'VERIFIED'); assert.equal(calls[0].source.actualSha256,calls[0].source.contentSha256); assert.ok(result.pairResult.syllabus.startsWith('syllabus_')); });
-test('unauthorized, missing mission, invalid authority, and caller SHA spoof fail closed', async()=>{ assert.throws(()=>buildRunnerRequest({...base,authorization:{}}),/UNAUTHORIZED/); await assert.rejects(()=>executeAuthorizedForcePipeline({request:base,resolveMission:async()=>null,createHiddenMission:async()=>{},ingestSource:async()=>{},handoffPair:async()=>{}}),/MISSION_MISSING/); assert.throws(()=>verifyServerSource({...base,authorityKey:'auth_in_ssc',bytes:Buffer.from('%PDF-other')}),/SOURCE_VERIFICATION_FAILED|SERVER_SHA/); assert.throws(()=>buildRunnerRequest({...base,authorityKey:'bad'}),/AUTHORITY/); });
-test('missing mission may only use explicit hidden force-create and remains invisible', async()=>{let created=0;const result=await executeAuthorizedForcePipeline({request:{...base,allowForceCreate:true},resolveMission:async()=>null,createHiddenMission:async x=>{created++;assert.equal(x.studentVisible,false);return {missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false};},ingestSource:async x=>x.source,handoffPair:async()=>({taskId:'pair'})});assert.equal(created,1);assert.equal(result.missionState,'HIDDEN_MISSION_CREATED');});
+const governedVerify = async ({source}) => ({...source,status:'VERIFIED',verificationState:'verified',governanceStatus:'ACTIVE',verifiedBy:'mission_source_pair_verifier_v1'});
+const base = { missionId:'ssc_cgl', cycleKey:'2026', authorityKey:'auth_in_ssc', officialSourceUrl:'https://ssc.gov.in/official.pdf', bytes:PDF, requestId:'ssc-cgl-pilot-2026', sourceType:'notification', sourceLanguage:'english', syllabusBindingMode:'EMBEDDED' };
+test('reuses existing ssc_cgl and reaches verified pair handoff with server SHA', async () => { const calls=[]; const result=await executeAuthorizedForcePipeline({request:base,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{throw new Error('must not create');},ingestSource:async x=>{calls.push(x);return x.source;},verifySource:governedVerify,materializeEmbeddedRole:async ({notification})=>({...notification,sourceType:'syllabus',documentId:`syllabus_${notification.contentSha256}`,storagePath:notification.storagePath,embeddedFromDocumentId:notification.documentId}),handoffPair:async x=>({taskId:'deterministic',notification:x.notification?.documentId,syllabus:x.syllabus?.documentId})}); assert.equal(result.missionState,'EXISTING_MISSION_REUSED'); assert.equal(result.sourceState,'VERIFIED'); assert.equal(result.studentVisible,false); assert.equal(calls[0].source.status,'PENDING_SOURCE_VERIFICATION'); assert.equal(calls[0].source.actualSha256,calls[0].source.contentSha256); assert.ok(result.pairResult.syllabus.startsWith('syllabus_')); });
+test('missing mission and invalid authority fail closed', async()=>{ await assert.rejects(()=>executeAuthorizedForcePipeline({request:base,resolveMission:async()=>null,createHiddenMission:async()=>{},ingestSource:async()=>{},verifySource:governedVerify,handoffPair:async()=>{}}),/MISSION_MISSING/); assert.throws(()=>buildRunnerRequest({...base,authorityKey:'bad'}),/AUTHORITY/); });
+test('server source digest is derived from the supplied server bytes',()=>{const altered=verifyServerSource({...buildRunnerRequest(base),bytes:Buffer.from('%PDF-other')});assert.notEqual(altered.contentSha256,verifyServerSource(buildRunnerRequest(base)).contentSha256);assert.equal(altered.actualSha256,altered.contentSha256);});
+test('missing mission may only use explicit hidden force-create and remains invisible', async()=>{let created=0;const result=await executeAuthorizedForcePipeline({request:{...base,allowForceCreate:true},resolveMission:async()=>null,createHiddenMission:async x=>{created++;assert.equal(x.studentVisible,false);return {missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false};},ingestSource:async x=>x.source,verifySource:governedVerify,materializeEmbeddedRole:async ({notification})=>({...notification,sourceType:'syllabus',documentId:`syllabus_${notification.contentSha256}`,storagePath:notification.storagePath,embeddedFromDocumentId:notification.documentId}),handoffPair:async()=>({taskId:'pair'})});assert.equal(created,1);assert.equal(result.missionState,'HIDDEN_MISSION_CREATED');});
+
+test('runner cannot self-attest when governed verifier is absent', async()=>{ await assert.rejects(()=>executeAuthorizedForcePipeline({request:base,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{},ingestSource:async x=>x.source,handoffPair:async()=>({})}),/VERIFIER_REQUIRED/); });
+
+test('payload authorization claims do not create a runner trust boundary',()=>{ const plan=buildRunnerRequest({...base,authorization:{internal:false,actorType:'ATTACKER',permission:'none'}}); assert.equal(plan.missionId,'ssc_cgl'); assert.equal(Object.prototype.hasOwnProperty.call(plan,'authorization'),false); });
+
+test('embedded mode fails closed without logical syllabus materialization',async()=>{await assert.rejects(()=>executeAuthorizedForcePipeline({request:base,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{},ingestSource:async x=>x.source,verifySource:governedVerify,handoffPair:async()=>({})}),/EMBEDDED_ROLE_MATERIALIZER_REQUIRED/);});
+
+test('runner refuses missing server bytes',async()=>{const {bytes,...withoutBytes}=base;await assert.rejects(()=>executeAuthorizedForcePipeline({request:withoutBytes,resolveMission:async()=>({missionId:'ssc_cgl',authorityKey:'auth_in_ssc',studentVisible:false}),createHiddenMission:async()=>{},ingestSource:async x=>x.source,verifySource:governedVerify,materializeEmbeddedRole:async()=>({}),handoffPair:async()=>({})}),/SERVER_BYTES_REQUIRED/);});
+
+test('runner refuses missing or unsupported language evidence',()=>{const {sourceLanguage,...missing}=base;assert.throws(()=>buildRunnerRequest(missing),/SOURCE_LANGUAGE_REQUIRED/);assert.throws(()=>buildRunnerRequest({...base,sourceLanguage:'unknown'}),/SOURCE_LANGUAGE_UNSUPPORTED/);});
+
+
+test('pilot never defaults a missing mission, authority or source-pair binding', () => {
+  const { missionId, ...missingMission } = base;
+  const { authorityKey, ...missingAuthority } = base;
+  const { syllabusBindingMode, ...missingMode } = base;
+  assert.throws(() => buildRunnerRequest(missingMission), /MISSION_REQUIRED/);
+  assert.throws(() => buildRunnerRequest(missingAuthority), /AUTHORITY_REQUIRED/);
+  assert.throws(() => buildRunnerRequest(missingMode), /BINDING_MODE_REQUIRED/);
+  assert.throws(() => buildRunnerRequest({ ...base, syllabusBindingMode: 'PENDING' }), /BINDING_MODE_INVALID/);
+});
+
+test('one-source pilot rejects unsupported separate upload before resolving or mutating a mission', async () => {
+  let calls = 0;
+  await assert.rejects(() => executeAuthorizedForcePipeline({
+    request: { ...base, syllabusBindingMode: 'SEPARATE' },
+    resolveMission: async () => { calls++; return null; },
+    createHiddenMission: async () => { calls++; },
+    ingestSource: async () => { calls++; },
+    verifySource: async () => { calls++; },
+    handoffPair: async () => { calls++; },
+  }), /SEPARATE_PAIR_NOT_IMPLEMENTED/);
+  assert.equal(calls, 0);
+});

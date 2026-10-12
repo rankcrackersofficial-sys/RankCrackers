@@ -1,6 +1,7 @@
 'use strict';
 
 const crypto = require('crypto');
+const { ORIGIN_PROOF_METHOD } = require('./mission_official_origin_provenance');
 
 const SOURCE_TYPES = Object.freeze(['notification', 'syllabus']);
 const SHA256_HEX = /^[a-f0-9]{64}$/i;
@@ -19,16 +20,20 @@ function normalizeSha256(value, code) {
 function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourceType, preflight }) {
   if (!source || typeof source !== 'object') throw new Error('OFFICIAL_SOURCE_MISSING');
   if (!SOURCE_TYPES.includes(sourceType) || source.sourceType !== sourceType) throw new Error('OFFICIAL_SOURCE_TYPE_MISMATCH');
-  if (source.status !== 'VERIFIED') throw new Error('OFFICIAL_SOURCE_NOT_VERIFIED');
+  if (source.status !== 'VERIFIED' || source.verificationState !== 'verified' || source.governanceStatus !== 'ACTIVE') throw new Error('OFFICIAL_SOURCE_NOT_VERIFIED');
   if (source.verifiedBy !== 'mission_source_pair_verifier_v1') throw new Error('OFFICIAL_SOURCE_BACKEND_ATTESTATION_REQUIRED');
-  if (source.missionId !== missionId || source.cycleKey !== cycleKey) throw new Error('OFFICIAL_SOURCE_CYCLE_BINDING_MISMATCH');
+  if (source.missionId !== missionId) throw new Error('OFFICIAL_SOURCE_MISSION_BINDING_MISMATCH');
+  if (source.cycleKey !== cycleKey) throw new Error('OFFICIAL_SOURCE_CYCLE_BINDING_MISMATCH');
   if (source.authorityKey !== authorityKey) throw new Error('OFFICIAL_SOURCE_AUTHORITY_MISMATCH');
   if (source.isOfficial !== true) throw new Error('OFFICIAL_SOURCE_DOMAIN_UNPROVEN');
 
   const documentId = requiredString(source.documentId || source.id, 'OFFICIAL_SOURCE_ID_REQUIRED');
   const storagePath = requiredString(source.storagePath, 'OFFICIAL_SOURCE_STORAGE_PATH_REQUIRED');
   const safePrefix = `mission_realms/${missionId}/official_documents/`;
-  if (!storagePath.startsWith(safePrefix) || storagePath.includes('..')) {
+  const canonicalRolePath = `${safePrefix}${documentId}/source.pdf`;
+  const embeddedSharedPath = source.embeddedFromDocumentId
+    ? `${safePrefix}${source.embeddedFromDocumentId}/source.pdf` : null;
+  if ((storagePath !== canonicalRolePath && storagePath !== embeddedSharedPath) || storagePath.includes('..')) {
     throw new Error('OFFICIAL_SOURCE_STORAGE_PATH_MISMATCH');
   }
 
@@ -41,6 +46,13 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
     throw new Error('OFFICIAL_SOURCE_SHA_MISMATCH');
   }
 
+  if (source.originProofState !== 'OFFICIAL_URL_BYTES_MATCHED'
+      || source.originProofMethod !== ORIGIN_PROOF_METHOD
+      || source.originSha256 !== actualSha256
+      || typeof source.sourceUrl !== 'string'
+      || source.originUrl !== source.sourceUrl) {
+    throw new Error('OFFICIAL_SOURCE_ORIGIN_ATTESTATION_REQUIRED');
+  }
   if (!['en', 'eng', 'english'].includes(String(source.language || '').trim().toLowerCase())) {
     throw new Error('OFFICIAL_SOURCE_LANGUAGE_UNSUPPORTED');
   }
@@ -52,8 +64,8 @@ function assertOfficialSource({ source, missionId, cycleKey, authorityKey, sourc
       sourceType,
       missionId,
       cycleKey,
-      governanceStatus: 'verified',
-      verificationState: 'verified',
+      governanceStatus: source.governanceStatus,
+      verificationState: source.verificationState,
       isOfficial: true,
       officialDomain: source.officialDomain,
       language: source.language,

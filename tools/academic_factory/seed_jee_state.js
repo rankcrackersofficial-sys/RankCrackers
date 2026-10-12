@@ -1,3 +1,6 @@
+// Retired legacy exam-specific executable. Data remains archived for audit.
+require('../../functions/services/mission_agnostic_policy').rejectLegacyMissionSpecificExecution('seed_jee_state.js');
+
 "use strict";
 
 const fs = require('fs');

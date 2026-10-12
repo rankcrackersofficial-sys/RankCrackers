@@ -339,7 +339,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 18,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : Image.asset('assets/images/Google.png', width: 18),
+                      : Image.asset('assets/images/google.png', width: 18),
                   label: Text(
                     _googleBusy ? 'Connecting...' : 'Continue with Google',
                   ),

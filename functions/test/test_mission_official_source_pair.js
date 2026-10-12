@@ -15,12 +15,19 @@ function source(sourceType, sha256, overrides = {}) {
     documentId: sha256,
     sourceType,
     status: 'VERIFIED',
+    verificationState: 'verified',
+    governanceStatus: 'ACTIVE',
     verifiedBy: 'mission_source_pair_verifier_v1',
     missionId: MISSION,
     cycleKey: CYCLE,
     authorityKey: AUTHORITY,
     isOfficial: true,
     officialDomain: 'nta.ac.in',
+    sourceUrl: 'https://nta.ac.in/official.pdf',
+    originUrl: 'https://nta.ac.in/official.pdf',
+    originProofState: 'OFFICIAL_URL_BYTES_MATCHED',
+    originProofMethod: 'TRUSTED_HTTPS_200_SAME_BYTES_SHA256_NO_REDIRECT',
+    originSha256: sha256,
     language: 'en',
     expectedSha256: sha256,
     actualSha256: sha256,
@@ -103,7 +110,7 @@ test('rejects source hash mismatch, wrong content-addressed ID, and noncanonical
     source('syllabus', SYLLABUS_SHA),
   ]), /SHA_MISMATCH/);
   assert.throws(() => pair([
-    source('notification', NOTIFICATION_SHA, { documentId: 'different-id' }),
+    source('notification', NOTIFICATION_SHA, { documentId: 'different-id', storagePath: `mission_realms/${MISSION}/official_documents/different-id/source.pdf` }),
     source('syllabus', SYLLABUS_SHA),
   ]), /SHA_MISMATCH/);
   assert.throws(() => pair([
@@ -123,4 +130,19 @@ test('rejects unsupported language and failed official-source preflight', () => 
     sources: [source('notification', NOTIFICATION_SHA), source('syllabus', SYLLABUS_SHA)],
     preflight: () => ({ status: 'FAIL' }),
   }), /PREFLIGHT_FAILED/);
+});
+
+
+test('unproven claimed official URL is never enough to make a VERIFIED source pair', () => {
+  for (const bad of [
+    { originProofState: 'DECLARED_ONLY' },
+    { originProofMethod: 'CLAIMED_BY_CLIENT' },
+    { originSha256: '0'.repeat(64) },
+    { originUrl: 'https://nta.ac.in/different.pdf' },
+  ]) {
+    assert.throws(() => pair([
+      source('notification', NOTIFICATION_SHA, bad),
+      source('syllabus', SYLLABUS_SHA),
+    ]), /ORIGIN_ATTESTATION_REQUIRED/);
+  }
 });

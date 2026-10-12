@@ -17,6 +17,7 @@ const {
 } = require('./queueExecutionPolicy');
 const { resolveExpectedSourceSha } = require('../syllabus/sourceShaAuthority');
 const { executeMissionSourcePair } = require('../../services/mission_official_source_pair_consumer');
+const { assertGovernedPagewiseTask } = require('../../services/mission_pagewise_job_authority');
 const { preflightSourceBinding } = require('../../services/mission_source_preflight');
 
 if (admin.apps.length === 0) {
@@ -256,7 +257,8 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     const docRef = firestore.collection('mission_realms').doc(data.mission_id)
       .collection('official_documents').doc(data.document_id);
 
-    const duplicatePages = [];
+    const duplicatePages: number[] = [];
+    const idempotentPages = new Set<number>();
     for (let p = pageStart; p <= pageEnd; p++) {
       const existing = await docRef.collection('page_extractions').doc(String(p)).get();
       if (existing.exists) {
@@ -278,7 +280,10 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
             pageIdentityMethod: existingData?.pageAuthorityMethod
           };
           const mode = assertPersistablePageAuthority(existingAuth, auth);
-          if (mode !== 'idempotent') {
+          if (mode === 'idempotent') {
+            // Preserve existing extracted content and Founder review decisions.
+            idempotentPages.add(p);
+          } else {
             duplicatePages.push(p);
           }
         } catch (authErr) {
@@ -294,6 +299,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     const batch = firestore.batch();
     let pagesInBatch = 0;
     for (let p = pageStart; p <= pageEnd; p++) {
+      if (idempotentPages.has(p)) continue;
       const { text, method, ocrAudit } = pageData[p];
       const extractionRef = docRef.collection('page_extractions').doc(String(p));
 
@@ -346,10 +352,16 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
       };
 
       if (ocrAudit) {
+        // Persist provenance of the unmodified, review-pending OCR text.
+        // Printed folios are advisory unless a verified mapping was supplied.
         payload.ocr_audit = {
           provider: ocrAudit.provider,
           pageDigest: ocrAudit.pageDigest,
-          correctionsCount: ocrAudit.corrections.length
+          correctionsCount: ocrAudit.corrections.length,
+          validationState: ocrAudit.validationState,
+          correctionState: ocrAudit.correctionState,
+          printedPageEvidence: ocrAudit.printedPageEvidence,
+          rawTextSha256: crypto.createHash('sha256').update(String(ocrAudit.rawText || '')).digest('hex')
         };
       }
 
@@ -359,7 +371,9 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
         payload.publish_blocked_until_founder_mission_assignment = true;
       }
 
-      batch.set(extractionRef, payload);
+      // create() fails atomically if another task wrote this page concurrently.
+      // Never overwrite previously reviewed/verified extraction records.
+      batch.create(extractionRef, payload);
       pagesInBatch++;
     }
 
@@ -370,6 +384,7 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
       updated_at: admin.firestore.FieldValue.serverTimestamp(),
       extraction_method: 'hybrid_routing_v1',
       page_extractions_created: pagesInBatch,
+      page_extractions_reused: idempotentPages.size,
       page_range_processed: {
         page_start: pageStart,
         page_end: pageEnd
@@ -465,6 +480,25 @@ export const queueWorker = functions.firestore
     // Allow only the verified page-extraction route outside Jest. Do not
     // unquarantine the legacy generic queue as a side effect of this repair.
     if (taskType === 'pagewise_text_extraction_batch') {
+      // Domain-M children must be traceable to the coordinator's persisted,
+      // dispatched pair and VERIFIED mission-scoped official source.
+      const governedSourceJob = data.type === 'OFFICIAL_NOTIFICATION'
+        || data.type === 'OFFICIAL_SYLLABUS'
+        || String(data.parentTaskId || '').startsWith('mission_source_pair_');
+      if (governedSourceJob) {
+        try {
+          await assertGovernedPagewiseTask({ firestore: admin.firestore(), taskId, task: data });
+        } catch (error: any) {
+          console.error('Governed official page task failed authority check:', taskId, error);
+          await taskRef.update({
+            status: 'failed',
+            failure_reason: 'PAGEWISE_GOVERNED_AUTHORITY_REJECTED',
+            error: error.message || 'PAGEWISE_GOVERNED_AUTHORITY_REJECTED',
+            failedAt: admin.firestore.FieldValue.serverTimestamp()
+          });
+          return;
+        }
+      }
       if (shouldBypassQueueForTest(process.env.JEST_WORKER_ID)) {
         console.log("QUEUE: Bypassing page extraction during Jest.");
         return;

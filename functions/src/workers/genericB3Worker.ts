@@ -124,7 +124,7 @@ export class GenericB3Worker {
         let isLineResolved = false;
 
         // 1. Detect Paper declaration
-        const detectedPaper = this.detectPaper(line);
+        const detectedPaper = this.detectPaper(line, input);
         if (detectedPaper) {
           isLineResolved = true;
           if (input.authorizedScope.papersEnabled) {
@@ -435,6 +435,9 @@ export class GenericB3Worker {
   }
 
   private validateInputs(input: B3Input) {
+    if (!input?.authorizedScope || typeof input.authorizedScope !== 'object') {
+      throw new Error('B3_REJECT: authorized scope required');
+    }
     if (!input.missionId) throw new Error("B3_REJECT: missing missionId");
     if (!input.documentId) throw new Error("B3_REJECT: missing documentId");
     if (!input.sourceSha256) throw new Error("B3_REJECT: missing sourceSha256");
@@ -450,6 +453,10 @@ export class GenericB3Worker {
 
     if (input.authorizedScope.papersEnabled && (!input.authorizedScope.allowedPaperIds || input.authorizedScope.allowedPaperIds.length === 0)) {
       throw new Error("B3_REJECT: unresolved required paper scope");
+    }
+    // Every mission requires an explicit authorized subject scope.
+    if (this.getAllAllowedSubjects(input).length === 0) {
+      throw new Error("B3_REJECT: authorized subjects required for every mission");
     }
 
     this.validateAgainstAuthorityLedger(input);
@@ -601,45 +608,33 @@ export class GenericB3Worker {
     }
   }
 
-  private detectPaper(line: string): string | null {
-    const l = line.toLowerCase();
-    if (l.includes("paper 1")) return "PAPER_1";
-    if (l.includes("paper 2a")) return "PAPER_2A";
-    if (l.includes("paper 2b")) return "PAPER_2B";
+  private detectPaper(line: string, input: B3Input): string | null {
+    if (!input.authorizedScope.papersEnabled) {
+      // A label is structural evidence, not permission to invent a paper scope.
+      return /^paper[\s_-]+[a-z0-9]+$/i.test(line.trim()) ? 'UNSCOPED_PAPER_LABEL' : null;
+    }
+    const normalizedLine = line.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '');
+    for (const paperId of Object.keys(input.authorizedScope.paperDefinitions || {})) {
+      const normalizedId = paperId.toUpperCase().replace(/[^A-Z0-9]+/g, '_').replace(/^_|_$/g, '');
+      if (normalizedId === normalizedLine) return paperId;
+    }
     return null;
   }
 
-  private shouldSkipLine(line: string, input: B3Input): boolean {
-    const lClean = line.replace(/\s+/g, ' ').trim();
-    const l = lClean.toLowerCase();
-
-    // 🛡️ Structural academic headings take absolute precedence over skip filters
-    const isUnitHeader = lClean.startsWith("UNIT") || lClean.startsWith("UNITS") || lClean.startsWith("GROUP:") || lClean.includes("UNIT") || lClean.includes("UNITS");
-    if (isUnitHeader) return false;
-
-    if (this.isSubjectLine(lClean, input)) return false;
-
-    if (l.includes("syllabus for jee")) return true;
-    if (l.includes("physical chemistry")) return true;
-    if (l.includes("inorganic chemistry")) return true;
-    if (l.includes("organic chemistry")) return true;
-    if (l.includes("to be conducted in")) return true;
+  private shouldSkipLine(_line: string, _input: B3Input): boolean {
+    // No exam- or subject-name heuristics may drop verified source lines.
     return false;
   }
 
   private getAllAllowedSubjects(input: B3Input): string[] {
     const subjects = new Set<string>();
-    if (input.authorizedScope.allowedSubjects) {
-      input.authorizedScope.allowedSubjects.forEach(s => subjects.add(s.toUpperCase()));
+    for (const subject of input.authorizedScope.allowedSubjects || []) {
+      if (typeof subject === 'string' && subject.trim()) subjects.add(subject.trim().toUpperCase());
     }
-    if (input.authorizedScope.paperDefinitions) {
-      Object.values(input.authorizedScope.paperDefinitions).forEach(def => {
-        def.allowedSubjects.forEach(s => subjects.add(s.toUpperCase()));
-      });
-    }
-    // Fallback to legacy JEE if empty (for backward compatibility during migration)
-    if (subjects.size === 0) {
-      ['MATHEMATICS', 'PHYSICS', 'CHEMISTRY', 'APTITUDE', 'DRAWING', 'PLANNING'].forEach(s => subjects.add(s));
+    for (const definition of Object.values(input.authorizedScope.paperDefinitions || {})) {
+      for (const subject of definition.allowedSubjects || []) {
+        if (typeof subject === 'string' && subject.trim()) subjects.add(subject.trim().toUpperCase());
+      }
     }
     return Array.from(subjects);
   }
@@ -677,25 +672,19 @@ export class GenericB3Worker {
   }
 
   private normalizeSubjectId(title: string, input: B3Input): string {
-    const t = title.toLowerCase();
-
-    // Use configured aliases if present
-    if (input.authorizedScope.subjectAliases) {
-      for (const [alias, canonical] of Object.entries(input.authorizedScope.subjectAliases)) {
-        if (t.includes(alias.toLowerCase())) return canonical;
-      }
-    }
-
-    // Default legacy mappings
-    if (t.includes("math")) return "Mathematics";
-    if (t.includes("phys")) return "Physics";
-    if (t.includes("chem")) return "Chemistry";
-    if (t.includes("aptitude")) return "Aptitude";
-    if (t.includes("drawing")) return "Drawing";
-    if (t.includes("planning")) return "Planning";
-    if (t.includes("bio")) return "Biology";
-
-    return title;
+    const sourceCandidate = title.trim().toUpperCase();
+    const aliasEntry = Object.entries(input.authorizedScope.subjectAliases || {})
+      .find(([alias]) => alias.trim().toUpperCase() === sourceCandidate);
+    const candidate = aliasEntry ? String(aliasEntry[1]).trim().toUpperCase() : sourceCandidate;
+    const allowed = [
+      ...(input.authorizedScope.allowedSubjects || []),
+      ...Object.values(input.authorizedScope.paperDefinitions || {}).flatMap(d => d.allowedSubjects || []),
+    ];
+    // A configured alias is not itself source authority; its resolved subject
+    // must still be explicitly approved for this mission's scope.
+    const match = allowed.find(s => s.trim().toUpperCase() === candidate);
+    if (!match) throw new Error('B3_REJECT: unauthorized subject ' + title);
+    return match.trim();
   }
 
   private generateNodeId(missionId: string, paperId: string | null, subjectId: string, nodeType: string, title: string): string {
