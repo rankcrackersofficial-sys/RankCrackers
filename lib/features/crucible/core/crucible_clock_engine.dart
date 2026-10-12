@@ -6,7 +6,8 @@ import '../models/mission_crucible_blueprint.dart';
 /// Consumes MissionCrucibleBlueprint for mission-specific cycle lengths, phases, and schedule boundaries.
 class CrucibleClockEngine {
   static const int courseStartHour = 10;
-  static const int testStartHour = 9;
+  static const int testStartHour = 10;
+  static const int lateJoinCutoffHours = 12;
 
   // ===================================================
   // BLUEPRINT RESOLVER UTILITY
@@ -222,8 +223,9 @@ class CrucibleClockEngine {
 
     final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
     final rebuildStart = studyDuration; // Day 13 start (288 hours)
-    final macroStart = rebuildStart + const Duration(days: 1); // Day 14 start (312 hours)
-    final phaseEnd = macroStart + const Duration(days: 1); // Phase end (336 hours)
+    final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
+    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
+    final phaseEnd = Duration(days: daysPerPhase);
 
     if (elapsedWithinPhase < rebuildStart) {
       final elapsedWithinSchedule = elapsedWithinPhase.inHours % bp.hoursPerSchedule;
@@ -233,10 +235,12 @@ class CrucibleClockEngine {
       return 'LEARNING';
     } else if (elapsedWithinPhase < macroStart) {
       return 'REBUILD';
-    } else if (elapsedWithinPhase < phaseEnd) {
+    } else if (elapsedWithinPhase < macroEnd) {
       return 'MACRO';
-    } else {
+    } else if (elapsedWithinPhase < phaseEnd) {
       return 'RECOVERY';
+    } else {
+      return 'LEARNING';
     }
   }
 
@@ -323,6 +327,35 @@ class CrucibleClockEngine {
       return Duration.zero;
     }
     return end.difference(now);
+  }
+
+  // ===================================================
+  // LATE-ENTRY / MICRO ELIGIBILITY
+  // ===================================================
+
+  /// Founder-locked late-entry law for a 48-hour Crucible schedule.
+  /// A learner joining from schedule start through +12h (10:00-22:00
+  /// for a 10:00 schedule start) may attempt that schedule's Micro.
+  /// Joining after the cutoff never restarts or shifts the global ring;
+  /// the current Micro is skipped without fail/absence penalty and the
+  /// learner becomes eligible from the next schedule's Micro.
+  static bool isEligibleForCurrentMicro({
+    required DateTime joinedAt,
+    required DateTime scheduleStart,
+  }) {
+    if (joinedAt.isBefore(scheduleStart)) return true;
+    final cutoff = scheduleStart.add(const Duration(hours: lateJoinCutoffHours));
+    return !joinedAt.isAfter(cutoff);
+  }
+
+  /// Canonical non-punitive state for a learner who missed the entry cutoff.
+  static String microEligibilityState({
+    required DateTime joinedAt,
+    required DateTime scheduleStart,
+  }) {
+    return isEligibleForCurrentMicro(joinedAt: joinedAt, scheduleStart: scheduleStart)
+        ? 'ELIGIBLE'
+        : 'NOT_ELIGIBLE_LATE_ENTRY';
   }
 
   // ===================================================
