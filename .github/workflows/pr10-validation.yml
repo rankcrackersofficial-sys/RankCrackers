@@ -160,7 +160,7 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - name: Verify Mission Hub Syllabus route and retained Test Arena
-        run: flutter test --no-pub test/features/dashboard/mission_hub_syllabus_navigation_contract_test.dart
-      - name: Analyze changed Dashboard UI
-        run: flutter analyze lib/features/dashboard/presentation/screens/dashboard_screen.dart
+      - name: Verify Mission Hub and approved Student login branding
+        run: flutter test --no-pub test/features/dashboard/mission_hub_syllabus_navigation_contract_test.dart test/features/auth/student_login_brand_parity_contract_test.dart
+      - name: Analyze changed Dashboard and Student login UI
+        run: flutter analyze lib/features/dashboard/presentation/screens/dashboard_screen.dart lib/features/auth/presentation/screens/unified_identity_screen.dart
