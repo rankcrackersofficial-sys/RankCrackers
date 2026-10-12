@@ -35,22 +35,22 @@ void main() {
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 48))), 'LEARNING');
     });
 
-    test('phase closes with 24h Rebuild, 2h Macro, 22h Recovery', () {
+    test('phase closes with 47h Rebuild then 1h Macro and no recovery gap', () {
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 288))), 'REBUILD');
-      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 312))), 'MACRO');
-      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 314))), 'RECOVERY');
+      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 334))), 'REBUILD');
+      expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 335))), 'MACRO');
       expect(CrucibleClockEngine.getWindowType(state: state, now: start.add(const Duration(hours: 336))), 'LEARNING');
     });
 
     test('final Macro is on Day 98, never Day 99', () {
       final phase7Start = start.add(const Duration(days: 84));
-      final finalMacroStart = phase7Start.add(const Duration(hours: 312));
-      final finalMacroEnd = finalMacroStart.add(const Duration(hours: 2));
+      final finalMacroStart = phase7Start.add(const Duration(hours: 335));
+      final finalMacroEnd = finalMacroStart.add(const Duration(hours: 1));
       final orbit2Start = start.add(const Duration(days: 98));
-      expect(finalMacroStart, start.add(const Duration(days: 97)));
-      expect(finalMacroEnd, start.add(const Duration(days: 97, hours: 2)));
+      expect(finalMacroStart, start.add(const Duration(days: 97, hours: 23)));
+      expect(finalMacroEnd, start.add(const Duration(days: 98)));
       expect(orbit2Start, start.add(const Duration(hours: 2352)));
-      expect(finalMacroEnd.isBefore(orbit2Start), isTrue);
+      expect(finalMacroEnd, orbit2Start);
     });
 
     test('10 PM cutoff is inclusive; one minute later skips current Micro', () {
