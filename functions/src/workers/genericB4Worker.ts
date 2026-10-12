@@ -1,14 +1,13 @@
 import * as crypto from 'crypto';
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
-import * as path from 'path';
-import * as fs from 'fs';
 import { generateGemini } from '../providers/geminiProvider';
 import { resolveB4TaskAuthority } from '../syllabus/b4TaskAuthority';
 
 export interface B4Input {
   missionId: string;
   documentId: string;
+  sourceVersionId: string;
   sourceSha256: string;
   runId: string;
   authorizedScope: {
@@ -47,264 +46,96 @@ export class GenericB4Worker {
   static VERSION = '1.0.0';
   static REVISION = 'RC-AUTO-B4-ATOMIC-V1';
 
-  async decomposeSyllabus(input: B4Input, firestoreOverride?: admin.firestore.Firestore): Promise<AtomicNode[]> {
-    if (input.authorizedScope) {
-      const scope = input.authorizedScope as any;
-      if (scope.papers && !scope.paperDefinitions) {
-        scope.paperDefinitions = scope.papers;
-      }
-      if (scope.paperDefinitions && scope.papersEnabled === undefined) {
-        scope.papersEnabled = true;
-      }
-      if (scope.paperDefinitions && !scope.allowedPaperIds) {
-        scope.allowedPaperIds = Object.keys(scope.paperDefinitions);
-      }
-    }
-
+  async decomposeSyllabus(input: B4Input, firestoreOverride?: admin.firestore.Firestore): Promise<any[]> {
     this.validateInputs(input);
-
     const db = firestoreOverride || admin.firestore();
-    const missionId = input.missionId;
-    const documentId = input.documentId;
-    const sourceSha256 = input.sourceSha256;
-    const runId = input.runId;
+    const boundarySnap = await db.collection('mission_realms').doc(input.missionId)
+      .collection('academic_boundary_profiles').doc('current').get();
+    if (!boundarySnap.exists) throw new Error('DSD_BOUNDARY_PROFILE_MISSING');
 
-    // Fetch structured nodes of type 'topic'
-    const nodesSnap = await db.collection('mission_realms')
-      .doc(missionId)
-      .collection('structured_nodes')
-      .where('documentId', '==', documentId)
+    const topicSnap = await db.collection('mission_realms').doc(input.missionId)
+      .collection('official_syllabus_candidates')
+      .where('documentId', '==', input.documentId)
+      .where('sourceVersionId', '==', input.sourceVersionId)
+      .where('sourceSha256', '==', input.sourceSha256)
       .where('nodeType', '==', 'topic')
+      .where('provenance', '==', 'OFFICIAL')
+      .where('verificationState', '==', 'VERIFIED')
       .get();
+    if (topicSnap.empty) throw new Error('DSD_NO_VERIFIED_OFFICIAL_TOPICS');
 
-    if (nodesSnap.empty) {
-      throw new Error("B4_REJECT: no B3 structured topic nodes found");
+    const officialTopics = topicSnap.docs.map((doc) => ({ nodeId: doc.id, ...doc.data() }));
+    const proposals = [];
+    for (const topic of officialTopics) {
+      const proposal = await this.decomposeTopicWithGemini(topic, boundarySnap.data() || {});
+      proposals.push(proposal);
     }
-
-    const atomicNodes: AtomicNode[] = [];
-    const seenAtomicIds = new Set<string>();
-
-    for (const doc of nodesSnap.docs) {
-      const topicNode = doc.data();
-      const parentB3NodeId = topicNode.nodeId;
-      const canonicalTitle = topicNode.canonicalTitle;
-      const subjectId = topicNode.subjectId;
-      const paperId = topicNode.paperId || null;
-      const sourcePages = topicNode.sourcePages || [];
-      const ancestorIds = topicNode.ancestorIds || [];
-      const sourceTextAnchor = topicNode.sourceTextAnchor || '';
-
-      // 🛡️ B4-T11 Orphan check: Reject if B3 parent does not exist / structuredParentId is empty
-      if (!parentB3NodeId) {
-        throw new Error("B4_REJECT: structuredParentId is empty");
-      }
-
-      // 🛡️ B4-T12 sourceless check
-      if (!sourcePages || sourcePages.length === 0) {
-        throw new Error(`B4_REJECT: sourceless parent node ${parentB3NodeId} (no pages)`);
-      }
-      if (!sourceTextAnchor || sourceTextAnchor.trim().length === 0) {
-        throw new Error(`B4_REJECT: sourceless parent node ${parentB3NodeId} (no text anchor)`);
-      }
-
-      // 🛡️ B4-T02 Parent Verification State check: Reject if B3 parent is unverified
-      if (topicNode.verificationState !== 'verified') {
-        throw new Error(`B4_REJECT: unverified parent B3 node ${parentB3NodeId}`);
-      }
-
-      // 🛡️ B4-T03 Wrong SHA check: Reject if B3 node has wrong SHA
-      if (topicNode.sourceSha256 !== sourceSha256) {
-        throw new Error("B4_REJECT: wrong SHA blocked");
-      }
-
-      // 🛡️ B4-T04 Wrong Mission check: Reject if B3 node has wrong mission binding
-      if (topicNode.missionId !== missionId) {
-        throw new Error("B4_REJECT: wrong mission blocked");
-      }
-
-      // 🛡️ B4-T05 Wrong Document check: Reject if B3 node has wrong document binding
-      if (topicNode.documentId !== documentId) {
-        throw new Error("B4_REJECT: wrong document blocked");
-      }
-
-      // Validate subject under authorizedScope
-      this.validateSubjectScope(input, paperId, subjectId);
-
-      // Decompose using Gemini
-      const concepts = await this.decomposeTopicWithGemini(canonicalTitle, subjectId);
-
-      // 🛡️ B4-T10 Duplicate check
-      const uniqueConcepts = Array.from(new Set(concepts.map(c => c.trim())));
-
-      // Fetch page authority digest for the first page of this topic
-      let pageAuthorityDigest = '';
-      if (sourcePages.length > 0) {
-        const firstPage = sourcePages[0];
-        const pageExtractionSnap = await db.collection('mission_realms')
-          .doc(missionId)
-          .collection('official_documents')
-          .doc(documentId)
-          .collection('page_extractions')
-          .doc(String(firstPage))
-          .get();
-
-        if (pageExtractionSnap.exists) {
-          pageAuthorityDigest = pageExtractionSnap.data()?.pageAuthorityDigest || '';
-        }
-      }
-
-      for (const concept of uniqueConcepts) {
-        // Validate micro-concept length and structure
-        // 🛡️ B4-T13 Over-splitting checks
-        if (concept.length < 3) {
-          throw new Error("B4_REJECT: over-splitting: concept too short or meaningless");
-        }
-        if (uniqueConcepts.length > 15) {
-          throw new Error("B4_REJECT: over-splitting: too many concepts generated for a single topic");
-        }
-
-        // 🛡️ B4-T14 Under-splitting check
-        if (concept.toLowerCase() === canonicalTitle.toLowerCase() && canonicalTitle.includes(" and ")) {
-          throw new Error("B4_REJECT: under-splitting: topic contains multiple concepts but was not decomposed");
-        }
-
-        // 🛡️ B4-T15 Grammatical fragment / unsupported enrichment checks
-        const words = concept.split(/\s+/);
-        const lastWord = words[words.length - 1].toLowerCase();
-        const firstWord = words[0].toLowerCase();
-        const conjunctions = ['and', 'or', 'but', 'so', 'for', 'yet', 'nor', 'with', 'at', 'by', 'from', 'in', 'to', 'of'];
-        if (conjunctions.includes(lastWord) || conjunctions.includes(firstWord)) {
-          throw new Error("B4_REJECT: grammatical fragment: concept starts or ends with a conjunction/preposition");
-        }
-
-        // Check for common external textbook enrichment terms
-        const enrichmentTerms = ['history of', 'introduction to', 'advanced study', 'advanced topics', 'optional chapter'];
-        if (enrichmentTerms.some(term => concept.toLowerCase().includes(term))) {
-          throw new Error("B4_REJECT: unsupported enrichment rejected");
-        }
-
-        const atomicNodeId = this.generateAtomId(missionId, paperId, subjectId, parentB3NodeId, concept);
-        
-        // Ensure no duplicate IDs in the batch
-        if (seenAtomicIds.has(atomicNodeId)) {
-          continue;
-        }
-        seenAtomicIds.add(atomicNodeId);
-
-        atomicNodes.push({
-          atomicNodeId,
-          atomId: atomicNodeId, // compatibility
-          missionId,
-          documentId,
-          sourceSha256,
-          paperId,
-          subjectId,
-          structuredParentId: parentB3NodeId,
-          parentB3NodeId, // compatibility
-          ancestorIds,
-          canonicalTitle: concept,
-          sourcePages,
-          sourceTextAnchor,
-          decompositionVersion: GenericB4Worker.VERSION,
-          verificationState: 'UNVERIFIED',
-          workerRevision: GenericB4Worker.REVISION,
-          verifierRevision: GenericB4Worker.REVISION, // compatibility
-          runId,
-          createdAt: admin.firestore.FieldValue.serverTimestamp(),
-          updatedAt: admin.firestore.FieldValue.serverTimestamp()
-        });
-      }
-    }
-
-    return atomicNodes;
+    const result = (require('../../services/mission_syllabus_workers') as any).composeMissionSyllabus({
+      binding: {
+        missionId: input.missionId,
+        documentId: input.documentId,
+        sourceVersionId: input.sourceVersionId,
+        sourceSha256: input.sourceSha256,
+        runId: input.runId,
+      },
+      boundaryProfile: boundarySnap.data(),
+      officialNodes: officialTopics,
+      proposals,
+    });
+    return result.nodes;
   }
 
   private validateInputs(input: B4Input) {
-    if (process.env.RC_BYPASS_AUTHORITY_LEDGER === 'true') return;
-    if (!input.missionId) throw new Error("B4_REJECT: missing missionId");
-    if (!input.documentId) throw new Error("B4_REJECT: missing documentId");
-    if (!input.sourceSha256) throw new Error("B4_REJECT: missing sourceSha256");
-
-    // Validate authority ledger
-    const ledgerPath = path.join(__dirname, '../../..', 'docs', 'authority', `${input.missionId}_authority_decision.json`);
-    if (!fs.existsSync(ledgerPath)) {
-      throw new Error(`B4_REJECT: missing authority ledger for mission ${input.missionId}`);
-    }
-
-    let authority;
-    try {
-      authority = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
-    } catch (e) {
-      throw new Error(`B4_REJECT: corrupted authority ledger`);
-    }
-
-    if (authority.source_sha256 !== input.sourceSha256 && input.sourceSha256 !== "sha_123") {
-      throw new Error(`B4_REJECT: wrong SHA blocked`);
-    }
+    if (!input.missionId) throw new Error('B4_REJECT: missing missionId');
+    if (!input.documentId) throw new Error('B4_REJECT: missing documentId');
+    if (!/^[a-f0-9]{64}$/.test(input.sourceSha256)) throw new Error('B4_REJECT: invalid sourceSha256');
+    if (!input.sourceVersionId) throw new Error('B4_REJECT: missing sourceVersionId');
+    if (!input.runId) throw new Error('B4_REJECT: missing runId');
   }
 
-  private validateSubjectScope(input: B4Input, paperId: string | null, subjectId: string) {
-    const scope = input.authorizedScope;
-    if (!scope) return; // if no scope details, skip
-
-    if (scope.hierarchyMode === 'PAPER_THEN_SUBJECT' && paperId) {
-      const def = scope.paperDefinitions?.[paperId] || (scope as any).paperDefinitions?.[paperId];
-      if (!def) {
-        throw new Error(`B4_REJECT: missing paper definition for ${paperId}`);
-      }
-      if (!def.allowedSubjects.includes(subjectId)) {
-        throw new Error(`B4_REJECT: subject ${subjectId} is not allowed for paper ${paperId}`);
-      }
-    } else if (scope.allowedSubjects) {
-      if (!scope.allowedSubjects.includes(subjectId)) {
-        throw new Error(`B4_REJECT: subject ${subjectId} is not allowed`);
-      }
-    }
-  }
-
-  private async decomposeTopicWithGemini(topic: string, subject: string): Promise<string[]> {
-    const prompt = `Decompose the following syllabus topic into its constituent micro-concepts/atomic subtopics.
-Topic: ${topic}
-Subject: ${subject}
-Return a clean JSON array of strings containing unique, granular atomic concepts.
-No formatting, markdown code blocks, placeholders or explanation. Only a valid JSON array of strings.`;
+  private async decomposeTopicWithGemini(topic: any, profile: any): Promise<any> {
+    const prompt = [
+      'Propose a mission-bounded syllabus decomposition as JSON.',
+      'Return exactly one object with officialTopicId and microTopics.',
+      'Each microTopic must have title, scopeRationale, sourcePages, atomicTopics.',
+      'Each atomicTopic must have title, scopeRationale, sourcePages.',
+      'If the official topic is already atomic at the specified mission depth, return microTopics: [] and atomicStop: true.',
+      'Never add scope beyond the official topic. Do not return explanations, teaching steps, definitions, examples, mnemonics, or question content as syllabus nodes.',
+      'AI output is an unverified proposal and will be independently validated and reviewed.',
+      JSON.stringify({
+        officialTopicId: topic.nodeId,
+        officialTopic: topic.canonicalTitle,
+        officialAncestor: topic.nearestOfficialAncestorId || topic.nodeId,
+        sourcePages: topic.sourcePages || [],
+        missionEnvironment: {
+          academicLevel: profile.academicLevel,
+          scopePolicy: profile.scopePolicy,
+          depthPolicy: profile.depthPolicy,
+          referenceStandards: profile.referenceStandards,
+          officialSyllabusVersion: profile.officialSyllabusVersion,
+          profileVersion: profile.profileVersion,
+        },
+      }),
+    ].join('\\n');
 
     let responseText = '';
     try {
-      const res = await generateGemini(prompt);
-      responseText = res.text || '';
-    } catch (err: any) {
-      console.error("Gemini invocation failed:", err);
-      throw new Error(`VERTEX_AI_ERROR: Gemini call failed: ${err.message}`);
+      const response = await generateGemini(prompt);
+      responseText = response.text || '';
+    } catch (error: any) {
+      throw new Error(`DSD_MODEL_ERROR:${error?.message || 'PROVIDER_FAILED'}`);
     }
-
-    if (!responseText || responseText.trim().length === 0) {
-      throw new Error("VERTEX_AI_ERROR: Empty response from Vertex AI");
+    let clean = responseText.trim();
+    if (clean.startsWith('```')) {
+      clean = clean.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
     }
-
-    // Clean markdown code blocks from response
-    let cleanText = responseText.trim();
-    if (cleanText.startsWith('```')) {
-      const lines = cleanText.split('\n');
-      if (lines[0].startsWith('```')) {
-        lines.shift();
-      }
-      if (lines[lines.length - 1].startsWith('```')) {
-        lines.pop();
-      }
-      cleanText = lines.join('\n').trim();
+    let parsed: any;
+    try { parsed = JSON.parse(clean); } catch { throw new Error('DSD_MODEL_JSON_INVALID'); }
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)
+        || parsed.officialTopicId !== topic.nodeId || !Array.isArray(parsed.microTopics)) {
+      throw new Error('DSD_MODEL_PROPOSAL_SHAPE_INVALID');
     }
-
-    try {
-      const parsed = JSON.parse(cleanText);
-      if (!Array.isArray(parsed)) {
-        throw new Error("Parsed JSON is not an array");
-      }
-      return parsed.map((item: any) => String(item).trim()).filter(item => item.length > 0);
-    } catch (err: any) {
-      console.error("Failed to parse Gemini response as JSON. Cleaned response was:", cleanText);
-      throw new Error(`VERTEX_AI_ERROR: Malformed JSON response: ${err.message}`);
-    }
+    return parsed;
   }
 
   generateAtomId(missionId: string, paperId: string | null, subjectId: string, parentB3NodeId: string, conceptText: string): string {
@@ -346,7 +177,7 @@ export const genericB4Worker = functions.firestore
       if (!claimed) return;
 
       const payload = task.payload || task;
-      const { missionId, documentId, sourceSha256 } = resolveB4TaskAuthority(payload);
+      const { missionId, documentId, sourceVersionId, sourceSha256 } = resolveB4TaskAuthority(payload);
       const runId = payload.run_id || payload.runId;
       const authorizedScope = payload.authorizedScope;
 
@@ -370,6 +201,7 @@ export const genericB4Worker = functions.firestore
       const input: B4Input = {
         missionId,
         documentId,
+        sourceVersionId: sourceVersionId || '',
         sourceSha256,
         runId,
         authorizedScope
