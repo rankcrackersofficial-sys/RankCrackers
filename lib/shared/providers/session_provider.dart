@@ -52,8 +52,8 @@ class SessionUser {
             email: '',
             photo: null,
             examName: 'JEE Main 2027',
-            examId: 'jee_main_2026',
-            recruitmentId: 'jee_main_2026',
+            examId: '',
+            recruitmentId: '',
             phone: null,
           );
         }
@@ -77,8 +77,8 @@ class SessionUser {
       email: email,
       photo: photo,
       examName: examName ?? 'JEE Main 2027',
-      examId: examId ?? 'jee_main_2026',
-      recruitmentId: recruitmentId ?? 'jee_main_2026',
+      examId: examId ?? '',
+      recruitmentId: recruitmentId ?? '',
       phone: phone,
     );
   }
@@ -98,8 +98,8 @@ final sessionUserProvider = FutureProvider<SessionUser>((ref) async {
           email: '',
           photo: null,
           examName: 'JEE Main 2027',
-          examId: 'jee_main_2026',
-          recruitmentId: 'jee_main_2026',
+          examId: '',
+          recruitmentId: '',
           phone: null,
         );
       }
@@ -123,8 +123,8 @@ final sessionUserProvider = FutureProvider<SessionUser>((ref) async {
     email: email,
     photo: photo,
     examName: examName ?? 'JEE Main 2027',
-    examId: examId ?? 'jee_main_2026',
-    recruitmentId: recruitmentId ?? 'jee_main_2026',
+    examId: examId ?? '',
+    recruitmentId: recruitmentId ?? '',
     phone: phone,
   );
 });
