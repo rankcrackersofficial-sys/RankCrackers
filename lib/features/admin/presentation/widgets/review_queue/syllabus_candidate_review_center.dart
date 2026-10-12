@@ -50,13 +50,13 @@ class _SyllabusCandidateReviewCenterState extends State<SyllabusCandidateReviewC
         'reason': reason.text.trim(),
       });
     } on FirebaseFunctionsException catch (error) {
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(
+      if (mounted) { ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Review denied: ${error.message ?? error.code}')),
-      );
+      ); }
     } catch (error) {
       if (mounted) ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Review failed: $error')),
-      );
+      ); }
     } finally {
       reason.dispose();
       if (mounted) setState(() => _loading = false);
