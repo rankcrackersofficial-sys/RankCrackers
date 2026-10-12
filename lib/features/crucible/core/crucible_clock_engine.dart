@@ -189,11 +189,16 @@ class CrucibleClockEngine {
     final now = DateTime.now();
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = now.difference(normalizedStart);
-    final cycleDays = difference.inDays % bp.cycleLengthDays;
-    final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
-    final phaseDay = cycleDays % daysPerPhase;
-    final macroDay = daysPerPhase - 1;
-    return phaseDay == macroDay && now.hour >= testStartHour && now.hour <= (testStartHour + bp.macroDurationHours);
+    if (difference.isNegative) return false;
+    final cycleHours = bp.cycleLengthDays * 24;
+    final phaseHours = (bp.cycleLengthDays ~/ bp.phaseCount) * 24;
+    final elapsedCycleSeconds = difference.inSeconds % (cycleHours * 3600);
+    final elapsedPhase = Duration(seconds: elapsedCycleSeconds % (phaseHours * 3600));
+    final macroStart = Duration(
+      hours: (bp.schedulesPerPhase * bp.hoursPerSchedule) + bp.rebuildDurationHours,
+    );
+    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
+    return elapsedPhase >= macroStart && elapsedPhase < macroEnd;
   }
 
   // ===================================================
