@@ -132,15 +132,15 @@ class MissionCrucibleBlueprint extends Equatable {
   static const MissionCrucibleBlueprint jeeMain2027Blueprint = MissionCrucibleBlueprint(
     missionId: 'jee_main_2026',
     recruitmentId: 'jee_main_2027',
-    blueprintVersion: '2027.3-98DAY-CONTINUOUS-RING-CONSTITUTION',
-    cycleLengthDays: 98, // Continuous 98-Day Ring Constitution: 42 Micro Schedules (84 days) + 7 Rebuilds (7 days) + 7 Macros (7 days)
+    blueprintVersion: '2027.4-98DAY-R2-2H-MACRO',
+    cycleLengthDays: 98, // 7 x 336h phases = exact 2352h sovereign orbit
     phaseCount: 7,
     schedulesPerPhase: 6,
     hoursPerSchedule: 48,
     learningHoursPerSchedule: 47,
     microHoursPerSchedule: 1,
-    rebuildDurationHours: 47, // After Micro-6: continuous Rebuild until the final pre-Macro hour
-    macroDurationHours: 1, // 60-minute Macro boundary
+    rebuildDurationHours: 46, // R2: preserves 336h phase while Macro expands to 2h
+    macroDurationHours: 2, // R2 Founder lock: 120-minute Macro
     recoveryDurationHours: 0, // No recovery gap: next schedule starts immediately after Macro
     smartEntryBlueprint: SmartEntryBlueprint(
       domainIds: ['physics', 'chemistry', 'mathematics'],
@@ -161,7 +161,7 @@ class MissionCrucibleBlueprint extends Equatable {
     ),
     macroPolicy: MacroPolicy(
       attemptQuestionCount: 50,
-      attemptDurationMinutes: 60,
+      attemptDurationMinutes: 120,
       minimumVerifiedPhaseBankDepth: 100,
       schedulesIntegrated: 6,
     ),
