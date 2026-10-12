@@ -77,9 +77,15 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     final knowledge = ref.watch(knowledgeEngineProvider);
-    final coverage = knowledge.coverageState;
-    final risk = knowledge.riskState;
-    final momentum = knowledge.momentumState;
+    final selectedSession = ref.watch(activeSessionUserProvider);
+    final metricsAreCurrent = hasCurrentSessionMissionMetrics(
+      selectedMissionId: selectedSession.examId,
+      engineMissionId: knowledge.activeRecruitment?.examId,
+      metricsBoundToSession: knowledge.isMetricsValidForCurrentSession(),
+    );
+    final coverage = metricsAreCurrent ? knowledge.coverageState : null;
+    final risk = metricsAreCurrent ? knowledge.riskState : null;
+    final momentum = metricsAreCurrent ? knowledge.momentumState : null;
     final readiness = ref.watch(missionReadinessProvider);
     final sessionUser = ref.watch(sessionUserProvider).valueOrNull;
     final nodes = ref.watch(allNodesProvider);
@@ -87,11 +93,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     final hasHeaderEvidence =
         nodes.isNotEmpty && coverage != null && coverage.totalNodes > 0;
 
-    final priorityNode = BattleEngine.getPriorityNode(
-      nodes,
-      knowledge.nodeStates,
-      riskFactor: risk?.overallRisk ?? 0.0,
-    );
+    final priorityNode = metricsAreCurrent
+        ? BattleEngine.getPriorityNode(
+            nodes,
+            knowledge.nodeStates,
+            riskFactor: risk?.overallRisk ?? 0.0,
+          )
+        : null;
 
     return Scaffold(
       backgroundColor: AppColors.background,
