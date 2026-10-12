@@ -1,7 +1,7 @@
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const axios = require("axios");
-const PDFParse = require("pdf-parse");
+const { extractSentinelPdfText } = require("../services/sentinel_pdf_text");
 const mammoth = require("mammoth");
 const XLSX = require("xlsx");
 const vision = require("@google-cloud/vision");
@@ -121,8 +121,7 @@ exports.sentinelBackgroundWorker = functions
       }
 
       if (payload.fileType === "pdf" || extension === "pdf") {
-        const data = await PDFParse(fileBuffer);
-        rawText = data.text;
+        rawText = await extractSentinelPdfText(fileBuffer);
         extractionMethod = "PDF";
 
         if (!rawText || rawText.trim().length < 150) {
