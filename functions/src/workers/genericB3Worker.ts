@@ -182,7 +182,9 @@ export class GenericB3Worker {
               sourceTextAnchor: line,
               sourceOrder: orderCounter++,
               materializationVersion: GenericB3Worker.VERSION,
-              verificationState: 'verified',
+              verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
               workerRevision: GenericB3Worker.REVISION,
               runId: input.runId
             };
@@ -227,7 +229,9 @@ export class GenericB3Worker {
                 sourceTextAnchor: line,
                 sourceOrder: orderCounter++,
                 materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
+                verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
                 workerRevision: GenericB3Worker.REVISION,
                 runId: input.runId
               };
@@ -276,7 +280,9 @@ export class GenericB3Worker {
               sourceTextAnchor: line,
               sourceOrder: orderCounter++,
               materializationVersion: GenericB3Worker.VERSION,
-              verificationState: 'verified',
+              verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
               workerRevision: GenericB3Worker.REVISION,
               runId: input.runId
             };
@@ -286,42 +292,8 @@ export class GenericB3Worker {
           }
 
         } else {
-          // If we have a subject but no unit, create a virtual unit to preserve hierarchy
-          if (currentParentId && currentAncestorIds.length === 1) {
-            const virtualTitle = `${currentSubjectId} General Content`;
-            const unitNodeId = this.generateNodeId(input.missionId, currentPaperId, currentSubjectId, 'unit', virtualTitle);
-            
-            const existingUnit = nodes.find(n => n.nodeId === unitNodeId);
-            if (!existingUnit) {
-              const unitNode: StructuredNode = {
-                nodeId: unitNodeId,
-                missionId: input.missionId,
-                documentId: input.documentId,
-                sourceSha256: input.sourceSha256,
-                paperId: currentPaperId,
-                subjectId: currentSubjectId,
-                nodeType: 'unit',
-                canonicalTitle: virtualTitle,
-                parentId: currentAncestorIds[0],
-                ancestorIds: [currentAncestorIds[0]],
-                sourcePages: [page.pageNumber],
-                sourceTextAnchor: `Virtual Unit for ${currentSubjectId}`,
-                sourceOrder: orderCounter++,
-                materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
-                workerRevision: GenericB3Worker.REVISION,
-                runId: input.runId,
-                isVirtual: true,
-                virtualReason: `${currentSubjectId.toUpperCase()}_NO_EXPLICIT_UNIT_HEADER`
-              };
-              nodes.push(unitNode);
-            }
-            currentParentId = unitNodeId;
-            currentAncestorIds.push(unitNodeId);
-          }
-
           // If we have a current unit, treat any other line as a topic
-          if (currentParentId && currentAncestorIds.length >= 2) {
+          if (currentParentId && currentAncestorIds.length >= 1) {
             isLineResolved = true;
             const title = line.replace("TOPIC:", "").replace("- ", "").trim();
             const nodeId = this.generateNodeId(input.missionId, currentPaperId, currentSubjectId, 'topic', title);
@@ -353,7 +325,9 @@ export class GenericB3Worker {
                 sourceTextAnchor: line,
                 sourceOrder: orderCounter++,
                 materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
+                verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
                 workerRevision: GenericB3Worker.REVISION,
                 runId: input.runId
               };
@@ -570,7 +544,10 @@ export class GenericB3Worker {
         if (!node.parentId) {
           throw new Error(`B3_REJECT: topic ${node.nodeId} ("${node.canonicalTitle}") is an orphan`);
         }
-        if (node.ancestorIds.length !== 2 || node.ancestorIds[1] !== node.parentId) {
+        const parentNode = nodeMap.get(node.parentId);
+        const expectedAncestorCount = parentNode?.nodeType === 'subject' ? 1 : 2;
+        const parentIsLastAncestor = node.ancestorIds[node.ancestorIds.length - 1] === node.parentId;
+        if (node.ancestorIds.length !== expectedAncestorCount || !parentIsLastAncestor) {
           throw new Error(`B3_REJECT: topic ${node.nodeId} ("${node.canonicalTitle}") ancestor inconsistency (expected parent ${node.parentId})`);
         }
       } else {
@@ -703,7 +680,7 @@ export const genericB3Worker = functions.firestore
       return;
     }
     const task = snapshot.data();
-    if (task.type !== 'SYLLABUS_B3') return;
+    if ((task.task_type || task.type) !== 'SYLLABUS_B3') return;
 
     const taskId = context.params.taskId;
     const firestore = admin.firestore();
@@ -739,6 +716,7 @@ export const genericB3Worker = functions.firestore
 
       const workerInstance = new GenericB3Worker();
       const nodes = await workerInstance.materializeSyllabusStructure(task.payload);
+      if (nodes.length > 450) throw new Error('B3_REVIEW_CANDIDATE_BATCH_TOO_LARGE');
 
       // Write nodes and complete task in a single transaction
       await firestore.runTransaction(async (transaction) => {
@@ -755,14 +733,15 @@ export const genericB3Worker = functions.firestore
           const nodeRef = firestore
             .collection('mission_realms')
             .doc(node.missionId)
-            .collection('structured_nodes')
+            .collection('official_syllabus_candidates')
             .doc(node.nodeId);
           transaction.set(nodeRef, node);
         }
 
         transaction.update(taskRef, {
-          status: 'completed',
-          completed_at: admin.firestore.FieldValue.serverTimestamp(),
+          status: 'review_required',
+          reviewState: 'PENDING_FACULTY_REVIEW',
+          outputCount: nodes.length,
           updated_at: admin.firestore.FieldValue.serverTimestamp()
         });
       });
