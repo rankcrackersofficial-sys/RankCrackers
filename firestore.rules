@@ -9,6 +9,561 @@ service cloud.firestore {
               ('founder' in request.auth.token && request.auth.token.founder == true));
     }
 
+
+    function isQualifiedSyllabusReviewer(realmId, candidate) {
+      let authorityId = request.auth.token.get('academicReviewerId', '');
+      let reviewer = get(/databases/$(database)/documents/reviewer_registry/$(authorityId)).data;
+      return request.auth != null
+          && authorityId is string
+          && authorityId.matches('^sme_[a-z0-9_]+
+    // visibility authority. Authentication alone never exposes hidden realms.
+    function isStudentVisibleMission(realmId) {
+      let mission = get(/databases/$(database)/documents/mission_realms/$(realmId)).data;
+      let gate = mission.get('visibilityGate', {});
+      return request.auth != null
+          && mission.get('archived', false) != true
+          && (
+            mission.get('cardVisible', false) == true
+            || mission.get('userPanelVisible', false) == true
+            || gate.get('studentVisible', false) == true
+            || gate.get('userPanelVisible', false) == true
+          );
+    }
+
+    // 🔱 GOVERNED DIGIBOOK PUBLICATION CONTRACT
+    function isGovernedStudentReadable(data) {
+      return request.auth != null &&
+             data != null &&
+             data.status == 'published' &&
+             data.studentVisibilityAuthorized == true &&
+             (!('isSynthetic' in data) || data.isSynthetic == false) &&
+             (!('isStructuralHold' in data) || data.isStructuralHold == false) &&
+             (!('isStale' in data) || data.isStale == false) &&
+             data.sourceApproved == true &&
+             data.verificationStatus == 'VERIFIED' &&
+             ('canonicalAtomId' in data) && data.canonicalAtomId is string && data.canonicalAtomId.size() > 0 &&
+             ('canonicalMissionId' in data) && data.canonicalMissionId is string && data.canonicalMissionId.size() > 0 &&
+             ('approvedSourceId' in data) && data.approvedSourceId is string && data.approvedSourceId.size() > 0 &&
+             ('verificationId' in data) && data.verificationId is string && data.verificationId.size() > 0 &&
+             ('contentRegistryId' in data) && data.contentRegistryId is string && data.contentRegistryId.size() > 0 &&
+             (!('description' in data) || data.description != "Materialized via RELIABILITY FF01 progressive publication.");
+    }
+
+    
+    // 🔱 CANONICAL IDENTITY & PHONE CLAIM HELPERS (18P-A2)
+    function hasVerifiedCanonicalPhoneClaim() {
+      return request.auth != null
+          && request.auth.token.keys().hasAny(['phone_number'])
+          && request.auth.token.phone_number is string
+          && request.auth.token.phone_number.matches('^\\+91[6-9][0-9]{9}$');
+    }
+    match /system_config/global {
+      allow read: if isFounder();
+      allow write: if false; // Only via Cloud Functions
+    }
+
+    match /founder_activity_log/{logId} {
+      // 🔱 AUDIT IMMUTABILITY: Immutable Ledger (Document 102)
+      // Clients can only read logs. Writes must originate from Admin SDK / Cloud Functions.
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /worker_registry/{workerId} {
+      allow read, write: if isFounder();
+    }
+
+    match /system_budget/{monthId} {
+      allow read: if isFounder();
+      allow write: if false; // Only via workers/services
+    }
+
+    match /system_health_pings/{docId} {
+      allow read, write: if isFounder();
+    }
+
+    match /system_metrics/{docId} {
+      allow read: if isFounder();
+      allow write: if false; // Worker generated
+    }
+
+    
+    // 🔱 PRODUCTION SOURCE TRUST P2A RULES (Immutable Evidence & Governed Trust)
+    match /official_byte_artifacts/{artifactId} {
+      allow read: if isFounder();
+      allow write: if false; // Server create-once via Admin SDK only; client create/update/delete strictly denied
+    }
+
+    match /byte_artifacts/{artifactId} {
+      allow read: if isFounder();
+      allow write: if false; // Server create-once via Admin SDK only; client create/update/delete strictly denied
+    }
+
+    match /official_source_provenance/{provenanceId} {
+      allow read: if isFounder();
+      allow write: if false; // Server create-once via Admin SDK only; client create/update/delete strictly denied
+    }
+
+    match /official_source_governance/{governanceId} {
+      allow read: if isFounder();
+      allow write: if false; // Mutable only through governed server ownership; client create/update/delete strictly denied
+    }
+
+    // 🔱 AUTHORITY INTELLIGENCE EVENTS RULES (Official Government Stream)
+    match /authority_intelligence_events/{eventId} {
+      allow read: if isFounder();
+      allow write: if false; // Server create-once via Admin SDK only; client create/update/delete strictly denied
+    }
+
+    // 🔱 MISSION REGISTRY RULES
+    match /recruitments/{recruitmentId} {
+      // Legacy projection: retained only for the guarded reset/migration.
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /student_mission_catalog/{missionId} {
+      // Legacy projection: never a student source and never writable by clients.
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /mission_realms/{realmId} {
+      allow read: if isFounder() || isStudentVisibleMission(realmId);
+      allow write: if isFounder();
+
+      match /participants/{userId} {
+        allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
+        allow write: if isFounder() || (request.auth != null && request.auth.uid == userId);
+      }
+
+
+      // Syllabus review candidates are readable only by Founder or the
+      // registered, mission- and subject-scoped SME. Clients cannot mutate them.
+      match /official_syllabus_candidates/{nodeId} {
+        allow read: if isFounder() || isQualifiedSyllabusReviewer(realmId, resource.data);
+        allow write: if false;
+      }
+      match /derived_syllabus_candidates/{nodeId} {
+        allow read: if isFounder() || isQualifiedSyllabusReviewer(realmId, resource.data);
+        allow write: if false;
+      }
+
+      match /structured_nodes/{nodeId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if isFounder();
+      }
+
+      match /timeline/{milestoneId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if isFounder();
+      }
+
+      match /updates/{updateId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if isFounder();
+      }
+
+      match /official_documents/{docId} {
+        // Official-source trust metadata is server-authored after byte/domain verification.
+        // Clients (including Founder clients) may not self-certify or rewrite source evidence.
+        allow read: if isFounder();
+        allow write: if false;
+        match /page_extractions/{pageId} {
+          // Page text and page proof are worker-authored; clients cannot forge extraction evidence.
+          allow read: if isFounder();
+          allow write: if false;
+        }
+        match /cycles/{cycleKey} {
+          allow read: if isFounder();
+          allow write: if false;
+        }
+
+      }
+      // Domain-M coordinator/worker authority is server-owned. Founder may
+      // inspect readiness and dispatch evidence but cannot forge/revoke pairs
+      // through client Firestore writes. Hidden from Student clients.
+      match /source_pairs/{pairId} {
+        allow read: if request.auth != null && request.auth.token.founder == true;
+        allow write: if false;
+      }
+
+      // Canonical source pointers and immutable versions are server-write authority.
+      match /source_slots/{slotId} {
+        allow read: if isFounder();
+        allow write: if false;
+
+        match /source_versions/{versionId} {
+          allow read: if isFounder();
+          allow write: if false;
+        }
+      }
+
+      // Current projection is written only by canonical reconciliation workers.
+      match /current_syllabus_projection/{unitId} {
+        allow read: if isFounder();
+        allow write: if false;
+      }
+
+      match /variables/{varId} {
+        allow read, write: if isFounder();
+      }
+    }
+
+    match /mission_variants/{variantId} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /blueprints/{blueprintId} {
+      allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
+    match /schedules/{scheduleId} {
+      allow read: if request.auth != null;
+      allow write: if isFounder();
+    }
+
+    // 🔱 CONTENT MATRIX RULES
+    match /micro_nodes/{nodeId} {
+      allow read: if isFounder() || isGovernedStudentReadable(resource.data);
+      allow write: if isFounder();
+    }
+
+    match /content_payloads/{payloadId} {
+      allow read: if isFounder() || isGovernedStudentReadable(resource.data);
+      allow write: if isFounder();
+    }
+
+    match /digibook_pointers/{guId} {
+      allow read: if isFounder() || (request.auth != null && resource.data.status == 'published' && resource.data.studentVisibilityAuthorized == true);
+      allow write: if isFounder();
+    }
+
+    match /digibook_revisions/{revisionId} {
+      allow read: if isFounder() || (request.auth != null && resource.data.status == 'published' && resource.data.studentVisibilityAuthorized == true);
+      allow write: if isFounder();
+    }
+
+    match /digibook_refinery/{blockId} {
+      allow read: if isFounder() || isGovernedStudentReadable(resource.data);
+      allow write: if isFounder();
+    }
+
+    match /question_bank/{questionId} {
+      allow read, write: if isFounder();
+    }
+
+    match /published_questions/{questionId} {
+      allow read: if request.auth != null && (resource == null || resource.data.status == 'published');
+      allow create, update: if isFounder() && request.resource.data.keys().hasOnly([
+        'id', 'questionLineageId', 'version', 'questionType', 'question', 'options',
+        'difficulty', 'examId', 'subjectId', 'nodeId', 'atomicTopicIds', 'status',
+        'isPYQ', 'verifiedBy', 'verifiedAt'
+      ]);
+      allow delete: if isFounder();
+    }
+
+    match /answer_keys/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /solution_verifications/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /reviewer_registry/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /publication_registry/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /pyq_evidence/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /lineage_registry/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /canonical_source_audit/{auditId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /canonical_source_events/{eventId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /factory_impact_queue/{impactId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+    match /ai_queue/{taskId} {
+      // 🔱 HARDENED: AI Queue is restricted to Founder/Admin.
+      // Traffic from Citizens is routed through secure Cloud Functions.
+      allow read, write: if isFounder();
+    }
+
+    match /sentinel_drafts/{draftId} {
+      allow read, write: if isFounder();
+    }
+
+    match /ingestion_refinery/{recordId} {
+      allow read, write: if isFounder();
+    }
+
+    match /semantic_units/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /atomic_facts/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /fact_relationships/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /transformation_lineage/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /verified_facts/{id} {
+      allow read: if resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /fact_intelligence/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /verification_candidates/{id} {
+      allow read, write: if isFounder();
+    }
+
+    match /scout_downloads/{downloadId} {
+      allow read, write: if isFounder();
+    }
+
+    match /telemetry_nexus/{telemetryId} {
+      // 🔱 AUDIT LOCK: Authenticated users can write performance events.
+      // Founder/Admin can read for strategic optimization.
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.eventName is string
+                    && request.resource.data.sessionId is string
+                    && request.resource.data.timestamp is int
+                    && request.resource.data.recruitmentId is string;
+      allow read: if isFounder();
+      allow update, delete: if false;
+    }
+
+    match /attempt_sessions/{sessionId} {
+      allow read: if request.auth != null && (resource == null || resource.data.userId == request.auth.uid || isFounder());
+      allow write: if isFounder();
+    }
+
+    match /micro_attempts/{attemptId} {
+      allow read: if request.auth != null && (resource == null || resource.data.userId == request.auth.uid || isFounder());
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.status == 'submitted'
+                    && !request.resource.data.keys().hasAny([
+                         'score', 'correctness', 'evaluated', 'verifiedAnswerKeys', 'answerKeys',
+                         'atomicTopicIds', 'questionVersions', 'mastery', 'coverage', 'risk'
+                       ]);
+      allow update, delete: if false;
+    }
+
+    match /macro_attempts/{attemptId} {
+      allow read: if request.auth != null && (resource == null || resource.data.userId == request.auth.uid || isFounder());
+      allow create: if request.auth != null
+                    && request.resource.data.userId == request.auth.uid
+                    && request.resource.data.status == 'submitted'
+                    && !request.resource.data.keys().hasAny([
+                         'score', 'correctness', 'evaluated', 'verifiedAnswerKeys', 'answerKeys',
+                         'atomicTopicIds', 'questionVersions', 'mastery', 'coverage', 'risk'
+                       ]);
+      allow update, delete: if false;
+    }
+
+    // 🔱 TEST ARENA STANDARDIZED ASSESSMENT RULES
+    match /test_arena_events/{eventId} {
+      allow read: if resource.data.status == 'live' || resource.data.status == 'published' || isFounder();
+      allow write: if isFounder();
+    }
+
+    match /test_arena_papers/{paperId} {
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.isReleased == true &&
+        request.time >= resource.data.scheduledStart
+      );
+      allow write: if isFounder();
+    }
+
+    match /test_arena_attempts/{attemptId} {
+      allow read: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid || isFounder());
+      allow create: if request.auth != null
+                    && request.resource.data.uid == request.auth.uid
+                    && request.resource.data.status == 'active'
+                    && !request.resource.data.keys().hasAny([
+                         'score', 'totalScore', 'rawScore', 'accuracy', 'evaluated',
+                         'verifiedAnswerKeys', 'eventRank', 'percentile'
+                       ]);
+      allow update: if request.auth != null
+                    && resource.data.uid == request.auth.uid
+                    && request.resource.data.uid == request.auth.uid
+                    // An active attempt cannot switch its paper, event, scoring policy, or clock.
+                    && !request.resource.data.diff(resource.data).affectedKeys().hasAny([
+                         'attemptId', 'eventId', 'paperId', 'paperVersionHash',
+                         'scoringPolicyVersion', 'startedAt', 'targetEndAt'
+                       ])
+                    && resource.data.status == 'active'
+                    && (request.resource.data.status == 'active' || request.resource.data.status == 'submitted' || request.resource.data.status == 'autoSubmitted')
+                    && !request.resource.data.keys().hasAny([
+                         'score', 'totalScore', 'rawScore', 'accuracy', 'evaluated',
+                         'verifiedAnswerKeys', 'eventRank', 'percentile'
+                       ]);
+      allow delete: if false;
+    }
+
+    match /test_arena_results/{resultId} {
+      allow read: if request.auth != null && (
+        isFounder() || (resource.data.uid == request.auth.uid && resource.data.isResultReleased == true)
+      );
+      allow write: if false; // Writes only via Cloud Functions / Admin SDK (Server Authoritative)
+    }
+
+    // 🔱 USER PERSONAL TRUTH RULES
+    match /study_library_subjects/{subjectId} {
+      allow read, write: if isFounder();
+
+      match /materials/{materialId} {
+        allow read, write: if isFounder();
+      }
+    }
+
+    match /warrior_profiles/{userId} {
+      allow read, write: if request.auth != null && (request.auth.uid == userId || isFounder());
+    }
+
+    match /opportunity_matches/{matchId} {
+      allow read: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid || isFounder());
+      // Proposed ownership never authorizes overwriting another student's match.
+      allow create: if isFounder() || (request.auth != null && request.resource.data.uid == request.auth.uid);
+      allow update: if isFounder() || (request.auth != null
+        && resource.data.uid == request.auth.uid
+        && request.resource.data.uid == request.auth.uid);
+      allow delete: if isFounder();
+    }
+
+    match /users/{userId} {
+      // 🔱 Audit Fix & 18P-A2 Server-Side Canonical Phone Authority Law
+      allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
+      allow create: if isFounder() || isSafeStudentProfileCreate(userId);
+      allow update: if isFounder() || isSafeStudentProfileUpdate(userId);
+
+      match /progress/{nodeId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /atomic_mastery/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /atomic_coverage/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /atomic_risk/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /battle_priority/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /rebuild_candidates/{atomicId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+        allow write: if isFounder();
+      }
+      match /notifications/{notificationId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /mission_stats/{realmId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      match /protocols/{recruitmentId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+
+    match /profile_snapshots/{snapshotId} {
+      allow read: if isFounder();
+      allow write: if false; // Server/Admin SDK only; immutable authority records.
+    }
+
+    match /eligibility_evaluations/{evaluationId} {
+      allow read: if isFounder();
+      allow write: if false; // Server/Admin SDK only; immutable authority records.
+    }
+
+    function targetHasMatchingCanonicalMobile() {
+      return request.resource.data.keys().hasAny(['mobile'])
+          && request.resource.data.mobile is string
+          && hasVerifiedCanonicalPhoneClaim()
+          && request.resource.data.mobile == request.auth.token.phone_number;
+    }
+
+    function isSafeStudentProfileCreate(userId) {
+      return request.auth != null
+          && request.auth.uid == userId
+          && hasVerifiedCanonicalPhoneClaim()
+          && targetHasMatchingCanonicalMobile()
+          && !request.resource.data.keys().hasAny([
+               'phone', 'role', 'accessLevel', 'founder', 'admin',
+               'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey'
+             ])
+          && (!request.resource.data.keys().hasAny(['onboardingCompleted']) || request.resource.data.onboardingCompleted is bool);
+    }
+
+    function isSafeStudentProfileUpdate(userId) {
+      let affected = request.resource.data.diff(resource.data).affectedKeys();
+      let isOwner = request.auth != null && request.auth.uid == userId;
+      let noPrivilegedOrLegacyKeys = !affected.hasAny([
+        'role', 'accessLevel', 'founder', 'admin', 'phone',
+        'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey'
+      ]);
+      
+      let isMobileSafe = !affected.hasAny(['mobile']) || targetHasMatchingCanonicalMobile();
+      
+      let isExistingOnboardingMissingOrFalse = !resource.data.keys().hasAny(['onboardingCompleted']) || resource.data.onboardingCompleted == false;
+      let isOnboardingTransitionToTrue = isExistingOnboardingMissingOrFalse 
+                                      && request.resource.data.keys().hasAny(['onboardingCompleted']) 
+                                      && request.resource.data.onboardingCompleted == true 
+                                      && hasVerifiedCanonicalPhoneClaim() 
+                                      && targetHasMatchingCanonicalMobile();
+      let isOnboardingSafe = !affected.hasAny(['onboardingCompleted']) || isOnboardingTransitionToTrue;
+
+      return isOwner && noPrivilegedOrLegacyKeys && isMobileSafe && isOnboardingSafe;
+    }
+  }
+}
+)
+          && reviewer.active == true
+          && reviewer.reviewDecisionSigningMethod == 'SECURE_JWT_AUDITED_SESSION'
+          && reviewer.missionScopes is list
+          && reviewer.missionScopes.hasAny([realmId])
+          && reviewer.subjectScopes is list
+          && candidate.subjectId is string
+          && reviewer.subjectScopes.hasAny([candidate.subjectId]);
+    }
+
     // Every Student mission subcollection must inherit the parent realm's
     // visibility authority. Authentication alone never exposes hidden realms.
     function isStudentVisibleMission(realmId) {
