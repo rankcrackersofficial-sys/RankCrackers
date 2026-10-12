@@ -8,12 +8,14 @@ void main() {
       documents: [
         {
           'id': 'paper-1',
+          'activationEpoch': 8,
           'nodeType': 'paper',
           'canonicalTitle': 'Paper I',
           'sourceOrder': 0,
         },
         {
           'id': 'subject-physics',
+          'activationEpoch': 8,
           'nodeType': 'subject',
           'canonicalTitle': 'Physics',
           'parentId': 'paper-1',
@@ -21,6 +23,7 @@ void main() {
         },
         {
           'id': 'unit-motion',
+          'activationEpoch': 8,
           'nodeType': 'unit',
           'canonicalTitle': 'Motion',
           'parentId': 'subject-physics',
@@ -28,6 +31,7 @@ void main() {
         },
         {
           'id': 'topic-speed',
+          'activationEpoch': 8,
           'nodeType': 'topic',
           'canonicalTitle': 'Speed and Velocity',
           'subjectId': 'subject-physics',
@@ -52,7 +56,8 @@ void main() {
       StructuredSyllabusMapper.toStudentNodes(
         missionId: '',
         documents: [
-          {'id': 'topic-1', 'nodeType': 'topic'},
+          {'id': 'topic-1', 'activationEpoch': 8,
+          'nodeType': 'topic'},
         ],
       ),
       isEmpty,
@@ -64,7 +69,8 @@ void main() {
         documents: [
           {
             'id': 'topic-1',
-            'nodeType': 'topic',
+            'activationEpoch': 8,
+          'nodeType': 'topic',
             'canonicalTitle': 'Unbound Topic',
             'subjectId': 'missing-subject',
             'sourceOrder': 1,
@@ -73,5 +79,63 @@ void main() {
       ),
       isEmpty,
     );
+  });
+
+  test('ignores prior and unactivated projection nodes', () {
+    final nodes = StructuredSyllabusMapper.toStudentNodes(
+      missionId: 'exam_alpha',
+      documents: [
+        {
+          'id': 'subject',
+          'nodeType': 'subject',
+          'canonicalTitle': 'Math',
+          'activationEpoch': 9,
+        },
+        {
+          'id': 'old-unit',
+          'nodeType': 'unit',
+          'canonicalTitle': 'Old Unit',
+          'parentId': 'subject',
+          'activationEpoch': 9,
+        },
+        {
+          'id': 'old-topic',
+          'nodeType': 'topic',
+          'canonicalTitle': 'Old Topic',
+          'subjectId': 'subject',
+          'parentId': 'old-unit',
+          'activationEpoch': 9,
+        },
+        {
+          'id': 'subject',
+          'nodeType': 'subject',
+          'canonicalTitle': 'Math',
+          'activationEpoch': 10,
+        },
+        {
+          'id': 'unit',
+          'nodeType': 'unit',
+          'canonicalTitle': 'Current Unit',
+          'parentId': 'subject',
+          'activationEpoch': 10,
+        },
+        {
+          'id': 'current-topic',
+          'nodeType': 'topic',
+          'canonicalTitle': 'Current Topic',
+          'subjectId': 'subject',
+          'parentId': 'unit',
+          'activationEpoch': 10,
+        },
+        {
+          'id': 'raw-b3-topic',
+          'nodeType': 'topic',
+          'canonicalTitle': 'Not Activated',
+          'subjectId': 'subject',
+        },
+      ],
+    );
+
+    expect(nodes.map((node) => node.title), ['Current Topic']);
   });
 }
