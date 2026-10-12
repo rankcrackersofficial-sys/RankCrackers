@@ -40,7 +40,7 @@ class _SyllabusCandidateReviewCenterState extends State<SyllabusCandidateReviewC
         ],
       ),
     );
-    if (accepted != true || reason.text.trim().isEmpty) {\n      reason.dispose();\n      return;\n    }
+    if (accepted != true || reason.text.trim().isEmpty) { reason.dispose(); return; }
     setState(() => _loading = true);
     try {
       await FirebaseFunctions.instance.httpsCallable('reviewSyllabusCandidate').call({
