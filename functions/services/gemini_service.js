@@ -148,9 +148,17 @@ async function callGemini(prompt, workload = "factoryFlash") {
 
   try {
     const aiStudio = new GoogleGenAI({ apiKey });
-    console.log(`AI_STUDIO_FALLBACK: Requesting model=${modelResolution.model}`);
+    let aiStudioModel = modelResolution.model;
+    if (aiStudioModel === "gemini-3.6-flash" || aiStudioModel === "gemini-3.5-flash") {
+      aiStudioModel = "gemini-2.5-flash";
+    } else if (aiStudioModel === "gemini-3.5-flash-lite") {
+      aiStudioModel = "gemini-2.5-flash-lite";
+    } else if (aiStudioModel === "gemini-3.1-pro-preview") {
+      aiStudioModel = "gemini-2.5-pro";
+    }
+    console.log(`AI_STUDIO_FALLBACK: Requesting model=${aiStudioModel}`);
     const response = await aiStudio.models.generateContent({
-      model: modelResolution.model,
+      model: aiStudioModel,
       contents: prompt,
       config: {
         responseMimeType: "application/json"
