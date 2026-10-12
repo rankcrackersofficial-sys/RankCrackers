@@ -270,7 +270,7 @@ describe('FIRESTORE SECURITY RULES (Tactical Protocol)', () => {
     await testing.assertFails(nodes.doc('unactivated-b3-node').get());
 
     const activeQuery = await testing.assertSucceeds(
-      nodes.where('activationEpoch', isEqualTo: 8).get(),
+      nodes.where('activationEpoch', '==', 8).get(),
     );
     expect(activeQuery.docs.map((doc) => doc.id), ['current-topic']);
   });
