@@ -2,13 +2,13 @@ import 'package:equatable/equatable.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 /// CRUCIBLE PROTOCOL STATE
-/// Tracks the warrior's position in the 100-Day Protocol.
+/// Tracks the learner's personal position/ledger against the continuous mission Crucible ring.
 class CrucibleProtocolState extends Equatable {
   final String recruitmentId;
   final int phaseIndex; // 1-7
   final int scheduleIndex; // 1-42
   final String currentScheduleId; // ADDED: Specific session identifier
-  final String status; // study, rebuild, micro_test, macro_test, major_test
+  final String status; // study, rebuild, micro_test, macro_test (Major belongs to Test Arena)
   final DateTime scheduleStartTime;
   final DateTime protocolStartTime;
   final DateTime currentBoundaryTime;

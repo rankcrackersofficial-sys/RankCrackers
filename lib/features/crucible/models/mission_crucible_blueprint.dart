@@ -101,9 +101,9 @@ class MissionCrucibleBlueprint extends Equatable {
   final int hoursPerSchedule; // e.g. 48
   final int learningHoursPerSchedule; // e.g. 47
   final int microHoursPerSchedule; // e.g. 1
-  final int rebuildDurationHours; // e.g. 23
-  final int macroDurationHours; // e.g. 2
-  final int recoveryDurationHours; // e.g. 23
+  final int rebuildDurationHours; // Founder-locked inter-block Rebuild window
+  final int macroDurationHours; // Founder-locked Macro window
+  final int recoveryDurationHours; // 0 when next schedule starts immediately after Macro
   final SmartEntryBlueprint smartEntryBlueprint;
   final MicroPolicy microPolicy;
   final MacroPolicy macroPolicy;
@@ -132,16 +132,16 @@ class MissionCrucibleBlueprint extends Equatable {
   static const MissionCrucibleBlueprint jeeMain2027Blueprint = MissionCrucibleBlueprint(
     missionId: 'jee_main_2026',
     recruitmentId: 'jee_main_2027',
-    blueprintVersion: '2027.3-98DAY-CONTINUOUS-RING-CONSTITUTION',
-    cycleLengthDays: 98, // Continuous 98-Day Ring Constitution: 42 Micro Schedules (84 days) + 7 Rebuilds (7 days) + 7 Macros (7 days)
+    blueprintVersion: '2027.4-98DAY-R2-2H-MACRO',
+    cycleLengthDays: 98, // 7 x 336h phases = exact 2352h sovereign orbit
     phaseCount: 7,
     schedulesPerPhase: 6,
     hoursPerSchedule: 48,
     learningHoursPerSchedule: 47,
     microHoursPerSchedule: 1,
-    rebuildDurationHours: 24, // Exact 1 calendar day (24h)
-    macroDurationHours: 2, // 120 minutes assessment
-    recoveryDurationHours: 22, // 22h non-exclusive post-test buffer (2h + 22h = 24h calendar day)
+    rebuildDurationHours: 46, // R2: preserves 336h phase while Macro expands to 2h
+    macroDurationHours: 2, // R2 Founder lock: 120-minute Macro
+    recoveryDurationHours: 0, // No recovery gap: next schedule starts immediately after Macro
     smartEntryBlueprint: SmartEntryBlueprint(
       domainIds: ['physics', 'chemistry', 'mathematics'],
       calibrationItemsPerDomain: 5,
