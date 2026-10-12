@@ -2,6 +2,7 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const axios = require("axios");
 const { extractSentinelPdfText } = require("../services/sentinel_pdf_text");
+const { isQueueWorkerOwnedMissionTask } = require("../services/sentinel_queue_ownership");
 const mammoth = require("mammoth");
 const XLSX = require("xlsx");
 const vision = require("@google-cloud/vision");
@@ -37,6 +38,13 @@ exports.sentinelBackgroundWorker = functions
 
     if (task.status !== 'received' && task.status !== 'parsing') return;
     if (beforeTask && beforeTask.status === task.status) return;
+
+    // Governed source-pair and pagewise tasks belong exclusively to queueWorker.
+    // Never race the verified mission source pipeline from this legacy trigger.
+    if (isQueueWorkerOwnedMissionTask(task)) {
+      console.log(`SENTINEL QUARANTINE: Governed queueWorker task ${taskId}; ignoring.`);
+      return;
+    }
 
     // 🛡️ AAF GUARD: AAF jobs have their own orchestration spine.
     if (task.queueContract === 'academic_factory_v1') {
