@@ -160,3 +160,31 @@ test('Warrior Profile path and embedded uid must agree for every writer', async 
   await assertSucceeds(updateDoc(profile, { category: 'OBC' }));
   await assertSucceeds(updateDoc(doc(founder, 'warrior_profiles', 'profile_owner'), { category: 'General' }));
 });
+
+
+test('Student-owned users profile cannot self-grant Admin permissions', async () => {
+  const uid = 'no_privilege_escalation';
+  const student = env.authenticatedContext(uid, { phone_number: '+919876543211' }).firestore();
+  const userRef = doc(student, 'users', uid);
+  await assertFails(setDoc(userRef, {
+    mobile: '+919876543211', permissions: { 'mission.view': true },
+  }));
+  await assertSucceeds(setDoc(userRef, {
+    mobile: '+919876543211', onboardingCompleted: false,
+  }));
+  for (const update of [
+    { permissions: { 'mission.view': true } },
+    { adminPermissions: { 'syllabus.review': true } },
+    { permissionScopes: ['pyq.review'] },
+    { adminLevel: 9 },
+    { scopes: ['document.manage'] },
+    { grants: ['mission.view'] },
+  ]) {
+    await assertFails(updateDoc(userRef, update));
+  }
+  await assertSucceeds(updateDoc(userRef, { displayName: 'Existing student' }));
+  const founder = env.authenticatedContext('founder1', { founder: true }).firestore();
+  await assertSucceeds(updateDoc(doc(founder, 'users', uid), {
+    permissions: { 'mission.view': true },
+  }));
+});

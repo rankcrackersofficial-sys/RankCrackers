@@ -514,7 +514,8 @@ service cloud.firestore {
           && targetHasMatchingCanonicalMobile()
           && !request.resource.data.keys().hasAny([
                'phone', 'role', 'accessLevel', 'founder', 'admin',
-               'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey'
+               'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey',
+               'permissions', 'adminPermissions', 'adminLevel', 'permissionScopes', 'scopes', 'grants'
              ])
           && (!request.resource.data.keys().hasAny(['onboardingCompleted']) || request.resource.data.onboardingCompleted is bool);
     }
@@ -524,7 +525,8 @@ service cloud.firestore {
       let isOwner = request.auth != null && request.auth.uid == userId;
       let noPrivilegedOrLegacyKeys = !affected.hasAny([
         'role', 'accessLevel', 'founder', 'admin', 'phone',
-        'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey'
+        'actualSha256', 'byteArtifactId', 'provenanceId', 'governanceStatus', 'isOfficial', 'authorityKey',
+               'permissions', 'adminPermissions', 'adminLevel', 'permissionScopes', 'scopes', 'grants'
       ]);
       
       let isMobileSafe = !affected.hasAny(['mobile']) || targetHasMatchingCanonicalMobile();
