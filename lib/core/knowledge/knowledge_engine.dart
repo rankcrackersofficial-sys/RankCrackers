@@ -198,7 +198,9 @@ class KnowledgeEngine extends ChangeNotifier {
         return;
       }
 
-      final nodesStream = FirestoreService.streamNodesByExam(_activeRecruitment!.examId);
+      final nodesStream = FirestoreService.streamStudentNodesByMission(
+        _activeRecruitment!.examId,
+      );
 
       _nodeSubscription = nodesStream
         .handleError((e) {
@@ -227,20 +229,15 @@ class KnowledgeEngine extends ChangeNotifier {
         // 🔱 Type-Safety Hardening: Ensuring nodes are correctly typed
         final List<MicroTopicNode> nodes = nodesData;
 
-        var filteredNodes = _activeRecruitment != null
-            ? nodes.where((n) {
-                final isSameExam = n.examId == _activeRecruitment!.examId;
-                // 🛡️ JEE HARDENING: Paper-1 Scope (allows empty, PAPER_1, paper_1, PAPER-1)
-                final paperIdNorm = n.paperId.trim().toUpperCase();
-                final isPaper1 = n.examId != 'jee_main_2026' ||
-                    paperIdNorm.isEmpty ||
-                    paperIdNorm == 'PAPER_1' ||
-                    paperIdNorm == 'PAPER 1' ||
-                    paperIdNorm == 'PAPER-1' ||
-                    paperIdNorm == 'PAPER1';
-                return isSameExam && isPaper1;
-              }).toList()
-            : nodes;
+        final filteredNodes = _activeRecruitment != null
+            ? nodes
+                .where(
+                  (node) =>
+                      node.examId == _activeRecruitment!.examId &&
+                      node.status.toLowerCase() == 'published',
+                )
+                .toList()
+            : <MicroTopicNode>[];
 
         _graph = KnowledgeGraph(filteredNodes);
         
