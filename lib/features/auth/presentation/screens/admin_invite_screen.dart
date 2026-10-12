@@ -39,6 +39,8 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
       final result = await callable.call<Map<String, dynamic>>({
         'token': widget.token.trim(),
       });
+      // Force refresh user ID token so newly granted admin claims are available immediately
+      await FirebaseAuth.instance.currentUser?.getIdToken(true);
       final data = result.data;
       final scopes = (data['scopes'] as List? ?? []).cast<String>();
 

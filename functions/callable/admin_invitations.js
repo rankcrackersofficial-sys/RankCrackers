@@ -49,9 +49,13 @@ exports.issueAdminInvite = functions.https.onCall(async (data, context) => {
     role: 'admin',
     scopes: assignedScopes,
     expiresAt,
+    status: 'ISSUED',
     redeemed: false,
     redeemedAt: null,
     redeemedByUid: null,
+    claimedByUid: null,
+    claimedAt: null,
+    claimError: null,
     createdByUid: auth.uid,
     createdAt: admin.firestore.FieldValue.serverTimestamp(),
   });
@@ -85,6 +89,10 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('failed-precondition', '🔱 CALLER_EMAIL_REQUIRED: Verified account email required.');
   }
 
+  if (auth.token.email_verified !== true) {
+    throw new functions.https.HttpsError('failed-precondition', '🔱 CALLER_EMAIL_UNVERIFIED: Email address must be verified.');
+  }
+
   const { token } = data || {};
   if (typeof token !== 'string' || !token.trim()) {
     throw new functions.https.HttpsError('invalid-argument', 'INVITATION_TOKEN_REQUIRED');
@@ -94,6 +102,7 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
   const db = admin.firestore();
   const inviteRef = db.collection('admin_invitations').doc(tokenHash);
 
+  // STEP 1: Transactional Claim (ISSUED -> CLAIMS_PENDING)
   let inviteData;
   await db.runTransaction(async (txn) => {
     const inviteSnap = await txn.get(inviteRef);
@@ -102,7 +111,7 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
     }
 
     const doc = inviteSnap.data();
-    if (doc.redeemed === true) {
+    if (doc.status === 'ACCEPTED' || doc.redeemed === true) {
       throw new functions.https.HttpsError('already-exists', 'INVITATION_ALREADY_REDEEMED');
     }
 
@@ -115,10 +124,53 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
       throw new functions.https.HttpsError('permission-denied', 'INVITATION_EMAIL_MISMATCH');
     }
 
+    // State machine concurrency lock: Check if already locked by another user
+    if (doc.status === 'CLAIMS_PENDING' && doc.claimedByUid && doc.claimedByUid !== auth.uid) {
+      throw new functions.https.HttpsError('permission-denied', 'INVITATION_CLAIMED_BY_ANOTHER_USER');
+    }
+
+    // Advance to CLAIMS_PENDING if not already claimed by this user
+    if (doc.status !== 'CLAIMS_PENDING' || doc.claimedByUid !== auth.uid) {
+      txn.update(inviteRef, {
+        status: 'CLAIMS_PENDING',
+        claimedByUid: auth.uid,
+        claimedAt: admin.firestore.FieldValue.serverTimestamp(),
+      });
+    }
+
+    inviteData = doc;
+  });
+
+  // STEP 2: Custom Claims assignment preserving existing trusted claims
+  try {
+    const userRecord = await admin.auth().getUser(auth.uid);
+    const existingClaims = userRecord.customClaims || {};
+
+    const newClaims = {
+      ...existingClaims,
+      admin: true,
+      accessLevel: 5,
+      scopes: inviteData.scopes || [],
+    };
+
+    await admin.auth().setCustomUserClaims(auth.uid, newClaims);
+  } catch (err) {
+    // Record claim error in invitation document so retry is possible without losing state
+    await inviteRef.update({
+      claimError: err.message || 'CLAIM_ASSIGNMENT_FAILED',
+      claimErrorAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
+    throw new functions.https.HttpsError('internal', `CLAIM_ASSIGNMENT_FAILED: ${err.message}`);
+  }
+
+  // STEP 3: Final Transaction (CLAIMS_PENDING -> ACCEPTED)
+  await db.runTransaction(async (txn) => {
     txn.update(inviteRef, {
+      status: 'ACCEPTED',
       redeemed: true,
       redeemedAt: admin.firestore.FieldValue.serverTimestamp(),
       redeemedByUid: auth.uid,
+      claimError: null,
     });
 
     const userRef = db.collection('users').doc(auth.uid);
@@ -126,30 +178,10 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
       role: 'admin',
       status: 'ACTIVE',
       accessLevel: 5,
-      scopes: doc.scopes || [],
+      scopes: inviteData.scopes || [],
       updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     }, { merge: true });
-
-    inviteData = doc;
   });
-
-  // Assign Firebase Auth Custom Claims via Admin SDK
-  const currentClaims = auth.token || {};
-  const newClaims = {
-    ...currentClaims,
-    admin: true,
-    accessLevel: 5,
-    scopes: inviteData.scopes || [],
-  };
-  delete newClaims.aud;
-  delete newClaims.auth_time;
-  delete newClaims.exp;
-  delete newClaims.iat;
-  delete newClaims.iss;
-  delete newClaims.sub;
-  delete newClaims.user_id;
-
-  await admin.auth().setCustomUserClaims(auth.uid, newClaims);
 
   await logFounderActivity({
     type: 'ADMIN_INVITATION_ACCEPTED',
