@@ -64,7 +64,15 @@ export class GenericB4Worker {
       .get();
     if (topicSnap.empty) throw new Error('DSD_NO_VERIFIED_OFFICIAL_TOPICS');
 
-    const officialTopics = topicSnap.docs.map((doc) => ({ nodeId: doc.id, ...doc.data() }));
+    const officialTopics = topicSnap.docs.map((doc) => {
+      const data = doc.data();
+      return {
+        ...data,
+        nodeId: doc.id,
+        level: String(data.nodeType || '').toUpperCase(),
+        title: data.canonicalTitle,
+      };
+    });
     const proposals = [];
     for (const topic of officialTopics) {
       const proposal = await this.decomposeTopicWithGemini(topic, boundarySnap.data() || {});
