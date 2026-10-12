@@ -4,7 +4,13 @@ import {
   snapshotIdentity,
   PROFILE_SNAPSHOT_SCHEMA_VERSION,
   stableSerialize,
+  getOrCreateProfileSnapshot,
 } from '../services/profileSnapshotAuthority';
+import * as admin from 'firebase-admin';
+
+jest.mock('firebase-admin', () => ({
+  firestore: Object.assign(jest.fn(), { FieldValue: { serverTimestamp: jest.fn(() => 'server-time') } }),
+}));
 
 describe('profile snapshot authority foundation', () => {
   const profile = {
@@ -115,5 +121,32 @@ describe('profile snapshot authority foundation', () => {
     const missing = materialFactsFingerprint(extractMaterialFacts({ ...profile, category: null }));
     const known = materialFactsFingerprint(extractMaterialFacts({ ...profile, category: '' }));
     expect(missing).not.toBe(known);
+  });
+
+  test('snapshot rejects mismatched or missing embedded UID before any transaction', async () => {
+    for (const data of [{ uid: 'foreign-student' }, {}]) {
+      const runTransaction = jest.fn();
+      (admin.firestore as unknown as jest.Mock).mockReturnValue({
+        collection: () => ({ doc: () => ({ get: async () => ({ exists: true, data: () => data }) }) }),
+        runTransaction,
+      });
+      await expect(getOrCreateProfileSnapshot('student-1')).rejects.toThrow('PROFILE_UID_BINDING_MISMATCH');
+      expect(runTransaction).not.toHaveBeenCalled();
+    }
+  });
+
+  test('snapshot accepts its canonical owner and creates immutable source-bound facts', async () => {
+    const create = jest.fn();
+    const runTransaction = jest.fn(async callback => callback({
+      get: async () => ({ exists: false }), create,
+    }));
+    (admin.firestore as unknown as jest.Mock).mockReturnValue({
+      collection: () => ({ doc: () => ({ get: async () => ({ exists: true, data: () => profile }) }) }),
+      runTransaction,
+    });
+    const snapshot = await getOrCreateProfileSnapshot('student-1');
+    expect(snapshot.studentId).toBe('student-1');
+    expect(snapshot.snapshotId).toBe(`student-1_${snapshot.materialFactsFingerprint}`);
+    expect(create).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ studentId: 'student-1', immutable: true }));
   });
 });

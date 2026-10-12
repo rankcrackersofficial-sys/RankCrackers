@@ -24,7 +24,11 @@ class WarriorProfileService {
   static Future<WarriorProfile?> getProfile(String uid) async {
     final doc = await _firestore.collection(_collection).doc(uid).get();
     if (doc.exists && doc.data() != null) {
-      return WarriorProfile.fromMap(doc.data()!);
+      final data = doc.data()!;
+      if (data['uid'] != uid) {
+        throw StateError('PROFILE_UID_BINDING_MISMATCH');
+      }
+      return WarriorProfile.fromMap(data);
     }
     return null;
   }
