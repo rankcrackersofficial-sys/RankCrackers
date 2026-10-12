@@ -1,25 +1,18 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:crypto/crypto.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:rank_crackers/web/shared/rc_colors.dart';
 import 'package:rank_crackers/web/shared/rc_panel.dart';
 import 'package:rank_crackers/web/shared/rc_layout.dart';
 import 'package:rank_crackers/web/shared/rc_loaders.dart';
-import 'package:rank_crackers/web/shared/rc_file_helpers.dart';
 
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
 import '../founder/mission_control/mission_control_room.dart';
 import '../founder/mission_control/mission_publish_readiness_panel.dart';
 import '../founder/study_master/study_master_library_web.dart';
-import '../founder/ingestion/ingestion_review_web.dart';
 import '../founder/intelligence/intelligence_room_web.dart';
 import '../founder/activity/recent_activity_web.dart';
 import '../founder/system/founder_system_operations_web.dart';
 import '../founder/health/founder_student_health_web.dart';
-import '../founder/revenue/revenue_subscription_control_web.dart';
 import '../founder/access/access_security_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
 import '../admin/admin_my_access_panel.dart';
@@ -53,7 +46,6 @@ class UnifiedCommandConsole extends StatefulWidget {
 
 class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   int _subTab = 0;
-  int _ingestionTab = 0; // 0: Review Board, 1: Unified Registry
   String? _activeTaskId;
 
   @override
@@ -266,8 +258,39 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               .snapshots(),
           builder: (context, snapshot) {
             final hasData = snapshot.hasData && (snapshot.data?.exists ?? false);
-            final statusColor = hasData ? rcGreen : const Color(0xFFE5A93C);
-            final statusLabel = hasData ? 'SYSTEM MONITORED' : 'SYSTEM STANDBY';
+            Color statusColor;
+            String statusLabel;
+
+            if (!hasData) {
+              statusColor = Colors.white38;
+              statusLabel = 'AWAITING TELEMETRY';
+            } else {
+              final data = snapshot.data!.data() ?? {};
+              final statusStr = data['status']?.toString().toLowerCase();
+              final lastPingTimestamp = data['lastPing'] as Timestamp?;
+              final lastPingMillis = lastPingTimestamp?.millisecondsSinceEpoch ??
+                  (data['lastPingMillis'] as num?)?.toInt() ??
+                  (data['updatedAt'] as Timestamp?)?.millisecondsSinceEpoch;
+
+              if (statusStr == 'failed' || statusStr?.contains('fail') == true) {
+                statusColor = Colors.redAccent;
+                statusLabel = 'SYSTEM FAILED';
+              } else if (lastPingMillis == null) {
+                statusColor = Colors.white38;
+                statusLabel = 'AWAITING TELEMETRY';
+              } else {
+                final ageMillis = DateTime.now().millisecondsSinceEpoch - lastPingMillis;
+                const fiveMinutesMillis = 5 * 60 * 1000;
+                if (ageMillis < fiveMinutesMillis) {
+                  statusColor = rcGreen;
+                  statusLabel = 'SYSTEM ONLINE';
+                } else {
+                  statusColor = const Color(0xFFE5A93C);
+                  statusLabel = 'SYSTEM STALE';
+                }
+              }
+            }
+
             return Row(
               mainAxisSize: MainAxisSize.min,
               children: [

@@ -24,21 +24,40 @@ class MissionProcessingHealthBar extends StatelessWidget {
           .snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData || !(snapshot.data?.exists ?? false)) {
-          return _buildBar(0.0, 'Status: Awaiting Pipeline Data');
+          return _buildBar(null, 'Status: Awaiting Pipeline Data');
         }
 
         final data = snapshot.data!.data() ?? {};
         final status = data['status']?.toString() ?? 'DRAFT';
         final isVerified = data['verified'] == true || status == 'VERIFIED' || status == 'ACTIVE';
-        final progress = isVerified ? 1.0 : (status == 'PROCESSING' ? 0.5 : 0.15);
-        final label = 'Pipeline: $status';
+
+        final completedUnits = (data['completedUnits'] as num?)?.toDouble() ??
+            (data['completedSteps'] as num?)?.toDouble();
+        final totalUnits = (data['totalUnits'] as num?)?.toDouble() ??
+            (data['totalSteps'] as num?)?.toDouble();
+
+        double? progress;
+        String label;
+
+        if (isVerified) {
+          progress = 1.0;
+          label = 'Pipeline: $status (Verified)';
+        } else if (completedUnits != null && totalUnits != null && totalUnits > 0) {
+          progress = (completedUnits / totalUnits).clamp(0.0, 1.0);
+          final pct = (progress * 100).toInt();
+          label = 'Pipeline: $status ($pct%)';
+        } else {
+          progress = null; // Honest reporting: no fabricated progress
+          label = 'Pipeline: $status (Awaiting Evidence)';
+        }
 
         return _buildBar(progress, label);
       },
     );
   }
 
-  Widget _buildBar(double progressValue, String statusLabel) {
+  Widget _buildBar(double? progressValue, String statusLabel) {
+    final hasProgress = progressValue != null;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -51,18 +70,31 @@ class MissionProcessingHealthBar extends StatelessWidget {
             const Spacer(),
             Text(
               statusLabel,
-              style: const TextStyle(color: Colors.amber, fontSize: 10, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: hasProgress ? Colors.amber : Colors.white38,
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
         const SizedBox(height: 4),
-        LinearProgressIndicator(
-          value: progressValue.clamp(0.0, 1.0),
-          minHeight: 8,
-          borderRadius: BorderRadius.circular(99),
-          valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
-          backgroundColor: Colors.white12,
-        ),
+        if (hasProgress)
+          LinearProgressIndicator(
+            value: progressValue.clamp(0.0, 1.0),
+            minHeight: 8,
+            borderRadius: BorderRadius.circular(99),
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
+            backgroundColor: Colors.white12,
+          )
+        else
+          Container(
+            height: 8,
+            decoration: BoxDecoration(
+              color: Colors.white12,
+              borderRadius: BorderRadius.circular(99),
+            ),
+          ),
       ],
     );
   }
