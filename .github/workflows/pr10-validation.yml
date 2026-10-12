@@ -46,6 +46,7 @@ jobs:
           npm run test:founder-access-mutation-guard
           npm run test:mission-storage-rules-scope
           npm run test:syllabus-workers
+          npm run test:generic-b3
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
           npm run test:ingestion-authority
