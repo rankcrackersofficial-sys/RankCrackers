@@ -9,6 +9,22 @@ service cloud.firestore {
               ('founder' in request.auth.token && request.auth.token.founder == true));
     }
 
+
+    function isQualifiedSyllabusReviewer(realmId, candidate) {
+      let authorityId = request.auth.token.get('academicReviewerId', '');
+      let reviewer = get(/databases/$(database)/documents/reviewer_registry/$(authorityId)).data;
+      return request.auth != null
+          && authorityId is string
+          && authorityId.matches('^sme_[a-z0-9_]+$')
+          && reviewer.active == true
+          && reviewer.reviewDecisionSigningMethod == 'SECURE_JWT_AUDITED_SESSION'
+          && reviewer.missionScopes is list
+          && reviewer.missionScopes.hasAny([realmId])
+          && reviewer.subjectScopes is list
+          && candidate.subjectId is string
+          && reviewer.subjectScopes.hasAny([candidate.subjectId]);
+    }
+
     // Every Student mission subcollection must inherit the parent realm's
     // visibility authority. Authentication alone never exposes hidden realms.
     function isStudentVisibleMission(realmId) {
@@ -129,6 +145,18 @@ service cloud.firestore {
       match /participants/{userId} {
         allow read: if isFounder() || (request.auth != null && request.auth.uid == userId);
         allow write: if isFounder() || (request.auth != null && request.auth.uid == userId);
+      }
+
+
+      // Syllabus review candidates are readable only by Founder or the
+      // registered, mission- and subject-scoped SME. Clients cannot mutate them.
+      match /official_syllabus_candidates/{nodeId} {
+        allow read: if isFounder() || isQualifiedSyllabusReviewer(realmId, resource.data);
+        allow write: if false;
+      }
+      match /derived_syllabus_candidates/{nodeId} {
+        allow read: if isFounder() || isQualifiedSyllabusReviewer(realmId, resource.data);
+        allow write: if false;
       }
 
       match /structured_nodes/{nodeId} {

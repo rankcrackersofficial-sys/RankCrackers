@@ -12,6 +12,7 @@ import '../../../../../core/theme/app_typography.dart';
 import 'package:rank_crackers/core/models/sentinel_draft.dart';
 import '../intelligence/widgets/intelligence_feed_tile.dart';
 import 'outcome_verification_center.dart';
+import 'syllabus_candidate_review_center.dart';
 
 class ReviewQueue extends StatefulWidget {
   const ReviewQueue({super.key});
@@ -74,7 +75,7 @@ class _DiscoveryReviewQueue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 5,
+      length: 6,
       child: Column(
         children: [
           TabBar(
@@ -90,6 +91,7 @@ class _DiscoveryReviewQueue extends StatelessWidget {
               Tab(text: "VERIFIED"),
               Tab(text: "PUBLISHED"),
               Tab(text: "REJECTED"),
+              Tab(text: "SYLLABUS"),
             ],
           ),
           const Expanded(
@@ -100,6 +102,7 @@ class _DiscoveryReviewQueue extends StatelessWidget {
                 _ReviewList(status: 'verified'),
                 _ReviewList(status: 'published'),
                 _ReviewList(status: 'rejected'),
+                const SyllabusCandidateReviewCenter(),
               ],
             ),
           ),

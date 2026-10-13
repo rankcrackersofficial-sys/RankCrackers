@@ -37,7 +37,9 @@
     "test:android-release-signing-governance": "node --test test/test_android_release_signing_governance.js",
     "test:firestore-rule-dedup-profile-safety": "node --test test/test_firestore_rule_dedup_and_profile_safety.js",
     "test:secure-asset-scope": "node --test test/test_secure_asset_scope.js",
-    "test:founder-access-mutation-guard": "node --test test/test_founder_access_mutation_guard.js"
+    "test:founder-access-mutation-guard": "node --test test/test_founder_access_mutation_guard.js",
+    "test:syllabus-workers": "node --test test/mission_syllabus_workers.test.js",
+    "test:generic-b3": "jest --runInBand src/test/genericB3.test.ts"
   },
   "engines": {
     "node": "22"

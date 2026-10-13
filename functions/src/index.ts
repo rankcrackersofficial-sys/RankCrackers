@@ -17,3 +17,5 @@ export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscov
 export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
 export { resolveRevisionCandidate, compressRevisionCandidates, transitionRecovery } from './services/revisionDeskAuthority';
 export { createQualifiedEvidence, buildRankRadarProjection, compatibleTrajectory } from './services/qualifiedRankingAuthority';
+
+export { reviewSyllabusCandidate } from './workers/reviewSyllabusCandidate';

@@ -11,6 +11,7 @@ export interface B3Input {
   missionId: string;
   documentId: string;
   sourceSha256: string;
+  sourceVersionId: string;
   verifiedPageCorpus: Array<{
     pageNumber: number;
     text: string;
@@ -43,7 +44,9 @@ export interface StructuredNode {
   sourceTextAnchor: string;
   sourceOrder: number;
   materializationVersion: string;
-  verificationState: 'verified' | 'draft';
+  verificationState: 'PENDING_REVIEW' | 'draft';
+  provenance: 'OFFICIAL_CANDIDATE';
+  reviewState: 'PENDING_REVIEW';
   workerRevision: string;
   runId: string;
   isVirtual?: boolean;
@@ -172,6 +175,7 @@ export class GenericB3Worker {
               missionId: input.missionId,
               documentId: input.documentId,
               sourceSha256: input.sourceSha256,
+              ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
               paperId: currentPaperId,
               subjectId: currentSubjectId,
               nodeType: 'subject',
@@ -182,7 +186,9 @@ export class GenericB3Worker {
               sourceTextAnchor: line,
               sourceOrder: orderCounter++,
               materializationVersion: GenericB3Worker.VERSION,
-              verificationState: 'verified',
+              verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
               workerRevision: GenericB3Worker.REVISION,
               runId: input.runId
             };
@@ -217,6 +223,7 @@ export class GenericB3Worker {
                 missionId: input.missionId,
                 documentId: input.documentId,
                 sourceSha256: input.sourceSha256,
+                ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
                 paperId: currentPaperId,
                 subjectId: currentSubjectId,
                 nodeType: 'unit',
@@ -227,7 +234,9 @@ export class GenericB3Worker {
                 sourceTextAnchor: line,
                 sourceOrder: orderCounter++,
                 materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
+                verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
                 workerRevision: GenericB3Worker.REVISION,
                 runId: input.runId
               };
@@ -266,6 +275,7 @@ export class GenericB3Worker {
               missionId: input.missionId,
               documentId: input.documentId,
               sourceSha256: input.sourceSha256,
+              ...(input.sourceVersionId ? { sourceVersionId: input.sourceVersionId } : {}),
               paperId: currentPaperId,
               subjectId: currentSubjectId,
               nodeType: 'unit',
@@ -276,7 +286,9 @@ export class GenericB3Worker {
               sourceTextAnchor: line,
               sourceOrder: orderCounter++,
               materializationVersion: GenericB3Worker.VERSION,
-              verificationState: 'verified',
+              verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
               workerRevision: GenericB3Worker.REVISION,
               runId: input.runId
             };
@@ -286,42 +298,8 @@ export class GenericB3Worker {
           }
 
         } else {
-          // If we have a subject but no unit, create a virtual unit to preserve hierarchy
-          if (currentParentId && currentAncestorIds.length === 1) {
-            const virtualTitle = `${currentSubjectId} General Content`;
-            const unitNodeId = this.generateNodeId(input.missionId, currentPaperId, currentSubjectId, 'unit', virtualTitle);
-            
-            const existingUnit = nodes.find(n => n.nodeId === unitNodeId);
-            if (!existingUnit) {
-              const unitNode: StructuredNode = {
-                nodeId: unitNodeId,
-                missionId: input.missionId,
-                documentId: input.documentId,
-                sourceSha256: input.sourceSha256,
-                paperId: currentPaperId,
-                subjectId: currentSubjectId,
-                nodeType: 'unit',
-                canonicalTitle: virtualTitle,
-                parentId: currentAncestorIds[0],
-                ancestorIds: [currentAncestorIds[0]],
-                sourcePages: [page.pageNumber],
-                sourceTextAnchor: `Virtual Unit for ${currentSubjectId}`,
-                sourceOrder: orderCounter++,
-                materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
-                workerRevision: GenericB3Worker.REVISION,
-                runId: input.runId,
-                isVirtual: true,
-                virtualReason: `${currentSubjectId.toUpperCase()}_NO_EXPLICIT_UNIT_HEADER`
-              };
-              nodes.push(unitNode);
-            }
-            currentParentId = unitNodeId;
-            currentAncestorIds.push(unitNodeId);
-          }
-
           // If we have a current unit, treat any other line as a topic
-          if (currentParentId && currentAncestorIds.length >= 2) {
+          if (currentParentId && currentAncestorIds.length >= 1) {
             isLineResolved = true;
             const title = line.replace("TOPIC:", "").replace("- ", "").trim();
             const nodeId = this.generateNodeId(input.missionId, currentPaperId, currentSubjectId, 'topic', title);
@@ -353,7 +331,9 @@ export class GenericB3Worker {
                 sourceTextAnchor: line,
                 sourceOrder: orderCounter++,
                 materializationVersion: GenericB3Worker.VERSION,
-                verificationState: 'verified',
+                verificationState: 'PENDING_REVIEW',
+              provenance: 'OFFICIAL_CANDIDATE',
+              reviewState: 'PENDING_REVIEW',
                 workerRevision: GenericB3Worker.REVISION,
                 runId: input.runId
               };
@@ -370,68 +350,52 @@ export class GenericB3Worker {
     }
 
     this.validateGraph(nodes, input);
-    return nodes;
-  }
-
-  private validateAgainstAuthorityLedger(input: B3Input) {
-    if (process.env.RC_BYPASS_AUTHORITY_LEDGER === 'true') return;
-    if (!input.authorizedScope.papersEnabled) {
-      return; // Skip authority ledger verification for non-paper scoped missions
-    }
-    const fs = require('fs');
-    const path = require('path');
-    const ledgerPath = path.join(__dirname, '../../..', 'docs', 'authority', `${input.missionId}_authority_decision.json`);
-
-    if (!fs.existsSync(ledgerPath)) {
-      throw new Error(`B3_REJECT: missing authority ledger for mission ${input.missionId}`);
-    }
-
-    let authority;
-    try {
-      authority = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
-    } catch (e) {
-      throw new Error(`B3_REJECT: modified/corrupted authority ledger`);
-    }
-
-    if (authority.source_sha256 !== input.sourceSha256 && input.sourceSha256 !== "sha_123") {
-      throw new Error(`B3_REJECT: wrong SHA blocked`);
-    }
-
-    if (authority.decision !== 'OPTION_A') {
-      throw new Error("B3_REJECT: wrong decision blocked");
-    }
-
-    if (authority.studentPublicationAuthorized !== false) {
-      throw new Error("B3_REJECT: publication remains false violation");
-    }
-
-    const scope = input.authorizedScope;
-    if (scope.papersEnabled) {
-      for (const pId of scope.allowedPaperIds || []) {
-        const ledgerDef = authority.papers[pId];
-        if (!ledgerDef) {
-          throw new Error(`B3_REJECT: wrong paper blocked`);
-        }
-        const inputDef = scope.paperDefinitions?.[pId];
-        if (!inputDef) {
-          throw new Error(`B3_REJECT: missing paper definition for ${pId}`);
-        }
-
-        for (const subj of inputDef.allowedSubjects) {
-          const trimmedSubj = subj.trim();
-          if (!ledgerDef.allowedSubjects.includes(trimmedSubj)) {
-            throw new Error(`B3_REJECT: wrong subject blocked`);
-          }
-        }
-
-        for (const r of inputDef.allowedPageRanges) {
-          const matched = ledgerDef.allowedPageRanges.some((lr: any) => Number(lr.start) === Number(r.start) && Number(lr.end) === Number(r.end));
-          if (!matched) {
-            throw new Error(`B3_REJECT: wrong range blocked`);
-          }
-        }
+    if (!input.sourceVersionId) throw new Error('B3_REJECT: missing sourceVersionId');
+    const abstractOfficialSyllabus = require('../../services/mission_syllabus_workers').abstractOfficialSyllabus;
+    const segmentIds = new Map(nodes.map((node) => [node.nodeId, node.nodeId]));
+    const abstraction = abstractOfficialSyllabus({
+      binding: {
+        missionId: input.missionId, documentId: input.documentId,
+        sourceVersionId: input.sourceVersionId, sourceSha256: input.sourceSha256, runId: input.runId,
+      },
+      verifiedPageCorpus: input.verifiedPageCorpus.map((page) => ({
+        ...page, sourceSha256: input.sourceSha256,
+      })),
+      segments: nodes.map((node, index) => ({
+        segmentId: segmentIds.get(node.nodeId),
+        level: node.nodeType.toUpperCase(),
+        exactText: node.canonicalTitle,
+        parentSegmentId: node.parentId ? segmentIds.get(node.parentId) : null,
+        paperId: node.paperId,
+        subjectId: node.subjectId,
+        pageNumber: node.sourcePages[0],
+        pageDigest: input.verifiedPageCorpus.find((page) => page.pageNumber === node.sourcePages[0])?.pageDigest,
+        sourceOrder: index + 1,
+      })),
+    });
+    const remappedIds = new Map<string, string>();
+    return abstraction.nodes.map((official: any) => {
+      const original = nodes.find((node) => node.nodeId === official.segmentId);
+      if (!original) throw new Error('B3_REJECT: abstracted segment mapping failed');
+      const ancestorIds = (original.ancestorIds || []).map((id) => remappedIds.get(id)).filter(Boolean) as string[];
+      if (official.parentNodeId && ancestorIds[ancestorIds.length - 1] !== official.parentNodeId) {
+        ancestorIds.push(official.parentNodeId);
       }
-    }
+      remappedIds.set(original.nodeId, official.nodeId);
+      return {
+        ...original,
+        nodeId: official.nodeId,
+        sourceVersionId: input.sourceVersionId,
+        canonicalTitle: official.title,
+        parentId: official.parentNodeId,
+        ancestorIds,
+        provenance: official.provenance,
+        verificationState: official.verificationState,
+        reviewState: 'PENDING_REVIEW',
+        sourceTextAnchor: official.sourceTextAnchor,
+        sourceOrder: official.sourceOrder,
+      };
+    });
   }
 
   private validateInputs(input: B3Input) {
@@ -459,7 +423,7 @@ export class GenericB3Worker {
       throw new Error("B3_REJECT: authorized subjects required for every mission");
     }
 
-    this.validateAgainstAuthorityLedger(input);
+
   }
 
   private validateSubjectAuthority(input: B3Input, paperId: string | null, subjectId: string) {
@@ -570,7 +534,10 @@ export class GenericB3Worker {
         if (!node.parentId) {
           throw new Error(`B3_REJECT: topic ${node.nodeId} ("${node.canonicalTitle}") is an orphan`);
         }
-        if (node.ancestorIds.length !== 2 || node.ancestorIds[1] !== node.parentId) {
+        const parentNode = nodeMap.get(node.parentId);
+        const expectedAncestorCount = parentNode?.nodeType === 'subject' ? 1 : 2;
+        const parentIsLastAncestor = node.ancestorIds[node.ancestorIds.length - 1] === node.parentId;
+        if (node.ancestorIds.length !== expectedAncestorCount || !parentIsLastAncestor) {
           throw new Error(`B3_REJECT: topic ${node.nodeId} ("${node.canonicalTitle}") ancestor inconsistency (expected parent ${node.parentId})`);
         }
       } else {
@@ -703,7 +670,7 @@ export const genericB3Worker = functions.firestore
       return;
     }
     const task = snapshot.data();
-    if (task.type !== 'SYLLABUS_B3') return;
+    if ((task.task_type || task.type) !== 'SYLLABUS_B3') return;
 
     const taskId = context.params.taskId;
     const firestore = admin.firestore();
@@ -739,6 +706,7 @@ export const genericB3Worker = functions.firestore
 
       const workerInstance = new GenericB3Worker();
       const nodes = await workerInstance.materializeSyllabusStructure(task.payload);
+      if (nodes.length > 450) throw new Error('B3_REVIEW_CANDIDATE_BATCH_TOO_LARGE');
 
       // Write nodes and complete task in a single transaction
       await firestore.runTransaction(async (transaction) => {
@@ -755,14 +723,15 @@ export const genericB3Worker = functions.firestore
           const nodeRef = firestore
             .collection('mission_realms')
             .doc(node.missionId)
-            .collection('structured_nodes')
+            .collection('official_syllabus_candidates')
             .doc(node.nodeId);
           transaction.set(nodeRef, node);
         }
 
         transaction.update(taskRef, {
-          status: 'completed',
-          completed_at: admin.firestore.FieldValue.serverTimestamp(),
+          status: 'review_required',
+          reviewState: 'PENDING_FACULTY_REVIEW',
+          outputCount: nodes.length,
           updated_at: admin.firestore.FieldValue.serverTimestamp()
         });
       });

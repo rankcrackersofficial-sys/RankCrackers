@@ -2,6 +2,7 @@ export interface B4TaskAuthority {
   missionId: string;
   documentId: string;
   sourceSha256: string;
+  sourceVersionId?: string;
 }
 
 type B4TaskRecord = Record<string, unknown>;
@@ -22,6 +23,7 @@ export function resolveB4TaskAuthority(payload: B4TaskRecord): B4TaskAuthority {
   const missionId = firstNonEmptyString(payload, ['missionId', 'mission_id']);
   const documentId = firstNonEmptyString(payload, ['documentId', 'document_id']);
   const sourceSha256 = firstNonEmptyString(payload, ['sourceSha256', 'source_sha256']);
+  const sourceVersionId = firstNonEmptyString(payload, ['sourceVersionId', 'source_version_id']);
 
   if (!missionId) throw new Error('B4_TASK_AUTHORITY_MISSING_MISSION_ID');
   if (!documentId) throw new Error('B4_TASK_AUTHORITY_MISSING_DOCUMENT_ID');
@@ -30,5 +32,5 @@ export function resolveB4TaskAuthority(payload: B4TaskRecord): B4TaskAuthority {
     throw new Error('B4_TASK_AUTHORITY_INVALID_SOURCE_SHA256');
   }
 
-  return { missionId, documentId, sourceSha256 };
+  return { missionId, documentId, sourceSha256, ...(sourceVersionId ? { sourceVersionId } : {}) };
 }

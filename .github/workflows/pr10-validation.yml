@@ -45,6 +45,8 @@ jobs:
           npm run test:secure-asset-scope
           npm run test:founder-access-mutation-guard
           npm run test:mission-storage-rules-scope
+          npm run test:syllabus-workers
+          npm run test:generic-b3
           npm run test:mission-shell-bootstrap
           npm run test:ssc-cgl-notification-schema
           npm run test:ingestion-authority
@@ -62,7 +64,7 @@ jobs:
           channel: stable
           cache: true
       - run: flutter pub get
-      - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
+      - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart lib/features/admin/presentation/widgets/review_queue/syllabus_candidate_review_center.dart
       - run: flutter build web -t lib/main_web.dart --release
 
   # Separate Student/Android acceptance. A green backend cannot mask a
