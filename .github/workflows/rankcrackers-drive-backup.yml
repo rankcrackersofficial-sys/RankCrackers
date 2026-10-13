@@ -1,0 +1,42 @@
+name: RankCrackers — GitHub to Drive immutable daily backup
+
+on:
+  schedule:
+    # 01:21 UTC = 06:51 IST. GitHub may delay scheduled jobs.
+    - cron: '21 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+concurrency:
+  group: rankcrackers-gdrive-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    # Gate is deliberately OFF unless explicitly enabled by repo owner.
+    if: ${{ github.repository == 'rankcrackersofficial-sys/RankCrackers' && vars.RC_DRIVE_BACKUP_ENABLED == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    steps:
+      - name: Checkout backup script only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install backup dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq rclone git-lfs jq
+      - name: Backup and verify
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RC_DRIVE_RCLONE_CONFIG_B64: ${{ secrets.RC_DRIVE_RCLONE_CONFIG_B64 }}
+          RC_BACKUP_REPO: ${{ github.repository }}
+          RC_BACKUP_RUN_ID: ${{ github.run_id }}
+          RC_BACKUP_ATTEMPT: ${{ github.run_attempt }}
+          RC_DRIVE_REMOTE_ROOT: 'gdrive:RankCrackers_GitHub_Backups'
+        run: bash ops/backup/backup_repo_to_drive.sh
