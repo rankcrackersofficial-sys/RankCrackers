@@ -8,7 +8,6 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_spacing.dart';
 import '../../../../core/utils/app_routes.dart';
 import '../../../../core/widgets/dark_card.dart';
-import '../../../../shared/session/session_manager.dart';
 import '../../../../shared/providers/session_provider.dart';
 import '../../../../shared/widgets/command_header.dart';
 import '../../../../core/knowledge/knowledge_engine.dart';
@@ -1031,49 +1030,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   Widget _buildAncillaryHoldsCard() {
     return Column(
       children: [
-        // Smart Entry Card
-        DarkCard(
-          padding: const EdgeInsets.all(14),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.04),
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: const Icon(Icons.tune_rounded, color: AppColors.textSecondary, size: 18),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Smart Entry — Not Ready',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    const SizedBox(height: 1),
-                    Text(
-                      'Diagnostic calibration is not active for this mission yet.',
-                      style: AppTypography.subtitle.copyWith(
-                        color: AppColors.textSecondary,
-                        fontSize: 10,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              _buildTagChip('HELD', AppColors.textSecondary),
-            ],
-          ),
-        ),
-        const SizedBox(height: 8),
-
         // Test Arena Card
         DarkCard(
           padding: const EdgeInsets.all(14),
