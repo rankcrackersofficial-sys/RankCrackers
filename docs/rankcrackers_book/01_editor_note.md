@@ -1,5 +1,10 @@
 # संपादक की ओर से
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/01_editor_note.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/01_editor_note.md) · source blob `b6228684d27a61bb696fa062500bdae9f9513e36`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ![Rank Crackers Official Insignia — Black Background Display Variant](assets/images/logo_on_black.png)
 
 Rank Cracker केवल एक application नहीं है। यह विद्यार्थियों, mentors, founders और पूरी learning workflow को एक साथ जोड़ने वाला एक विकसित होता हुआ educational platform है। इस project में user interface से लेकर backend services, academic content, data models, permissions, deployment और quality verification तक अनेक स्तर एक-दूसरे से जुड़े हुए हैं।

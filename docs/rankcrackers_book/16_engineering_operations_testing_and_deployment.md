@@ -1,5 +1,10 @@
 # Volume H — Engineering Operations, Quality Assurance & Deployment
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/16_engineering_operations_testing_and_deployment.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/16_engineering_operations_testing_and_deployment.md) · source blob `7c4bda0dc2fc2a9b7d4b303455168f8def71f814`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Testing Strategy, Emulator Verification, CI/CD & Production Delivery
 
 ### Chapter 16 — Engineering Operations, Multi-Tier Test Harnesses, Firebase Emulators और Continuous Delivery Protocol
@@ -96,7 +101,7 @@ class SessionManager {
    });
    ```
 
-#### Subsection 1.3 — Comprehensive CI/CD & Test Execution Lifecycle State Matrix
+#### Subsection 1.3 — Documented Release Gate Model — Not a Verified CI Workflow
 
 RankCrackers इंजीनियरिंग पाइपलाइन का प्रत्येक परीक्षण चरण सख्त गेट-अवस्था आव्यूह (Gate State Matrix) द्वारा संचालित होता है:
 
@@ -108,7 +113,7 @@ RankCrackers इंजीनियरिंग पाइपलाइन का �
 | **4. Tier 4: Emulator Suite E2E**| प्री-रिलीज़ स्टेज़िंग | Local Firebase Emulators (Auth: 9199, Firestore: 8188, Functions: 5101) | वास्तविक नेटवर्क प्रोटोकॉल, रूल्स इवैल्यूएशन व क्लाउड फ़ंक्शंस ई2ई | प्रोडक्शन डेटा पूरी तरह अलग; लाइव डेटाबेस पर शून्य प्रभाव। |
 | **5. Independent Gate Audit** | रिलीज़ कैंडिडेट सर्टिफिकेशन | `verify_48ui8.js` व `functions/audit_repo_head_freeze_guard.js` | ड्राफ्ट गैर-लीकेज (`DRAFT_VISIBLE_COUNT = 0`), क्लीन गिट हेड | अनसुलझे ड्राफ्ट मिलने पर रिलीज़ पाइपलाइन फ़्रीज़। |
 | **6. Deterministic Web Build** | प्रोडक्शन डिप्लॉयमेंट पूर्व | `flutter build web --release` बंडल कंपाइलेशन | सिंटैक्स एरर-मुक्त जावास्क्रिप्ट बंडल; SPA रीराइट्स विन्यास | अनकंपाइल्ड या टेस्ट-सीम्स सक्षम कोड प्रोडक्शन में जाने से वर्जित। |
-| **7. Production Deployment** | अधिकृत संस्थापक अनुमोदन | `firebase deploy --only hosting,functions,firestore:rules` | होस्टिंग, फ़ंक्शन्स और सुरक्षा नियमों का परमाणु सिंक्रोनाइज़ेशन | विफलता पर 5-सेकंड होस्टिंग रोलबैक प्लेबुक तत्पर। |
+| **7. Production Deployment** | अधिकृत संस्थापक अनुमोदन | `firebase deploy --only hosting,functions,firestore:rules` | selected Hosting, Functions and Rules release scope; no cross-service atomicity certified | Rollback scope and elapsed time require incident-specific verification. |
 
 #### Subsection 1.4 — The 15 Core Attributes of Engineering Operations & Testing Infrastructure
 
@@ -130,7 +135,7 @@ Chief Author Mandate के तहत Engineering Operations & Testing Infrastru
 | **12**| **Production Build Contract** | `flutter build web --release` with Single Page Application rewrites in `firebase.json` | `firebase.json` |
 | **13**| **Security & Deploy Boundary**| Production deploy strictly isolated to Founder Service Account / authorized GCP role | `16_engineering_operations_testing_and_deployment.md:457–466` |
 | **14**| **Automated Gate Suites** | 4 primary suites: auth route test, ring test, reachability test, emulator E2E | `test/features/auth/student_professional_auth_profile_route_test.dart` |
-| **15**| **Disaster Recovery Playbook**| Instant hosting rollback + `GlobalErrorHandler.handleFatal` Crashlytics integration | `lib/core/errors/global_error_handler.dart:20–26` |
+| **15**| **Disaster Recovery Playbook**| Hosting release history plus source Crashlytics error reporting; rollback timing unverified | `lib/core/errors/global_error_handler.dart:20–26` |
 
 ---
 
@@ -220,7 +225,7 @@ firebase emulators:start --only auth,firestore,functions
 
 #### Subsection 3.3 — Canonical Reconciliation & Roundtrip Emulator Tests
 
-**File Path:** `functions/test/mission_lifecycle_emulator_roundtrip.js`
+**File Path:** `functions/test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 यह स्क्रिप्ट स्थानीय एमुलेटर पर संपूर्ण जीवनचक्र का अनुकरण करती है:
 1. `mission_realms` में नए मिशन का निर्माण।
@@ -299,7 +304,7 @@ function runVerificationPass() {
 
 वेब एप्लिकेशन के निर्माण के लिए निम्नलिखित उत्पादन कमांड का उपयोग किया जाता है:
 ```bash
-flutter build web --release --pwa-strategy=none --web-renderer canvaskit
+flutter build web --release --target lib/main_web.dart
 ```
 
 `firebase.json` में सिंगल-पेज रूटिंग (SPA Rewrites) सुनिश्चित करती है कि सभी गहरे रूट्स (Deep Routes जैसे `/profile-setup`, `/mission-realm`, `/dashboard`) सीधे `index.html` पर पुनः निर्देशित हों:
@@ -344,7 +349,7 @@ flutter build appbundle --release --obfuscate --split-debug-info=build/app/outpu
 flowchart TD
     Step1[1. Git Working Directory Clean Check] --> Step2[2. Flutter Unit & Widget Tests Pass: flutter test]
     Step2 --> Step3[3. Cloud Functions Test Suite Pass: npm test]
-    Step3 --> Step4[4. Independent Certification Pass: node verify_48ui8.js]
+    Step3 --> Step4[4. Independent Certification Pass: # Historical gate verify_48ui8.js is absent; resolve certification evidence before release]
     Step4 --> Step5[5. Repo Head Freeze Guard Verification]
     Step5 --> Step6[6. Build Release Bundles: flutter build web]
     Step6 --> Step7[7. Deploy to Firebase Production]
@@ -360,7 +365,7 @@ flowchart TD
 firebase deploy --only hosting,functions,firestore:rules,storage:rules
 ```
 
-यह कमांड परमाणु रूप से (atomically):
+The command requests the selected services; this repository configuration does not establish an all-or-nothing transaction across them. Each service result must be verified separately:
 1. वेब होस्टिंग पर नया बिल्ड प्रकाशित करती है।
 2. Node 22 v1/v4 क्लाउड फंक्शन्स को अपडेट करती है।
 3. नए सुरक्षा नियमों (`firestore.rules` और `storage.rules`) को लाइव डेटाबेस पर लागू करती है।
@@ -381,9 +386,9 @@ firebase deploy --only hosting,functions,firestore:rules,storage:rules
 यदि नए वेब बिल्ड में कोई गंभीर विज़ुअल बग या यूआई हैंग पाया जाता है:
 1. **Firebase Console खोलें:** Hosting $\rightarrow$ Release History पर जाएं।
 2. **Rollback Action:** पिछले स्थिर संस्करण के तीन बिंदुओं पर क्लिक करें और **"Rollback"** चुनें।
-3. **प्रभावी समय:** 5 सेकंड के भीतर वैश्विक सीडीएन (Global CDN) पिछले संस्करण पर वापस लौट आता है; किसी नए कोड बिल्ड की आवश्यकता नहीं होती।
+3. **Verification:** select a known-good Hosting release and confirm the served artifact after rollback. A five-second global propagation guarantee is not established by repository evidence. Hosting rollback does not revert Functions, rules or data.
 
-#### Subsection 7.2 — Cloud Functions Zero-Downtime Rollback
+#### Subsection 7.2 — Cloud Functions Rollback Planning — Downtime Guarantee Unverified
 
 यदि किसी नए बैकएंड वर्कर में अपवाद उत्पन्न होते हैं:
 1. `FounderSettingsCenter` खोलें और आपातकालीन **Kill-Switch** (`toggleAiSystem(false)`) को सक्रिय करें।
@@ -404,7 +409,7 @@ firebase deploy --only hosting,functions,firestore:rules,storage:rules
 git checkout HEAD~1 -- firestore.rules
 firebase deploy --only firestore:rules
 ```
-यह कमांड 30 सेकंड के भीतर नियमों को पिछले कार्यशील संस्करण पर पुनर्स्थापित कर देती है।
+This is a historical command example. Select the explicitly verified known-good rules commit rather than assuming `HEAD~1` is safe. No 30-second completion guarantee is established; verify deployed rules independently.
 
 ---
 
@@ -412,23 +417,22 @@ firebase deploy --only firestore:rules
 
 Chief Author Mandate के तहत Engineering Operations, Testing Harnesses एवं CI/CD प्रोटोकॉल के प्रमुख फलनों का 8-आयामी (8-Dimensional) संविदा विनिर्देश (Contract Specification) नीचे दर्ज है:
 
-#### Subsection 8.1 — `audit_repo_head_freeze_guard.js` (Release Gate Evaluator)
-- **Source File & Location:** `functions/audit_repo_head_freeze_guard.js` (Lines 1–55; corrected repository path)
-- **1. Caller:** CI/CD डिप्लॉयमेंट पाइपलाइन, प्री-रिलीज़ शेकआउट हुक।
-- **2. Inputs:** वर्तमान गिट रिपॉजिटरी स्थिति, Git HEAD commit hash, `git status --porcelain`।
-- **3. Outputs:** `ProcessExitCode` (0: पास, 1: अस्वीकृत)। विफलता पर विस्तृत कंसोल रिपोर्ट।
-- **4. Mutations:** None (विशुद्ध रूप से रीड-ओनली ऑडिट गेट)।
-- **5. Retries:** Zero (सख्त गेटकीपर)।
-- **6. Timeout:** 5 सेकंड का शेल निष्पादन टाइमआउट।
-- **7. Security Boundary:** Head Freeze Law: उत्पादन परिनियोजन से पहले यह पुष्टि करना कि कार्यशील निर्देशिका स्वच्छ है और सभी ऑडिट आर्टिफ़ैक्ट्स कमिट किए गए हैं।
-- **8. Downstream Consumers:** `firebase deploy` ऑर्केस्ट्रेटर।
+#### Subsection 8.1 — `audit_repo_head_freeze_guard.js` current source contract
+- **Source:** `functions/audit_repo_head_freeze_guard.js`.
+- **Caller and inputs:** command-line audit requires an expected HEAD argument.
+- **Checks:** actual HEAD, exact expected branch, blocked staged-path patterns and required freeze-marker file.
+- **Outputs:** JSON report and verdict; blocked result exits 1.
+- **Mutations:** no repository write in the inspected script.
+- **Retries and timeout:** no retry loop or subprocess timeout option is declared.
+- **Boundary:** it does not inspect all unstaged/untracked files or certify a clean working tree; do not describe it as a complete cleanliness guard.
+- **Acceptance:** script was read, not executed against the user's Windows checkout in this pass.
 
-#### Subsection 8.2 — `verify_48ui8.js` (Independent Certification Gate)
-- **Source File & Location:** `verify_48ui8.js` (Lines 1–85; repository-root script, not a `scripts/` child)
+#### Subsection 8.2 — `verify_48ui8.js` — UNRESOLVED HISTORICAL CERTIFICATION REFERENCE
+- **Source File & Location — UNRESOLVED:** `verify_48ui8.js` is absent from the current GitHub tree. Its former outputs, mutation path and timeout below are historical claims, not a current release gate.
 - **1. Caller:** CI टेस्ट रनर, प्री-डिप्लॉयमेंट प्रमाणीकरण।
 - **2. Inputs:** `docs/academic_review/` में मौजूद आर्टिफ़ैक्ट्स, फ़ायरस्टोर स्कीमा कॉन्ट्रैक्ट्स।
 - **3. Outputs:** `CertificationReport` (`pass: boolean`, `sha256: string`)।
-- **4. Mutations:** `docs/academic_review/certification_summary.json` में सत्यापन सारांश लिखना।
+- **4. Mutations:** `docs/academic_review/certification_summary.json` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** में सत्यापन सारांश लिखना।
 - **5. Retries:** Zero।
 - **6. Timeout:** 10 सेकंड।
 - **7. Security Boundary:** ड्राफ्ट नॉन-लीकेज नियम: यह सत्यापित करना कि `INTERNAL_DRAFT_VISIBLE_TO_STUDENT_COUNT == 0` है।
@@ -441,35 +445,28 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **3. Outputs:** `Future<void>`।
 - **4. Mutations:** `FirebaseAuth.useAuthEmulator('localhost', 9199)`, `FirebaseFirestore.useFirestoreEmulator('localhost', 8188)`, `FirebaseFunctions.useFunctionsEmulator('localhost', 5101)`।
 - **5. Retries:** Zero।
-- **6. Timeout:** < 50ms।
+- **6. Timeout:** execution duration not measured in this correction pass.
 - **7. Security Boundary:** उत्पादन डेटा अलगाव (Production Isolation): स्थानीय विकास के दौरान लाइव डेटाबेस से शून्य कनेक्शन।
 - **8. Downstream Consumers:** Flutter ऐप के सभी डेटाबेस और ऑथेंटिकेशन कॉल्स।
 
-#### Subsection 8.4 — `SessionManager.clearAccessibleMissions` (Test Seam)
-- **Source File & Location:** `lib/shared/session/session_manager.dart` (Lines 440–455)
-- **1. Caller:** यूनिट और विजेट टेस्ट्स का `setUp()` ब्लॉक।
-- **2. Inputs:** None।
-- **3. Outputs:** `void`।
-- **4. Mutations:** इन-मेमोरी `_currentSnapshot` को खाली करना और SharedPreferences से `'cached_accessible_mission_ids'` हटाना।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
-- **7. Security Boundary:** टेस्ट स्टेट लीकेज रोकथाम (Test State Isolation)।
-- **8. Downstream Consumers:** टेस्ट हार्नेस, आगामी टेस्ट असेरशन्स।
+#### Subsection 8.4 — `SessionManager.clearAccessibleMissions` current source contract
+- **Source:** `lib/shared/session/session_manager.dart:473–476`.
+- **Inputs and output:** no arguments; `void`.
+- **Mutation:** assigns `MissionAccessSnapshot.uninitialized()` and invokes `_prefs?.remove('cached_accessible_mission_ids')`.
+- **Persistence boundary:** preference removal is not awaited by this method; a zero-duration guarantee is unsupported.
+- **Role:** test-state clearing seam; it does not mutate Firestore mission authority.
 
-#### Subsection 8.5 — `SessionManager.registerAccessibleMissions` (Test Fixture Seam)
-- **Source File & Location:** `lib/shared/session/session_manager.dart` (Lines 460–485)
-- **1. Caller:** टेस्ट फ़िक्सचर इंजेक्टर, स्टूडेंट कैटलॉग सिंक।
-- **2. Inputs:** `Iterable<String> ids`, `{String source = 'TEST_FIXTURE'}`।
-- **3. Outputs:** `void`।
-- **4. Mutations:** `_currentSnapshot` में सटीक केस-सेंसिटिव मिशन आईडीज पंजीकृत करना।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms सिंक्रोनस।
-- **7. Security Boundary:** बाइनरी में शून्य हार्डकोडेड मिशन कानून का अनुपालन करते हुए टेस्ट्स को मनमाना परीक्षण डेटा इंजेक्ट करने की अनुमति।
-- **8. Downstream Consumers:** `SessionManager.isMissionValid()`, GoRouter Gate 4।
+#### Subsection 8.5 — `SessionManager.registerAccessibleMissions` current source contract
+- **Source:** `lib/shared/session/session_manager.dart:486–502`.
+- **Inputs:** `Iterable<String> ids`, optional `source = 'TEST_FIXTURE'`.
+- **Output:** `void`.
+- **Mutation:** unions trimmed nonempty IDs into the existing exact-case set; creates a ready snapshot preserving `missionById`, records time/source, invokes `_prefs?.setStringList(...)`.
+- **Persistence boundary:** SharedPreferences write is not awaited; synchronous method return is not proof of immediate durable persistence.
+- **Role:** published-catalog/test registration seam; it does not establish official syllabus or publication authority.
 
 #### Subsection 8.6 — `GlobalErrorHandler.handleFatal` (Crash Supervisor)
 - **Source File & Location:** `lib/core/errors/global_error_handler.dart` (Lines 20–26)
-- **1. Caller:** अनहैंडल्ड रनटाइम अपवाद, Flutter फ्रेमवर्क क्रैश हुक।
+- **1. Caller:** `lib/main.dart` top-level catch calls `GlobalErrorHandler.handleFatal`. No generic framework-hook integration is certified here.
 - **2. Inputs:** `dynamic error`, `StackTrace? stack`।
 - **3. Outputs:** `void`।
 - **4. Mutations:** `FirebaseCrashlytics.instance.recordError(..., fatal: true)`, कंसोल डायग्नोस्टिक्स।
@@ -478,16 +475,14 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **7. Security Boundary:** क्रैश लूप से बचाव और फोरेंसिक स्टैक ट्रेस प्रूवेनेंस।
 - **8. Downstream Consumers:** Google Cloud Crash Reporting, इंजीनियरिंग अलर्ट।
 
-#### Subsection 8.7 — `canonical_reconciliation_emulator.js` (Reconciliation Test Runner)
-- **Source File & Location:** `functions/test/canonical_reconciliation_emulator.js` (live path; corrected from repository-root `test/` reference)
-- **1. Caller:** Node Test Suite (`npm test`)।
-- **2. Inputs:** स्थानीय एमुलेटर पर `mission_realms`, `recruitments`, और `student_mission_catalog` का डेटा।
-- **3. Outputs:** `Promise<TestResults>` (त्रिकोणीय सुलह का पास/फ़ेल सत्यापन)।
-- **4. Mutations:** एमुलेटर डेटाबेस में डमी विसंगतियां बनाना और समाधान फ़ंक्शन चलाना।
-- **5. Retries:** 1 पुनः प्रयास।
-- **6. Timeout:** 15 सेकंड।
-- **7. Security Boundary:** यह सुनिश्चित करना कि विसंगति वाले मिशन कभी भी छात्रों के लिए लाइव न हों।
-- **8. Downstream Consumers:** CI पाइपलाइन गेट रिपोर्टर।
+#### Subsection 8.7 — `canonical_reconciliation_emulator.js` current source contract
+- **Source:** `functions/test/canonical_reconciliation_emulator.js`.
+- **Execution guard:** requires `FIRESTORE_EMULATOR_HOST = 127.0.0.1:8188` and `GCLOUD_PROJECT = demo-rankcrackers-55`; otherwise throws `EMULATOR_ONLY_GUARD`.
+- **Inputs and mutations:** creates a timestamped fixture mission, registers a candidate source, updates its verification/delta data, then activates it in the guarded emulator.
+- **Observation:** polls up to 240 iterations with 250ms delay for `academicDeltaApplied`, then checks projection lineage and exactly one DigiBook and Crucible impact job.
+- **Outputs:** JSON results; failure exits 1. `downstreamVerificationComplete` is reported but is not one of this runner's final blocking assertions.
+- **Timeout:** polling delay budget is approximately 60 seconds, excluding I/O. This is not a runner-wide 15-second timeout.
+- **Test status:** not executed during this book correction pass; inclusion in an `npm test` invocation is not inferred from file presence.
 
 #### Subsection 8.8 — `firebase deploy --only hosting,functions,firestore:rules`
 - **Source File & Location:** `firebase.json` एवं डिप्लॉयमेंट स्क्रिप्ट्स
@@ -496,7 +491,7 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **3. Outputs:** `ExitCode 0` (सफल परिनियोजन) अथवा डिप्लॉयमेंट त्रुटि।
 - **4. Mutations:** Google Cloud Production Hosting CDN, Cloud Functions v1/v4, Live Firestore Security Rules।
 - **5. Retries:** Firebase CLI आंतरिक पुनः प्रयास।
-- **6. Timeout:** 5 मिनट का ग्लोबल डिप्लॉयमेंट टाइमआउट।
+- **6. Timeout:** no global five-minute deployment timeout is declared in the inspected `firebase.json` or package deployment script.
 - **7. Security Boundary:** केवल संस्थापक सेवा खाता (Founder Service Account) या अधिकृत GCP क्रेडेंशियल्स द्वारा निष्पादन।
 - **8. Downstream Consumers:** वैश्विक छात्र और वेब कंसोल उपयोगकर्ता।
 
@@ -509,7 +504,7 @@ Chief Author Mandate के तहत कोड परिवर्तन से 
 ```mermaid
 flowchart TD
     ENG1[1. Source Record: Git Commit & Source Code Mutation] --> ENG2[2. Canonical ID: Git Commit SHA, Build Number & Artifact ID]
-    ENG2 --> ENG3[3. Parent Hierarchy: Repository -> Branch main -> Release Tag -> Deployment]
+    ENG2 --> ENG3[3. Parent Hierarchy: Repository -> Recorded default branch -> Release Tag -> Deployment]
     ENG3 --> ENG4[4. Content Payload: Dart Binaries, Cloud Functions & Security Rules]
     ENG4 --> ENG5[5. Test Pyramid Tier 1-3: Unit, Widget & Router Gate Verification]
     ENG5 --> ENG6[6. Test Pyramid Tier 4: Local Firebase Emulator Suite E2E Proofs]
@@ -527,7 +522,7 @@ flowchart TD
    - ऐप रिलीज़ वर्ज़न: `version+buildNumber` (उदा. `'2.4.0+55'`)
    - आर्टिफ़ैक्ट फिंगरप्रिंट: `SHA-256 Artifact ID`
 3. **Parent Hierarchy:**
-   $$\text{Git Repository} \longrightarrow \text{Branch: main} \longrightarrow \text{Release Tag} \longrightarrow \text{Firebase Production Environment}$$
+   $$\text{Git Repository} \longrightarrow \text{Branch: safety/rc-g2-pre-notification-schema} \longrightarrow \text{Release Tag} \longrightarrow \text{Firebase Production Environment}$$
 4. **Content Payload:** रिलीज़ पेलोड:
    - Compiled web bundle produced by `flutter build web --release`; `build/web/main.dart.js` is a generated output and is not a source-controlled baseline. The source entry point is `lib/main_web.dart`.
    - Node 22 v1/v4 क्लाउड फ़ंक्शन्स बंडल।
@@ -540,8 +535,25 @@ flowchart TD
 7. **Independent Gate Certification:** `verify_48ui8.js` और `functions/audit_repo_head_freeze_guard.js` available gate scripts हैं; प्रत्येक run को date/scope सहित evidence output से जोड़ना होगा। “Zero draft leakage” और “clean git head” को बिना उसी run की report के verified result न लिखें।
 8. **Evidence Commitment:** `docs/academic_review/` में SHA-256 फिंगरप्रिंटेड आर्टिफ़ैक्ट्स का कमिट।
 9. **Release Artifact Build:** `flutter build web --release` द्वारा प्रोडक्शन बंडल का निर्माण, तथा `firebase.json` में SPA URL रीराइट्स का विन्यास।
-10. **Production Deployment:** परमाणु परिनियोजन (`firebase deploy`) द्वारा होस्टिंग, फ़ंक्शन्स, और सुरक्षा नियमों का एक साथ लाइव होना।
+10. **Production Deployment:** Selected-service deployment requires separate Hosting, Functions and Rules verification; no cross-service atomicity is certified.
 11. **Audit Trail & Rollback Readiness:**
     - `founder_activity_log` में रिलीज़ का स्वचालित अंकन।
     - Firebase Crashlytics और `telemetry_nexus` द्वारा तत्काल स्वास्थ्य की पुष्टि।
-    - अप्रत्याशित समस्या की स्थिति में 5-सेकंड होस्टिंग रोलबैक प्लेबुक की तत्परता।
+    - Incident-specific rollback must identify artifact, scope, known-good version and observed completion.
+
+
+## Current release and recovery evidence boundary
+
+No `.github/workflows/` files are tracked at the recorded HEAD; the CI/CD diagrams describe a process model, not a proven GitHub Actions pipeline. `firebase.json` declares `functions` as the default codebase source, Node 22 and `main: index.js` come from `functions/package.json`, and predeploy runs the TypeScript build. Build output alone does not redefine the deployed entry point. Hosting serves generated `build/web`; Founder web build must select `lib/main_web.dart`. Commands in this chapter are reference examples, not execution authorization.
+
+`PIPELINE_RECOVERY_GUIDE.md` records an incident dated 2026-06-16, including `e:\RankCrackers`, budget/queue changes and old deployment directions. Treat it as historical incident evidence, not current migration closure or operational authorization. Current Windows checkout location, deployed artifact, queue state and credential remediation are unverified here.
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `docs/academic_review/certification_summary.json` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `web/main.dart.js` | UNRESOLVED AT DEFAULT HEAD |

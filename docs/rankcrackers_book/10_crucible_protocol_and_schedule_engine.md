@@ -1,5 +1,10 @@
 # Volume B — Student Experience
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/10_crucible_protocol_and_schedule_engine.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/10_crucible_protocol_and_schedule_engine.md) · source blob `060c0f1e4caf5baa139575eab41f47e0d89a665d`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 3 — Crucible Protocol, Continuous Learning Ring और Assessment Workflows
 
 ### Chapter scope और Overview
@@ -11,6 +16,14 @@
 यह अध्याय Crucible के आंतरिक स्टेट पाइपलाइन, ग्लोबल क्लॉक इंजन, कैनोनिकल शेड्यूल रजिस्ट्री, सभी 6 प्रमुख दृश्य अनुभागों (UI Sections), असेसमेंट चैंबर्स (Micro, Macro, Rebuild), सबमिशन पाइपलाइन, और **Human Authority Law** पर आधारित अकादमिक ट्रस्ट इंजन का संपूर्ण स्रोत-आधारित (source-audited) तकनीकी दस्तावेज़ीकरण प्रस्तुत करता है।
 
 ---
+
+## Current runtime contract corrections
+
+The default-branch `jeeMain2027Blueprint` declares 98 days, 7 phases, 6 schedules per phase, 48 hours per schedule, 47 learning hours and 1 micro hour. Its rebuild is 24 hours; macro assessment 2 hours plus 22 hours recovery. The generic clock resolves an explicit/registered blueprint and has a JEE baseline fallback; production mission-wide blueprint publication is not certified here.
+
+Product authority retains the 98-day cycle and Major Test in Test Arena. Default source still contains Major/Grand Simulation compatibility helpers and model labels; their presence is a legacy/runtime discrepancy, not authority to put Major Test back into Crucible. The 26 architecture-branch contracts are separate branch evidence, not automatically implemented on default.
+
+`BattleArenaScreen` at the cited Crucible path is a `StatelessWidget` containing presentation/sample content. It does not define `_submitAssessment`; claims that this path submits scored attempts or persists mastery are unresolved. No replacement submission path is inferred.
 
 ## Section 1 — Screen State Pipeline और Reactive Stream Binding
 
@@ -1071,28 +1084,26 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 
 ### Subsection 13.1 — `CrucibleClockEngine.getNormalizedStart`
 - **Source File & Location:** `lib/features/crucible/core/crucible_clock_engine.dart` (Lines 34–54)
-- **1. Caller:** `CrucibleEngine.initializeLedger()`, `CrucibleRepository.streamProtocolState()`।
+- **1. Caller:** `CrucibleEngine.initializeLedger()` (UNRESOLVED symbol in current engine), `CrucibleRepository.streamProtocolState()`।
 - **2. Inputs:** `DateTime enrollmentTime` (छात्र का मिशन नामांकन अथवा प्रथम सत्र समय)।
 - **3. Outputs:** `DateTime` (सुबह 10:00:00 AM पर सामान्यीकृत दिन प्रारंभ समय)।
 - **4. Mutations:** None (विशुद्ध गणितीय गणना)।
 - **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
+- **6. Timeout:** no measured zero-duration guarantee.
 - **7. Security Boundary:** यदि नामांकन 10:00 AM से 10:00 PM (22:00) के बीच होता है, तो उसी दिन का 10 AM माना जाता है; यदि 10:00 PM के बाद होता है, तो अगले दिन 10 AM से प्रारंभ होता है।
-- **8. Downstream Consumers:** चक्रीय दिन गणना (`calculateOrbitDay`), 14-दिवसीय फ़ेज़ टाइमर।
+- **8. Downstream Consumers:** चक्रीय दिन गणना (`getCycleDay`), 14-दिवसीय फ़ेज़ टाइमर।
 
-### Subsection 13.2 — `CrucibleClockEngine.calculateOrbitDay`
-- **Source File & Location:** `lib/features/crucible/core/crucible_clock_engine.dart` (Lines 75–120)
-- **1. Caller:** `crucibleProtocolStateProvider`, `CrucibleScreen.build()`।
-- **2. Inputs:** `DateTime cycleStart`, `DateTime currentTime`, `int totalCycleDays = 98`।
-- **3. Outputs:** `int` (1 से 98 के बीच का वर्तमान सक्रिय चक्र दिवस)।
-- **4. Mutations:** None।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
-- **7. Security Boundary:** $\text{OrbitDay} = ((\text{elapsedDays}) \pmod{98}) + 1$। 98-दिवसीय सीमा पर मोड्युलो ओवरफ़्लो कभी नहीं होता (दिन 98 के बाद सुरक्षित रूप से दिन 1 पर लौटता है)।
-- **8. Downstream Consumers:** `CrucibleCanonicalScheduleRegistry`, शेड्यूल कार्ड दृश्यता, माइक्रो/मैक्रो परीक्षण ताले।
+### Subsection 13.2 — `CrucibleClockEngine.getCycleDay` and `getOrbitNumber`
+- **Source:** `lib/features/crucible/core/crucible_clock_engine.dart:91–118`.
+- **Actual names:** `calculateOrbitDay` is not declared in this source; use `getCycleDay` / `getProtocolDay` alias.
+- **Inputs:** cycle-day method receives state, current time and optional blueprint; orbit method receives start, time, optional blueprint and optional cycle-length override.
+- **Output:** day is `((elapsedSeconds ~/ 86400) % blueprint.cycleLengthDays) + 1`; orbit is `(elapsedSeconds ~/ (cycleDays * 86400)) + 1`.
+- **Mutation:** none in these methods.
+- **Boundary:** pre-start elapsed clamps to zero; orbit returns 1. JEE fallback profile is 98 days; blueprint-dependent behavior must not be confused with universal runtime publication.
+- **Timing and tests:** no execution-duration benchmark or current test pass is certified.
 
 ### Subsection 13.3 — `CrucibleRepository.streamProtocolState`
-- **Source File & Location:** `lib/core/backend/crucible_repository.dart` (Lines 801–818)
+- **Source File & Location:** `lib/core/backend/crucible_repository.dart:15–36`
 - **1. Caller:** `crucibleProtocolStateProvider` (`ref.watch(sessionUserProvider)` के माध्यम से)।
 - **2. Inputs:** `String recruitmentId`।
 - **3. Outputs:** `Stream<CrucibleProtocolState?>`।
@@ -1102,43 +1113,25 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 - **7. Security Boundary:** `recruitmentId.isEmpty` या `user == null` होने पर तत्काल `yield null`। केवल छात्र के निजी `/users/{uid}/protocols/{recruitmentId}` दस्तावेज़ का लिसनिंग।
 - **8. Downstream Consumers:** `CrucibleScreen` त्रि-स्तरीय स्टेट मशीन (Loading, Preparing, Active Content)।
 
-### Subsection 13.4 — `MicroTestEngine.assembleTest`
-- **Source File & Location:** `lib/features/crucible/core/micro_test_engine.dart` (Lines 50–120)
-- **1. Caller:** `SacredMicroTestChamber.onStartTest` टैप इवेंट।
-- **2. Inputs:** `CrucibleSchedule schedule`, `List<AcademicNode> targetNodes`, `String studentUid`।
-- **3. Outputs:** `Future<MicroTestAssembly>` (सत्यापित प्रश्नों की सूची, समय सीमा, और परीक्षण मेटाडेटा)।
-- **4. Mutations:** None (असेम्बली चरण में केवल मेमोरी ऑब्जेक्ट निर्माण)।
-- **5. Retries:** 2 स्वचालित पुनः प्रयास यदि प्रश्न पूल में पर्याप्त सत्यापित प्रश्न न मिलें।
-- **6. Timeout:** 5 सेकंड का फ़ेच टाइमआउट।
-- **7. Security Boundary:** Human Authority Law प्रवर्तन:
-  - केवल मानव-समीक्षित प्रश्न (`reviewerType == 'human'`) शामिल किए जाते हैं।
-  - यदि किसी प्रश्न का साक्ष्य अपूर्ण है, तो `checkQuestionEligibility` उसे बाहर कर देता है।
-- **8. Downstream Consumers:** `BattleArenaScreen`, टाइमर इंजन।
+### Subsection 13.4 — `MicroTestEngine.assembleMicroTest`
+- **Source:** `lib/features/crucible/core/micro_test_engine.dart:350` onward.
+- **Actual name/output:** `assembleTest` is not declared; actual method returns `List<QuestionModel>` synchronously.
+- **Inputs:** schedule ID, allowed atoms, pool, previously learned atoms, optional student level/policy, bank/attempt counts, trust snapshot and seed.
+- **Selection:** invokes `checkQuestionEligibility`, deduplicates IDs/lineages, sorts candidates and performs deterministic selection.
+- **Bank guard:** `requiredBankCount ?? requiredCount ?? 50`; returns `[]` below the selected bank threshold.
+- **Timing/retries:** no asynchronous fetch, two-retry loop or five-second fetch timeout in this assembly method.
+- **Acceptance boundary:** question gate source exists; production bank readiness and all architecture-branch eligibility contracts are not certified by this method alone.
 
-### Subsection 13.5 — `MacroTestEngine.assembleCitadel`
-- **Source File & Location:** `lib/features/crucible/core/macro_test_engine.dart` (Lines 60–145)
-- **1. Caller:** Day 14/28/42/56/70/84/98 पर `SacredMacroTestCitadel` अनलॉक होने पर।
-- **2. Inputs:** `int phaseNumber` (1 से 7), `List<CrucibleSchedule> phaseSchedules`, `String studentUid`।
-- **3. Outputs:** `Future<MacroCitadelAssembly>` (पूर्ण 14-दिवसीय ब्लॉक का बहु-विषयक परीक्षण)।
-- **4. Mutations:** None।
-- **5. Retries:** 1 पुनः प्रयास।
-- **6. Timeout:** 8 सेकंड का डेटा एकत्रीकरण टाइमआउट।
-- **7. Security Boundary:** ब्लॉक-स्तरीय ताला (केवल Day 14 पर सक्रिय होता है; उससे पहले फ़ेल-क्लोज़्ड रहता है)।
-- **8. Downstream Consumers:** `BattleArenaScreen` (Macro Citadel Mode)।
+### Subsection 13.5 — `MacroTestEngine.assembleMacroTest`
+- **Source:** `lib/features/crucible/core/macro_test_engine.dart:41` onward.
+- **Actual name/output:** `assembleCitadel` is not declared; actual method returns `List<QuestionModel>` synchronously.
+- **Inputs:** macro/schedule IDs, allowed atoms, pool, recruitment ID and optional policy/counts/trust/seed.
+- **Selection:** filters recruitment, delegates question eligibility to MicroTestEngine, deduplicates, sorts and selects deterministically.
+- **Bank guard:** `requiredBankCount ?? requiredCount ?? 100`; attempt count is separately selected by `attemptCount ?? requiredCount ?? eligible.length`.
+- **Boundary:** 100-bank fallback is not automatically a 100-question student attempt. No one-retry/eight-second fetch contract or day-window lock is implemented in this assembly method.
 
-### Subsection 13.6 — `BattleArenaScreen._submitAssessment`
-- **Source File & Location:** `lib/features/crucible/presentation/screens/battle_arena_screen.dart` (Lines 310–380)
-- **1. Caller:** छात्र द्वारा "SUBMIT CITADEL / TEST" बटन टैप या टाइमर समाप्ति।
-- **2. Inputs:** `Map<String, String> answers`, `int timeSpentSeconds`, `String testId`।
-- **3. Outputs:** `Future<SubmissionResult>`।
-- **4. Mutations:**
-  - क्लाउड फ़ंक्शन `submitCrucibleAssessment` कॉल (SHA-256 हैश के साथ)।
-  - छात्र के व्यक्तिगत लेजर `/users/{uid}/crucible_ledger` में प्रविष्टि।
-  - स्थानीय `KnowledgeEngine` में तात्कालिक मास्टरी और मोमेंटम रीकैल्कुलेशन।
-- **5. Retries:** ऑफ़लाइन होने पर स्थानीय आउटबॉक्स कतार में सहेजना (ऑफ़लाइन रेजिलिएंस)।
-- **6. Timeout:** 15 सेकंड का RPC टाइमआउट।
-- **7. Security Boundary:** क्लाइंट सीधे मास्टरी स्कोर नहीं लिख सकता; स्कोरिंग और सत्यापन सर्वर-साइड फ़ंक्शन द्वारा निष्पादित होते हैं।
-- **8. Downstream Consumers:** परिणाम स्क्रीन (`AssessmentResultScreen`), `ReadinessGauge`, `MomentumState`।
+### Subsection 13.6 — `BattleArenaScreen._submitAssessment` — UNRESOLVED
+The cited `lib/features/crucible/presentation/screens/battle_arena_screen.dart` defines a stateless presentation screen, not `_submitAssessment`. The former callable submission, Firestore attempt/micro-evidence mutations, retries, timeout and mastery-update claims are withdrawn for this path. Assessment execution requires a separately verified caller/worker route; no substitute is invented.
 
 ### Subsection 13.7 — `CrucibleScreen._handleLearnAction`
 - **Source File & Location:** `lib/features/crucible/presentation/screens/crucible_screen.dart` (Lines 410–475)
@@ -1160,7 +1153,7 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 - **3. Outputs:** `Widget` (सुरक्षित तैयारी सतह)।
 - **4. Mutations:** None।
 - **5. Retries:** Not applicable।
-- **6. Timeout:** 16ms फ्रेम रेंडरिंग।
+- **6. Timeout:** no measured frame-duration guarantee.
 - **7. Security Boundary:** कोल्ड-स्टार्ट सुरक्षा (बिना क्रैश के छात्र को आधिकारिक मापदंडों के सक्रिय होने की प्रतीक्षा स्थिति में रखना)।
 - **8. Downstream Consumers:** Flutter UI कंपोज़िटर।
 
@@ -1232,3 +1225,6 @@ flowchart TD
     - क्लाउड फ़ंक्शंस निष्पादन लॉग्स।
     - `founder_activity_log` में असामान्य असेसमेंट स्पाइक्स का अंकन।
 
+
+
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.

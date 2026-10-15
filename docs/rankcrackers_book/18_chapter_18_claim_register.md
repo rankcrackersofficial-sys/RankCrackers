@@ -1,5 +1,10 @@
 # Chapter 18 — Chief Author Claim Register
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/18_chapter_18_claim_register.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/18_chapter_18_claim_register.md) · source blob `32172fd0ebd41ff75efae3aef6da32ef323131d2`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Audit status
 
 **Status:** `AUDIT HOLD — NOT FINAL`  
@@ -13,9 +18,20 @@
 
 ---
 
-## Reproducible baseline
+## Current GitHub baseline
 
-Chief Author readback एवं fresh source inventory में निम्न baseline सीधे live repository से प्राप्त हुआ:
+| Evidence metric | Current result | Evidence class |
+|---|---:|---|
+| `lib/` tracked files | 779 | Git tree at recorded HEAD |
+| Dart source files | 757 | Git tree paths ending `.dart` |
+| Non-Dart files | 22 | Git tree |
+| Tracked `lib/` bytes | 3,438,588 | Git blob sizes |
+| Tracked Dart bytes | 3,301,582 | Git blob sizes |
+| Compiler-ordered sources | 24 | `scripts/compile_master_book.py` |
+
+## Historical local baseline — superseded for current counts
+
+The following numbers and historical VERIFIED labels reproduce the earlier local audit. They are not current default-branch verification; use the table above for current counts. CH18-001, CH18-002 and partition coverage must be revalidated against 757 tracked Dart files.
 
 | Evidence Metric | Machine Readback Result | Verification Status | Reference / Command |
 |---|---:|---|---|
@@ -34,7 +50,7 @@ Chief Author readback एवं fresh source inventory में निम्न
 
 ---
 
-## Exhaustive Claim Ledger (CH18-001 through CH18-015)
+## Historical Claim Ledger (CH18-001 through CH18-015)
 
 नीचे Chapter 18 के प्रत्येक प्रमुख factual sentence, code block, table row, symbol और numeric assertion का विस्तृत ऑडिट लेजर दर्ज है:
 
@@ -64,16 +80,16 @@ Chief Author readback एवं fresh source inventory में निम्न
 
 | Claimed Stale Path | Existence Check | Claimed Functionality | Actual Codebase Reality / True Replacement | Action Taken in Chapter 18 |
 |---|---|---|---|---|
-| `lib/core/utils/math_renderer_util.dart` | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/security_hasher.dart` | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/string_utils.dart` | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/founder_authority.dart` | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/authority_boundary_guard.dart` | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/storage/local_vault.dart` | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/services/sound_service.dart` | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/services/haptic_feedback_service.dart` | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/notifications/notification_service.dart` | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
 
 ---
 
@@ -85,13 +101,55 @@ Chapter 18 के ten absent paths यहाँ intentionally registered है�
 
 Chapter 18 को `AUDIT HOLD` से बाहर लाकर "Final" घोषित करने के लिए निम्नलिखित सभी शर्तों का पूर्ण होना अनिवार्य है:
 
-- [x] **1. Disjoint 15-Layer Partition:** 776 Dart files को 15 गैर-अतिव्यापी पाथ सेट्स में विभाजित किया गया और योग ठीक 776 सत्यापित हुआ।
+- [x] **1. Current 757-file Disjoint Layer Partition:** current GitHub paths partitioned across 15 explicit scopes; 757 assigned, 0 overlaps, 0 unassigned. Machine-readable per-file evidence attached.
 - [x] **2. Stale Paths Quarantine:** सभी 10 अनुपस्थित पाथ्स को Section 14.2 के सत्यापित मैट्रिक्स से हटाकर Section 14.3 के Stale Ledger में स्पष्ट रूप से दर्ज किया गया।
 - [x] **3. Symbol Reconciliation:** `SessionManager.profileCompletedSync()`, `selectedExamSync()`, `isMissionValid(...)` और `selectedRecruitmentIdSync()` को वास्तविक स्रोत से मिलाया गया।
 - [x] **4. Telemetry Realism:** `_persistQueue()` का डिस्क I/O और `TelemetryRecord` में raw `userId` तथा `anonymizedUserId` दोनों की उपस्थिति को बिना छिपाए दर्ज किया गया।
 - [x] **5. DRM / Secure Layer Truth:** `TacticalSecureLayer` को 17-लाइन पास-थ्रू विजेट के रूप में सही दर्ज किया गया।
 - [x] **6. Performance Evidence Discipline:** 60/120 FPS और zero-drop को डिजाइन लक्ष्य के रूप में स्पष्ट किया गया; स्लिवर्स को डैशबोर्ड/डिजीबुक में और RepaintBoundary को टेस्ट्स में मैप किया गया।
 - [x] **7. GlobalErrorHandler Reality:** स्पष्ट दर्ज किया गया कि यह केवल `main.dart` के टॉप-लेवल कैच में सक्रिय है।
-- [x] **8. Master Compilation Pass:** `compile_master_book.py` और `verify_compilation.py` का सफल निष्पादन (Exit Code 0)।
-- [ ] **9. Live Google Drive Sync Confirmation:** `I:\My Drive\Rank_Cracker_Book` में लाइव रीडबैक से 100% क्लाउड समन्वय की पुष्टि होने तक स्टेटस `AUDIT HOLD` रहेगा।
+- [ ] **8. Current acceptance rerun:** historical script finding only — `compile_master_book.py` और `verify_compilation.py` का सफल निष्पादन (Exit Code 0)।
+- [ ] **9. Representation parity:** verify exact corrected Drive file IDs and hashes; desktop drive-letter mounting is not authority. Native Google Docs and Word exports require their own parity checks.
 - [ ] **10. Chief Author Final Sign-Off:** चीफ ऑथर द्वारा सभी रिकॉन्सिलिएशन सुधारों की औपचारिक स्वीकृति।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+
+## Current Drive Project Audit — 10 October 2026
+
+**Scope:** Read-only source audit of Drive `RankCrackers Project/RankCrackers-55/lib` and pinned GitHub default HEAD `5161592ddafb42f1ecc8923cc7b7b0309934cc83`. No repository, recovery, runtime, production or deployment mutation.
+
+| Finding | Result | Meaning |
+|---|---:|---|
+| Drive lib files / Dart | 790 / 768 | Complete listing of 305 lib folders; 790 raw file downloads succeeded |
+| GitHub tracked lib files / Dart | 779 / 757 | Complete pinned Git tree |
+| Shared exact-byte files | 127 | Git blob SHA-1 matched |
+| Shared CRLF-only files | 644 | CRLF→LF Git blob SHA-1 matched; no other content difference |
+| Shared substantive code differences | 0 | All 771 common paths checked |
+| Drive-only Dart paths | 19 | Historical/local extras, not GitHub authority |
+| GitHub-only Dart paths | 8 | Taught-content-authority sources absent from this Drive folder |
+| Current Chapter 18 core matrix | 73 GitHub paths + 5 Drive-only rows | Path presence does not certify every behavior column |
+| Current disjoint architecture mapping | 757 assigned / 0 overlap / 0 unassigned | Explicit prefix classification over 15 layers |
+
+`route_names.dart` and `shared/widgets/dark_card.dart` are comment-only placeholders; `RouteNames` and `SharedDarkCard` claims were withdrawn. Other matrix symbols corrected: `RankCrackersWebApp`, `BackendProvider.adapter`, `IndiaDistricts.districts`, `IndiaStates.statesAndUTs`, `configureFirebaseEmulatorsFromDartDefines`.
+
+Security/privacy readback confirms: `TacticalSecureLayer.build` returns `child`; telemetry constructs and serializes both raw `userId` and hashed `anonymizedUserId`, and capture awaits `_persistQueue()`; `GlobalErrorHandler.handleFatal` has one current lib caller at `main.dart:51`; App Check activation has try/catch and no custom 5-second timeout. Firestore service declares 21 named `*Collection` string constants. Router reads `selectedExamSync()` and checks `isMissionValid`; navigation shell returns nonzero branches to branch 0.
+
+**Static source discrepancy:** `main_web.dart` imports six files absent from current GitHub, including `web/shared/rc_colors.dart`, `rc_panel.dart`, `rc_field.dart`, `rc_loaders.dart`, `rc_layout.dart`, and `features/auth/presentation/screens/admin_invite_screen.dart`. All six are present in the Drive snapshot. This is a source dependency finding, not a measured build outcome. Drive extras must not be copied into GitHub on book authority.
+
+**Remaining HOLD:** Runtime/visual/performance/security enforcement tests, all matrix behavior columns, production provenance, full Word/native Docs parity and final acceptance remain unverified. Historical Section 14.4 numbers describe the former 776-file snapshot only. Current Drive MD/HTML upload parity is verified separately by byte readback.

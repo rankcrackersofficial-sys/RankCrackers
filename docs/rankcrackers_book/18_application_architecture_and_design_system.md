@@ -1,5 +1,10 @@
 # Volume D — Application Architecture
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/18_application_architecture_and_design_system.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/18_application_architecture_and_design_system.md) · source blob `5ca38e2f5407930dbf5c44cf4b938382cb16c6b9`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Multiplatform Blueprint, Tactical Noir Design System & Reactive State Engine
 
 ---
@@ -7,14 +12,14 @@
 # Chapter 18 — Application Architecture, Multiplatform Design System, Responsive Engine और Riverpod State Topology
 
 > **Canonical Hierarchy:** Volume D → Part 1 → Chapter 18  
-> **Source Verification Status:** AUDIT HOLD — NOT FINAL (Subject to Chief Author Claim Register [`18_chapter_18_claim_register.md`](18_chapter_18_claim_register.md)) | Grounded against 776 Dart files (`lib/`)  
+> **Source Verification Status:** AUDIT HOLD — NOT FINAL (Subject to Chief Author Claim Register [`18_chapter_18_claim_register.md`](18_chapter_18_claim_register.md)) | Current tracked census: 757 Dart files (`lib/`); former 776-file local matrix is historical  
 > **Primary Language:** उच्च-स्तरीय तकनीकी हिन्दी (High-Register Technical Hindi) | Code, File Paths & Symbols: Original English
 
 ---
 
 ### Executive Overview
 
-Rank Crackers का तकनीकी ढांचा (Application Architecture) एक उच्च-प्रदर्शन, बहु-मंचीय (Multiplatform) और सामरिक स्तर पर सुरक्षित (Tactically Hardened) आर्किटेक्चर पर आधारित है। जहाँ सामान्य एप्लिकेशन सतही टेम्पलेट्स पर निर्भर होते हैं, वहीं Rank Crackers ने **Flutter 3.x**, **GoRouter 17.x** (`go_router: ^17.3.0`), **Flutter Riverpod 2.6.x** (`flutter_riverpod: ^2.6.1`), और कस्टम **Tactical Noir Design System** का उपयोग करके एक ऐसा इंजन तैयार किया है जो बजट एंड्रॉइड स्मार्टफोन्स (360dp चौड़ाई) से लेकर 4K डेस्कटॉप मॉनिटर्स तक 60–120 FPS रिस्पॉन्सिव परफॉर्मेंस और मिलिट्री-ग्रेड विश्वसनीयता प्रदान करता है।
+RankCrackers का client Flutter, GoRouter और Riverpod पर आधारित है। `pubspec.yaml` dependency constraints दर्ज करता है; वे installed SDK या measured device performance का प्रमाण नहीं हैं। Tactical Noir design tokens और responsive helpers source में हैं। 60–120 FPS, zero-drop और व्यापक security/reliability guarantees इस edition में achieved results नहीं माने जाते।
 
 यह अध्याय Rank Crackers के क्लाइंट-साइड आर्किटेक्चर का संपूर्ण विश्लेषण करता है—जिसमें मोबाइल और वेब के बूटस्ट्रैप अनुक्रम (Bootstrap Cascades), 5-ब्रांच नेविगेशन शेल (`MainNavigationShell`), गणितीय रूप से स्केल होने वाला रिस्पॉन्सिव इंजन (`ResponsiveHelper`), लग्जरी डार्क डिज़ाइन टोकन्स (`AppColors`, `AppTypography`, `AppRadius`, `AppSpacing`, `AppSurfaces`, `AppTextStyles`, `AppTheme`), और फॉल्ट-टॉलरेंट टेलीमेट्री इंजन (`TelemetryEngine`) का स्रोत-कोड आधारित प्रमाण दर्ज है।
 
@@ -542,7 +547,7 @@ class GlobalErrorHandler {
 
 ## Section 9: Performance Optimization & Render Hygiene
 
-Rank Crackers को विभिन्न हार्डवेयर विन्यासों पर 60–120 FPS पर सुचारू रूप से चलाने के लिए निम्नलिखित अनुकूलन सिद्धांत कोडबेस में लागू हैं:
+Performance-oriented source patterns नीचे दर्ज हैं। Hardware-specific 60–120 FPS और zero-drop performance measured benchmarks उपलब्ध होने तक design targets हैं।
 
 1. **स्लिवर वर्चुअलाइज़ेशन (Sliver Virtualization):** `DashboardScreen` और DigiBook library में `CustomScrollView` मौजूद है; DigiBook के subject-unit path में `SliverList`/`SliverChildBuilderDelegate` भी मौजूद हैं। इसे पूरे ऐप के हर card के लिए automatic virtualization न लिखें; widget-by-widget verification आवश्यक है।
 2. **रिपेन्ट बाउंड्रीज (RepaintBoundaries):** `RepaintBoundary` का प्रमाण visual QA tests में मिलता है। वर्तमान source audit से यह सिद्ध नहीं होता कि dashboard, DigiBook और सभी high-frequency animation cards में यह wrapper लागू है; इसलिए इसे implemented global guarantee नहीं, targeted QA technique लिखें।
@@ -734,7 +739,7 @@ Chief Author Mandate के तहत Antigravity 2.0 द्वारा नि�
 3. **Resolve each claim against current repository:** निष्पादित। `pubspec.yaml` (`1.0.0+1`, `go_router: ^17.3.0`, `flutter_riverpod: ^2.6.1`) और वास्तविक फ़ाइल लंबाई दर्ज की गई।
 4. **Correct wrong symbols & contracts:** निष्पादित। `_flushBuffer` को वास्तविक पब्लिक फलन `flush` से बदला गया; `capture` से अप्रयुक्त `TelemetrySeverity` हटाया गया; `main_web.dart` की सीमा स्पष्ट की गई।
 5. **Replace unsupported certainty with verified evidence:** निष्पादित। अवास्तविक दावों के स्थान पर वास्तुकला नियम और लक्षित परफॉर्मेंस हाइजीन दर्ज की गई।
-6. **Build 776-Dart-file architecture evidence matrix:** निष्पादित (Section 14 में विस्तृत)।
+6. **Historical 776-Dart-file matrix:** retained in Section 14; current full layer-partition revalidation remains open.
 7. **Add atomic implementation notes for architecture dependencies:** निष्पादित (Section 15 में विस्तृत)।
 8. **Update local chapter, index and master compiler inputs:** निष्पादित।
 9. **Regenerate Master Markdown and HTML with compiler script:** निष्पादित।
@@ -742,11 +747,19 @@ Chief Author Mandate के तहत Antigravity 2.0 द्वारा नि�
 
 ---
 
-## Section 14: Comprehensive 776-Dart-File Architecture Evidence Matrix
+## Section 14: Historical Local Architecture Matrix and Current GitHub Census
 
-Rank Crackers कोडबेस के संपूर्ण `lib/` डायरेक्टरी के 776 Dart सोर्सेज़ का 15-स्तरीय वास्तुकला वर्गीकरण और साक्ष्य विवरण नीचे दर्ज है:
+Current default-branch tree contains 757 Dart files. The following 776-file distribution describes a former local inventory, not this commit. Its counts, 78-row coverage and derived remainder are retained for historical audit continuity only. Each referenced path is classified again in the current reconciliation register.
 
-### 14.1 एग्जीक्यूटिव वास्तुकला वितरण (Executive Layer Distribution — 776 Dart Files)
+| Current GitHub metric | Value |
+|---|---:|
+| Tracked `lib/` files | 779 |
+| Dart files | 757 |
+| Non-Dart files | 22 |
+| Tracked `lib/` bytes | 3,438,588 |
+| Tracked Dart bytes | 3,301,582 |
+
+### 14.1 एग्जीक्यूटिव वास्तुकला वितरण (Current GitHub Path Partition — 757 Dart Files)
 
 | Tier ID | Architectural Layer | Path Scope | Files | Primary State & Authority | Canonical Volume Mapping |
 |---|---|---|---|---|---|
@@ -755,33 +768,36 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | **L03** | Design Tokens & Widgets | `lib/core/theme/`, `lib/core/widgets/`, `lib/core/utils/` | 18 | Tactical Noir Tokens, `ResponsiveHelper` | Volume D (Chapter 18) |
 | **L04** | Core Infrastructure & Telemetry | `lib/core/telemetry/`, `lib/core/errors/`, `lib/core/firebase/`, `lib/core/authority/`, `lib/core/network/`, `lib/core/storage/`, `lib/core/services/`, `lib/core/backend/`, `lib/core/notifications/`, `lib/core/learning/` | 57 | `TelemetryEngine`, `GlobalErrorHandler`, Firestore Adapters | Volume D (Chapter 18) & Vol H (Ch 16) |
 | **L05** | Shared Session & Components | `lib/shared/` | 7 | `SessionManager`, `sessionUserProvider`, `DarkCard` | Volume D (Chapter 18) & Vol B (Ch 08) |
-| **L06** | Founder Web Operations | `lib/web/` | 28 | `AuthGate`, `WebShell`, Mission Control, Revenue | Volume C (Chapter 13) |
-| **L07** | Academic Intelligence & Models | `lib/core/ai/`, `lib/core/engines/`, `lib/core/knowledge/`, `lib/core/models/`, `lib/core/topic_graph/`, तथा शेष cognitive models (`admin/`, `analytics/`, `constants/`, `diagnostic/`, `exam/`, `language/`) | 182 | `KnowledgeEngineState`, Topic Heat, Graph Engine | Volume F (Chapter 19) |
-| **L08** | Identity, Auth & Mission Gates | `lib/features/auth/`, `lib/features/profile/`, `lib/features/onboarding/`, `lib/features/deep_profile/` | 56 | Phone Auth, Profile Completion, Sacred Citadel | Volume B, Part 1 (Chapter 08) |
+| **L06** | Founder Web Operations | `lib/web/` | 12 | `AuthGate`, `WebShell`, Mission Control, Revenue | Volume C (Chapter 13) |
+| **L07** | Academic Intelligence & Models | `lib/core/ai/`, `lib/core/engines/`, `lib/core/knowledge/`, `lib/core/models/`, `lib/core/topic_graph/`, तथा शेष cognitive models (`admin/`, `analytics/`, `constants/`, `diagnostic/`, `exam/`, `language/`) | 181 | `KnowledgeEngineState`, Topic Heat, Graph Engine | Volume F (Chapter 19) |
+| **L08** | Identity, Auth & Mission Gates | `lib/features/auth/`, `lib/features/profile/`, `lib/features/onboarding/`, `lib/features/deep_profile/` | 55 | Phone Auth, Profile Completion, Sacred Citadel | Volume B, Part 1 (Chapter 08) |
 | **L09** | Dashboard Command Surface | `lib/features/dashboard/`, `lib/features/home/` | 57 | Daily Command Grid, Readiness Ring, Activity Feed | Volume B, Part 2 (Chapter 09) |
 | **L10** | Crucible Protocol & Assessment | `lib/features/crucible/`, `lib/features/test_arena/`, `lib/features/test_engine/`, `lib/features/revision/`, `lib/features/rebuild/`, `lib/features/assessment/`, `lib/features/exam/` | 87 | 98-Day Modulo, Test Citadels, Rebuild Workers | Volume B, Part 3 (Chapter 10) |
 | **L11** | Syllabus Tree & DigiBook Bridge | `lib/features/syllabus/`, `lib/features/digibook/`, `lib/features/pyq/`, `lib/features/mcq/` | 73 | Variable-depth authority tree, DigiBook Reader, Micro/Atomic Nodes | Volume B, Part 4–5 (Chapters 11 & 23) |
-| **L12** | Founder Backoffice Pipeline | `lib/features/admin/`, `lib/features/opportunities/`, `lib/features/academic_factory/`, `lib/features/preview/`, `lib/features/archive/` | 130 | Ingestion Review, Recruitment Pipeline, Admin Panels | Volume C (Chapter 13) |
+| **L12** | Founder Backoffice Pipeline | `lib/features/admin/`, `lib/features/opportunities/`, `lib/features/academic_factory/`, `lib/features/preview/`, `lib/features/archive/` | 129 | Ingestion Review, Recruitment Pipeline, Admin Panels | Volume C (Chapter 13) |
 | **L13** | Student Analytics & Mastery | `lib/features/analytics/`, `lib/features/diagnostic/`, `lib/features/progress/`, `lib/features/progress_tracker/`, `lib/features/performance/`, `lib/features/rankings/`, `lib/features/study_room/`, `lib/features/splash/`, `lib/features/test_analysis/`, `lib/features/courses/`, `lib/features/knowledge_graph/`, `lib/features/notifications/`, `lib/features/planner/`, `lib/features/mentor/`, `lib/features/notes/` | 31 | Progress Telemetry, Rank Matrix, Diagnostic Trees | Volume F (Chapter 19) |
 | **L14** | Personalization Intelligence | `lib/features/personalization/` | 35 | Smart Entry, Adaptive Revision Queues, Fluency | Volume F, Part 1 (Chapter 19) & Vol B |
 | **L15** | App Config & Data Seeds | `lib/config/`, `lib/data/`, `lib/database/` | 6 | `AppConfig`, India State/District Seeds, Local DB | Volume D & E (Chapter 14/18) |
-| **TOTAL** | **Comprehensive Codebase Scope** | **Entire `lib/` Source Tree** | **776** | **Unified Cognitive Operating System** | **All Volumes A through I** |
+| **TOTAL** | **Comprehensive Codebase Scope** | **Entire `lib/` Source Tree** | **757** | **Unified Cognitive Operating System** | **All Volumes A through I** |
 
 ---
 
-### 14.2 वास्तुकला-महत्वपूर्ण स्रोत पंक्तियों का एटॉमिक एविडेंस मैट्रिक्स (Verified 78 Architecture Rows)
 
-नीचे architecture core (Bootstrap, Router, Theme, Widgets, Telemetry, Error Governance, Shared Session, Backend Adapters, Web Harness, Config) के **ठीक 78 सत्यापित स्रोत-कोड पंक्तियाँ (Verified Existing Rows)** दर्ज हैं। इस तालिका में केवल वे स्रोत पथ शामिल हैं जो वर्तमान `lib/` डायरेक्टरी में भौतिक रूप से मौजूद हैं। पूर्व प्रारूप में पाए गए 10 अनुपस्थित/स्टेल पाथ्स को इस तालिका से पूरी तरह पृथक कर **Section 14.3 (Unresolved & Stale Paths Register)** में क्वारंटाइन कर दिया गया है।
+Partition evidence: `current_layer_partition.json` at GitHub commit `5161592ddafb42f1ecc8923cc7b7b0309934cc83`: 757 assigned, 0 overlaps, 0 unassigned. L01 contains the four exact root Dart files including `main_web_emulator.dart`; all other groups use explicit Chapter 18 path-prefix scopes. This is an editorial path classification, not dependency or runtime validation.
+
+### 14.2 वास्तुकला-महत्वपूर्ण स्रोत पंक्तियों का एटॉमिक एविडेंस मैट्रिक्स (73 Current GitHub Paths — Source Presence Checked)
+
+Current matrix में 73 unique paths GitHub tree से मिले हैं। Path existence और explicit symbol presence जाँची गई है; बाकी caller, output, failure, security और downstream descriptions स्वतः runtime-verified नहीं हैं। पाँच Drive-only rows नीचे अलग रखी गई हैं।
 
 | Repository Path | File Type | Key Symbols | Entry / Caller | Inputs | Outputs | Mutations | Failure Behavior | Security Boundary | Downstream Consumers | Verified Reference | Book Mapping |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `lib/main.dart` | Dart | `main()`, `RankCrackersApp` | Flutter Engine / OS | Platform Env | `Future<void>`, Root Widget | Init Bindings, Firebase, Session, AppCheck | Catch-all via `GlobalErrorHandler` | Play Integrity / DeviceCheck | Entire App | Source L16-53 | Vol D, Ch 18 |
 | `lib/main_web.dart` | Dart | `main()`, `RankCrackersWebApp`, `AuthGate` | Web Browser | URI, Web Env | Root Web Widget | Init Firebase, Session | Centered Loader / Auth redirect | Token Invite / Founder Claims | Founder Console | Source L19-24 | Vol C, Ch 13 & Vol D |
-| `lib/main_web_emulator.dart` | Dart | `main()`, `RankCrackersWebEmulatorApp` | Web Test Runner | Localhost Ports | Emulator Bound App | Local Ports Override | Console Warning | Local Only (Debug) | Web E2E Tests | Source | Vol H, Ch 16 |
+| `lib/main_web_emulator.dart` | Dart | `main()`, `RankCrackersWebApp` imported from `main_web.dart` | Web Test Runner | Localhost Ports | Emulator Bound App | Local Ports Override | Console Warning | Local Only (Debug) | Web E2E Tests | Source | Vol H, Ch 16 |
 | `lib/firebase_options.dart` | Dart | `DefaultFirebaseOptions` | `main.dart`, `main_web.dart` | Platform Enum | `FirebaseOptions` | None | Unsupported Platform Exception | API Keys (Restricted) | Firebase Core | Source | Vol D, Ch 18 |
 | `lib/core/router/app_router.dart` | Dart | `appRouter`, 5 Gates | `main.dart` | `BuildContext`, State | `GoRouter` Instance | Route Redirects, Telemetry | Splash Fallback | Auth + Profile + Mission Gates | Navigation Shell | Source L1-486 | Vol D, Ch 18 |
 | `lib/core/router/route_guard.dart` | Dart | `RouteGuard` | `app_router.dart` | User, Location | Redirect Route | None | Deny / Redirect | Session Verification | GoRouter | Source | Vol D, Ch 18 |
-| `lib/core/router/route_names.dart` | Dart | `RouteNames` | Routers, Widgets | None | Static Route Strings | None | None | None | Navigation | Source | Vol D, Ch 18 |
+| `lib/core/router/route_names.dart` | Dart | No runtime symbol — comment-only placeholder | Routers, Widgets | None | Static Route Strings | None | None | None | Navigation | Source | Vol D, Ch 18 |
 | `lib/core/navigation/main_navigation_shell.dart` | Dart | `MainNavigationShell` | `app_router.dart` | `navigationShell` | Scaffold with BottomBar | Branch Switch | PopScope to Branch 0 | Non-Zero Tab Return Law | Student Screens | Source L1-119 | Vol D, Ch 18 |
 | `lib/core/navigation/main_shell.dart` | Dart | `MainShell` | Legacy Router | Shell Route | Shell Widget | None | None | Legacy Shell | Dashboard | Source | Vol D, Ch 18 |
 | `lib/core/theme/app_colors.dart` | Dart | `AppColors` | UI Widgets | None | Design Tokens (Color) | None | Constant | Contrast target; WCAG level not measured in this audit | Entire UI | Source L3-59 | Vol D, Ch 18 |
@@ -803,7 +819,7 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/core/telemetry/student_route_telemetry.dart` | Dart | `StudentRouteTelemetry`| `app_router.dart` | Matched Route Path | `Future<void>` | Route Event Capture | Silently Ignore Error | Non-Founder Filter | Route Analytics | Source | Vol D, Ch 18 |
 | `lib/core/errors/global_error_handler.dart` | Dart | `GlobalErrorHandler` | `main()`, Engine | Error, StackTrace | Void | Crashlytics Record | Console Print | Non-Debug Crash Shield | Crash Dashboard | Source L1-27 | Vol D, Ch 18 |
 | `lib/core/firebase/firestore_service.dart` | Dart | `FirestoreService` | Repositories, Telemetry| Collections, Items | Streams, Futures, Batch | Firestore Mutations | Batch Commit Rethrow | Rule Authorization | Data Layer | Source L1-863 | Vol E, Ch 14 |
-| `lib/core/firebase/firebase_emulator_config.dart`| Dart | `configureFirebaseEmulators...`| `main.dart` | Dart Defines | Void | Emulators Host Override | Debug Warning | Local Ports Only | Development | Source | Vol H, Ch 16 |
+| `lib/core/firebase/firebase_emulator_config.dart`| Dart | `configureFirebaseEmulatorsFromDartDefines`| `main.dart` | Dart Defines | Void | Emulators Host Override | Debug Warning | Local Ports Only | Development | Source | Vol H, Ch 16 |
 | `lib/core/authority/exam_pattern_authority.dart`| Dart | `ExamPatternAuthority` | Crucible, Test | Exam Code | Pattern Configuration | None | Default Pattern | Academic Accuracy | Assessment | Source | Vol B, Ch 10 |
 | `lib/core/authority/mission_exam_contract.dart` | Dart | `MissionExamContract` | Mission Realm | Recruitment ID | Exam Contract Model | None | Fallback Contract | Contract Validation | Mission Setup | Source | Vol B, Ch 08 |
 | `lib/core/constants/founder_identity.dart` | Dart | `FounderIdentity` | Router, Auth | `User? user` | Boolean `isFounderUser` | None | False on null/error | Hardcoded UID White-List| Router Bypass | Source | Vol D, Ch 18 |
@@ -818,7 +834,7 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/core/backend/atomic_coverage_repository.dart`| Dart | `AtomicCoverageRepository`| Progress Engine | UID, Topic ID | Coverage Stream / Future| Firestore Coverage Doc | Cache Fallback | Student Scoped Rule | Dashboard | Source | Vol F, Ch 19 |
 | `lib/core/backend/atomic_mastery_repository.dart` | Dart | `AtomicMasteryRepository` | Knowledge Engine | UID, Node ID | Mastery State | Firestore Mastery Doc | Offline Queue | Student Scoped Rule | Knowledge Engine| Source | Vol F, Ch 19 |
 | `lib/core/backend/atomic_risk_repository.dart` | Dart | `AtomicRiskRepository` | Rebuild Engine | UID, Node ID | Risk State Stream | Firestore Risk Doc | Default Low Risk | Student Scoped Rule | Crucible Rebuild| Source | Vol F, Ch 19 |
-| `lib/core/backend/backend_provider.dart` | Dart | `backendProvider` | Riverpod | Ref | Unified Backend Instance | In-Memory Singletons | Initialization Error | Service Binding | Core UI | Source | Vol D, Ch 18 |
+| `lib/core/backend/backend_provider.dart` | Dart | `BackendProvider.adapter` | Riverpod | Ref | Unified Backend Instance | In-Memory Singletons | Initialization Error | Service Binding | Core UI | Source | Vol D, Ch 18 |
 | `lib/core/backend/blueprint_repository.dart` | Dart | `BlueprintRepository` | Exam Setup | Exam Code | `ExamBlueprint` | Blueprint Cache | Fallback Blueprint | Published Only | Crucible, Quiz | Source | Vol B, Ch 10 |
 | `lib/core/backend/crucible_repository.dart` | Dart | `CrucibleRepository` | Crucible Screen | UID, Day Number | Schedule, Attempts | Schedule State Update | Offline Ring Fallback | Student Scoped Rule | 98-Day Modulo | Source | Vol B, Ch 10 |
 | `lib/core/backend/digibook_repository.dart` | Dart | `DigiBookRepository` | DigiBook Reader | Node ID, Subject | Canonical Reading Chunk | Local Cache Sync | Pre-packaged Asset | Read-Only Catalog | DigiBook | Source | Vol B, Ch 11 |
@@ -835,26 +851,32 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/shared/session/session_manager.dart` | Dart | `SessionManager` | App, Routers | None | Sync Keys, Preferences | SharedPreferences Write | Sync Fallback to False | Local Storage Authority| Entire App | Source L1-140 | Vol D, Ch 18 |
 | `lib/shared/providers/session_provider.dart` | Dart | `sessionUserProvider` | Riverpod | Ref, Auth Stream | `AsyncValue<User?>` | In-Memory Auth State | AsyncError | Firebase Auth Binding | Root Providers | Source | Vol D, Ch 18 |
 | `lib/shared/widgets/command_header.dart` | Dart | `CommandHeader` | Screens | Title, Subtitle, Actions| Standardized Header | None | Null Action Omission | Visual Alignment | Screen Headers | Source | Vol D, Ch 18 |
-| `lib/shared/widgets/dark_card.dart` | Dart | `SharedDarkCard` | Shared Panels | Child, Border, Color | Surface Container | None | Fallback Decoration | Design Consistency | Shared Screens | Source | Vol D, Ch 18 |
+| `lib/shared/widgets/dark_card.dart` | Dart | No runtime symbol — comment-only placeholder | Shared Panels | Child, Border, Color | Surface Container | None | Fallback Decoration | Design Consistency | Shared Screens | Source | Vol D, Ch 18 |
 | `lib/shared/widgets/formatted_math_text.dart` | Dart | `FormattedMathText` | Notes, Tests | LaTeX / Text String | Math Rendered Widget | None | Fallback Plain Text | Safe Expression Parse | Academic UI | Source | Vol B, Ch 11 |
 | `lib/shared/widgets/governed_not_ready_panel.dart`| Dart | `GovernedNotReadyPanel` | Incomplete Feats | Feature Name, Stage | Tactically Muted Banner | None | Retry Action | Prevents Fake UI | Under-Dev Screens| Source | Vol D, Ch 18 |
 | `lib/shared/widgets/tactical_button.dart` | Dart | `TacticalButton` | Secondary Actions| Label, OnPressed | Outlined Tactical Btn | None | Disabled on null | Action Guard | Secondary UI | Source | Vol D, Ch 18 |
-| `lib/web/admin/admin_my_access_panel.dart` | Dart | `AdminMyAccessPanel` | Founder Web | User Token, Claims | RBAC Access Grid | Role Assignment | Denied Banner | Superadmin Claims | Web Shell | Source | Vol C, Ch 13 |
-| `lib/web/founder/access/access_security_web.dart`| Dart | `AccessSecurityWeb` | Web Security | Admin Claims | Security Guard Surface | Token Revocation | Access Log | Founder Hardened Rule | Web Access | Source | Vol C, Ch 13 |
 | `lib/web/founder/mission_control/mission_control_room.dart`| Dart | `MissionControlRoom` | Founder Web | Mission ID | Comprehensive Ops Room | Mission Publishing | Loading State | Founder Full Authority| Mission Control | Source | Vol C, Ch 13 |
 | `lib/web/founder/health/founder_student_health_web.dart`| Dart | `FounderStudentHealthWeb`| Founder Web | Realtime Feed | Telemetry Health Grid | Health Flag Overrides | Connection Reconnect | Founder Read Access | Telemetry Ops | Source | Vol C, Ch 13 |
-| `lib/web/founder/revenue/revenue_subscription_control_web.dart`| Dart| `RevenueSubscriptionControlWeb`| Founder Web | Subscription Data | Financial Ops Grid | Tier Entitlement Writes| Transaction Log Error | Financial Audit Guard | Finance Ops | Source | Vol C, Ch 13 |
-| `lib/web/founder/system/founder_system_operations_web.dart`| Dart | `FounderSystemOperationsWeb`| Founder Web | System Metrics | Worker / DB Control | Manual Worker Trigger | Worker Crash Alert | Founder Root Authority | System Ops | Source | Vol C, Ch 13 |
-| `lib/web/shared/rc_colors.dart` | Dart | `rcGold`, `rcBg`, `rcSurface` | Web UI | None | Web Palette Tokens | None | Constant | Web High Contrast | Founder Web | Source | Vol C, Ch 13 |
 | `lib/web/shared/unified_command_console.dart` | Dart | `UnifiedCommandConsole` | Web Shell | Navigation State | Master Web Grid Shell | Workspace Switch | Session Timeout | Web Admin Token | Founder Web Root| Source | Vol C, Ch 13 |
 | `lib/config/app_config.dart` | Dart | `AppConfig` | Bootstrap | Env Flags | Environment Variables | None | Default Values | Key Hiding | Entire App | Source | Vol D, Ch 18 |
 | `lib/config/environment.dart` | Dart | `Environment` | Config, Network | Environment Enum | Active Env (`prod/dev`) | None | Default to Prod | Build Flag Enforcement | App Bootstrap | Source | Vol D, Ch 18 |
 | `lib/data/exam_seed_data.dart` | Dart | `ExamSeedData` | Onboarding | None | Static Exam Lists | Local Memory | None | Integrity Verification | Onboarding | Source | Vol B, Ch 08 |
-| `lib/data/india_districts.dart` | Dart | `indiaDistricts` | Profile Setup | State Code | Districts List Map | None | Empty List Fallback | Electoral/Census Match | Profile Screen | Source | Vol B, Ch 08 |
-| `lib/data/india_states.dart` | Dart | `indiaStates` | Mission Setup | None | Sovereign State List | None | 28 States + 8 UTs | Standard Census Codes | Mission Realm | Source | Vol B, Ch 08 |
+| `lib/data/india_districts.dart` | Dart | `IndiaDistricts.districts` | Profile Setup | State Code | Districts List Map | None | Empty List Fallback | Electoral/Census Match | Profile Screen | Source | Vol B, Ch 08 |
+| `lib/data/india_states.dart` | Dart | `IndiaStates.statesAndUTs` | Mission Setup | None | Sovereign State List | None | 28 States + 8 UTs | Standard Census Codes | Mission Realm | Source | Vol B, Ch 08 |
 | `lib/database/local/dashboard_local_datasource.dart`| Dart| `DashboardLocalDatasource`| Dashboard | UID, Date | Cached Dashboard Data | SQLite / Isar Local Write| Fallback to Remote | Local Data Isolation | Offline Dash | Source | Vol B, Ch 09 |
 
 ---
+
+
+#### Drive-only historical matrix rows — excluded from current GitHub matrix
+
+These five paths exist in Drive but are absent from the pinned default branch. Their earlier behavior claims are retained only as historical descriptions.
+
+| `lib/web/admin/admin_my_access_panel.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Dart | `AdminMyAccessPanel` | Founder Web | User Token, Claims | RBAC Access Grid | Role Assignment | Denied Banner | Superadmin Claims | Web Shell | Source | Vol C, Ch 13 |
+| `lib/web/founder/access/access_security_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart | `AccessSecurityWeb` | Web Security | Admin Claims | Security Guard Surface | Token Revocation | Access Log | Founder Hardened Rule | Web Access | Source | Vol C, Ch 13 |
+| `lib/web/founder/revenue/revenue_subscription_control_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart| `RevenueSubscriptionControlWeb`| Founder Web | Subscription Data | Financial Ops Grid | Tier Entitlement Writes| Transaction Log Error | Financial Audit Guard | Finance Ops | Source | Vol C, Ch 13 |
+| `lib/web/founder/system/founder_system_operations_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart | `FounderSystemOperationsWeb`| Founder Web | System Metrics | Worker / DB Control | Manual Worker Trigger | Worker Crash Alert | Founder Root Authority | System Ops | Source | Vol C, Ch 13 |
+| `lib/web/shared/rc_colors.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Dart | `rcGold`, `rcBg`, `rcSurface` | Web UI | None | Web Palette Tokens | None | Constant | Web High Contrast | Founder Web | Source | Vol C, Ch 13 |
 
 ### 14.3 Unresolved & Stale Paths Register (10 Stale Paths Isolated & Reconciled)
 
@@ -862,20 +884,20 @@ Chief Author Mandate एवं Claim `CH18-004` के अंतर्गत उ
 
 | Claimed Stale Path | Existence Check | Claimed Functionality | Actual Codebase Reality / True Replacement | Action Taken in Chapter 18 |
 |---|---|---|---|---|
-| `lib/core/utils/math_renderer_util.dart` | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/security_hasher.dart` | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/string_utils.dart` | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/founder_authority.dart` | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/authority_boundary_guard.dart` | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/storage/local_vault.dart` | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/services/sound_service.dart` | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/services/haptic_feedback_service.dart` | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/notifications/notification_service.dart` | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
 
 ---
 
-### 14.4 डोमेन डायरेक्टरी क्रॉस-रेफरेंस इंडेक्स (Domain Directory Cross-Reference Index — Remaining 698 Dart Files)
+### 14.4 Historical 776-file snapshot —  डोमेन डायरेक्टरी क्रॉस-रेफरेंस इंडेक्स (Domain Directory Cross-Reference Index — Remaining 698 Dart Files)
 
 वास्तुकला कोर के 78 सत्यापित घटकों के अतिरिक्त शेष 698 फीचर व डोमेन सोर्सेज़ ($776 - 78 = 698$) का पदानुक्रमित वितरण और कैनोनिकल वॉल्यूम मैपिंग नीचे संक्षेपित है:
 
@@ -986,5 +1008,52 @@ Chief Author Mandate के अनुसार आर्किटेक्चर
 - **Volume:** D (Application Architecture)
 - **Part:** 1 (Multiplatform Blueprint, Tactical Noir Design System & Reactive State Engine)
 - **Chapter:** 18
-- **Grounded Source Dependencies:** 776 Dart files across `lib/` (verified in Section 14).
+- **Grounded Source Dependencies:** 757 tracked Dart files at the recorded GitHub commit. Section 14 retains the older local 776-file inventory as historical evidence only.
 - **Audit Verification:** Chief Author readback ने कई contracts और platform boundaries verify किए हैं, लेकिन Section 14 matrix में 10 stale paths, count mismatch और कुछ unsupported performance/privacy claims पाए गए हैं। जब तक reconciliation command पूरा न हो, Chapter 18 की स्थिति **AUDIT HOLD — NOT FINAL** रहेगी।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/admin/admin_my_access_panel.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/access/access_security_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/revenue/revenue_subscription_control_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/system/founder_system_operations_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/shared/rc_colors.dart` | UNRESOLVED AT DEFAULT HEAD |
+
+## Current Drive Project Audit — 10 October 2026
+
+**Scope:** Read-only source audit of Drive `RankCrackers Project/RankCrackers-55/lib` and pinned GitHub default HEAD `5161592ddafb42f1ecc8923cc7b7b0309934cc83`. No repository, recovery, runtime, production or deployment mutation.
+
+| Finding | Result | Meaning |
+|---|---:|---|
+| Drive lib files / Dart | 790 / 768 | Complete listing of 305 lib folders; 790 raw file downloads succeeded |
+| GitHub tracked lib files / Dart | 779 / 757 | Complete pinned Git tree |
+| Shared exact-byte files | 127 | Git blob SHA-1 matched |
+| Shared CRLF-only files | 644 | CRLF→LF Git blob SHA-1 matched; no other content difference |
+| Shared substantive code differences | 0 | All 771 common paths checked |
+| Drive-only Dart paths | 19 | Historical/local extras, not GitHub authority |
+| GitHub-only Dart paths | 8 | Taught-content-authority sources absent from this Drive folder |
+| Current Chapter 18 core matrix | 73 GitHub paths + 5 Drive-only rows | Path presence does not certify every behavior column |
+| Current disjoint architecture mapping | 757 assigned / 0 overlap / 0 unassigned | Explicit prefix classification over 15 layers |
+
+`route_names.dart` and `shared/widgets/dark_card.dart` are comment-only placeholders; `RouteNames` and `SharedDarkCard` claims were withdrawn. Other matrix symbols corrected: `RankCrackersWebApp`, `BackendProvider.adapter`, `IndiaDistricts.districts`, `IndiaStates.statesAndUTs`, `configureFirebaseEmulatorsFromDartDefines`.
+
+Security/privacy readback confirms: `TacticalSecureLayer.build` returns `child`; telemetry constructs and serializes both raw `userId` and hashed `anonymizedUserId`, and capture awaits `_persistQueue()`; `GlobalErrorHandler.handleFatal` has one current lib caller at `main.dart:51`; App Check activation has try/catch and no custom 5-second timeout. Firestore service declares 21 named `*Collection` string constants. Router reads `selectedExamSync()` and checks `isMissionValid`; navigation shell returns nonzero branches to branch 0.
+
+**Static source discrepancy:** `main_web.dart` imports six files absent from current GitHub, including `web/shared/rc_colors.dart`, `rc_panel.dart`, `rc_field.dart`, `rc_loaders.dart`, `rc_layout.dart`, and `features/auth/presentation/screens/admin_invite_screen.dart`. All six are present in the Drive snapshot. This is a source dependency finding, not a measured build outcome. Drive extras must not be copied into GitHub on book authority.
+
+**Remaining HOLD:** Runtime/visual/performance/security enforcement tests, all matrix behavior columns, production provenance, full Word/native Docs parity and final acceptance remain unverified. Historical Section 14.4 numbers describe the former 776-file snapshot only. Current Drive MD/HTML upload parity is verified separately by byte readback.

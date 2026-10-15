@@ -1,5 +1,10 @@
 # लेखन, सत्यापन और प्रकाशन नीति (Editorial & Book Production Policy)
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/03_editorial_policy.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/03_editorial_policy.md) · source blob `46112a85a35e0fd63e7a681671cda51e875b5c8e`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## 1. पुस्तक का विस्तार और संपूर्णता
 
 यह पुस्तक page limit के अधीन नहीं होगी। इसका लक्ष्य 10–15 पृष्ठ का summary document बनाना नहीं, बल्कि Rank Cracker का पूर्ण professional reference work तैयार करना है। यदि project को ईमानदारी से समझाने के लिए सैकड़ों या हजारों पृष्ठ आवश्यक हों, तो पुस्तक उतनी ही विस्तृत होगी। संक्षिप्तता केवल वहाँ रखी जाएगी जहाँ दोहराव हो; महत्वपूर्ण detail कभी हटाई नहीं जाएगी।

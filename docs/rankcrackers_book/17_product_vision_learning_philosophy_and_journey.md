@@ -1,5 +1,10 @@
 # Volume A — Product और मूल दृष्टि
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/17_product_vision_learning_philosophy_and_journey.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/17_product_vision_learning_philosophy_and_journey.md) · source blob `a4f141f389af06bdf257f21688128387d952c76e`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Genesis, Philosophy, User Personas & The Sovereign Student Journey
 
 ---

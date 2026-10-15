@@ -1,9 +1,24 @@
 # Rank Cracker Book — Antigravity 2.0 Handoff Document
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/12_handoff_to_antigravity_2_0.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/12_handoff_to_antigravity_2_0.md) · source blob `e4ad7b895af49fd89448486dc93c77445a693c60`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 **Handoff recipient:** Antigravity 2.0  
 **Handoff purpose:** Rank Cracker Book project को व्यवस्थित रूप से आगे बढ़ाना  
 **Primary language:** हिन्दी, आवश्यक technical terminology और code English में  
-**Status:** Active long-form documentation project
+**Status:** GitHub-derived working manuscript; Chapter 18 remains on audit hold
+
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
 
 ## 1. Project objective
 
@@ -49,7 +64,7 @@ Application के runtime hierarchy labels को book hierarchy या officia
 
 Repository root:
 
-`G:\RankCrackers Project\RankCrackers-55`
+`G:\RankCrackers Project\RankCrackers-55` (historical local checkout; revalidate remote, branch and HEAD before use)
 
 Book manuscript folder:
 
@@ -72,7 +87,7 @@ Book manuscript folder:
 
 ## 5. Google Docs live manuscript
 
-Canonical Google Docs living book:
+Google Docs companion draft — partial, not the authoritative synchronized book:
 
 [Rank Cracker Book — Living Technical Reference](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
 
@@ -358,3 +373,10 @@ Chapter 18 (`18_application_architecture_and_design_system.md`) को live sour
 ### Stop condition
 
 जब तक stale paths, wrong symbols, unsupported guarantees और Drive sync discrepancy resolve या explicitly registered नहीं होते, Chapter 18 को **AUDIT HOLD — NOT FINAL** रखो और Chapter 09 पर आगे मत बढ़ो।
+
+
+## Current execution boundary
+
+This handoff authorizes documentation continuation only. It does not authorize Student Android/UI changes, queue recovery, GitHub writes, merge or deployment. Follow the recorded default-branch SHA for current technical descriptions. Preserve branch-specific contracts with their branch and commit; do not portray them as default-branch implementation. A newer Drive modification time changes neither authority nor acceptance status.
+
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.

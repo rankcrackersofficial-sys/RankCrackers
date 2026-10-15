@@ -1,10 +1,25 @@
 # Chief Author Audit — Current Book State and Antigravity 2.0 Writing Order
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/21_chief_author_audit_and_antigravity_work_order.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/21_chief_author_audit_and_antigravity_work_order.md) · source blob `111740e5afe4487a690244a1739bd6aa41643d33`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 **Audit date:** 10 October 2026 (IST)
 **Authority:** Chief Author / Editorial Control
 **Scope:** Local RankCrackers repository, book sources, compiled master files, source-path references, code-evidence claims and the connected Google Docs living manuscript.
 
 > यह document किसी पुराने progress report को प्रमाण नहीं मानता। नीचे का status current repository और current Google Docs readback से निकाला गया है। इसे Antigravity 2.0 के लिए writing order और acceptance gate माना जाए।
+
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
 
 ## 1. Executive status
 
@@ -12,7 +27,7 @@
 
 ### 1.1 What is currently healthy
 
-- `docs/rankcrackers_book/` में 23 compiler-ordered source documents, 12 canonical product-technical chapters, claim registers, reconciliation appendix, assets और generated master outputs मौजूद हैं।
+- `docs/rankcrackers_book/` में 24 compiler-ordered source documents, 12 canonical product-technical chapters, claim registers, reconciliation appendix, assets और generated master outputs मौजूद हैं।
 - Batch 02 compilation में **96,924 words**, **12,733 lines**, **H1 28**, **H2 192**, **H3 430**, **H4 262** दर्ज हैं। Compiler ने 23 source files और **1,043,493 source bytes** पढ़े; generated master MD **1,061,511 bytes** और HTML **1,216,934 bytes** हैं।
 - Current source census में **231 fenced code blocks** और **30 local image references** हैं।
 - `scripts/verify_compilation.py` readback में invalid file-URI occurrences **0**, tested local Markdown links **29**, broken links **0**, images verified **30**, missing images **0** मिले।
@@ -35,7 +50,7 @@
 
 ### 2.1 Local manuscript
 
-Canonical local location:
+Historical local working-copy location — not canonical repository authority:
 
 `G:/RankCrackers Project/RankCrackers-55/docs/rankcrackers_book/`
 
@@ -54,7 +69,7 @@ Current native Google Doc:
 
 The live readback contains the title page, editorial declaration, language policy, preliminary contents, manuscript status and short Dashboard/Crucible summaries. It does not contain the full local master. Therefore its status is **partial living draft**, not canonical synchronized book.
 
-The local repository remains the source of truth until a complete native-document import/update has been performed and read back.
+The GitHub default branch `safety/rc-g2-pre-notification-schema` at the recorded read commit is the technical authority. Local files and Google Docs are derived representations; neither supersedes GitHub.
 
 **Latest logo-only repair:** the native document's single inline cover object was replaced with the black-background display variant and read back as one remaining inline object. This resolves logo visibility only; it does not make the partial Google Doc a full synchronized manuscript.
 
@@ -66,62 +81,62 @@ The baseline audit found **37 distinct references to files that did not exist at
 
 #### Chapter 08 and Chapter 09
 
-- `lib/core/services/firestore_service.dart`
-- `lib/core/battle/battle_engine.dart`
+- `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/battle/battle_engine.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 13 — Founder operations
 
-- `lib/web/founder/repository/command_center_repository.dart`
-- `lib/web/founder/outcomes/outcome_verification_center.dart`
-- `lib/web/founder/missions/founder_mission_inventory.dart`
-- `functions/src/founder/admin_claims.ts`
-- `functions/src/founder/forensic_purge.ts`
+- `lib/web/founder/repository/command_center_repository.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/web/founder/outcomes/outcome_verification_center.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/web/founder/missions/founder_mission_inventory.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/founder/admin_claims.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/founder/forensic_purge.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 14 — Firestore and security dictionary
 
-- `lib/core/services/firestore_service.dart`
-- `functions/src/audit/founder_logger.ts`
+- `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/audit/founder_logger.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 15 — Cloud Functions and tests
 
-- `test/canonical_reconciliation_emulator.js`
-- `test/mission_lifecycle_emulator_roundtrip.js`
-- `test/realEmulatorE2EWorkerProof.test.ts`
-- `functions/callables/manage_user_access.js`
-- `functions/callables/toggle_ai_system.js`
-- `functions/callables/get_system_health.js`
-- `functions/callables/process_ai_task.js`
-- `functions/callables/get_secure_asset_url.js`
-- `functions/callables/handle_sentinel_action.js`
-- `functions/callables/handle_mission_action.js`
+- `test/canonical_reconciliation_emulator.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `test/realEmulatorE2EWorkerProof.test.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/manage_user_access.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/toggle_ai_system.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/get_system_health.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/process_ai_task.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/get_secure_asset_url.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/handle_sentinel_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/handle_mission_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 16 — Engineering operations
 
-- `lib/core/backend/firebase_emulator_config.dart`
-- `web/main.dart.js`
+- `lib/core/backend/firebase_emulator_config.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `web/main.dart.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 18 — Architecture claim register
 
-- `lib/core/utils/math_renderer_util.dart`
-- `lib/core/utils/security_hasher.dart`
-- `lib/core/utils/string_utils.dart`
-- `lib/core/widgets/paywall/tactical_paywall_overlay.dart`
-- `lib/core/authority/founder_authority.dart`
-- `lib/core/authority/authority_boundary_guard.dart`
-- `lib/core/storage/local_vault.dart`
-- `lib/core/services/sound_service.dart`
-- `lib/core/services/haptic_feedback_service.dart`
-- `lib/core/notifications/notification_service.dart`
+- `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapters 19 and 20 — academic/backend references
 
-- `functions/src/assessment/verification.ts`
-- `functions/src/assessment.ts`
-- `functions/src/admin.ts`
-- `functions/src/health.ts`
-- `functions/src/assets.ts`
-- `functions/src/triggers.ts`
-- `functions/src/workers.ts`
+- `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/admin.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/health.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/assets.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 **Required treatment:** every item must be either replaced with the actual path and exact symbol, or moved to an explicitly labelled `UNRESOLVED / HISTORICAL / PROPOSED` register. A stale path must never remain inside a “verified source” table.
 
@@ -287,3 +302,54 @@ Chapter 13 (`13_founder_web_operations_and_mission_control.md`) को पूर
 3. **9 Canonical Mission Pipeline Invariants:** `docs/patch_safety/rc_founder_web_canonical_backend_live_integration_20260831/` के 9 अनिवार्य सुरक्षा नियमों (Quad Identity Validation, `update_mission_variables` >=12 char reason, lifecycle fail-closed guards, official documents SHA-256 pipeline, publish readiness 5-criteria gate, और student health non-interference) को पूर्णतः संहिताबद्ध किया गया।
 4. **Live Discrepancy Heuristics:** `FounderMissionInventory` के `needsAttention` को लाइव कोडबेस (`realm == null || (!sourceReady && !sourceCandidate) || (!hasCanonicalVariables && !hasLegacyVariables)`) के अनुसार अद्यतन किया गया।
 5. **Governed Lifecycle & Deletion Preflight:** पोर्टफोलियो कार्ड के लाइफसाइकिल म्यूटेशन्स (`archive_realm`, `restore_realm`) तथा परमानेंट डिलीट प्रीफ़्लाइट (मिशन आईडी मिलान, >=12 वर्ण संस्थापक कारण, और शून्य-निर्भरता सत्यापन) को प्रामाणिक रूप से दर्ज किया गया।
+
+
+## Current book correction order superseding earlier operating authority
+
+GitHub governs this book. Do not copy Drive-only declarations into the repository to achieve parity. Reconcile claims against the pinned default branch, record unresolved paths and tests, and preserve Chapter 18 hold. Earlier local paths, counts and sign-off assertions in this audit are historical where they conflict with the current tree. Architecture branch contracts remain branch-specific; their presence or Founder-locked wording alone does not establish current default-branch implementation.
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/callables/get_secure_asset_url.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/get_system_health.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_mission_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_sentinel_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/manage_user_access.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/process_ai_task.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/toggle_ai_system.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/admin.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assets.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/audit/founder_logger.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/admin_claims.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/forensic_purge.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/health.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/triggers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/workers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/backend/firebase_emulator_config.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/battle/battle_engine.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/firestore_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/missions/founder_mission_inventory.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/outcomes/outcome_verification_center.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/repository/command_center_repository.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `test/canonical_reconciliation_emulator.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/realEmulatorE2EWorkerProof.test.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `web/main.dart.js` | UNRESOLVED AT DEFAULT HEAD |
+
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.

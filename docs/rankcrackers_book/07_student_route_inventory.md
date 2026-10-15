@@ -1,5 +1,10 @@
 # Preliminary Reference — Student Navigation और Route Inventory
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/07_student_route_inventory.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/07_student_route_inventory.md) · source blob `22d174dba19ccdc697be8d90d3087407b762aa03`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Section 1 — Student Navigation और Route Inventory
 
 यह chapter source-level route audit पर आधारित है। यह केवल screen names की सूची नहीं है; इसका उद्देश्य यह दर्ज करना है कि student application किन प्रवेश-बिंदुओं, guards और navigation branches से बनी है। प्रत्येक route का full screen behavior उसके dedicated chapter में अलग लिखा जाएगा। Code references भी शामिल होंगे ताकि behavior implementation से verify किया जा सके।

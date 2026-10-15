@@ -1,5 +1,10 @@
 # Volume I — Reference Appendices
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/20_master_reference_appendices.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/20_master_reference_appendices.md) · source blob `b122675a9900a87c4c146359de9d49ab75a3f6e1`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Master Lexicon, Route Topology, Schema Dictionary & API Catalog
 
 ---
@@ -244,7 +249,7 @@ Rank Crackers के फायरस्टोर डेटाबेस में
 
 ### Appendix E.1 — Deliberately historical or unresolved API labels
 
-`functions/src/assessment.ts`, `functions/src/triggers.ts` और `functions/src/workers.ts` current checkout में नहीं मिले। पुराने `createAttemptSession`/`evaluateAttempt` labels को अब live callable नहीं लिखा जाएगा; live replacement/helper path ऊपर दिया गया है। `SolutionVerificationRecord.computeSha256` और `functions/src/assessment/verification.ts` भी `UNRESOLVED/HISTORICAL` हैं; current `evaluateAttempt` SHA-256 verification नहीं करता।
+`functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** और `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** current checkout में नहीं मिले। पुराने `createAttemptSession`/`evaluateAttempt` labels को अब live callable नहीं लिखा जाएगा; live replacement/helper path ऊपर दिया गया है। `SolutionVerificationRecord.computeSha256` और `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** भी `UNRESOLVED/HISTORICAL` हैं; current `evaluateAttempt` SHA-256 verification नहीं करता।
 
 ---
 
@@ -406,7 +411,7 @@ Rank Crackers जीवित संदर्भ ग्रंथ के वि�
 | **Contract 16.3** | `runFlutterUnitTests` | `UNRESOLVED — no .github/workflows inventory found` | Historical CI label | Not verified | `UNRESOLVED` |
 | **Contract 16.4** | `runFirestoreRulesTests` | `functions/package.json` dependency only; workflow not found | Rules test capability, not CI proof | Jest/rules-unit-testing dependency | `UNRESOLVED` execution gate |
 | **Contract 16.5** | `buildReleaseApk` | Release Pipeline | Tagged Release Trigger | Flutter toolchain + Keystore | Signed Cryptographic |
-| **Contract 16.6** | `deployCloudFunctions` | CD Deployment Action | Main branch merge | `firebase deploy --only functions`| Google Cloud IAM |
+| **Contract 16.6** | `deployCloudFunctions` | CD Deployment Action | Separately authorized release from the recorded default branch | `firebase deploy --only functions`| Google Cloud IAM |
 | **Contract 16.7** | `checkDeadLetterQueue` | Ops Monitoring Cron | 5-minute schedule | `dlq_tasks` collection | Ops Service Worker |
 | **Contract 16.8** | `emergencyRollback` | SRE Runbook Playbook | Production Incident | Target release hash | Founder & SRE Lead |
 
@@ -505,3 +510,38 @@ Any earlier appendix statement that presents `Subject → Unit → Topic → Ato
 ### I.3 Acceptance rule for future updates
 
 Before a new GitHub documentation commit is treated as current book truth, the Chief Author must record repository, branch, commit SHA, source path, changed sections, local source parity, test evidence and implementation status. A newer remote document can supersede narrative wording immediately, but it cannot be used as proof that local runtime code already implements the contract.
+
+
+## Appendix J Current GitHub authority and representation map
+
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
+
+| Representation | Current role |
+|---|---|
+| GitHub default branch and recorded SHA | Technical source authority |
+| Corrected standalone Markdown | GitHub-derived working chapters |
+| Compiled Markdown and HTML | Reading representations of corrected chapters |
+| Native Google Doc | Partial companion; not a complete synchronized edition |
+| Prior Word exports | Legacy exports; current corrected parity not certified |
+| Architecture branch contracts | Branch-specific references, absent from default unless explicitly listed otherwise |
+| June pipeline recovery guide | Historical incident record |
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/assessment.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/triggers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/workers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `scripts/seed_fixtures.py` | UNRESOLVED AT DEFAULT HEAD |

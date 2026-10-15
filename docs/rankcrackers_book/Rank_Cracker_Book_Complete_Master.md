@@ -1,18 +1,27 @@
-# Rank Cracker Book — Living Technical-Product Reference
+# RankCrackers Living Technical Product and Architecture Book
 
-**आधिकारिक संदर्भ ग्रंथ — Rank Crackers Ecosystem**
+## GitHub authority and edition status
 
-*(Compiled Living Reference Manuscript — Preliminary References & Canonical Volumes A–I)*
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
 
----
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
+
+यह working edition GitHub technical evidence के अनुसार corrected standalone chapters को एक continuous reading representation में रखता है। Filename-based chapter IDs preserved हैं। Unresolved registers और historical sections final acceptance नहीं हैं।
 
 
 
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Editor's Note (01_editor_note.md) -->
-<!-- ======================================================== -->
 
 # संपादक की ओर से
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/01_editor_note.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/01_editor_note.md) · source blob `b6228684d27a61bb696fa062500bdae9f9513e36`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ![Rank Crackers Official Insignia — Black Background Display Variant](assets/images/logo_on_black.png)
 
@@ -33,279 +42,85 @@ Rank Cracker Book
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Canonical Index (02_index.md) -->
-<!-- ======================================================== -->
 
-# Rank Cracker Book — Canonical Index
+# RankCrackers Canonical Book Index
 
-## संपादकीय संरचना
+## GitHub authority and edition status
 
-इस पुस्तक की आधिकारिक संपादकीय संरचना (Canonical Editorial Hierarchy):
-**Volume → Part → Chapter → Section → Subsection → Implementation Note → Reference / Appendix**
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
 
----
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
 
-## प्रारंभिक खंड
+**GitHub source snapshot:** [`docs/rankcrackers_book/02_index.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/02_index.md) · source blob `ae87629ed4370aadb41bb34cbf1c1275ffa1f915`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
 
-- [01. संपादक की ओर से](01_editor_note.md)
-- [02. पुस्तक का Canonical Index](02_index.md)
-- [03. लेखन, सत्यापन और कोड-एकीकरण नीति](03_editorial_policy.md)
-- [04. Preliminary Project Audit Snapshot](04_project_audit_snapshot.md)
-- [05. Master Documentation Plan](05_master_documentation_plan.md)
-- [06. Preliminary Application Entry और Trust Model](06_architecture_entry_and_trust_model.md)
-- [07. Preliminary Student Navigation और Route Inventory](07_student_route_inventory.md)
-- [12. Antigravity 2.0 Operating Handoff Brief](12_handoff_to_antigravity_2_0.md)
-- [18. Chapter 18 Chief Author Claim Register](18_chapter_18_claim_register.md) — Chapter 18 reconciliation evidence and open audit gates
-- [22. Cross-Chapter Source Reconciliation Register & Live Contract Notes](22_source_reconciliation_register_and_live_contracts.md) — Batch 02 corrected paths, live symbols, atomic contracts, backend topology and unresolved claims
-- [21. Chief Author Audit & Antigravity 2.0 Work Order](21_chief_author_audit_and_antigravity_work_order.md) — current book status and mandatory repair order
+Chapter identifiers follow the tracked filenames. Reading order is independent of the identifier; Chapters 16, 18, 19, 20 and 23 are not renamed as Chapters 12, 08, 11, 13 and 06.
 
----
+| Reading order | Reference | Exact filename | Status |
+|---:|---|---|---|
+| 1 | Preliminary Reference: Editor's Note | [01_editor_note.md](01_editor_note.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 2 | Preliminary Reference: Canonical Index | [02_index.md](02_index.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 3 | Preliminary Reference: Editorial Policy & Standards | [03_editorial_policy.md](03_editorial_policy.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 4 | Preliminary Reference: Audit Snapshot | [04_project_audit_snapshot.md](04_project_audit_snapshot.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 5 | Preliminary Reference: Master Documentation Plan | [05_master_documentation_plan.md](05_master_documentation_plan.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 6 | Preliminary Reference: Architecture Entry & Trust | [06_architecture_entry_and_trust_model.md](06_architecture_entry_and_trust_model.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 7 | Preliminary Reference: Route Inventory | [07_student_route_inventory.md](07_student_route_inventory.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 8 | Preliminary Reference: Operating Handoff & Chief Author Directive | [12_handoff_to_antigravity_2_0.md](12_handoff_to_antigravity_2_0.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 9 | Preliminary Reference: Chapter 18 Chief Author Claim Register | [18_chapter_18_claim_register.md](18_chapter_18_claim_register.md) | AUDIT HOLD — NOT FINAL |
+| 10 | Preliminary Reference: Cross-Chapter Source Reconciliation Register | [22_source_reconciliation_register_and_live_contracts.md](22_source_reconciliation_register_and_live_contracts.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 11 | Preliminary Reference: Chief Author Audit & Antigravity Work Order | [21_chief_author_audit_and_antigravity_work_order.md](21_chief_author_audit_and_antigravity_work_order.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 12 | Volume A: Product Vision, Learning Philosophy & Journey | [17_product_vision_learning_philosophy_and_journey.md](17_product_vision_learning_philosophy_and_journey.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 13 | Volume B, Part 1: Identity Pipeline, Auth & Mission Gates | [08_identity_profile_and_mission_gates.md](08_identity_profile_and_mission_gates.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 14 | Volume B, Part 2: Dashboard Command Surface & Providers | [09_dashboard_and_learning_command_surface.md](09_dashboard_and_learning_command_surface.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 15 | Volume B, Part 3: Crucible Protocol & 98-Day Modulo | [10_crucible_protocol_and_schedule_engine.md](10_crucible_protocol_and_schedule_engine.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 16 | Volume B, Part 4: Syllabus Tree & DigiBook Bridge | [11_syllabus_hierarchy_and_digibook_bridge.md](11_syllabus_hierarchy_and_digibook_bridge.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 17 | Volume B, Part 5: GitHub-Tracked Canonical Syllabus & Derived Decomposition Contract | [23_github_tracked_canonical_syllabus_contract.md](23_github_tracked_canonical_syllabus_contract.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 18 | Volume C, Part 1: Founder Web Operations & Mission Control | [13_founder_web_operations_and_mission_control.md](13_founder_web_operations_and_mission_control.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 19 | Volume D, Part 1: Application Architecture & Design System | [18_application_architecture_and_design_system.md](18_application_architecture_and_design_system.md) | AUDIT HOLD — NOT FINAL |
+| 20 | Volume E & G, Part 1: Firestore Collections & Security Rules | [14_firestore_collections_and_security_rules_dictionary.md](14_firestore_collections_and_security_rules_dictionary.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 21 | Volume E, Part 2: Cloud Functions, Callables & AI Workers | [15_cloud_functions_and_callable_contracts.md](15_cloud_functions_and_callable_contracts.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 22 | Volume F, Part 1: Academic Intelligence, Math Models & Decay | [19_academic_intelligence_and_knowledge_engine.md](19_academic_intelligence_and_knowledge_engine.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 23 | Volume H, Part 1: Engineering Operations, Emulators & CI/CD | [16_engineering_operations_testing_and_deployment.md](16_engineering_operations_testing_and_deployment.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
+| 24 | Volume I: Master Reference Appendices | [20_master_reference_appendices.md](20_master_reference_appendices.md) | GitHub-derived working reference; runtime/test parity is separately scoped |
 
-## Volume A — Product और मूल दृष्टि
+The compiled Markdown and HTML preserve this exact ordering. Native Google Docs and older Word exports are companion/legacy representations until separately rebuilt and verified.
 
-### Part 1 — Genesis, Philosophy, User Personas & The Sovereign Student Journey
-- [Chapter 17 — Product Vision, Learning Philosophy, Cognitive Personas और Complete Student Journey](17_product_vision_learning_philosophy_and_journey.md)
-  - Section 1: Genesis of Rank Crackers & The Structural Crisis in Competitive Exam Preparation
-  - Section 2: Core Philosophy: "Truth Over Flattery" & Active Recall vs Passive Consumption
-  - Section 3: The Sacred Motto: "तेजस्वि नावधीतमस्तु।" & Cultural Ethos
-  - Section 4: The 5 Core User Personas & Operational Roles
-  - Section 5: The 4 Cognitive Pillars Architecture (Crucible, DigiBook, Test Arena, Career Signals)
-  - Section 6: The Sovereign End-to-End Student Journey (7 Structured Phases)
-  - Section 7: Anti-Burnout Protocol, Psychological Discipline & The Mastery Loop
-  - Section 8: The Lexicon of Mastery: Architectural Concordance & System Nomenclature
-  - Section 9: Verification Evidence & Pedagogical Impact Benchmarks
-  - Section 10: Long-Term Product Evolution & Future Horizons
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (The Sovereign Student Journey)
+## Reader Navigation and Working Records Policy
 
----
+Reader-facing prose may use a simpler reading sequence, while technical references retain the tracked chapter/file identifiers. Reader sequence numbers are navigation positions only; they do not renumber canonical chapters or authorize implementation changes.
 
-## Volume B — Student Experience
+| Reader sequence | Topic | Canonical source ID / file |
+|---|---|---|
+| 1 | Product vision and student journey | Chapter 17 — `17_product_vision_learning_philosophy_and_journey.md` |
+| 2 | Technology foundation and source snapshot | Reference 04 — `04_project_audit_snapshot.md` |
+| 3 | Application entry and trust model | Reference 06 — `06_architecture_entry_and_trust_model.md` |
+| 4 | Student navigation and routes | Reference 07 — `07_student_route_inventory.md` |
+| 5 | Identity, profile and mission access | Chapter 08 — `08_identity_profile_and_mission_gates.md` |
+| 6 | Dashboard and learning command surface | Chapter 09 — `09_dashboard_and_learning_command_surface.md` |
+| 7 | Crucible and assessment boundaries | Chapter 10 — `10_crucible_protocol_and_schedule_engine.md` |
 
-### Part 1 — Student Authentication, Unified Identity और Mission Access
-- [Chapter 08 — Identity Pipeline, Unified Authentication, Profile Synthesis और Dynamic Mission Authority](08_identity_profile_and_mission_gates.md)
-  - Section 1: The 5-Gate Sequential Authority Model
-  - Section 2: UnifiedIdentityScreen: Architectural Anatomy & UI State Machine
-  - Section 3: Authentication Workflows & Resilience Engine
-  - Section 4: Account Status Governance & The Deactivation/Reinstatement Protocol
-  - Section 5: Profile Synthesis, Validation Laws & Dual-Mode State Selector
-  - Section 6: Atomic Identity Establishment Pipeline
-  - Section 7: Dynamic Mission Authority & Snapshot Validation Engine
-  - Section 8: Security Boundaries, Firestore Rules & Authority Law
-  - Section 9: Test Seams, Emulators & Verification Evidence
-  - Section 10: Maintenance, Operational Runbooks & Impact Analysis
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Source Record to Audit Trail)
+This introductory reading sequence is not the full-book table of contents. Chapters 11, 13–16, 18–20, 23 and all remaining references retain their full canonical positions above. Publication completeness must be declared by explicit coverage, not inferred from a clean cover or sequential numbering.
 
-### Part 2 — Student Dashboard & Command Surface
-- [Chapter 09 — Dashboard Architecture, Command Surface, Knowledge Engine और Reactive Providers](09_dashboard_and_learning_command_surface.md)
-  - Section 1: DashboardScreen Architectural Overview
-  - Section 2: Top Command Header & Realtime Student Identity State
-  - Section 3: Isolated Readiness, Coverage, Streak और Risk Status Card
-  - Section 4: Today's Focus Action Section और Rebuild Chamber Triggers
-  - Section 5: Compact Pillar Grid (Crucible, DigiBook, Test Arena, Career Signals)
-  - Section 6: Battle Tools Grid, Bottom Sheet Dialogs और Exam Gating
-  - Section 7: Notifications Center और Archival Learning Preview
-  - Section 8: Riverpod Reactive Bindings, Data Models और Decay Mathematics
-  - Section 9: Security Rules, Error States और Offline Resilience
-  - Section 10: Testing Verification और Maintenance Playbook
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Telemetry & Command Execution)
+**Working records separation:** audit registers, historical indexes, handoff instructions and work orders belong in a traceable companion/appendix when producing a reader edition. Keep the technical master and its evidence registers intact. Do not discard open findings or remove HOLD/legacy/proposed labels from reader summaries. Archived agent commands are historical records, not executable current authorization.
 
-### Part 3 — Crucible Protocol & 98-Day Continuous Ring Modulo
-- [Chapter 10 — Crucible Protocol, Continuous Modulo Schedule Engine, Chambers और Assessment Workflows](10_crucible_protocol_and_schedule_engine.md)
-  - Section 1: Crucible Engine Philosophy और Temporal Authority
-  - Section 2: CrucibleScreen: 6 Sovereign Sections और UI State Machine
-  - Section 3: Mathematical Modulo Ring Engine (98-Day B1–B7 Continuous Modulo)
-  - Section 4: The 14-Day Cycle Modulo Engine & Sacred Days
-  - Section 5: Assessment Workflows: Micro Test, Macro Citadel & Rebuild Chamber
-  - Section 6: Academic Trust & Cryptographic Verification Protocol (SHA-256)
-  - Section 7: Repository, Streams और Cloud Functions Pipeline
-  - Section 8: Error Recovery, Offline Resilience और Fail-Safe Execution
-  - Section 9: Test Harnesses और Verification Proof
-  - Section 10: Operational Runbooks और Schedule Maintenance
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Crucible Modulo Execution)
-
-### Part 4 — Syllabus Tree Hierarchy & DigiBook Bridge
-- [Chapter 11 — Syllabus Tree Architecture, Node Factory, Local Database और DigiBook Canonical Bridge](11_syllabus_hierarchy_and_digibook_bridge.md)
-  - Section 1: Official Syllabus Authority, Derived Decomposition & Variable-Depth Hierarchy
-  - Section 2: SyllabusScreen Navigation Stack & Drill-down State Machine
-  - Section 3: Dynamic Subject Discovery & Leaf Mastery Classification
-  - Section 4: NodeFactoryWorker & Autonomous Syllabus Pipeline
-  - Section 5: Local Database Caching & Firebase Idempotent Sync
-  - Section 6: DigiBook Canonical Bridge & The Hard Identity Law
-  - Section 7: Lesson Loading Cascade & Content Hydration
-  - Section 8: Truthful Availability Dialogs & Fail-Closed Guards
-  - Section 9: Security Boundaries, Roles & Least Privilege
-  - Section 10: Verification Test Suite & Engineering Operations
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Syllabus & DigiBook Bridge)
-
-### Part 5 — GitHub-Tracked Syllabus Authority & Derived Decomposition
-- [Chapter 23 — GitHub-Tracked Canonical Syllabus & Derived Decomposition Contract](23_github_tracked_canonical_syllabus_contract.md)
-  - Section 23.1: Chief Author Tracking Decision
-  - Section 23.2: Remote Change History
-  - Section 23.3: Editorial Interpretation & Authority Boundary
-  - Section 23.4: Canonical Hierarchy & Provenance
-  - Section 23.5: Decomposition Boundary
-  - Section 23.6: Decomposition Stop Test
-  - Section 23.7: Scope, Depth & Difficulty
-  - Section 23.8: Mission Academic Boundary Profile
-  - Section 23.9: Evidence Hierarchy
-  - Section 23.10: Official PYQ Scope Exception
-  - Section 23.11: Question Knowledge Closure
-  - Section 23.12: Machine-Enforceable DSD Decision States
-  - Section 23.13: AI versus Deterministic Code
-  - Section 23.14: Dry-Run Examples
-  - Section 23.15: Boundary-Drift Control
-  - Section 23.16: Failure Taxonomy
-  - Section 23.17: Implementation Sequence
-  - Section 23.18: Expanded Acceptance Test Matrix
-  - Section 23.19: Constitutional Authority Chain
-  - Section 23.20: Tracked-Source Acceptance Gate
-  - Section 23.21: Source Integrity Note
-  - Section 23.22: Tracked GitHub Source Payload
-  - Section 23.23: Operational Tracking Command
-
----
-
-## Volume C — Founder Web Operations
-
-### Part 1 — Administrative Command Surface, Mission Control & Sovereign Governance
-- [Chapter 13 — Founder Operational Architecture, Multi-Panel Control Grid, Ingestion Pipeline और System Health Telemetry](13_founder_web_operations_and_mission_control.md)
-  - Section 1: Operational Philosophy और The Separation of Powers Law
-  - Section 2: Founder Command Center Grid (`FounderDashboard`)
-  - Section 3: Mission Portfolio Control & Three-Way State Reconciliation (`FounderMissionInventory`)
-  - Section 4: Ingestion Refinery & The 7-Channel Mission Factory (`MissionFactory` / `UploadCenter`)
-  - Section 5: Autonomous Scouting Battalion & Intelligence Command (`IntelligenceCommandCenter`)
-  - Section 6: Multi-Tier Review Queue & Forensic Outcome Verification (`ReviewQueue` & `OutcomeVerificationCenter`)
-  - Section 7: System Vitals, Observability & Student Panel Health (`SystemHealthCenter` & `FounderStudentHealthWeb`)
-  - Section 8: Forensic Command History & People Access Governance (`FounderActivityLedger` & `PeopleAccessCenter`)
-  - Section 9: Security Rules Audit & Backend Authority Contracts
-  - Section 10: Operational Runbooks, Disaster Recovery & Emergency Protocols
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Founder Governance & Approval)
-
----
-
-## Volume D — Application Architecture
-
-### Part 1 — Multiplatform Blueprint, Tactical Noir Design System & Reactive State Engine
-- [Chapter 18 — Application Architecture, Multiplatform Design System, Responsive Engine और Riverpod State Topology](18_application_architecture_and_design_system.md)
-  - Section 1: Flutter Framework Foundation & Multiplatform Topology (Web vs Android/iOS)
-  - Section 2: Application Entry Points & Bootstrap Cascades (`main.dart` vs `main_web.dart` vs `main_web_emulator.dart`)
-  - Section 3: Navigation Shell & Structural Layout (`MainNavigationShell`, `GoRouter`, 5-Branch Tabs)
-  - Section 4: Tactical Noir Design Tokens (`AppColors`, `AppTypography`, `AppTheme`, Elevation & Borders)
-  - Section 5: Responsive Layout Engine (`ResponsiveHelper`, Breakpoints, Clamping Formulas)
-  - Section 6: State Management Architecture: Flutter Riverpod Topology (Providers, Notifiers, Lifecycle)
-  - Section 7: Component Design Library (`DarkCard`, `PremiumButton`, `TacticalNoirBackground`)
-  - Section 8: Telemetry, Error Governance & App Check Security (`TelemetryEngine`, `GlobalErrorHandler`)
-  - Section 9: Performance Optimization & Render Hygiene (Sliver Virtualization, RepaintBoundaries)
-  - Section 10: Architectural Verification, Golden Tests & Maintenance Runbooks
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Application Lifecycle & Telemetry)
-  - Section 13: Chief Author Source Reconciliation Register & Verification Audit
-  - Section 14: Comprehensive 776-Dart-File Architecture Evidence Matrix
-  - Section 15: Atomic Implementation Notes for Core Architecture Hubs
-  - Section 16: Chief Author Reconciliation Gate and Closure Conditions
-
----
-
-## Volume E & G — Backend Data Layer, Security & Trust Architecture
-
-### Part 1 — Firestore Collections, Schema Contracts & Security Rules Exhaustive Dictionary
-- [Chapter 14 — Firestore Data Architecture, Collection Taxonomy, Field Specifications और Security Rules Governance](14_firestore_collections_and_security_rules_dictionary.md)
-  - Section 1: Data Architecture Overview & Realm Topology
-  - Section 2: Identity & User Realm (`users` & Subcollections)
-  - Section 3: Academic Content & DigiBook Publishing Realm
-  - Section 4: Question Bank, PYQ & Assessment Realm
-  - Section 5: Mission Architecture & Recruitment Realm
-  - Section 6: Ingestion Refinery & Autonomous AI Workers Realm
-  - Section 7: Intelligence Scouting Realm (`sentinel_drafts`)
-  - Section 8: Forensic Governance, Audit & Trust Realm
-  - Section 9: Exhaustive Security Rules Permission Matrix
-  - Section 10: Composite Indexes, Offline Caching & Maintenance Runbooks
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Firestore Document Commit & Security Gate)
-
-### Part 2 — Cloud Functions, Callable Contracts, Background Workers & AI Pipelines
-- [Chapter 15 — Serverless Infrastructure, Cloud Callable Contracts, Asynchronous Worker Battalions और Authoritative Evaluation Engines](15_cloud_functions_and_callable_contracts.md)
-  - Section 1: Serverless Architecture, Runtime & Secret Hygiene
-  - Section 2: Founder & Administrative Callable Contracts
-  - Section 3: Student Security & Anti-Piracy Asset Protection
-  - Section 4: The Authoritative Assessment Evaluation Engine
-  - Section 5: Asynchronous Worker Battalions & Background Pipelines
-  - Section 6: Worker Telemetry, Heartbeats & Token Budget Governance
-  - Section 7: Founder Emergency Alerting & Telemetry Hooks
-  - Section 8: Testing, Emulator Verification & CI/CD Deployment
-  - Section 9: Formal Function Contracts Inventory (Evidence-Scoped)
-  - Section 10: End-to-End Atomic Trace Pipeline (Cloud Function Execution & Evaluation)
-
----
-
-## Volume F — Academic Intelligence & Cognitive Science
-
-### Part 1 — Knowledge Engine, Mathematical Formulations, Decay Curves & Assessment Architecture
-- [Chapter 19 — Academic Intelligence, Knowledge Engine, Mathematical Formulations, Decay Functions और Cognitive Assessment Engines](19_academic_intelligence_and_knowledge_engine.md)
-  - Section 1: Cognitive Science & Mathematical Foundations of Rank Crackers
-  - Section 2: Atomic Knowledge Representation & Graph Topology (Authority Tree → Derived Micro/Atomic Topics → SVO Knowledge Fact)
-  - Section 3: The Atomic Mastery Engine ($M(a)$, Confidence, Status & Trends)
-  - Section 4: The Atomic Risk Mathematical Formulation ($R(a)$, Deficiency Vectors & Decay)
-  - Section 5: The Mission Readiness Index ($R_{mission}$ & Success Probability Forecasting)
-  - Section 6: Deterministic Seeded Randomness: FNV-1a Shuffling & Anti-Cheat Cryptography
-  - Section 7: SVO (Subject-Verb-Object) Automated Extraction Pipeline
-  - Section 8: Battle Session Execution & Granular Outcome Ledger (`BattleSession`, `QuestionOutcome`)
-  - Section 9: The Human Authority Law & Anti-Hallucination Academic Validation
-  - Section 10: Verification Test Suite, Mathematical Calibration & Model Stability
-  - Section 11: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 12: End-to-End Atomic Trace Pipeline (Cognitive Evidence to Mastery Evolution)
-
----
-
-## Volume H — Engineering Operations, Quality Assurance & Deployment
-
-### Part 1 — Testing Strategy, Emulator Verification, CI/CD & Production Delivery
-- [Chapter 16 — Engineering Operations, Multi-Tier Test Harnesses, Firebase Emulators और Continuous Delivery Protocol](16_engineering_operations_testing_and_deployment.md)
-  - Section 1: The Multi-Tier Testing Pyramid & Verification Topology
-  - Section 2: Flutter Client Test Suite Inventory
-  - Section 3: Firebase Local Emulator Suite Infrastructure
-  - Section 4: Academic Quality Gates & Independent Certification Scripts
-  - Section 5: Build Configurations & Multi-Platform Compilation
-  - Section 6: Release Engineering & Production Deployment Protocol
-  - Section 7: Incident Response, Hotfix Playbooks & Rollback Procedures
-  - Section 8: Formal Function Contracts Inventory (8-Dimension Specification)
-  - Section 9: End-to-End Atomic Trace Pipeline (Code Commit to Production Deployment)
-
----
-
-## Volume I — Reference Appendices
-
-### Part 1 — Master Lexicon, Route Topology, Schema Dictionary & API Catalog
-- [Chapter 20 — Master Reference Appendices](20_master_reference_appendices.md)
-  - Appendix A: Complete System Glossary & Terminological Concordance
-  - Appendix B: Canonical Route Index & Navigation Topology (All 29 Routes)
-  - Appendix C: Master File & Source Code Symbol Index
-  - Appendix D: Firestore Collection & Field Dictionary (7 Realms, 46 Collections)
-  - Appendix E: Cloud Callable Functions & Triggers API Index
-  - Appendix F: Revision History & Editorial Provenance Log (v1.0 to v7.0)
-  - Appendix G: Master Function Contracts Index (8-Dimension Specification)
-  - Appendix H: Master Atomic Trace Methodology & Cross-Domain Verification Matrix
-
----
+**Attachment adoption boundary:** `RankCrackers_Book_Working_Records.md` supplies an archival presentation pattern; `RankCrackers_Book_Clean-2.docx` supplies introductory reader navigation. Neither supersedes current GitHub source evidence or the Chapter 18 audit. Native heading styles in the Word sample are useful production scaffolding; its content, image coverage, code/diagram representation and pagination are not certified as a final book.
 
 
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Editorial Policy & Standards (03_editorial_policy.md) -->
-<!-- ======================================================== -->
 
 # लेखन, सत्यापन और प्रकाशन नीति (Editorial & Book Production Policy)
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/03_editorial_policy.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/03_editorial_policy.md) · source blob `46112a85a35e0fd63e7a681671cda51e875b5c8e`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## 1. पुस्तक का विस्तार और संपूर्णता
 
@@ -544,12 +359,14 @@ Chief Author का अंतिम मानदंड page count नहीं, 
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Audit Snapshot (04_project_audit_snapshot.md) -->
-<!-- ======================================================== -->
 
 # Preliminary Reference — Project Audit Snapshot
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/04_project_audit_snapshot.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/04_project_audit_snapshot.md) · source blob `b0590e0fc8eba73affc2a34df6b1721031304090`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 **Audit status:** प्रारंभिक संरचनात्मक audit  
 **Reference date:** 9 October 2026  
@@ -558,6 +375,20 @@ Chief Author का अंतिम मानदंड page count नहीं, 
 ## 1. Audit का उद्देश्य
 
 इस audit का उद्देश्य पूरे Rank Cracker project की वर्तमान संरचना को समझना और उसे पुस्तक के लिए reliable source map में बदलना है। यह snapshot implementation के बारे में प्रारंभिक तथ्य दर्ज करता है; आगे के chapters में प्रत्येक area का अलग functional और technical अध्ययन किया जाएगा।
+
+## Current default branch tracked inventory
+
+| Metric | Current GitHub tree result |
+|---|---:|
+| `lib/` tracked files | 779 |
+| Dart files | 757 |
+| Non-Dart files | 22 |
+| `lib/` blob bytes | 3,438,588 |
+| Dart blob bytes | 3,301,582 |
+| Compiler-ordered source documents | 24 |
+| `.github/workflows/` tracked files | 0 |
+
+This is a Git tree census at the recorded SHA, not a Windows disk inventory or test result.
 
 ## 2. वर्तमान technology foundation
 
@@ -653,12 +484,14 @@ Official logo project में उपलब्ध है और `assets/images/
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Master Documentation Plan (05_master_documentation_plan.md) -->
-<!-- ======================================================== -->
 
 # Master Documentation Plan
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/05_master_documentation_plan.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/05_master_documentation_plan.md) · source blob `e345771a7d5f7c3e42015214145481a23c95c46c`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 यह योजना पुस्तक को summary से full reference work में विकसित करने के लिए है। इसका उद्देश्य chapters को जल्दी समाप्त करना नहीं, बल्कि project की कोई महत्वपूर्ण परत छूटने न देना है। Final editorial hierarchy Volume → Part → Chapter → Section → Subsection → Implementation Note → Reference होगी।
 
@@ -743,12 +576,14 @@ Official logo project में उपलब्ध है और `assets/images/
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Architecture Entry & Trust (06_architecture_entry_and_trust_model.md) -->
-<!-- ======================================================== -->
 
 # Preliminary Reference — Application Entry और Trust Model
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/06_architecture_entry_and_trust_model.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/06_architecture_entry_and_trust_model.md) · source blob `fa5d41325c869fd8ca16bb263073fb8841adbb66`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Section 1 — Entry Points और Runtime Modes
 
@@ -819,12 +654,14 @@ Storage rules में user-owned files, shared assets, certificates, ingestion
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Route Inventory (07_student_route_inventory.md) -->
-<!-- ======================================================== -->
 
 # Preliminary Reference — Student Navigation और Route Inventory
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/07_student_route_inventory.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/07_student_route_inventory.md) · source blob `22d174dba19ccdc697be8d90d3087407b762aa03`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Section 1 — Student Navigation और Route Inventory
 
@@ -998,17 +835,29 @@ if (!isMissionValid && !isPrivileged) {
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Operating Handoff & Chief Author Directive (12_handoff_to_antigravity_2_0.md) -->
-<!-- ======================================================== -->
 
 # Rank Cracker Book — Antigravity 2.0 Handoff Document
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/12_handoff_to_antigravity_2_0.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/12_handoff_to_antigravity_2_0.md) · source blob `e4ad7b895af49fd89448486dc93c77445a693c60`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 **Handoff recipient:** Antigravity 2.0  
 **Handoff purpose:** Rank Cracker Book project को व्यवस्थित रूप से आगे बढ़ाना  
 **Primary language:** हिन्दी, आवश्यक technical terminology और code English में  
-**Status:** Active long-form documentation project
+**Status:** GitHub-derived working manuscript; Chapter 18 remains on audit hold
+
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
 
 ## 1. Project objective
 
@@ -1054,7 +903,7 @@ Application के runtime hierarchy labels को book hierarchy या officia
 
 Repository root:
 
-`G:\RankCrackers Project\RankCrackers-55`
+`G:\RankCrackers Project\RankCrackers-55` (historical local checkout; revalidate remote, branch and HEAD before use)
 
 Book manuscript folder:
 
@@ -1077,7 +926,7 @@ Book manuscript folder:
 
 ## 5. Google Docs live manuscript
 
-Canonical Google Docs living book:
+Google Docs companion draft — partial, not the authoritative synchronized book:
 
 [Rank Cracker Book — Living Technical Reference](https://docs.google.com/document/d/1zMT940eozloy03y7FBHSkqNqh9SgnaotPL2v-FWzWoA/edit)
 
@@ -1365,15 +1214,24 @@ Chapter 18 (`18_application_architecture_and_design_system.md`) को live sour
 जब तक stale paths, wrong symbols, unsupported guarantees और Drive sync discrepancy resolve या explicitly registered नहीं होते, Chapter 18 को **AUDIT HOLD — NOT FINAL** रखो और Chapter 09 पर आगे मत बढ़ो।
 
 
+## Current execution boundary
+
+This handoff authorizes documentation continuation only. It does not authorize Student Android/UI changes, queue recovery, GitHub writes, merge or deployment. Follow the recorded default-branch SHA for current technical descriptions. Preserve branch-specific contracts with their branch and commit; do not portray them as default-branch implementation. A newer Drive modification time changes neither authority nor acceptance status.
+
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Chapter 18 Chief Author Claim Register (18_chapter_18_claim_register.md) -->
-<!-- ======================================================== -->
 
 # Chapter 18 — Chief Author Claim Register
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/18_chapter_18_claim_register.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/18_chapter_18_claim_register.md) · source blob `32172fd0ebd41ff75efae3aef6da32ef323131d2`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Audit status
 
@@ -1388,9 +1246,20 @@ Chapter 18 (`18_application_architecture_and_design_system.md`) को live sour
 
 ---
 
-## Reproducible baseline
+## Current GitHub baseline
 
-Chief Author readback एवं fresh source inventory में निम्न baseline सीधे live repository से प्राप्त हुआ:
+| Evidence metric | Current result | Evidence class |
+|---|---:|---|
+| `lib/` tracked files | 779 | Git tree at recorded HEAD |
+| Dart source files | 757 | Git tree paths ending `.dart` |
+| Non-Dart files | 22 | Git tree |
+| Tracked `lib/` bytes | 3,438,588 | Git blob sizes |
+| Tracked Dart bytes | 3,301,582 | Git blob sizes |
+| Compiler-ordered sources | 24 | `scripts/compile_master_book.py` |
+
+## Historical local baseline — superseded for current counts
+
+The following numbers and historical VERIFIED labels reproduce the earlier local audit. They are not current default-branch verification; use the table above for current counts. CH18-001, CH18-002 and partition coverage must be revalidated against 757 tracked Dart files.
 
 | Evidence Metric | Machine Readback Result | Verification Status | Reference / Command |
 |---|---:|---|---|
@@ -1409,7 +1278,7 @@ Chief Author readback एवं fresh source inventory में निम्न
 
 ---
 
-## Exhaustive Claim Ledger (CH18-001 through CH18-015)
+## Historical Claim Ledger (CH18-001 through CH18-015)
 
 नीचे Chapter 18 के प्रत्येक प्रमुख factual sentence, code block, table row, symbol और numeric assertion का विस्तृत ऑडिट लेजर दर्ज है:
 
@@ -1439,16 +1308,16 @@ Chief Author readback एवं fresh source inventory में निम्न
 
 | Claimed Stale Path | Existence Check | Claimed Functionality | Actual Codebase Reality / True Replacement | Action Taken in Chapter 18 |
 |---|---|---|---|---|
-| `lib/core/utils/math_renderer_util.dart` | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/security_hasher.dart` | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/string_utils.dart` | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/founder_authority.dart` | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/authority_boundary_guard.dart` | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/storage/local_vault.dart` | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/services/sound_service.dart` | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/services/haptic_feedback_service.dart` | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/notifications/notification_service.dart` | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
 
 ---
 
@@ -1460,27 +1329,71 @@ Chapter 18 के ten absent paths यहाँ intentionally registered है�
 
 Chapter 18 को `AUDIT HOLD` से बाहर लाकर "Final" घोषित करने के लिए निम्नलिखित सभी शर्तों का पूर्ण होना अनिवार्य है:
 
-- [x] **1. Disjoint 15-Layer Partition:** 776 Dart files को 15 गैर-अतिव्यापी पाथ सेट्स में विभाजित किया गया और योग ठीक 776 सत्यापित हुआ।
+- [x] **1. Current 757-file Disjoint Layer Partition:** current GitHub paths partitioned across 15 explicit scopes; 757 assigned, 0 overlaps, 0 unassigned. Machine-readable per-file evidence attached.
 - [x] **2. Stale Paths Quarantine:** सभी 10 अनुपस्थित पाथ्स को Section 14.2 के सत्यापित मैट्रिक्स से हटाकर Section 14.3 के Stale Ledger में स्पष्ट रूप से दर्ज किया गया।
 - [x] **3. Symbol Reconciliation:** `SessionManager.profileCompletedSync()`, `selectedExamSync()`, `isMissionValid(...)` और `selectedRecruitmentIdSync()` को वास्तविक स्रोत से मिलाया गया।
 - [x] **4. Telemetry Realism:** `_persistQueue()` का डिस्क I/O और `TelemetryRecord` में raw `userId` तथा `anonymizedUserId` दोनों की उपस्थिति को बिना छिपाए दर्ज किया गया।
 - [x] **5. DRM / Secure Layer Truth:** `TacticalSecureLayer` को 17-लाइन पास-थ्रू विजेट के रूप में सही दर्ज किया गया।
 - [x] **6. Performance Evidence Discipline:** 60/120 FPS और zero-drop को डिजाइन लक्ष्य के रूप में स्पष्ट किया गया; स्लिवर्स को डैशबोर्ड/डिजीबुक में और RepaintBoundary को टेस्ट्स में मैप किया गया।
 - [x] **7. GlobalErrorHandler Reality:** स्पष्ट दर्ज किया गया कि यह केवल `main.dart` के टॉप-लेवल कैच में सक्रिय है।
-- [x] **8. Master Compilation Pass:** `compile_master_book.py` और `verify_compilation.py` का सफल निष्पादन (Exit Code 0)।
-- [ ] **9. Live Google Drive Sync Confirmation:** `I:\My Drive\Rank_Cracker_Book` में लाइव रीडबैक से 100% क्लाउड समन्वय की पुष्टि होने तक स्टेटस `AUDIT HOLD` रहेगा।
+- [ ] **8. Current acceptance rerun:** historical script finding only — `compile_master_book.py` और `verify_compilation.py` का सफल निष्पादन (Exit Code 0)।
+- [ ] **9. Representation parity:** verify exact corrected Drive file IDs and hashes; desktop drive-letter mounting is not authority. Native Google Docs and Word exports require their own parity checks.
 - [ ] **10. Chief Author Final Sign-Off:** चीफ ऑथर द्वारा सभी रिकॉन्सिलिएशन सुधारों की औपचारिक स्वीकृति।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+
+## Current Drive Project Audit — 10 October 2026
+
+**Scope:** Read-only source audit of Drive `RankCrackers Project/RankCrackers-55/lib` and pinned GitHub default HEAD `5161592ddafb42f1ecc8923cc7b7b0309934cc83`. No repository, recovery, runtime, production or deployment mutation.
+
+| Finding | Result | Meaning |
+|---|---:|---|
+| Drive lib files / Dart | 790 / 768 | Complete listing of 305 lib folders; 790 raw file downloads succeeded |
+| GitHub tracked lib files / Dart | 779 / 757 | Complete pinned Git tree |
+| Shared exact-byte files | 127 | Git blob SHA-1 matched |
+| Shared CRLF-only files | 644 | CRLF→LF Git blob SHA-1 matched; no other content difference |
+| Shared substantive code differences | 0 | All 771 common paths checked |
+| Drive-only Dart paths | 19 | Historical/local extras, not GitHub authority |
+| GitHub-only Dart paths | 8 | Taught-content-authority sources absent from this Drive folder |
+| Current Chapter 18 core matrix | 73 GitHub paths + 5 Drive-only rows | Path presence does not certify every behavior column |
+| Current disjoint architecture mapping | 757 assigned / 0 overlap / 0 unassigned | Explicit prefix classification over 15 layers |
+
+`route_names.dart` and `shared/widgets/dark_card.dart` are comment-only placeholders; `RouteNames` and `SharedDarkCard` claims were withdrawn. Other matrix symbols corrected: `RankCrackersWebApp`, `BackendProvider.adapter`, `IndiaDistricts.districts`, `IndiaStates.statesAndUTs`, `configureFirebaseEmulatorsFromDartDefines`.
+
+Security/privacy readback confirms: `TacticalSecureLayer.build` returns `child`; telemetry constructs and serializes both raw `userId` and hashed `anonymizedUserId`, and capture awaits `_persistQueue()`; `GlobalErrorHandler.handleFatal` has one current lib caller at `main.dart:51`; App Check activation has try/catch and no custom 5-second timeout. Firestore service declares 21 named `*Collection` string constants. Router reads `selectedExamSync()` and checks `isMissionValid`; navigation shell returns nonzero branches to branch 0.
+
+**Static source discrepancy:** `main_web.dart` imports six files absent from current GitHub, including `web/shared/rc_colors.dart`, `rc_panel.dart`, `rc_field.dart`, `rc_loaders.dart`, `rc_layout.dart`, and `features/auth/presentation/screens/admin_invite_screen.dart`. All six are present in the Drive snapshot. This is a source dependency finding, not a measured build outcome. Drive extras must not be copied into GitHub on book authority.
+
+**Remaining HOLD:** Runtime/visual/performance/security enforcement tests, all matrix behavior columns, production provenance, full Word/native Docs parity and final acceptance remain unverified. Historical Section 14.4 numbers describe the former 776-file snapshot only. Current Drive MD/HTML upload parity is verified separately by byte readback.
 
 
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Cross-Chapter Source Reconciliation Register (22_source_reconciliation_register_and_live_contracts.md) -->
-<!-- ======================================================== -->
 
 # Volume I — Source Reconciliation Register & Live Contract Notes
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/22_source_reconciliation_register_and_live_contracts.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/22_source_reconciliation_register_and_live_contracts.md) · source blob `7a9c944856eed26c2a8e0dab60a48c60040ad2ff`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 **Document role:** Canonical cross-chapter evidence register and long-form correction appendix  
 **Audit date:** 10 October 2026 (IST)  
@@ -1507,52 +1420,52 @@ Line ranges snapshot evidence हैं, API guarantee नहीं। Source �
 
 | Claim ID | Chapter / location | Written path | Live path / symbol | Line range | Status | Evidence note |
 |---|---|---|---|---:|---|---|
-| `RC-08-001` | Ch 08 §11.11 | `lib/core/services/firestore_service.dart` | `lib/core/firebase/firestore_service.dart::FirestoreService.saveUserProfile` | 742–750 | `CORRECTED` | Profile write uses `users/{uid}.set(..., merge:true)`; old directory absent. |
-| `RC-09-001` | Ch 09 §16.3 | `lib/core/battle/battle_engine.dart` | `lib/features/crucible/core/battle_engine.dart::BattleEngine.getPriorityNode` | 68–96 | `CORRECTED` | Actual input is `MicroTopicNode` plus `NodeRuntimeState`; optional `riskFactor` defaults to `0.0`. |
-| `RC-13-001` | Ch 13 §11.2 | `lib/web/founder/repository/command_center_repository.dart` | `lib/features/admin/data/repositories/health_repository.dart::getSystemHealth`, `toggleAiSystem` | 27–31, 61–110 | `CORRECTED` | No founder repository directory was found; live UI uses admin health repository and callable names. |
-| `RC-13-002` | Ch 13 §11.3 | `lib/web/founder/repository/command_center_repository.dart` | `lib/web/founder/mission_control/founder_mission_inventory.dart::FounderMissionInventory._reconcile` | 47–53, 153–182 | `CORRECTED` | Current method reconciles three query snapshots in memory; it is not a `toggleWorker` write service. |
-| `RC-13-003` | Ch 13 §11.4 | `lib/web/founder/outcomes/outcome_verification_center.dart` | `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart` | 103–175, 355–356, 499–505 | `CORRECTED` | Review actions invoke `handleSentinelAction`; old web path was stale. |
-| `RC-13-004` | Ch 13 §11.5 | `lib/web/founder/missions/founder_mission_inventory.dart` | `lib/web/founder/mission_control/founder_mission_inventory.dart` | 7–182, 364–431 | `CORRECTED` | Directory is `mission_control`; local `_reconcile` returns inventory rows, not a backend `ReconciliationReport`. |
-| `RC-13-005` | Ch 13 §11.7 | `functions/src/founder/admin_claims.ts` | `functions/callable/manage_access.js::manageUserAccess`, wired by `functions/index.js` | 10–80; 11–26 | `CORRECTED` | Live access callable checks auth, founder/admin claims and `ensureFounderClaims`. |
-| `RC-13-006` | Ch 13 §11.8 | `functions/src/founder/forensic_purge.ts` | `functions/callable/handle_sentinel_action.js` purge branch; `functions/services/audit_service.js::logFounderActivity` | 164–222; 8–18 | `CORRECTED / SCOPED` | No separate forensic purge module exists. Current evidence is limited to the callable branch and its audit helper. |
-| `RC-14-001` | Ch 14 §11.5 | `lib/core/services/firestore_service.dart` | `lib/core/firebase/firestore_service.dart::saveUserProfile` | 742–750 | `CORRECTED` | Correct Firebase service location. |
-| `RC-14-002` | Ch 14 §11.6 | `lib/core/services/firestore_service.dart` | `lib/core/firebase/firestore_service.dart::streamProtocolState` | 230–238 | `CORRECTED` | User-scoped protocol stream reads `users/{uid}/{protocolCollection}/{recruitmentId}`. |
-| `RC-14-003` | Ch 14 §11.7 | `lib/core/services/firestore_service.dart` | `lib/core/firebase/firestore_service.dart::streamSchedules` | 252–259 | `CORRECTED` | Schedule stream filters by `recruitmentId` and orders by `scheduleIndex`. |
-| `RC-14-004` | Ch 14 §11.8 | `functions/src/audit/founder_logger.ts` | `functions/services/audit_service.js::logFounderActivity` | 8–18 | `CORRECTED` | JavaScript helper is live; retry/immutability claims require separate evidence. |
-| `RC-15-001` | Ch 15 §8.1 | `test/canonical_reconciliation_emulator.js` | `functions/test/canonical_reconciliation_emulator.js` | 7 | `CORRECTED` | Current runner lives under `functions/test`. |
-| `RC-15-002` | Ch 15 §8.1 | `test/mission_lifecycle_emulator_roundtrip.js` | `functions/test/mission_lifecycle_emulator_roundtrip.js` | 1–119 | `CORRECTED` | Current runner exports `EXPECTED` and `guard`; it is not in repository-root `test/`. |
-| `RC-15-003` | Ch 15 §8.1 | `test/realEmulatorE2EWorkerProof.test.ts` | `functions/src/test/realEmulatorE2EWorkerProof.test.ts` | 28–185 | `CORRECTED` | Jest suite contains emulator claim, lease, retry, idempotency and fail-closed tests. |
-| `RC-15-004` | Ch 15 §9.1 | `functions/callables/manage_user_access.js` | `functions/callable/manage_access.js::manageUserAccess` | 10–96 | `CORRECTED` | Directory is singular `callable`; filename is `manage_access.js`. |
-| `RC-15-005` | Ch 15 §9.2 | `functions/callables/toggle_ai_system.js` | `functions/callable/toggle_ai_system.js::toggleAiSystem` | 8–26 | `CORRECTED` | Callable writes `system_config/global.aiEnabled` and calls audit helper. |
-| `RC-15-006` | Ch 15 §9.3 | `functions/callables/get_system_health.js` | `functions/callable/system_health.js::getSystemHealth` | 8–72 | `CORRECTED` | Live callable checks admin/founder claims and performs health read/write diagnostics. |
-| `RC-15-007` | Ch 15 §9.4 | `functions/callables/process_ai_task.js` | `functions/callable/process_ai_task.js::processAITask` | 11–63 | `CORRECTED` | Live function checks admin auth, AI enablement and budget before Gemini processing. |
-| `RC-15-008` | Ch 15 §9.5 | `functions/callables/get_secure_asset_url.js` | `functions/callable/secure_download.js::getSecureAssetUrl` | 8–71 | `CORRECTED` | Live input names are `assetUrl`, `realmId`, `assetType`; old input contract was not evidence-backed. |
-| `RC-15-009` | Ch 15 §9.7 | `functions/callables/handle_sentinel_action.js` | `functions/callable/handle_sentinel_action.js::handleSentinelAction` | 164–222 | `CORRECTED` | Singular directory; 1,177-line callable contains multiple action branches. |
-| `RC-15-010` | Ch 15 §9.8 | `functions/callables/handle_mission_action.js` | `functions/callable/handle_mission_action.js::handleMissionAction` | 8–90 | `CORRECTED` | Live inputs begin with `action`, `realmId`, `payload`. |
-| `RC-16-001` | Ch 16 §8.1 | `scripts/audit_repo_head_freeze_guard.js` | `functions/audit_repo_head_freeze_guard.js` | 1–46 | `CORRECTED` | Gate script is in `functions/`, not `scripts/`. |
-| `RC-16-002` | Ch 16 §8.2 | `scripts/verify_48ui8.js` | `verify_48ui8.js` | 1–343 | `CORRECTED` | Script is repository-root. |
-| `RC-16-003` | Ch 16 §8.3 | `lib/core/backend/firebase_emulator_config.dart` | `lib/core/firebase/firebase_emulator_config.dart::configureFirebaseEmulatorsFromDartDefines` | 57–95 | `CORRECTED` | Current config validates release/debug mode and auth/firestore ports; it does not configure Functions emulator. |
-| `RC-16-004` | Ch 16 §8.7 | `test/canonical_reconciliation_emulator.js` | `functions/test/canonical_reconciliation_emulator.js` | 7 | `CORRECTED` | Same test path correction as RC-15-001. |
-| `RC-16-005` | Ch 16 §9 | `web/main.dart.js` | Generated `build/web/main.dart.js`; source `lib/main_web.dart` | generated after build | `CORRECTED / GENERATED` | `web/main.dart.js` is not a current source path. Never cite generated output as source evidence. |
-| `RC-18-001` | Ch 18 §14.3 | `lib/core/utils/math_renderer_util.dart` | `lib/shared/widgets/formatted_math_text.dart` | source readback required | `CORRECTED / REGISTERED` | Old utility is absent; replacement is the observed formatting widget. |
-| `RC-18-002` | Ch 18 §14.3 | `lib/core/utils/security_hasher.dart` | Inline hashing in telemetry code; no standalone replacement | — | `UNRESOLVED / REGISTERED` | Do not invent a reusable `SecurityHasher` symbol. |
-| `RC-18-003` | Ch 18 §14.3 | `lib/core/utils/string_utils.dart` | No dedicated replacement found | — | `UNRESOLVED / REGISTERED` | Generic string helpers are inline/Dart core. |
-| `RC-18-004` | Ch 18 §14.3 | `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | `lib/core/widgets/paywall/premium_paywall_widget.dart` | file exists | `CORRECTED / REGISTERED` | Paywall directory contains the premium widget. |
-| `RC-18-005` | Ch 18 §14.3 | `lib/core/authority/founder_authority.dart` | `lib/core/constants/founder_identity.dart::FounderIdentity.isFounderUser` | source readback required | `CORRECTED / REGISTERED` | Founder identity is held in constants, not authority directory. |
-| `RC-18-006` | Ch 18 §14.3 | `lib/core/authority/authority_boundary_guard.dart` | No standalone guard; router/AuthGate checks | — | `UNRESOLVED / REGISTERED` | Keep as absent historical label. |
-| `RC-18-007` | Ch 18 §14.3 | `lib/core/storage/local_vault.dart` | `lib/core/storage/token_storage.dart`, `local_storage_service.dart` | file inventory | `CORRECTED / REGISTERED` | Current storage is split; no `LocalVault` class asserted. |
-| `RC-18-008` | Ch 18 §14.3 | `lib/core/services/sound_service.dart` | No dedicated sound service found | — | `UNRESOLVED / REGISTERED` | Do not imply an audio engine. |
-| `RC-18-009` | Ch 18 §14.3 | `lib/core/services/haptic_feedback_service.dart` | Inline Flutter `HapticFeedback` call sites | search evidence | `CORRECTED / REGISTERED` | No standalone service file. |
-| `RC-18-010` | Ch 18 §14.3 | `lib/core/notifications/notification_service.dart` | `lib/core/notifications/notification_engine.dart`, `lib/core/services/sentinel_notification_service.dart` | file inventory | `CORRECTED / REGISTERED` | Notification functionality is split across live files. |
-| `RC-19-001` | Ch 19 §11.7 | `functions/src/assessment/verification.ts` | No current replacement found | — | `UNRESOLVED / HISTORICAL` | `SolutionVerificationRecord.computeSha256` is not a live verified symbol. |
-| `RC-20-001` | Ch 20 §9 | `functions/src/assessment.ts` | `functions/workers/evaluate_attempt_worker.js::createAttemptSession`, `evaluateAttempt` | 9–55, 57–217 | `CORRECTED` | Actual worker lives in JavaScript workers directory. It uses an existing-result guard and a Firestore batch commit for attempt/evidence/outbox writes; no transactionally closed exactly-once guarantee is claimed. |
-| `RC-20-002` | Ch 20 §9 | `functions/src/admin.ts` | `functions/callable/manage_access.js`, `toggle_ai_system.js` | 8–96; 8–26 | `CORRECTED` | Admin callable topology is flat JavaScript. |
-| `RC-20-003` | Ch 20 §9 | `functions/src/health.ts` | `functions/callable/system_health.js` | 8–72 | `CORRECTED` | Health callable mapped to live file. |
-| `RC-20-004` | Ch 20 §9 | `functions/src/assets.ts` | `functions/callable/secure_download.js` | 8–71 | `CORRECTED` | Secure asset URL callable mapped to live file. |
-| `RC-20-005` | Ch 20 §9 | `functions/src/triggers.ts` | No current replacement found | — | `UNRESOLVED / HISTORICAL` | Former trigger aggregate file is absent. |
-| `RC-20-006` | Ch 20 §9 | `functions/src/workers.ts` | `functions/src/workers/` directory and `functions/index.js` exports | index 1–63 | `CORRECTED / SCOPED` | Worker topology is distributed; no aggregate `workers.ts` file exists. |
+| `RC-08-001` | Ch 08 §11.11 | `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/firebase/firestore_service.dart::FirestoreService.saveUserProfile` | 742–750 | `CORRECTED` | Profile write uses `users/{uid}.set(..., merge:true)`; old directory absent. |
+| `RC-09-001` | Ch 09 §16.3 | `lib/core/battle/battle_engine.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/features/crucible/core/battle_engine.dart::BattleEngine.getPriorityNode` | 68–96 | `CORRECTED` | Actual input is `MicroTopicNode` plus `NodeRuntimeState`; optional `riskFactor` defaults to `0.0`. |
+| `RC-13-001` | Ch 13 §11.2 | `lib/web/founder/repository/command_center_repository.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/features/admin/data/repositories/health_repository.dart::getSystemHealth`, `toggleAiSystem` | 27–31, 61–110 | `CORRECTED` | No founder repository directory was found; live UI uses admin health repository and callable names. |
+| `RC-13-002` | Ch 13 §11.3 | `lib/web/founder/repository/command_center_repository.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/web/founder/mission_control/founder_mission_inventory.dart::FounderMissionInventory._reconcile` | 47–53, 153–182 | `CORRECTED` | Current method reconciles three query snapshots in memory; it is not a `toggleWorker` write service. |
+| `RC-13-003` | Ch 13 §11.4 | `lib/web/founder/outcomes/outcome_verification_center.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/features/admin/presentation/widgets/review_queue/outcome_verification_center.dart` | 103–175, 355–356, 499–505 | `CORRECTED` | Review actions invoke `handleSentinelAction`; old web path was stale. |
+| `RC-13-004` | Ch 13 §11.5 | `lib/web/founder/missions/founder_mission_inventory.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/web/founder/mission_control/founder_mission_inventory.dart` | 7–182, 364–431 | `CORRECTED` | Directory is `mission_control`; local `_reconcile` returns inventory rows, not a backend `ReconciliationReport`. |
+| `RC-13-005` | Ch 13 §11.7 | `functions/src/founder/admin_claims.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/manage_access.js::manageUserAccess`, wired by `functions/index.js` | 10–80; 11–26 | `CORRECTED` | Live access callable checks auth, founder/admin claims and `ensureFounderClaims`. |
+| `RC-13-006` | Ch 13 §11.8 | `functions/src/founder/forensic_purge.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/handle_sentinel_action.js` purge branch; `functions/services/audit_service.js::logFounderActivity` | 164–222; 8–18 | `CORRECTED / SCOPED` | No separate forensic purge module exists. Current evidence is limited to the callable branch and its audit helper. |
+| `RC-14-001` | Ch 14 §11.5 | `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/firebase/firestore_service.dart::saveUserProfile` | 742–750 | `CORRECTED` | Correct Firebase service location. |
+| `RC-14-002` | Ch 14 §11.6 | `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/firebase/firestore_service.dart::streamProtocolState` | 230–238 | `CORRECTED` | User-scoped protocol stream reads `users/{uid}/{protocolCollection}/{recruitmentId}`. |
+| `RC-14-003` | Ch 14 §11.7 | `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/firebase/firestore_service.dart::streamSchedules` | 252–259 | `CORRECTED` | Schedule stream filters by `recruitmentId` and orders by `scheduleIndex`. |
+| `RC-14-004` | Ch 14 §11.8 | `functions/src/audit/founder_logger.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/services/audit_service.js::logFounderActivity` | 8–18 | `CORRECTED` | JavaScript helper is live; retry/immutability claims require separate evidence. |
+| `RC-15-001` | Ch 15 §8.1 | `test/canonical_reconciliation_emulator.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/test/canonical_reconciliation_emulator.js` | 7 | `CORRECTED` | Current runner lives under `functions/test`. |
+| `RC-15-002` | Ch 15 §8.1 | `test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | 1–119 | `CORRECTED` | Current runner exports `EXPECTED` and `guard`; it is not in repository-root `test/`. |
+| `RC-15-003` | Ch 15 §8.1 | `test/realEmulatorE2EWorkerProof.test.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/src/test/realEmulatorE2EWorkerProof.test.ts` | 28–185 | `CORRECTED` | Jest suite contains emulator claim, lease, retry, idempotency and fail-closed tests. |
+| `RC-15-004` | Ch 15 §9.1 | `functions/callables/manage_user_access.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/manage_access.js::manageUserAccess` | 10–96 | `CORRECTED` | Directory is singular `callable`; filename is `manage_access.js`. |
+| `RC-15-005` | Ch 15 §9.2 | `functions/callables/toggle_ai_system.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/toggle_ai_system.js::toggleAiSystem` | 8–26 | `CORRECTED` | Callable writes `system_config/global.aiEnabled` and calls audit helper. |
+| `RC-15-006` | Ch 15 §9.3 | `functions/callables/get_system_health.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/system_health.js::getSystemHealth` | 8–72 | `CORRECTED` | Live callable checks admin/founder claims and performs health read/write diagnostics. |
+| `RC-15-007` | Ch 15 §9.4 | `functions/callables/process_ai_task.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/process_ai_task.js::processAITask` | 11–63 | `CORRECTED` | Live function checks admin auth, AI enablement and budget before Gemini processing. |
+| `RC-15-008` | Ch 15 §9.5 | `functions/callables/get_secure_asset_url.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/secure_download.js::getSecureAssetUrl` | 8–71 | `CORRECTED` | Live input names are `assetUrl`, `realmId`, `assetType`; old input contract was not evidence-backed. |
+| `RC-15-009` | Ch 15 §9.7 | `functions/callables/handle_sentinel_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/handle_sentinel_action.js::handleSentinelAction` | 164–222 | `CORRECTED` | Singular directory; 1,177-line callable contains multiple action branches. |
+| `RC-15-010` | Ch 15 §9.8 | `functions/callables/handle_mission_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/handle_mission_action.js::handleMissionAction` | 8–90 | `CORRECTED` | Live inputs begin with `action`, `realmId`, `payload`. |
+| `RC-16-001` | Ch 16 §8.1 | `scripts/audit_repo_head_freeze_guard.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/audit_repo_head_freeze_guard.js` | 1–46 | `CORRECTED` | Gate script is in `functions/`, not `scripts/`. |
+| `RC-16-002` | Ch 16 §8.2 | `scripts/verify_48ui8.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `verify_48ui8.js` | 1–343 | `CORRECTED` | Script is repository-root. |
+| `RC-16-003` | Ch 16 §8.3 | `lib/core/backend/firebase_emulator_config.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/firebase/firebase_emulator_config.dart::configureFirebaseEmulatorsFromDartDefines` | 57–95 | `CORRECTED` | Current config validates release/debug mode and auth/firestore ports; it does not configure Functions emulator. |
+| `RC-16-004` | Ch 16 §8.7 | `test/canonical_reconciliation_emulator.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/test/canonical_reconciliation_emulator.js` | 7 | `CORRECTED` | Same test path correction as RC-15-001. |
+| `RC-16-005` | Ch 16 §9 | `web/main.dart.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Generated `build/web/main.dart.js`; source `lib/main_web.dart` | generated after build | `CORRECTED / GENERATED` | `web/main.dart.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** is not a current source path. Never cite generated output as source evidence. |
+| `RC-18-001` | Ch 18 §14.3 | `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/shared/widgets/formatted_math_text.dart` | source readback required | `CORRECTED / REGISTERED` | Old utility is absent; replacement is the observed formatting widget. |
+| `RC-18-002` | Ch 18 §14.3 | `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Inline hashing in telemetry code; no standalone replacement | — | `UNRESOLVED / REGISTERED` | Do not invent a reusable `SecurityHasher` symbol. |
+| `RC-18-003` | Ch 18 §14.3 | `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No dedicated replacement found | — | `UNRESOLVED / REGISTERED` | Generic string helpers are inline/Dart core. |
+| `RC-18-004` | Ch 18 §14.3 | `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/widgets/paywall/premium_paywall_widget.dart` | file exists | `CORRECTED / REGISTERED` | Paywall directory contains the premium widget. |
+| `RC-18-005` | Ch 18 §14.3 | `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/constants/founder_identity.dart::FounderIdentity.isFounderUser` | source readback required | `CORRECTED / REGISTERED` | Founder identity is held in constants, not authority directory. |
+| `RC-18-006` | Ch 18 §14.3 | `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No standalone guard; router/AuthGate checks | — | `UNRESOLVED / REGISTERED` | Keep as absent historical label. |
+| `RC-18-007` | Ch 18 §14.3 | `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/storage/token_storage.dart`, `local_storage_service.dart` | file inventory | `CORRECTED / REGISTERED` | Current storage is split; no `LocalVault` class asserted. |
+| `RC-18-008` | Ch 18 §14.3 | `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No dedicated sound service found | — | `UNRESOLVED / REGISTERED` | Do not imply an audio engine. |
+| `RC-18-009` | Ch 18 §14.3 | `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Inline Flutter `HapticFeedback` call sites | search evidence | `CORRECTED / REGISTERED` | No standalone service file. |
+| `RC-18-010` | Ch 18 §14.3 | `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `lib/core/notifications/notification_engine.dart`, `lib/core/services/sentinel_notification_service.dart` | file inventory | `CORRECTED / REGISTERED` | Notification functionality is split across live files. |
+| `RC-19-001` | Ch 19 §11.7 | `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No current replacement found | — | `UNRESOLVED / HISTORICAL` | `SolutionVerificationRecord.computeSha256` is not a live verified symbol. |
+| `RC-20-001` | Ch 20 §9 | `functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/workers/evaluate_attempt_worker.js::createAttemptSession`, `evaluateAttempt` | 9–55, 57–217 | `CORRECTED` | Actual worker lives in JavaScript workers directory. It uses an existing-result guard and a Firestore batch commit for attempt/evidence/outbox writes; no transactionally closed exactly-once guarantee is claimed. |
+| `RC-20-002` | Ch 20 §9 | `functions/src/admin.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/manage_access.js`, `toggle_ai_system.js` | 8–96; 8–26 | `CORRECTED` | Admin callable topology is flat JavaScript. |
+| `RC-20-003` | Ch 20 §9 | `functions/src/health.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/system_health.js` | 8–72 | `CORRECTED` | Health callable mapped to live file. |
+| `RC-20-004` | Ch 20 §9 | `functions/src/assets.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/callable/secure_download.js` | 8–71 | `CORRECTED` | Secure asset URL callable mapped to live file. |
+| `RC-20-005` | Ch 20 §9 | `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No current replacement found | — | `UNRESOLVED / HISTORICAL` | Former trigger aggregate file is absent. |
+| `RC-20-006` | Ch 20 §9 | `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `functions/src/workers/` directory and `functions/index.js` exports | index 1–63 | `CORRECTED / SCOPED` | Worker topology is distributed; no aggregate `workers.ts` file exists. |
 | `RC-20-007` | Ch 20 §11 | `scripts/run_emulators.sh` | `functions/package.json::serve` (`firebase emulators:start --only functions`) | package script | `CORRECTED` | Shell script absent; package command is live. |
-| `RC-20-008` | Ch 20 §11 | `scripts/seed_fixtures.py` | No current replacement found | — | `UNRESOLVED / HISTORICAL` | `functions/fixtures/` exists, but the former Python seeder does not. |
+| `RC-20-008` | Ch 20 §11 | `scripts/seed_fixtures.py` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | No current replacement found | — | `UNRESOLVED / HISTORICAL` | `functions/fixtures/` exists, but the former Python seeder does not. |
 
 ## 3. Actual backend topology
 
@@ -1748,7 +1661,7 @@ This section is the machine-auditable handoff for the next audit. A row is “li
 
 ### 8.1 Fresh census rules and result
 
-The current audit used three independent checks: (a) repository path existence, (b) symbol/export search, and (c) line-range readback. The resulting source-reference census for Chapters 08–20 found no unlabelled missing file in a `Source File & Location` field. Remaining absent paths are intentionally confined to explicit historical/unresolved ledgers: Chapter 18 stale ledger, `functions/src/assessment/verification.ts`, former `functions/src/assessment.ts`, former `functions/src/triggers.ts`, former `functions/src/workers.ts`, and former fixture/CI labels. `build/web` and `build/web/main.dart.js` are generated artifacts, not live source paths.
+The current audit used three independent checks: (a) repository path existence, (b) symbol/export search, and (c) line-range readback. The resulting source-reference census for Chapters 08–20 found no unlabelled missing file in a `Source File & Location` field. Remaining absent paths are intentionally confined to explicit historical/unresolved ledgers: Chapter 18 stale ledger, `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, former `functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, former `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, former `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, and former fixture/CI labels. `build/web` and `build/web/main.dart.js` are generated artifacts, not live source paths.
 
 ### 8.2 Contract evidence vocabulary for future batches
 
@@ -1765,15 +1678,130 @@ PROPOSED = design intent or future contract, clearly separated from implementati
 Batch 02 closes the identified live-path corrections for the assessment helpers, callable matrix, and academic engines, and records their evidence boundaries. It does not close Chapter 18 or Google Docs parity. The next writing batch must perform branch-level reconciliation for `handleSentinelAction` and `handleMissionAction`, then expand student/dashboard workflows with caller, input validation, output, mutation, error, offline/permission state, test evidence and cross-reference blocks. Final publication language remains `working manuscript` until the unresolved register is either closed with live evidence or intentionally accepted as historical/proposed scope.
 
 
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/callables/get_secure_asset_url.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/get_system_health.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_mission_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_sentinel_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/manage_user_access.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/process_ai_task.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/toggle_ai_system.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/admin.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assets.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/audit/founder_logger.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/admin_claims.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/forensic_purge.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/health.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/triggers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/workers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/backend/firebase_emulator_config.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/battle/battle_engine.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/firestore_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/missions/founder_mission_inventory.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/outcomes/outcome_verification_center.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/repository/command_center_repository.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `scripts/audit_repo_head_freeze_guard.js` | UNRESOLVED AT DEFAULT HEAD |
+| `scripts/seed_fixtures.py` | UNRESOLVED AT DEFAULT HEAD |
+| `scripts/verify_48ui8.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/canonical_reconciliation_emulator.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/realEmulatorE2EWorkerProof.test.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `web/main.dart.js` | UNRESOLVED AT DEFAULT HEAD |
+
+## 10 Current default branch reconciliation 10 October 2026
+
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
+
+| Finding | Current evidence | Required book treatment |
+|---|---|---|
+| Technical authority | Pinned GitHub default branch | Correct the book; do not change GitHub to match it |
+| Dart inventory | 757 tracked Dart / 779 total lib files | Supersede former local 776/798 counts |
+| Compiler order | 24 sources | Use tracked filenames as chapter IDs |
+| Native Docs | Readback contains summaries only | Partial companion; no full-parity claim |
+| Deployment | Hosting build/web; functions/index.js entry | Scope release examples; no atomicity or timing guarantees |
+| CI workflows | No tracked .github/workflows files | CI process descriptions are not workflow certification |
+| Chapter 18 | Open claim register and current inventory mismatch | AUDIT HOLD remains |
+| Historical recovery | June 16 pipeline guide | Not current migration closure or execution permission |
+
+### Architecture branch documents absent from the default branch
+
+Branch `architecture/watch-mission-evidence-contract-20261010` was read at `40934ccc063672f46426aef2f8a75cd09b0795ac`. These 26 paths are branch-specific architecture references. Their own Founder-locked status is retained; default inclusion and runtime implementation are not implied.
+
+| Path | Branch blob SHA | Default status |
+|---|---|---|
+| `docs/architecture/ACADEMIC_AUTHORITY_DEPENDENCY_AND_INVALIDATION_CONTRACT.md` | `c5b99a47467b35f84eee720f3fdb57f2b129f9a2` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/ATOMIC_PEDAGOGY_EXECUTION_CONTRACT.md` | `ad4d7bb9e932ee30c1e0984762bb18f3064041fc` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CAREER_SIGNALS_VERIFIED_GOVERNMENT_OPPORTUNITY_INTELLIGENCE_CONSTITUTION.md` | `5c149fc28feb2ae1a16738ae72995eaff5eaf7b3` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CRUCIBLE_98_DAY_DAY_BY_DAY_CORE_OPERATING_SPECIFICATION.md` | `fffcb67f1a7ab12210849c20641c3a79a7dc2a78` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CRUCIBLE_ASSESSMENT_EXECUTION_CONTRACT.md` | `c485c72da872f9727fad25fbbb89ce692d2affc9` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CRUCIBLE_EXECUTABLE_COMPILER_AND_STATE_MACHINE_CONTRACT.md` | `f2c7961d9e057d6d2fcd82a9860a52c0823b0199` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CRUCIBLE_MICRO_MACRO_EXAM_BLUEPRINT_DERIVATION_SPECIFICATION.md` | `eeb316a5553bd63e2ee034f4759999ee4a647715` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/CRUCIBLE_TO_TEST_ARENA_HANDOFF_AND_FORMAL_ASSESSMENT_BOUNDARY_CONTRACT.md` | `f485de70ef25374c1c61c270976069859a115d05` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/DIGIBOOK_AND_TAUGHT_CONTENT_AUTHORITY_CONTRACT.md` | `79f6ca7259c7dc0d744ee76b5eb88ed14addffb5` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/DIGIBOOK_CONTENT_PRODUCTION_AND_PUBLICATION_CONTRACT.md` | `6667b14c30b7b09ea1c93dcef742854fbd3b5ecf` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/MISSION_DISCOVERY_AND_EVIDENCE_ACQUISITION_CONTRACT.md` | `2551672b4605f7b28d941cef1a3c30c6e751020e` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/PYQ_ACQUISITION_REVIEW_AND_DELIVERY_SOP.md` | `4c7623cb16d256cb2bd8996c2f874e3b67a0cb03` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/PYQ_OFFICIAL_EVIDENCE_PATTERN_MATRIX.md` | `c38cbb3e00bf77a71007fe5a081ba64847c931c5` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/PYQ_UNIVERSAL_AUTHORITY_AND_DATA_CONTRACT.md` | `9de2091764a406b4f00be7b7af010e3552347f49` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/PYQ_VAULT_STUDENT_DELIVERY_CONSTITUTION.md` | `c5fdeddd10572b749ec4f7b10701ca158bb58de9` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/QUESTION_ATOMIC_INTEGRITY_AND_KNOWLEDGE_CLOSURE_SPECIFICATION.md` | `0295268429300dccc408dabc06a8308ac741572e` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/QUESTION_REPOSITORY_AND_KNOWLEDGE_CLOSURE_CONTRACT.md` | `95815cb563523fed01f1aec8848e2beacaf3e727` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/RANKCRACKERS_CROSS_FEATURE_AUTHORITY_AND_EVIDENCE_CLOSURE_CONSTITUTION.md` | `cd65a5241ec4fe4b4e3132560bcfc136b8c354e2` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/RANK_RADAR_COMPETITIVE_INTELLIGENCE_CONSTITUTION.md` | `4e43955e7573ade1fd05d62e782fcc4b48d53c2f` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/REVISION_DESK_EVIDENCE_GOVERNED_RECOVERY_CONSTITUTION.md` | `ac8e1bdf2bf07af5095403b61c34001c093d186c` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/SACRED_ARCHIVE_IMMUTABLE_ACADEMIC_MEMORY_CONSTITUTION.md` | `6e224f3f365dad79ea9a60c8230f62fd765cf478` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/SUBJECT_TEACHER_RESOLUTION_CONSTITUTION.md` | `9949f44d86a6e2631aeb33b1f922b5f90c1cc10b` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/TEACHING_EXECUTION_AND_TAUGHT_MANIFEST_EVIDENCE_CONTRACT.md` | `bd5bb8c4d7ea186e7e208584cb5a84d8e99400b2` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/TEST_ARENA_EARNED_MAJOR_MILESTONE_FULL_TEST_AND_PSYCHOMETRIC_RANKING_CONSTITUTION.md` | `1714144a021d644a38343079caf88f70a2a7dffc` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/TEST_ARENA_EXECUTION_CONTRACT.md` | `d0c0661c9da829704399046bded8e99f967d1923` | ABSENT FROM DEFAULT BRANCH |
+| `docs/architecture/UNIVERSAL_MISSION_EXAMINATION_BLUEPRINT_AND_STUDENT_PROJECTION_CONTRACT.md` | `ea81b1ec110b547653f5253cd70ee8fd75ed41e6` | ABSENT FROM DEFAULT BRANCH |
+
+### Scoped runtime source observations
+
+- `CrucibleClockEngine._resolveBlueprint` accepts an explicit blueprint, otherwise resolves a mission blueprint, and falls back to `MissionCrucibleBlueprint.jeeMain2027Blueprint`. The clock uses blueprint fields; a universal fixed-98-day implementation assertion requires all active blueprint/caller evidence. The accepted 98-day product direction remains recorded separately.
+- `MicroTestEngine` contains source gates for scope, provenance, human authority, answer key, solution hash, PYQ evidence, publication and lineage. Source gate existence is not a production question-bank readiness result or full implementation of all architecture-branch contracts.
+- `TacticalSecureLayer.build` returns `child` unchanged. Screenshot blocking/DRM is not implemented by this widget.
+- `TelemetryEngine` stores raw `userId` alongside `anonymizedUserId`; it is not anonymous-only telemetry.
+- `GlobalErrorHandler.handleFatal` is a void wrapper that records fatal Crashlytics errors outside debug mode; no certified rollback orchestration follows from it.
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Preliminary Reference: Chief Author Audit & Antigravity Work Order (21_chief_author_audit_and_antigravity_work_order.md) -->
-<!-- ======================================================== -->
 
 # Chief Author Audit — Current Book State and Antigravity 2.0 Writing Order
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/21_chief_author_audit_and_antigravity_work_order.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/21_chief_author_audit_and_antigravity_work_order.md) · source blob `111740e5afe4487a690244a1739bd6aa41643d33`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 **Audit date:** 10 October 2026 (IST)
 **Authority:** Chief Author / Editorial Control
@@ -1781,13 +1809,23 @@ Batch 02 closes the identified live-path corrections for the assessment helpers,
 
 > यह document किसी पुराने progress report को प्रमाण नहीं मानता। नीचे का status current repository और current Google Docs readback से निकाला गया है। इसे Antigravity 2.0 के लिए writing order और acceptance gate माना जाए।
 
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
+
 ## 1. Executive status
 
 पुस्तक **structurally compiled लेकिन publication-complete नहीं** है। Local manuscript में पर्याप्त substantive material मौजूद है, पर उसे final professional reference नहीं माना जा सकता क्योंकि source-to-book reconciliation, unsupported claim removal, backend topology correction और Google Docs parity अभी पूर्ण नहीं हुई है।
 
 ### 1.1 What is currently healthy
 
-- `docs/rankcrackers_book/` में 23 compiler-ordered source documents, 12 canonical product-technical chapters, claim registers, reconciliation appendix, assets और generated master outputs मौजूद हैं।
+- `docs/rankcrackers_book/` में 24 compiler-ordered source documents, 12 canonical product-technical chapters, claim registers, reconciliation appendix, assets और generated master outputs मौजूद हैं।
 - Batch 02 compilation में **96,924 words**, **12,733 lines**, **H1 28**, **H2 192**, **H3 430**, **H4 262** दर्ज हैं। Compiler ने 23 source files और **1,043,493 source bytes** पढ़े; generated master MD **1,061,511 bytes** और HTML **1,216,934 bytes** हैं।
 - Current source census में **231 fenced code blocks** और **30 local image references** हैं।
 - `scripts/verify_compilation.py` readback में invalid file-URI occurrences **0**, tested local Markdown links **29**, broken links **0**, images verified **30**, missing images **0** मिले।
@@ -1810,7 +1848,7 @@ Batch 02 closes the identified live-path corrections for the assessment helpers,
 
 ### 2.1 Local manuscript
 
-Canonical local location:
+Historical local working-copy location — not canonical repository authority:
 
 `G:/RankCrackers Project/RankCrackers-55/docs/rankcrackers_book/`
 
@@ -1829,7 +1867,7 @@ Current native Google Doc:
 
 The live readback contains the title page, editorial declaration, language policy, preliminary contents, manuscript status and short Dashboard/Crucible summaries. It does not contain the full local master. Therefore its status is **partial living draft**, not canonical synchronized book.
 
-The local repository remains the source of truth until a complete native-document import/update has been performed and read back.
+The GitHub default branch `safety/rc-g2-pre-notification-schema` at the recorded read commit is the technical authority. Local files and Google Docs are derived representations; neither supersedes GitHub.
 
 **Latest logo-only repair:** the native document's single inline cover object was replaced with the black-background display variant and read back as one remaining inline object. This resolves logo visibility only; it does not make the partial Google Doc a full synchronized manuscript.
 
@@ -1841,62 +1879,62 @@ The baseline audit found **37 distinct references to files that did not exist at
 
 #### Chapter 08 and Chapter 09
 
-- `lib/core/services/firestore_service.dart`
-- `lib/core/battle/battle_engine.dart`
+- `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/battle/battle_engine.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 13 — Founder operations
 
-- `lib/web/founder/repository/command_center_repository.dart`
-- `lib/web/founder/outcomes/outcome_verification_center.dart`
-- `lib/web/founder/missions/founder_mission_inventory.dart`
-- `functions/src/founder/admin_claims.ts`
-- `functions/src/founder/forensic_purge.ts`
+- `lib/web/founder/repository/command_center_repository.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/web/founder/outcomes/outcome_verification_center.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/web/founder/missions/founder_mission_inventory.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/founder/admin_claims.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/founder/forensic_purge.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 14 — Firestore and security dictionary
 
-- `lib/core/services/firestore_service.dart`
-- `functions/src/audit/founder_logger.ts`
+- `lib/core/services/firestore_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/audit/founder_logger.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 15 — Cloud Functions and tests
 
-- `test/canonical_reconciliation_emulator.js`
-- `test/mission_lifecycle_emulator_roundtrip.js`
-- `test/realEmulatorE2EWorkerProof.test.ts`
-- `functions/callables/manage_user_access.js`
-- `functions/callables/toggle_ai_system.js`
-- `functions/callables/get_system_health.js`
-- `functions/callables/process_ai_task.js`
-- `functions/callables/get_secure_asset_url.js`
-- `functions/callables/handle_sentinel_action.js`
-- `functions/callables/handle_mission_action.js`
+- `test/canonical_reconciliation_emulator.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `test/realEmulatorE2EWorkerProof.test.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/manage_user_access.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/toggle_ai_system.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/get_system_health.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/process_ai_task.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/get_secure_asset_url.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/handle_sentinel_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/callables/handle_mission_action.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 16 — Engineering operations
 
-- `lib/core/backend/firebase_emulator_config.dart`
-- `web/main.dart.js`
+- `lib/core/backend/firebase_emulator_config.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `web/main.dart.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapter 18 — Architecture claim register
 
-- `lib/core/utils/math_renderer_util.dart`
-- `lib/core/utils/security_hasher.dart`
-- `lib/core/utils/string_utils.dart`
-- `lib/core/widgets/paywall/tactical_paywall_overlay.dart`
-- `lib/core/authority/founder_authority.dart`
-- `lib/core/authority/authority_boundary_guard.dart`
-- `lib/core/storage/local_vault.dart`
-- `lib/core/services/sound_service.dart`
-- `lib/core/services/haptic_feedback_service.dart`
-- `lib/core/notifications/notification_service.dart`
+- `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 #### Chapters 19 and 20 — academic/backend references
 
-- `functions/src/assessment/verification.ts`
-- `functions/src/assessment.ts`
-- `functions/src/admin.ts`
-- `functions/src/health.ts`
-- `functions/src/assets.ts`
-- `functions/src/triggers.ts`
-- `functions/src/workers.ts`
+- `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/admin.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/health.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/assets.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
+- `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 **Required treatment:** every item must be either replaced with the actual path and exact symbol, or moved to an explicitly labelled `UNRESOLVED / HISTORICAL / PROPOSED` register. A stale path must never remain inside a “verified source” table.
 
@@ -2064,15 +2102,68 @@ Chapter 13 (`13_founder_web_operations_and_mission_control.md`) को पूर
 5. **Governed Lifecycle & Deletion Preflight:** पोर्टफोलियो कार्ड के लाइफसाइकिल म्यूटेशन्स (`archive_realm`, `restore_realm`) तथा परमानेंट डिलीट प्रीफ़्लाइट (मिशन आईडी मिलान, >=12 वर्ण संस्थापक कारण, और शून्य-निर्भरता सत्यापन) को प्रामाणिक रूप से दर्ज किया गया।
 
 
+## Current book correction order superseding earlier operating authority
+
+GitHub governs this book. Do not copy Drive-only declarations into the repository to achieve parity. Reconcile claims against the pinned default branch, record unresolved paths and tests, and preserve Chapter 18 hold. Earlier local paths, counts and sign-off assertions in this audit are historical where they conflict with the current tree. Architecture branch contracts remain branch-specific; their presence or Founder-locked wording alone does not establish current default-branch implementation.
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/callables/get_secure_asset_url.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/get_system_health.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_mission_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/handle_sentinel_action.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/manage_user_access.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/process_ai_task.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/callables/toggle_ai_system.js` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/admin.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assets.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/audit/founder_logger.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/admin_claims.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/forensic_purge.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/health.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/triggers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/workers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/backend/firebase_emulator_config.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/battle/battle_engine.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/firestore_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/missions/founder_mission_inventory.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/outcomes/outcome_verification_center.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/repository/command_center_repository.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `test/canonical_reconciliation_emulator.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `test/realEmulatorE2EWorkerProof.test.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `web/main.dart.js` | UNRESOLVED AT DEFAULT HEAD |
+
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume A: Product Vision, Learning Philosophy & Journey (17_product_vision_learning_philosophy_and_journey.md) -->
-<!-- ======================================================== -->
 
 # Volume A — Product और मूल दृष्टि
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/17_product_vision_learning_philosophy_and_journey.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/17_product_vision_learning_philosophy_and_journey.md) · source blob `a4f141f389af06bdf257f21688128387d952c76e`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Genesis, Philosophy, User Personas & The Sovereign Student Journey
 
@@ -2665,12 +2756,14 @@ Rank Crackers के प्रोडक्ट विज़न, बूटस्�
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume B, Part 1: Identity Pipeline, Auth & Mission Gates (08_identity_profile_and_mission_gates.md) -->
-<!-- ======================================================== -->
 
 # Volume B — Student Experience
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/08_identity_profile_and_mission_gates.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/08_identity_profile_and_mission_gates.md) · source blob `9aaf347912c730d179e2feeb63c76d489f19dad7`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Student Authentication, Unified Identity और Mission Access
 
@@ -4263,12 +4356,14 @@ flowchart TD
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume B, Part 2: Dashboard Command Surface & Providers (09_dashboard_and_learning_command_surface.md) -->
-<!-- ======================================================== -->
 
 # Volume B — Student Experience
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/09_dashboard_and_learning_command_surface.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/09_dashboard_and_learning_command_surface.md) · source blob `a120895d84ae078bbabf74d4dbeac48714a85e19`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 2 — Dashboard और Learning Command Surface
 
@@ -5611,12 +5706,14 @@ flowchart TD
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume B, Part 3: Crucible Protocol & 98-Day Modulo (10_crucible_protocol_and_schedule_engine.md) -->
-<!-- ======================================================== -->
 
 # Volume B — Student Experience
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/10_crucible_protocol_and_schedule_engine.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/10_crucible_protocol_and_schedule_engine.md) · source blob `060c0f1e4caf5baa139575eab41f47e0d89a665d`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 3 — Crucible Protocol, Continuous Learning Ring और Assessment Workflows
 
@@ -5629,6 +5726,14 @@ flowchart TD
 यह अध्याय Crucible के आंतरिक स्टेट पाइपलाइन, ग्लोबल क्लॉक इंजन, कैनोनिकल शेड्यूल रजिस्ट्री, सभी 6 प्रमुख दृश्य अनुभागों (UI Sections), असेसमेंट चैंबर्स (Micro, Macro, Rebuild), सबमिशन पाइपलाइन, और **Human Authority Law** पर आधारित अकादमिक ट्रस्ट इंजन का संपूर्ण स्रोत-आधारित (source-audited) तकनीकी दस्तावेज़ीकरण प्रस्तुत करता है।
 
 ---
+
+## Current runtime contract corrections
+
+The default-branch `jeeMain2027Blueprint` declares 98 days, 7 phases, 6 schedules per phase, 48 hours per schedule, 47 learning hours and 1 micro hour. Its rebuild is 24 hours; macro assessment 2 hours plus 22 hours recovery. The generic clock resolves an explicit/registered blueprint and has a JEE baseline fallback; production mission-wide blueprint publication is not certified here.
+
+Product authority retains the 98-day cycle and Major Test in Test Arena. Default source still contains Major/Grand Simulation compatibility helpers and model labels; their presence is a legacy/runtime discrepancy, not authority to put Major Test back into Crucible. The 26 architecture-branch contracts are separate branch evidence, not automatically implemented on default.
+
+`BattleArenaScreen` at the cited Crucible path is a `StatelessWidget` containing presentation/sample content. It does not define `_submitAssessment`; claims that this path submits scored attempts or persists mastery are unresolved. No replacement submission path is inferred.
 
 ## Section 1 — Screen State Pipeline और Reactive Stream Binding
 
@@ -6689,28 +6794,26 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 
 ### Subsection 13.1 — `CrucibleClockEngine.getNormalizedStart`
 - **Source File & Location:** `lib/features/crucible/core/crucible_clock_engine.dart` (Lines 34–54)
-- **1. Caller:** `CrucibleEngine.initializeLedger()`, `CrucibleRepository.streamProtocolState()`।
+- **1. Caller:** `CrucibleEngine.initializeLedger()` (UNRESOLVED symbol in current engine), `CrucibleRepository.streamProtocolState()`।
 - **2. Inputs:** `DateTime enrollmentTime` (छात्र का मिशन नामांकन अथवा प्रथम सत्र समय)।
 - **3. Outputs:** `DateTime` (सुबह 10:00:00 AM पर सामान्यीकृत दिन प्रारंभ समय)।
 - **4. Mutations:** None (विशुद्ध गणितीय गणना)।
 - **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
+- **6. Timeout:** no measured zero-duration guarantee.
 - **7. Security Boundary:** यदि नामांकन 10:00 AM से 10:00 PM (22:00) के बीच होता है, तो उसी दिन का 10 AM माना जाता है; यदि 10:00 PM के बाद होता है, तो अगले दिन 10 AM से प्रारंभ होता है।
-- **8. Downstream Consumers:** चक्रीय दिन गणना (`calculateOrbitDay`), 14-दिवसीय फ़ेज़ टाइमर।
+- **8. Downstream Consumers:** चक्रीय दिन गणना (`getCycleDay`), 14-दिवसीय फ़ेज़ टाइमर।
 
-### Subsection 13.2 — `CrucibleClockEngine.calculateOrbitDay`
-- **Source File & Location:** `lib/features/crucible/core/crucible_clock_engine.dart` (Lines 75–120)
-- **1. Caller:** `crucibleProtocolStateProvider`, `CrucibleScreen.build()`।
-- **2. Inputs:** `DateTime cycleStart`, `DateTime currentTime`, `int totalCycleDays = 98`।
-- **3. Outputs:** `int` (1 से 98 के बीच का वर्तमान सक्रिय चक्र दिवस)।
-- **4. Mutations:** None।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
-- **7. Security Boundary:** $\text{OrbitDay} = ((\text{elapsedDays}) \pmod{98}) + 1$। 98-दिवसीय सीमा पर मोड्युलो ओवरफ़्लो कभी नहीं होता (दिन 98 के बाद सुरक्षित रूप से दिन 1 पर लौटता है)।
-- **8. Downstream Consumers:** `CrucibleCanonicalScheduleRegistry`, शेड्यूल कार्ड दृश्यता, माइक्रो/मैक्रो परीक्षण ताले।
+### Subsection 13.2 — `CrucibleClockEngine.getCycleDay` and `getOrbitNumber`
+- **Source:** `lib/features/crucible/core/crucible_clock_engine.dart:91–118`.
+- **Actual names:** `calculateOrbitDay` is not declared in this source; use `getCycleDay` / `getProtocolDay` alias.
+- **Inputs:** cycle-day method receives state, current time and optional blueprint; orbit method receives start, time, optional blueprint and optional cycle-length override.
+- **Output:** day is `((elapsedSeconds ~/ 86400) % blueprint.cycleLengthDays) + 1`; orbit is `(elapsedSeconds ~/ (cycleDays * 86400)) + 1`.
+- **Mutation:** none in these methods.
+- **Boundary:** pre-start elapsed clamps to zero; orbit returns 1. JEE fallback profile is 98 days; blueprint-dependent behavior must not be confused with universal runtime publication.
+- **Timing and tests:** no execution-duration benchmark or current test pass is certified.
 
 ### Subsection 13.3 — `CrucibleRepository.streamProtocolState`
-- **Source File & Location:** `lib/core/backend/crucible_repository.dart` (Lines 801–818)
+- **Source File & Location:** `lib/core/backend/crucible_repository.dart:15–36`
 - **1. Caller:** `crucibleProtocolStateProvider` (`ref.watch(sessionUserProvider)` के माध्यम से)।
 - **2. Inputs:** `String recruitmentId`।
 - **3. Outputs:** `Stream<CrucibleProtocolState?>`।
@@ -6720,43 +6823,25 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 - **7. Security Boundary:** `recruitmentId.isEmpty` या `user == null` होने पर तत्काल `yield null`। केवल छात्र के निजी `/users/{uid}/protocols/{recruitmentId}` दस्तावेज़ का लिसनिंग।
 - **8. Downstream Consumers:** `CrucibleScreen` त्रि-स्तरीय स्टेट मशीन (Loading, Preparing, Active Content)।
 
-### Subsection 13.4 — `MicroTestEngine.assembleTest`
-- **Source File & Location:** `lib/features/crucible/core/micro_test_engine.dart` (Lines 50–120)
-- **1. Caller:** `SacredMicroTestChamber.onStartTest` टैप इवेंट।
-- **2. Inputs:** `CrucibleSchedule schedule`, `List<AcademicNode> targetNodes`, `String studentUid`।
-- **3. Outputs:** `Future<MicroTestAssembly>` (सत्यापित प्रश्नों की सूची, समय सीमा, और परीक्षण मेटाडेटा)।
-- **4. Mutations:** None (असेम्बली चरण में केवल मेमोरी ऑब्जेक्ट निर्माण)।
-- **5. Retries:** 2 स्वचालित पुनः प्रयास यदि प्रश्न पूल में पर्याप्त सत्यापित प्रश्न न मिलें।
-- **6. Timeout:** 5 सेकंड का फ़ेच टाइमआउट।
-- **7. Security Boundary:** Human Authority Law प्रवर्तन:
-  - केवल मानव-समीक्षित प्रश्न (`reviewerType == 'human'`) शामिल किए जाते हैं।
-  - यदि किसी प्रश्न का साक्ष्य अपूर्ण है, तो `checkQuestionEligibility` उसे बाहर कर देता है।
-- **8. Downstream Consumers:** `BattleArenaScreen`, टाइमर इंजन।
+### Subsection 13.4 — `MicroTestEngine.assembleMicroTest`
+- **Source:** `lib/features/crucible/core/micro_test_engine.dart:350` onward.
+- **Actual name/output:** `assembleTest` is not declared; actual method returns `List<QuestionModel>` synchronously.
+- **Inputs:** schedule ID, allowed atoms, pool, previously learned atoms, optional student level/policy, bank/attempt counts, trust snapshot and seed.
+- **Selection:** invokes `checkQuestionEligibility`, deduplicates IDs/lineages, sorts candidates and performs deterministic selection.
+- **Bank guard:** `requiredBankCount ?? requiredCount ?? 50`; returns `[]` below the selected bank threshold.
+- **Timing/retries:** no asynchronous fetch, two-retry loop or five-second fetch timeout in this assembly method.
+- **Acceptance boundary:** question gate source exists; production bank readiness and all architecture-branch eligibility contracts are not certified by this method alone.
 
-### Subsection 13.5 — `MacroTestEngine.assembleCitadel`
-- **Source File & Location:** `lib/features/crucible/core/macro_test_engine.dart` (Lines 60–145)
-- **1. Caller:** Day 14/28/42/56/70/84/98 पर `SacredMacroTestCitadel` अनलॉक होने पर।
-- **2. Inputs:** `int phaseNumber` (1 से 7), `List<CrucibleSchedule> phaseSchedules`, `String studentUid`।
-- **3. Outputs:** `Future<MacroCitadelAssembly>` (पूर्ण 14-दिवसीय ब्लॉक का बहु-विषयक परीक्षण)।
-- **4. Mutations:** None।
-- **5. Retries:** 1 पुनः प्रयास।
-- **6. Timeout:** 8 सेकंड का डेटा एकत्रीकरण टाइमआउट।
-- **7. Security Boundary:** ब्लॉक-स्तरीय ताला (केवल Day 14 पर सक्रिय होता है; उससे पहले फ़ेल-क्लोज़्ड रहता है)।
-- **8. Downstream Consumers:** `BattleArenaScreen` (Macro Citadel Mode)।
+### Subsection 13.5 — `MacroTestEngine.assembleMacroTest`
+- **Source:** `lib/features/crucible/core/macro_test_engine.dart:41` onward.
+- **Actual name/output:** `assembleCitadel` is not declared; actual method returns `List<QuestionModel>` synchronously.
+- **Inputs:** macro/schedule IDs, allowed atoms, pool, recruitment ID and optional policy/counts/trust/seed.
+- **Selection:** filters recruitment, delegates question eligibility to MicroTestEngine, deduplicates, sorts and selects deterministically.
+- **Bank guard:** `requiredBankCount ?? requiredCount ?? 100`; attempt count is separately selected by `attemptCount ?? requiredCount ?? eligible.length`.
+- **Boundary:** 100-bank fallback is not automatically a 100-question student attempt. No one-retry/eight-second fetch contract or day-window lock is implemented in this assembly method.
 
-### Subsection 13.6 — `BattleArenaScreen._submitAssessment`
-- **Source File & Location:** `lib/features/crucible/presentation/screens/battle_arena_screen.dart` (Lines 310–380)
-- **1. Caller:** छात्र द्वारा "SUBMIT CITADEL / TEST" बटन टैप या टाइमर समाप्ति।
-- **2. Inputs:** `Map<String, String> answers`, `int timeSpentSeconds`, `String testId`।
-- **3. Outputs:** `Future<SubmissionResult>`।
-- **4. Mutations:**
-  - क्लाउड फ़ंक्शन `submitCrucibleAssessment` कॉल (SHA-256 हैश के साथ)।
-  - छात्र के व्यक्तिगत लेजर `/users/{uid}/crucible_ledger` में प्रविष्टि।
-  - स्थानीय `KnowledgeEngine` में तात्कालिक मास्टरी और मोमेंटम रीकैल्कुलेशन।
-- **5. Retries:** ऑफ़लाइन होने पर स्थानीय आउटबॉक्स कतार में सहेजना (ऑफ़लाइन रेजिलिएंस)।
-- **6. Timeout:** 15 सेकंड का RPC टाइमआउट।
-- **7. Security Boundary:** क्लाइंट सीधे मास्टरी स्कोर नहीं लिख सकता; स्कोरिंग और सत्यापन सर्वर-साइड फ़ंक्शन द्वारा निष्पादित होते हैं।
-- **8. Downstream Consumers:** परिणाम स्क्रीन (`AssessmentResultScreen`), `ReadinessGauge`, `MomentumState`।
+### Subsection 13.6 — `BattleArenaScreen._submitAssessment` — UNRESOLVED
+The cited `lib/features/crucible/presentation/screens/battle_arena_screen.dart` defines a stateless presentation screen, not `_submitAssessment`. The former callable submission, Firestore attempt/micro-evidence mutations, retries, timeout and mastery-update claims are withdrawn for this path. Assessment execution requires a separately verified caller/worker route; no substitute is invented.
 
 ### Subsection 13.7 — `CrucibleScreen._handleLearnAction`
 - **Source File & Location:** `lib/features/crucible/presentation/screens/crucible_screen.dart` (Lines 410–475)
@@ -6778,7 +6863,7 @@ Chief Author Mandate के तहत The Crucible एवं 98-Day Schedule Eng
 - **3. Outputs:** `Widget` (सुरक्षित तैयारी सतह)।
 - **4. Mutations:** None।
 - **5. Retries:** Not applicable।
-- **6. Timeout:** 16ms फ्रेम रेंडरिंग।
+- **6. Timeout:** no measured frame-duration guarantee.
 - **7. Security Boundary:** कोल्ड-स्टार्ट सुरक्षा (बिना क्रैश के छात्र को आधिकारिक मापदंडों के सक्रिय होने की प्रतीक्षा स्थिति में रखना)।
 - **8. Downstream Consumers:** Flutter UI कंपोज़िटर।
 
@@ -6852,15 +6937,20 @@ flowchart TD
 
 
 
+**Inventory qualification:** mentions of 776 Dart files, 798 local files or the old layer partition describe a historical local snapshot. Current GitHub tree census is 757 Dart / 779 total `lib/` files.
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume B, Part 4: Syllabus Tree & DigiBook Bridge (11_syllabus_hierarchy_and_digibook_bridge.md) -->
-<!-- ======================================================== -->
 
 # Volume B — Student Experience
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/11_syllabus_hierarchy_and_digibook_bridge.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/11_syllabus_hierarchy_and_digibook_bridge.md) · source blob `16b57c08e8fd57f4ff142f2081574c9ec4f7aee3`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 4 — Academic Syllabus, Topics और DigiBook Publication Chain
 
@@ -7733,21 +7823,23 @@ Accordingly, earlier phrases such as “4-tier syllabus” remain only as histor
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume B, Part 5: GitHub-Tracked Canonical Syllabus & Derived Decomposition Contract (23_github_tracked_canonical_syllabus_contract.md) -->
-<!-- ======================================================== -->
 
 # Chapter 23 — GitHub-Tracked Canonical Syllabus & Derived Decomposition Contract
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/23_github_tracked_canonical_syllabus_contract.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/23_github_tracked_canonical_syllabus_contract.md) · source blob `3e456cf4d7378f7749756c2b9065e862cae98954`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 **Volume:** B — Student Experience, Academic Authority & Learning Surface  
 **Part:** 5 — Official Syllabus Authority, Derived Decomposition & Knowledge Closure  
-**Source class:** REMOTE CANONICAL DOCUMENT — GitHub-tracked, not yet proven as local runtime implementation  
+**Source class:** DEFAULT-BRANCH TRACKED ARCHITECTURE CONTRACT — runtime implementation parity separately pending  
 **Editorial status:** SOURCE-REVIEWED / BOOK-INGESTED / IMPLEMENTATION PARITY PENDING  
 **Chief Author observation date:** 2026-10-10  
 **Repository:** [rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
 **Tracked branch:** `safety/rc-g2-pre-notification-schema`  
-**Latest observed commit:** [bfee5c70814af5c2c2c3f3ba9fd9163361441d87](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/bfee5c70814af5c2c2c3f3ba9fd9163361441d87)  
+**Historical contract-change commit:** [bfee5c70814af5c2c2c3f3ba9fd9163361441d87](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/bfee5c70814af5c2c2c3f3ba9fd9163361441d87)  
 **Previous observed commit:** [b5ef867206d350db527e964c391fc324221752fd](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/b5ef867206d350db527e964c391fc324221752fd)  
 **Tracked source path:** `docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md`
 
@@ -7755,14 +7847,14 @@ Accordingly, earlier phrases such as “4-tier syllabus” remain only as histor
 
 ## 23.1 Chief Author tracking decision
 
-यह chapter GitHub पर उपलब्ध नवीनतम architecture document को book में traceable रूप से शामिल करता है। इसे local code की स्वतः-सिद्ध implementation नहीं माना जाएगा। Remote contract में वर्णित कोई भी rule तभी “live implementation” कहलाएगा जब वर्तमान checkout में उसका source symbol, schema, test evidence और runtime/readback proof अलग से मिल जाए।
+यह chapter GitHub default branch में tracked syllabus architecture contract को book में traceable रूप से शामिल करता है। इसे local code की स्वतः-सिद्ध implementation नहीं माना जाएगा। Remote contract में वर्णित कोई भी rule तभी “live implementation” कहलाएगा जब वर्तमान checkout में उसका source symbol, schema, test evidence और runtime/readback proof अलग से मिल जाए।
 
 Remote और local state का अंतर:
 
 | Evidence layer | Current finding | Book treatment |
 |---|---|---|
 | GitHub remote document | Latest head पर उपलब्ध | Canonical remote source के रूप में track |
-| Local checkout | `docs/architecture/` copy वर्तमान checkout में नहीं मिली | Remote-only / implementation parity pending |
+| Current GitHub default branch | Contract file exists at `5161592ddafb42f1ecc8923cc7b7b0309934cc83` | Default-tracked architecture; runtime parity remains separately pending |
 | Existing book chapters | Syllabus, DigiBook और assessment architecture पहले से documented | इस chapter से cross-reference और reconciliation आवश्यक |
 | Runtime implementation | इस chapter से स्वतः प्रमाणित नहीं | Source/test audit के बाद ही VERIFIED |
 | Google Docs | Full parity अलग gate है | इस chapter से synchronized नहीं माना जाएगा |
@@ -8231,9 +8323,9 @@ verifiedBy
 
 ---
 
-## 23.22 Tracked GitHub source — current remote text
+## 23.22 Current default branch contract payload
 
-The following source text is retained as the remote reference payload for audit comparison:
+The payload below is the exact default-branch contract text at the recorded HEAD. Historical provenance is retained above; runtime parity remains separately pending.
 
 # RankCrackers Canonical Syllabus & Derived Decomposition Contract
 
@@ -8354,6 +8446,7 @@ It should NOT be split merely to create artificial granularity.
 ## 8. Evidence versus decomposition
 
 External academic sources, standard references and official PYQs may help validate interpretation or discover likely decomposition candidates, but they do not change the official syllabus boundary.
+
 PYQ presence can support relevance **within** an official boundary. PYQ absence does not by itself remove an official syllabus concept.
 
 No unofficial source can promote a DERIVED node to OFFICIAL.
@@ -8473,6 +8566,7 @@ Founder/qualified human exception:
 ## 18. Fail-closed rules
 
 The system MUST fail closed when required authority is absent, invalid, superseded, ambiguous beyond tolerance or not verified.
+
 It MUST NOT infer authority from:
 - publication status;
 - readiness flags;
@@ -8592,6 +8686,7 @@ is not further syllabus decomposition; it is teaching-content structure.
 **Boundary law:** when the next useful split changes from "what concept is this?" to "how do we teach/explain/practise this concept?", DSD MUST stop and Pedagogy/DigiBook takes over.
 
 ## 25. Decomposition Stop Test (DST)
+
 There is no fixed maximum number of children, atoms or hierarchy depth. Termination is semantic and functional.
 
 A proposed child set MUST pass all mandatory gates:
@@ -8712,6 +8807,7 @@ A single exceptional question is evidence of examination behavior, not automatic
 Repeated official evidence may trigger a boundary review. Any actual scope/profile change remains versioned, attributable and revalidated downstream.
 
 ## 30. No Untaught Knowledge Dependency / Question Knowledge Closure
+
 A production assessment item MUST NOT require substantive factual or conceptual knowledge that is outside the applicable verified and taught mission boundary.
 
 Each question SHOULD bind to the knowledge atoms materially required to solve it:
@@ -8851,6 +8947,7 @@ DSD MUST NOT silently mutate when:
 - a reference standard changes;
 - a previous ambiguity is resolved;
 - an atom is found too broad or too narrow.
+
 Changes create a new version or explicit supersession relationship. Impact analysis must reach DigiBook/material, teaching execution, taught authority, questions and publication readiness.
 
 ## 35. Required failure taxonomy
@@ -8975,12 +9072,14 @@ The tracker is a change detector, not implementation proof. A source may be curr
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume C, Part 1: Founder Web Operations & Mission Control (13_founder_web_operations_and_mission_control.md) -->
-<!-- ======================================================== -->
 
 # Volume C — Founder Web Operations
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/13_founder_web_operations_and_mission_control.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/13_founder_web_operations_and_mission_control.md) · source blob `88a544e3caf7e8a87b4edb6707d3e270206d50bf`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Administrative Command Surface, Mission Control & Sovereign Governance
 
@@ -9881,13 +9980,13 @@ Chief Author Mandate के तहत Founder Web Operations & Mission Control �
 
 #### Subsection 11.6 — `manageUserAccess`
 - **Source File & Location:** `functions/callable/manage_access.js` (Lines 10–80), exported by `functions/index.js` (Lines 11–26)
-- **Status:** `VERIFIED` live callable; पुराने `functions/src/founder/admin_claims.ts` का replacement।
+- **Status:** `VERIFIED` live callable; पुराने `functions/src/founder/admin_claims.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** का replacement।
 - **Inputs/Outputs:** data में `targetUid`, `role`, `action`; success response और `HttpsError` branches code से पढ़े जाएँ।
 - **Security:** `context.auth`, founder/admin claims और `ensureFounderClaims` checks।
 
 #### Subsection 11.7 — `handleSentinelAction` purge branch
 - **Source File & Location:** `functions/callable/handle_sentinel_action.js` (Lines 164–222)
-- **Status:** `CORRECTED`; अलग `functions/src/founder/forensic_purge.ts` file वर्तमान repository में नहीं है।
+- **Status:** `CORRECTED`; अलग `functions/src/founder/forensic_purge.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** file वर्तमान repository में नहीं है।
 - **Inputs/Mutation:** live action string `purge_historical_test_data` branch और its payload validation को code के अनुसार document किया जाए; confirmation-passphrase contract प्रमाणित नहीं है।
 - **Evidence boundary:** purge को generic “forensic purge service” नहीं कहा जाएगा; current evidence केवल this callable branch और its audit calls तक सीमित है।
 
@@ -9971,15 +10070,28 @@ flowchart TD
     - Admin SDK और Cloud Functions निष्पादन लॉग्स।
 
 
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/founder/admin_claims.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/forensic_purge.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/web_shell.dart` | UNRESOLVED AT DEFAULT HEAD |
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume D, Part 1: Application Architecture & Design System (18_application_architecture_and_design_system.md) -->
-<!-- ======================================================== -->
 
 # Volume D — Application Architecture
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/18_application_architecture_and_design_system.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/18_application_architecture_and_design_system.md) · source blob `5ca38e2f5407930dbf5c44cf4b938382cb16c6b9`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Multiplatform Blueprint, Tactical Noir Design System & Reactive State Engine
 
@@ -9988,14 +10100,14 @@ flowchart TD
 # Chapter 18 — Application Architecture, Multiplatform Design System, Responsive Engine और Riverpod State Topology
 
 > **Canonical Hierarchy:** Volume D → Part 1 → Chapter 18  
-> **Source Verification Status:** AUDIT HOLD — NOT FINAL (Subject to Chief Author Claim Register [`18_chapter_18_claim_register.md`](18_chapter_18_claim_register.md)) | Grounded against 776 Dart files (`lib/`)  
+> **Source Verification Status:** AUDIT HOLD — NOT FINAL (Subject to Chief Author Claim Register [`18_chapter_18_claim_register.md`](18_chapter_18_claim_register.md)) | Current tracked census: 757 Dart files (`lib/`); former 776-file local matrix is historical  
 > **Primary Language:** उच्च-स्तरीय तकनीकी हिन्दी (High-Register Technical Hindi) | Code, File Paths & Symbols: Original English
 
 ---
 
 ### Executive Overview
 
-Rank Crackers का तकनीकी ढांचा (Application Architecture) एक उच्च-प्रदर्शन, बहु-मंचीय (Multiplatform) और सामरिक स्तर पर सुरक्षित (Tactically Hardened) आर्किटेक्चर पर आधारित है। जहाँ सामान्य एप्लिकेशन सतही टेम्पलेट्स पर निर्भर होते हैं, वहीं Rank Crackers ने **Flutter 3.x**, **GoRouter 17.x** (`go_router: ^17.3.0`), **Flutter Riverpod 2.6.x** (`flutter_riverpod: ^2.6.1`), और कस्टम **Tactical Noir Design System** का उपयोग करके एक ऐसा इंजन तैयार किया है जो बजट एंड्रॉइड स्मार्टफोन्स (360dp चौड़ाई) से लेकर 4K डेस्कटॉप मॉनिटर्स तक 60–120 FPS रिस्पॉन्सिव परफॉर्मेंस और मिलिट्री-ग्रेड विश्वसनीयता प्रदान करता है।
+RankCrackers का client Flutter, GoRouter और Riverpod पर आधारित है। `pubspec.yaml` dependency constraints दर्ज करता है; वे installed SDK या measured device performance का प्रमाण नहीं हैं। Tactical Noir design tokens और responsive helpers source में हैं। 60–120 FPS, zero-drop और व्यापक security/reliability guarantees इस edition में achieved results नहीं माने जाते।
 
 यह अध्याय Rank Crackers के क्लाइंट-साइड आर्किटेक्चर का संपूर्ण विश्लेषण करता है—जिसमें मोबाइल और वेब के बूटस्ट्रैप अनुक्रम (Bootstrap Cascades), 5-ब्रांच नेविगेशन शेल (`MainNavigationShell`), गणितीय रूप से स्केल होने वाला रिस्पॉन्सिव इंजन (`ResponsiveHelper`), लग्जरी डार्क डिज़ाइन टोकन्स (`AppColors`, `AppTypography`, `AppRadius`, `AppSpacing`, `AppSurfaces`, `AppTextStyles`, `AppTheme`), और फॉल्ट-टॉलरेंट टेलीमेट्री इंजन (`TelemetryEngine`) का स्रोत-कोड आधारित प्रमाण दर्ज है।
 
@@ -10523,7 +10635,7 @@ class GlobalErrorHandler {
 
 ## Section 9: Performance Optimization & Render Hygiene
 
-Rank Crackers को विभिन्न हार्डवेयर विन्यासों पर 60–120 FPS पर सुचारू रूप से चलाने के लिए निम्नलिखित अनुकूलन सिद्धांत कोडबेस में लागू हैं:
+Performance-oriented source patterns नीचे दर्ज हैं। Hardware-specific 60–120 FPS और zero-drop performance measured benchmarks उपलब्ध होने तक design targets हैं।
 
 1. **स्लिवर वर्चुअलाइज़ेशन (Sliver Virtualization):** `DashboardScreen` और DigiBook library में `CustomScrollView` मौजूद है; DigiBook के subject-unit path में `SliverList`/`SliverChildBuilderDelegate` भी मौजूद हैं। इसे पूरे ऐप के हर card के लिए automatic virtualization न लिखें; widget-by-widget verification आवश्यक है।
 2. **रिपेन्ट बाउंड्रीज (RepaintBoundaries):** `RepaintBoundary` का प्रमाण visual QA tests में मिलता है। वर्तमान source audit से यह सिद्ध नहीं होता कि dashboard, DigiBook और सभी high-frequency animation cards में यह wrapper लागू है; इसलिए इसे implemented global guarantee नहीं, targeted QA technique लिखें।
@@ -10715,7 +10827,7 @@ Chief Author Mandate के तहत Antigravity 2.0 द्वारा नि�
 3. **Resolve each claim against current repository:** निष्पादित। `pubspec.yaml` (`1.0.0+1`, `go_router: ^17.3.0`, `flutter_riverpod: ^2.6.1`) और वास्तविक फ़ाइल लंबाई दर्ज की गई।
 4. **Correct wrong symbols & contracts:** निष्पादित। `_flushBuffer` को वास्तविक पब्लिक फलन `flush` से बदला गया; `capture` से अप्रयुक्त `TelemetrySeverity` हटाया गया; `main_web.dart` की सीमा स्पष्ट की गई।
 5. **Replace unsupported certainty with verified evidence:** निष्पादित। अवास्तविक दावों के स्थान पर वास्तुकला नियम और लक्षित परफॉर्मेंस हाइजीन दर्ज की गई।
-6. **Build 776-Dart-file architecture evidence matrix:** निष्पादित (Section 14 में विस्तृत)।
+6. **Historical 776-Dart-file matrix:** retained in Section 14; current full layer-partition revalidation remains open.
 7. **Add atomic implementation notes for architecture dependencies:** निष्पादित (Section 15 में विस्तृत)।
 8. **Update local chapter, index and master compiler inputs:** निष्पादित।
 9. **Regenerate Master Markdown and HTML with compiler script:** निष्पादित।
@@ -10723,11 +10835,19 @@ Chief Author Mandate के तहत Antigravity 2.0 द्वारा नि�
 
 ---
 
-## Section 14: Comprehensive 776-Dart-File Architecture Evidence Matrix
+## Section 14: Historical Local Architecture Matrix and Current GitHub Census
 
-Rank Crackers कोडबेस के संपूर्ण `lib/` डायरेक्टरी के 776 Dart सोर्सेज़ का 15-स्तरीय वास्तुकला वर्गीकरण और साक्ष्य विवरण नीचे दर्ज है:
+Current default-branch tree contains 757 Dart files. The following 776-file distribution describes a former local inventory, not this commit. Its counts, 78-row coverage and derived remainder are retained for historical audit continuity only. Each referenced path is classified again in the current reconciliation register.
 
-### 14.1 एग्जीक्यूटिव वास्तुकला वितरण (Executive Layer Distribution — 776 Dart Files)
+| Current GitHub metric | Value |
+|---|---:|
+| Tracked `lib/` files | 779 |
+| Dart files | 757 |
+| Non-Dart files | 22 |
+| Tracked `lib/` bytes | 3,438,588 |
+| Tracked Dart bytes | 3,301,582 |
+
+### 14.1 एग्जीक्यूटिव वास्तुकला वितरण (Current GitHub Path Partition — 757 Dart Files)
 
 | Tier ID | Architectural Layer | Path Scope | Files | Primary State & Authority | Canonical Volume Mapping |
 |---|---|---|---|---|---|
@@ -10736,33 +10856,36 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | **L03** | Design Tokens & Widgets | `lib/core/theme/`, `lib/core/widgets/`, `lib/core/utils/` | 18 | Tactical Noir Tokens, `ResponsiveHelper` | Volume D (Chapter 18) |
 | **L04** | Core Infrastructure & Telemetry | `lib/core/telemetry/`, `lib/core/errors/`, `lib/core/firebase/`, `lib/core/authority/`, `lib/core/network/`, `lib/core/storage/`, `lib/core/services/`, `lib/core/backend/`, `lib/core/notifications/`, `lib/core/learning/` | 57 | `TelemetryEngine`, `GlobalErrorHandler`, Firestore Adapters | Volume D (Chapter 18) & Vol H (Ch 16) |
 | **L05** | Shared Session & Components | `lib/shared/` | 7 | `SessionManager`, `sessionUserProvider`, `DarkCard` | Volume D (Chapter 18) & Vol B (Ch 08) |
-| **L06** | Founder Web Operations | `lib/web/` | 28 | `AuthGate`, `WebShell`, Mission Control, Revenue | Volume C (Chapter 13) |
-| **L07** | Academic Intelligence & Models | `lib/core/ai/`, `lib/core/engines/`, `lib/core/knowledge/`, `lib/core/models/`, `lib/core/topic_graph/`, तथा शेष cognitive models (`admin/`, `analytics/`, `constants/`, `diagnostic/`, `exam/`, `language/`) | 182 | `KnowledgeEngineState`, Topic Heat, Graph Engine | Volume F (Chapter 19) |
-| **L08** | Identity, Auth & Mission Gates | `lib/features/auth/`, `lib/features/profile/`, `lib/features/onboarding/`, `lib/features/deep_profile/` | 56 | Phone Auth, Profile Completion, Sacred Citadel | Volume B, Part 1 (Chapter 08) |
+| **L06** | Founder Web Operations | `lib/web/` | 12 | `AuthGate`, `WebShell`, Mission Control, Revenue | Volume C (Chapter 13) |
+| **L07** | Academic Intelligence & Models | `lib/core/ai/`, `lib/core/engines/`, `lib/core/knowledge/`, `lib/core/models/`, `lib/core/topic_graph/`, तथा शेष cognitive models (`admin/`, `analytics/`, `constants/`, `diagnostic/`, `exam/`, `language/`) | 181 | `KnowledgeEngineState`, Topic Heat, Graph Engine | Volume F (Chapter 19) |
+| **L08** | Identity, Auth & Mission Gates | `lib/features/auth/`, `lib/features/profile/`, `lib/features/onboarding/`, `lib/features/deep_profile/` | 55 | Phone Auth, Profile Completion, Sacred Citadel | Volume B, Part 1 (Chapter 08) |
 | **L09** | Dashboard Command Surface | `lib/features/dashboard/`, `lib/features/home/` | 57 | Daily Command Grid, Readiness Ring, Activity Feed | Volume B, Part 2 (Chapter 09) |
 | **L10** | Crucible Protocol & Assessment | `lib/features/crucible/`, `lib/features/test_arena/`, `lib/features/test_engine/`, `lib/features/revision/`, `lib/features/rebuild/`, `lib/features/assessment/`, `lib/features/exam/` | 87 | 98-Day Modulo, Test Citadels, Rebuild Workers | Volume B, Part 3 (Chapter 10) |
 | **L11** | Syllabus Tree & DigiBook Bridge | `lib/features/syllabus/`, `lib/features/digibook/`, `lib/features/pyq/`, `lib/features/mcq/` | 73 | Variable-depth authority tree, DigiBook Reader, Micro/Atomic Nodes | Volume B, Part 4–5 (Chapters 11 & 23) |
-| **L12** | Founder Backoffice Pipeline | `lib/features/admin/`, `lib/features/opportunities/`, `lib/features/academic_factory/`, `lib/features/preview/`, `lib/features/archive/` | 130 | Ingestion Review, Recruitment Pipeline, Admin Panels | Volume C (Chapter 13) |
+| **L12** | Founder Backoffice Pipeline | `lib/features/admin/`, `lib/features/opportunities/`, `lib/features/academic_factory/`, `lib/features/preview/`, `lib/features/archive/` | 129 | Ingestion Review, Recruitment Pipeline, Admin Panels | Volume C (Chapter 13) |
 | **L13** | Student Analytics & Mastery | `lib/features/analytics/`, `lib/features/diagnostic/`, `lib/features/progress/`, `lib/features/progress_tracker/`, `lib/features/performance/`, `lib/features/rankings/`, `lib/features/study_room/`, `lib/features/splash/`, `lib/features/test_analysis/`, `lib/features/courses/`, `lib/features/knowledge_graph/`, `lib/features/notifications/`, `lib/features/planner/`, `lib/features/mentor/`, `lib/features/notes/` | 31 | Progress Telemetry, Rank Matrix, Diagnostic Trees | Volume F (Chapter 19) |
 | **L14** | Personalization Intelligence | `lib/features/personalization/` | 35 | Smart Entry, Adaptive Revision Queues, Fluency | Volume F, Part 1 (Chapter 19) & Vol B |
 | **L15** | App Config & Data Seeds | `lib/config/`, `lib/data/`, `lib/database/` | 6 | `AppConfig`, India State/District Seeds, Local DB | Volume D & E (Chapter 14/18) |
-| **TOTAL** | **Comprehensive Codebase Scope** | **Entire `lib/` Source Tree** | **776** | **Unified Cognitive Operating System** | **All Volumes A through I** |
+| **TOTAL** | **Comprehensive Codebase Scope** | **Entire `lib/` Source Tree** | **757** | **Unified Cognitive Operating System** | **All Volumes A through I** |
 
 ---
 
-### 14.2 वास्तुकला-महत्वपूर्ण स्रोत पंक्तियों का एटॉमिक एविडेंस मैट्रिक्स (Verified 78 Architecture Rows)
 
-नीचे architecture core (Bootstrap, Router, Theme, Widgets, Telemetry, Error Governance, Shared Session, Backend Adapters, Web Harness, Config) के **ठीक 78 सत्यापित स्रोत-कोड पंक्तियाँ (Verified Existing Rows)** दर्ज हैं। इस तालिका में केवल वे स्रोत पथ शामिल हैं जो वर्तमान `lib/` डायरेक्टरी में भौतिक रूप से मौजूद हैं। पूर्व प्रारूप में पाए गए 10 अनुपस्थित/स्टेल पाथ्स को इस तालिका से पूरी तरह पृथक कर **Section 14.3 (Unresolved & Stale Paths Register)** में क्वारंटाइन कर दिया गया है।
+Partition evidence: `current_layer_partition.json` at GitHub commit `5161592ddafb42f1ecc8923cc7b7b0309934cc83`: 757 assigned, 0 overlaps, 0 unassigned. L01 contains the four exact root Dart files including `main_web_emulator.dart`; all other groups use explicit Chapter 18 path-prefix scopes. This is an editorial path classification, not dependency or runtime validation.
+
+### 14.2 वास्तुकला-महत्वपूर्ण स्रोत पंक्तियों का एटॉमिक एविडेंस मैट्रिक्स (73 Current GitHub Paths — Source Presence Checked)
+
+Current matrix में 73 unique paths GitHub tree से मिले हैं। Path existence और explicit symbol presence जाँची गई है; बाकी caller, output, failure, security और downstream descriptions स्वतः runtime-verified नहीं हैं। पाँच Drive-only rows नीचे अलग रखी गई हैं।
 
 | Repository Path | File Type | Key Symbols | Entry / Caller | Inputs | Outputs | Mutations | Failure Behavior | Security Boundary | Downstream Consumers | Verified Reference | Book Mapping |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | `lib/main.dart` | Dart | `main()`, `RankCrackersApp` | Flutter Engine / OS | Platform Env | `Future<void>`, Root Widget | Init Bindings, Firebase, Session, AppCheck | Catch-all via `GlobalErrorHandler` | Play Integrity / DeviceCheck | Entire App | Source L16-53 | Vol D, Ch 18 |
 | `lib/main_web.dart` | Dart | `main()`, `RankCrackersWebApp`, `AuthGate` | Web Browser | URI, Web Env | Root Web Widget | Init Firebase, Session | Centered Loader / Auth redirect | Token Invite / Founder Claims | Founder Console | Source L19-24 | Vol C, Ch 13 & Vol D |
-| `lib/main_web_emulator.dart` | Dart | `main()`, `RankCrackersWebEmulatorApp` | Web Test Runner | Localhost Ports | Emulator Bound App | Local Ports Override | Console Warning | Local Only (Debug) | Web E2E Tests | Source | Vol H, Ch 16 |
+| `lib/main_web_emulator.dart` | Dart | `main()`, `RankCrackersWebApp` imported from `main_web.dart` | Web Test Runner | Localhost Ports | Emulator Bound App | Local Ports Override | Console Warning | Local Only (Debug) | Web E2E Tests | Source | Vol H, Ch 16 |
 | `lib/firebase_options.dart` | Dart | `DefaultFirebaseOptions` | `main.dart`, `main_web.dart` | Platform Enum | `FirebaseOptions` | None | Unsupported Platform Exception | API Keys (Restricted) | Firebase Core | Source | Vol D, Ch 18 |
 | `lib/core/router/app_router.dart` | Dart | `appRouter`, 5 Gates | `main.dart` | `BuildContext`, State | `GoRouter` Instance | Route Redirects, Telemetry | Splash Fallback | Auth + Profile + Mission Gates | Navigation Shell | Source L1-486 | Vol D, Ch 18 |
 | `lib/core/router/route_guard.dart` | Dart | `RouteGuard` | `app_router.dart` | User, Location | Redirect Route | None | Deny / Redirect | Session Verification | GoRouter | Source | Vol D, Ch 18 |
-| `lib/core/router/route_names.dart` | Dart | `RouteNames` | Routers, Widgets | None | Static Route Strings | None | None | None | Navigation | Source | Vol D, Ch 18 |
+| `lib/core/router/route_names.dart` | Dart | No runtime symbol — comment-only placeholder | Routers, Widgets | None | Static Route Strings | None | None | None | Navigation | Source | Vol D, Ch 18 |
 | `lib/core/navigation/main_navigation_shell.dart` | Dart | `MainNavigationShell` | `app_router.dart` | `navigationShell` | Scaffold with BottomBar | Branch Switch | PopScope to Branch 0 | Non-Zero Tab Return Law | Student Screens | Source L1-119 | Vol D, Ch 18 |
 | `lib/core/navigation/main_shell.dart` | Dart | `MainShell` | Legacy Router | Shell Route | Shell Widget | None | None | Legacy Shell | Dashboard | Source | Vol D, Ch 18 |
 | `lib/core/theme/app_colors.dart` | Dart | `AppColors` | UI Widgets | None | Design Tokens (Color) | None | Constant | Contrast target; WCAG level not measured in this audit | Entire UI | Source L3-59 | Vol D, Ch 18 |
@@ -10784,7 +10907,7 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/core/telemetry/student_route_telemetry.dart` | Dart | `StudentRouteTelemetry`| `app_router.dart` | Matched Route Path | `Future<void>` | Route Event Capture | Silently Ignore Error | Non-Founder Filter | Route Analytics | Source | Vol D, Ch 18 |
 | `lib/core/errors/global_error_handler.dart` | Dart | `GlobalErrorHandler` | `main()`, Engine | Error, StackTrace | Void | Crashlytics Record | Console Print | Non-Debug Crash Shield | Crash Dashboard | Source L1-27 | Vol D, Ch 18 |
 | `lib/core/firebase/firestore_service.dart` | Dart | `FirestoreService` | Repositories, Telemetry| Collections, Items | Streams, Futures, Batch | Firestore Mutations | Batch Commit Rethrow | Rule Authorization | Data Layer | Source L1-863 | Vol E, Ch 14 |
-| `lib/core/firebase/firebase_emulator_config.dart`| Dart | `configureFirebaseEmulators...`| `main.dart` | Dart Defines | Void | Emulators Host Override | Debug Warning | Local Ports Only | Development | Source | Vol H, Ch 16 |
+| `lib/core/firebase/firebase_emulator_config.dart`| Dart | `configureFirebaseEmulatorsFromDartDefines`| `main.dart` | Dart Defines | Void | Emulators Host Override | Debug Warning | Local Ports Only | Development | Source | Vol H, Ch 16 |
 | `lib/core/authority/exam_pattern_authority.dart`| Dart | `ExamPatternAuthority` | Crucible, Test | Exam Code | Pattern Configuration | None | Default Pattern | Academic Accuracy | Assessment | Source | Vol B, Ch 10 |
 | `lib/core/authority/mission_exam_contract.dart` | Dart | `MissionExamContract` | Mission Realm | Recruitment ID | Exam Contract Model | None | Fallback Contract | Contract Validation | Mission Setup | Source | Vol B, Ch 08 |
 | `lib/core/constants/founder_identity.dart` | Dart | `FounderIdentity` | Router, Auth | `User? user` | Boolean `isFounderUser` | None | False on null/error | Hardcoded UID White-List| Router Bypass | Source | Vol D, Ch 18 |
@@ -10799,7 +10922,7 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/core/backend/atomic_coverage_repository.dart`| Dart | `AtomicCoverageRepository`| Progress Engine | UID, Topic ID | Coverage Stream / Future| Firestore Coverage Doc | Cache Fallback | Student Scoped Rule | Dashboard | Source | Vol F, Ch 19 |
 | `lib/core/backend/atomic_mastery_repository.dart` | Dart | `AtomicMasteryRepository` | Knowledge Engine | UID, Node ID | Mastery State | Firestore Mastery Doc | Offline Queue | Student Scoped Rule | Knowledge Engine| Source | Vol F, Ch 19 |
 | `lib/core/backend/atomic_risk_repository.dart` | Dart | `AtomicRiskRepository` | Rebuild Engine | UID, Node ID | Risk State Stream | Firestore Risk Doc | Default Low Risk | Student Scoped Rule | Crucible Rebuild| Source | Vol F, Ch 19 |
-| `lib/core/backend/backend_provider.dart` | Dart | `backendProvider` | Riverpod | Ref | Unified Backend Instance | In-Memory Singletons | Initialization Error | Service Binding | Core UI | Source | Vol D, Ch 18 |
+| `lib/core/backend/backend_provider.dart` | Dart | `BackendProvider.adapter` | Riverpod | Ref | Unified Backend Instance | In-Memory Singletons | Initialization Error | Service Binding | Core UI | Source | Vol D, Ch 18 |
 | `lib/core/backend/blueprint_repository.dart` | Dart | `BlueprintRepository` | Exam Setup | Exam Code | `ExamBlueprint` | Blueprint Cache | Fallback Blueprint | Published Only | Crucible, Quiz | Source | Vol B, Ch 10 |
 | `lib/core/backend/crucible_repository.dart` | Dart | `CrucibleRepository` | Crucible Screen | UID, Day Number | Schedule, Attempts | Schedule State Update | Offline Ring Fallback | Student Scoped Rule | 98-Day Modulo | Source | Vol B, Ch 10 |
 | `lib/core/backend/digibook_repository.dart` | Dart | `DigiBookRepository` | DigiBook Reader | Node ID, Subject | Canonical Reading Chunk | Local Cache Sync | Pre-packaged Asset | Read-Only Catalog | DigiBook | Source | Vol B, Ch 11 |
@@ -10816,26 +10939,32 @@ Rank Crackers कोडबेस के संपूर्ण `lib/` डाय�
 | `lib/shared/session/session_manager.dart` | Dart | `SessionManager` | App, Routers | None | Sync Keys, Preferences | SharedPreferences Write | Sync Fallback to False | Local Storage Authority| Entire App | Source L1-140 | Vol D, Ch 18 |
 | `lib/shared/providers/session_provider.dart` | Dart | `sessionUserProvider` | Riverpod | Ref, Auth Stream | `AsyncValue<User?>` | In-Memory Auth State | AsyncError | Firebase Auth Binding | Root Providers | Source | Vol D, Ch 18 |
 | `lib/shared/widgets/command_header.dart` | Dart | `CommandHeader` | Screens | Title, Subtitle, Actions| Standardized Header | None | Null Action Omission | Visual Alignment | Screen Headers | Source | Vol D, Ch 18 |
-| `lib/shared/widgets/dark_card.dart` | Dart | `SharedDarkCard` | Shared Panels | Child, Border, Color | Surface Container | None | Fallback Decoration | Design Consistency | Shared Screens | Source | Vol D, Ch 18 |
+| `lib/shared/widgets/dark_card.dart` | Dart | No runtime symbol — comment-only placeholder | Shared Panels | Child, Border, Color | Surface Container | None | Fallback Decoration | Design Consistency | Shared Screens | Source | Vol D, Ch 18 |
 | `lib/shared/widgets/formatted_math_text.dart` | Dart | `FormattedMathText` | Notes, Tests | LaTeX / Text String | Math Rendered Widget | None | Fallback Plain Text | Safe Expression Parse | Academic UI | Source | Vol B, Ch 11 |
 | `lib/shared/widgets/governed_not_ready_panel.dart`| Dart | `GovernedNotReadyPanel` | Incomplete Feats | Feature Name, Stage | Tactically Muted Banner | None | Retry Action | Prevents Fake UI | Under-Dev Screens| Source | Vol D, Ch 18 |
 | `lib/shared/widgets/tactical_button.dart` | Dart | `TacticalButton` | Secondary Actions| Label, OnPressed | Outlined Tactical Btn | None | Disabled on null | Action Guard | Secondary UI | Source | Vol D, Ch 18 |
-| `lib/web/admin/admin_my_access_panel.dart` | Dart | `AdminMyAccessPanel` | Founder Web | User Token, Claims | RBAC Access Grid | Role Assignment | Denied Banner | Superadmin Claims | Web Shell | Source | Vol C, Ch 13 |
-| `lib/web/founder/access/access_security_web.dart`| Dart | `AccessSecurityWeb` | Web Security | Admin Claims | Security Guard Surface | Token Revocation | Access Log | Founder Hardened Rule | Web Access | Source | Vol C, Ch 13 |
 | `lib/web/founder/mission_control/mission_control_room.dart`| Dart | `MissionControlRoom` | Founder Web | Mission ID | Comprehensive Ops Room | Mission Publishing | Loading State | Founder Full Authority| Mission Control | Source | Vol C, Ch 13 |
 | `lib/web/founder/health/founder_student_health_web.dart`| Dart | `FounderStudentHealthWeb`| Founder Web | Realtime Feed | Telemetry Health Grid | Health Flag Overrides | Connection Reconnect | Founder Read Access | Telemetry Ops | Source | Vol C, Ch 13 |
-| `lib/web/founder/revenue/revenue_subscription_control_web.dart`| Dart| `RevenueSubscriptionControlWeb`| Founder Web | Subscription Data | Financial Ops Grid | Tier Entitlement Writes| Transaction Log Error | Financial Audit Guard | Finance Ops | Source | Vol C, Ch 13 |
-| `lib/web/founder/system/founder_system_operations_web.dart`| Dart | `FounderSystemOperationsWeb`| Founder Web | System Metrics | Worker / DB Control | Manual Worker Trigger | Worker Crash Alert | Founder Root Authority | System Ops | Source | Vol C, Ch 13 |
-| `lib/web/shared/rc_colors.dart` | Dart | `rcGold`, `rcBg`, `rcSurface` | Web UI | None | Web Palette Tokens | None | Constant | Web High Contrast | Founder Web | Source | Vol C, Ch 13 |
 | `lib/web/shared/unified_command_console.dart` | Dart | `UnifiedCommandConsole` | Web Shell | Navigation State | Master Web Grid Shell | Workspace Switch | Session Timeout | Web Admin Token | Founder Web Root| Source | Vol C, Ch 13 |
 | `lib/config/app_config.dart` | Dart | `AppConfig` | Bootstrap | Env Flags | Environment Variables | None | Default Values | Key Hiding | Entire App | Source | Vol D, Ch 18 |
 | `lib/config/environment.dart` | Dart | `Environment` | Config, Network | Environment Enum | Active Env (`prod/dev`) | None | Default to Prod | Build Flag Enforcement | App Bootstrap | Source | Vol D, Ch 18 |
 | `lib/data/exam_seed_data.dart` | Dart | `ExamSeedData` | Onboarding | None | Static Exam Lists | Local Memory | None | Integrity Verification | Onboarding | Source | Vol B, Ch 08 |
-| `lib/data/india_districts.dart` | Dart | `indiaDistricts` | Profile Setup | State Code | Districts List Map | None | Empty List Fallback | Electoral/Census Match | Profile Screen | Source | Vol B, Ch 08 |
-| `lib/data/india_states.dart` | Dart | `indiaStates` | Mission Setup | None | Sovereign State List | None | 28 States + 8 UTs | Standard Census Codes | Mission Realm | Source | Vol B, Ch 08 |
+| `lib/data/india_districts.dart` | Dart | `IndiaDistricts.districts` | Profile Setup | State Code | Districts List Map | None | Empty List Fallback | Electoral/Census Match | Profile Screen | Source | Vol B, Ch 08 |
+| `lib/data/india_states.dart` | Dart | `IndiaStates.statesAndUTs` | Mission Setup | None | Sovereign State List | None | 28 States + 8 UTs | Standard Census Codes | Mission Realm | Source | Vol B, Ch 08 |
 | `lib/database/local/dashboard_local_datasource.dart`| Dart| `DashboardLocalDatasource`| Dashboard | UID, Date | Cached Dashboard Data | SQLite / Isar Local Write| Fallback to Remote | Local Data Isolation | Offline Dash | Source | Vol B, Ch 09 |
 
 ---
+
+
+#### Drive-only historical matrix rows — excluded from current GitHub matrix
+
+These five paths exist in Drive but are absent from the pinned default branch. Their earlier behavior claims are retained only as historical descriptions.
+
+| `lib/web/admin/admin_my_access_panel.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Dart | `AdminMyAccessPanel` | Founder Web | User Token, Claims | RBAC Access Grid | Role Assignment | Denied Banner | Superadmin Claims | Web Shell | Source | Vol C, Ch 13 |
+| `lib/web/founder/access/access_security_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart | `AccessSecurityWeb` | Web Security | Admin Claims | Security Guard Surface | Token Revocation | Access Log | Founder Hardened Rule | Web Access | Source | Vol C, Ch 13 |
+| `lib/web/founder/revenue/revenue_subscription_control_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart| `RevenueSubscriptionControlWeb`| Founder Web | Subscription Data | Financial Ops Grid | Tier Entitlement Writes| Transaction Log Error | Financial Audit Guard | Finance Ops | Source | Vol C, Ch 13 |
+| `lib/web/founder/system/founder_system_operations_web.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**| Dart | `FounderSystemOperationsWeb`| Founder Web | System Metrics | Worker / DB Control | Manual Worker Trigger | Worker Crash Alert | Founder Root Authority | System Ops | Source | Vol C, Ch 13 |
+| `lib/web/shared/rc_colors.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | Dart | `rcGold`, `rcBg`, `rcSurface` | Web UI | None | Web Palette Tokens | None | Constant | Web High Contrast | Founder Web | Source | Vol C, Ch 13 |
 
 ### 14.3 Unresolved & Stale Paths Register (10 Stale Paths Isolated & Reconciled)
 
@@ -10843,20 +10972,20 @@ Chief Author Mandate एवं Claim `CH18-004` के अंतर्गत उ
 
 | Claimed Stale Path | Existence Check | Claimed Functionality | Actual Codebase Reality / True Replacement | Action Taken in Chapter 18 |
 |---|---|---|---|---|
-| `lib/core/utils/math_renderer_util.dart` | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/security_hasher.dart` | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/utils/string_utils.dart` | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/founder_authority.dart` | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/authority/authority_boundary_guard.dart` | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/storage/local_vault.dart` | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
-| `lib/core/services/sound_service.dart` | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/services/haptic_feedback_service.dart` | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
-| `lib/core/notifications/notification_service.dart` | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/utils/math_renderer_util.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | LaTeX / Math rendering utility | वास्तविक कार्यान्वयन `lib/shared/widgets/formatted_math_text.dart` में है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/security_hasher.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | SHA-256 string hashing | हैशिंग सीधे `crypto` पैकेज से `TelemetryEngine._generateShortHash` में इनलाइन की गई है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/utils/string_utils.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Generic string utilities | सामान्य स्ट्रिंग हेल्पर फ़ाइल मौजूद नहीं है; स्ट्रिंग संचालन इनलाइन या डार्ट कोर द्वारा होते हैं। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Paywall modal overlay | पेवॉल डायरेक्टरी में वास्तविक फ़ाइल `lib/core/widgets/paywall/premium_paywall_widget.dart` है। | Section 14.2 में वास्तविक फ़ाइल से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/founder_authority.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Founder claims & RBAC authority | फाउंडर पहचान सीधे `lib/core/constants/founder_identity.dart` में परिभाषित है। | Section 14.2 में `founder_identity.dart` से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/authority/authority_boundary_guard.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Authority boundary validation guard | अलग गार्ड फ़ाइल मौजूद नहीं है; अधिकार सत्यापन `app_router.dart` और `AuthGate` में इनलाइन है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/storage/local_vault.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Secure keystore storage vault | वास्तविक स्टोरेज फ़ाइलें `lib/core/storage/token_storage.dart` और `local_storage_service.dart` हैं। | Section 14.2 में वास्तविक स्टोरेज फ़ाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
+| `lib/core/services/sound_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Audio playback for quiz/crucible | अलग ऑडियो सर्विस फ़ाइल मौजूद नहीं है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/services/haptic_feedback_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | Haptic feedback engine | हैप्टिक फीडबैक सीधे Flutter SDK के `HapticFeedback.lightImpact()` द्वारा विजेट्स में कॉल होता है। | Section 14.2 से हटाया गया; Section 14.3 Stale Ledger में स्थानांतरित। |
+| `lib/core/notifications/notification_service.dart` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** | `ABSENT` | General notification service | वास्तविक नोटिफिकेशन इंजन `lib/core/notifications/notification_engine.dart` और `sentinel_notification_service.dart` हैं। | Section 14.2 में वास्तविक फाइलों से प्रतिस्थापित; Stale Ledger में दर्ज। |
 
 ---
 
-### 14.4 डोमेन डायरेक्टरी क्रॉस-रेफरेंस इंडेक्स (Domain Directory Cross-Reference Index — Remaining 698 Dart Files)
+### 14.4 Historical 776-file snapshot —  डोमेन डायरेक्टरी क्रॉस-रेफरेंस इंडेक्स (Domain Directory Cross-Reference Index — Remaining 698 Dart Files)
 
 वास्तुकला कोर के 78 सत्यापित घटकों के अतिरिक्त शेष 698 फीचर व डोमेन सोर्सेज़ ($776 - 78 = 698$) का पदानुक्रमित वितरण और कैनोनिकल वॉल्यूम मैपिंग नीचे संक्षेपित है:
 
@@ -10967,19 +11096,68 @@ Chief Author Mandate के अनुसार आर्किटेक्चर
 - **Volume:** D (Application Architecture)
 - **Part:** 1 (Multiplatform Blueprint, Tactical Noir Design System & Reactive State Engine)
 - **Chapter:** 18
-- **Grounded Source Dependencies:** 776 Dart files across `lib/` (verified in Section 14).
+- **Grounded Source Dependencies:** 757 tracked Dart files at the recorded GitHub commit. Section 14 retains the older local 776-file inventory as historical evidence only.
 - **Audit Verification:** Chief Author readback ने कई contracts और platform boundaries verify किए हैं, लेकिन Section 14 matrix में 10 stale paths, count mismatch और कुछ unsupported performance/privacy claims पाए गए हैं। जब तक reconciliation command पूरा न हो, Chapter 18 की स्थिति **AUDIT HOLD — NOT FINAL** रहेगी।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `lib/core/authority/authority_boundary_guard.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/authority/founder_authority.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/notifications/notification_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/haptic_feedback_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/services/sound_service.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/storage/local_vault.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/math_renderer_util.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/security_hasher.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/utils/string_utils.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/core/widgets/paywall/tactical_paywall_overlay.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/admin/admin_my_access_panel.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/access/access_security_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/revenue/revenue_subscription_control_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/founder/system/founder_system_operations_web.dart` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/shared/rc_colors.dart` | UNRESOLVED AT DEFAULT HEAD |
+
+## Current Drive Project Audit — 10 October 2026
+
+**Scope:** Read-only source audit of Drive `RankCrackers Project/RankCrackers-55/lib` and pinned GitHub default HEAD `5161592ddafb42f1ecc8923cc7b7b0309934cc83`. No repository, recovery, runtime, production or deployment mutation.
+
+| Finding | Result | Meaning |
+|---|---:|---|
+| Drive lib files / Dart | 790 / 768 | Complete listing of 305 lib folders; 790 raw file downloads succeeded |
+| GitHub tracked lib files / Dart | 779 / 757 | Complete pinned Git tree |
+| Shared exact-byte files | 127 | Git blob SHA-1 matched |
+| Shared CRLF-only files | 644 | CRLF→LF Git blob SHA-1 matched; no other content difference |
+| Shared substantive code differences | 0 | All 771 common paths checked |
+| Drive-only Dart paths | 19 | Historical/local extras, not GitHub authority |
+| GitHub-only Dart paths | 8 | Taught-content-authority sources absent from this Drive folder |
+| Current Chapter 18 core matrix | 73 GitHub paths + 5 Drive-only rows | Path presence does not certify every behavior column |
+| Current disjoint architecture mapping | 757 assigned / 0 overlap / 0 unassigned | Explicit prefix classification over 15 layers |
+
+`route_names.dart` and `shared/widgets/dark_card.dart` are comment-only placeholders; `RouteNames` and `SharedDarkCard` claims were withdrawn. Other matrix symbols corrected: `RankCrackersWebApp`, `BackendProvider.adapter`, `IndiaDistricts.districts`, `IndiaStates.statesAndUTs`, `configureFirebaseEmulatorsFromDartDefines`.
+
+Security/privacy readback confirms: `TacticalSecureLayer.build` returns `child`; telemetry constructs and serializes both raw `userId` and hashed `anonymizedUserId`, and capture awaits `_persistQueue()`; `GlobalErrorHandler.handleFatal` has one current lib caller at `main.dart:51`; App Check activation has try/catch and no custom 5-second timeout. Firestore service declares 21 named `*Collection` string constants. Router reads `selectedExamSync()` and checks `isMissionValid`; navigation shell returns nonzero branches to branch 0.
+
+**Static source discrepancy:** `main_web.dart` imports six files absent from current GitHub, including `web/shared/rc_colors.dart`, `rc_panel.dart`, `rc_field.dart`, `rc_loaders.dart`, `rc_layout.dart`, and `features/auth/presentation/screens/admin_invite_screen.dart`. All six are present in the Drive snapshot. This is a source dependency finding, not a measured build outcome. Drive extras must not be copied into GitHub on book authority.
+
+**Remaining HOLD:** Runtime/visual/performance/security enforcement tests, all matrix behavior columns, production provenance, full Word/native Docs parity and final acceptance remain unverified. Historical Section 14.4 numbers describe the former 776-file snapshot only. Current Drive MD/HTML upload parity is verified separately by byte readback.
 
 
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume E & G, Part 1: Firestore Collections & Security Rules (14_firestore_collections_and_security_rules_dictionary.md) -->
-<!-- ======================================================== -->
 
 # Volume E & G — Backend Data Layer, Security & Trust Architecture
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/14_firestore_collections_and_security_rules_dictionary.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/14_firestore_collections_and_security_rules_dictionary.md) · source blob `cca35677a9ea68636691c4ec7886d2fe397d4ed7`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Firestore Collections, Schema Contracts & Security Rules Exhaustive Dictionary
 
@@ -12020,12 +12198,14 @@ flowchart TD
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume E, Part 2: Cloud Functions, Callables & AI Workers (15_cloud_functions_and_callable_contracts.md) -->
-<!-- ======================================================== -->
 
 # Volume E — Backend और Data Layer
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/15_cloud_functions_and_callable_contracts.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/15_cloud_functions_and_callable_contracts.md) · source blob `404d9c17cf55511782376921798a366f353368a0`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 2 — Cloud Functions, Callable Contracts, Background Workers & AI Pipelines
 
@@ -12553,7 +12733,7 @@ Worker governance service `isWorkerEnabled`, `getWorkerMode` और `updateHeart
 RankCrackers का backend emulator-supported paths के साथ locally exercise किया जा सकता है; इस manuscript में “पूरी तरह” को universal certification न माना जाए:
 - `npm run serve`: स्थानीय फंक्शन्स एमुलेटर प्रारंभ करता है।
 - `functions/test/canonical_reconciliation_emulator.js`: तीन-तरफ़ा canonical-source reconciliation fixture runner।
-- `functions/test/mission_lifecycle_emulator_roundtrip.js`: mission lifecycle round-trip runner।
+- `functions/test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**: mission lifecycle round-trip runner।
 - `functions/src/test/realEmulatorE2EWorkerProof.test.ts`: real Firestore emulator worker proof tests।
 
 #### Subsection 8.2 — Production Deployment Command
@@ -12665,15 +12845,26 @@ flowchart TD
 11. **Audit Trail:** assessment path का explicit outbox event `evidence_outbox/{outbox_<attemptSessionId>}` है। `founder_activity_log`, `ai_failed_tasks` और universal Cloud Logging linkage को इस path पर verified नहीं कहा गया है।
 
 
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume F, Part 1: Academic Intelligence, Math Models & Decay (19_academic_intelligence_and_knowledge_engine.md) -->
-<!-- ======================================================== -->
 
 # Volume F — Academic Intelligence & Cognitive Science
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/19_academic_intelligence_and_knowledge_engine.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/19_academic_intelligence_and_knowledge_engine.md) · source blob `0ca47a3cf2a463649b3bbe0e9b3afc4f8c132e6f`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Knowledge Engine, Mathematical Formulations, Decay Curves & Assessment Architecture
 
@@ -13069,7 +13260,7 @@ Chief Author Mandate के तहत Academic Intelligence एवं Knowledge 
 - **Mutation/error/offline:** operations are in-memory immutable transformations. Malformed `started_at`/enum values can throw during parsing; no retry, auth or persistence contract is present in this model.
 
 ### Subsection 11.7 — `SolutionVerificationRecord.computeSha256` — historical/unresolved reference
-- **Source File & Location:** `functions/src/assessment/verification.ts` does not exist in the current repository. This reference is retained only as `UNRESOLVED/HISTORICAL`; no current implementation is presented as verified.
+- **Source File & Location:** `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** does not exist in the current repository. This reference is retained only as `UNRESOLVED/HISTORICAL`; no current implementation is presented as verified.
 - **Status:** `UNRESOLVED`; caller, input contract, output contract और downstream consumer वर्तमान source से प्रमाणित नहीं हैं।
 - **Evidence note:** वर्तमान `functions/src/` inventory में assessment/verification module नहीं मिला। उपलब्ध hash helpers जैसे `functions/src/syllabus/hierarchyProposalContract.ts` को इस पुराने contract का replacement मानना उचित नहीं होगा।
 
@@ -13162,15 +13353,26 @@ The academic intelligence engine may calculate mastery and risk over a verified 
 **Status:** latest remote contract ingested; local runtime implementation parity remains a separate audit gate.
 
 
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+
+
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume H, Part 1: Engineering Operations, Emulators & CI/CD (16_engineering_operations_testing_and_deployment.md) -->
-<!-- ======================================================== -->
 
 # Volume H — Engineering Operations, Quality Assurance & Deployment
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/16_engineering_operations_testing_and_deployment.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/16_engineering_operations_testing_and_deployment.md) · source blob `7c4bda0dc2fc2a9b7d4b303455168f8def71f814`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Testing Strategy, Emulator Verification, CI/CD & Production Delivery
 
@@ -13268,7 +13470,7 @@ class SessionManager {
    });
    ```
 
-#### Subsection 1.3 — Comprehensive CI/CD & Test Execution Lifecycle State Matrix
+#### Subsection 1.3 — Documented Release Gate Model — Not a Verified CI Workflow
 
 RankCrackers इंजीनियरिंग पाइपलाइन का प्रत्येक परीक्षण चरण सख्त गेट-अवस्था आव्यूह (Gate State Matrix) द्वारा संचालित होता है:
 
@@ -13280,7 +13482,7 @@ RankCrackers इंजीनियरिंग पाइपलाइन का �
 | **4. Tier 4: Emulator Suite E2E**| प्री-रिलीज़ स्टेज़िंग | Local Firebase Emulators (Auth: 9199, Firestore: 8188, Functions: 5101) | वास्तविक नेटवर्क प्रोटोकॉल, रूल्स इवैल्यूएशन व क्लाउड फ़ंक्शंस ई2ई | प्रोडक्शन डेटा पूरी तरह अलग; लाइव डेटाबेस पर शून्य प्रभाव। |
 | **5. Independent Gate Audit** | रिलीज़ कैंडिडेट सर्टिफिकेशन | `verify_48ui8.js` व `functions/audit_repo_head_freeze_guard.js` | ड्राफ्ट गैर-लीकेज (`DRAFT_VISIBLE_COUNT = 0`), क्लीन गिट हेड | अनसुलझे ड्राफ्ट मिलने पर रिलीज़ पाइपलाइन फ़्रीज़। |
 | **6. Deterministic Web Build** | प्रोडक्शन डिप्लॉयमेंट पूर्व | `flutter build web --release` बंडल कंपाइलेशन | सिंटैक्स एरर-मुक्त जावास्क्रिप्ट बंडल; SPA रीराइट्स विन्यास | अनकंपाइल्ड या टेस्ट-सीम्स सक्षम कोड प्रोडक्शन में जाने से वर्जित। |
-| **7. Production Deployment** | अधिकृत संस्थापक अनुमोदन | `firebase deploy --only hosting,functions,firestore:rules` | होस्टिंग, फ़ंक्शन्स और सुरक्षा नियमों का परमाणु सिंक्रोनाइज़ेशन | विफलता पर 5-सेकंड होस्टिंग रोलबैक प्लेबुक तत्पर। |
+| **7. Production Deployment** | अधिकृत संस्थापक अनुमोदन | `firebase deploy --only hosting,functions,firestore:rules` | selected Hosting, Functions and Rules release scope; no cross-service atomicity certified | Rollback scope and elapsed time require incident-specific verification. |
 
 #### Subsection 1.4 — The 15 Core Attributes of Engineering Operations & Testing Infrastructure
 
@@ -13302,7 +13504,7 @@ Chief Author Mandate के तहत Engineering Operations & Testing Infrastru
 | **12**| **Production Build Contract** | `flutter build web --release` with Single Page Application rewrites in `firebase.json` | `firebase.json` |
 | **13**| **Security & Deploy Boundary**| Production deploy strictly isolated to Founder Service Account / authorized GCP role | `16_engineering_operations_testing_and_deployment.md:457–466` |
 | **14**| **Automated Gate Suites** | 4 primary suites: auth route test, ring test, reachability test, emulator E2E | `test/features/auth/student_professional_auth_profile_route_test.dart` |
-| **15**| **Disaster Recovery Playbook**| Instant hosting rollback + `GlobalErrorHandler.handleFatal` Crashlytics integration | `lib/core/errors/global_error_handler.dart:20–26` |
+| **15**| **Disaster Recovery Playbook**| Hosting release history plus source Crashlytics error reporting; rollback timing unverified | `lib/core/errors/global_error_handler.dart:20–26` |
 
 ---
 
@@ -13392,7 +13594,7 @@ firebase emulators:start --only auth,firestore,functions
 
 #### Subsection 3.3 — Canonical Reconciliation & Roundtrip Emulator Tests
 
-**File Path:** `functions/test/mission_lifecycle_emulator_roundtrip.js`
+**File Path:** `functions/test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**
 
 यह स्क्रिप्ट स्थानीय एमुलेटर पर संपूर्ण जीवनचक्र का अनुकरण करती है:
 1. `mission_realms` में नए मिशन का निर्माण।
@@ -13471,7 +13673,7 @@ function runVerificationPass() {
 
 वेब एप्लिकेशन के निर्माण के लिए निम्नलिखित उत्पादन कमांड का उपयोग किया जाता है:
 ```bash
-flutter build web --release --pwa-strategy=none --web-renderer canvaskit
+flutter build web --release --target lib/main_web.dart
 ```
 
 `firebase.json` में सिंगल-पेज रूटिंग (SPA Rewrites) सुनिश्चित करती है कि सभी गहरे रूट्स (Deep Routes जैसे `/profile-setup`, `/mission-realm`, `/dashboard`) सीधे `index.html` पर पुनः निर्देशित हों:
@@ -13516,7 +13718,7 @@ flutter build appbundle --release --obfuscate --split-debug-info=build/app/outpu
 flowchart TD
     Step1[1. Git Working Directory Clean Check] --> Step2[2. Flutter Unit & Widget Tests Pass: flutter test]
     Step2 --> Step3[3. Cloud Functions Test Suite Pass: npm test]
-    Step3 --> Step4[4. Independent Certification Pass: node verify_48ui8.js]
+    Step3 --> Step4[4. Independent Certification Pass: # Historical gate verify_48ui8.js is absent; resolve certification evidence before release]
     Step4 --> Step5[5. Repo Head Freeze Guard Verification]
     Step5 --> Step6[6. Build Release Bundles: flutter build web]
     Step6 --> Step7[7. Deploy to Firebase Production]
@@ -13532,7 +13734,7 @@ flowchart TD
 firebase deploy --only hosting,functions,firestore:rules,storage:rules
 ```
 
-यह कमांड परमाणु रूप से (atomically):
+The command requests the selected services; this repository configuration does not establish an all-or-nothing transaction across them. Each service result must be verified separately:
 1. वेब होस्टिंग पर नया बिल्ड प्रकाशित करती है।
 2. Node 22 v1/v4 क्लाउड फंक्शन्स को अपडेट करती है।
 3. नए सुरक्षा नियमों (`firestore.rules` और `storage.rules`) को लाइव डेटाबेस पर लागू करती है।
@@ -13553,9 +13755,9 @@ firebase deploy --only hosting,functions,firestore:rules,storage:rules
 यदि नए वेब बिल्ड में कोई गंभीर विज़ुअल बग या यूआई हैंग पाया जाता है:
 1. **Firebase Console खोलें:** Hosting $\rightarrow$ Release History पर जाएं।
 2. **Rollback Action:** पिछले स्थिर संस्करण के तीन बिंदुओं पर क्लिक करें और **"Rollback"** चुनें।
-3. **प्रभावी समय:** 5 सेकंड के भीतर वैश्विक सीडीएन (Global CDN) पिछले संस्करण पर वापस लौट आता है; किसी नए कोड बिल्ड की आवश्यकता नहीं होती।
+3. **Verification:** select a known-good Hosting release and confirm the served artifact after rollback. A five-second global propagation guarantee is not established by repository evidence. Hosting rollback does not revert Functions, rules or data.
 
-#### Subsection 7.2 — Cloud Functions Zero-Downtime Rollback
+#### Subsection 7.2 — Cloud Functions Rollback Planning — Downtime Guarantee Unverified
 
 यदि किसी नए बैकएंड वर्कर में अपवाद उत्पन्न होते हैं:
 1. `FounderSettingsCenter` खोलें और आपातकालीन **Kill-Switch** (`toggleAiSystem(false)`) को सक्रिय करें।
@@ -13576,7 +13778,7 @@ firebase deploy --only hosting,functions,firestore:rules,storage:rules
 git checkout HEAD~1 -- firestore.rules
 firebase deploy --only firestore:rules
 ```
-यह कमांड 30 सेकंड के भीतर नियमों को पिछले कार्यशील संस्करण पर पुनर्स्थापित कर देती है।
+This is a historical command example. Select the explicitly verified known-good rules commit rather than assuming `HEAD~1` is safe. No 30-second completion guarantee is established; verify deployed rules independently.
 
 ---
 
@@ -13584,23 +13786,22 @@ firebase deploy --only firestore:rules
 
 Chief Author Mandate के तहत Engineering Operations, Testing Harnesses एवं CI/CD प्रोटोकॉल के प्रमुख फलनों का 8-आयामी (8-Dimensional) संविदा विनिर्देश (Contract Specification) नीचे दर्ज है:
 
-#### Subsection 8.1 — `audit_repo_head_freeze_guard.js` (Release Gate Evaluator)
-- **Source File & Location:** `functions/audit_repo_head_freeze_guard.js` (Lines 1–55; corrected repository path)
-- **1. Caller:** CI/CD डिप्लॉयमेंट पाइपलाइन, प्री-रिलीज़ शेकआउट हुक।
-- **2. Inputs:** वर्तमान गिट रिपॉजिटरी स्थिति, Git HEAD commit hash, `git status --porcelain`।
-- **3. Outputs:** `ProcessExitCode` (0: पास, 1: अस्वीकृत)। विफलता पर विस्तृत कंसोल रिपोर्ट।
-- **4. Mutations:** None (विशुद्ध रूप से रीड-ओनली ऑडिट गेट)।
-- **5. Retries:** Zero (सख्त गेटकीपर)।
-- **6. Timeout:** 5 सेकंड का शेल निष्पादन टाइमआउट।
-- **7. Security Boundary:** Head Freeze Law: उत्पादन परिनियोजन से पहले यह पुष्टि करना कि कार्यशील निर्देशिका स्वच्छ है और सभी ऑडिट आर्टिफ़ैक्ट्स कमिट किए गए हैं।
-- **8. Downstream Consumers:** `firebase deploy` ऑर्केस्ट्रेटर।
+#### Subsection 8.1 — `audit_repo_head_freeze_guard.js` current source contract
+- **Source:** `functions/audit_repo_head_freeze_guard.js`.
+- **Caller and inputs:** command-line audit requires an expected HEAD argument.
+- **Checks:** actual HEAD, exact expected branch, blocked staged-path patterns and required freeze-marker file.
+- **Outputs:** JSON report and verdict; blocked result exits 1.
+- **Mutations:** no repository write in the inspected script.
+- **Retries and timeout:** no retry loop or subprocess timeout option is declared.
+- **Boundary:** it does not inspect all unstaged/untracked files or certify a clean working tree; do not describe it as a complete cleanliness guard.
+- **Acceptance:** script was read, not executed against the user's Windows checkout in this pass.
 
-#### Subsection 8.2 — `verify_48ui8.js` (Independent Certification Gate)
-- **Source File & Location:** `verify_48ui8.js` (Lines 1–85; repository-root script, not a `scripts/` child)
+#### Subsection 8.2 — `verify_48ui8.js` — UNRESOLVED HISTORICAL CERTIFICATION REFERENCE
+- **Source File & Location — UNRESOLVED:** `verify_48ui8.js` is absent from the current GitHub tree. Its former outputs, mutation path and timeout below are historical claims, not a current release gate.
 - **1. Caller:** CI टेस्ट रनर, प्री-डिप्लॉयमेंट प्रमाणीकरण।
 - **2. Inputs:** `docs/academic_review/` में मौजूद आर्टिफ़ैक्ट्स, फ़ायरस्टोर स्कीमा कॉन्ट्रैक्ट्स।
 - **3. Outputs:** `CertificationReport` (`pass: boolean`, `sha256: string`)।
-- **4. Mutations:** `docs/academic_review/certification_summary.json` में सत्यापन सारांश लिखना।
+- **4. Mutations:** `docs/academic_review/certification_summary.json` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** में सत्यापन सारांश लिखना।
 - **5. Retries:** Zero।
 - **6. Timeout:** 10 सेकंड।
 - **7. Security Boundary:** ड्राफ्ट नॉन-लीकेज नियम: यह सत्यापित करना कि `INTERNAL_DRAFT_VISIBLE_TO_STUDENT_COUNT == 0` है।
@@ -13613,35 +13814,28 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **3. Outputs:** `Future<void>`।
 - **4. Mutations:** `FirebaseAuth.useAuthEmulator('localhost', 9199)`, `FirebaseFirestore.useFirestoreEmulator('localhost', 8188)`, `FirebaseFunctions.useFunctionsEmulator('localhost', 5101)`।
 - **5. Retries:** Zero।
-- **6. Timeout:** < 50ms।
+- **6. Timeout:** execution duration not measured in this correction pass.
 - **7. Security Boundary:** उत्पादन डेटा अलगाव (Production Isolation): स्थानीय विकास के दौरान लाइव डेटाबेस से शून्य कनेक्शन।
 - **8. Downstream Consumers:** Flutter ऐप के सभी डेटाबेस और ऑथेंटिकेशन कॉल्स।
 
-#### Subsection 8.4 — `SessionManager.clearAccessibleMissions` (Test Seam)
-- **Source File & Location:** `lib/shared/session/session_manager.dart` (Lines 440–455)
-- **1. Caller:** यूनिट और विजेट टेस्ट्स का `setUp()` ब्लॉक।
-- **2. Inputs:** None।
-- **3. Outputs:** `void`।
-- **4. Mutations:** इन-मेमोरी `_currentSnapshot` को खाली करना और SharedPreferences से `'cached_accessible_mission_ids'` हटाना।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms।
-- **7. Security Boundary:** टेस्ट स्टेट लीकेज रोकथाम (Test State Isolation)।
-- **8. Downstream Consumers:** टेस्ट हार्नेस, आगामी टेस्ट असेरशन्स।
+#### Subsection 8.4 — `SessionManager.clearAccessibleMissions` current source contract
+- **Source:** `lib/shared/session/session_manager.dart:473–476`.
+- **Inputs and output:** no arguments; `void`.
+- **Mutation:** assigns `MissionAccessSnapshot.uninitialized()` and invokes `_prefs?.remove('cached_accessible_mission_ids')`.
+- **Persistence boundary:** preference removal is not awaited by this method; a zero-duration guarantee is unsupported.
+- **Role:** test-state clearing seam; it does not mutate Firestore mission authority.
 
-#### Subsection 8.5 — `SessionManager.registerAccessibleMissions` (Test Fixture Seam)
-- **Source File & Location:** `lib/shared/session/session_manager.dart` (Lines 460–485)
-- **1. Caller:** टेस्ट फ़िक्सचर इंजेक्टर, स्टूडेंट कैटलॉग सिंक।
-- **2. Inputs:** `Iterable<String> ids`, `{String source = 'TEST_FIXTURE'}`।
-- **3. Outputs:** `void`।
-- **4. Mutations:** `_currentSnapshot` में सटीक केस-सेंसिटिव मिशन आईडीज पंजीकृत करना।
-- **5. Retries:** Not applicable।
-- **6. Timeout:** 0ms सिंक्रोनस।
-- **7. Security Boundary:** बाइनरी में शून्य हार्डकोडेड मिशन कानून का अनुपालन करते हुए टेस्ट्स को मनमाना परीक्षण डेटा इंजेक्ट करने की अनुमति।
-- **8. Downstream Consumers:** `SessionManager.isMissionValid()`, GoRouter Gate 4।
+#### Subsection 8.5 — `SessionManager.registerAccessibleMissions` current source contract
+- **Source:** `lib/shared/session/session_manager.dart:486–502`.
+- **Inputs:** `Iterable<String> ids`, optional `source = 'TEST_FIXTURE'`.
+- **Output:** `void`.
+- **Mutation:** unions trimmed nonempty IDs into the existing exact-case set; creates a ready snapshot preserving `missionById`, records time/source, invokes `_prefs?.setStringList(...)`.
+- **Persistence boundary:** SharedPreferences write is not awaited; synchronous method return is not proof of immediate durable persistence.
+- **Role:** published-catalog/test registration seam; it does not establish official syllabus or publication authority.
 
 #### Subsection 8.6 — `GlobalErrorHandler.handleFatal` (Crash Supervisor)
 - **Source File & Location:** `lib/core/errors/global_error_handler.dart` (Lines 20–26)
-- **1. Caller:** अनहैंडल्ड रनटाइम अपवाद, Flutter फ्रेमवर्क क्रैश हुक।
+- **1. Caller:** `lib/main.dart` top-level catch calls `GlobalErrorHandler.handleFatal`. No generic framework-hook integration is certified here.
 - **2. Inputs:** `dynamic error`, `StackTrace? stack`।
 - **3. Outputs:** `void`।
 - **4. Mutations:** `FirebaseCrashlytics.instance.recordError(..., fatal: true)`, कंसोल डायग्नोस्टिक्स।
@@ -13650,16 +13844,14 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **7. Security Boundary:** क्रैश लूप से बचाव और फोरेंसिक स्टैक ट्रेस प्रूवेनेंस।
 - **8. Downstream Consumers:** Google Cloud Crash Reporting, इंजीनियरिंग अलर्ट।
 
-#### Subsection 8.7 — `canonical_reconciliation_emulator.js` (Reconciliation Test Runner)
-- **Source File & Location:** `functions/test/canonical_reconciliation_emulator.js` (live path; corrected from repository-root `test/` reference)
-- **1. Caller:** Node Test Suite (`npm test`)।
-- **2. Inputs:** स्थानीय एमुलेटर पर `mission_realms`, `recruitments`, और `student_mission_catalog` का डेटा।
-- **3. Outputs:** `Promise<TestResults>` (त्रिकोणीय सुलह का पास/फ़ेल सत्यापन)।
-- **4. Mutations:** एमुलेटर डेटाबेस में डमी विसंगतियां बनाना और समाधान फ़ंक्शन चलाना।
-- **5. Retries:** 1 पुनः प्रयास।
-- **6. Timeout:** 15 सेकंड।
-- **7. Security Boundary:** यह सुनिश्चित करना कि विसंगति वाले मिशन कभी भी छात्रों के लिए लाइव न हों।
-- **8. Downstream Consumers:** CI पाइपलाइन गेट रिपोर्टर।
+#### Subsection 8.7 — `canonical_reconciliation_emulator.js` current source contract
+- **Source:** `functions/test/canonical_reconciliation_emulator.js`.
+- **Execution guard:** requires `FIRESTORE_EMULATOR_HOST = 127.0.0.1:8188` and `GCLOUD_PROJECT = demo-rankcrackers-55`; otherwise throws `EMULATOR_ONLY_GUARD`.
+- **Inputs and mutations:** creates a timestamped fixture mission, registers a candidate source, updates its verification/delta data, then activates it in the guarded emulator.
+- **Observation:** polls up to 240 iterations with 250ms delay for `academicDeltaApplied`, then checks projection lineage and exactly one DigiBook and Crucible impact job.
+- **Outputs:** JSON results; failure exits 1. `downstreamVerificationComplete` is reported but is not one of this runner's final blocking assertions.
+- **Timeout:** polling delay budget is approximately 60 seconds, excluding I/O. This is not a runner-wide 15-second timeout.
+- **Test status:** not executed during this book correction pass; inclusion in an `npm test` invocation is not inferred from file presence.
 
 #### Subsection 8.8 — `firebase deploy --only hosting,functions,firestore:rules`
 - **Source File & Location:** `firebase.json` एवं डिप्लॉयमेंट स्क्रिप्ट्स
@@ -13668,7 +13860,7 @@ Chief Author Mandate के तहत Engineering Operations, Testing Harnesses 
 - **3. Outputs:** `ExitCode 0` (सफल परिनियोजन) अथवा डिप्लॉयमेंट त्रुटि।
 - **4. Mutations:** Google Cloud Production Hosting CDN, Cloud Functions v1/v4, Live Firestore Security Rules।
 - **5. Retries:** Firebase CLI आंतरिक पुनः प्रयास।
-- **6. Timeout:** 5 मिनट का ग्लोबल डिप्लॉयमेंट टाइमआउट।
+- **6. Timeout:** no global five-minute deployment timeout is declared in the inspected `firebase.json` or package deployment script.
 - **7. Security Boundary:** केवल संस्थापक सेवा खाता (Founder Service Account) या अधिकृत GCP क्रेडेंशियल्स द्वारा निष्पादन।
 - **8. Downstream Consumers:** वैश्विक छात्र और वेब कंसोल उपयोगकर्ता।
 
@@ -13681,7 +13873,7 @@ Chief Author Mandate के तहत कोड परिवर्तन से 
 ```mermaid
 flowchart TD
     ENG1[1. Source Record: Git Commit & Source Code Mutation] --> ENG2[2. Canonical ID: Git Commit SHA, Build Number & Artifact ID]
-    ENG2 --> ENG3[3. Parent Hierarchy: Repository -> Branch main -> Release Tag -> Deployment]
+    ENG2 --> ENG3[3. Parent Hierarchy: Repository -> Recorded default branch -> Release Tag -> Deployment]
     ENG3 --> ENG4[4. Content Payload: Dart Binaries, Cloud Functions & Security Rules]
     ENG4 --> ENG5[5. Test Pyramid Tier 1-3: Unit, Widget & Router Gate Verification]
     ENG5 --> ENG6[6. Test Pyramid Tier 4: Local Firebase Emulator Suite E2E Proofs]
@@ -13699,7 +13891,7 @@ flowchart TD
    - ऐप रिलीज़ वर्ज़न: `version+buildNumber` (उदा. `'2.4.0+55'`)
    - आर्टिफ़ैक्ट फिंगरप्रिंट: `SHA-256 Artifact ID`
 3. **Parent Hierarchy:**
-   $$\text{Git Repository} \longrightarrow \text{Branch: main} \longrightarrow \text{Release Tag} \longrightarrow \text{Firebase Production Environment}$$
+   $$\text{Git Repository} \longrightarrow \text{Branch: safety/rc-g2-pre-notification-schema} \longrightarrow \text{Release Tag} \longrightarrow \text{Firebase Production Environment}$$
 4. **Content Payload:** रिलीज़ पेलोड:
    - Compiled web bundle produced by `flutter build web --release`; `build/web/main.dart.js` is a generated output and is not a source-controlled baseline. The source entry point is `lib/main_web.dart`.
    - Node 22 v1/v4 क्लाउड फ़ंक्शन्स बंडल।
@@ -13712,22 +13904,41 @@ flowchart TD
 7. **Independent Gate Certification:** `verify_48ui8.js` और `functions/audit_repo_head_freeze_guard.js` available gate scripts हैं; प्रत्येक run को date/scope सहित evidence output से जोड़ना होगा। “Zero draft leakage” और “clean git head” को बिना उसी run की report के verified result न लिखें।
 8. **Evidence Commitment:** `docs/academic_review/` में SHA-256 फिंगरप्रिंटेड आर्टिफ़ैक्ट्स का कमिट।
 9. **Release Artifact Build:** `flutter build web --release` द्वारा प्रोडक्शन बंडल का निर्माण, तथा `firebase.json` में SPA URL रीराइट्स का विन्यास।
-10. **Production Deployment:** परमाणु परिनियोजन (`firebase deploy`) द्वारा होस्टिंग, फ़ंक्शन्स, और सुरक्षा नियमों का एक साथ लाइव होना।
+10. **Production Deployment:** Selected-service deployment requires separate Hosting, Functions and Rules verification; no cross-service atomicity is certified.
 11. **Audit Trail & Rollback Readiness:**
     - `founder_activity_log` में रिलीज़ का स्वचालित अंकन।
     - Firebase Crashlytics और `telemetry_nexus` द्वारा तत्काल स्वास्थ्य की पुष्टि।
-    - अप्रत्याशित समस्या की स्थिति में 5-सेकंड होस्टिंग रोलबैक प्लेबुक की तत्परता।
+    - Incident-specific rollback must identify artifact, scope, known-good version and observed completion.
+
+
+## Current release and recovery evidence boundary
+
+No `.github/workflows/` files are tracked at the recorded HEAD; the CI/CD diagrams describe a process model, not a proven GitHub Actions pipeline. `firebase.json` declares `functions` as the default codebase source, Node 22 and `main: index.js` come from `functions/package.json`, and predeploy runs the TypeScript build. Build output alone does not redefine the deployed entry point. Hosting serves generated `build/web`; Founder web build must select `lib/main_web.dart`. Commands in this chapter are reference examples, not execution authorization.
+
+`PIPELINE_RECOVERY_GUIDE.md` records an incident dated 2026-06-16, including `e:\RankCrackers`, budget/queue changes and old deployment directions. Treat it as historical incident evidence, not current migration closure or operational authorization. Current Windows checkout location, deployed artifact, queue state and credential remediation are unverified here.
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `docs/academic_review/certification_summary.json` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |
+| `web/main.dart.js` | UNRESOLVED AT DEFAULT HEAD |
 
 
 ---
 
 
-
-<!-- ======================================================== -->
 <!-- SECTION BREAK: Volume I: Master Reference Appendices (20_master_reference_appendices.md) -->
-<!-- ======================================================== -->
 
 # Volume I — Reference Appendices
+
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/20_master_reference_appendices.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/20_master_reference_appendices.md) · source blob `b122675a9900a87c4c146359de9d49ab75a3f6e1`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
 
 ## Part 1 — Master Lexicon, Route Topology, Schema Dictionary & API Catalog
 
@@ -13973,7 +14184,7 @@ Rank Crackers के फायरस्टोर डेटाबेस में
 
 ### Appendix E.1 — Deliberately historical or unresolved API labels
 
-`functions/src/assessment.ts`, `functions/src/triggers.ts` और `functions/src/workers.ts` current checkout में नहीं मिले। पुराने `createAttemptSession`/`evaluateAttempt` labels को अब live callable नहीं लिखा जाएगा; live replacement/helper path ऊपर दिया गया है। `SolutionVerificationRecord.computeSha256` और `functions/src/assessment/verification.ts` भी `UNRESOLVED/HISTORICAL` हैं; current `evaluateAttempt` SHA-256 verification नहीं करता।
+`functions/src/assessment.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**, `functions/src/triggers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** और `functions/src/workers.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** current checkout में नहीं मिले। पुराने `createAttemptSession`/`evaluateAttempt` labels को अब live callable नहीं लिखा जाएगा; live replacement/helper path ऊपर दिया गया है। `SolutionVerificationRecord.computeSha256` और `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** भी `UNRESOLVED/HISTORICAL` हैं; current `evaluateAttempt` SHA-256 verification नहीं करता।
 
 ---
 
@@ -14135,7 +14346,7 @@ Rank Crackers जीवित संदर्भ ग्रंथ के वि�
 | **Contract 16.3** | `runFlutterUnitTests` | `UNRESOLVED — no .github/workflows inventory found` | Historical CI label | Not verified | `UNRESOLVED` |
 | **Contract 16.4** | `runFirestoreRulesTests` | `functions/package.json` dependency only; workflow not found | Rules test capability, not CI proof | Jest/rules-unit-testing dependency | `UNRESOLVED` execution gate |
 | **Contract 16.5** | `buildReleaseApk` | Release Pipeline | Tagged Release Trigger | Flutter toolchain + Keystore | Signed Cryptographic |
-| **Contract 16.6** | `deployCloudFunctions` | CD Deployment Action | Main branch merge | `firebase deploy --only functions`| Google Cloud IAM |
+| **Contract 16.6** | `deployCloudFunctions` | CD Deployment Action | Separately authorized release from the recorded default branch | `firebase deploy --only functions`| Google Cloud IAM |
 | **Contract 16.7** | `checkDeadLetterQueue` | Ops Monitoring Cron | 5-minute schedule | `dlq_tasks` collection | Ops Service Worker |
 | **Contract 16.8** | `emergencyRollback` | SRE Runbook Playbook | Production Incident | Target release hash | Founder & SRE Lead |
 
@@ -14236,5 +14447,39 @@ Any earlier appendix statement that presents `Subject → Unit → Topic → Ato
 Before a new GitHub documentation commit is treated as current book truth, the Chief Author must record repository, branch, commit SHA, source path, changed sections, local source parity, test evidence and implementation status. A newer remote document can supersede narrative wording immediately, but it cannot be used as proof that local runtime code already implements the contract.
 
 
----
+## Appendix J Current GitHub authority and representation map
 
+## GitHub authority and edition status
+
+**Authoritative repository:** [https://github.com/rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
+**Default branch:** `safety/rc-g2-pre-notification-schema`  
+**Read commit:** [`5161592ddafb42f1ecc8923cc7b7b0309934cc83`](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/5161592ddafb42f1ecc8923cc7b7b0309934cc83)  
+**Edition:** GitHub-aligned working edition, 10 October 2026  
+**Authority direction:** GitHub source and evidence govern the book. Book wording never authorizes a repository change.
+
+इस edition में current default-branch source, branch-specific architecture, historical snapshots और unresolved claims अलग हैं। किसी path का मौजूद होना उस behavior, test pass या production deployment का प्रमाण नहीं है। पुराने line ranges और embedded code excerpts को नया source audit किए बिना current contract न मानें। इस correction pass में application tests या live production probes नहीं चलाए गए हैं। Chapter 18 का `AUDIT HOLD — NOT FINAL` बना हुआ है।
+
+| Representation | Current role |
+|---|---|
+| GitHub default branch and recorded SHA | Technical source authority |
+| Corrected standalone Markdown | GitHub-derived working chapters |
+| Compiled Markdown and HTML | Reading representations of corrected chapters |
+| Native Google Doc | Partial companion; not a complete synchronized edition |
+| Prior Word exports | Legacy exports; current corrected parity not certified |
+| Architecture branch contracts | Branch-specific references, absent from default unless explicitly listed otherwise |
+| June pipeline recovery guide | Historical incident record |
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/assessment.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/triggers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/workers.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `scripts/seed_fixtures.py` | UNRESOLVED AT DEFAULT HEAD |
+
+
+---

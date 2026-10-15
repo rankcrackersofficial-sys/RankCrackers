@@ -1,5 +1,10 @@
 # Volume E & G — Backend Data Layer, Security & Trust Architecture
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/14_firestore_collections_and_security_rules_dictionary.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/14_firestore_collections_and_security_rules_dictionary.md) · source blob `cca35677a9ea68636691c4ec7886d2fe397d4ed7`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Firestore Collections, Schema Contracts & Security Rules Exhaustive Dictionary
 
 ### Chapter 14 — Firestore Data Architecture, Collection Taxonomy, Field Specifications और Security Rules Governance
