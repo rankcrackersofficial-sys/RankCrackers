@@ -203,7 +203,7 @@ void main() {
 
       // Truthful hold wordings (no operational jargon)
       expect(find.text('Micro assessment is not ready for this schedule yet.'), findsOneWidget);
-      expect(find.text('Smart Entry — Not Ready'), findsOneWidget);
+      expect(find.text('Smart Entry — Not Ready'), findsNothing);
       expect(find.text('Test Arena — Not Ready'), findsOneWidget);
       expect(find.text('PERSONAL COVERAGE LEDGER'), findsOneWidget);
 

@@ -139,7 +139,7 @@ class Recruitment extends Equatable {
     return true;
   }
 
-  /// QUICK START = Select Mission + Enter Dashboard
+  /// Canonical entry = Select Mission + Enter Dashboard.
   bool get canQuickStart => canEnterMissionShell;
 
   /// Legacy compatibility surface. Smart/diagnostic entry is retired from the
