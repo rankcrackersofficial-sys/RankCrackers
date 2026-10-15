@@ -16,7 +16,8 @@ import '../providers/syllabus_tree_provider.dart';
 import '../../../digibook/domain/services/digibook_canonical_bridge_service.dart';
 
 /// SYLLABUS SCREEN (v3 Hardened Hierarchy)
-/// Implements Subject -> Unit -> Topic -> Atom drill-down in English with zero Hindi fallback.
+/// Implements Subject -> Unit -> Topic -> Atom drill-down using the canonical
+/// English hierarchy and approved Hindi labels when the app language is Hindi.
 class SyllabusScreen extends ConsumerStatefulWidget {
   const SyllabusScreen({super.key});
 
