@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../../core/models/micro_topic_node.dart';
 import '../../../../core/knowledge/knowledge_engine_provider.dart';
+import '../../../../core/language/language_controller.dart';
 
 class SyllabusNode {
   final String id;
@@ -42,6 +43,7 @@ class SyllabusNode {
 final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
   final nodes = ref.watch(allNodesProvider);
   final engine = ref.watch(knowledgeEngineProvider);
+  final language = ref.watch(languageControllerProvider);
 
   if (nodes.isEmpty) return const [];
 
@@ -97,7 +99,9 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
 
         return SyllabusNode(
           id: n.id,
-          title: n.title.isNotEmpty ? n.title : n.topic,
+          title: language.isHindi && n.titleHindi.trim().isNotEmpty
+              ? n.titleHindi
+              : (n.title.isNotEmpty ? n.title : n.topic),
           type: 'topic',
           parentId: chapterName,
           subjectId: sId,
@@ -120,7 +124,9 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
 
       unitNodes.add(SyllabusNode(
         id: '${sId}_$chapterName',
-        title: chapterName,
+        title: language.isHindi && chNodes.first.chapterHindi.trim().isNotEmpty
+            ? chNodes.first.chapterHindi
+            : chapterName,
         type: 'unit',
         parentId: sId,
         subjectId: sId,
@@ -145,7 +151,9 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
 
     tree.add(SyllabusNode(
       id: sId,
-      title: sId,
+      title: language.isHindi && subjectNodes.first.subjectHindi.trim().isNotEmpty
+          ? subjectNodes.first.subjectHindi
+          : sId,
       type: 'subject',
       subjectId: sId,
       children: unitNodes,

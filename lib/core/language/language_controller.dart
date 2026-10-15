@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'app_language.dart';
 
@@ -27,3 +28,8 @@ class LanguageController extends ChangeNotifier {
     await prefs.setInt('app_language', language.index);
   }
 }
+
+final languageControllerProvider =
+    ChangeNotifierProvider<LanguageController>((ref) {
+  return LanguageController();
+});
