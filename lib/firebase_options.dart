@@ -22,7 +22,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyCVcd4Am6ug5j92T6HmGiEXFbmlsKhTmnA',
-    appId: '1:667342482948:web:placeholder',
+    appId: '1:667342482948:web:df50cd79950c77c5cecf51',
     messagingSenderId: '667342482948',
     projectId: 'rankcrackers-55',
     authDomain: 'rankcrackers-55.firebaseapp.com',
