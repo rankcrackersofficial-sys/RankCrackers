@@ -13,7 +13,7 @@ import '../models/micro_topic_node.dart';
 import '../../features/onboarding/presentation/screens/splash_screen.dart';
 import '../../features/auth/presentation/screens/unified_identity_screen.dart';
 import '../../features/auth/presentation/screens/mission_realm_screen.dart';
-import '../../features/diagnostic/presentation/screens/diagnostic_screen.dart';
+import '../../features/onboarding/presentation/screens/diagnostic_test_screen.dart';
 import '../../features/dashboard/presentation/screens/dashboard_screen.dart';
 import '../../features/crucible/presentation/screens/crucible_screen.dart';
 import '../../features/syllabus/presentation/screens/syllabus_screen.dart';
@@ -138,27 +138,11 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.diagnosticEntry,
-      builder: (context, state) {
-        final data = state.extra as Map?;
-        return DiagnosticScreen(
-          examName:
-              data?['examName'] ?? data?['exam'] ?? 'Universal Diagnostic',
-          variant: data?['variant'] ?? '',
-          state: data?['state'] ?? 'Central',
-        );
-      },
+      builder: (context, state) => const DiagnosticTestScreen(),
     ),
     GoRoute(
       path: AppRoutes.diagnosticTest,
-      builder: (context, state) {
-        final data = state.extra as Map?;
-        return DiagnosticScreen(
-          examName:
-              data?['examName'] ?? data?['exam'] ?? 'Universal Diagnostic',
-          variant: data?['variant'] ?? '',
-          state: data?['state'] ?? 'Central',
-        );
-      },
+      builder: (context, state) => const DiagnosticTestScreen(),
     ),
     GoRoute(
       path: AppRoutes.diagnosticResult,
