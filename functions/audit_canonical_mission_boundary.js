@@ -33,6 +33,9 @@ const runtimeFiles = [
   'lib/features/auth/presentation/providers/mission_realm_provider.dart',
   'lib/web/founder/mission_control/founder_mission_inventory.dart',
   'lib/web/founder/mission_control/mission_control_room.dart',
+  'lib/web/founder/mission_control/mission_variable_authority_panel.dart',
+  'lib/web/founder/mission_control/mission_publish_readiness_panel.dart',
+  'lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart',
   'lib/main_web.dart',
 ];
 

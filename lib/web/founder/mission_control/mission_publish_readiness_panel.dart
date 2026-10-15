@@ -12,8 +12,6 @@ class MissionPublishReadinessPanel extends StatelessWidget {
     return FutureBuilder<List<dynamic>>(
       future: Future.wait<dynamic>([
         firestore.collection('mission_realms').doc(missionId).get(),
-        firestore.collection('recruitments').doc(missionId).get(),
-        firestore.collection('student_mission_catalog').doc(missionId).get(),
         firestore
             .collection('mission_realms')
             .doc(missionId)
@@ -33,20 +31,19 @@ class MissionPublishReadinessPanel extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         final realm =
             snapshot.data![0] as DocumentSnapshot<Map<String, dynamic>>;
-        final recruitment =
-            snapshot.data![1] as DocumentSnapshot<Map<String, dynamic>>;
-        final catalog =
-            snapshot.data![2] as DocumentSnapshot<Map<String, dynamic>>;
         final documents =
-            snapshot.data![3] as QuerySnapshot<Map<String, dynamic>>;
+            snapshot.data![1] as QuerySnapshot<Map<String, dynamic>>;
         final sourceSlots =
-            snapshot.data![4] as QuerySnapshot<Map<String, dynamic>>;
-        final catalogData = catalog.data() ?? const <String, dynamic>{};
-        final recruitmentData = recruitment.data() ?? const <String, dynamic>{};
-        final visible = catalog.exists &&
-            catalogData['cardVisible'] == true &&
-            catalogData['userPanelVisible'] == true &&
-            catalogData['archived'] != true;
+            snapshot.data![2] as QuerySnapshot<Map<String, dynamic>>;
+        final realmData = realm.data() ?? const <String, dynamic>{};
+        final visibilityGate = realmData['visibilityGate'];
+        final visible = realm.exists &&
+            realmData['archived'] != true &&
+            (realmData['cardVisible'] == true ||
+                realmData['userPanelVisible'] == true ||
+                (visibilityGate is Map &&
+                    (visibilityGate['studentVisible'] == true ||
+                        visibilityGate['userPanelVisible'] == true)));
         final verifiedDocuments = documents.docs.where((doc) {
           final data = doc.data();
           final state = (data['verificationStatus'] ??
@@ -95,19 +92,15 @@ class MissionPublishReadinessPanel extends StatelessWidget {
                 value: realm.exists ? 'REALM_PRESENT' : 'REALM_MISSING',
                 ok: realm.exists),
             _EvidenceRow(
-                label: 'RECRUITMENT PROJECTION',
-                value: recruitment.exists
-                    ? (recruitmentData['status'] ?? 'PRESENT')
-                        .toString()
-                        .toUpperCase()
-                    : 'MISSING',
-                ok: recruitment.exists),
+                label: 'CANONICAL REALM',
+                value: realm.exists ? 'REALM_PRESENT' : 'MISSING',
+                ok: realm.exists),
             _EvidenceRow(
                 label: 'STUDENT PROJECTION',
-                value: catalog.exists
+                value: realm.exists
                     ? (visible ? 'STUDENT_VISIBLE' : 'NOT_STUDENT_VISIBLE')
                     : 'MISSING',
-                ok: catalog.exists),
+                ok: realm.exists),
             _EvidenceRow(
                 label: 'DOCUMENT BINDING',
                 value: '${documents.size} SOURCE RECORD(S)',

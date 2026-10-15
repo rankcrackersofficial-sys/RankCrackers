@@ -219,17 +219,31 @@ service cloud.firestore {
     }
 
     match /mission_variants/{variantId} {
-      allow read: if resource.data.status == 'published' || isFounder();
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.status == 'published' &&
+        resource.data.parentRecruitmentId is string &&
+        isStudentVisibleMission(resource.data.parentRecruitmentId)
+      );
       allow write: if isFounder();
     }
 
     match /blueprints/{blueprintId} {
-      allow read: if request.auth != null;
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.status == 'published' &&
+        resource.data.recruitmentId is string &&
+        isStudentVisibleMission(resource.data.recruitmentId)
+      );
       allow write: if isFounder();
     }
 
     match /schedules/{scheduleId} {
-      allow read: if request.auth != null;
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.recruitmentId is string &&
+        isStudentVisibleMission(resource.data.recruitmentId)
+      );
       allow write: if isFounder();
     }
 

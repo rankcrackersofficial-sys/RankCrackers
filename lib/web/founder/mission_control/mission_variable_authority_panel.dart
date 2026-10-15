@@ -202,7 +202,7 @@ class _MissionVariableAuthorityPanelState
           width: 300,
           child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
             stream: FirebaseFirestore.instance
-                .collection('student_mission_catalog')
+                .collection('mission_realms')
                 .snapshots(),
             builder: (context, snapshot) {
               if (snapshot.hasError)

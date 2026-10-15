@@ -10,7 +10,13 @@ enum MissionPortfolioFilter { all, live, draft, passive, archived, attention }
 
 enum JurisdictionFilter { all, central, state, ut }
 
-enum SortOption { recentlyUpdated, alphabetical, yearNewest, yearOldest, status }
+enum SortOption {
+  recentlyUpdated,
+  alphabetical,
+  yearNewest,
+  yearOldest,
+  status
+}
 
 /// Pure, testable logic for Founder Mission Inventory filtering, sorting & jurisdiction safety.
 class MissionInventoryLogic {
@@ -21,7 +27,8 @@ class MissionInventoryLogic {
     required JurisdictionFilter newJurisdiction,
     required String? currentStateCode,
   }) {
-    if (currentStateCode == null || currentStateCode.trim().isEmpty) return null;
+    if (currentStateCode == null || currentStateCode.trim().isEmpty)
+      return null;
     final code = currentStateCode.trim().toUpperCase();
 
     if (newJurisdiction == JurisdictionFilter.central) {
@@ -235,100 +242,98 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
       stream:
           FirebaseFirestore.instance.collection('mission_realms').snapshots(),
       builder: (context, realmsSnapshot) {
-            final error = realmsSnapshot.error;
-            if (error != null) {
-              return _InventoryErrorState(
-                  message: 'Mission inventory unavailable: $error');
-            }
+        final error = realmsSnapshot.error;
+        if (error != null) {
+          return _InventoryErrorState(
+            message: 'Mission inventory unavailable: $error',
+          );
+        }
 
-            if (!realmsSnapshot.hasData) {
-              return const _InventoryLoadingState();
-            }
+        if (!realmsSnapshot.hasData) {
+          return const _InventoryLoadingState();
+        }
 
-            final allRows = _reconcile(
-              realmsSnapshot.data!.docs,
-            );
-            final inventorySummary = MissionInventorySummary.fromRealms(
-              realmsSnapshot.data!.docs.map((doc) => doc.data()),
-            );
+        final allRows = _reconcile(realmsSnapshot.data!.docs);
+        final inventorySummary = MissionInventorySummary.fromRealms(
+          realmsSnapshot.data!.docs.map((doc) => doc.data()),
+        );
 
-            final filteredRows = MissionInventoryLogic.filterAndSort(
-              rows: allRows,
-              searchQuery: _searchQuery,
-              jurisdiction: _jurisdiction,
-              selectedStateCode: _selectedStateCode,
-              statusFilter: _statusFilter,
-              categoryFilter: _categoryFilter,
-              sortBy: _sortBy,
-            );
+        final filteredRows = MissionInventoryLogic.filterAndSort(
+          rows: allRows,
+          searchQuery: _searchQuery,
+          jurisdiction: _jurisdiction,
+          selectedStateCode: _selectedStateCode,
+          statusFilter: _statusFilter,
+          categoryFilter: _categoryFilter,
+          sortBy: _sortBy,
+        );
 
-            // Pagination calculation
-            final totalFiltered = filteredRows.length;
-            final totalPages = max(1, (totalFiltered / _pageSize).ceil());
-            final safePage = min(_currentPage, totalPages);
-            final startIndex = (safePage - 1) * _pageSize;
-            final endIndex = min(startIndex + _pageSize, totalFiltered);
-            final pageRows = (startIndex < totalFiltered)
-                ? filteredRows.sublist(startIndex, endIndex)
-                : <MissionInventoryRecord>[];
+        // Pagination calculation
+        final totalFiltered = filteredRows.length;
+        final totalPages = max(1, (totalFiltered / _pageSize).ceil());
+        final safePage = min(_currentPage, totalPages);
+        final startIndex = (safePage - 1) * _pageSize;
+        final endIndex = min(startIndex + _pageSize, totalFiltered);
+        final pageRows = (startIndex < totalFiltered)
+            ? filteredRows.sublist(startIndex, endIndex)
+            : <MissionInventoryRecord>[];
 
-            return LayoutBuilder(builder: (context, constraints) {
-              final double width = constraints.maxWidth;
-              final int columns = width >= 1200
-                  ? 3
-                  : width >= 800
-                      ? 2
-                      : 1;
-              final double availableWidth = width - 48 - ((columns - 1) * 16);
-              final double cardWidth = availableWidth / columns;
+        return LayoutBuilder(builder: (context, constraints) {
+          final double width = constraints.maxWidth;
+          final int columns = width >= 1200
+              ? 3
+              : width >= 800
+                  ? 2
+                  : 1;
+          final double availableWidth = width - 48 - ((columns - 1) * 16);
+          final double cardWidth = availableWidth / columns;
 
-              return Padding(
-                padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Summary Metrics Cards Bar
-                    _buildSummaryMetricsBar(allRows, inventorySummary),
-                    const SizedBox(height: 20),
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Summary Metrics Cards Bar
+                _buildSummaryMetricsBar(allRows, inventorySummary),
+                const SizedBox(height: 20),
 
-                    // Filter Control Panel Card
-                    _buildFilterToolbarCard(),
-                    const SizedBox(height: 16),
+                // Filter Control Panel Card
+                _buildFilterToolbarCard(),
+                const SizedBox(height: 16),
 
-                    // Results Count & Active Filter Tags Bar
-                    _buildResultsAndTagsBar(totalFiltered, safePage, totalPages,
-                        startIndex, endIndex),
-                    const SizedBox(height: 16),
+                // Results Count & Active Filter Tags Bar
+                _buildResultsAndTagsBar(
+                    totalFiltered, safePage, totalPages, startIndex, endIndex),
+                const SizedBox(height: 16),
 
-                    // Mission Grid / Empty State
-                    if (pageRows.isEmpty)
-                      _buildEmptyState()
-                    else
-                      Wrap(
-                        spacing: 16,
-                        runSpacing: 16,
-                        children: pageRows
-                            .map((row) => SizedBox(
-                                  width: cardWidth,
-                                  child: _MissionPortfolioCard(
-                                    row: row,
-                                    onSelected: widget.onMissionSelected,
-                                  ),
-                                ))
-                            .toList(),
-                      ),
+                // Mission Grid / Empty State
+                if (pageRows.isEmpty)
+                  _buildEmptyState()
+                else
+                  Wrap(
+                    spacing: 16,
+                    runSpacing: 16,
+                    children: pageRows
+                        .map((row) => SizedBox(
+                              width: cardWidth,
+                              child: _MissionPortfolioCard(
+                                row: row,
+                                onSelected: widget.onMissionSelected,
+                              ),
+                            ))
+                        .toList(),
+                  ),
 
-                    const SizedBox(height: 24),
+                const SizedBox(height: 24),
 
-                    // Pagination Footer
-                    if (totalFiltered > 0)
-                      _buildPaginationBar(safePage, totalPages, totalFiltered),
-                  ],
-                ),
-              );
-            });
-          },
-    );
+                // Pagination Footer
+                if (totalFiltered > 0)
+                  _buildPaginationBar(safePage, totalPages, totalFiltered),
+              ],
+            ),
+          );
+        });
+      },
     );
   }
 
@@ -340,9 +345,12 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
     MissionInventorySummary inventorySummary,
   ) {
     final int total = inventorySummary.total;
-    final int live = rows.where((r) => r.kind == MissionPortfolioFilter.live).length;
-    final int draft = rows.where((r) => r.kind == MissionPortfolioFilter.draft).length;
-    final int passive = rows.where((r) => r.kind == MissionPortfolioFilter.passive).length;
+    final int live =
+        rows.where((r) => r.kind == MissionPortfolioFilter.live).length;
+    final int draft =
+        rows.where((r) => r.kind == MissionPortfolioFilter.draft).length;
+    final int passive =
+        rows.where((r) => r.kind == MissionPortfolioFilter.passive).length;
     final int attention = rows.where((r) => r.needsAttention).length;
 
     return Wrap(
@@ -422,16 +430,18 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
                         horizontal: 16, vertical: 12),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: FounderLightTheme.border),
+                      borderSide:
+                          const BorderSide(color: FounderLightTheme.border),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: FounderLightTheme.border),
+                      borderSide:
+                          const BorderSide(color: FounderLightTheme.border),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide:
-                          const BorderSide(color: FounderLightTheme.borderFocus, width: 1.5),
+                      borderSide: const BorderSide(
+                          color: FounderLightTheme.borderFocus, width: 1.5),
                     ),
                   ),
                 ),
@@ -497,7 +507,8 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
                 value: _statusFilter,
                 items: const [
                   DropdownMenuItem(
-                      value: MissionPortfolioFilter.all, child: Text('All Statuses')),
+                      value: MissionPortfolioFilter.all,
+                      child: Text('All Statuses')),
                   DropdownMenuItem(
                       value: MissionPortfolioFilter.live,
                       child: Text('Live for Students')),
@@ -612,9 +623,8 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
               decoration: BoxDecoration(
-                color: selected
-                    ? FounderLightTheme.surface
-                    : Colors.transparent,
+                color:
+                    selected ? FounderLightTheme.surface : Colors.transparent,
                 borderRadius: BorderRadius.circular(8),
                 boxShadow: selected ? FounderLightTheme.softShadow : null,
               ),
@@ -840,7 +850,8 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
       decoration: BoxDecoration(
         color: FounderLightTheme.primaryBlueLight,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: FounderLightTheme.primaryBlue.withValues(alpha: 0.3)),
+        border: Border.all(
+            color: FounderLightTheme.primaryBlue.withValues(alpha: 0.3)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -973,7 +984,8 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
                 final pageNum = i + 1;
                 if (pageNum == 1 ||
                     pageNum == totalPages ||
-                    (pageNum >= currentPage - 1 && pageNum <= currentPage + 1)) {
+                    (pageNum >= currentPage - 1 &&
+                        pageNum <= currentPage + 1)) {
                   final bool isCurrent = pageNum == currentPage;
                   return InkWell(
                     onTap: () => setState(() => _currentPage = pageNum),
@@ -1068,11 +1080,10 @@ class MissionInventoryRecord {
                   (realm?['visibilityGate'] as Map)['userPanelVisible'] ==
                       true)));
 
-  String get rawStatus => (realm?['studentPublicationState'] ??
-          realm?['status'] ??
-          'DRAFT')
-      .toString()
-      .toUpperCase();
+  String get rawStatus =>
+      (realm?['studentPublicationState'] ?? realm?['status'] ?? 'DRAFT')
+          .toString()
+          .toUpperCase();
 
   MissionPortfolioFilter get kind {
     if (studentVisible) return MissionPortfolioFilter.live;
@@ -1088,17 +1099,14 @@ class MissionInventoryRecord {
           s['missionVariables'] is Map &&
           (s['missionVariables'] as Map).isNotEmpty);
 
-  bool get hasLegacyVariables =>
-      false;
+  bool get hasLegacyVariables => false;
 
-  bool get sourceReady =>
-      [realm].whereType<Map<String, dynamic>>().any((s) =>
-          s['canonicalSourceVersionId'] != null ||
-          s['sourceAuthorityState'] == 'CANONICAL');
+  bool get sourceReady => [realm].whereType<Map<String, dynamic>>().any((s) =>
+      s['canonicalSourceVersionId'] != null ||
+      s['sourceAuthorityState'] == 'CANONICAL');
 
-  bool get sourceCandidate =>
-      [realm].whereType<Map<String, dynamic>>().any(
-          (s) => s['sourceVersionId'] != null || s['sourceDocumentId'] != null);
+  bool get sourceCandidate => [realm].whereType<Map<String, dynamic>>().any(
+      (s) => s['sourceVersionId'] != null || s['sourceDocumentId'] != null);
 
   bool get needsAttention =>
       realm == null ||
@@ -1112,10 +1120,8 @@ class MissionInventoryRecord {
           id)
       .toString();
 
-  String get organization => (realm?['organization'] ??
-          realm?['org'] ??
-          '')
-      .toString();
+  String get organization =>
+      (realm?['organization'] ?? realm?['org'] ?? '').toString();
 
   String get year => (realm?['examYear'] ??
           realm?['year'] ??
@@ -1495,8 +1501,7 @@ class _MissionPortfolioCard extends StatelessWidget {
                         minLines: 2,
                         maxLines: 3,
                         decoration: const InputDecoration(
-                            labelText:
-                                'Founder reason (minimum 12 characters)',
+                            labelText: 'Founder reason (minimum 12 characters)',
                             border: OutlineInputBorder())),
                   ]),
               actions: [
@@ -1690,7 +1695,8 @@ class _InventoryErrorState extends StatelessWidget {
       decoration: BoxDecoration(
         color: FounderLightTheme.dangerBg,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: FounderLightTheme.danger.withValues(alpha: 0.3)),
+        border:
+            Border.all(color: FounderLightTheme.danger.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [

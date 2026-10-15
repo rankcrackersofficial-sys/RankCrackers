@@ -16,13 +16,15 @@ class MissionControlCenter extends StatefulWidget {
 }
 
 class _MissionControlCenterState extends State<MissionControlCenter> {
-  int _activeViewTab = 0; // 0: Mission Inventory, 1: Official Updates Placeholder
+  int _activeViewTab =
+      0; // 0: Mission Inventory, 1: Official Updates Placeholder
   bool _showCreateDraftPanel = false;
 
   JurisdictionFilter _selectedJurisdiction = JurisdictionFilter.all;
   String? _selectedStateCode;
 
-  void _selectJurisdictionShortcut(JurisdictionFilter filter, [String? stateCode]) {
+  void _selectJurisdictionShortcut(JurisdictionFilter filter,
+      [String? stateCode]) {
     setState(() {
       _selectedJurisdiction = filter;
       _selectedStateCode = stateCode;
@@ -195,14 +197,11 @@ class _MissionControlCenterState extends State<MissionControlCenter> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
-          color: isSelected
-              ? FounderLightTheme.surfaceAlt
-              : Colors.transparent,
+          color: isSelected ? FounderLightTheme.surfaceAlt : Colors.transparent,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: isSelected
-                ? FounderLightTheme.primaryBlue
-                : Colors.transparent,
+            color:
+                isSelected ? FounderLightTheme.primaryBlue : Colors.transparent,
           ),
         ),
         child: Row(
@@ -261,13 +260,17 @@ class _MissionControlCenterState extends State<MissionControlCenter> {
         children: [
           Row(
             children: [
-              _jurisdictionQuickChip('ALL MISSIONS', JurisdictionFilter.all, null),
+              _jurisdictionQuickChip(
+                  'ALL MISSIONS', JurisdictionFilter.all, null),
               const SizedBox(width: 8),
-              _jurisdictionQuickChip('CENTRAL AUTHORITIES', JurisdictionFilter.central, null),
+              _jurisdictionQuickChip(
+                  'CENTRAL AUTHORITIES', JurisdictionFilter.central, null),
               const SizedBox(width: 8),
-              _jurisdictionQuickChip('RAJASTHAN (RJ)', JurisdictionFilter.state, 'RJ'),
+              _jurisdictionQuickChip(
+                  'RAJASTHAN (RJ)', JurisdictionFilter.state, 'RJ'),
               const SizedBox(width: 8),
-              _jurisdictionQuickChip('DELHI (UT · DL)', JurisdictionFilter.ut, 'DL'),
+              _jurisdictionQuickChip(
+                  'DELHI (UT · DL)', JurisdictionFilter.ut, 'DL'),
             ],
           ),
         ],
@@ -277,8 +280,8 @@ class _MissionControlCenterState extends State<MissionControlCenter> {
 
   Widget _jurisdictionQuickChip(
       String label, JurisdictionFilter filter, String? stateCode) {
-    final bool isSelected = _selectedJurisdiction == filter &&
-        _selectedStateCode == stateCode;
+    final bool isSelected =
+        _selectedJurisdiction == filter && _selectedStateCode == stateCode;
 
     return InkWell(
       onTap: () => _selectJurisdictionShortcut(filter, stateCode),
@@ -455,7 +458,7 @@ class _UnlinkedDiscoveryAssetsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
       stream: FirebaseFirestore.instance
-          .collection('recruitments')
+          .collection('mission_realms')
           .where('status', isEqualTo: 'review')
           .snapshots(),
       builder: (context, snapshot) {
