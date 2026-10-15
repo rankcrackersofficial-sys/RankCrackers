@@ -72,8 +72,11 @@ class DiagnosticResultScreen extends StatelessWidget {
                           ),
                         ),
 
-                        const Spacer(),
-                        const SizedBox(height: 20),
+                        // This content is inside a SingleChildScrollView, so the
+                        // incoming height is unbounded. Spacer/Expanded would
+                        // assert during layout; keep the fail-closed screen
+                        // intrinsically sized and scrollable instead.
+                        const SizedBox(height: 24),
                         PremiumButton(
                           text: 'ENTER BATTALION', 
                           onTap: () => context.go(AppRoutes.missionRealm),
