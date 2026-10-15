@@ -24,22 +24,6 @@ class DiagnosticResultScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int correct = 0;
-    int total = questions.length;
-    for (int i = 0; i < total; i++) {
-      if (answers[i] == (questions[i]['correct_option'] as int)) {
-        correct++;
-      }
-    }
-
-    double accuracy = total > 0 ? (correct / total) * 100 : 0;
-    String cognitiveGrade = accuracy >= 80 ? 'A+' : (accuracy >= 60 ? 'B' : 'C');
-    String battleReadiness = accuracy >= 80 ? 'HIGH' : (accuracy >= 60 ? 'MEDIUM' : 'LOW');
-    
-    String accuracyProfile = accuracy >= 80 ? 'Surgical' : 'Unbalanced';
-    String reactionSpeed = '0.8s';
-    String currentWeakness = 'Science';
-
     return Scaffold(
       backgroundColor: AppColors.background,
       body: TacticalNoirBackground(
@@ -58,19 +42,19 @@ class DiagnosticResultScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         _buildHeader(context),
                         SizedBox(height: ResponsiveHelper.compactGap(context)),
-                        Text('Diagnostic\nComplete', style: AppTypography.hero.copyWith(height: 1.0, fontSize: ResponsiveHelper.sp(context, 26))),
+                        Text('Diagnostic\nNot Ready', style: AppTypography.hero.copyWith(height: 1.0, fontSize: ResponsiveHelper.sp(context, 26))),
                         const SizedBox(height: 10),
-                        Text('Footprint mapped.', style: AppTypography.body.copyWith(color: Colors.white38, fontSize: 13)),
+                        Text('No server-authoritative attempt is available.', style: AppTypography.body.copyWith(color: Colors.white38, fontSize: 13)),
                         
                         SizedBox(height: ResponsiveHelper.sectionSpacing(context)),
 
                         Row(
                           children: [
-                            _metricItem('🎯 ACCURACY', '${accuracy.toInt()}%', AppColors.gold),
+                            _metricItem('🎯 ACCURACY', 'NOT READY', AppColors.gold),
                             const SizedBox(width: 10),
-                            _metricItem('🧠 GRADE', cognitiveGrade, Colors.greenAccent),
+                            _metricItem('🧠 GRADE', 'NOT READY', Colors.greenAccent),
                             const SizedBox(width: 10),
-                            _metricItem('🔥 READY', battleReadiness, Colors.orangeAccent),
+                            _metricItem('🔥 READY', 'NOT READY', Colors.orangeAccent),
                           ],
                         ),
 
@@ -82,9 +66,9 @@ class DiagnosticResultScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(12),
                           child: Column(
                             children: [
-                              _row('Accuracy', accuracyProfile),
-                              _row('Speed', reactionSpeed),
-                              _row('Weakness', currentWeakness),
+                              _row('Accuracy', 'Unavailable'),
+                              _row('Speed', 'Unavailable'),
+                              _row('Weakness', 'Unavailable'),
                             ],
                           ),
                         ),
@@ -93,7 +77,7 @@ class DiagnosticResultScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         PremiumButton(
                           text: 'ENTER BATTALION', 
-                          onTap: () => context.go(AppRoutes.dashboard),
+                          onTap: () => context.go(AppRoutes.missionRealm),
                         ),
                         Center(
                           child: TextButton(

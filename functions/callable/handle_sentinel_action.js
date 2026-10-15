@@ -1043,8 +1043,10 @@ function buildStudentMissionCatalogShell(realmId, realmData = {}, recruitmentDat
     missionType: category,
     missionStructureType: realmData.missionStructureType || recruitmentData.missionStructureType || 'SINGLE_TRACK',
     examScope: realmData.examScope || recruitmentData.examScope || 'PUBLIC_STUDENT_ELIGIBLE',
-    mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'ENGLISH_ONLY',
-    supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH'],
+    // English remains canonical; eligible study delivery must retain Hindi.
+    // Do not let an incomplete legacy record silently downgrade to English-only.
+    mediumPolicy: realmData.mediumPolicy || recruitmentData.mediumPolicy || 'BILINGUAL',
+    supportedMediums: Array.isArray(realmData.supportedMediums) ? realmData.supportedMediums : ['ENGLISH', 'HINDI'],
     defaultMedium: realmData.defaultMedium || recruitmentData.defaultMedium || 'ENGLISH',
     status: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
     catalogStatus: isArchived ? 'ARCHIVED' : 'INTERNAL_DRAFT',
