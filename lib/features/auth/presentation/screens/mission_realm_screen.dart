@@ -22,7 +22,9 @@ import '../providers/mission_realm_provider.dart';
 import '../../../../shared/providers/session_provider.dart';
 
 class MissionRealmScreen extends ConsumerStatefulWidget {
-  const MissionRealmScreen({super.key});
+  final Future<void> Function(String uid, Map<String, dynamic> data)? serverSelectionSaverForTest;
+
+  const MissionRealmScreen({super.key, this.serverSelectionSaverForTest});
 
   @override
   ConsumerState<MissionRealmScreen> createState() => _MissionRealmScreenState();
@@ -982,40 +984,20 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildMissionActionButtons(Recruitment recruitment) {
-    final canSmartStart = recruitment.canSmartStart;
-    final canQuickStart = recruitment.canQuickStart;
+    final canEnterMission = recruitment.canEnterMissionShell;
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       child: LayoutBuilder(
         builder: (context, constraints) {
-          final useStackedButtons = constraints.maxWidth < 292;
-          final buttonWidth = useStackedButtons
-              ? constraints.maxWidth
-              : (constraints.maxWidth - 10) / 2;
-          return Wrap(
-            spacing: 10,
-            runSpacing: 10,
-            children: [
-              SizedBox(
-                width: buttonWidth,
-                child: _missionActionButton(
-                  label: 'SMART START',
-                  icon: Icons.auto_awesome_rounded,
-                  filled: true,
-                  onPressed: canSmartStart ? () => _startMission(recruitment, true) : null,
-                ),
-              ),
-              SizedBox(
-                width: buttonWidth,
-                child: _missionActionButton(
-                  label: 'QUICK START',
-                  icon: Icons.play_arrow_rounded,
-                  filled: false,
-                  onPressed: canQuickStart ? () => _startMission(recruitment, false) : null,
-                ),
-              ),
-            ],
+          return SizedBox(
+            width: constraints.maxWidth,
+            child: _missionActionButton(
+              label: 'ENTER MISSION',
+              icon: Icons.play_arrow_rounded,
+              filled: true,
+              onPressed: canEnterMission ? () => _startMission(recruitment, false) : null,
+            ),
           );
         },
       ),

@@ -255,21 +255,13 @@ void main() {
       await tester.tap(find.text('JEE Main 2026'));
       await tester.pumpAndSettle();
 
-      // Verify Quick Start button is enabled and Smart Start is disabled
-      final quickStartFinder = find.widgetWithText(OutlinedButton, 'QUICK START');
-      expect(quickStartFinder, findsOneWidget);
+      // Verify the single ordinary mission entry is enabled.
+      final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
+      expect(enterMissionFinder, findsOneWidget);
+      final enterButton = tester.widget<ElevatedButton>(enterMissionFinder);
+      expect(enterButton.onPressed, isNotNull);
 
-      final smartStartFinder = find.widgetWithText(ElevatedButton, 'SMART START');
-      expect(smartStartFinder, findsOneWidget);
-
-      final smartButton = tester.widget<ElevatedButton>(smartStartFinder);
-      expect(smartButton.onPressed, isNull); // Fail-closed diagnostic gate
-
-      final quickButton = tester.widget<OutlinedButton>(quickStartFinder);
-      expect(quickButton.onPressed, isNotNull); // Enabled shell entry
-
-      // Tap Quick Start
-      await tester.tap(quickStartFinder);
+      await tester.tap(enterMissionFinder);
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 5));
 
@@ -282,7 +274,7 @@ void main() {
       expect(find.text('DASHBOARD_SHELL'), findsOneWidget);
     });
 
-    testWidgets('4. Smart Start remains fail-closed when diagnostic readiness is unproven',
+    testWidgets('4. Only ordinary mission entry is exposed',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         ProviderScope(
@@ -302,13 +294,11 @@ void main() {
       await tester.tap(find.text('NEET UG 2027'));
       await tester.pumpAndSettle();
 
-      final smartStartFinder = find.widgetWithText(ElevatedButton, 'SMART START');
-      final smartButton = tester.widget<ElevatedButton>(smartStartFinder);
-      expect(smartButton.onPressed, isNull);
-
-      final quickStartFinder = find.widgetWithText(OutlinedButton, 'QUICK START');
-      final quickButton = tester.widget<OutlinedButton>(quickStartFinder);
-      expect(quickButton.onPressed, isNotNull);
+      expect(find.text('SMART START'), findsNothing);
+      expect(find.text('QUICK START'), findsNothing);
+      final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
+      expect(enterMissionFinder, findsOneWidget);
+      expect(tester.widget<ElevatedButton>(enterMissionFinder).onPressed, isNotNull);
     });
 
     test('5. Non-canonical test mission aliases eliminated', () {

@@ -981,21 +981,21 @@ void main() {
       // Status text must be 'Preparing' (yearless identity)
       expect(find.text('Preparing'), findsWidgets);
 
-      // Buttons for preparing mission must be disabled
-      final smartBtn = tester.widget<ElevatedButton>(find.widgetWithText(ElevatedButton, 'SMART START'));
-      final quickBtn = tester.widget<OutlinedButton>(find.widgetWithText(OutlinedButton, 'QUICK START'));
-      expect(smartBtn.enabled, isFalse);
-      expect(quickBtn.enabled, isFalse);
+      // The single ordinary entry remains disabled for a preparing mission.
+      final preparingEntry = tester.widget<ElevatedButton>(
+        find.widgetWithText(ElevatedButton, 'ENTER MISSION'),
+      );
+      expect(preparingEntry.enabled, isFalse);
 
       // Expand 'RPSC Assistant Engineer Civil' (LIVE, smart=true, quick=false)
       await tester.ensureVisible(find.text('RPSC Assistant Engineer Civil'));
       await tester.tap(find.text('RPSC Assistant Engineer Civil'));
       await tester.pumpAndSettle();
 
-      final smartBtn2 = tester.widget<ElevatedButton>(find.widgetWithText(ElevatedButton, 'SMART START'));
-      final quickBtn2 = tester.widget<OutlinedButton>(find.widgetWithText(OutlinedButton, 'QUICK START'));
-      expect(smartBtn2.enabled, isTrue);
-      expect(quickBtn2.enabled, isFalse);
+      final liveEntry = tester.widget<ElevatedButton>(
+        find.widgetWithText(ElevatedButton, 'ENTER MISSION'),
+      );
+      expect(liveEntry.enabled, isTrue);
     });
 
     test('C07_ZERO_FAKE_READINESS_ZERO_EVIDENCE_YIELDS_ZERO_PERCENT_AND_PENDING', () {
