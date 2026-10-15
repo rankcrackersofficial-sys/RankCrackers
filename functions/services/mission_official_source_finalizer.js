@@ -71,7 +71,9 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
 async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityKey, sourceType, sourceUrl, stagedStoragePath, mimeType, recordedAt, officialBytesFetcher }) {
   if (!storage || typeof storage.bucket !== 'function') throw new Error('OFFICIAL_SOURCE_STORAGE_REQUIRED');
   const staged = requiredString(stagedStoragePath, 'OFFICIAL_SOURCE_STAGED_PATH_REQUIRED');
-  if (!staged.startsWith('mission_source_staging/') || staged.includes('..')) throw new Error('OFFICIAL_SOURCE_STAGED_PATH_INVALID');
+  const allowedStagingPath = staged.startsWith('mission_source_staging/')
+    || staged.startsWith('ingestion_refinery/mission_source_staging/');
+  if (!allowedStagingPath || staged.includes('..')) throw new Error('OFFICIAL_SOURCE_STAGED_PATH_INVALID');
   const file = storage.bucket().file(staged);
   const [metadata] = await file.getMetadata();
   const effectiveMime = mimeType || metadata.contentType || '';

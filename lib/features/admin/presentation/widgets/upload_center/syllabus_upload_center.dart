@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../shared/center_header.dart';
-import 'widgets/mission_asset_form.dart';
+import 'widgets/mission_source_pair_form.dart';
 
 class SyllabusUploadCenter extends StatelessWidget {
   const SyllabusUploadCenter({super.key});
@@ -15,7 +15,7 @@ class SyllabusUploadCenter extends StatelessWidget {
           subtitle: "Syllabus extraction starts only from the verified mission source pair.",
         ),
         SizedBox(height: 24),
-        MissionAssetForm(assetType: 'syllabus'),
+        MissionSourcePairForm(),
       ],
     );
   }
