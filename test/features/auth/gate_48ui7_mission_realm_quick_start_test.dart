@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -206,7 +207,7 @@ void main() {
       expect(recruitment.smartEntryEnabled, isTrue);
       expect(recruitment.catalogDiscoverable, isTrue);
       expect(recruitment.canQuickStart, isTrue);
-      expect(recruitment.canSmartStart, isTrue);
+      expect(recruitment.canSmartStart, isFalse);
     });
 
     testWidgets('3. Quick Start tap persists exact jee_main_2026 identity and navigates to Dashboard',
@@ -350,6 +351,184 @@ void main() {
       expect(r.authorityDisplayName, equals('National Testing Agency (NTA)'));
       expect(r.jurisdictionLevel, equals('CENTRAL'));
       expect(r.stateCode, equals('TG'));
+    });
+
+    testWidgets('7. Successful server confirmation updates cache and opens Dashboard afterward',
+        (WidgetTester tester) async {
+      String navigatedRoute = '';
+      bool serverConfirmed = false;
+      Map<String, dynamic>? serverPayload;
+
+      final router = GoRouter(
+        initialLocation: AppRoutes.missionRealm,
+        routes: [
+          GoRoute(
+            path: AppRoutes.missionRealm,
+            builder: (context, state) => MissionRealmScreen(
+              serverSelectionSaverForTest: (uid, data) async {
+                serverConfirmed = true;
+                serverPayload = data;
+              },
+            ),
+          ),
+          GoRoute(
+            path: AppRoutes.dashboard,
+            builder: (context, state) {
+              navigatedRoute = AppRoutes.dashboard;
+              return const Scaffold(body: Text('DASHBOARD_SHELL'));
+            },
+          ),
+        ],
+      );
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            publishedRecruitmentsProvider.overrideWithValue([jeePreparing]),
+            recruitmentsProvider.overrideWith((ref) => Stream.value([jeePreparing])),
+            authRepositoryProvider.overrideWithValue(MockAuthRepository()),
+          ],
+          child: MaterialApp.router(
+            routerConfig: router,
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('JEE Main 2026'));
+      await tester.pumpAndSettle();
+
+      final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
+      await tester.tap(enterMissionFinder);
+      await tester.pumpAndSettle();
+
+      expect(serverConfirmed, isTrue);
+      expect(serverPayload?['selectedExamId'], equals('jee_main_2026'));
+      expect(SessionManager.getExamIdSync(), equals('jee_main_2026'));
+      expect(SessionManager.selectedRecruitmentIdSync(), equals('jee_main_2026'));
+      expect(navigatedRoute, equals(AppRoutes.dashboard));
+      expect(find.text('DASHBOARD_SHELL'), findsOneWidget);
+    });
+
+    testWidgets('8. Server rejection or timeout leaves cache unchanged and does not navigate',
+        (WidgetTester tester) async {
+      String navigatedRoute = '';
+      bool serverAttempted = false;
+
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('selected_exam_id', 'prior_cached_exam');
+      await prefs.setString('selected_recruitment_id', 'prior_cached_exam');
+      await SessionManager.initialize();
+
+      final router = GoRouter(
+        initialLocation: AppRoutes.missionRealm,
+        routes: [
+          GoRoute(
+            path: AppRoutes.missionRealm,
+            builder: (context, state) => MissionRealmScreen(
+              serverSelectionSaverForTest: (uid, data) async {
+                serverAttempted = true;
+                throw TimeoutException('Server write timed out');
+              },
+            ),
+          ),
+          GoRoute(
+            path: AppRoutes.dashboard,
+            builder: (context, state) {
+              navigatedRoute = AppRoutes.dashboard;
+              return const Scaffold(body: Text('DASHBOARD_SHELL'));
+            },
+          ),
+        ],
+      );
+
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            publishedRecruitmentsProvider.overrideWithValue([jeePreparing]),
+            recruitmentsProvider.overrideWith((ref) => Stream.value([jeePreparing])),
+            authRepositoryProvider.overrideWithValue(MockAuthRepository()),
+          ],
+          child: MaterialApp.router(
+            routerConfig: router,
+          ),
+        ),
+      );
+      await tester.pumpAndSettle();
+
+      await tester.tap(find.text('JEE Main 2026'));
+      await tester.pumpAndSettle();
+
+      final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
+      await tester.tap(enterMissionFinder);
+      await tester.pumpAndSettle();
+
+      expect(serverAttempted, isTrue);
+      expect(SessionManager.getExamIdSync(), equals('prior_cached_exam'));
+      expect(SessionManager.selectedRecruitmentIdSync(), equals('prior_cached_exam'));
+      expect(navigatedRoute, isEmpty);
+      expect(find.text('DASHBOARD_SHELL'), findsNothing);
+      expect(find.text('Mission could not start yet. Please try again.'), findsOneWidget);
+    });
+
+    testWidgets('9. Unauthenticated server selection attempt fails closed without mutating local cache',
+        (WidgetTester tester) async {
+      String navigatedRoute = '';
+
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('selected_exam_id', 'prior_cached_exam');
+      await prefs.setString('selected_recruitment_id', 'prior_cached_exam');
+      await SessionManager.initialize();
+
+      SessionManager.disableFirebaseForTest = false;
+
+      final router = GoRouter(
+        initialLocation: AppRoutes.missionRealm,
+        routes: [
+          GoRoute(
+            path: AppRoutes.missionRealm,
+            builder: (context, state) => const MissionRealmScreen(),
+          ),
+          GoRoute(
+            path: AppRoutes.dashboard,
+            builder: (context, state) {
+              navigatedRoute = AppRoutes.dashboard;
+              return const Scaffold(body: Text('DASHBOARD_SHELL'));
+            },
+          ),
+        ],
+      );
+
+      try {
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              publishedRecruitmentsProvider.overrideWithValue([jeePreparing]),
+              recruitmentsProvider.overrideWith((ref) => Stream.value([jeePreparing])),
+              authRepositoryProvider.overrideWithValue(MockAuthRepository()),
+            ],
+            child: MaterialApp.router(
+              routerConfig: router,
+            ),
+          ),
+        );
+        await tester.pumpAndSettle();
+
+        await tester.tap(find.text('JEE Main 2026'));
+        await tester.pumpAndSettle();
+
+        final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
+        await tester.tap(enterMissionFinder);
+        await tester.pumpAndSettle();
+
+        expect(SessionManager.getExamIdSync(), equals('prior_cached_exam'));
+        expect(SessionManager.selectedRecruitmentIdSync(), equals('prior_cached_exam'));
+        expect(navigatedRoute, isEmpty);
+        expect(find.text('DASHBOARD_SHELL'), findsNothing);
+        expect(find.text('Mission could not start yet. Please try again.'), findsOneWidget);
+      } finally {
+        SessionManager.disableFirebaseForTest = true;
+      }
     });
   });
 }
