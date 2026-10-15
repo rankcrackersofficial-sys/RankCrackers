@@ -401,6 +401,7 @@ void main() {
       final enterMissionFinder = find.widgetWithText(ElevatedButton, 'ENTER MISSION');
       await tester.tap(enterMissionFinder);
       await tester.pumpAndSettle();
+      await tester.pump(const Duration(seconds: 5));
 
       expect(serverConfirmed, isTrue);
       expect(serverPayload?['selectedExamId'], equals('jee_main_2026'));
