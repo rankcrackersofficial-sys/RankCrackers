@@ -97,6 +97,17 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 momentum: momentum,
                 missionEvidenceVerified: false,
               ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
+                child: Text(
+                  'DAILY TRAINING PLAN',
+                  style: AppTypography.cardTitle.copyWith(
+                    color: Colors.white,
+                    fontSize: 14,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ),
               Expanded(
                 child: Center(
                   child: Padding(
@@ -205,6 +216,15 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 12),
+                      Text(
+                        'DAILY TRAINING PLAN',
+                        style: AppTypography.cardTitle.copyWith(
+                          color: Colors.white,
+                          fontSize: 14,
+                          letterSpacing: 1.0,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
                       // 🔱 1. TOP COMPACT HEADER SECTION
                       _buildCompactHeader(currentCycleDay, currentPhase, orbitNumber),
                       const SizedBox(height: 16),
