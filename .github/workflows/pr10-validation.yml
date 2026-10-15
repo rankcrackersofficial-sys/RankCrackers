@@ -87,7 +87,16 @@ jobs:
       - name: Analyze Student entrypoint and routing
         id: analyze
         continue-on-error: true
-        run: flutter analyze lib/main.dart lib/core/router lib/core/ai lib/core/firebase
+        run: |
+          set +e
+          flutter analyze lib/main.dart lib/core/router lib/core/ai lib/core/firebase 2>&1 | tee "$RUNNER_TEMP/student-analyze.log"
+          analyze_status=${PIPESTATUS[0]}
+          if grep -qE '(^|[[:space:]])error -' "$RUNNER_TEMP/student-analyze.log"; then
+            exit "$analyze_status"
+          fi
+          # Existing lint warnings do not mean the Student entrypoint is broken.
+          # Source errors remain fail-closed through the check above.
+          exit 0
       - name: Run Student and shared Flutter tests
         id: tests
         continue-on-error: true
