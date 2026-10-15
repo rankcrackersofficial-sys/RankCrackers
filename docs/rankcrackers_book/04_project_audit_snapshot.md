@@ -1,5 +1,10 @@
 # Preliminary Reference — Project Audit Snapshot
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/04_project_audit_snapshot.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/04_project_audit_snapshot.md) · source blob `b0590e0fc8eba73affc2a34df6b1721031304090`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 **Audit status:** प्रारंभिक संरचनात्मक audit  
 **Reference date:** 9 October 2026  
 **Editor:** Rank Cracker Book का प्रबंध संपादक
@@ -7,6 +12,20 @@
 ## 1. Audit का उद्देश्य
 
 इस audit का उद्देश्य पूरे Rank Cracker project की वर्तमान संरचना को समझना और उसे पुस्तक के लिए reliable source map में बदलना है। यह snapshot implementation के बारे में प्रारंभिक तथ्य दर्ज करता है; आगे के chapters में प्रत्येक area का अलग functional और technical अध्ययन किया जाएगा।
+
+## Current default branch tracked inventory
+
+| Metric | Current GitHub tree result |
+|---|---:|
+| `lib/` tracked files | 779 |
+| Dart files | 757 |
+| Non-Dart files | 22 |
+| `lib/` blob bytes | 3,438,588 |
+| Dart blob bytes | 3,301,582 |
+| Compiler-ordered source documents | 24 |
+| `.github/workflows/` tracked files | 0 |
+
+This is a Git tree census at the recorded SHA, not a Windows disk inventory or test result.
 
 ## 2. वर्तमान technology foundation
 

@@ -1,5 +1,10 @@
 # Volume F — Academic Intelligence & Cognitive Science
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/19_academic_intelligence_and_knowledge_engine.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/19_academic_intelligence_and_knowledge_engine.md) · source blob `0ca47a3cf2a463649b3bbe0e9b3afc4f8c132e6f`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Knowledge Engine, Mathematical Formulations, Decay Curves & Assessment Architecture
 
 ---
@@ -394,7 +399,7 @@ Chief Author Mandate के तहत Academic Intelligence एवं Knowledge 
 - **Mutation/error/offline:** operations are in-memory immutable transformations. Malformed `started_at`/enum values can throw during parsing; no retry, auth or persistence contract is present in this model.
 
 ### Subsection 11.7 — `SolutionVerificationRecord.computeSha256` — historical/unresolved reference
-- **Source File & Location:** `functions/src/assessment/verification.ts` does not exist in the current repository. This reference is retained only as `UNRESOLVED/HISTORICAL`; no current implementation is presented as verified.
+- **Source File & Location:** `functions/src/assessment/verification.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** does not exist in the current repository. This reference is retained only as `UNRESOLVED/HISTORICAL`; no current implementation is presented as verified.
 - **Status:** `UNRESOLVED`; caller, input contract, output contract और downstream consumer वर्तमान source से प्रमाणित नहीं हैं।
 - **Evidence note:** वर्तमान `functions/src/` inventory में assessment/verification module नहीं मिला। उपलब्ध hash helpers जैसे `functions/src/syllabus/hierarchyProposalContract.ts` को इस पुराने contract का replacement मानना उचित नहीं होगा।
 
@@ -485,3 +490,12 @@ Chapter 23 is the latest remote authority contract and supersedes any earlier wo
 The academic intelligence engine may calculate mastery and risk over a verified `AtomicTopic`, but mastery state, question frequency, PYQ presence, UI visibility or model confidence cannot promote a derived node to `OFFICIAL`. The latest contract also adds `QUESTION_KNOWLEDGE_CLOSED` as a publication boundary: an item with a missing, unverified, superseded or untaught substantive dependency must remain blocked.
 
 **Status:** latest remote contract ingested; local runtime implementation parity remains a separate audit gate.
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/assessment/verification.ts` | UNRESOLVED AT DEFAULT HEAD |

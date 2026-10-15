@@ -1,5 +1,10 @@
 # Master Documentation Plan
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/05_master_documentation_plan.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/05_master_documentation_plan.md) · source blob `e345771a7d5f7c3e42015214145481a23c95c46c`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 यह योजना पुस्तक को summary से full reference work में विकसित करने के लिए है। इसका उद्देश्य chapters को जल्दी समाप्त करना नहीं, बल्कि project की कोई महत्वपूर्ण परत छूटने न देना है। Final editorial hierarchy Volume → Part → Chapter → Section → Subsection → Implementation Note → Reference होगी।
 
 ## Volume A — Product और मूल दृष्टि

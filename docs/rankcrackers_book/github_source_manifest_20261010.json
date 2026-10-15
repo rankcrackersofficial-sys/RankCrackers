@@ -1,0 +1,369 @@
+{
+  "repository": "rankcrackersofficial-sys/RankCrackers",
+  "default_branch": "safety/rc-g2-pre-notification-schema",
+  "read_commit": "5161592ddafb42f1ecc8923cc7b7b0309934cc83",
+  "read_tree": "1cb9347e46274d5ba3349e861e1efe91137ecf34",
+  "edition_date": "2026-10-10",
+  "authority_direction": "GITHUB_TO_BOOK_ONLY",
+  "source_note": "Drive edits are not repository commits",
+  "current_census": {
+    "lib_files": 779,
+    "dart_files": 757,
+    "non_dart_files": 22,
+    "lib_bytes": 3438588,
+    "dart_bytes": 3301582,
+    "compiler_sources": 24
+  },
+  "runtime_tests_executed": false,
+  "production_state_verified": false,
+  "chapter_18_status": "AUDIT HOLD — NOT FINAL",
+  "native_google_doc_status": "PARTIAL COMPANION",
+  "word_export_status": "LEGACY — CURRENT PARITY NOT CERTIFIED",
+  "source_files": [
+    {
+      "file": "01_editor_note.md",
+      "source_blob": "b6228684d27a61bb696fa062500bdae9f9513e36",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "02_index.md",
+      "source_blob": "ae87629ed4370aadb41bb34cbf1c1275ffa1f915",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "03_editorial_policy.md",
+      "source_blob": "46112a85a35e0fd63e7a681671cda51e875b5c8e",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "04_project_audit_snapshot.md",
+      "source_blob": "b0590e0fc8eba73affc2a34df6b1721031304090",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "05_master_documentation_plan.md",
+      "source_blob": "e345771a7d5f7c3e42015214145481a23c95c46c",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "06_architecture_entry_and_trust_model.md",
+      "source_blob": "fa5d41325c869fd8ca16bb263073fb8841adbb66",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "07_student_route_inventory.md",
+      "source_blob": "22d174dba19ccdc697be8d90d3087407b762aa03",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "08_identity_profile_and_mission_gates.md",
+      "source_blob": "9aaf347912c730d179e2feeb63c76d489f19dad7",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "09_dashboard_and_learning_command_surface.md",
+      "source_blob": "a120895d84ae078bbabf74d4dbeac48714a85e19",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "10_crucible_protocol_and_schedule_engine.md",
+      "source_blob": "060c0f1e4caf5baa139575eab41f47e0d89a665d",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "11_syllabus_hierarchy_and_digibook_bridge.md",
+      "source_blob": "16b57c08e8fd57f4ff142f2081574c9ec4f7aee3",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "12_handoff_to_antigravity_2_0.md",
+      "source_blob": "e4ad7b895af49fd89448486dc93c77445a693c60",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "13_founder_web_operations_and_mission_control.md",
+      "source_blob": "88a544e3caf7e8a87b4edb6707d3e270206d50bf",
+      "unresolved_paths": [
+        "functions/src/founder/admin_claims.ts",
+        "functions/src/founder/forensic_purge.ts",
+        "lib/web/web_shell.dart"
+      ],
+      "edited": true
+    },
+    {
+      "file": "14_firestore_collections_and_security_rules_dictionary.md",
+      "source_blob": "cca35677a9ea68636691c4ec7886d2fe397d4ed7",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "15_cloud_functions_and_callable_contracts.md",
+      "source_blob": "404d9c17cf55511782376921798a366f353368a0",
+      "unresolved_paths": [
+        "functions/test/mission_lifecycle_emulator_roundtrip.js"
+      ],
+      "edited": true
+    },
+    {
+      "file": "16_engineering_operations_testing_and_deployment.md",
+      "source_blob": "7c4bda0dc2fc2a9b7d4b303455168f8def71f814",
+      "unresolved_paths": [
+        "docs/academic_review/certification_summary.json",
+        "functions/test/mission_lifecycle_emulator_roundtrip.js",
+        "web/main.dart.js"
+      ],
+      "edited": true
+    },
+    {
+      "file": "17_product_vision_learning_philosophy_and_journey.md",
+      "source_blob": "a4f141f389af06bdf257f21688128387d952c76e",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "18_application_architecture_and_design_system.md",
+      "source_blob": "5ca38e2f5407930dbf5c44cf4b938382cb16c6b9",
+      "unresolved_paths": [
+        "lib/core/authority/authority_boundary_guard.dart",
+        "lib/core/authority/founder_authority.dart",
+        "lib/core/notifications/notification_service.dart",
+        "lib/core/services/haptic_feedback_service.dart",
+        "lib/core/services/sound_service.dart",
+        "lib/core/storage/local_vault.dart",
+        "lib/core/utils/math_renderer_util.dart",
+        "lib/core/utils/security_hasher.dart",
+        "lib/core/utils/string_utils.dart",
+        "lib/core/widgets/paywall/tactical_paywall_overlay.dart",
+        "lib/web/admin/admin_my_access_panel.dart",
+        "lib/web/founder/access/access_security_web.dart",
+        "lib/web/founder/revenue/revenue_subscription_control_web.dart",
+        "lib/web/founder/system/founder_system_operations_web.dart",
+        "lib/web/shared/rc_colors.dart"
+      ],
+      "edited": true
+    },
+    {
+      "file": "18_chapter_18_claim_register.md",
+      "source_blob": "32172fd0ebd41ff75efae3aef6da32ef323131d2",
+      "unresolved_paths": [
+        "lib/core/authority/authority_boundary_guard.dart",
+        "lib/core/authority/founder_authority.dart",
+        "lib/core/notifications/notification_service.dart",
+        "lib/core/services/haptic_feedback_service.dart",
+        "lib/core/services/sound_service.dart",
+        "lib/core/storage/local_vault.dart",
+        "lib/core/utils/math_renderer_util.dart",
+        "lib/core/utils/security_hasher.dart",
+        "lib/core/utils/string_utils.dart",
+        "lib/core/widgets/paywall/tactical_paywall_overlay.dart"
+      ],
+      "edited": true
+    },
+    {
+      "file": "19_academic_intelligence_and_knowledge_engine.md",
+      "source_blob": "0ca47a3cf2a463649b3bbe0e9b3afc4f8c132e6f",
+      "unresolved_paths": [
+        "functions/src/assessment/verification.ts"
+      ],
+      "edited": true
+    },
+    {
+      "file": "20_master_reference_appendices.md",
+      "source_blob": "b122675a9900a87c4c146359de9d49ab75a3f6e1",
+      "unresolved_paths": [
+        "functions/src/assessment.ts",
+        "functions/src/assessment/verification.ts",
+        "functions/src/triggers.ts",
+        "functions/src/workers.ts",
+        "scripts/seed_fixtures.py"
+      ],
+      "edited": true
+    },
+    {
+      "file": "21_chief_author_audit_and_antigravity_work_order.md",
+      "source_blob": "111740e5afe4487a690244a1739bd6aa41643d33",
+      "unresolved_paths": [
+        "functions/callables/get_secure_asset_url.js",
+        "functions/callables/get_system_health.js",
+        "functions/callables/handle_mission_action.js",
+        "functions/callables/handle_sentinel_action.js",
+        "functions/callables/manage_user_access.js",
+        "functions/callables/process_ai_task.js",
+        "functions/callables/toggle_ai_system.js",
+        "functions/src/admin.ts",
+        "functions/src/assessment.ts",
+        "functions/src/assessment/verification.ts",
+        "functions/src/assets.ts",
+        "functions/src/audit/founder_logger.ts",
+        "functions/src/founder/admin_claims.ts",
+        "functions/src/founder/forensic_purge.ts",
+        "functions/src/health.ts",
+        "functions/src/triggers.ts",
+        "functions/src/workers.ts",
+        "lib/core/authority/authority_boundary_guard.dart",
+        "lib/core/authority/founder_authority.dart",
+        "lib/core/backend/firebase_emulator_config.dart",
+        "lib/core/battle/battle_engine.dart",
+        "lib/core/notifications/notification_service.dart",
+        "lib/core/services/firestore_service.dart",
+        "lib/core/services/haptic_feedback_service.dart",
+        "lib/core/services/sound_service.dart",
+        "lib/core/storage/local_vault.dart",
+        "lib/core/utils/math_renderer_util.dart",
+        "lib/core/utils/security_hasher.dart",
+        "lib/core/utils/string_utils.dart",
+        "lib/core/widgets/paywall/tactical_paywall_overlay.dart",
+        "lib/web/founder/missions/founder_mission_inventory.dart",
+        "lib/web/founder/outcomes/outcome_verification_center.dart",
+        "lib/web/founder/repository/command_center_repository.dart",
+        "test/canonical_reconciliation_emulator.js",
+        "test/mission_lifecycle_emulator_roundtrip.js",
+        "test/realEmulatorE2EWorkerProof.test.ts",
+        "web/main.dart.js"
+      ],
+      "edited": true
+    },
+    {
+      "file": "22_source_reconciliation_register_and_live_contracts.md",
+      "source_blob": "7a9c944856eed26c2a8e0dab60a48c60040ad2ff",
+      "unresolved_paths": [
+        "functions/callables/get_secure_asset_url.js",
+        "functions/callables/get_system_health.js",
+        "functions/callables/handle_mission_action.js",
+        "functions/callables/handle_sentinel_action.js",
+        "functions/callables/manage_user_access.js",
+        "functions/callables/process_ai_task.js",
+        "functions/callables/toggle_ai_system.js",
+        "functions/src/admin.ts",
+        "functions/src/assessment.ts",
+        "functions/src/assessment/verification.ts",
+        "functions/src/assets.ts",
+        "functions/src/audit/founder_logger.ts",
+        "functions/src/founder/admin_claims.ts",
+        "functions/src/founder/forensic_purge.ts",
+        "functions/src/health.ts",
+        "functions/src/triggers.ts",
+        "functions/src/workers.ts",
+        "functions/test/mission_lifecycle_emulator_roundtrip.js",
+        "lib/core/authority/authority_boundary_guard.dart",
+        "lib/core/authority/founder_authority.dart",
+        "lib/core/backend/firebase_emulator_config.dart",
+        "lib/core/battle/battle_engine.dart",
+        "lib/core/notifications/notification_service.dart",
+        "lib/core/services/firestore_service.dart",
+        "lib/core/services/haptic_feedback_service.dart",
+        "lib/core/services/sound_service.dart",
+        "lib/core/storage/local_vault.dart",
+        "lib/core/utils/math_renderer_util.dart",
+        "lib/core/utils/security_hasher.dart",
+        "lib/core/utils/string_utils.dart",
+        "lib/core/widgets/paywall/tactical_paywall_overlay.dart",
+        "lib/web/founder/missions/founder_mission_inventory.dart",
+        "lib/web/founder/outcomes/outcome_verification_center.dart",
+        "lib/web/founder/repository/command_center_repository.dart",
+        "scripts/audit_repo_head_freeze_guard.js",
+        "scripts/seed_fixtures.py",
+        "scripts/verify_48ui8.js",
+        "test/canonical_reconciliation_emulator.js",
+        "test/mission_lifecycle_emulator_roundtrip.js",
+        "test/realEmulatorE2EWorkerProof.test.ts",
+        "web/main.dart.js"
+      ],
+      "edited": true
+    },
+    {
+      "file": "23_github_tracked_canonical_syllabus_contract.md",
+      "source_blob": "3e456cf4d7378f7749756c2b9065e862cae98954",
+      "unresolved_paths": [],
+      "edited": true
+    },
+    {
+      "file": "README.md",
+      "source_blob": "23c0e8eee0fa789dcb00c3bf3f3d06b3bf9258c5",
+      "unresolved_paths": [],
+      "edited": true
+    }
+  ],
+  "architecture_branch": {
+    "name": "architecture/watch-mission-evidence-contract-20261010",
+    "head": "40934ccc063672f46426aef2f8a75cd09b0795ac",
+    "default_absent_paths": [
+      "docs/architecture/ACADEMIC_AUTHORITY_DEPENDENCY_AND_INVALIDATION_CONTRACT.md",
+      "docs/architecture/ATOMIC_PEDAGOGY_EXECUTION_CONTRACT.md",
+      "docs/architecture/CAREER_SIGNALS_VERIFIED_GOVERNMENT_OPPORTUNITY_INTELLIGENCE_CONSTITUTION.md",
+      "docs/architecture/CRUCIBLE_98_DAY_DAY_BY_DAY_CORE_OPERATING_SPECIFICATION.md",
+      "docs/architecture/CRUCIBLE_ASSESSMENT_EXECUTION_CONTRACT.md",
+      "docs/architecture/CRUCIBLE_EXECUTABLE_COMPILER_AND_STATE_MACHINE_CONTRACT.md",
+      "docs/architecture/CRUCIBLE_MICRO_MACRO_EXAM_BLUEPRINT_DERIVATION_SPECIFICATION.md",
+      "docs/architecture/CRUCIBLE_TO_TEST_ARENA_HANDOFF_AND_FORMAL_ASSESSMENT_BOUNDARY_CONTRACT.md",
+      "docs/architecture/DIGIBOOK_AND_TAUGHT_CONTENT_AUTHORITY_CONTRACT.md",
+      "docs/architecture/DIGIBOOK_CONTENT_PRODUCTION_AND_PUBLICATION_CONTRACT.md",
+      "docs/architecture/MISSION_DISCOVERY_AND_EVIDENCE_ACQUISITION_CONTRACT.md",
+      "docs/architecture/PYQ_ACQUISITION_REVIEW_AND_DELIVERY_SOP.md",
+      "docs/architecture/PYQ_OFFICIAL_EVIDENCE_PATTERN_MATRIX.md",
+      "docs/architecture/PYQ_UNIVERSAL_AUTHORITY_AND_DATA_CONTRACT.md",
+      "docs/architecture/PYQ_VAULT_STUDENT_DELIVERY_CONSTITUTION.md",
+      "docs/architecture/QUESTION_ATOMIC_INTEGRITY_AND_KNOWLEDGE_CLOSURE_SPECIFICATION.md",
+      "docs/architecture/QUESTION_REPOSITORY_AND_KNOWLEDGE_CLOSURE_CONTRACT.md",
+      "docs/architecture/RANKCRACKERS_CROSS_FEATURE_AUTHORITY_AND_EVIDENCE_CLOSURE_CONSTITUTION.md",
+      "docs/architecture/RANK_RADAR_COMPETITIVE_INTELLIGENCE_CONSTITUTION.md",
+      "docs/architecture/REVISION_DESK_EVIDENCE_GOVERNED_RECOVERY_CONSTITUTION.md",
+      "docs/architecture/SACRED_ARCHIVE_IMMUTABLE_ACADEMIC_MEMORY_CONSTITUTION.md",
+      "docs/architecture/SUBJECT_TEACHER_RESOLUTION_CONSTITUTION.md",
+      "docs/architecture/TEACHING_EXECUTION_AND_TAUGHT_MANIFEST_EVIDENCE_CONTRACT.md",
+      "docs/architecture/TEST_ARENA_EARNED_MAJOR_MILESTONE_FULL_TEST_AND_PSYCHOMETRIC_RANKING_CONSTITUTION.md",
+      "docs/architecture/TEST_ARENA_EXECUTION_CONTRACT.md",
+      "docs/architecture/UNIVERSAL_MISSION_EXAMINATION_BLUEPRINT_AND_STUDENT_PROJECTION_CONTRACT.md"
+    ]
+  },
+  "default_contract": {
+    "path": "docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md",
+    "blob_sha": "a73d08daad85e0b14bedbf6ebc73de2cc6c2f194",
+    "implementation_parity": "PENDING"
+  },
+  "chapter_18_followup": {
+    "status": "AUDIT HOLD — NOT FINAL",
+    "drive_lib_files": 790,
+    "drive_dart": 768,
+    "shared_exact": 127,
+    "shared_crlf_only": 644,
+    "shared_content_diff": 0,
+    "drive_only": 19,
+    "github_only": 8,
+    "layer_counts": {
+      "L01": 4,
+      "L02": 5,
+      "L03": 18,
+      "L04": 57,
+      "L05": 7,
+      "L06": 12,
+      "L07": 181,
+      "L08": 55,
+      "L09": 57,
+      "L10": 87,
+      "L11": 73,
+      "L12": 129,
+      "L13": 31,
+      "L14": 35,
+      "L15": 6
+    },
+    "assigned": 757,
+    "overlap": 0,
+    "unassigned": 0,
+    "matrix_github_paths": 73,
+    "matrix_drive_only_paths": 5,
+    "runtime_tests_executed": false
+  }
+}

@@ -1,5 +1,10 @@
 # Volume E — Backend और Data Layer
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/15_cloud_functions_and_callable_contracts.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/15_cloud_functions_and_callable_contracts.md) · source blob `404d9c17cf55511782376921798a366f353368a0`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 2 — Cloud Functions, Callable Contracts, Background Workers & AI Pipelines
 
 ### Chapter 15 — Serverless Infrastructure, Cloud Callable Contracts, Asynchronous Worker Battalions और Authoritative Evaluation Engines
@@ -526,7 +531,7 @@ Worker governance service `isWorkerEnabled`, `getWorkerMode` और `updateHeart
 RankCrackers का backend emulator-supported paths के साथ locally exercise किया जा सकता है; इस manuscript में “पूरी तरह” को universal certification न माना जाए:
 - `npm run serve`: स्थानीय फंक्शन्स एमुलेटर प्रारंभ करता है।
 - `functions/test/canonical_reconciliation_emulator.js`: तीन-तरफ़ा canonical-source reconciliation fixture runner।
-- `functions/test/mission_lifecycle_emulator_roundtrip.js`: mission lifecycle round-trip runner।
+- `functions/test/mission_lifecycle_emulator_roundtrip.js` **[UNRESOLVED AT DEFAULT HEAD / historical reference]**: mission lifecycle round-trip runner।
 - `functions/src/test/realEmulatorE2EWorkerProof.test.ts`: real Firestore emulator worker proof tests।
 
 #### Subsection 8.2 — Production Deployment Command
@@ -636,3 +641,12 @@ flowchart TD
 9. **Mastery Progression:** Dart `KnowledgeEngine` local/in-memory progress maps और analytics refresh करता है; direct backend propagation इस trace में प्रमाणित नहीं है।
 10. **Risk / Coverage Mitigation:** client score authority को bypass करने का design इस helper में है, लेकिन callable auth boundary नहीं; AI budget accounting केवल `processAITask` के `budget_service` path से संबंधित है।
 11. **Audit Trail:** assessment path का explicit outbox event `evidence_outbox/{outbox_<attemptSessionId>}` है। `founder_activity_log`, `ai_failed_tasks` और universal Cloud Logging linkage को इस path पर verified नहीं कहा गया है।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/test/mission_lifecycle_emulator_roundtrip.js` | UNRESOLVED AT DEFAULT HEAD |

@@ -53,6 +53,10 @@ service-account.json
 # Visual QA Integration Screenshots
 /docs/patch_safety/
 
+# Generated book export binaries remain local deliverables, not source control.
+/docs/rankcrackers_book/Rank_Cracker_Book_Complete_Master.doc
+/docs/rankcrackers_book/Rank_Cracker_Book_Complete_Master.docx
+
 # Project-Local Scratch & Temporary Artifacts (AG-R4 Policy)
 .local/
 

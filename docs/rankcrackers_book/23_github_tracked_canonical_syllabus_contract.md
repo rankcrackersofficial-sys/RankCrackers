@@ -1,13 +1,18 @@
 # Chapter 23 — GitHub-Tracked Canonical Syllabus & Derived Decomposition Contract
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/23_github_tracked_canonical_syllabus_contract.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/23_github_tracked_canonical_syllabus_contract.md) · source blob `3e456cf4d7378f7749756c2b9065e862cae98954`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 **Volume:** B — Student Experience, Academic Authority & Learning Surface  
 **Part:** 5 — Official Syllabus Authority, Derived Decomposition & Knowledge Closure  
-**Source class:** REMOTE CANONICAL DOCUMENT — GitHub-tracked, not yet proven as local runtime implementation  
+**Source class:** DEFAULT-BRANCH TRACKED ARCHITECTURE CONTRACT — runtime implementation parity separately pending  
 **Editorial status:** SOURCE-REVIEWED / BOOK-INGESTED / IMPLEMENTATION PARITY PENDING  
 **Chief Author observation date:** 2026-10-10  
 **Repository:** [rankcrackersofficial-sys/RankCrackers](https://github.com/rankcrackersofficial-sys/RankCrackers)  
 **Tracked branch:** `safety/rc-g2-pre-notification-schema`  
-**Latest observed commit:** [bfee5c70814af5c2c2c3f3ba9fd9163361441d87](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/bfee5c70814af5c2c2c3f3ba9fd9163361441d87)  
+**Historical contract-change commit:** [bfee5c70814af5c2c2c3f3ba9fd9163361441d87](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/bfee5c70814af5c2c2c3f3ba9fd9163361441d87)  
 **Previous observed commit:** [b5ef867206d350db527e964c391fc324221752fd](https://github.com/rankcrackersofficial-sys/RankCrackers/commit/b5ef867206d350db527e964c391fc324221752fd)  
 **Tracked source path:** `docs/architecture/CANONICAL_SYLLABUS_AND_DERIVED_DECOMPOSITION_CONTRACT.md`
 
@@ -15,14 +20,14 @@
 
 ## 23.1 Chief Author tracking decision
 
-यह chapter GitHub पर उपलब्ध नवीनतम architecture document को book में traceable रूप से शामिल करता है। इसे local code की स्वतः-सिद्ध implementation नहीं माना जाएगा। Remote contract में वर्णित कोई भी rule तभी “live implementation” कहलाएगा जब वर्तमान checkout में उसका source symbol, schema, test evidence और runtime/readback proof अलग से मिल जाए।
+यह chapter GitHub default branch में tracked syllabus architecture contract को book में traceable रूप से शामिल करता है। इसे local code की स्वतः-सिद्ध implementation नहीं माना जाएगा। Remote contract में वर्णित कोई भी rule तभी “live implementation” कहलाएगा जब वर्तमान checkout में उसका source symbol, schema, test evidence और runtime/readback proof अलग से मिल जाए।
 
 Remote और local state का अंतर:
 
 | Evidence layer | Current finding | Book treatment |
 |---|---|---|
 | GitHub remote document | Latest head पर उपलब्ध | Canonical remote source के रूप में track |
-| Local checkout | `docs/architecture/` copy वर्तमान checkout में नहीं मिली | Remote-only / implementation parity pending |
+| Current GitHub default branch | Contract file exists at `5161592ddafb42f1ecc8923cc7b7b0309934cc83` | Default-tracked architecture; runtime parity remains separately pending |
 | Existing book chapters | Syllabus, DigiBook और assessment architecture पहले से documented | इस chapter से cross-reference और reconciliation आवश्यक |
 | Runtime implementation | इस chapter से स्वतः प्रमाणित नहीं | Source/test audit के बाद ही VERIFIED |
 | Google Docs | Full parity अलग gate है | इस chapter से synchronized नहीं माना जाएगा |
@@ -491,9 +496,9 @@ verifiedBy
 
 ---
 
-## 23.22 Tracked GitHub source — current remote text
+## 23.22 Current default branch contract payload
 
-The following source text is retained as the remote reference payload for audit comparison:
+The payload below is the exact default-branch contract text at the recorded HEAD. Historical provenance is retained above; runtime parity remains separately pending.
 
 # RankCrackers Canonical Syllabus & Derived Decomposition Contract
 
@@ -614,6 +619,7 @@ It should NOT be split merely to create artificial granularity.
 ## 8. Evidence versus decomposition
 
 External academic sources, standard references and official PYQs may help validate interpretation or discover likely decomposition candidates, but they do not change the official syllabus boundary.
+
 PYQ presence can support relevance **within** an official boundary. PYQ absence does not by itself remove an official syllabus concept.
 
 No unofficial source can promote a DERIVED node to OFFICIAL.
@@ -733,6 +739,7 @@ Founder/qualified human exception:
 ## 18. Fail-closed rules
 
 The system MUST fail closed when required authority is absent, invalid, superseded, ambiguous beyond tolerance or not verified.
+
 It MUST NOT infer authority from:
 - publication status;
 - readiness flags;
@@ -852,6 +859,7 @@ is not further syllabus decomposition; it is teaching-content structure.
 **Boundary law:** when the next useful split changes from "what concept is this?" to "how do we teach/explain/practise this concept?", DSD MUST stop and Pedagogy/DigiBook takes over.
 
 ## 25. Decomposition Stop Test (DST)
+
 There is no fixed maximum number of children, atoms or hierarchy depth. Termination is semantic and functional.
 
 A proposed child set MUST pass all mandatory gates:
@@ -972,6 +980,7 @@ A single exceptional question is evidence of examination behavior, not automatic
 Repeated official evidence may trigger a boundary review. Any actual scope/profile change remains versioned, attributable and revalidated downstream.
 
 ## 30. No Untaught Knowledge Dependency / Question Knowledge Closure
+
 A production assessment item MUST NOT require substantive factual or conceptual knowledge that is outside the applicable verified and taught mission boundary.
 
 Each question SHOULD bind to the knowledge atoms materially required to solve it:
@@ -1111,6 +1120,7 @@ DSD MUST NOT silently mutate when:
 - a reference standard changes;
 - a previous ambiguity is resolved;
 - an atom is found too broad or too narrow.
+
 Changes create a new version or explicit supersession relationship. Impact analysis must reach DigiBook/material, teaching execution, taught authority, questions and publication readiness.
 
 ## 35. Required failure taxonomy

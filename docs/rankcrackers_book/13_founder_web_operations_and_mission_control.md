@@ -1,5 +1,10 @@
 # Volume C — Founder Web Operations
 
+**Current acceptance:** working reference; path existence does not certify runtime behavior, production state or passing tests. Historical code excerpts and line ranges require SHA-specific readback before implementation use.
+
+**GitHub source snapshot:** [`docs/rankcrackers_book/13_founder_web_operations_and_mission_control.md`](https://github.com/rankcrackersofficial-sys/RankCrackers/blob/5161592ddafb42f1ecc8923cc7b7b0309934cc83/docs/rankcrackers_book/13_founder_web_operations_and_mission_control.md) · source blob `88a544e3caf7e8a87b4edb6707d3e270206d50bf`. This Drive edition contains editorial corrections; it is not a claim that those corrections were committed to GitHub. See `github_source_manifest.json` and the current reconciliation register.
+
+
 ## Part 1 — Administrative Command Surface, Mission Control & Sovereign Governance
 
 ### Chapter 13 — Founder Operational Architecture, Multi-Panel Control Grid, Ingestion Pipeline और System Health Telemetry
@@ -899,13 +904,13 @@ Chief Author Mandate के तहत Founder Web Operations & Mission Control �
 
 #### Subsection 11.6 — `manageUserAccess`
 - **Source File & Location:** `functions/callable/manage_access.js` (Lines 10–80), exported by `functions/index.js` (Lines 11–26)
-- **Status:** `VERIFIED` live callable; पुराने `functions/src/founder/admin_claims.ts` का replacement।
+- **Status:** `VERIFIED` live callable; पुराने `functions/src/founder/admin_claims.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** का replacement।
 - **Inputs/Outputs:** data में `targetUid`, `role`, `action`; success response और `HttpsError` branches code से पढ़े जाएँ।
 - **Security:** `context.auth`, founder/admin claims और `ensureFounderClaims` checks।
 
 #### Subsection 11.7 — `handleSentinelAction` purge branch
 - **Source File & Location:** `functions/callable/handle_sentinel_action.js` (Lines 164–222)
-- **Status:** `CORRECTED`; अलग `functions/src/founder/forensic_purge.ts` file वर्तमान repository में नहीं है।
+- **Status:** `CORRECTED`; अलग `functions/src/founder/forensic_purge.ts` **[UNRESOLVED AT DEFAULT HEAD / historical reference]** file वर्तमान repository में नहीं है।
 - **Inputs/Mutation:** live action string `purge_historical_test_data` branch और its payload validation को code के अनुसार document किया जाए; confirmation-passphrase contract प्रमाणित नहीं है।
 - **Evidence boundary:** purge को generic “forensic purge service” नहीं कहा जाएगा; current evidence केवल this callable branch और its audit calls तक सीमित है।
 
@@ -987,3 +992,14 @@ flowchart TD
 11. **Audit Trail:**
     - `founder_activity_log` में प्रत्येक अनुमोदन, विलोपन और कॉन्फ़िगरेशन परिवर्तन का स्थायी अंकन।
     - Admin SDK और Cloud Functions निष्पादन लॉग्स।
+
+
+## Current source reference exceptions
+
+These exact paths are absent from the pinned default-branch tree. Existing contract claims or old line ranges referring to them are historical/unresolved, not current verified implementation. No replacement symbol is inferred.
+
+| Absent repository path | Current classification |
+|---|---|
+| `functions/src/founder/admin_claims.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `functions/src/founder/forensic_purge.ts` | UNRESOLVED AT DEFAULT HEAD |
+| `lib/web/web_shell.dart` | UNRESOLVED AT DEFAULT HEAD |
