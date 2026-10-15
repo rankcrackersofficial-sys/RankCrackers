@@ -94,7 +94,45 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Future<void> _saveMissionSelection(Recruitment recruitment) async {
-    // 1. Update local cache immediately so synchronous router & state can read it
+    // 1. Authoritative server persistence to users/{uid} FIRST (fail-closed before local cache mutation)
+    if (widget.serverSelectionSaverForTest != null) {
+      final user = FirebaseAuth.instance.currentUser;
+      final uid = user?.uid ?? 'test_uid';
+      await widget.serverSelectionSaverForTest!(
+        uid,
+        {
+          'selectedExam': recruitment.examId,
+          'selectedExamId': recruitment.examId,
+          'selectedExamName': recruitment.title,
+          'selectedBoardId': recruitment.boardId,
+          'selectedRecruitmentId': recruitment.id,
+          'selectedVariantId': recruitment.variantCode,
+          'selectedBlueprintId': recruitment.examBlueprintId,
+          'updatedAt': FieldValue.serverTimestamp(),
+        },
+      );
+    } else if (!SessionManager.disableFirebaseForTest) {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        throw StateError('User must be authenticated to select a mission');
+      }
+      await FirestoreService.saveUserProfile(
+        uid: user.uid,
+        profileData: {
+          'selectedExam': recruitment.examId,
+          'selectedExamId': recruitment.examId,
+          'selectedExamName': recruitment.title,
+          'selectedBoardId': recruitment.boardId,
+          'selectedRecruitmentId': recruitment.id,
+          'selectedVariantId': recruitment.variantCode,
+          'selectedBlueprintId': recruitment.examBlueprintId,
+          'updatedAt': FieldValue.serverTimestamp(),
+        },
+      ).timeout(const Duration(seconds: 4));
+      debugPrint('MISSION SELECTION SERVER PERSIST SUCCESS: ${recruitment.examId}');
+    }
+
+    // 2. Only AFTER server confirmation succeeds, update local cache
     await SessionManager.saveMissionIdentity(
       examId: recruitment.examId,
       examName: recruitment.title,
@@ -107,31 +145,6 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     await SessionManager.saveStudentState(selectedState, stateCode: selectedStateCode);
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('user_state', selectedState);
-
-    // 2. Authoritative server persistence to users/{uid} (with fail-safe timeout)
-    if (!SessionManager.disableFirebaseForTest) {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user != null) {
-        try {
-          await FirestoreService.saveUserProfile(
-            uid: user.uid,
-            profileData: {
-              'selectedExam': recruitment.examId,
-              'selectedExamId': recruitment.examId,
-              'selectedExamName': recruitment.title,
-              'selectedBoardId': recruitment.boardId,
-              'selectedRecruitmentId': recruitment.id,
-              'selectedVariantId': recruitment.variantCode,
-              'selectedBlueprintId': recruitment.examBlueprintId,
-              'updatedAt': FieldValue.serverTimestamp(),
-            },
-          ).timeout(const Duration(seconds: 4));
-          debugPrint('MISSION SELECTION SERVER PERSIST SUCCESS: ${recruitment.examId}');
-        } catch (e) {
-          debugPrint('MISSION SELECTION SERVER PERSIST WARN (offline/timeout): $e');
-        }
-      }
-    }
   }
 
   void _searchStates(String query) {
@@ -176,14 +189,14 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     setState(() => _isLoading = true);
 
     try {
-      // 1. Authoritatively register this mission in the accessible catalog snapshot
+      // 1. Authoritative server confirmation FIRST, followed by local cache persistence
+      await _saveMissionSelection(recruitment);
+
+      // 2. Authoritatively register this mission in the accessible catalog snapshot
       SessionManager.registerAccessibleMissions(
         [recruitment.examId],
         source: 'MISSION_REALM_START',
       );
-
-      // 2. Persist mission identity
-      await _saveMissionSelection(recruitment);
 
       // 3. Invalidate sessionUserProvider to propagate state change
       ref.invalidate(sessionUserProvider);
@@ -198,19 +211,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       );
 
       if (!mounted) return;
-      if (isSmart) {
-        context.push(
-          AppRoutes.diagnosticTest,
-          extra: {
-            'exam': recruitment.examId,
-            'examName': recruitment.title,
-            'variant': recruitment.variantCode,
-            'state': recruitment.state,
-          },
-        );
-      } else {
-        context.go(AppRoutes.dashboard);
-      }
+      // Single canonical entry navigates to Dashboard; Diagnostic remains unavailable.
+      context.go(AppRoutes.dashboard);
     } catch (e) {
       debugPrint('MISSION REALM ERROR: $e');
       if (mounted) _showMissionStartError();
