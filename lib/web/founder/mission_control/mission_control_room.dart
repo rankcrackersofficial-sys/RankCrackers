@@ -8,18 +8,16 @@ import 'mission_publish_readiness_panel.dart';
 
 import '../../shared/unified_command_console.dart';
 
-typedef MissionListBuilderForTest =
-    Widget Function(
-      BuildContext context,
-      ValueChanged<String> onMissionSelected,
-    );
-typedef MissionDetailBuilderForTest =
-    Widget Function(
-      BuildContext context,
-      String missionId,
-      VoidCallback onBack,
-      VoidCallback onOpenVariables,
-    );
+typedef MissionListBuilderForTest = Widget Function(
+  BuildContext context,
+  ValueChanged<String> onMissionSelected,
+);
+typedef MissionDetailBuilderForTest = Widget Function(
+  BuildContext context,
+  String missionId,
+  VoidCallback onBack,
+  VoidCallback onOpenVariables,
+);
 
 class MissionControlRoom extends StatefulWidget {
   static String? selectedMissionId;
@@ -31,14 +29,13 @@ class MissionControlRoom extends StatefulWidget {
   final String? taskId;
   final MissionListBuilderForTest? missionListBuilderForTest;
   final MissionDetailBuilderForTest? missionDetailBuilderForTest;
-  const MissionControlRoom({
-    super.key,
-    this.roleMode = ConsoleRoleMode.founder,
-    this.permissions,
-    this.taskId,
-    this.missionListBuilderForTest,
-    this.missionDetailBuilderForTest,
-  });
+  const MissionControlRoom(
+      {super.key,
+      this.roleMode = ConsoleRoleMode.founder,
+      this.permissions,
+      this.taskId,
+      this.missionListBuilderForTest,
+      this.missionDetailBuilderForTest});
 
   @override
   State<MissionControlRoom> createState() => _MissionControlRoomState();
@@ -69,8 +66,8 @@ class _MissionControlRoomState extends State<MissionControlRoom> {
           initialSubTab: MissionControlRoom.targetSubTab == 1
               ? 3
               : MissionControlRoom.targetSubTab == 2
-              ? 4
-              : 2,
+                  ? 4
+                  : 2,
         ),
       );
     }
@@ -89,8 +86,8 @@ class _MissionControlRoomState extends State<MissionControlRoom> {
             onBack: () => setState(() => _showVariables = false),
           ),
           Expanded(
-            child: MissionVariableAuthorityPanel(initialMissionId: missionId),
-          ),
+              child:
+                  MissionVariableAuthorityPanel(initialMissionId: missionId)),
         ],
       );
     }
@@ -155,6 +152,8 @@ class _SelectedMissionDetail extends StatelessWidget {
     return FutureBuilder<List<dynamic>>(
       future: Future.wait<dynamic>([
         firestore.collection('mission_realms').doc(missionId).get(),
+        firestore.collection('recruitments').doc(missionId).get(),
+        firestore.collection('student_mission_catalog').doc(missionId).get(),
         firestore
             .collection('mission_realms')
             .doc(missionId)
@@ -164,35 +163,38 @@ class _SelectedMissionDetail extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Center(
-            child: Text('Mission detail unavailable: ${snapshot.error}'),
-          );
+              child: Text('Mission detail unavailable: ${snapshot.error}'));
         }
         if (!snapshot.hasData) {
           return const Center(child: CircularProgressIndicator());
         }
         final realm =
             snapshot.data![0] as DocumentSnapshot<Map<String, dynamic>>;
+        final recruitment =
+            snapshot.data![1] as DocumentSnapshot<Map<String, dynamic>>;
+        final catalog =
+            snapshot.data![2] as DocumentSnapshot<Map<String, dynamic>>;
         final documents =
-            snapshot.data![1] as QuerySnapshot<Map<String, dynamic>>;
+            snapshot.data![3] as QuerySnapshot<Map<String, dynamic>>;
         final realmData = realm.data() ?? const <String, dynamic>{};
-        final name =
-            (realmData['displayName'] ??
-                    realmData['displayTitle'] ??
-                    realmData['title'] ??
-                    realmData['exam_name'] ??
-                    realmData['recruitment_name'] ??
-                    missionId)
-                .toString();
-        final visibility = realmData['visibilityGate'] is Map
-            ? Map<String, dynamic>.from(realmData['visibilityGate'] as Map)
-            : const <String, dynamic>{};
-        final studentVisible =
-            (realmData['cardVisible'] == true ||
-                realmData['userPanelVisible'] == true ||
-                visibility['studentVisible'] == true ||
-                visibility['userPanelVisible'] == true) &&
-            realmData['archived'] != true;
-        final status = (realmData['status'] ?? 'UNKNOWN')
+        final recruitmentData = recruitment.data() ?? const <String, dynamic>{};
+        final catalogData = catalog.data() ?? const <String, dynamic>{};
+        final name = (catalogData['displayName'] ??
+                catalogData['title'] ??
+                recruitmentData['title'] ??
+                recruitmentData['recruitment_name'] ??
+                realmData['exam_name'] ??
+                realmData['recruitment_name'] ??
+                missionId)
+            .toString();
+        final studentVisible = catalog.exists &&
+            catalogData['cardVisible'] == true &&
+            catalogData['userPanelVisible'] == true &&
+            catalogData['archived'] != true;
+        final status = (realmData['status'] ??
+                catalogData['studentPublicationState'] ??
+                recruitmentData['status'] ??
+                'UNKNOWN')
             .toString()
             .toUpperCase();
         return ListView(
@@ -205,23 +207,20 @@ class _SelectedMissionDetail extends StatelessWidget {
               runSpacing: 12,
               children: [
                 _DetailFact(
-                  'STUDENT VISIBILITY',
-                  studentVisible ? 'STUDENT LIVE' : 'NOT LIVE FOR STUDENTS',
-                  studentVisible,
-                ),
+                    'STUDENT VISIBILITY',
+                    studentVisible ? 'STUDENT LIVE' : 'NOT LIVE FOR STUDENTS',
+                    studentVisible),
                 _DetailFact('LIFECYCLE', status, realm.exists),
                 _DetailFact(
-                  'MISSION AUTHORITY',
-                  realm.exists ? 'COMPLETE' : 'REPAIR REQUIRED',
-                  realm.exists,
-                ),
+                    'MISSION AUTHORITY',
+                    realm.exists ? 'COMPLETE' : 'REPAIR REQUIRED',
+                    realm.exists),
                 _DetailFact(
-                  'SOURCE DOCUMENT',
-                  documents.docs.isEmpty
-                      ? 'NO SOURCE DOCUMENT'
-                      : '${documents.size} CONNECTED',
-                  documents.docs.isNotEmpty,
-                ),
+                    'SOURCE DOCUMENT',
+                    documents.docs.isEmpty
+                        ? 'NO SOURCE DOCUMENT'
+                        : '${documents.size} CONNECTED',
+                    documents.docs.isNotEmpty),
               ],
             ),
             if (!realm.exists) ...[
@@ -231,53 +230,39 @@ class _SelectedMissionDetail extends StatelessWidget {
                   leading: Icon(Icons.lock_outline, color: Colors.orangeAccent),
                   title: Text('MISSION ACTIONS LOCKED'),
                   subtitle: Text(
-                    'Founder authority must be repaired before lifecycle or variable changes.',
-                  ),
+                      'Founder authority must be repaired before lifecycle or variable changes.'),
                 ),
               ),
             ],
             const SizedBox(height: 12),
             Card(
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
-                ),
-                child: Row(
-                  children: [
-                    const Text(
-                      'NEXT ACTION',
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Row(children: [
+                  const Text('NEXT ACTION',
                       style: TextStyle(
-                        fontSize: 9,
-                        color: Colors.white54,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
+                          fontSize: 9,
+                          color: Colors.white54,
+                          fontWeight: FontWeight.bold)),
+                  const SizedBox(width: 14),
+                  Expanded(
                       child: Text(
-                        !realm.exists
-                            ? 'REPAIR FOUNDER AUTHORITY'
-                            : documents.docs.isEmpty
+                    !realm.exists
+                        ? 'REPAIR FOUNDER AUTHORITY'
+                        : documents.docs.isEmpty
                             ? 'UPLOAD SOURCE DOCUMENT'
                             : 'REVIEW PUBLISH READINESS',
-                        style: const TextStyle(
-                          color: Color(0xFFE8C766),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Text(
+                    style: const TextStyle(
+                        color: Color(0xFFE8C766), fontWeight: FontWeight.bold),
+                  )),
+                  Text(
                       documents.docs.isEmpty
                           ? 'SOURCE → INGESTION → VERIFICATION'
                           : 'SOURCE CONNECTED',
-                      style: const TextStyle(
-                        fontSize: 9,
-                        color: Colors.white38,
-                      ),
-                    ),
-                  ],
-                ),
+                      style:
+                          const TextStyle(fontSize: 9, color: Colors.white38)),
+                ]),
               ),
             ),
             const SizedBox(height: 14),
@@ -308,11 +293,9 @@ class _SelectedMissionDetail extends StatelessWidget {
                 OutlinedButton.icon(
                   onPressed: null,
                   icon: const Icon(Icons.archive_outlined),
-                  label: Text(
-                    realm.exists
-                        ? 'LIFECYCLE ACTIONS GOVERNED'
-                        : 'LIFECYCLE DISABLED',
-                  ),
+                  label: Text(realm.exists
+                      ? 'LIFECYCLE ACTIONS GOVERNED'
+                      : 'LIFECYCLE DISABLED'),
                 ),
               ],
             ),
@@ -324,38 +307,33 @@ class _SelectedMissionDetail extends StatelessWidget {
 }
 
 class _DetailHeader extends StatelessWidget {
-  const _DetailHeader({
-    required this.title,
-    required this.missionId,
-    required this.onBack,
-  });
+  const _DetailHeader(
+      {required this.title, required this.missionId, required this.onBack});
   final String title;
   final String missionId;
   final VoidCallback onBack;
 
   @override
   Widget build(BuildContext context) => Row(
-    children: [
-      IconButton(
-        onPressed: onBack,
-        tooltip: 'Back to Mission Control',
-        icon: const Icon(Icons.arrow_back),
-      ),
-      const SizedBox(width: 8),
-      Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title, style: Theme.of(context).textTheme.headlineSmall),
-            SelectableText(
-              missionId,
-              style: const TextStyle(color: Colors.white54, fontSize: 11),
+        children: [
+          IconButton(
+              onPressed: onBack,
+              tooltip: 'Back to Mission Control',
+              icon: const Icon(Icons.arrow_back)),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: Theme.of(context).textTheme.headlineSmall),
+                SelectableText(missionId,
+                    style:
+                        const TextStyle(color: Colors.white54, fontSize: 11)),
+              ],
             ),
-          ],
-        ),
-      ),
-    ],
-  );
+          ),
+        ],
+      );
 }
 
 class _DetailFact extends StatelessWidget {
@@ -366,34 +344,28 @@ class _DetailFact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-    width: 260,
-    child: Card(
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              label,
-              style: const TextStyle(
-                fontSize: 9,
-                color: Colors.white54,
-                fontWeight: FontWeight.bold,
-              ),
+        width: 260,
+        child: Card(
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(label,
+                    style: const TextStyle(
+                        fontSize: 9,
+                        color: Colors.white54,
+                        fontWeight: FontWeight.bold)),
+                const SizedBox(height: 8),
+                Text(value,
+                    style: TextStyle(
+                        color: ok ? Colors.greenAccent : Colors.orangeAccent,
+                        fontWeight: FontWeight.bold)),
+              ],
             ),
-            const SizedBox(height: 8),
-            Text(
-              value,
-              style: TextStyle(
-                color: ok ? Colors.greenAccent : Colors.orangeAccent,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+          ),
         ),
-      ),
-    ),
-  );
+      );
 }
 
 class _MissionBoundTarget extends StatelessWidget {
@@ -407,6 +379,14 @@ class _MissionBoundTarget extends StatelessWidget {
     return FutureBuilder<List<DocumentSnapshot<Map<String, dynamic>>>>(
       future: Future.wait([
         FirebaseFirestore.instance
+            .collection('student_mission_catalog')
+            .doc(missionId)
+            .get(),
+        FirebaseFirestore.instance
+            .collection('recruitments')
+            .doc(missionId)
+            .get(),
+        FirebaseFirestore.instance
             .collection('mission_realms')
             .doc(missionId)
             .get(),
@@ -414,17 +394,16 @@ class _MissionBoundTarget extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasError)
           return Center(
-            child: Text('Mission context unavailable: ${snapshot.error}'),
-          );
+              child: Text('Mission context unavailable: ${snapshot.error}'));
         if (!snapshot.hasData)
           return const Center(child: CircularProgressIndicator());
         final mission = <String, dynamic>{};
-        final doc = snapshot.data!.first;
-        if (doc.exists) mission.addAll(doc.data() ?? const {});
+        for (final doc in snapshot.data!) {
+          if (doc.exists) mission.addAll(doc.data() ?? const {});
+        }
         if (mission.isEmpty)
           return Center(
-            child: Text('No canonical mission data found for $missionId.'),
-          );
+              child: Text('No canonical mission data found for $missionId.'));
         return builder(mission);
       },
     );

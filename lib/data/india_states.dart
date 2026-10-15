@@ -1,4 +1,19 @@
 class IndiaStates {
+  static const List<String> states = [
+    'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
+    'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand',
+    'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur',
+    'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan',
+    'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh',
+    'Uttarakhand', 'West Bengal',
+  ];
+
+  static const List<String> unionTerritories = [
+    'Andaman and Nicobar Islands', 'Chandigarh',
+    'Dadra and Nagar Haveli and Daman and Diu', 'Delhi',
+    'Jammu and Kashmir', 'Ladakh', 'Lakshadweep', 'Puducherry',
+  ];
+
   static const List<String> statesAndUTs = [
 
     // STATES
@@ -158,4 +173,12 @@ class IndiaStates {
         .toList();
     return [...startsWith, ...contains];
   }
+
+  static String? getDisplayName(String? stateCode) => getStateName(stateCode);
+
+  static bool isStateCode(String? stateCode) =>
+      stateCode != null && states.contains(getStateName(stateCode));
+
+  static bool isUnionTerritoryCode(String? stateCode) =>
+      stateCode != null && unionTerritories.contains(getStateName(stateCode));
 }

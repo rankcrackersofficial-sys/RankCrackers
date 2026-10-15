@@ -1,23 +1,17 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:rank_crackers/web/shared/rc_colors.dart';
-import 'package:rank_crackers/web/shared/rc_panel.dart';
-import 'package:rank_crackers/web/shared/rc_layout.dart';
-import 'package:rank_crackers/web/shared/rc_loaders.dart';
-
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
+
+import '../founder/access/access_security_web.dart';
+import '../founder/activity/recent_activity_web.dart';
+import '../founder/fdc/document_command_center.dart';
+import '../founder/health/founder_student_health_web.dart';
 import '../founder/mission_control/mission_control_room.dart';
 import '../founder/mission_control/mission_publish_readiness_panel.dart';
-import '../founder/study_master/study_master_library_web.dart';
-import '../founder/intelligence/intelligence_room_web.dart';
-import '../founder/activity/recent_activity_web.dart';
 import '../founder/system/founder_system_operations_web.dart';
-import '../founder/health/founder_student_health_web.dart';
-import '../founder/access/access_security_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
 import '../admin/admin_my_access_panel.dart';
-
-import '../founder/fdc/document_command_center.dart';
 
 enum ConsoleRoleMode {
   founder,
@@ -52,7 +46,6 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   void initState() {
     super.initState();
     _activeTaskId = widget.initialTaskId;
-    // For admin, landing should be Work Queue (index 0 in filtered list)
   }
 
   @override
@@ -61,54 +54,253 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
     if (_subTab >= modules.length) _subTab = 0;
 
     final currentModule = modules[_subTab];
-    final currentGroup = currentModule.group;
-    final groupedModules =
-        modules.where((module) => module.group == currentGroup).toList();
+    final double screenWidth = MediaQuery.of(context).size.width;
+
+    final bool showLeftSidebar = screenWidth >= 900;
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(102),
-        child: Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF050A10),
-            border: Border(bottom: BorderSide(color: rcLine)),
+      backgroundColor: FounderLightTheme.bg,
+      drawer: !showLeftSidebar ? Drawer(child: _buildLeftSidebar(modules)) : null,
+      body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // LEFT NAVIGATION SIDEBAR
+          if (showLeftSidebar)
+            SizedBox(
+              width: 240,
+              child: _buildLeftSidebar(modules),
+            ),
+
+          // MAIN WORKSPACE AREA
+          Expanded(
+            child: Column(
+              children: [
+                // TOP OPERATIONAL HEADER BAR
+                _buildTopOperationalHeader(context, currentModule, showLeftSidebar),
+
+                // ACTIVE MODULE CONTENT WORKSPACE
+                Expanded(
+                  child: IndexedStack(
+                    index: _subTab,
+                    children: modules.map((m) => m.builder(context)).toList(),
+                  ),
+                ),
+              ],
+            ),
           ),
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 42,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: _moduleGroups
-                              .map((group) =>
-                                  _groupButton(group, currentGroup, modules))
-                              .toList(),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // LEFT NAVIGATION SIDEBAR
+  // ===========================================================================
+  Widget _buildLeftSidebar(List<_ConsoleModule> modules) {
+    return Container(
+      decoration: const BoxDecoration(
+        color: FounderLightTheme.surface,
+        border: Border(right: BorderSide(color: FounderLightTheme.border)),
+      ),
+      child: Column(
+        children: [
+          // Top Branding Box
+          Container(
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+            decoration: const BoxDecoration(
+              border: Border(bottom: BorderSide(color: FounderLightTheme.border)),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: FounderLightTheme.primaryDark,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Icon(
+                    Icons.auto_awesome_rounded,
+                    color: FounderLightTheme.gold,
+                    size: 20,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'RankCrackers',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w800,
+                          color: FounderLightTheme.textPrimary,
+                          letterSpacing: -0.5,
                         ),
                       ),
-                    ),
-                    if (MediaQuery.sizeOf(context).width >= 1180) ...[
-                      const SizedBox(width: 16),
-                      _buildIdentityHeader(),
+                      Text(
+                        'Build Today, A Better Tomorrow',
+                        style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.w500,
+                          color: FounderLightTheme.textMuted,
+                        ),
+                      ),
                     ],
-                  ],
+                  ),
                 ),
+              ],
+            ),
+          ),
+
+          // Grouped Navigation Links List
+          Expanded(
+            child: ListView(
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+              children: [
+                _buildNavGroupHeader('OPERATIONS'),
+                _buildNavItem(modules, 'Mission Control', Icons.explore_outlined),
+                if (widget.founderDeliveryPreviewBuilder != null)
+                  _buildNavItem(modules, 'Mission Delivery Preview', Icons.visibility_outlined),
+
+                const SizedBox(height: 16),
+                _buildNavGroupHeader('CONTENT PIPELINE'),
+                _buildNavItem(modules, 'Document Command Center', Icons.description_outlined),
+                _buildNavItem(modules, 'Verification Center', Icons.verified_user_outlined),
+                _buildNavItem(modules, 'Factory Hub', Icons.settings_suggest_outlined),
+                _buildNavItem(modules, 'Publish Gate', Icons.publish_outlined),
+
+                const SizedBox(height: 16),
+                _buildNavGroupHeader('STUDENT & SYSTEM'),
+                _buildNavItem(modules, 'Student Delivery Health', Icons.visibility_outlined),
+                _buildNavItem(modules, 'Admin Governance', Icons.people_outline_rounded),
+                _buildNavItem(modules, 'System Ops / Dev Mode', Icons.computer_outlined),
+
+                if (widget.roleMode == ConsoleRoleMode.admin) ...[
+                  const SizedBox(height: 16),
+                  _buildNavGroupHeader('ADMIN WORK'),
+                  _buildNavItem(modules, 'My Work Queue', Icons.assignment_outlined),
+                  _buildNavItem(modules, 'Mission Control Room', Icons.explore_outlined),
+                  _buildNavItem(modules, 'Study Master Library', Icons.menu_book_outlined),
+                  _buildNavItem(modules, 'Intelligence Room', Icons.lightbulb_outline_rounded),
+                  _buildNavItem(modules, 'Recent Activity Log', Icons.history_rounded),
+                  _buildNavItem(modules, 'My Access', Icons.shield_outlined),
+                ],
+              ],
+            ),
+          ),
+
+          // Bottom Branding Panel
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              border: Border(top: BorderSide(color: FounderLightTheme.border)),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: FounderLightTheme.surfaceAlt,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: FounderLightTheme.border),
               ),
-              SizedBox(
-                height: 54,
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: groupedModules
-                        .map((module) => _subTabButton(
-                            module.label, modules.indexOf(module)))
-                        .toList(),
+              child: const Row(
+                children: [
+                  Icon(Icons.shield_outlined,
+                      size: 18, color: FounderLightTheme.gold),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Founder Panel v2.0',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w800,
+                            color: FounderLightTheme.primaryDark,
+                          ),
+                        ),
+                        Text(
+                          'Build · Govern · Grow 🇮🇳',
+                          style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.w600,
+                            color: FounderLightTheme.textMuted,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildNavGroupHeader(String label) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(12, 8, 12, 6),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 9,
+          fontWeight: FontWeight.w800,
+          color: FounderLightTheme.textMuted,
+          letterSpacing: 1.0,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildNavItem(
+    List<_ConsoleModule> modules,
+    String label,
+    IconData icon,
+  ) {
+    final int index = modules.indexWhere((m) => m.label == label);
+    if (index < 0) return const SizedBox.shrink();
+
+    final bool isSelected = _subTab == index;
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 2),
+      child: InkWell(
+        onTap: () {
+          setState(() {
+            _subTab = index;
+          });
+        },
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+          decoration: BoxDecoration(
+            color: isSelected
+                ? FounderLightTheme.primaryDark
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                size: 18,
+                color: isSelected
+                    ? Colors.white
+                    : FounderLightTheme.textSecondary,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+                    color: isSelected
+                        ? Colors.white
+                        : FounderLightTheme.textPrimary,
                   ),
                 ),
               ),
@@ -116,13 +308,150 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           ),
         ),
       ),
-      body: IndexedStack(
-        index: _subTab,
-        children: modules.map((m) => m.builder(context)).toList(),
+    );
+  }
+
+  // ===========================================================================
+  // TOP OPERATIONAL HEADER BAR
+  // ===========================================================================
+  Widget _buildTopOperationalHeader(
+    BuildContext context,
+    _ConsoleModule currentModule,
+    bool showLeftSidebar,
+  ) {
+    final isFounder = widget.roleMode == ConsoleRoleMode.founder;
+    final String name = (widget.userDoc['name'] ??
+            widget.userDoc['displayName'] ??
+            widget.userDoc['email'] ??
+            (isFounder ? 'Founder' : 'Administrator'))
+        .toString();
+    final String designation = (widget.userDoc['designation'] ??
+            (isFounder ? 'Founder' : 'Administrator'))
+        .toString();
+
+    return Container(
+      height: 64,
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      decoration: const BoxDecoration(
+        color: FounderLightTheme.surface,
+        border: Border(bottom: BorderSide(color: FounderLightTheme.border)),
+      ),
+      child: Row(
+        children: [
+          if (!showLeftSidebar)
+            IconButton(
+              icon: const Icon(Icons.menu_rounded, color: FounderLightTheme.primaryDark),
+              onPressed: () => Scaffold.of(context).openDrawer(),
+              tooltip: 'Open navigation',
+            ),
+
+          // Operational Module Breadcrumb
+          Row(
+            children: [
+              const Text(
+                'FOUNDER OPERATIONS CONSOLE',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w800,
+                  color: FounderLightTheme.textMuted,
+                  letterSpacing: 0.8,
+                ),
+              ),
+              const SizedBox(width: 8),
+              const Text(
+                '·',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                  color: FounderLightTheme.textMuted,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                currentModule.label.toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w800,
+                  color: FounderLightTheme.primaryDark,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ],
+          ),
+
+          const Spacer(),
+
+          // Governed Badge
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            decoration: BoxDecoration(
+              color: FounderLightTheme.surfaceAlt,
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(color: FounderLightTheme.border),
+            ),
+            child: const Text(
+              'GOVERNED CONSOLE',
+              style: TextStyle(
+                fontSize: 9,
+                fontWeight: FontWeight.w800,
+                color: FounderLightTheme.textMuted,
+                letterSpacing: 0.5,
+              ),
+            ),
+          ),
+
+          const SizedBox(width: 16),
+          const VerticalDivider(width: 1, indent: 18, endIndent: 18, color: FounderLightTheme.border),
+          const SizedBox(width: 16),
+
+          // User Identity Card
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 16,
+                backgroundColor: FounderLightTheme.primaryDark,
+                child: Text(
+                  name.substring(0, min(2, name.length)).toUpperCase(),
+                  style: const TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    name,
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      color: FounderLightTheme.textPrimary,
+                    ),
+                  ),
+                  Text(
+                    designation,
+                    style: const TextStyle(
+                      fontSize: 9,
+                      fontWeight: FontWeight.w600,
+                      color: FounderLightTheme.gold,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
 
+  // ===========================================================================
+  // MODULE REGISTRY FILTER
+  // ===========================================================================
   List<_ConsoleModule> _getFilteredModules() {
     final isFounder = widget.roleMode == ConsoleRoleMode.founder;
     final perms = widget.permissions;
@@ -169,14 +498,12 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           label: 'System Ops / Dev Mode',
           builder: (_) => const FounderSystemOperationsWeb()));
     } else {
-      // Admin Mode - Dynamic filtering using central resolver
       list.add(_ConsoleModule(
           label: 'My Work Queue',
           builder: (_) => AdminTasksList(
                 onOpenTask: (taskId, taskType, missionId) {
                   setState(() {
                     _activeTaskId = taskId;
-                    // Map taskType to subTab
                     if (taskType == 'DOCUMENT_REVIEW' ||
                         taskType == 'OCR_REPROCESS_REVIEW') {
                       _subTab = _findModuleIndex('Document Command Center');
@@ -203,8 +530,11 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       if (AdminPermissionResolver.canSeeStudyMaster(perms)) {
         list.add(_ConsoleModule(
           label: 'Study Master Library',
-          builder: (_) =>
-              const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.admin),
+          builder: (_) => _PremiumLandingPage(
+            title: 'STUDY MASTER LIBRARY',
+            subtitle: 'Academic corpus library management.',
+            items: [],
+          ),
         ));
       }
       if (AdminPermissionResolver.canSeeIngestion(perms)) {
@@ -217,8 +547,11 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       if (AdminPermissionResolver.canSeeIntelligenceRoom(perms)) {
         list.add(_ConsoleModule(
           label: 'Intelligence Room',
-          builder: (_) =>
-              const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.admin),
+          builder: (_) => _PremiumLandingPage(
+            title: 'INTELLIGENCE ROOM',
+            subtitle: 'System intelligence and analytics hub.',
+            items: [],
+          ),
         ));
       }
       if (AdminPermissionResolver.canSeeRecentActivity(perms)) {
@@ -232,117 +565,12 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       list.add(_ConsoleModule(
           label: 'My Access',
           builder: (_) => AdminMyAccessPanel(
-            permissions: perms,
-            userDoc: widget.userDoc,
-          )));
+                permissions: widget.permissions,
+                userDoc: widget.userDoc,
+              )));
     }
 
     return list;
-  }
-
-  Widget _buildIdentityHeader() {
-    final isFounder = widget.roleMode == ConsoleRoleMode.founder;
-    final name = widget.userDoc['name'] ??
-        widget.userDoc['displayName'] ??
-        'Administrator';
-    final designation = widget.userDoc['designation'] ??
-        (isFounder ? 'Founder & CEO' : 'Administrator');
-
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
-          stream: FirebaseFirestore.instance
-              .collection('system_health_pings')
-              .doc('heartbeat')
-              .snapshots(),
-          builder: (context, snapshot) {
-            final hasData = snapshot.hasData && (snapshot.data?.exists ?? false);
-            Color statusColor;
-            String statusLabel;
-
-            if (!hasData) {
-              statusColor = Colors.white38;
-              statusLabel = 'AWAITING TELEMETRY';
-            } else {
-              final data = snapshot.data!.data() ?? {};
-              final statusStr = data['status']?.toString().toLowerCase();
-              final lastPingTimestamp = data['lastPing'] as Timestamp?;
-              final lastPingMillis = lastPingTimestamp?.millisecondsSinceEpoch ??
-                  (data['lastPingMillis'] as num?)?.toInt() ??
-                  (data['updatedAt'] as Timestamp?)?.millisecondsSinceEpoch;
-
-              if (statusStr == 'failed' || statusStr?.contains('fail') == true) {
-                statusColor = Colors.redAccent;
-                statusLabel = 'SYSTEM FAILED';
-              } else if (lastPingMillis == null) {
-                statusColor = Colors.white38;
-                statusLabel = 'AWAITING TELEMETRY';
-              } else {
-                final ageMillis = DateTime.now().millisecondsSinceEpoch - lastPingMillis;
-                const fiveMinutesMillis = 5 * 60 * 1000;
-                if (ageMillis < fiveMinutesMillis) {
-                  statusColor = rcGreen;
-                  statusLabel = 'SYSTEM ONLINE';
-                } else {
-                  statusColor = const Color(0xFFE5A93C);
-                  statusLabel = 'SYSTEM STALE';
-                }
-              }
-            }
-
-            return Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  width: 8,
-                  height: 8,
-                  decoration: BoxDecoration(
-                    color: statusColor,
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(color: statusColor, blurRadius: 4, spreadRadius: 1),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  statusLabel,
-                  style: TextStyle(
-                    color: statusColor,
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-              ],
-            );
-          },
-        ),
-        const SizedBox(width: 20),
-        const VerticalDivider(
-            width: 1, color: rcLine, indent: 16, endIndent: 16),
-        const SizedBox(width: 20),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              name.toString().toUpperCase(),
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 13,
-                  fontWeight: FontWeight.bold),
-            ),
-            Text(
-              designation.toString(),
-              style: TextStyle(
-                  color: rcGold, fontSize: 10, fontWeight: FontWeight.bold),
-            ),
-          ],
-        ),
-      ],
-    );
   }
 
   int _findModuleIndex(String label) {
@@ -371,10 +599,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab =
-                    1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab =
-                    1; // Syllabus Review (Direct) sub-tab
+                MissionControlRoom.targetDetailTab = 1;
+                MissionControlRoom.targetSubTab = 1;
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -393,10 +619,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab =
-                    1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab =
-                    2; // PYQ Review (Direct) sub-tab
+                MissionControlRoom.targetDetailTab = 1;
+                MissionControlRoom.targetSubTab = 2;
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -415,10 +639,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab =
-                    1; // Verification Center sub-hub
-                MissionControlRoom.targetSubTab =
-                    0; // AI Proposals / Review sub-tab
+                MissionControlRoom.targetDetailTab = 1;
+                MissionControlRoom.targetSubTab = 0;
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -435,7 +657,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       items: [
         _LandingItem(
           title: 'Crucible Planner',
-          subtitle: '98-Day mission schedule generation.',
+          subtitle: '100-Day mission schedule generation.',
           icon: Icons.calendar_month_rounded,
           onTap: () {
             if (MissionControlRoom.selectedMissionId == null) {
@@ -446,9 +668,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 2; // Factory Hub sub-hub
-                MissionControlRoom.targetSubTab =
-                    0; // Crucible Plan Review sub-tab
+                MissionControlRoom.targetDetailTab = 2;
+                MissionControlRoom.targetSubTab = 0;
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -467,8 +688,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 2; // Factory Hub sub-hub
-                MissionControlRoom.targetSubTab = 1; // DigiBook Review sub-tab
+                MissionControlRoom.targetDetailTab = 2;
+                MissionControlRoom.targetSubTab = 1;
                 _subTab = _findModuleIndex('Mission Control');
               });
             }
@@ -501,7 +722,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 3; // Publish Gate sub-hub
+                MissionControlRoom.targetDetailTab = 3;
                 MissionControlRoom.targetSubTab = 0;
                 _subTab = _findModuleIndex('Mission Control');
               });
@@ -521,7 +742,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               );
             } else {
               setState(() {
-                MissionControlRoom.targetDetailTab = 3; // Publish Gate sub-hub
+                MissionControlRoom.targetDetailTab = 3;
                 MissionControlRoom.targetSubTab = 0;
                 _subTab = _findModuleIndex('Mission Control');
               });
@@ -529,61 +750,6 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           },
         ),
       ],
-    );
-  }
-
-  Widget _groupButton(
-      String group, String activeGroup, List<_ConsoleModule> modules) {
-    final active = group == activeGroup;
-    return Padding(
-      padding: const EdgeInsets.only(right: 6),
-      child: TextButton(
-        onPressed: () {
-          final index = modules.indexWhere((module) => module.group == group);
-          if (index >= 0) setState(() => _subTab = index);
-        },
-        style: TextButton.styleFrom(
-          foregroundColor: active ? rcGold : Colors.white54,
-          backgroundColor:
-              active ? rcGold.withValues(alpha: 0.08) : Colors.transparent,
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-        ),
-        child: Text(group,
-            style: TextStyle(
-              fontSize: 9,
-              letterSpacing: 0.7,
-              fontWeight: active ? FontWeight.w800 : FontWeight.w600,
-            )),
-      ),
-    );
-  }
-
-  Widget _subTabButton(String label, int index) {
-    final active = _subTab == index;
-    return InkWell(
-      onTap: () => setState(() => _subTab = index),
-      child: Container(
-        constraints: const BoxConstraints(minHeight: 48),
-        alignment: Alignment.center,
-        padding: const EdgeInsets.fromLTRB(24, 11, 24, 10),
-        decoration: BoxDecoration(
-          border: Border(
-            bottom: BorderSide(
-              color: active ? rcGold : Colors.transparent,
-              width: 3,
-            ),
-          ),
-        ),
-        child: Text(
-          label,
-          style: TextStyle(
-            color: active ? rcGold : Colors.white60,
-            fontWeight: active ? FontWeight.w800 : FontWeight.normal,
-            height: 1.2,
-          ),
-        ),
-      ),
     );
   }
 }
@@ -595,13 +761,6 @@ class _ConsoleModule {
   _ConsoleModule(
       {this.group = 'OPERATIONS', required this.label, required this.builder});
 }
-
-const _moduleGroups = [
-  'MISSION & DELIVERY',
-  'CONTENT PIPELINE',
-  'STUDENT & HEALTH',
-  'SYSTEM & GOVERNANCE',
-];
 
 class _PremiumLandingPage extends StatelessWidget {
   final String title;
@@ -616,72 +775,121 @@ class _PremiumLandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RcPagePad(
+    return Container(
+      color: FounderLightTheme.bg,
+      padding: const EdgeInsets.all(28),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RcPageTitle(title: title, subtitle: subtitle),
-          const SizedBox(height: 18),
-          Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                return GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 360,
-                    mainAxisExtent: 170,
-                    crossAxisSpacing: 14,
-                    mainAxisSpacing: 14,
-                  ),
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    final item = items[index];
-                    return RcPanel(
-                      child: InkWell(
-                        onTap: item.onTap,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Icon(item.icon, color: rcGold, size: 24),
-                              const Spacer(),
-                              Text(item.title,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                  )),
-                              const SizedBox(height: 4),
-                              Text(item.subtitle,
-                                  maxLines: 2,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    color: Colors.white54,
-                                    fontSize: 11,
-                                  )),
-                              const SizedBox(height: 10),
-                              const Row(children: [
-                                Text('OPEN',
-                                    style: TextStyle(
-                                      color: rcGold,
-                                      fontSize: 9,
-                                      fontWeight: FontWeight.bold,
-                                      letterSpacing: 1,
-                                    )),
-                                SizedBox(width: 4),
-                                Icon(Icons.arrow_forward_rounded,
-                                    color: rcGold, size: 12),
-                              ]),
-                            ],
-                          ),
-                        ),
-                      ),
-                    );
-                  },
-                );
-              },
+          Text(
+            title,
+            style: const TextStyle(
+              color: FounderLightTheme.primaryDark,
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.5,
             ),
           ),
+          if (subtitle.isNotEmpty) ...[
+            const SizedBox(height: 6),
+            Text(
+              subtitle,
+              style: const TextStyle(
+                color: FounderLightTheme.textMuted,
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ],
+          const SizedBox(height: 24),
+          if (items.isEmpty)
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: FounderLightTheme.surface,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: FounderLightTheme.border),
+              ),
+              child: const Text(
+                'Module interface active. Select a target record or mission in Mission Control to load details.',
+                style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 13),
+              ),
+            )
+          else
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                  maxCrossAxisExtent: 380,
+                  mainAxisExtent: 180,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                ),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  final item = items[index];
+                  return Container(
+                    decoration: BoxDecoration(
+                      color: FounderLightTheme.surface,
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: FounderLightTheme.border),
+                      boxShadow: FounderLightTheme.softShadow,
+                    ),
+                    child: InkWell(
+                      onTap: item.onTap,
+                      borderRadius: BorderRadius.circular(16),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Icon(item.icon, color: FounderLightTheme.gold, size: 28),
+                            const Spacer(),
+                            Text(
+                              item.title,
+                              style: const TextStyle(
+                                color: FounderLightTheme.textPrimary,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              item.subtitle,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                color: FounderLightTheme.textMuted,
+                                fontSize: 12,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            const Row(
+                              children: [
+                                Text(
+                                  'OPEN HUB',
+                                  style: TextStyle(
+                                    color: FounderLightTheme.primaryBlue,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: 0.8,
+                                  ),
+                                ),
+                                SizedBox(width: 4),
+                                Icon(
+                                  Icons.arrow_forward_rounded,
+                                  color: FounderLightTheme.primaryBlue,
+                                  size: 14,
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
         ],
       ),
     );

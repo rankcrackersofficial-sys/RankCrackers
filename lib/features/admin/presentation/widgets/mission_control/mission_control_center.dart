@@ -1,642 +1,579 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:rank_crackers/core/theme/app_colors.dart';
-import 'package:rank_crackers/core/theme/app_typography.dart';
-import 'package:rank_crackers/core/widgets/dark_card.dart';
-import '../shared/center_header.dart';
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 import 'mission_creation_center.dart';
 import '../../../../../web/founder/mission_control/founder_mission_inventory.dart';
 
-/// MISSION CONTROL CENTER (Founder-Centric v2.0)
-/// Unified Command Stream for Mission Lifecycle Management.
-class MissionControlCenter extends StatelessWidget {
+/// MISSION CONTROL CENTER (Founder Operations Console v6.0)
+/// Compact Operational Stream for Mission Lifecycle & Discovery Management.
+class MissionControlCenter extends StatefulWidget {
   const MissionControlCenter({super.key, this.onMissionSelected});
 
   final ValueChanged<String>? onMissionSelected;
 
   @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.only(bottom: 60),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(24, 24, 24, 12),
-            child: CenterHeader(
-              title: "MISSION CONTROL",
-              subtitle:
-                  "Strategic management of Exam Realms and Prep Missions.",
-            ),
-          ),
-
-          // SECTION 1: CREATE NEW MISSION (Expandable)
-          const _ExpandableSection(
-            title: "CREATE NEW MISSION",
-            accentColor: AppColors.gold,
-            initiallyExpanded: false,
-            child: MissionCreationCenter(),
-          ),
-
-          // SECTION 2: READY TO CREATE MISSIONS (Unlinked Verified Assets)
-          const _MissionCreationQueueSection(),
-
-          const Padding(
-            padding: EdgeInsets.fromLTRB(24, 24, 24, 6),
-            child: CenterHeader(
-              title: "MISSION INVENTORY",
-              subtitle:
-                  "Student-visible missions and Founder lineage across existing canonical sources.",
-            ),
-          ),
-          FounderMissionInventory(onMissionSelected: onMissionSelected),
-        ],
-      ),
-    );
-  }
+  State<MissionControlCenter> createState() => _MissionControlCenterState();
 }
 
-class _ExpandableSection extends StatelessWidget {
-  final String title;
-  final Color accentColor;
-  final Widget child;
-  final bool initiallyExpanded;
+class _MissionControlCenterState extends State<MissionControlCenter> {
+  int _activeViewTab = 0; // 0: Mission Inventory, 1: Official Updates Placeholder
+  bool _showCreateDraftPanel = false;
 
-  const _ExpandableSection({
-    required this.title,
-    required this.accentColor,
-    required this.child,
-    this.initiallyExpanded = false,
-  });
+  JurisdictionFilter _selectedJurisdiction = JurisdictionFilter.all;
+  String? _selectedStateCode;
+
+  void _selectJurisdictionShortcut(JurisdictionFilter filter, [String? stateCode]) {
+    setState(() {
+      _selectedJurisdiction = filter;
+      _selectedStateCode = stateCode;
+      _activeViewTab = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 8),
-      decoration: BoxDecoration(
-        color: accentColor.withValues(alpha: 0.05),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: accentColor.withValues(alpha: 0.1)),
-      ),
-      child: Theme(
-        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-        child: ExpansionTile(
-          initiallyExpanded: initiallyExpanded,
-          title: Text(
-            title,
-            style: AppTypography.label.copyWith(
-              color: accentColor,
-              letterSpacing: 1.5,
-              fontSize: 10,
-            ),
-          ),
-          iconColor: accentColor,
-          collapsedIconColor: accentColor.withValues(alpha: 0.5),
-          children: [child],
+      color: FounderLightTheme.bg,
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.only(bottom: 60),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // COMPACT OPERATIONAL HEADER & NAVIGATION TOOLBAR
+            _buildTopHeaderAndNav(),
+
+            // JURISDICTION QUICK SUMMARY CARDS
+            if (_activeViewTab == 0) _buildJurisdictionSummarySection(),
+
+            // COLLAPSIBLE MISSION CREATION CENTER (Secondary Governed Block)
+            if (_showCreateDraftPanel) ...[
+              _buildCollapsibleCreatePanel(),
+              const SizedBox(height: 16),
+            ],
+
+            // TAB 0: MISSION INVENTORY VIEW
+            if (_activeViewTab == 0) ...[
+              // UNLINKED DISCOVERY ASSETS BAR (Secondary Queue - Read-Only Legacy Records)
+              const _UnlinkedDiscoveryAssetsSection(),
+
+              const SizedBox(height: 12),
+
+              // CORE MISSION INVENTORY GRID VIEW
+              FounderMissionInventory(
+                onMissionSelected: widget.onMissionSelected,
+                initialJurisdiction: _selectedJurisdiction,
+                initialStateCode: _selectedStateCode,
+              ),
+            ],
+
+            // TAB 1: OFFICIAL UPDATES PLACEHOLDER VIEW
+            if (_activeViewTab == 1) _buildOfficialUpdatesPlaceholder(),
+          ],
         ),
       ),
     );
   }
-}
 
-class _MissionCreationQueueSection extends StatelessWidget {
-  const _MissionCreationQueueSection();
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(24, 24, 24, 12),
-          child: Text(
-            "READY TO CREATE MISSIONS (UNLINKED VERIFIED ASSETS)",
-            style: AppTypography.label.copyWith(
-              color: Colors.cyanAccent,
-              fontSize: 9,
-            ),
-          ),
-        ),
-        StreamBuilder<QuerySnapshot>(
-          stream: FirebaseFirestore.instance
-              .collection('sentinel_drafts')
-              .where('status', isEqualTo: 'review')
-              .where('linkedRealmId', isNull: true)
-              .snapshots(),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24),
-                child: LinearProgressIndicator(
-                  color: AppColors.gold,
-                  minHeight: 1,
-                ),
-              );
-            }
-            final docs = snapshot.data?.docs ?? [];
-            if (docs.isEmpty) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: Text(
-                  "NO UNLINKED ASSETS PENDING MISSION CREATION",
-                  style: AppTypography.label.copyWith(
-                    color: Colors.white10,
-                    fontSize: 7,
-                  ),
-                ),
-              );
-            }
-            return Column(
-              children: docs.map((doc) {
-                final data = doc.data() as Map<String, dynamic>;
-                return Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 6,
-                  ),
-                  child: _MissionCandidateTile(data: data, id: doc.id),
-                );
-              }).toList(),
-            );
-          },
-        ),
-      ],
-    );
-  }
-}
-
-class _MissionCandidateTile extends StatefulWidget {
-  final Map<String, dynamic> data;
-  final String id;
-  const _MissionCandidateTile({required this.data, required this.id});
-
-  @override
-  State<_MissionCandidateTile> createState() => _MissionCandidateTileState();
-}
-
-class _MissionCandidateTileState extends State<_MissionCandidateTile> {
-  bool _isProcessing = false;
-
-  Future<void> _performAction(String action) async {
-    setState(() => _isProcessing = true);
-    try {
-      final callable = FirebaseFunctions.instanceFor(
-        region: 'us-central1',
-      ).httpsCallable('handleSentinelAction');
-      await callable.call({'action': action, 'recruitmentId': widget.id});
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(
-          context,
-        ).showSnackBar(SnackBar(content: Text("Action Failed: $e")));
-      }
-    } finally {
-      if (mounted) setState(() => _isProcessing = false);
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return DarkCard(
-      padding: const EdgeInsets.all(16),
+  // ===========================================================================
+  // COMPACT OPERATIONAL HEADER & NAVIGATION TOOLBAR
+  // ===========================================================================
+  Widget _buildTopHeaderAndNav() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
+      decoration: const BoxDecoration(
+        color: FounderLightTheme.surface,
+        border: Border(bottom: BorderSide(color: FounderLightTheme.border)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            widget.data['title'] ?? 'Unknown Candidate',
-            style: AppTypography.cardTitle.copyWith(
-              fontSize: 13,
-              color: Colors.cyanAccent.withValues(alpha: 0.8),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'MISSION CONTROL',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.8,
+                      color: FounderLightTheme.primaryDark,
+                    ),
+                  ),
+                  SizedBox(height: 4),
+                  Text(
+                    'Strategic management of Exam Realms, Discovery Assets, and Official Sources.',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: FounderLightTheme.textMuted,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Action Button: Toggle Collapsible Create Panel
+              ElevatedButton.icon(
+                onPressed: () {
+                  setState(() {
+                    _showCreateDraftPanel = !_showCreateDraftPanel;
+                  });
+                },
+                icon: Icon(
+                  _showCreateDraftPanel
+                      ? Icons.close_rounded
+                      : Icons.add_rounded,
+                  size: 16,
+                ),
+                label: Text(
+                  _showCreateDraftPanel
+                      ? 'CLOSE CREATION FORM'
+                      : '+ CREATE MISSION DRAFT',
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: _showCreateDraftPanel
+                      ? FounderLightTheme.surfaceHover
+                      : FounderLightTheme.primaryDark,
+                  foregroundColor: _showCreateDraftPanel
+                      ? FounderLightTheme.textPrimary
+                      : Colors.white,
+                  elevation: 0,
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  textStyle: const TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 8),
-          Text(
-            "ORG: ${widget.data['org']} | YEAR: ${widget.data['year']}",
-            style: AppTypography.label.copyWith(
-              fontSize: 7,
-              color: Colors.white12,
-            ),
-          ),
+
           const SizedBox(height: 16),
-          if (_isProcessing)
-            const LinearProgressIndicator(color: AppColors.gold, minHeight: 1)
-          else
-            Row(
-              children: [
-                _actionButton(
-                  "MANIFEST REALM",
-                  Icons.auto_awesome_motion_rounded,
-                  Colors.cyanAccent,
-                  () => _performAction('manifest_realm'),
-                ),
-                const SizedBox(width: 8),
-                _actionButton(
-                  "REJECT",
-                  Icons.close_rounded,
-                  Colors.redAccent,
-                  () => _performAction('reject_candidate'),
-                ),
-              ],
-            ),
+
+          // Primary View Tabs Bar
+          Row(
+            children: [
+              _buildNavTab(
+                index: 0,
+                label: 'MISSION INVENTORY',
+                icon: Icons.grid_view_rounded,
+              ),
+              const SizedBox(width: 8),
+              _buildNavTab(
+                index: 1,
+                label: 'OFFICIAL UPDATES',
+                icon: Icons.radar_rounded,
+                badge: 'PENDING CONNECT',
+              ),
+            ],
+          ),
         ],
       ),
     );
   }
 
-  Widget _actionButton(
-    String label,
-    IconData icon,
-    Color color,
-    VoidCallback onTap,
-  ) {
-    return TextButton.icon(
-      onPressed: onTap,
-      icon: Icon(icon, size: 12, color: color.withValues(alpha: 0.8)),
-      label: Text(
-        label,
-        style: TextStyle(
-          color: color.withValues(alpha: 0.8),
-          fontSize: 8,
-          fontWeight: FontWeight.bold,
+  Widget _buildNavTab({
+    required int index,
+    required String label,
+    required IconData icon,
+    String? badge,
+  }) {
+    final bool isSelected = _activeViewTab == index;
+    return InkWell(
+      onTap: () => setState(() => _activeViewTab = index),
+      borderRadius: BorderRadius.circular(8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? FounderLightTheme.surfaceAlt
+              : Colors.transparent,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(
+            color: isSelected
+                ? FounderLightTheme.primaryBlue
+                : Colors.transparent,
+          ),
         ),
-      ),
-      style: TextButton.styleFrom(
-        backgroundColor: color.withValues(alpha: 0.05),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      ),
-    );
-  }
-}
-
-class _MissionRealmTile extends StatefulWidget {
-  final Map<String, dynamic> data;
-  final String id;
-  final Color accentColor;
-  const _MissionRealmTile({
-    required this.data,
-    required this.id,
-    required this.accentColor,
-  });
-
-  @override
-  State<_MissionRealmTile> createState() => _MissionRealmTileState();
-}
-
-class _MissionRealmTileState extends State<_MissionRealmTile> {
-  bool _isProcessing = false;
-
-  Future<void> _performGovernedAction(
-    String action,
-    String label, {
-    bool destructive = false,
-  }) async {
-    final reasonController = TextEditingController();
-    final cycleKeyController = TextEditingController(
-      text: (widget.data['cycleKey'] ?? widget.data['exam_year'] ?? '').toString(),
-    );
-    final confirmed = await showDialog<bool>(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text('$label MISSION'),
-        content: Column(
+        child: Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(widget.data['recruitment_name'] ?? widget.id),
-            const SizedBox(height: 4),
-            SelectableText(widget.id, style: const TextStyle(fontSize: 11)),
-            const SizedBox(height: 12),
-            if (destructive)
-              const Text(
-                'Permanent delete cannot be undone and will proceed only after dependency preflight.',
-                style: TextStyle(color: Colors.redAccent),
-              ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: reasonController,
-              minLines: 2,
-              maxLines: 4,
-              decoration: const InputDecoration(
-                labelText: 'Founder reason (minimum 12 characters)',
-                border: OutlineInputBorder(),
+            Icon(
+              icon,
+              size: 16,
+              color: isSelected
+                  ? FounderLightTheme.primaryBlue
+                  : FounderLightTheme.textMuted,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              label,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+                color: isSelected
+                    ? FounderLightTheme.primaryDark
+                    : FounderLightTheme.textMuted,
               ),
             ),
-            if (action == 'launch_realm') ...[
-              const SizedBox(height: 12),
-              TextField(
-                controller: cycleKeyController,
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Selected cycle year (required)',
-                  border: OutlineInputBorder(),
+            if (badge != null) ...[
+              const SizedBox(width: 8),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                decoration: BoxDecoration(
+                  color: FounderLightTheme.infoBg,
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(
+                  badge,
+                  style: const TextStyle(
+                    fontSize: 8,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.info,
+                  ),
                 ),
               ),
             ],
           ],
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(dialogContext, false),
-            child: const Text('CANCEL'),
-          ),
-          FilledButton(
-            style: destructive
-                ? FilledButton.styleFrom(backgroundColor: Colors.redAccent)
-                : null,
-            onPressed: () {
-              if (reasonController.text.trim().length < 12 ||
-                  (action == 'launch_realm' && cycleKeyController.text.trim().isEmpty)) {
-                return;
-              }
-              Navigator.pop(dialogContext, true);
-            },
-            child: Text(
-              destructive ? 'RUN PREFLIGHT AND DELETE' : 'CONFIRM $label',
-            ),
-          ),
-        ],
       ),
     );
-    final reason = reasonController.text.trim();
-    reasonController.dispose();
-    final cycleKey = cycleKeyController.text.trim();
-    cycleKeyController.dispose();
-    if (confirmed != true) return;
-    setState(() => _isProcessing = true);
-    try {
-      final callable = FirebaseFunctions.instanceFor(
-        region: 'us-central1',
-      ).httpsCallable('handleSentinelAction');
-      await callable.call({
-        'action': action,
-        'recruitmentId': widget.id,
-        'payload': {
-          'reason': reason,
-          if (action == 'launch_realm') 'cycleKey': cycleKey,
-          'requestId': 'web-life-${DateTime.now().microsecondsSinceEpoch}',
-        },
-      });
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('$label completed for ${widget.id}.')),
-        );
-      }
-    } catch (e) {
-      if (!mounted) return;
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text('$label blocked: $e')));
-    } finally {
-      if (mounted) setState(() => _isProcessing = false);
-    }
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final status = widget.data['status'] ?? 'UNKNOWN';
-
-    return DarkCard(
-      padding: const EdgeInsets.all(16),
+  // ===========================================================================
+  // JURISDICTION QUICK SUMMARY CARDS
+  // ===========================================================================
+  Widget _buildJurisdictionSummarySection() {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(24, 16, 24, 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Expanded(
-                child: Text(
-                  widget.data['recruitment_name'] ?? 'Unknown Mission',
-                  style: AppTypography.cardTitle.copyWith(
-                    fontSize: 13,
-                    color: Colors.white70,
-                  ),
-                ),
-              ),
-              _statusBadge(status, widget.accentColor),
+              _jurisdictionQuickChip('ALL MISSIONS', JurisdictionFilter.all, null),
+              const SizedBox(width: 8),
+              _jurisdictionQuickChip('CENTRAL AUTHORITIES', JurisdictionFilter.central, null),
+              const SizedBox(width: 8),
+              _jurisdictionQuickChip('RAJASTHAN (RJ)', JurisdictionFilter.state, 'RJ'),
+              const SizedBox(width: 8),
+              _jurisdictionQuickChip('DELHI (UT · DL)', JurisdictionFilter.ut, 'DL'),
             ],
           ),
-          const SizedBox(height: 8),
-          Text(
-            "ORG: ${widget.data['organization']} | YEAR: ${widget.data['exam_year']}",
-            style: AppTypography.label.copyWith(
-              fontSize: 7,
-              color: Colors.white12,
-            ),
-          ),
-          const SizedBox(height: 16),
-          if (_isProcessing)
-            const Center(
-              child: LinearProgressIndicator(
-                color: AppColors.gold,
-                minHeight: 1,
-              ),
-            )
-          else
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                // Context-Aware Actions based on Status Transition Law
-                if (status != 'ACTIVE')
-                  _actionButton(
-                    "ACTIVATE",
-                    Icons.rocket_launch_rounded,
-                    Colors.greenAccent,
-                    () => _performGovernedAction('launch_realm', 'ACTIVATE'),
-                  ),
-
-                if (status == 'ACTIVE')
-                  _actionButton(
-                    "MAKE PASSIVE",
-                    Icons.pause_circle_outline_rounded,
-                    Colors.orangeAccent,
-                    () => _performGovernedAction('pause_realm', 'DEACTIVATE'),
-                  ),
-
-                if (status == 'ACTIVE')
-                  _actionButton(
-                    "POST UPDATE",
-                    Icons.notification_add_rounded,
-                    AppColors.gold,
-                    _showUpdateDialog,
-                  ),
-
-                _actionButton(
-                  "EDIT",
-                  Icons.edit_note_rounded,
-                  Colors.white10,
-                  () {},
-                ),
-
-                if (status != 'ARCHIVED')
-                  _actionButton(
-                    "ARCHIVE",
-                    Icons.archive_outlined,
-                    Colors.redAccent,
-                    () => _performGovernedAction('archive_realm', 'ARCHIVE'),
-                  ),
-
-                _actionButton(
-                  "DELETE",
-                  Icons.delete_forever_outlined,
-                  Colors.red,
-                  () => _performGovernedAction(
-                    'delete_realm_permanently',
-                    'PERMANENT DELETE',
-                    destructive: true,
-                  ),
-                ),
-              ],
-            ),
         ],
       ),
     );
   }
 
-  Future<void> _showUpdateDialog() async {
-    String selectedType = 'EXAM_DATE';
-    final titleController = TextEditingController();
-    final contentController = TextEditingController();
-    final linkController = TextEditingController();
+  Widget _jurisdictionQuickChip(
+      String label, JurisdictionFilter filter, String? stateCode) {
+    final bool isSelected = _selectedJurisdiction == filter &&
+        _selectedStateCode == stateCode;
 
-    await showDialog(
-      context: context,
-      builder: (context) => StatefulBuilder(
-        builder: (context, setModalState) => AlertDialog(
-          backgroundColor: AppColors.background,
-          title: Text(
-            "POST MISSION UPDATE",
-            style: AppTypography.label.copyWith(color: AppColors.gold),
+    return InkWell(
+      onTap: () => _selectJurisdictionShortcut(filter, stateCode),
+      borderRadius: BorderRadius.circular(8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? FounderLightTheme.primaryDark
+              : FounderLightTheme.surface,
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: isSelected
+                ? FounderLightTheme.primaryDark
+                : FounderLightTheme.border,
           ),
-          content: SingleChildScrollView(
-            child: Column(
+          boxShadow: isSelected ? FounderLightTheme.softShadow : null,
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w700,
+            color: isSelected ? Colors.white : FounderLightTheme.textSecondary,
+          ),
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // COLLAPSIBLE CREATION PANEL
+  // ===========================================================================
+  Widget _buildCollapsibleCreatePanel() {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(24, 8, 24, 8),
+      decoration: BoxDecoration(
+        color: FounderLightTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+            color: FounderLightTheme.gold.withValues(alpha: 0.4), width: 1.5),
+        boxShadow: FounderLightTheme.softShadow,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            decoration: const BoxDecoration(
+              color: FounderLightTheme.goldLight,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(14)),
+            ),
+            child: Row(
+              children: [
+                const Icon(Icons.add_circle_outline_rounded,
+                    color: FounderLightTheme.gold, size: 18),
+                const SizedBox(width: 10),
+                const Text(
+                  'CREATE NEW MISSION DRAFT',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w800,
+                    color: FounderLightTheme.gold,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+                const Spacer(),
+                IconButton(
+                  icon: const Icon(Icons.close_rounded,
+                      size: 16, color: FounderLightTheme.gold),
+                  onPressed: () =>
+                      setState(() => _showCreateDraftPanel = false),
+                  tooltip: 'Close creation form',
+                ),
+              ],
+            ),
+          ),
+          const MissionCreationCenter(),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // OFFICIAL UPDATES PLACEHOLDER VIEW
+  // ===========================================================================
+  Widget _buildOfficialUpdatesPlaceholder() {
+    return Container(
+      margin: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(40),
+      decoration: BoxDecoration(
+        color: FounderLightTheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: FounderLightTheme.border),
+        boxShadow: FounderLightTheme.softShadow,
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: const BoxDecoration(
+              color: FounderLightTheme.primaryBlueLight,
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              Icons.radar_rounded,
+              size: 40,
+              color: FounderLightTheme.primaryBlue,
+            ),
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'OFFICIAL AUTHORITY INTELLIGENCE STREAM',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w800,
+              color: FounderLightTheme.primaryDark,
+              letterSpacing: 1.0,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Container(
+            constraints: const BoxConstraints(maxWidth: 580),
+            child: const Text(
+              'Official Authority Intelligence connection pending backend contract.\n\nOnce activated, governed official sources from Central, State, and UT authorities will automatically surface verified candidate notices, syllabus revisions, and corrigenda here for Founder review before mission creation.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 13,
+                color: FounderLightTheme.textSecondary,
+                height: 1.5,
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            decoration: BoxDecoration(
+              color: FounderLightTheme.surfaceAlt,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: FounderLightTheme.border),
+            ),
+            child: const Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                DropdownButtonFormField<String>(
-                  initialValue: selectedType,
-                  dropdownColor: AppColors.surface,
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
-                  decoration: const InputDecoration(
-                    labelText: "Update Type",
-                    labelStyle: TextStyle(color: Colors.white38),
-                  ),
-                  items:
-                      [
-                            'EXAM_DATE',
-                            'ADMIT_CARD',
-                            'ANSWER_KEY',
-                            'RESULT',
-                            'NOTICE',
-                            'CORRIGENDUM',
-                          ]
-                          .map(
-                            (t) => DropdownMenuItem(value: t, child: Text(t)),
-                          )
-                          .toList(),
-                  onChanged: (val) => setModalState(() => selectedType = val!),
-                ),
-                TextField(
-                  controller: titleController,
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
-                  decoration: const InputDecoration(labelText: "Title"),
-                ),
-                TextField(
-                  controller: contentController,
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
-                  decoration: const InputDecoration(labelText: "Content"),
-                  maxLines: 3,
-                ),
-                TextField(
-                  controller: linkController,
-                  style: const TextStyle(color: Colors.white, fontSize: 12),
-                  decoration: const InputDecoration(
-                    labelText: "External Link (Optional)",
+                Icon(Icons.lock_clock_rounded,
+                    size: 16, color: FounderLightTheme.textMuted),
+                SizedBox(width: 8),
+                Text(
+                  'STATUS: DORMANT · AWAITING BACKEND B5 CONTRACT BINDING',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.textMuted,
+                    letterSpacing: 0.8,
                   ),
                 ),
               ],
             ),
           ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text("CANCEL"),
-            ),
-            ElevatedButton(
-              onPressed: () async {
-                Navigator.pop(context);
-                setState(() => _isProcessing = true);
-                try {
-                  final callable = FirebaseFunctions.instanceFor(
-                    region: 'us-central1',
-                  ).httpsCallable('handleSentinelAction');
-                  await callable.call({
-                    'action': 'post_mission_update',
-                    'recruitmentId': widget.id,
-                    'payload': {
-                      'updateType': selectedType,
-                      'title': titleController.text,
-                      'content': contentController.text,
-                      'link': linkController.text,
-                    },
-                  });
-                } catch (e) {
-                  if (!context.mounted) return;
-                  ScaffoldMessenger.of(
-                    context,
-                  ).showSnackBar(SnackBar(content: Text("Post Failed: $e")));
-                } finally {
-                  if (mounted) setState(() => _isProcessing = false);
-                }
-              },
-              child: const Text("POST UPDATE"),
-            ),
-          ],
-        ),
+        ],
       ),
     );
   }
+}
 
-  Widget _statusBadge(String status, Color color) {
+// =============================================================================
+// UNLINKED DISCOVERY ASSETS SECTION (READ-ONLY LEGACY RECORDS)
+// =============================================================================
+class _UnlinkedDiscoveryAssetsSection extends StatelessWidget {
+  const _UnlinkedDiscoveryAssetsSection();
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<QuerySnapshot>(
+      stream: FirebaseFirestore.instance
+          .collection('recruitments')
+          .where('status', isEqualTo: 'review')
+          .snapshots(),
+      builder: (context, snapshot) {
+        final docs = snapshot.data?.docs ?? [];
+        if (docs.isEmpty) return const SizedBox.shrink();
+
+        return Container(
+          margin: const EdgeInsets.fromLTRB(24, 12, 24, 8),
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: FounderLightTheme.infoBg,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+                color: FounderLightTheme.info.withValues(alpha: 0.3)),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  const Icon(Icons.auto_awesome_motion_rounded,
+                      color: FounderLightTheme.info, size: 18),
+                  const SizedBox(width: 10),
+                  Text(
+                    'LEGACY DISCOVERY ASSETS (${docs.length} READ-ONLY RECORDS)',
+                    style: const TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w800,
+                      color: FounderLightTheme.info,
+                      letterSpacing: 1.0,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Column(
+                children: docs.map((doc) {
+                  final data = doc.data() as Map<String, dynamic>;
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: _MissionCandidateTile(data: data, id: doc.id),
+                  );
+                }).toList(),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _MissionCandidateTile extends StatelessWidget {
+  final Map<String, dynamic> data;
+  final String id;
+  const _MissionCandidateTile({required this.data, required this.id});
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.circular(4),
+        color: FounderLightTheme.surface,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: FounderLightTheme.border),
       ),
-      child: Text(
-        status,
-        style: TextStyle(
-          color: color,
-          fontSize: 7,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
-
-  Widget _actionButton(
-    String label,
-    IconData icon,
-    Color color,
-    VoidCallback onTap,
-  ) {
-    return TextButton.icon(
-      onPressed: onTap,
-      icon: Icon(icon, size: 12, color: color.withValues(alpha: 0.8)),
-      label: Text(
-        label,
-        style: TextStyle(
-          color: color.withValues(alpha: 0.8),
-          fontSize: 8,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      style: TextButton.styleFrom(
-        backgroundColor: color.withValues(alpha: 0.05),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  data['title'] ?? 'Unknown Discovery Asset',
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.textPrimary,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  "ORG: ${data['org'] ?? '—'}  •  YEAR: ${data['year'] ?? '—'}  •  ID: $id",
+                  style: const TextStyle(
+                    fontSize: 10,
+                    color: FounderLightTheme.textMuted,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            decoration: BoxDecoration(
+              color: FounderLightTheme.surfaceAlt,
+              borderRadius: BorderRadius.circular(6),
+              border: Border.all(color: FounderLightTheme.border),
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.lock_outline_rounded,
+                    size: 12, color: FounderLightTheme.textMuted),
+                SizedBox(width: 6),
+                Text(
+                  'LEGACY ASSET · READ-ONLY',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.textMuted,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
