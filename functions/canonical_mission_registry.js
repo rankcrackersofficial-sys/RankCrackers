@@ -76,17 +76,17 @@ const LEGACY_PARENT_BINDINGS = deepFreeze([
   },
   {
     legacyId: 'ssc_cgl',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc cgl', 'ssc cgl exam', 'combined graduate level examination']
   },
   {
     legacyId: 'ssc_selection_post',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc selection post', 'selection post examination']
   },
   {
     legacyId: 'ssc_stenographer',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc stenographer', "stenographer grade c d examination"]
   },
   {
@@ -106,32 +106,32 @@ const LEGACY_PARENT_BINDINGS = deepFreeze([
   },
   {
     legacyId: 'ssc_gd',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc gd', 'ssc gd constable', 'constables gd examination']
   },
   {
     legacyId: 'ssc_cpo',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc cpo', 'ssc si cpo', 'sub inspector delhi police capf examination']
   },
   {
     legacyId: 'ssc_mts_havaldar',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc mts', 'ssc mts havaldar', 'multi tasking staff havaldar examination']
   },
   {
     legacyId: 'ssc_hindi_translators',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc hindi translators', 'combined hindi translators examination', 'junior hindi translator examination']
   },
   {
     legacyId: 'ssc_chsl',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc chsl', 'combined higher secondary level examination']
   },
   {
     legacyId: 'ssc_je',
-    authorityKey: 'ssc',
+    authorityKey: 'auth_in_ssc',
     examAliases: ['ssc je', 'ssc junior engineer', 'junior engineer examination']
   }
 ]);
@@ -142,7 +142,7 @@ const GOVERNED_AUTHORITY_ALIASES = deepFreeze({
   'upsc': ['upsc', 'union public service commission', 'union public service commission (upsc)'],
   'rpsc': ['rpsc', 'rajasthan public service commission', 'rajasthan public service commission (rpsc)'],
   'uppsc': ['uppsc', 'up psc', 'uttar pradesh public service commission', 'uttar pradesh public service commission (uppsc)'],
-  'ssc': ['ssc', 'staff selection commission', 'staff selection commission (ssc)'],
+  'auth_in_ssc': ['ssc', 'auth_in_ssc', 'staff selection commission', 'staff selection commission (ssc)'],
   'rssb': ['rssb', 'rsmssb', 'rajasthan staff selection board', 'rajasthan subordinate and ministerial services selection board'],
   'iit_jee_advanced': ['jee advanced authority', 'joint entrance examination advanced authority', 'joint admission board', 'iit jee advanced', 'iit_jee_advanced'],
   'auth_in_indian_air_force': ['indian air force', 'auth_in_indian_air_force', 'iaf', 'air force']
@@ -198,15 +198,15 @@ const GOVERNED_EXAM_AUTHORITY_COMPATIBILITY = deepFreeze({
   'jee_main': ['nta'],
   'neet_ug': ['nta'],
   'upsc_cse_prelims': ['upsc'],
-  'ssc_cgl': ['ssc'],
-  'ssc_selection_post': ['ssc'],
-  'ssc_stenographer': ['ssc'],
-  'ssc_hindi_translators': ['ssc'],
-  'ssc_mts_havaldar': ['ssc'],
-  'ssc_cpo': ['ssc'],
-  'ssc_gd': ['ssc'],
-  'ssc_chsl': ['ssc'],
-  'ssc_je': ['ssc'],
+  'ssc_cgl': ['auth_in_ssc'],
+  'ssc_selection_post': ['auth_in_ssc'],
+  'ssc_stenographer': ['auth_in_ssc'],
+  'ssc_hindi_translators': ['auth_in_ssc'],
+  'ssc_mts_havaldar': ['auth_in_ssc'],
+  'ssc_cpo': ['auth_in_ssc'],
+  'ssc_gd': ['auth_in_ssc'],
+  'ssc_chsl': ['auth_in_ssc'],
+  'ssc_je': ['auth_in_ssc'],
   'rpsc_ras_prelims': ['rpsc'],
   'rpsc_1st_grade': ['rpsc'],
   'uppsc_pcs_prelims': ['uppsc'],
@@ -244,18 +244,18 @@ const GOVERNED_EXAM_AUTHORITY_COMPATIBILITY = deepFreeze({
 // Existing Firestore ids are preserved in-place; no copy/delete or recreation
 // is implied by this manifest.
 const CANONICAL_MISSION_REALM_MANIFEST = deepFreeze([
-  { missionId: 'ssc_cgl', authorityKey: 'ssc', examKey: 'ssc_cgl', jurisdiction: 'CENTRAL', shortName: 'SSC CGL', officialName: 'Combined Graduate Level Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_selection_post', authorityKey: 'ssc', examKey: 'ssc_selection_post', jurisdiction: 'CENTRAL', shortName: 'SSC Selection Post', officialName: 'Selection Posts Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_stenographer', authorityKey: 'ssc', examKey: 'ssc_stenographer', jurisdiction: 'CENTRAL', shortName: 'SSC Stenographer Grade C & D', officialName: "Stenographer Grade 'C' & 'D' Examination", officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_cgl', authorityKey: 'auth_in_ssc', examKey: 'ssc_cgl', jurisdiction: 'CENTRAL', shortName: 'SSC CGL', officialName: 'Combined Graduate Level Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_selection_post', authorityKey: 'auth_in_ssc', examKey: 'ssc_selection_post', jurisdiction: 'CENTRAL', shortName: 'SSC Selection Post', officialName: 'Selection Posts Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_stenographer', authorityKey: 'auth_in_ssc', examKey: 'ssc_stenographer', jurisdiction: 'CENTRAL', shortName: 'SSC Stenographer Grade C & D', officialName: "Stenographer Grade 'C' & 'D' Examination", officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'upsc_cse_prelims', authorityKey: 'upsc', examKey: 'upsc_cse_prelims', jurisdiction: 'CENTRAL', shortName: 'UPSC Civil Services – Prelims', officialName: 'Civil Services (Preliminary) Examination', officialDomain: 'upsc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'rpsc_ras_prelims', authorityKey: 'rpsc', examKey: 'rpsc_ras_prelims', jurisdiction: 'STATE', stateCode: 'RJ', shortName: 'RPSC RAS – Prelims', officialName: 'Rajasthan State and Subordinate Services Combined Competitive Examination (Preliminary)', officialDomain: 'rpsc.rajasthan.gov.in', studentMediumPolicy: 'ENGLISH_EVIDENCE_REQUIRED', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'uppsc_pcs_prelims', authorityKey: 'uppsc', examKey: 'uppsc_pcs_prelims', jurisdiction: 'STATE', stateCode: 'UP', shortName: 'UPPSC PCS – Prelims', officialName: 'Combined State / Upper Subordinate Services Examination (Preliminary)', officialDomain: 'uppsc.up.nic.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_gd', authorityKey: 'ssc', examKey: 'ssc_gd', jurisdiction: 'CENTRAL', shortName: 'SSC GD', officialName: 'Constable (GD) in Central Armed Police Forces Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_cpo', authorityKey: 'ssc', examKey: 'ssc_cpo', jurisdiction: 'CENTRAL', shortName: 'SSC CPO', officialName: 'Sub-Inspector in Delhi Police and Central Armed Police Forces Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_mts_havaldar', authorityKey: 'ssc', examKey: 'ssc_mts_havaldar', jurisdiction: 'CENTRAL', shortName: 'SSC MTS & Havaldar', officialName: 'Multi-Tasking (Non-Technical) Staff & Havaldar Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_hindi_translators', authorityKey: 'ssc', examKey: 'ssc_hindi_translators', jurisdiction: 'CENTRAL', shortName: 'SSC Combined Hindi Translators', officialName: 'Junior Hindi Translator, Junior Translator and Senior Hindi Translator Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_chsl', authorityKey: 'ssc', examKey: 'ssc_chsl', jurisdiction: 'CENTRAL', shortName: 'SSC CHSL', officialName: 'Combined Higher Secondary (10+2) Level Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
-  { missionId: 'ssc_je', authorityKey: 'ssc', examKey: 'ssc_je', jurisdiction: 'CENTRAL', shortName: 'SSC Junior Engineer', officialName: 'Junior Engineer (Civil, Mechanical & Electrical) Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_gd', authorityKey: 'auth_in_ssc', examKey: 'ssc_gd', jurisdiction: 'CENTRAL', shortName: 'SSC GD', officialName: 'Constable (GD) in Central Armed Police Forces Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_cpo', authorityKey: 'auth_in_ssc', examKey: 'ssc_cpo', jurisdiction: 'CENTRAL', shortName: 'SSC CPO', officialName: 'Sub-Inspector in Delhi Police and Central Armed Police Forces Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_mts_havaldar', authorityKey: 'auth_in_ssc', examKey: 'ssc_mts_havaldar', jurisdiction: 'CENTRAL', shortName: 'SSC MTS & Havaldar', officialName: 'Multi-Tasking (Non-Technical) Staff & Havaldar Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_hindi_translators', authorityKey: 'auth_in_ssc', examKey: 'ssc_hindi_translators', jurisdiction: 'CENTRAL', shortName: 'SSC Combined Hindi Translators', officialName: 'Junior Hindi Translator, Junior Translator and Senior Hindi Translator Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_chsl', authorityKey: 'auth_in_ssc', examKey: 'ssc_chsl', jurisdiction: 'CENTRAL', shortName: 'SSC CHSL', officialName: 'Combined Higher Secondary (10+2) Level Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
+  { missionId: 'ssc_je', authorityKey: 'auth_in_ssc', examKey: 'ssc_je', jurisdiction: 'CENTRAL', shortName: 'SSC Junior Engineer', officialName: 'Junior Engineer (Civil, Mechanical & Electrical) Examination', officialDomain: 'ssc.gov.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'RPSC_FIRST_GRADE2026_2026_1782713222215', authorityKey: 'rpsc', examKey: 'rpsc_1st_grade', jurisdiction: 'STATE', stateCode: 'RJ', shortName: 'RPSC 1st Grade', officialName: 'School Lecturer (School Education)', officialDomain: 'rpsc.rajasthan.gov.in', studentMediumPolicy: 'ENGLISH_EVIDENCE_REQUIRED', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'neet_(ug)-2027', authorityKey: 'nta', examKey: 'neet_ug', jurisdiction: 'CENTRAL', shortName: 'NEET (UG)', officialName: 'National Eligibility Cum Entrance Test (UG)', officialDomain: 'neet.nta.nic.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
   { missionId: 'jee_main_2026', authorityKey: 'nta', examKey: 'jee_main', jurisdiction: 'CENTRAL', shortName: 'JEE Main', officialName: 'Joint Entrance Examination (Main)', officialDomain: 'jeemain.nta.nic.in', studentMediumPolicy: 'ENGLISH_AVAILABLE', lifecycle: 'EXISTING_FOUNDER_DRAFT' },
