@@ -6,6 +6,7 @@ const { logFounderActivity } = require("../services/audit_service");
 const { executeUnifiedMissionCreation } = require("../services/mission_cycle_store");
 const { executeMissionShellBootstrap } = require('../services/mission_shell_bootstrap');
 const { executeCycleAwarePublication } = require("../services/mission_cycle_lifecycle");
+const { runSeparateSourcePairPipeline } = require('../services/mission_separate_source_pair_entrypoint');
 const { validateOrResolveId } = require("../canonical_mission_registry");
 const {
   assertActiveFounder,
@@ -179,6 +180,19 @@ exports.handleSentinelAction = functions
 
   try {
     console.log(`SENTINEL_ACTION: ${action} triggered by ${auth.uid} (${auth.token.email})`);
+
+    // Governed separate notification + syllabus finalization. This is kept
+    // outside the generic draft conveyor so AUTO_DETECT can never certify a
+    // mission source.
+    if (action === 'force_finalize_mission_source_pair') {
+      return runSeparateSourcePairPipeline({
+        db,
+        storage: admin.storage(),
+        auth,
+        payload: payload || {},
+        recordedAt: new Date().toISOString(),
+      });
+    }
 
     // ACTION: LOG FOUNDER ACTIVITY (Nerve Fix)
     if (action === 'log_founder_activity') {
@@ -937,7 +951,7 @@ function assertMissionActionAuthorized(auth, action) {
   const adminLevel = auth.token.adminLevel || 0;
   const permissions = auth.token.permissions || [];
 
-  const sensitiveActions = ['bootstrap_mission_shell', 'launch_exam_mission', 'launch_realm', 'pause_realm', 'archive_realm', 'restore_realm', 'delete_realm_permanently', 'declare_result', 'update_mission_variables'];
+  const sensitiveActions = ['bootstrap_mission_shell', 'force_finalize_mission_source_pair', 'launch_exam_mission', 'launch_realm', 'pause_realm', 'archive_realm', 'restore_realm', 'delete_realm_permanently', 'declare_result', 'update_mission_variables'];
   const lifecycleActions = ['manifest_realm'];
 
   if (sensitiveActions.includes(action)) {
