@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -106,7 +105,7 @@ class DiagnosticResultScreen extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
           decoration: BoxDecoration(color: AppColors.gold.withValues(alpha: 0.1), borderRadius: BorderRadius.circular(20)),
-          child: Text('VERIFIED', style: AppTypography.label.copyWith(fontSize: 7, color: AppColors.gold)),
+          child: Text('NOT READY', style: AppTypography.label.copyWith(fontSize: 7, color: AppColors.gold)),
         ),
       ],
     );
