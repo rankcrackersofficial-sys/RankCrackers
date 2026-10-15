@@ -4,7 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   test('Founder primary console uses the approved four-zone architecture', () {
-    final source = File('lib/web/shared/unified_command_console.dart').readAsStringSync();
+    final source =
+        File('lib/web/shared/unified_command_console.dart').readAsStringSync();
     for (final group in const [
       'MISSION & DELIVERY',
       'CONTENT PIPELINE',
@@ -28,8 +29,10 @@ void main() {
     }
   });
 
-  test('Founder primary navigation excludes duplicate and secondary surfaces', () {
-    final source = File('lib/web/shared/unified_command_console.dart').readAsStringSync();
+  test('Founder primary navigation excludes duplicate and secondary surfaces',
+      () {
+    final source =
+        File('lib/web/shared/unified_command_console.dart').readAsStringSync();
     final founderBlock = source.substring(
       source.indexOf('if (isFounder) {'),
       source.indexOf('} else {', source.indexOf('if (isFounder) {')),
@@ -41,11 +44,13 @@ void main() {
 
   test('desktop shell and inventory are compact and responsive', () {
     final shell = File('lib/main_web.dart').readAsStringSync();
-    final inventory = File('lib/web/founder/mission_control/founder_mission_inventory.dart').readAsStringSync();
+    final inventory =
+        File('lib/web/founder/mission_control/founder_mission_inventory.dart')
+            .readAsStringSync();
     expect(shell, isNot(contains('NavigationRailDestination')));
-    expect(inventory, contains('constraints.maxWidth >= 1050'));
-    expect(inventory, contains("_SummaryMetric('STUDENT LIVE'"));
-    expect(inventory, contains("_SummaryMetric('DRAFT / EXTRA'"));
-    expect(inventory, contains("_SummaryMetric('AUTHORITY BLOCKED'"));
+    expect(inventory, contains('width >= 1200'));
+    expect(inventory, contains("_MetricCard('TOTAL MISSIONS'"));
+    expect(inventory, contains("_MetricCard('LIVE FOR STUDENTS'"));
+    expect(inventory, contains("_MetricCard('NEEDS ATTENTION'"));
   });
 }

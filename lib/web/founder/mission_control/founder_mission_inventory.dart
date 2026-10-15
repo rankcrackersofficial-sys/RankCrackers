@@ -4,6 +4,7 @@ import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:rank_crackers/data/india_states.dart';
 import '../theme/founder_light_theme.dart';
+import 'mission_inventory_summary.dart';
 
 enum MissionPortfolioFilter { all, live, draft, passive, archived, attention }
 
@@ -233,34 +234,22 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
       stream:
           FirebaseFirestore.instance.collection('mission_realms').snapshots(),
-      builder: (context, realmsSnapshot) =>
-          StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-        stream:
-            FirebaseFirestore.instance.collection('recruitments').snapshots(),
-        builder: (context, recruitmentsSnapshot) =>
-            StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-          stream: FirebaseFirestore.instance
-              .collection('student_mission_catalog')
-              .snapshots(),
-          builder: (context, catalogSnapshot) {
-            final error = realmsSnapshot.error ??
-                recruitmentsSnapshot.error ??
-                catalogSnapshot.error;
+      builder: (context, realmsSnapshot) {
+            final error = realmsSnapshot.error;
             if (error != null) {
               return _InventoryErrorState(
                   message: 'Mission inventory unavailable: $error');
             }
 
-            if (!realmsSnapshot.hasData ||
-                !recruitmentsSnapshot.hasData ||
-                !catalogSnapshot.hasData) {
+            if (!realmsSnapshot.hasData) {
               return const _InventoryLoadingState();
             }
 
             final allRows = _reconcile(
               realmsSnapshot.data!.docs,
-              recruitmentsSnapshot.data!.docs,
-              catalogSnapshot.data!.docs,
+            );
+            final inventorySummary = MissionInventorySummary.fromRealms(
+              realmsSnapshot.data!.docs.map((doc) => doc.data()),
             );
 
             final filteredRows = MissionInventoryLogic.filterAndSort(
@@ -299,7 +288,7 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Summary Metrics Cards Bar
-                    _buildSummaryMetricsBar(allRows),
+                    _buildSummaryMetricsBar(allRows, inventorySummary),
                     const SizedBox(height: 20),
 
                     // Filter Control Panel Card
@@ -339,16 +328,18 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
               );
             });
           },
-        ),
-      ),
+    );
     );
   }
 
   // ===========================================================================
   // SUMMARY METRICS BAR
   // ===========================================================================
-  Widget _buildSummaryMetricsBar(List<MissionInventoryRecord> rows) {
-    final int total = rows.length;
+  Widget _buildSummaryMetricsBar(
+    List<MissionInventoryRecord> rows,
+    MissionInventorySummary inventorySummary,
+  ) {
+    final int total = inventorySummary.total;
     final int live = rows.where((r) => r.kind == MissionPortfolioFilter.live).length;
     final int draft = rows.where((r) => r.kind == MissionPortfolioFilter.draft).length;
     final int passive = rows.where((r) => r.kind == MissionPortfolioFilter.passive).length;
@@ -1046,21 +1037,10 @@ class _FounderMissionInventoryState extends State<FounderMissionInventory> {
 
   List<MissionInventoryRecord> _reconcile(
     List<QueryDocumentSnapshot<Map<String, dynamic>>> realms,
-    List<QueryDocumentSnapshot<Map<String, dynamic>>> recruitments,
-    List<QueryDocumentSnapshot<Map<String, dynamic>>> catalog,
   ) {
     final byId = <String, MissionInventoryRecord>{};
     for (final doc in realms) {
       byId.putIfAbsent(doc.id, () => MissionInventoryRecord(doc.id)).realm =
-          doc.data();
-    }
-    for (final doc in recruitments) {
-      byId
-          .putIfAbsent(doc.id, () => MissionInventoryRecord(doc.id))
-          .recruitment = doc.data();
-    }
-    for (final doc in catalog) {
-      byId.putIfAbsent(doc.id, () => MissionInventoryRecord(doc.id)).catalog =
           doc.data();
     }
     return byId.values.toList();
@@ -1074,18 +1054,22 @@ class MissionInventoryRecord {
   MissionInventoryRecord(this.id);
   final String id;
   Map<String, dynamic>? realm;
+  // Legacy projections are intentionally not read by Founder runtime UI.
+  // The canonical mission_realms snapshot is the only source of truth.
   Map<String, dynamic>? recruitment;
   Map<String, dynamic>? catalog;
 
   bool get studentVisible =>
-      catalog?['cardVisible'] == true &&
-      catalog?['userPanelVisible'] == true &&
-      catalog?['archived'] != true;
+      realm?['archived'] != true &&
+      (realm?['cardVisible'] == true ||
+          realm?['userPanelVisible'] == true ||
+          (realm?['visibilityGate'] is Map &&
+              ((realm?['visibilityGate'] as Map)['studentVisible'] == true ||
+                  (realm?['visibilityGate'] as Map)['userPanelVisible'] ==
+                      true)));
 
-  String get rawStatus => (catalog?['studentPublicationState'] ??
-          catalog?['status'] ??
+  String get rawStatus => (realm?['studentPublicationState'] ??
           realm?['status'] ??
-          recruitment?['status'] ??
           'DRAFT')
       .toString()
       .toUpperCase();
@@ -1100,21 +1084,20 @@ class MissionInventoryRecord {
   }
 
   bool get hasCanonicalVariables =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any((s) =>
+      [realm].whereType<Map<String, dynamic>>().any((s) =>
           s['missionVariables'] is Map &&
           (s['missionVariables'] as Map).isNotEmpty);
 
   bool get hasLegacyVariables =>
-      catalog?['variables'] is List &&
-      (catalog?['variables'] as List).isNotEmpty;
+      false;
 
   bool get sourceReady =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any((s) =>
+      [realm].whereType<Map<String, dynamic>>().any((s) =>
           s['canonicalSourceVersionId'] != null ||
           s['sourceAuthorityState'] == 'CANONICAL');
 
   bool get sourceCandidate =>
-      [realm, recruitment, catalog].whereType<Map<String, dynamic>>().any(
+      [realm].whereType<Map<String, dynamic>>().any(
           (s) => s['sourceVersionId'] != null || s['sourceDocumentId'] != null);
 
   bool get needsAttention =>
@@ -1122,52 +1105,43 @@ class MissionInventoryRecord {
       (!sourceReady && !sourceCandidate) ||
       (!hasCanonicalVariables && !hasLegacyVariables);
 
-  String get displayName => (catalog?['displayName'] ??
-          catalog?['title'] ??
+  String get displayName => (realm?['displayName'] ??
+          realm?['title'] ??
           realm?['exam_name'] ??
           realm?['recruitment_name'] ??
-          recruitment?['title'] ??
-          recruitment?['recruitment_name'] ??
           id)
       .toString();
 
   String get organization => (realm?['organization'] ??
-          recruitment?['org'] ??
-          catalog?['org'] ??
+          realm?['org'] ??
           '')
       .toString();
 
-  String get year => (catalog?['examYear'] ??
-          catalog?['year'] ??
+  String get year => (realm?['examYear'] ??
+          realm?['year'] ??
           realm?['exam_year'] ??
-          recruitment?['year'] ??
           'YEAR PENDING')
       .toString();
 
-  String get category => (catalog?['examCategory'] ??
-          catalog?['exam_category'] ??
+  String get category => (realm?['examCategory'] ??
           realm?['exam_category'] ??
-          recruitment?['examCategory'] ??
+          realm?['exam_category'] ??
           'CATEGORY PENDING')
       .toString();
 
   // Governed Jurisdiction Resolution (ZERO text-based name heuristics)
-  String? get rawJurisdiction => (catalog?['jurisdictionLevel'] ??
-          catalog?['jurisdiction'] ??
-          realm?['jurisdictionLevel'] ??
+  String? get rawJurisdiction => (realm?['jurisdictionLevel'] ??
           realm?['jurisdiction'] ??
-          recruitment?['jurisdictionLevel'] ??
-          recruitment?['jurisdiction'])
+          realm?['jurisdictionLevel'] ??
+          realm?['jurisdiction'])
       ?.toString()
       .toUpperCase();
 
   String? get stateCode {
-    final raw = (catalog?['stateCode'] ??
-            catalog?['state_code'] ??
-            realm?['stateCode'] ??
+    final raw = (realm?['stateCode'] ??
             realm?['state_code'] ??
-            recruitment?['stateCode'] ??
-            recruitment?['state_code'])
+            realm?['stateCode'] ??
+            realm?['state_code'])
         ?.toString()
         .trim()
         .toUpperCase();
@@ -1180,7 +1154,7 @@ class MissionInventoryRecord {
   bool get isCentral {
     if (rawJurisdiction == 'CENTRAL') return true;
     if (rawJurisdiction == null && stateCode == null) {
-      final isCentralFlag = catalog?['isCentralAuthority'] ?? realm?['isCentralAuthority'];
+      final isCentralFlag = realm?['isCentralAuthority'];
       if (isCentralFlag == true) return true;
     }
     return false;
@@ -1226,11 +1200,9 @@ class MissionInventoryRecord {
       return null;
     }
 
-    final times = [
-      parseVal(catalog?['updatedAt'] ?? catalog?['updated_at']),
-      parseVal(realm?['updatedAt'] ?? realm?['updated_at']),
-      parseVal(recruitment?['updatedAt'] ?? recruitment?['updated_at']),
-    ].whereType<DateTime>().toList();
+    final times = [parseVal(realm?['updatedAt'] ?? realm?['updated_at'])]
+        .whereType<DateTime>()
+        .toList();
 
     if (times.isEmpty) return null;
     times.sort((a, b) => b.compareTo(a));

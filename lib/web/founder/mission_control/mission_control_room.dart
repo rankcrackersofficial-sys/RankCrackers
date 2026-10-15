@@ -152,8 +152,6 @@ class _SelectedMissionDetail extends StatelessWidget {
     return FutureBuilder<List<dynamic>>(
       future: Future.wait<dynamic>([
         firestore.collection('mission_realms').doc(missionId).get(),
-        firestore.collection('recruitments').doc(missionId).get(),
-        firestore.collection('student_mission_catalog').doc(missionId).get(),
         firestore
             .collection('mission_realms')
             .doc(missionId)
@@ -170,30 +168,24 @@ class _SelectedMissionDetail extends StatelessWidget {
         }
         final realm =
             snapshot.data![0] as DocumentSnapshot<Map<String, dynamic>>;
-        final recruitment =
-            snapshot.data![1] as DocumentSnapshot<Map<String, dynamic>>;
-        final catalog =
-            snapshot.data![2] as DocumentSnapshot<Map<String, dynamic>>;
         final documents =
-            snapshot.data![3] as QuerySnapshot<Map<String, dynamic>>;
+            snapshot.data![1] as QuerySnapshot<Map<String, dynamic>>;
         final realmData = realm.data() ?? const <String, dynamic>{};
-        final recruitmentData = recruitment.data() ?? const <String, dynamic>{};
-        final catalogData = catalog.data() ?? const <String, dynamic>{};
-        final name = (catalogData['displayName'] ??
-                catalogData['title'] ??
-                recruitmentData['title'] ??
-                recruitmentData['recruitment_name'] ??
+        final name = (realmData['displayName'] ??
+                realmData['title'] ??
                 realmData['exam_name'] ??
                 realmData['recruitment_name'] ??
                 missionId)
             .toString();
-        final studentVisible = catalog.exists &&
-            catalogData['cardVisible'] == true &&
-            catalogData['userPanelVisible'] == true &&
-            catalogData['archived'] != true;
-        final status = (realmData['status'] ??
-                catalogData['studentPublicationState'] ??
-                recruitmentData['status'] ??
+        final visibilityGate = realmData['visibilityGate'];
+        final studentVisible = realmData['archived'] != true &&
+            (realmData['cardVisible'] == true ||
+                realmData['userPanelVisible'] == true ||
+                (visibilityGate is Map &&
+                    (visibilityGate['studentVisible'] == true ||
+                        visibilityGate['userPanelVisible'] == true)));
+        final status = (realmData['studentPublicationState'] ??
+                realmData['status'] ??
                 'UNKNOWN')
             .toString()
             .toUpperCase();
@@ -379,14 +371,6 @@ class _MissionBoundTarget extends StatelessWidget {
     return FutureBuilder<List<DocumentSnapshot<Map<String, dynamic>>>>(
       future: Future.wait([
         FirebaseFirestore.instance
-            .collection('student_mission_catalog')
-            .doc(missionId)
-            .get(),
-        FirebaseFirestore.instance
-            .collection('recruitments')
-            .doc(missionId)
-            .get(),
-        FirebaseFirestore.instance
             .collection('mission_realms')
             .doc(missionId)
             .get(),
@@ -398,9 +382,8 @@ class _MissionBoundTarget extends StatelessWidget {
         if (!snapshot.hasData)
           return const Center(child: CircularProgressIndicator());
         final mission = <String, dynamic>{};
-        for (final doc in snapshot.data!) {
-          if (doc.exists) mission.addAll(doc.data() ?? const {});
-        }
+        final doc = snapshot.data!.single;
+        if (doc.exists) mission.addAll(doc.data() ?? const {});
         if (mission.isEmpty)
           return Center(
               child: Text('No canonical mission data found for $missionId.'));
