@@ -37,7 +37,6 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   bool isChangingState = false;
   bool _isLoading = false;
   String _selectedJurisdiction = 'CENTRAL'; // 'CENTRAL' or 'STATE'
-  bool _sscGroupExpanded = true;
 
   final TextEditingController stateController = TextEditingController();
   final TextEditingController examSearchController = TextEditingController();
@@ -96,8 +95,12 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   Future<void> _saveMissionSelection(Recruitment recruitment) async {
     // 1. Authoritative server persistence to users/{uid} FIRST (fail-closed before local cache mutation)
     if (widget.serverSelectionSaverForTest != null) {
-      final user = FirebaseAuth.instance.currentUser;
-      final uid = user?.uid ?? 'test_uid';
+      String uid = 'test_uid';
+      try {
+        uid = FirebaseAuth.instance.currentUser?.uid ?? 'test_uid';
+      } catch (_) {
+        uid = 'test_uid';
+      }
       await widget.serverSelectionSaverForTest!(
         uid,
         {
@@ -108,7 +111,6 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           'selectedRecruitmentId': recruitment.id,
           'selectedVariantId': recruitment.variantCode,
           'selectedBlueprintId': recruitment.examBlueprintId,
-          'updatedAt': FieldValue.serverTimestamp(),
         },
       );
     } else if (!SessionManager.disableFirebaseForTest) {
