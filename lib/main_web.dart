@@ -31,12 +31,17 @@ class RankCrackersWebApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'RankCrackers Web',
-      theme: ThemeData.dark(useMaterial3: true).copyWith(
+      theme: ThemeData.light(useMaterial3: true).copyWith(
         scaffoldBackgroundColor: rcBg,
-        colorScheme: const ColorScheme.dark(
+        colorScheme: const ColorScheme.light(
           primary: rcGold,
           secondary: rcGreen,
           surface: rcSurface,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: rcSurface,
+          foregroundColor: rcText,
+          elevation: 0,
         ),
       ),
       home: Uri.base.path == '/admin-invite'
@@ -235,7 +240,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         width: 1.5,
                       ),
                     ),
-                    child: Image.asset("assets/images/logo.png"),
+                    child: const Text(
+                      'RC',
+                      style: TextStyle(
+                        color: rcGold,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -243,7 +255,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     'RankCrackers',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: rcText,
                       fontSize: 28,
                       fontWeight: FontWeight.w900,
                     ),
@@ -257,7 +269,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       vertical: 4,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white10,
+                      color: rcSurfaceAlt,
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: rcGold.withOpacity(0.10)),
                     ),
@@ -288,7 +300,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w400,
-                            color: Colors.white60,
+                            color: rcMuted,
                           ),
                         ),
                       ],
@@ -314,11 +326,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     _busy
                         ? (_signupMode
-                              ? 'Creating account...'
-                              : 'Signing in...')
+                            ? 'Creating account...'
+                            : 'Signing in...')
                         : (_signupMode
-                              ? 'Create Account & Join'
-                              : 'Email / Password Login'),
+                            ? 'Create Account & Join'
+                            : 'Email / Password Login'),
                   ),
                 ),
                 TextButton(
@@ -418,7 +430,7 @@ class _WebShellState extends State<WebShell> {
                   const Text(
                     'ACCOUNT INACTIVE',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: rcText,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -426,7 +438,7 @@ class _WebShellState extends State<WebShell> {
                   const SizedBox(height: 8),
                   const Text(
                     'Admin access is not active. Contact Founder.',
-                    style: TextStyle(color: Colors.white38),
+                    style: const TextStyle(color: rcMuted),
                   ),
                   const SizedBox(height: 24),
                   OutlinedButton(
@@ -442,9 +454,8 @@ class _WebShellState extends State<WebShell> {
         final permissions = Map<String, dynamic>.from(
           userDoc['permissions'] ?? {},
         );
-        final roleMode = _isFounder
-            ? ConsoleRoleMode.founder
-            : ConsoleRoleMode.admin;
+        final roleMode =
+            _isFounder ? ConsoleRoleMode.founder : ConsoleRoleMode.admin;
 
         return Scaffold(
           appBar: _buildCommandAppBar(roleMode),
@@ -452,9 +463,8 @@ class _WebShellState extends State<WebShell> {
             roleMode: roleMode,
             permissions: permissions,
             userDoc: userDoc,
-            founderDeliveryPreviewBuilder: _isFounder
-                ? (_) => const UserConsole()
-                : null,
+            founderDeliveryPreviewBuilder:
+                _isFounder ? (_) => const UserConsole() : null,
           ),
         );
       },
@@ -465,19 +475,7 @@ class _WebShellState extends State<WebShell> {
     return AppBar(
       title: Row(
         mainAxisSize: MainAxisSize.min,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(6),
-            child: Image.asset(
-              'assets/images/logo.png',
-              width: 28,
-              height: 28,
-              fit: BoxFit.cover,
-            ),
-          ),
-          const SizedBox(width: 10),
-          const Text('RankCrackers'),
-        ],
+        children: const [Text('RankCrackers')],
       ),
       actions: [
         IconButton(
@@ -495,16 +493,6 @@ class _WebShellState extends State<WebShell> {
       title: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(6),
-            child: Image.asset(
-              'assets/images/logo.png',
-              width: 30,
-              height: 30,
-              fit: BoxFit.cover,
-            ),
-          ),
-          const SizedBox(width: 12),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
@@ -515,7 +503,7 @@ class _WebShellState extends State<WebShell> {
               ),
               Text(
                 isFounder ? 'Founder Console' : 'Admin Panel',
-                style: const TextStyle(fontSize: 11, color: Colors.white54),
+                style: const TextStyle(fontSize: 11, color: rcMuted),
               ),
             ],
           ),
@@ -545,13 +533,12 @@ class _StudentMobileOnlyScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: 72,
-                  height: 72,
-                  fit: BoxFit.cover,
+              const Text(
+                'RankCrackers',
+                style: TextStyle(
+                  color: rcText,
+                  fontSize: 26,
+                  fontWeight: FontWeight.w900,
                 ),
               ),
               const SizedBox(height: 20),
@@ -568,7 +555,7 @@ class _StudentMobileOnlyScreen extends StatelessWidget {
               const Text(
                 'Founder and Admin consoles run on web. Please use the RankCrackers mobile app for student learning, missions, and dashboard access.',
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white60, height: 1.5),
+                style: TextStyle(color: rcMuted, height: 1.5),
               ),
               const SizedBox(height: 24),
               OutlinedButton.icon(
@@ -626,9 +613,8 @@ class UserConsole extends StatelessWidget {
                           visibility['userPanelVisible'] == true) &&
                       data['archived'] != true;
                 }).toList();
-                final drafts = docs
-                    .where((doc) => !live.contains(doc))
-                    .toList();
+                final drafts =
+                    docs.where((doc) => !live.contains(doc)).toList();
                 return ListView(
                   children: [
                     const Text(
@@ -647,7 +633,7 @@ class UserConsole extends StatelessWidget {
                       const Text(
                         'FOUNDER DRAFTS',
                         style: TextStyle(
-                          color: Colors.white54,
+                          color: rcMuted,
                           fontSize: 11,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.2,
@@ -679,8 +665,8 @@ class UserConsole extends StatelessWidget {
                               final width = constraints.maxWidth >= 1000
                                   ? (constraints.maxWidth - 24) / 3
                                   : constraints.maxWidth >= 650
-                                  ? (constraints.maxWidth - 12) / 2
-                                  : constraints.maxWidth;
+                                      ? (constraints.maxWidth - 12) / 2
+                                      : constraints.maxWidth;
                               return SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
@@ -747,15 +733,15 @@ class _DeliveryMissionGrid extends StatelessWidget {
     if (docs.isEmpty)
       return const Text(
         'No missions in this delivery state.',
-        style: TextStyle(color: Colors.white54),
+        style: const TextStyle(color: rcMuted),
       );
     return LayoutBuilder(
       builder: (context, constraints) {
         final width = constraints.maxWidth >= 1050
             ? (constraints.maxWidth - 24) / 3
             : constraints.maxWidth >= 680
-            ? (constraints.maxWidth - 12) / 2
-            : constraints.maxWidth;
+                ? (constraints.maxWidth - 12) / 2
+                : constraints.maxWidth;
         return Wrap(
           spacing: 12,
           runSpacing: 12,
@@ -785,14 +771,12 @@ class _MissionDeliveryTruthCard extends StatelessWidget {
   final Map<String, dynamic> catalog;
   @override
   Widget build(BuildContext context) {
-    final title =
-        (catalog['displayName'] ??
-                catalog['title'] ??
-                catalog['name'] ??
-                missionId)
-            .toString();
-    final live =
-        catalog['cardVisible'] == true &&
+    final title = (catalog['displayName'] ??
+            catalog['title'] ??
+            catalog['name'] ??
+            missionId)
+        .toString();
+    final live = catalog['cardVisible'] == true &&
         catalog['userPanelVisible'] == true &&
         catalog['archived'] != true;
     final publication =
@@ -825,7 +809,7 @@ class _MissionDeliveryTruthCard extends StatelessWidget {
                     Icon(
                       live ? Icons.visibility : Icons.visibility_off_outlined,
                       size: 18,
-                      color: live ? Colors.greenAccent : Colors.white38,
+                      color: live ? rcGreen : rcMuted,
                     ),
                   ],
                 ),
@@ -845,10 +829,10 @@ class _MissionDeliveryTruthCard extends StatelessWidget {
                 Text(
                   authority
                       ? (live
-                            ? 'Next action: Monitor delivery health.'
-                            : 'Next action: Complete publish readiness.')
+                          ? 'Next action: Monitor delivery health.'
+                          : 'Next action: Complete publish readiness.')
                       : 'Next action: Repair Founder authority.',
-                  style: const TextStyle(fontSize: 11, color: Colors.white60),
+                  style: const TextStyle(fontSize: 11, color: rcMuted),
                 ),
               ],
             ),
@@ -869,7 +853,7 @@ class _MissionDeliveryTruthCard extends StatelessWidget {
                 label,
                 style: const TextStyle(
                   fontSize: 9,
-                  color: Colors.white38,
+                  color: rcMuted,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -880,7 +864,7 @@ class _MissionDeliveryTruthCard extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.bold,
-                  color: warn ? Colors.orangeAccent : Colors.white70,
+                  color: warn ? rcGold : rcMuted,
                 ),
               ),
             ),
@@ -944,7 +928,7 @@ class _DeliveryReviewCard extends StatelessWidget {
                           ),
                           Text(
                             subtitle,
-                            style: const TextStyle(color: Colors.white54),
+                            style: const TextStyle(color: rcMuted),
                           ),
                         ],
                       ),
@@ -997,7 +981,7 @@ class _DeliveryReviewCard extends StatelessWidget {
               subtitle,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(color: Colors.white54),
+              style: const TextStyle(color: rcMuted),
             ),
             const SizedBox(height: 10),
             Expanded(child: _ReviewRecordList(query: _query(), limit: 4)),
@@ -1038,14 +1022,12 @@ class _ReviewRecordList extends StatelessWidget {
           separatorBuilder: (_, __) => const Divider(color: rcLine),
           itemBuilder: (context, index) {
             final data = docs[index].data();
-            final displayTitle =
-                data['title'] ??
+            final displayTitle = data['title'] ??
                 data['name'] ??
                 data['examName'] ??
                 data['fileName'] ??
                 docs[index].id;
-            final displayBody =
-                data['body'] ??
+            final displayBody = data['body'] ??
                 data['description'] ??
                 data['status'] ??
                 data['documentStatus'] ??

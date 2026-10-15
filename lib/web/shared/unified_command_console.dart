@@ -10,6 +10,7 @@ import '../founder/health/founder_student_health_web.dart';
 import '../founder/mission_control/mission_control_room.dart';
 import '../founder/mission_control/mission_publish_readiness_panel.dart';
 import '../founder/system/founder_system_operations_web.dart';
+import '../founder/revenue/revenue_subscription_control_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
 import '../admin/admin_my_access_panel.dart';
 
@@ -60,7 +61,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 
     return Scaffold(
       backgroundColor: FounderLightTheme.bg,
-      drawer: !showLeftSidebar ? Drawer(child: _buildLeftSidebar(modules)) : null,
+      drawer:
+          !showLeftSidebar ? Drawer(child: _buildLeftSidebar(modules)) : null,
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -76,7 +78,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
             child: Column(
               children: [
                 // TOP OPERATIONAL HEADER BAR
-                _buildTopOperationalHeader(context, currentModule, showLeftSidebar),
+                _buildTopOperationalHeader(
+                    context, currentModule, showLeftSidebar),
 
                 // ACTIVE MODULE CONTENT WORKSPACE
                 Expanded(
@@ -108,7 +111,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           Container(
             padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
             decoration: const BoxDecoration(
-              border: Border(bottom: BorderSide(color: FounderLightTheme.border)),
+              border:
+                  Border(bottom: BorderSide(color: FounderLightTheme.border)),
             ),
             child: Row(
               children: [
@@ -159,31 +163,43 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
               children: [
                 _buildNavGroupHeader('OPERATIONS'),
-                _buildNavItem(modules, 'Mission Control', Icons.explore_outlined),
+                _buildNavItem(
+                    modules, 'Mission Control', Icons.explore_outlined),
                 if (widget.founderDeliveryPreviewBuilder != null)
-                  _buildNavItem(modules, 'Mission Delivery Preview', Icons.visibility_outlined),
-
+                  _buildNavItem(modules, 'Mission Delivery Preview',
+                      Icons.visibility_outlined),
                 const SizedBox(height: 16),
                 _buildNavGroupHeader('CONTENT PIPELINE'),
-                _buildNavItem(modules, 'Document Command Center', Icons.description_outlined),
-                _buildNavItem(modules, 'Verification Center', Icons.verified_user_outlined),
-                _buildNavItem(modules, 'Factory Hub', Icons.settings_suggest_outlined),
+                _buildNavItem(modules, 'Document Command Center',
+                    Icons.description_outlined),
+                _buildNavItem(modules, 'Verification Center',
+                    Icons.verified_user_outlined),
+                _buildNavItem(
+                    modules, 'Factory Hub', Icons.settings_suggest_outlined),
                 _buildNavItem(modules, 'Publish Gate', Icons.publish_outlined),
-
                 const SizedBox(height: 16),
                 _buildNavGroupHeader('STUDENT & SYSTEM'),
-                _buildNavItem(modules, 'Student Delivery Health', Icons.visibility_outlined),
-                _buildNavItem(modules, 'Admin Governance', Icons.people_outline_rounded),
-                _buildNavItem(modules, 'System Ops / Dev Mode', Icons.computer_outlined),
-
+                _buildNavItem(modules, 'Student Delivery Health',
+                    Icons.visibility_outlined),
+                _buildNavItem(modules, 'Revenue & Subscriptions',
+                    Icons.payments_outlined),
+                _buildNavItem(
+                    modules, 'Admin Governance', Icons.people_outline_rounded),
+                _buildNavItem(
+                    modules, 'System Ops / Dev Mode', Icons.computer_outlined),
                 if (widget.roleMode == ConsoleRoleMode.admin) ...[
                   const SizedBox(height: 16),
                   _buildNavGroupHeader('ADMIN WORK'),
-                  _buildNavItem(modules, 'My Work Queue', Icons.assignment_outlined),
-                  _buildNavItem(modules, 'Mission Control Room', Icons.explore_outlined),
-                  _buildNavItem(modules, 'Study Master Library', Icons.menu_book_outlined),
-                  _buildNavItem(modules, 'Intelligence Room', Icons.lightbulb_outline_rounded),
-                  _buildNavItem(modules, 'Recent Activity Log', Icons.history_rounded),
+                  _buildNavItem(
+                      modules, 'My Work Queue', Icons.assignment_outlined),
+                  _buildNavItem(
+                      modules, 'Mission Control Room', Icons.explore_outlined),
+                  _buildNavItem(modules, 'Study Master Library',
+                      Icons.menu_book_outlined),
+                  _buildNavItem(modules, 'Intelligence Room',
+                      Icons.lightbulb_outline_rounded),
+                  _buildNavItem(
+                      modules, 'Recent Activity Log', Icons.history_rounded),
                   _buildNavItem(modules, 'My Access', Icons.shield_outlined),
                 ],
               ],
@@ -277,9 +293,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
           decoration: BoxDecoration(
-            color: isSelected
-                ? FounderLightTheme.primaryDark
-                : Colors.transparent,
+            color:
+                isSelected ? FounderLightTheme.primaryDark : Colors.transparent,
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
@@ -288,7 +303,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                 icon,
                 size: 18,
                 color: isSelected
-                    ? Colors.white
+                    ? FounderLightTheme.surface
                     : FounderLightTheme.textSecondary,
               ),
               const SizedBox(width: 12),
@@ -299,7 +314,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                     fontSize: 12,
                     fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                     color: isSelected
-                        ? Colors.white
+                        ? FounderLightTheme.surface
                         : FounderLightTheme.textPrimary,
                   ),
                 ),
@@ -340,7 +355,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
         children: [
           if (!showLeftSidebar)
             IconButton(
-              icon: const Icon(Icons.menu_rounded, color: FounderLightTheme.primaryDark),
+              icon: const Icon(Icons.menu_rounded,
+                  color: FounderLightTheme.primaryDark),
               onPressed: () => Scaffold.of(context).openDrawer(),
               tooltip: 'Open navigation',
             ),
@@ -401,7 +417,11 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           ),
 
           const SizedBox(width: 16),
-          const VerticalDivider(width: 1, indent: 18, endIndent: 18, color: FounderLightTheme.border),
+          const VerticalDivider(
+              width: 1,
+              indent: 18,
+              endIndent: 18,
+              color: FounderLightTheme.border),
           const SizedBox(width: 16),
 
           // User Identity Card
@@ -415,7 +435,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                   style: const TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w800,
-                    color: Colors.white,
+                    color: FounderLightTheme.surface,
                   ),
                 ),
               ),
@@ -489,6 +509,10 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           group: 'STUDENT & HEALTH',
           label: 'Student Delivery Health',
           builder: (_) => const FounderStudentHealthWeb()));
+      list.add(_ConsoleModule(
+          group: 'REVENUE & GROWTH',
+          label: 'Revenue & Subscriptions',
+          builder: (_) => const RevenueSubscriptionControlWeb()));
       list.add(_ConsoleModule(
           group: 'SYSTEM & GOVERNANCE',
           label: 'Admin Governance',
@@ -812,7 +836,8 @@ class _PremiumLandingPage extends StatelessWidget {
               ),
               child: const Text(
                 'Module interface active. Select a target record or mission in Mission Control to load details.',
-                style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 13),
+                style:
+                    TextStyle(color: FounderLightTheme.textMuted, fontSize: 13),
               ),
             )
           else
@@ -842,7 +867,8 @@ class _PremiumLandingPage extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(item.icon, color: FounderLightTheme.gold, size: 28),
+                            Icon(item.icon,
+                                color: FounderLightTheme.gold, size: 28),
                             const Spacer(),
                             Text(
                               item.title,

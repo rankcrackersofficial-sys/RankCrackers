@@ -74,10 +74,10 @@
       object-fit: cover;
     }
 
-    .splash-logo {
-      width: 180px;
-      height: 180px;
-      object-fit: contain;
+    .splash-brand {
+      color: #0f172a;
+      font: 800 28px system-ui, sans-serif;
+      letter-spacing: .02em;
     }
 
     .bottom {
@@ -109,7 +109,7 @@
   </script>
 </head>
 <body>
-  <img id="splash" class="center splash-logo" aria-hidden="true" src="assets/assets/images/logo.png" alt="RankCrackers">
+  <div id="splash" class="center splash-brand" aria-hidden="true">RankCrackers</div>
   <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs" type="module"></script>
   <script type="module">
   var { pdfjsLib } = globalThis;

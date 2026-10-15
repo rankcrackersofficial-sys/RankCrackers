@@ -36,7 +36,7 @@ class RcField extends StatelessWidget {
       validator: validator,
       onChanged: onChanged,
       onFieldSubmitted: onSubmitted,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(color: rcText),
       decoration: InputDecoration(
         labelText: label,
         hintText: hintText,
@@ -52,7 +52,8 @@ class RcField extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: rcGold, width: 1.6),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
       ),
     );
   }

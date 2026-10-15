@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'rc_colors.dart';
 
 class MissionProcessingHealthBar extends StatelessWidget {
   final String missionId;
@@ -29,7 +30,9 @@ class MissionProcessingHealthBar extends StatelessWidget {
 
         final data = snapshot.data!.data() ?? {};
         final status = data['status']?.toString() ?? 'DRAFT';
-        final isVerified = data['verified'] == true || status == 'VERIFIED' || status == 'ACTIVE';
+        final isVerified = data['verified'] == true ||
+            status == 'VERIFIED' ||
+            status == 'ACTIVE';
 
         final completedUnits = (data['completedUnits'] as num?)?.toDouble() ??
             (data['completedSteps'] as num?)?.toDouble();
@@ -42,7 +45,9 @@ class MissionProcessingHealthBar extends StatelessWidget {
         if (isVerified) {
           progress = 1.0;
           label = 'Pipeline: $status (Verified)';
-        } else if (completedUnits != null && totalUnits != null && totalUnits > 0) {
+        } else if (completedUnits != null &&
+            totalUnits != null &&
+            totalUnits > 0) {
           progress = (completedUnits / totalUnits).clamp(0.0, 1.0);
           final pct = (progress * 100).toInt();
           label = 'Pipeline: $status ($pct%)';
@@ -65,13 +70,13 @@ class MissionProcessingHealthBar extends StatelessWidget {
           children: [
             Text(
               'Mission: $missionId',
-              style: const TextStyle(color: Colors.white70, fontSize: 10),
+              style: const TextStyle(color: rcMuted, fontSize: 10),
             ),
             const Spacer(),
             Text(
               statusLabel,
               style: TextStyle(
-                color: hasProgress ? Colors.amber : Colors.white38,
+                color: hasProgress ? rcGold : rcMuted,
                 fontSize: 10,
                 fontWeight: FontWeight.bold,
               ),
@@ -85,13 +90,13 @@ class MissionProcessingHealthBar extends StatelessWidget {
             minHeight: 8,
             borderRadius: BorderRadius.circular(99),
             valueColor: const AlwaysStoppedAnimation<Color>(Colors.amber),
-            backgroundColor: Colors.white12,
+            backgroundColor: rcSurfaceAlt,
           )
         else
           Container(
             height: 8,
             decoration: BoxDecoration(
-              color: Colors.white12,
+              color: rcSurfaceAlt,
               borderRadius: BorderRadius.circular(99),
             ),
           ),

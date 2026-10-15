@@ -101,7 +101,7 @@ class RcDataStateMessage extends StatelessWidget {
             Text(
               title,
               style: const TextStyle(
-                color: Colors.white,
+                color: rcText,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),

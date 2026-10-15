@@ -16,11 +16,14 @@ class MainNavigationShell extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final int effectiveIndex = navigationShell.currentIndex;
 
+    // Root dashboard may exit normally. Other tabs must always provide a
+    // deterministic back path to the dashboard instead of swallowing back.
+    final canPopFromShell = navigationShell.currentIndex == 0;
     return PopScope(
-      canPop: false,
+      canPop: canPopFromShell,
       onPopInvokedWithResult: (didPop, result) {
         if (didPop) return;
-        if (navigationShell.currentIndex != 0) {
+        if (!canPopFromShell) {
           navigationShell.goBranch(0, initialLocation: true);
         }
       },
