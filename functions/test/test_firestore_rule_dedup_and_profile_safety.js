@@ -27,8 +27,11 @@ test('student profile create and update require the verified canonical phone cla
   assert.match(rules, /function hasVerifiedCanonicalPhoneClaim\(\)/);
   assert.match(rules, /function isSafeStudentProfileCreate\(userId\)/);
   assert.match(rules, /function isSafeStudentProfileUpdate\(userId\)/);
-  assert.match(rules, /allow create:\s*if isFounder\(\) \|\| isSafeStudentProfileCreate\(userId\)/);
-  assert.match(rules, /allow update:\s*if isFounder\(\) \|\| isSafeStudentProfileUpdate\(userId\)/);
+  // Delegated Admins must not gain profile-authority writes through the
+  // broad isFounder() helper; only the actual Founder claim may use the
+  // server-owned profile mutation path.
+  assert.match(rules, /allow create:\s*if isActualFounder\(\) \|\| isSafeStudentProfileCreate\(userId\)/);
+  assert.match(rules, /allow update:\s*if isActualFounder\(\) \|\| isSafeStudentProfileUpdate\(userId\)/);
   assert.doesNotMatch(rules, /allow create:\s*if request\.auth != null && request\.auth\.uid == userId\s*;/);
   assert.doesNotMatch(rules, /allow update:\s*if request\.auth != null && request\.auth\.uid == userId/);
   assert.match(rules, /'role', 'accessLevel', 'founder', 'admin'/);
