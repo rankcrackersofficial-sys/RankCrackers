@@ -3,8 +3,10 @@
 const assert = require('assert');
 const {
   assertTranslationRequest,
+  buildTranslationIssue,
   normalizeMissionTranslationPolicy,
   resolveStudentDelivery,
+  validateTranslationCandidate,
 } = require('../services/translation_mission_policy');
 
 function policy(overrides = {}) {
@@ -24,6 +26,35 @@ const requested = assertTranslationRequest(policy(), {
 assert.strictEqual(requested.targetLanguage, 'HINDI');
 assert.strictEqual(requested.status, 'REQUESTED');
 
+const candidate = validateTranslationCandidate(requested, {
+  sourceHash: 'sha-1',
+  sourceVersion: 'v1',
+  targetLanguage: 'HINDI',
+  provider: 'approved-provider',
+  providerReady: true,
+  glossaryVersion: 'glossary-v1',
+  semanticStructureValid: true,
+  text: 'हिंदी अध्ययन सामग्री',
+});
+assert.strictEqual(candidate.reviewStatus, 'PENDING');
+assert.strictEqual(candidate.publicationState, 'REVIEW_REQUIRED');
+
+assert.throws(
+  () => validateTranslationCandidate(requested, { ...candidate, providerReady: false }),
+  error => error.code === 'TRANSLATION_PROVIDER_NOT_READY',
+);
+assert.throws(
+  () => validateTranslationCandidate(requested, { ...candidate, semanticStructureValid: false }),
+  error => error.code === 'SEMANTIC_STRUCTURE_INVALID',
+);
+
+const issue = buildTranslationIssue(requested, {
+  code: 'GLOSSARY_MISMATCH',
+  message: 'Term differs from the approved glossary.',
+});
+assert.strictEqual(issue.status, 'OPEN');
+assert.strictEqual(issue.sourceVersion, 'v1');
+
 assert.throws(
   () => normalizeMissionTranslationPolicy({ missionId: 'm', cycleId: 'c', paperId: 'p' }),
   error => error.code === 'TRANSLATION_BINDING_REQUIRED',
@@ -32,6 +63,14 @@ assert.throws(
 assert.throws(
   () => assertTranslationRequest(policy({ assessmentLanguageSection: true }), { sourceHash: 's', sourceVersion: 'v' }),
   error => error.code === 'ASSESSMENT_LANGUAGE_EXCLUDED',
+);
+
+assert.throws(
+  () => assertTranslationRequest(policy({ examFamily: 'SSC_CGL', sectionType: 'LANGUAGE_ASSESSMENT' }), {
+    sourceHash: 's',
+    sourceVersion: 'v',
+  }),
+  error => error.code === 'EXAM_LANGUAGE_SECTION_EXCLUDED',
 );
 
 const approved = resolveStudentDelivery(
