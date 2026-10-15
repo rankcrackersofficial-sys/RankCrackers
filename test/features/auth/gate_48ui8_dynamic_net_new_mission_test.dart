@@ -324,7 +324,7 @@ void main() {
       expect(find.text('Air Force Common Admission Test'), findsOneWidget);
     });
 
-    testWidgets('3. QUICK START ON NET-NEW MISSION: Saves exact immutable missionId and enters Dashboard shell', (tester) async {
+    testWidgets('3. SINGLE ENTRY ON NET-NEW MISSION: Saves exact immutable missionId and enters Dashboard shell', (tester) async {
       await tester.binding.setSurfaceSize(const Size(800, 1400));
       await tester.pumpWidget(createTestApp(missions: [afcatPublished]));
       await tester.pumpAndSettle();
@@ -333,11 +333,10 @@ void main() {
       await tester.tap(find.text('Air Force Common Admission Test'));
       await tester.pumpAndSettle();
 
-      // Tap QUICK START
-      final quickStartButton = find.widgetWithText(OutlinedButton, 'QUICK START').first;
-      expect(quickStartButton, findsOneWidget);
+      final enterMissionButton = find.widgetWithText(ElevatedButton, 'ENTER MISSION').first;
+      expect(enterMissionButton, findsOneWidget);
 
-      await tester.tap(quickStartButton);
+      await tester.tap(enterMissionButton);
       await tester.pumpAndSettle();
       await tester.pump(const Duration(seconds: 5));
 
@@ -350,7 +349,7 @@ void main() {
       expect(syncUser.examName, equals('Air Force Common Admission Test'));
     });
 
-    testWidgets('4. SMART START FAIL-CLOSED: Disabled when smartEntryEnabled == false on net-new mission', (tester) async {
+    testWidgets('4. SMART/DIAGNOSTIC ENTRY IS RETIRED: Only ordinary entry is shown', (tester) async {
       await tester.binding.setSurfaceSize(const Size(800, 1400));
       await tester.pumpWidget(createTestApp(missions: [afcatPublished]));
       await tester.pumpAndSettle();
@@ -359,11 +358,9 @@ void main() {
       await tester.tap(find.text('Air Force Common Admission Test'));
       await tester.pumpAndSettle();
 
-      // Smart Start should be disabled (onPressed == null)
-      final smartStartFinder = find.widgetWithText(ElevatedButton, 'SMART START');
-      expect(smartStartFinder, findsOneWidget);
-      final buttonWidget = tester.widget<ElevatedButton>(smartStartFinder);
-      expect(buttonWidget.onPressed, isNull, reason: 'Smart Start must be disabled when smartEntryEnabled is false');
+      expect(find.text('SMART START'), findsNothing);
+      expect(find.text('QUICK START'), findsNothing);
+      expect(find.widgetWithText(ElevatedButton, 'ENTER MISSION'), findsOneWidget);
     });
 
     testWidgets('5. AUTHORITY GROUPING & FALLBACK: Unknown authority fails cleanly to fallback without guessing', (tester) async {

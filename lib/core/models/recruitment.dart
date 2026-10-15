@@ -139,36 +139,15 @@ class Recruitment extends Equatable {
     return true;
   }
 
-  /// QUICK START = Select Mission + Enter Dashboard
+  /// Canonical entry = Select Mission + Enter Dashboard.
   bool get canQuickStart => canEnterMissionShell;
 
-  /// SMART START = Diagnostic / Smart Entry (Fail-Closed)
-  /// Only enabled when diagnostic / smart entry readiness is explicitly verified.
-  bool get canSmartStart =>
-      canEnterMissionShell &&
-      smartEntryEnabled &&
-      (status.toUpperCase() == 'AVAILABLE' ||
-          status.toUpperCase() == 'LIVE' ||
-          status.toUpperCase() == 'PUBLISHED' ||
-          status.toUpperCase() == 'ACTIVE' ||
-          status.toUpperCase() == 'CATALOG_VISIBLE' ||
-          status.toUpperCase() == 'MISSION_COMPLETE' ||
-          status.toUpperCase() == 'MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE');
+  /// Legacy compatibility surface. Smart/diagnostic entry is retired from the
+  /// student journey; all mission access uses the single canonical entry.
+  bool get canSmartStart => false;
 
-  /// Full academic startability (Legacy / Strict Academic)
-  bool get isStartable =>
-      (quickEntryEnabled || smartEntryEnabled) &&
-      !founderHold &&
-      !manualGovernanceLock &&
-      !archived &&
-      (!variantRequired || missionSelectionReady) &&
-      (status.toUpperCase() == 'AVAILABLE' ||
-          status.toUpperCase() == 'LIVE' ||
-          status.toUpperCase() == 'PUBLISHED' ||
-          status.toUpperCase() == 'ACTIVE' ||
-          status.toUpperCase() == 'CATALOG_VISIBLE' ||
-          status.toUpperCase() == 'MISSION_COMPLETE' ||
-          status.toUpperCase() == 'MISSION_AVAILABLE_WITH_PARTIAL_COVERAGE');
+  /// Canonical startability: one ordinary mission entry only.
+  bool get isStartable => canEnterMissionShell;
 
   Map<String, dynamic> toMap() {
     return {

@@ -143,7 +143,7 @@ Project में उपलब्ध login screens, splash screen, student scree
 
 ### 8.5 Heading Hierarchy & Auto TOC
 Book hierarchy को Google Docs native heading styles से map करें:
-- **Title:** Book title (*Rank Cracker Book*)
+- **Title:** Book title (*RankCrackers — Living Technical Product & Architecture Book*)
 - **Heading 1:** Volume (उदा. *Volume A — Product और मूल दृष्टि*)
 - **Heading 2:** Part (उदा. *Part 1 — Genesis, Philosophy & Student Journey*)
 - **Heading 3:** Chapter (उदा. *Chapter 17 — Product Vision...*)
