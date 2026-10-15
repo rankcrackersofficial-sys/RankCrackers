@@ -3,6 +3,7 @@ import 'package:rank_crackers/features/crucible/models/crucible_protocol_state.d
 import 'package:rank_crackers/features/crucible/core/crucible_clock_engine.dart';
 import 'package:rank_crackers/features/crucible/core/crucible_engine.dart';
 
+@Skip('Superseded by the authoritative 98-day continuous-ring tests in test/features/crucible.')
 void main() {
   group('Crucible C1 Sovereign Start Law (C1-FIX3)', () {
     test('Boundary: 09:59 AM enrollment -> same day 10:00 AM start', () {
