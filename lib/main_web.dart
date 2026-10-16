@@ -218,7 +218,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF070A12),
+      backgroundColor: rcBg,
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 420),
@@ -233,10 +233,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 70,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF070A12),
+                      color: rcSurfaceAlt,
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
-                        color: rcGold.withOpacity(0.24),
+                        color: rcGold.withValues(alpha: 0.24),
                         width: 1.5,
                       ),
                     ),
@@ -271,7 +271,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     decoration: BoxDecoration(
                       color: rcSurfaceAlt,
                       borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: rcGold.withOpacity(0.10)),
+                      border: Border.all(color: rcGold.withValues(alpha: 0.10)),
                     ),
                     child: const Column(
                       mainAxisSize: MainAxisSize.min,
