@@ -1018,6 +1018,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildMissionInfoPanel(Recruitment recruitment) {
+    final scheme = Theme.of(context).colorScheme;
     final groupKey = _getAuthorityGroupKey(recruitment);
     final authority = _getAuthorityDisplayName(recruitment, groupKey);
     final isCentral = _isCentralExam(recruitment);
@@ -1067,16 +1068,16 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         width: double.infinity,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: const Color(0xFF0D121C).withValues(alpha: 0.78),
+          color: scheme.surfaceContainerHighest.withValues(alpha: 0.78),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: AppColors.borderSoft),
+          border: Border.all(color: scheme.outline),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                const Icon(Icons.verified_outlined, size: 13, color: AppColors.gold),
+                Icon(Icons.verified_outlined, size: 13, color: AppColors.gold),
                 const SizedBox(width: 6),
                 Expanded(
                   child: Text(
@@ -1112,6 +1113,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _infoBadge(IconData icon, String text) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
       decoration: BoxDecoration(
@@ -1127,7 +1129,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           Text(
             text,
             style: AppTypography.body.copyWith(
-              color: Colors.white.withValues(alpha: 0.85),
+              color: scheme.onSurface.withValues(alpha: 0.85),
               fontSize: 9.5,
               fontWeight: FontWeight.w500,
             ),
@@ -1144,6 +1146,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     required VoidCallback? onPressed,
   }) {
     final isEnabled = onPressed != null;
+    final scheme = Theme.of(context).colorScheme;
 
     final child = FittedBox(
       fit: BoxFit.scaleDown,
@@ -1160,8 +1163,8 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               fontWeight: FontWeight.w800,
               letterSpacing: 0.4,
               color: filled
-                  ? (isEnabled ? Colors.black : Colors.black38)
-                  : (isEnabled ? AppColors.gold : Colors.white24),
+                  ? (isEnabled ? scheme.onPrimary : scheme.onSurfaceVariant)
+                  : (isEnabled ? AppColors.gold : scheme.onSurfaceVariant),
             ),
           ),
         ],
@@ -1175,9 +1178,9 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
             backgroundColor: isEnabled ? AppColors.gold : AppColors.gold.withValues(alpha: 0.25),
-            foregroundColor: Colors.black,
+            foregroundColor: scheme.onPrimary,
             disabledBackgroundColor: AppColors.gold.withValues(alpha: 0.25),
-            disabledForegroundColor: Colors.black38,
+            disabledForegroundColor: scheme.onSurfaceVariant,
             elevation: isEnabled ? 2 : 0,
             padding: const EdgeInsets.symmetric(horizontal: 12),
             shape: RoundedRectangleBorder(
@@ -1195,10 +1198,10 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           foregroundColor: AppColors.gold,
-          disabledForegroundColor: Colors.white24,
+          disabledForegroundColor: scheme.onSurfaceVariant,
           backgroundColor: isEnabled ? AppColors.gold.withValues(alpha: 0.08) : Colors.transparent,
           side: BorderSide(
-            color: isEnabled ? AppColors.gold : AppColors.borderSoft,
+            color: isEnabled ? AppColors.gold : scheme.outline,
             width: 1.2,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -1212,6 +1215,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildEmptyState() {
+    final scheme = Theme.of(context).colorScheme;
     if (_selectedJurisdiction == 'STATE') {
       return Padding(
         padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
@@ -1219,14 +1223,14 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.school_outlined, size: 48, color: Colors.white24),
+              Icon(Icons.school_outlined, size: 48, color: scheme.onSurfaceVariant),
               const SizedBox(height: 16),
               Text(
                 'No exams available for $selectedState yet.',
                 textAlign: TextAlign.center,
                 style: AppTypography.cardTitle.copyWith(
                   fontSize: 14,
-                  color: AppColors.primaryText,
+                  color: scheme.onSurface,
                 ),
               ),
               const SizedBox(height: 6),
@@ -1235,7 +1239,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                 textAlign: TextAlign.center,
                 style: AppTypography.body.copyWith(
                   fontSize: 11,
-                  color: AppColors.secondaryText,
+                  color: scheme.onSurfaceVariant,
                 ),
               ),
               const SizedBox(height: 16),
@@ -1263,14 +1267,14 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.search_off_rounded, size: 48, color: Colors.white24),
+            Icon(Icons.search_off_rounded, size: 48, color: scheme.onSurfaceVariant),
             const SizedBox(height: 16),
             Text(
               'No central exams found.',
               textAlign: TextAlign.center,
               style: AppTypography.cardTitle.copyWith(
                 fontSize: 14,
-                color: AppColors.primaryText,
+                color: scheme.onSurface,
               ),
             ),
           ],
@@ -1280,20 +1284,21 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildErrorState(VoidCallback onRetry) {
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
       child: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.cloud_off_rounded, size: 48, color: Colors.white24),
+            Icon(Icons.cloud_off_rounded, size: 48, color: scheme.onSurfaceVariant),
             const SizedBox(height: 16),
             Text(
               'Unable to load mission catalog.',
               textAlign: TextAlign.center,
               style: AppTypography.cardTitle.copyWith(
                 fontSize: 14,
-                color: AppColors.primaryText,
+                color: scheme.onSurface,
               ),
             ),
             const SizedBox(height: 6),
@@ -1302,7 +1307,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               textAlign: TextAlign.center,
               style: AppTypography.body.copyWith(
                 fontSize: 11,
-                color: AppColors.secondaryText,
+                color: scheme.onSurfaceVariant,
               ),
             ),
             const SizedBox(height: 16),
