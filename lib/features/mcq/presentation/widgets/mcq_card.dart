@@ -34,6 +34,7 @@ class _McqCardState extends State<McqCard> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final options = widget.mcq.options;
     final correct = widget.mcq.answerIndex;
 
@@ -52,7 +53,7 @@ class _McqCardState extends State<McqCard> {
               final isCorrect = index == correct;
               final isSelected = selected == index;
 
-              Color borderColor = AppColors.border;
+              Color borderColor = scheme.outline;
 
               if (submitted && isCorrect) {
                 borderColor = AppColors.success;
@@ -131,6 +132,10 @@ class _McqCardState extends State<McqCard> {
 
                       debugPrint('Cloud Sync Complete: $mastery');
                     },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: scheme.primary,
+                foregroundColor: scheme.onPrimary,
+              ),
               child: const Text('SUBMIT COMBAT'),
             ),
           ),
