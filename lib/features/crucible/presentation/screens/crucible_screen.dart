@@ -299,7 +299,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             Text(
               'Continuous Learning Ring',
               style: AppTypography.subtitle.copyWith(
-                color: AppColors.textSecondary,
+                color: scheme.onSurfaceVariant,
                 fontSize: 11,
               ),
             ),
@@ -362,7 +362,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             const SizedBox(height: 6),
             Text(
               'No assessment evidence yet. Use this window to revisit missed or unfinished learning.',
-              style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
             ),
             const SizedBox(height: 14),
             OutlinedButton.icon(
@@ -401,7 +401,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             const SizedBox(height: 6),
             Text(
               'Block synthesis training milestone (50 Questions / 120 Minutes).',
-              style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
             ),
             const SizedBox(height: 14),
             Container(
@@ -413,12 +413,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.info_outline_rounded, color: AppColors.textSecondary, size: 16),
+                  Icon(Icons.info_outline_rounded, color: scheme.onSurfaceVariant, size: 16),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
                       'Macro assessment is not ready yet.',
-                      style: AppTypography.subtitle.copyWith(color: AppColors.textSecondary, fontSize: 11),
+                      style: AppTypography.subtitle.copyWith(color: scheme.onSurfaceVariant, fontSize: 11),
                     ),
                   ),
                 ],
@@ -591,13 +591,13 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(Icons.shield_outlined, color: AppColors.textSecondary, size: 15),
+                Icon(Icons.shield_outlined, color: scheme.onSurfaceVariant, size: 15),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
                     'Micro assessment is not ready for this schedule yet.',
                     style: AppTypography.subtitle.copyWith(
-                      color: AppColors.textSecondary,
+                      color: scheme.onSurfaceVariant,
                       fontSize: 11,
                     ),
                   ),
@@ -658,7 +658,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               const SizedBox(height: 4),
               Text(
                 'Select a learning module to begin (${entries.length} modules available):',
-                style: AppTypography.subtitle.copyWith(color: AppColors.textSecondary, fontSize: 12),
+                style: AppTypography.subtitle.copyWith(color: scheme.onSurfaceVariant, fontSize: 12),
               ),
               const SizedBox(height: 12),
               Flexible(
@@ -683,7 +683,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         e.topic.isNotEmpty ? e.topic : 'Module ${index + 1}',
                         style: TextStyle(color: scheme.onSurface, fontSize: 13, fontWeight: FontWeight.w600),
                       ),
-                      trailing: const Icon(Icons.chevron_right_rounded, color: AppColors.textSecondary, size: 18),
+                      trailing: Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant, size: 18),
                       onTap: () {
                         Navigator.pop(ctx);
                         final launchArgs = DigiBookLaunchArgs(
@@ -736,7 +736,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               const SizedBox(height: 10),
               Text(
                 'Learning content for "${schedule.canonicalTitle}" (${schedule.formattedCode}) is not available yet. You may explore related syllabus topics.',
-                style: AppTypography.body.copyWith(color: AppColors.textSecondary, fontSize: 13, height: 1.4),
+                style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
               ),
               const SizedBox(height: 16),
               SizedBox(
@@ -766,6 +766,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // SECTION 3: PERSONAL COVERAGE LEDGER (Zero Fake % Metrics)
   // ---------------------------------------------------------------------------
   Widget _buildPersonalCoverageCard(SessionUser? user, int currentCycleDay) {
+    final scheme = Theme.of(context).colorScheme;
     return DarkCard(
       padding: const EdgeInsets.all(18),
       child: Column(
@@ -821,7 +822,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Text(
             'Your individual ledger records verified academic progress independently of the rotating mission clock. Late joiners start without fake failure or penalty.',
             style: AppTypography.subtitle.copyWith(
-              color: AppColors.textSecondary,
+              color: scheme.onSurfaceVariant,
               fontSize: 10,
               height: 1.3,
             ),
@@ -836,20 +837,21 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required String value,
     required String hint,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.03),
+        color: scheme.surfaceContainerHighest.withValues(alpha: 0.55),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+        border: Border.all(color: scheme.outline),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             value,
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: scheme.onSurface,
               fontSize: 18,
               fontWeight: FontWeight.w800,
             ),
@@ -866,8 +868,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           const SizedBox(height: 1),
           Text(
             hint,
-            style: const TextStyle(
-              color: AppColors.textSecondary,
+            style: TextStyle(
+              color: scheme.onSurfaceVariant,
               fontSize: 9,
             ),
           ),
@@ -880,6 +882,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // SECTION 4: UPCOMING MILESTONES (REBUILD & MACRO)
   // ---------------------------------------------------------------------------
   Widget _buildMilestonesCard(int currentCycleDay, int currentPhase) {
+    final scheme = Theme.of(context).colorScheme;
     final nextRebuildDay = currentPhase * 14 - 1; // e.g. Day 13 for Phase 1, Day 27 for Phase 2...
     final nextMacroDay = currentPhase * 14; // e.g. Day 14 for Phase 1, Day 28 for Phase 2...
 
@@ -905,7 +908,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 6),
-            child: Divider(color: Colors.white10),
+            child: Divider(color: scheme.outline),
           ),
           _buildMilestoneRow(
             icon: Icons.flag_outlined,
@@ -922,12 +925,13 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required String title,
     required String subtitle,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return Row(
       children: [
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.04),
+            color: scheme.surfaceContainerHighest.withValues(alpha: 0.55),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(icon, color: AppColors.gold, size: 18),
@@ -940,7 +944,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Text(
                 title,
                 style: AppTypography.body.copyWith(
-                  color: Colors.white,
+                  color: scheme.onSurface,
                   fontSize: 13,
                   fontWeight: FontWeight.w600,
                 ),
@@ -949,7 +953,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Text(
                 subtitle,
                 style: AppTypography.subtitle.copyWith(
-                  color: AppColors.textSecondary,
+                  color: scheme.onSurfaceVariant,
                   fontSize: 10,
                 ),
               ),
@@ -964,6 +968,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // SECTION 5: 98-DAY CONTINUOUS RING VISUALIZATION
   // ---------------------------------------------------------------------------
   Widget _build98DayRingCard(int currentCycleDay, int currentPhase) {
+    final scheme = Theme.of(context).colorScheme;
     return DarkCard(
       padding: const EdgeInsets.all(18),
       child: Column(
@@ -1003,13 +1008,13 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     color: isCurrent
                         ? AppColors.gold.withValues(alpha: 0.18)
                         : (isPast
-                            ? Colors.white.withValues(alpha: 0.06)
-                            : Colors.white.withValues(alpha: 0.02)),
+                            ? scheme.surfaceContainerHighest.withValues(alpha: 0.7)
+                            : scheme.surface.withValues(alpha: 0.35)),
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
                       color: isCurrent
                           ? AppColors.gold
-                          : Colors.white.withValues(alpha: 0.06),
+                          : scheme.outline,
                       width: isCurrent ? 1.4 : 1.0,
                     ),
                   ),
@@ -1018,7 +1023,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text(
                         'B$phaseNum',
                         style: TextStyle(
-                          color: isCurrent ? AppColors.gold : (isPast ? Colors.white70 : Colors.white38),
+                          color: isCurrent ? AppColors.gold : (isPast ? scheme.onSurface : scheme.onSurfaceVariant),
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
                         ),
@@ -1027,7 +1032,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text(
                         '${(phaseNum - 1) * 14 + 1}-${phaseNum * 14}d',
                         style: TextStyle(
-                          color: isCurrent ? AppColors.gold : AppColors.textSecondary,
+                          color: isCurrent ? AppColors.gold : scheme.onSurfaceVariant,
                           fontSize: 8,
                         ),
                       ),
@@ -1041,7 +1046,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Text(
             'Continuous rotation: Day 98 advances back to Day 1 without syllabus loss.',
             style: AppTypography.subtitle.copyWith(
-              color: AppColors.textSecondary,
+              color: scheme.onSurfaceVariant,
               fontSize: 10,
             ),
           ),
@@ -1054,6 +1059,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // SECTION 6: ANCILLARY CALIBRATIONS & COMPETITION HOLDS
   // ---------------------------------------------------------------------------
   Widget _buildAncillaryHoldsCard() {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         // Test Arena Card
@@ -1064,20 +1070,20 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.04),
+                  color: scheme.surfaceContainerHighest.withValues(alpha: 0.55),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: const Icon(Icons.military_tech_outlined, color: AppColors.textSecondary, size: 18),
+                child: Icon(Icons.military_tech_outlined, color: scheme.onSurfaceVariant, size: 18),
               ),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Test Arena — Not Ready',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: scheme.onSurface,
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
                       ),
@@ -1086,7 +1092,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     Text(
                       'Standardized competitive events are hosted in Test Arena.',
                       style: AppTypography.subtitle.copyWith(
-                        color: AppColors.textSecondary,
+                        color: scheme.onSurfaceVariant,
                         fontSize: 10,
                       ),
                     ),
