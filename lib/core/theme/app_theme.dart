@@ -11,6 +11,7 @@ class AppTheme {
         secondary: AppColors.gold,
         surface: AppColors.surface,
         onSurface: AppColors.primaryText,
+        onSurfaceVariant: AppColors.secondaryText,
         outline: AppColors.border,
         onPrimary: Colors.black,
       ),
@@ -35,6 +36,7 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white.withValues(alpha: 0.03),
+        textStyle: const TextStyle(color: AppColors.primaryText),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -68,6 +70,7 @@ class AppTheme {
         secondary: AppColors.gold,
         surface: surface,
         onSurface: text,
+        onSurfaceVariant: mutedText,
         outline: border,
         onPrimary: Colors.black,
       ),
@@ -87,6 +90,7 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: surfaceAlt,
+        textStyle: const TextStyle(color: text),
         hintStyle: const TextStyle(color: mutedText),
         labelStyle: const TextStyle(color: mutedText),
         border: OutlineInputBorder(
@@ -105,7 +109,7 @@ class AppTheme {
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.gold,
-          foregroundColor: Colors.white,
+          foregroundColor: Colors.black,
           shape: RoundedRectangleBorder(borderRadius: AppRadius.button),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
         ),
