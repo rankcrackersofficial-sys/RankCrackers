@@ -98,7 +98,25 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
+    _consumeGoogleRedirectResult();
     _checkInviteStatus();
+  }
+
+  Future<void> _consumeGoogleRedirectResult() async {
+    // Redirect-based Google auth returns to this page after consent. Explicitly
+    // consume the pending credential so mobile Chrome cannot silently fall
+    // back to the login screen after a successful Google callback.
+    try {
+      await FirebaseAuth.instance.getRedirectResult();
+    } on FirebaseAuthException catch (e) {
+      if (!mounted) return;
+      setState(() => _error =
+          'Google sign-in could not be completed (${e.code}). Please try again.');
+    } catch (e) {
+      if (!mounted) return;
+      setState(() => _error = 'Google sign-in could not be completed.');
+      debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: $e');
+    }
   }
 
   Future<void> _checkInviteStatus() async {
