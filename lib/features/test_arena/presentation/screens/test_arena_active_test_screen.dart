@@ -39,6 +39,13 @@ class TestArenaActiveTestScreen extends StatefulWidget {
 }
 
 class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
+  Color get _surface => Theme.of(context).colorScheme.surfaceContainerHighest;
+  Color get _background => Theme.of(context).colorScheme.surface;
+  Color get _text => Theme.of(context).colorScheme.onSurface;
+  Color get _muted => Theme.of(context).colorScheme.onSurfaceVariant;
+  Color get _outline => Theme.of(context).colorScheme.outline;
+  Color get _onPrimary => Theme.of(context).colorScheme.onPrimary;
+
   late TestArenaAttempt _attempt;
   int _currentQuestionIndex = 0;
   Timer? _countdownTimer;
@@ -159,41 +166,41 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.surface,
+        backgroundColor: _surface,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Text(
+        title: Text(
           'Submit Assessment',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 17),
+          style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 17),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Please review your attempt statistics before finalizing:',
-              style: TextStyle(color: AppColors.textSecondary, fontSize: 13),
+              style: TextStyle(color: _muted, fontSize: 13),
             ),
-            const SizedBox(height: 14),
-            _buildReviewStatRow('Total Questions', '${summary.totalQuestions}', Colors.white),
-            _buildReviewStatRow('Answered', '${summary.answeredCount}', const Color(0xFF4CAF50)),
-            _buildReviewStatRow('Unanswered', '${summary.unansweredCount}', Colors.white60),
+            SizedBox(height: 14),
+            _buildReviewStatRow('Total Questions', '${summary.totalQuestions}', _text),
+            _buildReviewStatRow('Answered', '${summary.answeredCount}', Color(0xFF4CAF50)),
+            _buildReviewStatRow('Unanswered', '${summary.unansweredCount}', _muted),
             _buildReviewStatRow('Marked for Review', '${summary.markedForReviewCount}', AppColors.gold),
-            const SizedBox(height: 14),
-            const Text(
+            SizedBox(height: 14),
+            Text(
               'Once submitted, answers cannot be modified.',
-              style: TextStyle(color: AppColors.textSecondary, fontSize: 11, fontStyle: FontStyle.italic),
+              style: TextStyle(color: _muted, fontSize: 11, fontStyle: FontStyle.italic),
             ),
           ],
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: const Text('RETURN TO TEST', style: TextStyle(color: AppColors.textSecondary, fontWeight: FontWeight.bold)),
+            child: Text('RETURN TO TEST', style: TextStyle(color: _muted, fontWeight: FontWeight.bold)),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.gold,
-              foregroundColor: Colors.black,
+              foregroundColor: _onPrimary,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
             ),
             onPressed: () {
@@ -235,7 +242,7 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
   void _openQuestionPalette() {
     showModalBottomSheet(
       context: context,
-      backgroundColor: AppColors.surface,
+      backgroundColor: _surface,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
@@ -249,23 +256,23 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
+                  Text(
                     'QUESTION PALETTE',
                     style: TextStyle(color: AppColors.gold, fontSize: 13, fontWeight: FontWeight.bold, letterSpacing: 1.1),
                   ),
                   IconButton(
-                    icon: const Icon(Icons.close_rounded, color: Colors.white70),
+                    icon: Icon(Icons.close_rounded, color: _muted),
                     onPressed: () => Navigator.pop(ctx),
                   ),
                 ],
               ),
-              const SizedBox(height: 12),
+              SizedBox(height: 12),
               // Legend Row
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  _buildPaletteLegend(const Color(0xFF4CAF50), 'Answered'),
-                  _buildPaletteLegend(Colors.white24, 'Unanswered'),
+                  _buildPaletteLegend(Color(0xFF4CAF50), 'Answered'),
+                  _buildPaletteLegend(_muted, 'Unanswered'),
                   _buildPaletteLegend(AppColors.gold, 'Review'),
                 ],
               ),
@@ -287,18 +294,18 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     final isRev = resp?.isMarkedForReview ?? false;
                     final isCur = index == _currentQuestionIndex;
 
-                    Color bg = Colors.white.withValues(alpha: 0.05);
-                    Color border = Colors.white12;
-                    Color text = Colors.white70;
+                    Color bg = _text.withValues(alpha: 0.05);
+                    Color border = _muted;
+                    Color text = _muted;
 
                     if (isAns && isRev) {
                       bg = AppColors.gold.withValues(alpha: 0.3);
                       border = AppColors.gold;
-                      text = Colors.white;
+                      text = _text;
                     } else if (isAns) {
-                      bg = const Color(0xFF4CAF50).withValues(alpha: 0.25);
-                      border = const Color(0xFF4CAF50);
-                      text = Colors.white;
+                      bg = Color(0xFF4CAF50).withValues(alpha: 0.25);
+                      border = Color(0xFF4CAF50);
+                      text = _text;
                     } else if (isRev) {
                       bg = AppColors.gold.withValues(alpha: 0.15);
                       border = AppColors.gold;
@@ -306,7 +313,7 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     }
 
                     if (isCur) {
-                      border = Colors.white;
+                      border = _text;
                     }
 
                     return InkWell(
@@ -355,17 +362,17 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
     final seconds = (_remainingTime.inSeconds % 60).toString().padLeft(2, '0');
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: _background,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: Column(
             children: [
               // 🔱 1. TOP EXAM HEADER (Zero Dashboard/Bottom Nav distractions)
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                decoration: const BoxDecoration(
-                  color: AppColors.surface,
-                  border: Border(bottom: BorderSide(color: Colors.white10)),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                decoration: BoxDecoration(
+                  color: _surface,
+                  border: Border(bottom: BorderSide(color: _muted)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -380,26 +387,26 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                           ),
                           child: Text(
                             widget.isFixtureMode ? 'STAGING' : 'TEST ARENA',
-                            style: const TextStyle(color: AppColors.gold, fontSize: 9, fontWeight: FontWeight.bold),
+                            style: TextStyle(color: AppColors.gold, fontSize: 9, fontWeight: FontWeight.bold),
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        SizedBox(width: 8),
                         Text(
                           'Q ${_currentQuestionIndex + 1} of $totalQuestions',
-                          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                          style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 13),
                         ),
                       ],
                     ),
                     // Authoritative Live Timer
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
                         color: _remainingTime.inMinutes < 5
                             ? Colors.red.withValues(alpha: 0.2)
-                            : Colors.white.withValues(alpha: 0.06),
+                            : _text.withValues(alpha: 0.06),
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(
-                          color: _remainingTime.inMinutes < 5 ? Colors.red : Colors.white12,
+                          color: _remainingTime.inMinutes < 5 ? Colors.red : _muted,
                         ),
                       ),
                       child: Row(
@@ -409,11 +416,11 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                             size: 14,
                             color: _remainingTime.inMinutes < 5 ? Colors.red : AppColors.gold,
                           ),
-                          const SizedBox(width: 5),
+                          SizedBox(width: 5),
                           Text(
                             '$hours:$minutes:$seconds',
                             style: TextStyle(
-                              color: _remainingTime.inMinutes < 5 ? Colors.red : Colors.white,
+                              color: _remainingTime.inMinutes < 5 ? Colors.red : _text,
                               fontWeight: FontWeight.w700,
                               fontSize: 12,
                               fontFeatures: const [FontFeature.tabularFigures()],
@@ -426,14 +433,14 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     Row(
                       children: [
                         IconButton(
-                          icon: const Icon(Icons.grid_view_rounded, color: Colors.white70, size: 20),
+                          icon: Icon(Icons.grid_view_rounded, color: _muted, size: 20),
                           onPressed: _openQuestionPalette,
                           tooltip: 'Question Palette',
                         ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.gold,
-                            foregroundColor: Colors.black,
+                            foregroundColor: _onPrimary,
                             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                           ),
@@ -460,28 +467,28 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                         children: [
                           Text(
                             currentQ.subject.toUpperCase(),
-                            style: const TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.0),
+                            style: TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.0),
                           ),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                             decoration: BoxDecoration(
-                              color: Colors.white.withValues(alpha: 0.05),
+                              color: _text.withValues(alpha: 0.05),
                               borderRadius: BorderRadius.circular(4),
                             ),
                             child: Text(
                               currentQ.questionType == 'numerical' ? 'NUMERICAL VALUE' : 'SINGLE CHOICE',
-                              style: const TextStyle(color: AppColors.textSecondary, fontSize: 9, fontWeight: FontWeight.w600),
+                              style: TextStyle(color: _muted, fontSize: 9, fontWeight: FontWeight.w600),
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 12),
+                      SizedBox(height: 12),
 
                       // Question Text
                       Text(
                         currentQ.questionText,
                         style: AppTypography.body.copyWith(
-                          color: Colors.white,
+                          color: _text,
                           fontSize: 15,
                           height: 1.5,
                         ),
@@ -491,27 +498,27 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       // MCQ Options or Numerical Input
                       if (currentQ.questionType == 'numerical') ...[
                         DarkCard(
-                          padding: const EdgeInsets.all(16),
+                          padding: EdgeInsets.all(16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
+                              Text(
                                 'Enter Numerical Value:',
-                                style: TextStyle(color: AppColors.textSecondary, fontSize: 12),
+                                style: TextStyle(color: _muted, fontSize: 12),
                               ),
-                              const SizedBox(height: 8),
+                              SizedBox(height: 8),
                               TextField(
                                 controller: _numericalController,
-                                keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true),
-                                style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                                keyboardType: TextInputType.numberWithOptions(decimal: true, signed: true),
+                                style: TextStyle(color: _text, fontSize: 18, fontWeight: FontWeight.bold),
                                 decoration: InputDecoration(
                                   hintText: 'e.g. 4.5',
-                                  hintStyle: const TextStyle(color: Colors.white30),
+                                  hintStyle: TextStyle(color: _muted),
                                   filled: true,
-                                  fillColor: Colors.white.withValues(alpha: 0.04),
+                                  fillColor: _text.withValues(alpha: 0.04),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(8),
-                                    borderSide: const BorderSide(color: Colors.white12),
+                                    borderSide: BorderSide(color: _muted),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(8),
@@ -540,10 +547,10 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
 
               // 🔱 3. BOTTOM ACTION CONTROLS
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                decoration: const BoxDecoration(
-                  color: AppColors.surface,
-                  border: Border(top: BorderSide(color: Colors.white10)),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                decoration: BoxDecoration(
+                  color: _surface,
+                  border: Border(top: BorderSide(color: _muted)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -552,43 +559,43 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
-                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : Colors.white24,
+                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
                         ),
                         backgroundColor: (currentResp?.isMarkedForReview ?? false)
                             ? AppColors.gold.withValues(alpha: 0.12)
                             : Colors.transparent,
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       ),
                       icon: Icon(
                         (currentResp?.isMarkedForReview ?? false) ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
                         size: 16,
-                        color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : Colors.white70,
+                        color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
                       ),
                       label: Text(
                         'REVIEW',
                         style: TextStyle(
-                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : Colors.white70,
+                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
                           fontSize: 11,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       onPressed: _handleToggleMarkForReview,
                     ),
-                    const SizedBox(width: 8),
+                    SizedBox(width: 8),
 
                     // Clear Button
                     if (currentResp?.isAnswered ?? false) ...[
                       TextButton(
                         onPressed: _handleClearResponse,
-                        child: const Text('Clear', style: TextStyle(color: AppColors.textSecondary, fontSize: 11)),
+                        child: Text('Clear', style: TextStyle(color: _muted, fontSize: 11)),
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: 8),
                     ],
 
                     // Previous Button
                     IconButton(
-                      icon: const Icon(Icons.chevron_left_rounded, color: Colors.white),
+                      icon: Icon(Icons.chevron_left_rounded, color: _text),
                       onPressed: _currentQuestionIndex > 0
                           ? () {
                               setState(() {
@@ -603,7 +610,7 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.gold,
-                        foregroundColor: Colors.black,
+                        foregroundColor: _onPrimary,
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       ),
@@ -644,14 +651,14 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
       onTap: () => _handleOptionSelect(index),
       borderRadius: BorderRadius.circular(10),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 14, vertical: 12),
         decoration: BoxDecoration(
           color: isSelected
               ? AppColors.gold.withValues(alpha: 0.12)
-              : Colors.white.withValues(alpha: 0.03),
+              : _text.withValues(alpha: 0.03),
           borderRadius: BorderRadius.circular(10),
           border: Border.all(
-            color: isSelected ? AppColors.gold : Colors.white12,
+            color: isSelected ? AppColors.gold : _muted,
             width: isSelected ? 1.5 : 1.0,
           ),
         ),
@@ -662,24 +669,24 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
               height: 28,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isSelected ? AppColors.gold : Colors.white.withValues(alpha: 0.06),
+                color: isSelected ? AppColors.gold : _text.withValues(alpha: 0.06),
               ),
               alignment: Alignment.center,
               child: Text(
                 optionLabel,
                 style: TextStyle(
-                  color: isSelected ? Colors.black : Colors.white,
+                  color: isSelected ? _onPrimary : _text,
                   fontWeight: FontWeight.bold,
                   fontSize: 12,
                 ),
               ),
             ),
-            const SizedBox(width: 12),
+            SizedBox(width: 12),
             Expanded(
               child: Text(
                 text,
                 style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.white70,
+                  color: isSelected ? _onPrimary : _muted,
                   fontSize: 14,
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
                 ),
@@ -699,19 +706,19 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
           height: 10,
           decoration: BoxDecoration(color: color, shape: BoxShape.circle),
         ),
-        const SizedBox(width: 6),
-        Text(label, style: const TextStyle(color: AppColors.textSecondary, fontSize: 11)),
+        SizedBox(width: 6),
+        Text(label, style: TextStyle(color: _muted, fontSize: 11)),
       ],
     );
   }
 
   Widget _buildReviewStatRow(String label, String value, Color color) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 3),
+      padding: EdgeInsets.symmetric(vertical: 3),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: const TextStyle(color: AppColors.textSecondary, fontSize: 13)),
+          Text(label, style: TextStyle(color: _muted, fontSize: 13)),
           Text(value, style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 13)),
         ],
       ),
@@ -723,7 +730,7 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
   // ---------------------------------------------------------------------------
   Widget _buildResultView(TestArenaResult res) {
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: _background,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: SingleChildScrollView(
@@ -741,40 +748,40 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                         color: AppColors.gold.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: const Text(
+                      child: Text(
                         'ASSESSMENT COMPLETE',
                         style: TextStyle(color: AppColors.gold, fontSize: 10, fontWeight: FontWeight.bold),
                       ),
                     ),
                     IconButton(
-                      icon: const Icon(Icons.close_rounded, color: Colors.white),
+                      icon: Icon(Icons.close_rounded, color: _text),
                       onPressed: () => context.pop(),
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: 12),
                 Text(
                   widget.paper.paperTitle,
-                  style: AppTypography.hero.copyWith(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                  style: AppTypography.hero.copyWith(fontSize: 20, fontWeight: FontWeight.bold, color: _text),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4),
                 Text(
                   'Completed on ${res.completedAt.toLocal().toString().split('.').first}',
-                  style: const TextStyle(color: AppColors.textSecondary, fontSize: 12),
+                  style: TextStyle(color: _muted, fontSize: 12),
                 ),
                 const SizedBox(height: 16),
 
                 // Score Overview Card
                 DarkCard(
-                  padding: const EdgeInsets.all(18),
+                  padding: EdgeInsets.all(18),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           _buildScoreMetric('Score', '${res.totalScore} / ${res.maxScore}', AppColors.gold),
-                          _buildScoreMetric('Accuracy', '${res.accuracy}%', Colors.white),
-                          _buildScoreMetric('Attempted', '${res.totalAttempted} / ${widget.paper.totalQuestions}', Colors.white70),
+                          _buildScoreMetric('Accuracy', '${res.accuracy}%', _text),
+                          _buildScoreMetric('Attempted', '${res.totalAttempted} / ${widget.paper.totalQuestions}', _muted),
                         ],
                       ),
                     ],
@@ -787,14 +794,14 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                   'SUBJECT BREAKDOWN',
                   style: TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.1),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: 8),
                 for (final subj in res.subjectScores.values) ...[
                   DarkCard(
-                    padding: const EdgeInsets.all(14),
+                    padding: EdgeInsets.all(14),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(subj.subject, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14)),
+                        Text(subj.subject, style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 14)),
                         Text('${subj.score} / ${subj.maxScore}', style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold)),
                       ],
                     ),
@@ -815,17 +822,17 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       padding: const EdgeInsets.all(14),
                       child: Row(
                         children: [
-                          const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 18),
-                          const SizedBox(width: 10),
+                          Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 18),
+                          SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Q${rem.questionNumber} • ${rem.subject}', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13)),
+                                Text('Q${rem.questionNumber} • ${rem.subject}', style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 13)),
                                 Text(
                                   rem.isContentAvailable ? 'DigiBook Lesson Available' : 'Remediation queued',
                                   style: TextStyle(
-                                    color: rem.isContentAvailable ? const Color(0xFF4CAF50) : AppColors.textSecondary,
+                                    color: rem.isContentAvailable ? Color(0xFF4CAF50) : _muted,
                                     fontSize: 11,
                                   ),
                                 ),
@@ -836,7 +843,7 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.gold,
-                                foregroundColor: Colors.black,
+                                foregroundColor: _onPrimary,
                                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                               ),
@@ -864,15 +871,15 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     const SizedBox(height: 8),
                   ],
                 ],
-                const SizedBox(height: 20),
+                SizedBox(height: 20),
 
                 // Close Button
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white12,
-                      foregroundColor: Colors.white,
+                      backgroundColor: _muted,
+                      foregroundColor: _text,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     ),
@@ -892,8 +899,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
     return Column(
       children: [
         Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.bold)),
-        const SizedBox(height: 2),
-        Text(label, style: const TextStyle(color: AppColors.textSecondary, fontSize: 11)),
+        SizedBox(height: 2),
+        Text(label, style: TextStyle(color: _muted, fontSize: 11)),
       ],
     );
   }
