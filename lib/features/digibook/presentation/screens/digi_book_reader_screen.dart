@@ -85,7 +85,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
       child: Row(
         children: [
           IconButton(
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_new_rounded,
               color: scheme.onSurfaceVariant,
               size: 20,
@@ -326,7 +326,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                 ),
                 child: Text(
                   formula,
-                  style: const TextStyle(
+                  style: TextStyle(
                     color: scheme.onSurface,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
