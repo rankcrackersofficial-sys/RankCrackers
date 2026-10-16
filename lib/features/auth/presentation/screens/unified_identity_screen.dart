@@ -718,6 +718,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildAura() {
     final double screenHeight = ResponsiveHelper.height(context);
     final double screenWidth = ResponsiveHelper.width(context);
+    final isLight = Theme.of(context).brightness == Brightness.light;
     return AnimatedBuilder(
       animation: _animationController,
       builder: (context, child) {
@@ -747,8 +748,10 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   gradient: RadialGradient(colors: [
-                    const Color(0xFF1C7FA3).withValues(alpha: 0.075),
-                    const Color(0xFF0B1D33).withValues(alpha: 0.035),
+                    (isLight ? const Color(0xFF5B8DB8) : const Color(0xFF1C7FA3))
+                        .withValues(alpha: isLight ? 0.055 : 0.075),
+                    (isLight ? const Color(0xFFCBD8E6) : const Color(0xFF0B1D33))
+                        .withValues(alpha: isLight ? 0.045 : 0.035),
                     Colors.transparent,
                   ]),
                 ),
