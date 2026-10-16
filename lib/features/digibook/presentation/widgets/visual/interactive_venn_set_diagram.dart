@@ -76,6 +76,7 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return DigiBookVisualContainer(
       title: 'Venn Diagram & Set Algebra Explorer',
       visualType: 'INTERACTIVE VENN DIAGRAM',
@@ -117,9 +118,9 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: scheme.surface,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: scheme.outline, width: 1),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,23 +129,23 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
                   children: [
                     Text(
                       _operationSymbol,
-                      style: const TextStyle(
-                        color: Color(0xFFC3A568),
+                      style: TextStyle(
+                        color: scheme.primary,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     const SizedBox(width: 10),
-                    const Text(
+                    Text(
                       '=',
-                      style: TextStyle(color: Color(0xFF777F8B), fontSize: 16),
+                      style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 16),
                     ),
                     const SizedBox(width: 10),
                     Expanded(
                       child: Text(
                         _setBuilderDefinition,
-                        style: const TextStyle(
-                          color: Color(0xFF58A6FF),
+                        style: TextStyle(
+                          color: scheme.secondary,
                           fontSize: 14.5,
                           fontFamily: 'monospace',
                           fontWeight: FontWeight.w600,
@@ -157,8 +158,8 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
                 const SizedBox(height: 6),
                 Text(
                   _description,
-                  style: const TextStyle(
-                    color: Color(0xFFA7ADB7),
+                  style: TextStyle(
+                    color: scheme.onSurfaceVariant,
                     fontSize: 12.5,
                     height: 1.4,
                   ),
@@ -172,6 +173,7 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
   }
 
   Widget _buildOpPill(String label, VennSetOperation op) {
+    final scheme = Theme.of(context).colorScheme;
     final isSelected = _currentOp == op;
     return InkWell(
       onTap: () => setState(() => _currentOp = op),
@@ -179,17 +181,17 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFC3A568) : const Color(0xFF21262D),
+          color: isSelected ? scheme.primary : scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(
-            color: isSelected ? const Color(0xFFC3A568) : const Color(0xFF30363D),
+            color: isSelected ? scheme.primary : scheme.outline,
             width: 1,
           ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            color: isSelected ? const Color(0xFF090C10) : const Color(0xFFE6EDF3),
+            color: isSelected ? scheme.onPrimary : scheme.onSurface,
             fontSize: 12.5,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
           ),

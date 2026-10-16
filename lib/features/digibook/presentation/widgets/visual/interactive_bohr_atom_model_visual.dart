@@ -94,6 +94,7 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return DigiBookVisualContainer(
       title: 'Quantized Bohr Atom & Photon Emission',
       visualType: 'ATOMIC SCHEMATIC & SIMULATION',
@@ -105,14 +106,14 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
           IconButton(
             icon: Icon(
               _isPlaying ? Icons.pause_circle_filled_rounded : Icons.play_circle_filled_rounded,
-              color: const Color(0xFFC3A568),
+              color: scheme.primary,
               size: 26,
             ),
             onPressed: _togglePlay,
             tooltip: _isPlaying ? 'Pause orbit animation' : 'Resume orbit animation',
           ),
           const SizedBox(width: 8),
-          const Text('Transition:', style: TextStyle(color: Color(0xFF777F8B), fontSize: 12)),
+          Text('Transition:', style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12)),
           const SizedBox(width: 8),
           _buildShellPicker('n_i = 3 → n_f = 2', 3, 2),
           const SizedBox(width: 6),
@@ -148,9 +149,9 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: scheme.surface,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: scheme.outline, width: 1),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -169,6 +170,7 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
   }
 
   Widget _buildShellPicker(String label, int ni, int nf) {
+    final scheme = Theme.of(context).colorScheme;
     final isSelected = _initialShell == ni && _finalShell == nf;
     return InkWell(
       onTap: () => setState(() {
@@ -179,17 +181,17 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFC3A568) : const Color(0xFF21262D),
+          color: isSelected ? scheme.primary : scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(
-            color: isSelected ? const Color(0xFFC3A568) : const Color(0xFF30363D),
+            color: isSelected ? scheme.primary : scheme.outline,
             width: 1,
           ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            color: isSelected ? const Color(0xFF090C10) : const Color(0xFFE6EDF3),
+            color: isSelected ? scheme.onPrimary : scheme.onSurface,
             fontSize: 11.5,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
           ),
@@ -199,17 +201,18 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
   }
 
   Widget _buildReadoutColumn(String title, String value, {Color? highlightColor}) {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         Text(
           title,
-          style: const TextStyle(color: Color(0xFF777F8B), fontSize: 10.5, fontWeight: FontWeight.w500),
+          style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 10.5, fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 3),
         Text(
           value,
           style: TextStyle(
-            color: highlightColor ?? const Color(0xFFF3F4F6),
+            color: highlightColor ?? scheme.onSurface,
             fontSize: 12.5,
             fontWeight: FontWeight.bold,
           ),
