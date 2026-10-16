@@ -728,6 +728,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   }
 
   Widget _buildContinueReadingCard(Map<String, dynamic> continueState) {
+    final scheme = Theme.of(context).colorScheme;
     final topicTitle = continueState['topicTitle'] as String? ?? 'Chapter';
     final subject = continueState['subject'] as String? ?? 'Subject';
     final guId = continueState['guId'] as String? ?? '';
@@ -775,7 +776,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                 const SizedBox(height: 2),
                 Text(
                   '$subject • ${(percent * 100).toInt()}% Read',
-                  style: const TextStyle(color: Colors.white54, fontSize: 10),
+                  style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 10),
                 ),
               ],
             ),
@@ -793,6 +794,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   }
 
   Widget _subjectPill(String name, IconData icon) {
+    final scheme = Theme.of(context).colorScheme;
     final isSelected = _selectedSubject == name;
     return Expanded(
       child: GestureDetector(
@@ -802,10 +804,10 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           decoration: BoxDecoration(
             color: isSelected
                 ? AppColors.gold.withValues(alpha: 0.15)
-                : AppColors.surface,
+                : scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(10),
             border: Border.all(
-              color: isSelected ? AppColors.gold : AppColors.borderSoft,
+              color: isSelected ? AppColors.gold : scheme.outline,
               width: isSelected ? 1.2 : 1.0,
             ),
           ),
@@ -814,14 +816,14 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             children: [
               Icon(
                 icon,
-                color: isSelected ? AppColors.gold : Colors.white54,
+                color: isSelected ? AppColors.gold : scheme.onSurfaceVariant,
                 size: 16,
               ),
               const SizedBox(height: 4),
               Text(
                 name,
                 style: TextStyle(
-                  color: isSelected ? Colors.white : Colors.white70,
+                  color: isSelected ? scheme.onSurface : scheme.onSurfaceVariant,
                   fontSize: 10,
                   fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                 ),
@@ -837,6 +839,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       List<SyllabusNode> subjects,
       DigiBookCanonicalBridgeService bridge,
       List<MicroTopicNode> allAtoms) {
+    final scheme = Theme.of(context).colorScheme;
     final subjectNode = subjects.firstWhere(
       (s) => s.title.toUpperCase().contains(_selectedSubject),
       orElse: () => SyllabusNode(
@@ -856,7 +859,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             padding: const EdgeInsets.all(32),
             child: Text(
               'Loading curriculum units...',
-              style: AppTypography.body.copyWith(color: Colors.white54),
+              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant),
             ),
           ),
         ),
@@ -901,13 +904,13 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                       unit.title,
                       style: AppTypography.cardTitle.copyWith(
                         fontSize: 13.5,
-                        color: Colors.white,
+                        color: scheme.onSurface,
                       ),
                     ),
                     subtitle: Text(
                       '${topics.length} Topics • $availableInUnit DigiBook Lessons',
                       style: const TextStyle(
-                          color: Colors.white54, fontSize: 10.5),
+                          color: scheme.onSurfaceVariant, fontSize: 10.5),
                     ),
                     trailing: Icon(
                       isExpanded
@@ -918,8 +921,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   ),
                   if (isExpanded)
                     Container(
-                      decoration: const BoxDecoration(
-                        color: Color(0xFF0B1120),
+                      decoration: BoxDecoration(
+                        color: scheme.surface,
                         borderRadius:
                             BorderRadius.vertical(bottom: Radius.circular(12)),
                       ),
@@ -946,13 +949,13 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                                       horizontal: 10, vertical: 8),
                                   decoration: BoxDecoration(
                                     color: isAvailable
-                                        ? AppColors.surface2
-                                        : Colors.white.withValues(alpha: 0.02),
+                                        ? scheme.surfaceContainerHighest
+                                        : scheme.surface.withValues(alpha: 0.35),
                                     borderRadius: BorderRadius.circular(8),
                                     border: Border.all(
                                       color: isAvailable
                                           ? AppColors.gold.withValues(alpha: 0.3)
-                                          : AppColors.borderSoft.withValues(alpha: 0.5),
+                                          : scheme.outline.withValues(alpha: 0.5),
                                     ),
                                   ),
                                   child: Row(
@@ -963,7 +966,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                                             : Icons.radio_button_unchecked,
                                         color: isAvailable
                                             ? AppColors.gold
-                                            : Colors.white24,
+                                            : scheme.onSurfaceVariant,
                                         size: 15,
                                       ),
                                       const SizedBox(width: 10),
@@ -974,8 +977,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                             color: isAvailable
-                                                ? Colors.white
-                                                : Colors.white60,
+                                                ? scheme.onSurface
+                                                : scheme.onSurfaceVariant,
                                             fontSize: 12,
                                             fontWeight: isAvailable
                                                 ? FontWeight.w600
@@ -1024,6 +1027,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
 
   Widget _buildSavedSection(DigiBookCanonicalBridgeService bridge,
       DigiBookUserPreferencesService prefs) {
+    final scheme = Theme.of(context).colorScheme;
     final savedGuIds = prefs.getSavedGuIds();
     final savedEntries = savedGuIds
         .map((guId) => bridge.getEntryByGuId(guId))
@@ -1038,20 +1042,20 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.bookmark_border_rounded,
-                  color: Colors.white24, size: 48),
+              Icon(Icons.bookmark_border_rounded,
+                  color: scheme.onSurfaceVariant, size: 48),
               const SizedBox(height: 12),
               Text(
                 'No saved chapters yet',
                 style: AppTypography.cardTitle
-                    .copyWith(color: Colors.white70, fontSize: 14),
+                    .copyWith(color: scheme.onSurface, fontSize: 14),
               ),
               const SizedBox(height: 6),
               Text(
                 'Tap the bookmark icon on any chapter while reading to access it quickly here.',
                 textAlign: TextAlign.center,
                 style: AppTypography.body
-                    .copyWith(color: Colors.white38, fontSize: 11.5),
+                    .copyWith(color: scheme.onSurfaceVariant, fontSize: 11.5),
               ),
             ],
           ),
@@ -1085,15 +1089,15 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                       ),
                       Text(
                         entry.subject,
-                        style: const TextStyle(
-                            color: Colors.white38, fontSize: 10),
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 10),
                       ),
                     ],
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.bookmark_remove_rounded,
-                      color: Colors.white38, size: 18),
+                  icon: Icon(Icons.bookmark_remove_rounded,
+                      color: scheme.onSurfaceVariant, size: 18),
                   onPressed: () async {
                     await prefs.toggleSave(entry.guId);
                     setState(() {});
@@ -1110,6 +1114,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
 
   Widget _buildRecentSection(DigiBookCanonicalBridgeService bridge,
       DigiBookUserPreferencesService prefs) {
+    final scheme = Theme.of(context).colorScheme;
     final recentGuIds = prefs.getRecentGuIds();
     final recentEntries = recentGuIds
         .map((guId) => bridge.getEntryByGuId(guId))
@@ -1124,20 +1129,20 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.history_rounded,
-                  color: Colors.white24, size: 48),
+              Icon(Icons.history_rounded,
+                  color: scheme.onSurfaceVariant, size: 48),
               const SizedBox(height: 12),
               Text(
                 'No recently opened chapters',
                 style: AppTypography.cardTitle
-                    .copyWith(color: Colors.white70, fontSize: 14),
+                    .copyWith(color: scheme.onSurface, fontSize: 14),
               ),
               const SizedBox(height: 6),
               Text(
                 'Chapters you open will automatically appear here for quick access.',
                 textAlign: TextAlign.center,
                 style: AppTypography.body
-                    .copyWith(color: Colors.white38, fontSize: 11.5),
+                    .copyWith(color: scheme.onSurfaceVariant, fontSize: 11.5),
               ),
             ],
           ),
@@ -1172,7 +1177,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         Text(
                           entry.subject,
                           style: const TextStyle(
-                              color: Colors.white38, fontSize: 10),
+                              color: scheme.onSurfaceVariant, fontSize: 10),
                         ),
                       ],
                     ),
