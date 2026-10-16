@@ -70,15 +70,16 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
   Widget build(BuildContext context) {
     final authState = ref.watch(authNotifierProvider);
     final isLoading = authState.isLoading;
+    final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded,
-              color: Colors.white, size: 20),
+          icon: Icon(Icons.arrow_back_ios_new_rounded,
+              color: scheme.onSurface, size: 20),
           onPressed: () {
             if (Navigator.of(context).canPop()) {
               context.pop();
@@ -90,7 +91,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
         title: Text(
           'Account Recovery',
           style: GoogleFonts.sora(
-            color: Colors.white,
+            color: scheme.onSurface,
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -107,9 +108,9 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: AppColors.surface,
+                  color: scheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: AppColors.borderSoft),
+                  border: Border.all(color: scheme.outline),
                 ),
                 child: Column(
                   children: [
@@ -122,7 +123,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                     Text(
                       'Access Your Account',
                       style: GoogleFonts.sora(
-                        color: Colors.white,
+                        color: scheme.onSurface,
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
@@ -132,7 +133,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                       'Choose a recovery method to regain access to your studies.',
                       textAlign: TextAlign.center,
                       style: GoogleFonts.sora(
-                        color: Colors.white70,
+                        color: scheme.onSurfaceVariant,
                         fontSize: 13,
                         height: 1.4,
                       ),
@@ -162,9 +163,9 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: AppColors.surface,
+                  color: scheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: AppColors.borderSoft),
+                  border: Border.all(color: scheme.outline),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -177,7 +178,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                         Text(
                           'Reset Password via Email',
                           style: GoogleFonts.sora(
-                            color: Colors.white,
+                            color: scheme.onSurface,
                             fontSize: 15,
                             fontWeight: FontWeight.w600,
                           ),
@@ -206,21 +207,21 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                       TextField(
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
-                        style: const TextStyle(color: Colors.white),
+                        style: TextStyle(color: scheme.onSurface),
                         decoration: InputDecoration(
                           hintText: 'Enter your registered email',
-                          hintStyle: const TextStyle(color: Colors.white38),
+                          hintStyle: TextStyle(color: scheme.onSurfaceVariant),
                           filled: true,
-                          fillColor: const Color(0xFF0F172A),
+                          fillColor: scheme.surface,
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide:
-                                const BorderSide(color: AppColors.borderSoft),
+                                BorderSide(color: scheme.outline),
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
                             borderSide:
-                                const BorderSide(color: AppColors.borderSoft),
+                                BorderSide(color: scheme.outline),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
@@ -237,7 +238,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                           onPressed: isLoading ? null : _handleResetPassword,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.gold,
-                            foregroundColor: Colors.black,
+                            foregroundColor: scheme.onPrimary,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -249,7 +250,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                                   child: CircularProgressIndicator(
                                     strokeWidth: 2,
                                     valueColor: AlwaysStoppedAnimation<Color>(
-                                        Colors.black),
+                                        scheme.onPrimary),
                                   ),
                                 )
                               : Text(
@@ -271,9 +272,9 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
               Container(
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
-                  color: AppColors.surface,
+                  color: scheme.surfaceContainerHighest,
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: AppColors.borderSoft),
+                  border: Border.all(color: scheme.outline),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -289,7 +290,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                             Text(
                               'Continue with Google',
                               style: GoogleFonts.sora(
-                                color: Colors.white,
+                                color: scheme.onSurface,
                                 fontSize: 15,
                                 fontWeight: FontWeight.w600,
                               ),
@@ -297,7 +298,7 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                             Text(
                               'Use your Google account to continue',
                               style: GoogleFonts.sora(
-                                color: Colors.white54,
+                                color: scheme.onSurfaceVariant,
                                 fontSize: 12,
                               ),
                             ),
@@ -311,18 +312,18 @@ class _AccountRecoveryScreenState extends ConsumerState<AccountRecoveryScreen> {
                       height: 46,
                       child: OutlinedButton.icon(
                         onPressed: isLoading ? null : _handleGoogleSignIn,
-                        icon: const Icon(Icons.login_rounded,
-                            color: Colors.white, size: 18),
+                        icon: Icon(Icons.login_rounded,
+                            color: scheme.onSurface, size: 18),
                         label: Text(
                           'Continue with Google',
                           style: GoogleFonts.sora(
-                            color: Colors.white,
+                            color: scheme.onSurface,
                             fontWeight: FontWeight.w600,
                             fontSize: 14,
                           ),
                         ),
                         style: OutlinedButton.styleFrom(
-                          side: const BorderSide(color: AppColors.borderSoft),
+                          side: BorderSide(color: scheme.outline),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),

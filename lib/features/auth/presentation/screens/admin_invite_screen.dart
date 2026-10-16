@@ -72,8 +72,9 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
   @override
   Widget build(BuildContext context) {
     final hasInvite = widget.token.trim().isNotEmpty;
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: const Color(0xFF070A12),
+      backgroundColor: scheme.surface,
       body: Center(
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 460),
@@ -85,13 +86,13 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
                 Icon(
                   _accepted ? Icons.check_circle_outline : Icons.verified_user_outlined,
                   size: 42,
-                  color: _accepted ? Colors.green : const Color(0xFFB39B5D),
+                  color: _accepted ? Colors.green : scheme.primary,
                 ),
                 const SizedBox(height: 16),
-                const Text(
+                Text(
                   'Secure Admin Invitation',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),
@@ -103,24 +104,24 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
                         ? 'Single-use invitation token detected. Secure server verification is required to activate Admin privileges.'
                         : 'A valid invitation link is required. Contact the Founder.',
                     textAlign: TextAlign.center,
-                    style: const TextStyle(color: Colors.white70, fontSize: 13),
+                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
                   ),
                   const SizedBox(height: 12),
-                  const Text(
+                  Text(
                     'No invitation has been accepted and no access has been granted.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white54, fontSize: 12),
+                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
                   ),
                   if (hasInvite) ...[
                     const SizedBox(height: 24),
                     if (_loading)
-                      const CircularProgressIndicator(color: Color(0xFFB39B5D))
+                      CircularProgressIndicator(color: scheme.primary)
                     else
                       ElevatedButton(
                         onPressed: _handleAccept,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFB39B5D),
-                          foregroundColor: Colors.black,
+                          backgroundColor: scheme.primary,
+                          foregroundColor: scheme.onPrimary,
                           minimumSize: const Size(double.infinity, 44),
                         ),
                         child: const Text('ACCEPT INVITATION',
@@ -145,7 +146,7 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
                   Text(
                     'Explicit scopes assigned: ${_grantedScopes.join(", ")}',
                     textAlign: TextAlign.center,
-                    style: const TextStyle(color: Colors.white70, fontSize: 12),
+                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
                   ),
                 ],
               ],

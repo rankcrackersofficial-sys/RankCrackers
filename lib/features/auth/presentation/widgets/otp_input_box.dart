@@ -16,6 +16,7 @@ class OtpInputBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
 
     return SizedBox(
       width: 62,
@@ -34,7 +35,7 @@ class OtpInputBox extends StatelessWidget {
         style: GoogleFonts.sora(
           fontSize: 24,
           fontWeight: FontWeight.w700,
-          color: AppColors.textWhite,
+          color: scheme.onSurface,
         ),
 
         inputFormatters: [
@@ -46,7 +47,7 @@ class OtpInputBox extends StatelessWidget {
 
           filled: true,
 
-          fillColor: AppColors.surface,
+          fillColor: scheme.surfaceContainerHighest,
 
           contentPadding:
           const EdgeInsets.symmetric(
@@ -58,7 +59,7 @@ class OtpInputBox extends StatelessWidget {
             BorderRadius.circular(18),
 
             borderSide: BorderSide(
-              color: AppColors.border,
+              color: scheme.outline,
             ),
           ),
 
@@ -67,7 +68,7 @@ class OtpInputBox extends StatelessWidget {
             BorderRadius.circular(18),
 
             borderSide: BorderSide(
-              color: AppColors.border,
+              color: scheme.outline,
             ),
           ),
 
