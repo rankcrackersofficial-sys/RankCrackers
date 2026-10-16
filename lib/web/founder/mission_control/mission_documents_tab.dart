@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:crypto/crypto.dart';
 import 'package:file_picker/file_picker.dart';
@@ -256,6 +258,15 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     return 'OTHER_OFFICIAL_SOURCE';
   }
 
+  String? _forcePipelineSourceUrl() {
+    final configured = widget.mission['officialSourceUrl']?.toString().trim();
+    if (configured != null && configured.isNotEmpty) return configured;
+    if (widget.missionId == 'ssc_cgl') {
+      return 'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf';
+    }
+    return null;
+  }
+
   Future<void> _uploadDocument() async {
     final manualTitle = _titleCtrl.text.trim();
     if (_scope != 'MISSION_COMMON' && _selectedVariableId == null) {
@@ -360,6 +371,41 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             'mission_realms/${widget.missionId}/official_documents/$documentId.$ext';
 
         try {
+          // Official notification PDFs must use the server-governed force
+          // pipeline. Direct client writes to mission_realms official storage
+          // are intentionally denied by Storage Rules.
+          if (_scope == 'MISSION_COMMON' &&
+              _documentType == 'original_notification' &&
+              ext == 'pdf') {
+            final cycleKey = widget.mission['cycleKey']?.toString().trim() ??
+                (widget.missionId == 'ssc_cgl' ? 'ssc_cgl_2026' : '');
+            final authorityKey =
+                widget.mission['authorityKey']?.toString().trim() ??
+                    (widget.missionId == 'ssc_cgl' ? 'auth_in_ssc' : '');
+            final sourceUrl = _forcePipelineSourceUrl();
+            if (cycleKey.isEmpty || authorityKey.isEmpty || sourceUrl == null) {
+              throw StateError(
+                'This mission is missing cycle, authority, or official source URL metadata.',
+              );
+            }
+            final callable = FirebaseFunctions.instance.httpsCallable(
+              'forceMissionPipeline',
+            );
+            await callable.call({
+              'missionId': widget.missionId,
+              'cycleKey': cycleKey,
+              'authorityKey': authorityKey,
+              'officialSourceUrl': sourceUrl,
+              'sourceBase64': base64Encode(bytes),
+              'sourceType': 'notification',
+              'sourceLanguage': 'en',
+              'syllabusBindingMode': 'EMBEDDED',
+              'requestId': 'ui-${hash.substring(0, 24)}',
+            });
+            uploadedCount++;
+            continue;
+          }
+
           final ref = FirebaseStorage.instance.ref(storagePath);
           await ref.putData(
               bytes, SettableMetadata(contentType: mimeForExtension(ext)));

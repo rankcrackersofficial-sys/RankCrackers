@@ -1,11 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
-const Color _bg = Color(0xFF050A10);
-const Color _panel = Color(0xFF101721);
-const Color _line = Color(0xFF223044);
-const Color _gold = Color(0xFFD4AF37);
-const Color _green = Color(0xFF4ADE80);
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 
 class FounderStudentHealthWeb extends StatelessWidget {
   const FounderStudentHealthWeb({super.key});
@@ -13,7 +8,7 @@ class FounderStudentHealthWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: _bg,
+      color: FounderLightTheme.bg,
       padding: const EdgeInsets.all(24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,7 +16,7 @@ class FounderStudentHealthWeb extends StatelessWidget {
           const Text(
             'STUDENT HEALTH / PANEL LINKAGE',
             style: TextStyle(
-              color: Colors.white,
+              color: FounderLightTheme.textPrimary,
               fontSize: 28,
               fontWeight: FontWeight.w900,
               letterSpacing: 0.5,
@@ -30,7 +25,7 @@ class FounderStudentHealthWeb extends StatelessWidget {
           const SizedBox(height: 8),
           const Text(
             'Founder observability for Student Panel readiness without private score or mastery edits.',
-            style: TextStyle(color: Colors.white54, fontSize: 14),
+            style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 14),
           ),
           const SizedBox(height: 20),
           Expanded(
@@ -240,14 +235,14 @@ class _HealthCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final healthy = record.status.toUpperCase() == 'HEALTHY';
-    final color = healthy ? _green : _gold;
+    final color = healthy ? FounderLightTheme.success : FounderLightTheme.gold;
 
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: _panel,
+        color: FounderLightTheme.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: _line),
+        border: Border.all(color: FounderLightTheme.border),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -258,7 +253,7 @@ class _HealthCard extends StatelessWidget {
                 child: Text(
                   record.surface.toUpperCase(),
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: FounderLightTheme.textPrimary,
                     fontSize: 14,
                     fontWeight: FontWeight.w800,
                   ),
@@ -280,7 +275,10 @@ class _HealthCard extends StatelessWidget {
             record.detail,
             maxLines: 3,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(color: Colors.white60, height: 1.35),
+            style: const TextStyle(
+              color: FounderLightTheme.textMuted,
+              height: 1.35,
+            ),
           ),
           const Spacer(),
           _miniLine('Student', record.studentState),
@@ -292,7 +290,7 @@ class _HealthCard extends StatelessWidget {
                 ? 'Truth mutation authority: BLOCKED'
                 : 'Truth mutation authority: NO',
             style: const TextStyle(
-              color: Colors.white38,
+              color: FounderLightTheme.textMuted,
               fontSize: 10,
               fontWeight: FontWeight.w700,
             ),
@@ -331,7 +329,7 @@ class _HealthCard extends StatelessWidget {
           child: Text(
             label.toUpperCase(),
             style: const TextStyle(
-              color: Colors.white38,
+              color: FounderLightTheme.textMuted,
               fontSize: 9,
               fontWeight: FontWeight.w700,
             ),
@@ -342,7 +340,10 @@ class _HealthCard extends StatelessWidget {
             value,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(color: Colors.white70, fontSize: 11),
+            style: const TextStyle(
+              color: FounderLightTheme.textSecondary,
+              fontSize: 11,
+            ),
           ),
         ),
       ],

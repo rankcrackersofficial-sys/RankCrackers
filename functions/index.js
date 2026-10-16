@@ -15,6 +15,7 @@ const { getSystemHealth } = require("./callable/system_health");
 const { processAITask } = require("./callable/process_ai_task");
 const { handleSentinelAction } = require("./callable/handle_sentinel_action");
 const { handleMissionAction } = require("./callable/handle_mission_action");
+const { forceMissionPipeline } = require("./callable/force_mission_pipeline");
 const { getSecureAssetUrl } = require("./callable/secure_download");
 const { setSovereignClaims } = require("./index_legacy"); // Keeping legacy for bootstrapping if needed
 
@@ -29,6 +30,7 @@ exports.getSystemHealth = getSystemHealth;
 exports.processAITask = processAITask;
 exports.handleSentinelAction = handleSentinelAction;
 exports.handleMissionAction = handleMissionAction;
+exports.forceMissionPipeline = forceMissionPipeline;
 exports.getSecureAssetUrl = getSecureAssetUrl;
 exports.setSovereignClaims = setSovereignClaims;
 

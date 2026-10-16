@@ -69,7 +69,9 @@ jobs:
       - name: Founder Admin permissions and invite security regressions
         run: flutter test test/core/admin/admin_permission_resolver_test.dart test/web/admin_invite_screen_security_test.dart test/web/admin_my_access_panel_test.dart
       - run: flutter analyze lib/features/admin/presentation/widgets/mission_control/mission_creation_center.dart lib/features/admin/presentation/widgets/mission_control/mission_control_center.dart lib/web/founder/mission_control/founder_mission_inventory.dart
-      - run: flutter build web -t lib/main_web.dart --release
+        # Founder web is the light-only operational surface. Keep its explicit
+        # entrypoint so production cannot silently switch to the general router.
+        - run: flutter build web -t lib/main_web.dart --release
 
   # Separate Student/Android acceptance. A green backend cannot mask a
   # broken Android application or cross-platform source contract.

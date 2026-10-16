@@ -71,7 +71,9 @@ class RankCrackersApp extends StatelessWidget {
           title: 'RankCrackers',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
-          themeMode: themeController.themeMode,
+          // The Founder web surface is intentionally light-only. Mobile keeps
+          // the full user-selected light/dark theme controller.
+          themeMode: kIsWeb ? ThemeMode.light : themeController.themeMode,
           routerConfig: appRouter,
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum AppThemeChoice { system, lightLuxe, luxuryNight }
@@ -13,10 +14,12 @@ class AppThemeController extends ChangeNotifier {
   static Future<AppThemeController> bootstrap() async {
     final preferences = await SharedPreferences.getInstance();
     final stored = preferences.getString(_preferenceKey);
-    final choice = AppThemeChoice.values.firstWhere(
-      (item) => item.name == stored,
-      orElse: () => AppThemeChoice.luxuryNight,
-    );
+    final choice = kIsWeb
+        ? AppThemeChoice.lightLuxe
+        : AppThemeChoice.values.firstWhere(
+            (item) => item.name == stored,
+            orElse: () => AppThemeChoice.luxuryNight,
+          );
     return AppThemeController._(choice);
   }
 
@@ -34,6 +37,7 @@ class AppThemeController extends ChangeNotifier {
   }
 
   Future<void> setChoice(AppThemeChoice choice) async {
+    if (kIsWeb) choice = AppThemeChoice.lightLuxe;
     if (_choice == choice) return;
     _choice = choice;
     notifyListeners();

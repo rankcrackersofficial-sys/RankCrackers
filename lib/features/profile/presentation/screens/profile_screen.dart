@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -72,8 +73,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) return;
       if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('UPLOADING AVATAR...')));
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text('UPLOADING AVATAR...')));
 
       try {
         final storageRef = FirebaseStorage.instance
@@ -110,8 +111,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           decoration: InputDecoration(
             labelText: "Display Name",
             labelStyle: TextStyle(color: _muted),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: _border)),
+            border: OutlineInputBorder(borderSide: BorderSide(color: _border)),
           ),
         ),
         actions: [
@@ -125,7 +125,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               if (user != null) {
                 await user.updateDisplayName(controller.text);
                 await SessionManager.saveStudentName(controller.text);
-                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(user.uid)
+                    .update({
                   'name': controller.text,
                 });
                 ref.invalidate(sessionUserProvider);
@@ -163,8 +166,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               decoration: InputDecoration(
                 labelText: "Mobile Number",
                 labelStyle: TextStyle(color: _muted),
-                border: OutlineInputBorder(
-                    borderSide: BorderSide(color: _border)),
+                border:
+                    OutlineInputBorder(borderSide: BorderSide(color: _border)),
               ),
             ),
           ],
@@ -178,7 +181,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               if (controller.text.isEmpty) return;
               final user = FirebaseAuth.instance.currentUser;
               if (user != null) {
-                await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+                await FirebaseFirestore.instance
+                    .collection('users')
+                    .doc(user.uid)
+                    .update({
                   'phone': controller.text,
                 });
                 await SessionManager.saveStudentMobile(controller.text);
@@ -186,7 +192,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               }
               if (context.mounted) Navigator.pop(context);
             },
-            child: Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
+            child:
+                Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
           ),
         ],
       ),
@@ -199,7 +206,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       context: context,
       builder: (context) => AlertDialog(
         backgroundColor: _surface,
-        title: Text(type == 'issue_report' ? 'REPORT AN ISSUE' : 'SUBMIT GENERAL INQUIRY', style: AppTypography.cardTitle),
+        title: Text(
+            type == 'issue_report'
+                ? 'REPORT AN ISSUE'
+                : 'SUBMIT GENERAL INQUIRY',
+            style: AppTypography.cardTitle),
         content: TextField(
           controller: controller,
           maxLines: 4,
@@ -207,8 +218,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           decoration: InputDecoration(
             hintText: "Enter details for the command team...",
             hintStyle: TextStyle(color: _muted),
-            border: OutlineInputBorder(
-                borderSide: BorderSide(color: _border)),
+            border: OutlineInputBorder(borderSide: BorderSide(color: _border)),
           ),
         ),
         actions: [
@@ -273,7 +283,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       _buildDangerZoneSection(),
                       _buildLegalSection(),
                       _buildAdaptiveInsights(engine),
-
                       const SliverToBoxAdapter(child: SizedBox(height: 100)),
                     ],
                   ),
@@ -286,14 +295,15 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
   }
 
-
-
   Widget _sectionLabel(String text) {
     return Padding(
       padding: EdgeInsets.only(bottom: 8, left: 4),
       child: Text(text,
           style: AppTypography.label.copyWith(
-              fontSize: 9, color: _muted, letterSpacing: 1.0, fontWeight: FontWeight.bold)),
+              fontSize: 9,
+              color: _muted,
+              letterSpacing: 1.0,
+              fontWeight: FontWeight.bold)),
     );
   }
 
@@ -316,7 +326,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         ),
         child: Row(
           children: [
-            Icon(icon, color: isDestructive ? Colors.redAccent : iconColor, size: 18),
+            Icon(icon,
+                color: isDestructive ? Colors.redAccent : iconColor, size: 18),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
@@ -325,7 +336,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   Text(
                     title,
                     style: AppTypography.cardTitle.copyWith(
-                      fontSize: 13, 
+                      fontSize: 13,
                       color: isDestructive ? Colors.redAccent : titleColor,
                       fontWeight: isDestructive ? FontWeight.bold : null,
                     ),
@@ -333,7 +344,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: AppTypography.subtitle.copyWith(fontSize: 10, color: isDestructive ? Colors.red.withValues(alpha: 0.5) : _muted),
+                    style: AppTypography.subtitle.copyWith(
+                        fontSize: 10,
+                        color: isDestructive
+                            ? Colors.red.withValues(alpha: 0.5)
+                            : _muted),
                   ),
                 ],
               ),
@@ -370,7 +385,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                               ? NetworkImage(sessionUser!.photo!)
                               : null,
                           child: sessionUser?.photo == null
-                              ? Icon(Icons.person_rounded, size: 28, color: _muted)
+                              ? Icon(Icons.person_rounded,
+                                  size: 28, color: _muted)
                               : null,
                         ),
                         Positioned(
@@ -399,12 +415,14 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       children: [
                         Text(
                           sessionUser?.name ?? 'Warrior',
-                          style: AppTypography.cardTitle.copyWith(fontSize: 15, color: _text),
+                          style: AppTypography.cardTitle
+                              .copyWith(fontSize: 15, color: _text),
                         ),
                         SizedBox(height: 2),
                         Text(
                           sessionUser?.email ?? 'Identity Verified',
-                          style: AppTypography.subtitle.copyWith(fontSize: 11, color: _muted),
+                          style: AppTypography.subtitle
+                              .copyWith(fontSize: 11, color: _muted),
                         ),
                       ],
                     ),
@@ -413,7 +431,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     onPressed: _updateIdentityDialog,
                     child: const Text(
                       'Edit Profile',
-                      style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                          color: AppColors.gold,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -445,18 +466,24 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     children: [
                       Text(
                         'Career Profile',
-                        style: AppTypography.cardTitle.copyWith(color: AppColors.gold),
+                        style: AppTypography.cardTitle
+                            .copyWith(color: AppColors.gold),
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 4),
                         decoration: BoxDecoration(
                           color: AppColors.gold.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+                          border: Border.all(
+                              color: AppColors.gold.withValues(alpha: 0.3)),
                         ),
                         child: Text(
                           '$addedCount of 7 key details added',
-                          style: AppTypography.subtitle.copyWith(color: AppColors.gold, fontWeight: FontWeight.bold, fontSize: 10),
+                          style: AppTypography.subtitle.copyWith(
+                              color: AppColors.gold,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 10),
                         ),
                       ),
                     ],
@@ -464,7 +491,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   SizedBox(height: 8),
                   Text(
                     'Build a more accurate picture of your education, goals and career preferences.',
-                    style: AppTypography.body.copyWith(color: _muted, fontSize: 12),
+                    style: AppTypography.body
+                        .copyWith(color: _muted, fontSize: 12),
                   ),
                   const SizedBox(height: 16),
                   SizedBox(
@@ -479,7 +507,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                         ).then((_) {
                           final user = FirebaseAuth.instance.currentUser;
                           if (user != null) {
-                            ref.read(warriorProfileProvider.notifier).loadProfile(user.uid);
+                            ref
+                                .read(warriorProfileProvider.notifier)
+                                .loadProfile(user.uid);
                           }
                         });
                       },
@@ -494,7 +524,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       ),
                       child: Text(
                         'Update Career Profile',
-                        style: AppTypography.button.copyWith(color: _text, fontWeight: FontWeight.bold),
+                        style: AppTypography.button.copyWith(
+                            color: _text, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -527,7 +558,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       children: [
                         Text(
                           currentExam ?? 'Select Mission',
-                          style: AppTypography.cardTitle.copyWith(fontSize: 16, color: _text),
+                          style: AppTypography.cardTitle
+                              .copyWith(fontSize: 16, color: _text),
                         ),
                         SizedBox(height: 4),
                         Text(
@@ -543,7 +575,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       backgroundColor: _surface,
                       foregroundColor: _text,
                       side: BorderSide(color: _border),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -553,10 +586,14 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       children: [
                         Text(
                           'Change Mission',
-                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.gold),
+                          style: TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: AppColors.gold),
                         ),
                         SizedBox(width: 4),
-                        Icon(Icons.arrow_forward_ios_rounded, size: 10, color: AppColors.gold),
+                        Icon(Icons.arrow_forward_ios_rounded,
+                            size: 10, color: AppColors.gold),
                       ],
                     ),
                   ),
@@ -596,7 +633,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               icon: Icons.privacy_tip_outlined,
               title: 'Privacy',
               subtitle: 'Manage data preferences and privacy settings',
-              onTap: () => _showLegalDialog('Privacy Policy', 'Your academic progress and career matches are private and protected under strict governed access controls. Only you can view your performance insights.'),
+              onTap: () => _showLegalDialog('Privacy Policy',
+                  'Your academic progress and career matches are private and protected under strict governed access controls. Only you can view your performance insights.'),
             ),
           ],
         ),
@@ -616,7 +654,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             _settingsListTile(
               icon: Icons.bug_report_outlined,
               title: 'Report an Issue',
-              subtitle: 'Report software bugs, layout glitches or syllabus errors',
+              subtitle:
+                  'Report software bugs, layout glitches or syllabus errors',
               onTap: () => _showSupportDialog('issue_report'),
             ),
             SizedBox(height: 8),
@@ -684,7 +723,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             ListTile(
               leading: Icon(Icons.light_mode_rounded, color: AppColors.gold),
               title: Text('Light Luxe', style: TextStyle(color: _text)),
-              subtitle: Text('Bright, clean study surfaces', style: TextStyle(color: _muted)),
+              subtitle: Text('Bright, clean study surfaces',
+                  style: TextStyle(color: _muted)),
               trailing: controller.choice == AppThemeChoice.lightLuxe
                   ? Icon(Icons.check_rounded, color: AppColors.gold)
                   : null,
@@ -693,30 +733,35 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                 if (sheetContext.mounted) Navigator.pop(sheetContext);
               },
             ),
-            ListTile(
-              leading: Icon(Icons.dark_mode_rounded, color: AppColors.gold),
-              title: Text('Luxury Night', style: TextStyle(color: _text)),
-              subtitle: Text('Deep contrast for focused study', style: TextStyle(color: _muted)),
-              trailing: controller.choice == AppThemeChoice.luxuryNight
-                  ? Icon(Icons.check_rounded, color: AppColors.gold)
-                  : null,
-              onTap: () async {
-                await controller.setChoice(AppThemeChoice.luxuryNight);
-                if (sheetContext.mounted) Navigator.pop(sheetContext);
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.brightness_auto_rounded, color: AppColors.gold),
-              title: Text('Follow device', style: TextStyle(color: _text)),
-              subtitle: Text('Use the device appearance setting', style: TextStyle(color: _muted)),
-              trailing: controller.choice == AppThemeChoice.system
-                  ? Icon(Icons.check_rounded, color: AppColors.gold)
-                  : null,
-              onTap: () async {
-                await controller.setChoice(AppThemeChoice.system);
-                if (sheetContext.mounted) Navigator.pop(sheetContext);
-              },
-            ),
+            if (!kIsWeb)
+              ListTile(
+                leading: Icon(Icons.dark_mode_rounded, color: AppColors.gold),
+                title: Text('Luxury Night', style: TextStyle(color: _text)),
+                subtitle: Text('Deep contrast for focused study',
+                    style: TextStyle(color: _muted)),
+                trailing: controller.choice == AppThemeChoice.luxuryNight
+                    ? Icon(Icons.check_rounded, color: AppColors.gold)
+                    : null,
+                onTap: () async {
+                  await controller.setChoice(AppThemeChoice.luxuryNight);
+                  if (sheetContext.mounted) Navigator.pop(sheetContext);
+                },
+              ),
+            if (!kIsWeb)
+              ListTile(
+                leading:
+                    Icon(Icons.brightness_auto_rounded, color: AppColors.gold),
+                title: Text('Follow device', style: TextStyle(color: _text)),
+                subtitle: Text('Use the device appearance setting',
+                    style: TextStyle(color: _muted)),
+                trailing: controller.choice == AppThemeChoice.system
+                    ? Icon(Icons.check_rounded, color: AppColors.gold)
+                    : null,
+                onTap: () async {
+                  await controller.setChoice(AppThemeChoice.system);
+                  if (sheetContext.mounted) Navigator.pop(sheetContext);
+                },
+              ),
             const SizedBox(height: 12),
           ],
         ),
@@ -737,7 +782,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               icon: Icons.gavel_rounded,
               title: 'Terms of Service',
               subtitle: 'Terms, conditions and governed platform guidelines',
-              onTap: () => _showLegalDialog('Terms of Service', 'By utilizing this sovereign preparation platform, you agree to comply with academic honesty and verification guidelines.'),
+              onTap: () => _showLegalDialog('Terms of Service',
+                  'By utilizing this sovereign preparation platform, you agree to comply with academic honesty and verification guidelines.'),
             ),
           ],
         ),
@@ -768,10 +814,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     Expanded(
                       child: Text(
                         'Log Out',
-                        style: AppTypography.cardTitle.copyWith(fontSize: 14, color: _text),
+                        style: AppTypography.cardTitle
+                            .copyWith(fontSize: 14, color: _text),
                       ),
                     ),
-                    Icon(Icons.arrow_forward_ios_rounded, size: 12, color: _muted),
+                    Icon(Icons.arrow_forward_ios_rounded,
+                        size: 12, color: _muted),
                   ],
                 ),
               ),
@@ -840,14 +888,17 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       builder: (ctx) => AlertDialog(
         backgroundColor: _background,
         title: Text('Deactivate Account', style: TextStyle(color: _text)),
-        content: Text('Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.', style: TextStyle(color: _muted)),
+        content: Text(
+            'Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.',
+            style: TextStyle(color: _muted)),
         actions: [
           TextButton(
             child: Text('Cancel', style: TextStyle(color: _muted)),
             onPressed: () => Navigator.of(ctx).pop(false),
           ),
           TextButton(
-            child: const Text('Deactivate', style: TextStyle(color: AppColors.gold)),
+            child: const Text('Deactivate',
+                style: TextStyle(color: AppColors.gold)),
             onPressed: () => Navigator.of(ctx).pop(true),
           ),
         ],
@@ -855,7 +906,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
 
     if (confirm == true) {
-      await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .update({
         'status': 'deactivated',
         'updatedAt': FieldValue.serverTimestamp(),
       });
@@ -874,14 +928,17 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       builder: (ctx) => AlertDialog(
         backgroundColor: _background,
         title: Text('Delete Account', style: TextStyle(color: _text)),
-        content: Text('This will request permanent deletion of all your academic and personal profile data. This action is irreversible. Proceed?', style: TextStyle(color: _muted)),
+        content: Text(
+            'This will request permanent deletion of all your academic and personal profile data. This action is irreversible. Proceed?',
+            style: TextStyle(color: _muted)),
         actions: [
           TextButton(
             child: Text('Cancel', style: TextStyle(color: _muted)),
             onPressed: () => Navigator.of(ctx).pop(false),
           ),
           TextButton(
-            child: const Text('Request Deletion', style: TextStyle(color: Colors.red)),
+            child: const Text('Request Deletion',
+                style: TextStyle(color: Colors.red)),
             onPressed: () => Navigator.of(ctx).pop(true),
           ),
         ],
@@ -889,7 +946,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     );
 
     if (confirm == true) {
-      await FirebaseFirestore.instance.collection('users').doc(user.uid).update({
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .update({
         'deleteRequested': true,
         'status': 'deletion_pending',
         'updatedAt': FieldValue.serverTimestamp(),
@@ -926,8 +986,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final streak = momentum?.studyStreakDays ?? 0;
 
     final recommendations = engine.getRecommendations(limit: 1);
-    
-    final bool hasEvidence = engine.isInitialized && (totalBattles > 0 || streak > 0 || recommendations.isNotEmpty);
+
+    final bool hasEvidence = engine.isInitialized &&
+        (totalBattles > 0 || streak > 0 || recommendations.isNotEmpty);
 
     final String insight = hasEvidence
         ? (recommendations.isNotEmpty
@@ -944,9 +1005,8 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text('ADAPTIVE INSIGHT',
-                  style: AppTypography.label.copyWith(
-                      fontSize: 8,
-                      color: AppColors.gold)),
+                  style: AppTypography.label
+                      .copyWith(fontSize: 8, color: AppColors.gold)),
               SizedBox(height: 4),
               Text(
                 insight,
