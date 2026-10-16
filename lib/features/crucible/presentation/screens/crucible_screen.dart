@@ -272,6 +272,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // SECTION 1: COMPACT HEADER SECTION (<= 110dp)
   // ---------------------------------------------------------------------------
   Widget _buildCompactHeader(int currentCycleDay, int currentPhase, int orbitNumber) {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -311,7 +312,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             fontSize: 22,
             fontWeight: FontWeight.w800,
             letterSpacing: 1.2,
-            color: Colors.white,
+            color: scheme.onSurface,
           ),
         ),
         const SizedBox(height: 2),
@@ -339,6 +340,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required bool isRebuild,
     required bool isMacro,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     if (isRebuild) {
       return DarkCard(
         padding: const EdgeInsets.all(18),
@@ -355,7 +357,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             const SizedBox(height: 12),
             Text(
               'Block $currentPhase Rebuild Window',
-              style: AppTypography.section.copyWith(color: Colors.white, fontSize: 17),
+              style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 17),
             ),
             const SizedBox(height: 6),
             Text(
@@ -394,7 +396,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             const SizedBox(height: 12),
             Text(
               'Block $currentPhase Comprehensive Milestone',
-              style: AppTypography.section.copyWith(color: Colors.white, fontSize: 17),
+              style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 17),
             ),
             const SizedBox(height: 6),
             Text(
@@ -405,9 +407,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.04),
+                color: scheme.surfaceContainerHighest.withValues(alpha: 0.65),
                 borderRadius: BorderRadius.circular(6),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
+                border: Border.all(color: scheme.outline),
               ),
               child: Row(
                 children: [
@@ -468,8 +470,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               _buildTagChip('${activeSchedule.formattedCode} • $dayInScheduleLabel', AppColors.gold),
               Text(
                 activeSchedule.subject.toUpperCase(),
-                style: const TextStyle(
-                  color: AppColors.textSecondary,
+                style: TextStyle(
+                  color: scheme.onSurfaceVariant,
                   fontSize: 10,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1.0,
@@ -483,7 +485,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Text(
             activeSchedule.canonicalTitle,
             style: AppTypography.section.copyWith(
-              color: Colors.white,
+              color: scheme.onSurface,
               fontSize: 17,
               fontWeight: FontWeight.w700,
             ),
@@ -492,7 +494,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Text(
             '${activeSchedule.subject} • Block ${activeSchedule.phaseIndex}',
             style: AppTypography.subtitle.copyWith(
-              color: AppColors.textSecondary,
+              color: scheme.onSurfaceVariant,
               fontSize: 12,
             ),
           ),
@@ -504,7 +506,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Icon(
                 hasContent ? Icons.check_circle_outline_rounded : Icons.radio_button_unchecked_rounded,
                 size: 14,
-                color: hasContent ? const Color(0xFF4CAF50) : AppColors.textSecondary,
+                color: hasContent ? AppColors.success : scheme.onSurfaceVariant,
               ),
               const SizedBox(width: 6),
               Text(
@@ -512,7 +514,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     ? 'Learning content available'
                     : 'Learning content not available yet',
                 style: TextStyle(
-                  color: hasContent ? const Color(0xFF4CAF50) : AppColors.textSecondary,
+                  color: hasContent ? AppColors.success : scheme.onSurfaceVariant,
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.5,
@@ -529,8 +531,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 flex: 3,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: hasContent ? AppColors.gold : Colors.white12,
-                    foregroundColor: hasContent ? Colors.black : Colors.white38,
+                    backgroundColor: hasContent ? AppColors.gold : scheme.surfaceContainerHighest,
+                    foregroundColor: hasContent ? scheme.onPrimary : scheme.onSurfaceVariant,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
@@ -556,8 +558,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 flex: 2,
                 child: OutlinedButton(
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.white.withValues(alpha: 0.2)),
-                    foregroundColor: Colors.white,
+                    side: BorderSide(color: scheme.outline),
+                    foregroundColor: scheme.onSurface,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
@@ -582,9 +584,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: 0.03),
+              color: scheme.surfaceContainerHighest.withValues(alpha: 0.55),
               borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: Colors.white.withValues(alpha: 0.05)),
+              border: Border.all(color: scheme.outline),
             ),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -613,6 +615,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     CrucibleCanonicalSchedule schedule,
     List<DigiBookAuthorityEntry> entries,
   ) {
+    final scheme = Theme.of(context).colorScheme;
     if (entries.isEmpty) {
       _handleUnavailableContent(schedule);
       return;
@@ -637,7 +640,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     // Multiple GUs: Render governed selection sheet
     showModalBottomSheet(
       context: context,
-      backgroundColor: AppColors.surface,
+      backgroundColor: scheme.surfaceContainerHighest,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
@@ -650,7 +653,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             children: [
               Text(
                 '${schedule.formattedCode} — ${schedule.canonicalTitle}',
-                style: AppTypography.section.copyWith(color: Colors.white, fontSize: 16),
+                style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 16),
               ),
               const SizedBox(height: 4),
               Text(
@@ -662,7 +665,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 child: ListView.separated(
                   shrinkWrap: true,
                   itemCount: entries.length,
-                  separatorBuilder: (_, __) => const Divider(color: Colors.white10, height: 1),
+                  separatorBuilder: (_, __) => Divider(color: scheme.outline, height: 1),
                   itemBuilder: (context, index) {
                     final e = entries[index];
                     return ListTile(
@@ -678,7 +681,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       ),
                       title: Text(
                         e.topic.isNotEmpty ? e.topic : 'Module ${index + 1}',
-                        style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600),
+                        style: TextStyle(color: scheme.onSurface, fontSize: 13, fontWeight: FontWeight.w600),
                       ),
                       trailing: const Icon(Icons.chevron_right_rounded, color: AppColors.textSecondary, size: 18),
                       onTap: () {
@@ -706,9 +709,10 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   }
 
   void _handleUnavailableContent(CrucibleCanonicalSchedule schedule) {
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
-      backgroundColor: AppColors.surface,
+      backgroundColor: scheme.surfaceContainerHighest,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
       ),
@@ -725,7 +729,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   const SizedBox(width: 10),
                   Text(
                     'Learning Content Not Available Yet',
-                    style: AppTypography.section.copyWith(color: Colors.white, fontSize: 15),
+                    style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 15),
                   ),
                 ],
               ),
@@ -740,7 +744,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.gold,
-                    foregroundColor: Colors.black,
+                    foregroundColor: scheme.onPrimary,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
