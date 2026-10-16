@@ -175,12 +175,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   void _showMissionStartError() {
+    final scheme = Theme.of(context).colorScheme;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        backgroundColor: const Color(0xFF111625),
+        backgroundColor: scheme.surface,
         content: Text(
           'Mission could not start yet. Please try again.',
-          style: AppTypography.body.copyWith(color: Colors.white),
+          style: AppTypography.body.copyWith(color: scheme.onSurface),
         ),
       ),
     );
@@ -287,19 +288,20 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Future<void> _handleLogout() async {
+    final scheme = Theme.of(context).colorScheme;
     final confirmed = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.surface,
-        title: const Text('Logout', style: TextStyle(color: Colors.white, fontSize: 16)),
-        content: const Text(
+        backgroundColor: scheme.surface,
+        title: Text('Logout', style: TextStyle(color: scheme.onSurface, fontSize: 16)),
+        content: Text(
           'Are you sure you want to log out of your session?',
-          style: TextStyle(color: AppColors.secondaryText, fontSize: 13),
+          style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(false),
-            child: const Text('Cancel', style: TextStyle(color: Colors.white70)),
+            child: Text('Cancel', style: TextStyle(color: scheme.onSurfaceVariant)),
           ),
           TextButton(
             onPressed: () => Navigator.of(ctx).pop(true),
@@ -386,7 +388,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
         }
       },
       child: Scaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: TacticalNoirBackground(
           child: SafeArea(
             child: LayoutBuilder(
@@ -490,6 +492,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildHeader(bool hasActiveMission) {
+    final scheme = Theme.of(context).colorScheme;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -502,13 +505,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                 'Mission Realm',
                 style: AppTypography.hero.copyWith(
                   fontSize: ResponsiveHelper.sp(context, 20),
-                  color: AppColors.primaryText,
+                  color: scheme.onSurface,
                 ),
               ),
               Text(
                 'Select the mission you are preparing to dominate.',
                 style: AppTypography.body.copyWith(
-                    color: AppColors.secondaryText,
+                    color: scheme.onSurfaceVariant,
                     fontSize: ResponsiveHelper.sp(context, 11)),
               ),
             ],
@@ -548,12 +551,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     required String centralCountLabel,
     required String stateCountLabel,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(4),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: scheme.surface,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
       child: Row(
         children: [
@@ -602,6 +606,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     required bool isSelected,
     required VoidCallback onTap,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return InkWell(
       key: key,
       borderRadius: BorderRadius.circular(8),
@@ -628,7 +633,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                 style: AppTypography.label.copyWith(
                   fontSize: 10,
                   fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
-                  color: isSelected ? AppColors.gold : AppColors.secondaryText,
+                color: isSelected ? AppColors.gold : scheme.onSurfaceVariant,
                   letterSpacing: 0.5,
                 ),
               ),
@@ -637,7 +642,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
               decoration: BoxDecoration(
-                color: isSelected ? AppColors.gold : AppColors.borderSoft,
+                color: isSelected ? AppColors.gold : scheme.outline,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
@@ -645,7 +650,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                 style: TextStyle(
                   fontSize: 9,
                   fontWeight: FontWeight.w700,
-                  color: isSelected ? Colors.black : Colors.white70,
+                  color: isSelected ? scheme.onPrimary : scheme.onSurfaceVariant,
                 ),
               ),
             ),
@@ -656,22 +661,23 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildStateBanner() {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(
-        color: AppColors.surface.withValues(alpha: 0.6),
+        color: scheme.surface.withValues(alpha: 0.6),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
       child: Row(
         children: [
-          const Icon(Icons.location_on_rounded, color: AppColors.gold, size: 16),
+          Icon(Icons.location_on_rounded, color: AppColors.gold, size: 16),
           const SizedBox(width: 8),
           Text(
             'STATE:',
             style: AppTypography.label.copyWith(
               fontSize: 9,
-              color: AppColors.secondaryText,
+              color: scheme.onSurfaceVariant,
               letterSpacing: 0.8,
             ),
           ),
@@ -765,6 +771,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
     required IconData icon,
     required List<Recruitment> missions,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     final summaryText = subtitle ??
         (missions.length == 1 ? '1 exam' : '${missions.length} exams');
 
@@ -772,9 +779,9 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
       key: key,
       margin: const EdgeInsets.only(bottom: 14),
       decoration: BoxDecoration(
-        color: AppColors.surface.withValues(alpha: 0.8),
+        color: scheme.surface.withValues(alpha: 0.8),
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
       child: Column(
         children: [
@@ -799,7 +806,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                         title,
                         style: AppTypography.cardTitle.copyWith(
                           fontSize: 13,
-                          color: AppColors.primaryText,
+                          color: scheme.onSurface,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -808,7 +815,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
                         summaryText,
                         style: AppTypography.body.copyWith(
                           fontSize: 10,
-                          color: AppColors.secondaryText,
+                          color: scheme.onSurfaceVariant,
                         ),
                       ),
                     ],
@@ -833,7 +840,7 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               ],
             ),
           ),
-          const Divider(color: AppColors.borderSoft, height: 1),
+          Divider(color: scheme.outline, height: 1),
           Padding(
             padding: const EdgeInsets.all(12),
             child: Column(
@@ -871,12 +878,13 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
   }
 
   Widget _buildStateSearchSection(List<String> publishedStates) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: scheme.surface,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
       child: SmartSearchField(
         title: 'SELECT STATE',
@@ -946,15 +954,16 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
 
   Widget _buildMissionCard(Recruitment recruitment) {
     final bool isExpanded = selectedRecruitmentId == recruitment.id;
+    final scheme = Theme.of(context).colorScheme;
 
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: scheme.surface,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isExpanded ? AppColors.gold : AppColors.borderSoft,
+          color: isExpanded ? AppColors.gold : scheme.outline,
           width: 1.2,
         ),
       ),
@@ -968,15 +977,15 @@ class _MissionRealmScreenState extends ConsumerState<MissionRealmScreen> {
               title: Text(recruitment.title,
                   style: AppTypography.cardTitle.copyWith(
                       fontSize: 13,
-                      color: isExpanded ? AppColors.gold : AppColors.primaryText)),
+                      color: isExpanded ? AppColors.gold : scheme.onSurface)),
               subtitle: Text(_missionMeta(recruitment),
                   style: AppTypography.body
-                      .copyWith(fontSize: 9, color: AppColors.secondaryText)),
+                      .copyWith(fontSize: 9, color: scheme.onSurfaceVariant)),
               trailing: Icon(
                   isExpanded
                       ? Icons.keyboard_arrow_up_rounded
                       : Icons.keyboard_arrow_down_rounded,
-                  color: isExpanded ? AppColors.gold : AppColors.secondaryText,
+                  color: isExpanded ? AppColors.gold : scheme.onSurfaceVariant,
                   size: 16),
             ),
           ),
