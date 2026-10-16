@@ -217,44 +217,17 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       final provider = GoogleAuthProvider();
       provider.setCustomParameters({'prompt': 'select_account'});
-      await FirebaseAuth.instance
-          .signInWithPopup(provider)
-          .timeout(const Duration(seconds: 12));
+      // Keep mobile Chrome on one deterministic OAuth transaction. A popup
+      // timeout followed by redirect can leave two transactions alive and
+      // return to the login page after consent.
+      await FirebaseAuth.instance.signInWithRedirect(provider);
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        setState(() => _error = '${e.code}: ${e.message ?? 'Google sign-in failed.'}');
+      }
     } catch (e) {
-      // Some managed Chrome sessions block the popup even though the same
-      // provider is valid. Redirect is the supported web fallback and keeps
-      // the authenticated return path inside this web console.
-      if (e is FirebaseAuthException &&
-          (e.code == 'popup-blocked' ||
-              e.code == 'operation-not-supported-in-this-environment')) {
-        try {
-          final provider = GoogleAuthProvider();
-          provider.setCustomParameters({'prompt': 'select_account'});
-          await FirebaseAuth.instance.signInWithRedirect(provider);
-          return;
-        } on FirebaseAuthException catch (redirectError) {
-          if (mounted) {
-            setState(() => _error =
-                '${redirectError.code}: ${redirectError.message ?? redirectError.toString()}');
-          }
-          return;
-        }
-      }
-      if (e is FirebaseAuthException || e is TimeoutException) {
-        try {
-          final provider = GoogleAuthProvider();
-          provider.setCustomParameters({'prompt': 'select_account'});
-          await FirebaseAuth.instance.signInWithRedirect(provider);
-          return;
-        } on FirebaseAuthException catch (redirectError) {
-          if (mounted) {
-            setState(() => _error =
-                '${redirectError.code}: ${redirectError.message ?? redirectError.toString()}');
-          }
-          return;
-        }
-      }
-      setState(() => _error = e.toString());
+      if (mounted) setState(() => _error = 'Google sign-in failed. Please try again.');
+      debugPrint('WEB_GOOGLE_SIGN_IN_FAILED: $e');
     } finally {
       if (mounted) setState(() => _googleBusy = false);
     }

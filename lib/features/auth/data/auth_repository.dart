@@ -31,15 +31,8 @@ class AuthRepositoryImpl implements AuthRepository {
       if (kIsWeb) {
         final provider = GoogleAuthProvider();
         provider.setCustomParameters({'prompt': 'select_account'});
-        try {
-          return await _auth.signInWithPopup(provider);
-        } catch (_) {
-          // Hosted/managed browsers may close or block the popup without
-          // exposing a stable error code. Redirect is safe for every web
-          // popup failure and lets Firebase return to this same console.
-          await _auth.signInWithRedirect(provider);
-          return null;
-        }
+        await _auth.signInWithRedirect(provider);
+        return null;
       }
 
       debugPrint('G00_PREVIOUS_GOOGLE_SESSION_CLEAR_STARTED');
