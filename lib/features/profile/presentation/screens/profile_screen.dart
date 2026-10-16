@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_typography.dart';
 import '../../../../core/theme/tactical_noir_background.dart';
+import '../../../../core/theme/app_theme_controller.dart';
 import '../../../../core/widgets/dark_card.dart';
 import '../../../../core/utils/app_routes.dart';
 import '../../../../shared/session/session_manager.dart';
@@ -25,13 +26,20 @@ import 'package:rank_crackers/features/deep_profile/providers/warrior_profile_pr
 import 'package:rank_crackers/features/deep_profile/screens/career_profile_screen.dart';
 
 class ProfileScreen extends ConsumerStatefulWidget {
-  const ProfileScreen({super.key});
+  ProfileScreen({super.key});
 
   @override
   ConsumerState<ProfileScreen> createState() => _ProfileScreenState();
 }
 
 class _ProfileScreenState extends ConsumerState<ProfileScreen> {
+  Color get _surface => Theme.of(context).colorScheme.surfaceContainerHighest;
+  Color get _background => Theme.of(context).colorScheme.surface;
+  Color get _text => Theme.of(context).colorScheme.onSurface;
+  Color get _muted => Theme.of(context).colorScheme.onSurfaceVariant;
+  Color get _border => Theme.of(context).colorScheme.outline;
+  Color get _onPrimary => Theme.of(context).colorScheme.onPrimary;
+
   bool _isAdmin = false;
 
   @override
@@ -65,7 +73,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
       if (user == null) return;
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('UPLOADING AVATAR...')));
+          SnackBar(content: Text('UPLOADING AVATAR...')));
 
       try {
         final storageRef = FirebaseStorage.instance
@@ -94,22 +102,22 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppColors.surface,
-        title: const Text("EDIT IDENTITY", style: TextStyle(color: Colors.white)),
+        backgroundColor: _surface,
+        title: Text("EDIT IDENTITY", style: TextStyle(color: _text)),
         content: TextField(
           controller: controller,
-          style: const TextStyle(color: Colors.white),
-          decoration: const InputDecoration(
+          style: TextStyle(color: _text),
+          decoration: InputDecoration(
             labelText: "Display Name",
-            labelStyle: TextStyle(color: Colors.white38),
+            labelStyle: TextStyle(color: _muted),
             border: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.borderSoft)),
+                borderSide: BorderSide(color: _border)),
           ),
         ),
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
+              child: Text("CANCEL", style: TextStyle(color: _muted))),
           TextButton(
             onPressed: () async {
               if (controller.text.isEmpty) return;
@@ -124,7 +132,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               }
               if (context.mounted) Navigator.pop(context);
             },
-            child: const Text("SAVE", style: TextStyle(color: AppColors.gold)),
+            child: Text("SAVE", style: TextStyle(color: AppColors.gold)),
           ),
         ],
       ),
@@ -137,26 +145,26 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppColors.surface,
-        title: const Text("MOBILE & VERIFICATION", style: TextStyle(color: Colors.white)),
+        backgroundColor: _surface,
+        title: Text("MOBILE & VERIFICATION", style: TextStyle(color: _text)),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               "Ensure your contact number is verified to receive priority mission communications.",
-              style: TextStyle(color: Colors.white70, fontSize: 12),
+              style: TextStyle(color: _muted, fontSize: 12),
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             TextField(
               controller: controller,
               keyboardType: TextInputType.phone,
-              style: const TextStyle(color: Colors.white),
-              decoration: const InputDecoration(
+              style: TextStyle(color: _text),
+              decoration: InputDecoration(
                 labelText: "Mobile Number",
-                labelStyle: TextStyle(color: Colors.white38),
+                labelStyle: TextStyle(color: _muted),
                 border: OutlineInputBorder(
-                    borderSide: BorderSide(color: AppColors.borderSoft)),
+                    borderSide: BorderSide(color: _border)),
               ),
             ),
           ],
@@ -164,7 +172,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
         actions: [
           TextButton(
               onPressed: () => Navigator.pop(context),
-              child: const Text("CANCEL", style: TextStyle(color: Colors.white24))),
+              child: Text("CANCEL", style: TextStyle(color: _muted))),
           TextButton(
             onPressed: () async {
               if (controller.text.isEmpty) return;
@@ -178,7 +186,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               }
               if (context.mounted) Navigator.pop(context);
             },
-            child: const Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
+            child: Text("VERIFY & SAVE", style: TextStyle(color: AppColors.gold)),
           ),
         ],
       ),
@@ -190,17 +198,17 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppColors.surface,
+        backgroundColor: _surface,
         title: Text(type == 'issue_report' ? 'REPORT AN ISSUE' : 'SUBMIT GENERAL INQUIRY', style: AppTypography.cardTitle),
         content: TextField(
           controller: controller,
           maxLines: 4,
-          style: const TextStyle(color: Colors.white),
-          decoration: const InputDecoration(
+          style: TextStyle(color: _text),
+          decoration: InputDecoration(
             hintText: "Enter details for the command team...",
-            hintStyle: TextStyle(color: Colors.white10),
+            hintStyle: TextStyle(color: _muted),
             border: OutlineInputBorder(
-                borderSide: BorderSide(color: AppColors.borderSoft)),
+                borderSide: BorderSide(color: _border)),
           ),
         ),
         actions: [
@@ -241,7 +249,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     }
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: _background,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: LayoutBuilder(
@@ -253,12 +261,13 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                           ? 700
                           : double.infinity),
                   child: CustomScrollView(
-                    physics: const BouncingScrollPhysics(),
+                    physics: BouncingScrollPhysics(),
                     slivers: [
                       _buildProfileSection(sessionUser),
                       _buildCareerProfileSliver(warriorProfile),
                       _buildMissionSection(sessionUser?.examName),
                       _buildAccountPrivacySection(sessionUser),
+                      _buildAppearanceSection(),
                       _buildHelpSupportSection(),
                       _buildSessionSection(),
                       _buildDangerZoneSection(),
@@ -281,10 +290,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
 
   Widget _sectionLabel(String text) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8, left: 4),
+      padding: EdgeInsets.only(bottom: 8, left: 4),
       child: Text(text,
           style: AppTypography.label.copyWith(
-              fontSize: 9, color: Colors.white30, letterSpacing: 1.0, fontWeight: FontWeight.bold)),
+              fontSize: 9, color: _muted, letterSpacing: 1.0, fontWeight: FontWeight.bold)),
     );
   }
 
@@ -294,15 +303,15 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     required String subtitle,
     required VoidCallback onTap,
     Color iconColor = AppColors.gold,
-    Color titleColor = Colors.white,
+    Color titleColor = _text,
     bool isDestructive = false,
   }) {
     return GestureDetector(
       onTap: onTap,
       child: DarkCard(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         border: Border.all(
-          color: isDestructive ? Colors.red.withValues(alpha: 0.3) : AppColors.borderSoft,
+          color: isDestructive ? Colors.red.withValues(alpha: 0.3) : _border,
           width: 1.0,
         ),
         child: Row(
@@ -321,16 +330,16 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       fontWeight: isDestructive ? FontWeight.bold : null,
                     ),
                   ),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2),
                   Text(
                     subtitle,
-                    style: AppTypography.subtitle.copyWith(fontSize: 10, color: isDestructive ? Colors.red.withValues(alpha: 0.5) : Colors.white30),
+                    style: AppTypography.subtitle.copyWith(fontSize: 10, color: isDestructive ? Colors.red.withValues(alpha: 0.5) : _muted),
                   ),
                 ],
               ),
             ),
             if (!isDestructive)
-              const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white12),
+              Icon(Icons.arrow_forward_ios_rounded, size: 12, color: _muted),
           ],
         ),
       ),
@@ -347,7 +356,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
           children: [
             _sectionLabel('PROFILE'),
             DarkCard(
-              padding: const EdgeInsets.all(16),
+              padding: EdgeInsets.all(16),
               child: Row(
                 children: [
                   GestureDetector(
@@ -356,46 +365,46 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       children: [
                         CircleAvatar(
                           radius: 28,
-                          backgroundColor: AppColors.surface,
+                          backgroundColor: _surface,
                           backgroundImage: sessionUser?.photo != null
                               ? NetworkImage(sessionUser!.photo!)
                               : null,
                           child: sessionUser?.photo == null
-                              ? const Icon(Icons.person_rounded, size: 28, color: Colors.white24)
+                              ? Icon(Icons.person_rounded, size: 28, color: _muted)
                               : null,
                         ),
                         Positioned(
                           bottom: 0,
                           right: 0,
                           child: Container(
-                            padding: const EdgeInsets.all(4),
-                            decoration: const BoxDecoration(
+                            padding: EdgeInsets.all(4),
+                            decoration: BoxDecoration(
                               color: AppColors.gold,
                               shape: BoxShape.circle,
                             ),
-                            child: const Icon(
+                            child: Icon(
                               Icons.camera_alt_rounded,
                               size: 10,
-                              color: Colors.black,
+                              color: _onPrimary,
                             ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(width: 16),
+                  SizedBox(width: 16),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           sessionUser?.name ?? 'Warrior',
-                          style: AppTypography.cardTitle.copyWith(fontSize: 15, color: Colors.white),
+                          style: AppTypography.cardTitle.copyWith(fontSize: 15, color: _text),
                         ),
-                        const SizedBox(height: 2),
+                        SizedBox(height: 2),
                         Text(
                           sessionUser?.email ?? 'Identity Verified',
-                          style: AppTypography.subtitle.copyWith(fontSize: 11, color: Colors.white70),
+                          style: AppTypography.subtitle.copyWith(fontSize: 11, color: _muted),
                         ),
                       ],
                     ),
@@ -452,10 +461,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 8),
+                  SizedBox(height: 8),
                   Text(
                     'Build a more accurate picture of your education, goals and career preferences.',
-                    style: AppTypography.body.copyWith(color: AppColors.secondaryText, fontSize: 12),
+                    style: AppTypography.body.copyWith(color: _muted, fontSize: 12),
                   ),
                   const SizedBox(height: 16),
                   SizedBox(
@@ -465,7 +474,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const CareerProfileScreen(),
+                            builder: (context) => CareerProfileScreen(),
                           ),
                         ).then((_) {
                           final user = FirebaseAuth.instance.currentUser;
@@ -475,17 +484,17 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                         });
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: AppColors.surface2,
-                        foregroundColor: Colors.white,
-                        side: const BorderSide(color: AppColors.border),
-                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        backgroundColor: _surface,
+                        foregroundColor: _text,
+                        side: BorderSide(color: _border),
+                        padding: EdgeInsets.symmetric(vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
                       child: Text(
                         'Update Career Profile',
-                        style: AppTypography.button.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                        style: AppTypography.button.copyWith(color: _text, fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -518,12 +527,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                       children: [
                         Text(
                           currentExam ?? 'Select Mission',
-                          style: AppTypography.cardTitle.copyWith(fontSize: 16, color: Colors.white),
+                          style: AppTypography.cardTitle.copyWith(fontSize: 16, color: _text),
                         ),
-                        const SizedBox(height: 4),
-                        const Text(
+                        SizedBox(height: 4),
+                        Text(
                           'Active Preparation Stream',
-                          style: TextStyle(color: Colors.white70, fontSize: 11),
+                          style: TextStyle(color: _muted, fontSize: 11),
                         ),
                       ],
                     ),
@@ -531,9 +540,9 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   ElevatedButton(
                     onPressed: () => context.push(AppRoutes.missionRealm),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.surface2,
-                      foregroundColor: Colors.white,
-                      side: const BorderSide(color: AppColors.border),
+                      backgroundColor: _surface,
+                      foregroundColor: _text,
+                      side: BorderSide(color: _border),
                       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -575,14 +584,14 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               subtitle: 'Name, Email & Enrollment Credentials',
               onTap: _updateIdentityDialog,
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _settingsListTile(
               icon: Icons.phone_android_rounded,
               title: 'Mobile & Verification',
               subtitle: sessionUser?.phone ?? 'Not Verified',
               onTap: _showMobileVerificationDialog,
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _settingsListTile(
               icon: Icons.privacy_tip_outlined,
               title: 'Privacy',
@@ -610,7 +619,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               subtitle: 'Report software bugs, layout glitches or syllabus errors',
               onTap: () => _showSupportDialog('issue_report'),
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             _settingsListTile(
               icon: Icons.help_outline_rounded,
               title: 'Help Center',
@@ -618,7 +627,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               onTap: () => _showSupportDialog('help'),
             ),
             if (_isAdmin) ...[
-              const SizedBox(height: 8),
+              SizedBox(height: 8),
               _settingsListTile(
                 icon: Icons.admin_panel_settings_rounded,
                 title: 'Command Center',
@@ -626,6 +635,89 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                 onTap: () => context.push(AppRoutes.admin),
               ),
             ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAppearanceSection() {
+    final choice = AppThemeScope.of(context).choice;
+    final label = switch (choice) {
+      AppThemeChoice.lightLuxe => 'Light Luxe',
+      AppThemeChoice.luxuryNight => 'Luxury Night',
+      AppThemeChoice.system => 'Follow device',
+    };
+
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(ResponsiveHelper.wp(context, 0.05), 24,
+            ResponsiveHelper.wp(context, 0.05), 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _sectionLabel('APPEARANCE'),
+            _settingsListTile(
+              icon: choice == AppThemeChoice.lightLuxe
+                  ? Icons.light_mode_rounded
+                  : Icons.dark_mode_rounded,
+              title: 'Theme',
+              subtitle: label,
+              onTap: _showThemePicker,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showThemePicker() {
+    final controller = AppThemeScope.of(context);
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: _surface,
+      showDragHandle: true,
+      builder: (sheetContext) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: Icon(Icons.light_mode_rounded, color: AppColors.gold),
+              title: Text('Light Luxe', style: TextStyle(color: _text)),
+              subtitle: Text('Bright, clean study surfaces', style: TextStyle(color: _muted)),
+              trailing: controller.choice == AppThemeChoice.lightLuxe
+                  ? Icon(Icons.check_rounded, color: AppColors.gold)
+                  : null,
+              onTap: () async {
+                await controller.setChoice(AppThemeChoice.lightLuxe);
+                if (sheetContext.mounted) Navigator.pop(sheetContext);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.dark_mode_rounded, color: AppColors.gold),
+              title: Text('Luxury Night', style: TextStyle(color: _text)),
+              subtitle: Text('Deep contrast for focused study', style: TextStyle(color: _muted)),
+              trailing: controller.choice == AppThemeChoice.luxuryNight
+                  ? Icon(Icons.check_rounded, color: AppColors.gold)
+                  : null,
+              onTap: () async {
+                await controller.setChoice(AppThemeChoice.luxuryNight);
+                if (sheetContext.mounted) Navigator.pop(sheetContext);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.brightness_auto_rounded, color: AppColors.gold),
+              title: Text('Follow device', style: TextStyle(color: _text)),
+              subtitle: Text('Use the device appearance setting', style: TextStyle(color: _muted)),
+              trailing: controller.choice == AppThemeChoice.system
+                  ? Icon(Icons.check_rounded, color: AppColors.gold)
+                  : null,
+              onTap: () async {
+                await controller.setChoice(AppThemeChoice.system);
+                if (sheetContext.mounted) Navigator.pop(sheetContext);
+              },
+            ),
+            const SizedBox(height: 12),
           ],
         ),
       ),
@@ -668,18 +760,18 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                 if (mounted) context.go(AppRoutes.login);
               },
               child: DarkCard(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                 child: Row(
                   children: [
-                    const Icon(Icons.logout_rounded, color: Colors.white70, size: 18),
-                    const SizedBox(width: 12),
+                    Icon(Icons.logout_rounded, color: _muted, size: 18),
+                    SizedBox(width: 12),
                     Expanded(
                       child: Text(
                         'Log Out',
-                        style: AppTypography.cardTitle.copyWith(fontSize: 14, color: Colors.white),
+                        style: AppTypography.cardTitle.copyWith(fontSize: 14, color: _text),
                       ),
                     ),
-                    const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white12),
+                    Icon(Icons.arrow_forward_ios_rounded, size: 12, color: _muted),
                   ],
                 ),
               ),
@@ -746,12 +838,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.background,
-        title: const Text('Deactivate Account', style: TextStyle(color: Colors.white)),
-        content: const Text('Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.', style: TextStyle(color: Colors.white70)),
+        backgroundColor: _background,
+        title: Text('Deactivate Account', style: TextStyle(color: _text)),
+        content: Text('Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.', style: TextStyle(color: _muted)),
         actions: [
           TextButton(
-            child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+            child: Text('Cancel', style: TextStyle(color: _muted)),
             onPressed: () => Navigator.of(ctx).pop(false),
           ),
           TextButton(
@@ -780,12 +872,12 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.background,
-        title: const Text('Delete Account', style: TextStyle(color: Colors.white)),
-        content: const Text('This will request permanent deletion of all your academic and personal profile data. This action is irreversible. Proceed?', style: TextStyle(color: Colors.white70)),
+        backgroundColor: _background,
+        title: Text('Delete Account', style: TextStyle(color: _text)),
+        content: Text('This will request permanent deletion of all your academic and personal profile data. This action is irreversible. Proceed?', style: TextStyle(color: _muted)),
         actions: [
           TextButton(
-            child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+            child: Text('Cancel', style: TextStyle(color: _muted)),
             onPressed: () => Navigator.of(ctx).pop(false),
           ),
           TextButton(
@@ -812,10 +904,10 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: AppColors.background,
-        title: Text(title, style: const TextStyle(color: Colors.white)),
+        backgroundColor: _background,
+        title: Text(title, style: TextStyle(color: _text)),
         content: SingleChildScrollView(
-          child: Text(content, style: const TextStyle(color: Colors.white70)),
+          child: Text(content, style: TextStyle(color: _muted)),
         ),
         actions: [
           TextButton(
@@ -855,11 +947,11 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                   style: AppTypography.label.copyWith(
                       fontSize: 8,
                       color: AppColors.gold)),
-              const SizedBox(height: 4),
+              SizedBox(height: 4),
               Text(
                 insight,
                 style: AppTypography.body
-                    .copyWith(fontSize: 10, height: 1.4, color: Colors.white70),
+                    .copyWith(fontSize: 10, height: 1.4, color: _muted),
               ),
             ],
           ),
