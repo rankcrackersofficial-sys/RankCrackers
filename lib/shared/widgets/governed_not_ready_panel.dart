@@ -21,6 +21,7 @@ class GovernedNotReadyPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return SafeArea(
       child: LayoutBuilder(
         builder: (context, constraints) {
@@ -34,12 +35,12 @@ class GovernedNotReadyPanel extends StatelessWidget {
                   constraints: const BoxConstraints(maxWidth: 520),
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: AppColors.surface,
+                    color: scheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: AppColors.borderSoft),
+                    border: Border.all(color: scheme.outline),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.28),
+                        color: scheme.shadow.withValues(alpha: 0.18),
                         blurRadius: 24,
                         offset: const Offset(0, 14),
                       ),
@@ -57,7 +58,7 @@ class GovernedNotReadyPanel extends StatelessWidget {
                             child: Text(
                               title,
                               style: AppTypography.cardTitle.copyWith(
-                                color: Colors.white,
+                                color: scheme.onSurface,
                               ),
                             ),
                           ),
@@ -67,7 +68,7 @@ class GovernedNotReadyPanel extends StatelessWidget {
                       Text(
                         message,
                         style: AppTypography.body.copyWith(
-                          color: AppColors.textSecondary,
+                          color: scheme.onSurfaceVariant,
                           height: 1.45,
                         ),
                       ),

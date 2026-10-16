@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_colors.dart';
 import '../../../../shared/widgets/governed_not_ready_panel.dart';
 
 class ProgressTrackerScreen extends StatelessWidget {
@@ -8,9 +7,9 @@ class ProgressTrackerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: AppColors.background,
-      body: GovernedNotReadyPanel(
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: const GovernedNotReadyPanel(
         icon: Icons.leaderboard_rounded,
         title: 'Rank Radar',
         message:
