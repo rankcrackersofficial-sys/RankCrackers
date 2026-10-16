@@ -20,6 +20,18 @@ import 'web/shared/unified_command_console.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
+  // Firebase requires the pending redirect credential to be consumed before
+  // the auth gate is built. Doing this only inside LoginScreen can race with
+  // authStateChanges on mobile Chrome and return the user to the login page.
+  try {
+    await FirebaseAuth.instance.getRedirectResult();
+  } on FirebaseAuthException catch (e) {
+    html.window.sessionStorage['web_google_redirect_error'] = e.code;
+    debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: ${e.code}');
+  } catch (e) {
+    html.window.sessionStorage['web_google_redirect_error'] = 'unknown';
+    debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: $e');
+  }
   await SessionManager.initialize();
   runApp(const ProviderScope(child: RankCrackersWebApp()));
 }
@@ -98,25 +110,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    _consumeGoogleRedirectResult();
-    _checkInviteStatus();
-  }
-
-  Future<void> _consumeGoogleRedirectResult() async {
-    // Redirect-based Google auth returns to this page after consent. Explicitly
-    // consume the pending credential so mobile Chrome cannot silently fall
-    // back to the login screen after a successful Google callback.
-    try {
-      await FirebaseAuth.instance.getRedirectResult();
-    } on FirebaseAuthException catch (e) {
-      if (!mounted) return;
-      setState(() => _error =
-          'Google sign-in could not be completed (${e.code}). Please try again.');
-    } catch (e) {
-      if (!mounted) return;
-      setState(() => _error = 'Google sign-in could not be completed.');
-      debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: $e');
+    final redirectError = html.window.sessionStorage.remove('web_google_redirect_error');
+    if (redirectError != null && redirectError.isNotEmpty) {
+      _error = 'Google sign-in could not be completed ($redirectError). Please try again.';
     }
+    _checkInviteStatus();
   }
 
   Future<void> _checkInviteStatus() async {
