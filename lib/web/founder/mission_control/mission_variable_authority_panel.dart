@@ -273,8 +273,8 @@ class _MissionVariableAuthorityPanelState
                 Text('MISSION VARIABLES',
                     style: Theme.of(context).textTheme.titleLarge),
                 Text(_missionId!,
-                    style:
-                        const TextStyle(fontSize: 10, color: FounderLightTheme.textDisabled)),
+                    style: const TextStyle(
+                        fontSize: 10, color: FounderLightTheme.textDisabled)),
               ])),
           if (!_realmPresent)
             const Chip(
@@ -421,15 +421,30 @@ class _MissionVariableAuthorityPanelState
                   child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text('No source-backed items.',
-                          style: TextStyle(color: FounderLightTheme.textDisabled))))
+                          style: TextStyle(
+                              color: FounderLightTheme.textDisabled))))
             ]
           : List.generate(pack.length, (index) {
               final item = Map<String, dynamic>.from(pack[index] as Map);
-              final statuses = ['pending', 'approved', 'edited', 'sent_back'];
-              final status =
-                  statuses.contains(item['founder_verification_status'])
-                      ? item['founder_verification_status'] as String
-                      : 'pending';
+              final automationStatus = (item['automationStatus'] ??
+                      item['automation_status'] ??
+                      item['automationDecision'] ??
+                      item['founder_verification_status'] ??
+                      'queued')
+                  .toString()
+                  .toLowerCase();
+              final statusLabel = switch (automationStatus) {
+                'auto_passed' || 'verified' || 'approved' => 'AUTO-PASSED',
+                'auto_repaired' || 'repaired' => 'AUTO-REPAIRED',
+                'auto_hold' ||
+                'failed' ||
+                'sent_back' =>
+                  'AUTO-HOLD / EXCEPTION',
+                'generating' => 'AI GENERATING',
+                'verifying' => 'AI VERIFYING',
+                'reconciling' => 'AI RECONCILING',
+                _ => 'AI QUEUED',
+              };
               return Padding(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
                   child: Row(children: [
@@ -454,24 +469,15 @@ class _MissionVariableAuthorityPanelState
                     const SizedBox(width: 10),
                     Expanded(
                         flex: 2,
-                        child: DropdownButtonFormField<String>(
-                          initialValue: status,
+                        child: InputDecorator(
                           decoration: const InputDecoration(
-                              labelText: 'Review',
+                              labelText: 'AI decision',
                               isDense: true,
                               border: OutlineInputBorder()),
-                          items: statuses
-                              .map((value) => DropdownMenuItem(
-                                  value: value,
-                                  child: Text(value.replaceAll('_', ' '))))
-                              .toList(),
-                          onChanged: _realmPresent
-                              ? (value) {
-                                  if (value != null)
-                                    _updatePackItem(key, index,
-                                        'founder_verification_status', value);
-                                }
-                              : null,
+                          child: Text(
+                            '$statusLabel\nWORKER-OWNED • FOUNDER OBSERVER',
+                            style: const TextStyle(fontSize: 11),
+                          ),
                         )),
                   ]));
             }),

@@ -17,6 +17,8 @@ import '../founder/revenue/revenue_subscription_control_web.dart';
 import '../founder/watch/mission_watch_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
 import '../admin/admin_my_access_panel.dart';
+import '../founder/automation/grouped_automation_exceptions_web.dart';
+import 'executive_authority_bar.dart';
 
 enum ConsoleRoleMode {
   founder,
@@ -85,6 +87,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                 _buildTopOperationalHeader(
                     context, currentModule, showLeftSidebar),
 
+                // EXECUTIVE MISSION AUTHORITY BAR
+                const ExecutiveAuthorityBar(),
+
                 // ACTIVE MODULE CONTENT WORKSPACE
                 Expanded(
                   child: IndexedStack(
@@ -111,9 +116,9 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       ),
       child: Column(
         children: [
-          // Top Branding Box
+          // Top Branding Box (Official 40x40 Black Container with White Emblem)
           Container(
-            padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
             decoration: const BoxDecoration(
               border:
                   Border(bottom: BorderSide(color: FounderLightTheme.border)),
@@ -121,15 +126,28 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(8),
+                  width: 40,
+                  height: 40,
+                  padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
-                    color: FounderLightTheme.primaryDark,
+                    color: FounderLightTheme.logoBlack,
                     borderRadius: BorderRadius.circular(10),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Color(0x1A000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 1),
+                      ),
+                    ],
                   ),
-                  child: const Icon(
-                    Icons.auto_awesome_rounded,
-                    color: FounderLightTheme.gold,
-                    size: 20,
+                  child: Image.asset(
+                    'assets/images/logo_white.png',
+                    fit: BoxFit.contain,
+                    errorBuilder: (_, __, ___) => const Icon(
+                      Icons.auto_awesome,
+                      color: Colors.white,
+                      size: 20,
+                    ),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -167,9 +185,12 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
               children: [
                 _buildNavGroupHeader('OPERATIONS'),
-                _buildNavItem(modules, 'Operations Overview', Icons.space_dashboard_outlined),
+                _buildNavItem(modules, 'Operations Overview',
+                    Icons.space_dashboard_outlined),
                 _buildNavItem(
                     modules, 'Mission Control', Icons.explore_outlined),
+                _buildNavItem(modules, 'Grouped Exceptions Desk',
+                    Icons.report_problem_outlined),
                 if (widget.founderDeliveryPreviewBuilder != null)
                   _buildNavItem(modules, 'Mission Delivery Preview',
                       Icons.visibility_outlined),
@@ -195,10 +216,14 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                 if (widget.roleMode == ConsoleRoleMode.founder) ...[
                   const SizedBox(height: 16),
                   _buildNavGroupHeader('ADMIN & AI OPERATIONS'),
-                  _buildNavItem(modules, 'Admin Work Queue', Icons.assignment_outlined),
-                  _buildNavItem(modules, 'Study Master Library', Icons.menu_book_outlined),
-                  _buildNavItem(modules, 'Intelligence Room', Icons.lightbulb_outline_rounded),
-                  _buildNavItem(modules, 'Recent Activity Log', Icons.history_rounded),
+                  _buildNavItem(
+                      modules, 'Admin Work Queue', Icons.assignment_outlined),
+                  _buildNavItem(modules, 'Study Master Library',
+                      Icons.menu_book_outlined),
+                  _buildNavItem(modules, 'Intelligence Room',
+                      Icons.lightbulb_outline_rounded),
+                  _buildNavItem(
+                      modules, 'Recent Activity Log', Icons.history_rounded),
                   _buildNavItem(modules, 'My Access', Icons.shield_outlined),
                 ],
                 if (widget.roleMode == ConsoleRoleMode.admin) ...[
@@ -411,6 +436,65 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 
           const Spacer(),
 
+          // Deterministic Status Chips
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: FounderLightTheme.surfaceAlt,
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(color: FounderLightTheme.borderSecondary),
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: FounderLightTheme.emerald,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  '[LVL-0 FOUNDER AUTH: VERIFIED]',
+                  style: TextStyle(
+                    fontFamily: 'monospace',
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.textPrimary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: FounderLightTheme.primaryBlueLight,
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(color: FounderLightTheme.blueBorder),
+            ),
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                CircleAvatar(
+                  radius: 3,
+                  backgroundColor: FounderLightTheme.primaryBlue,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  'FIRESTORE: automation_runs',
+                  style: TextStyle(
+                    fontFamily: 'monospace',
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    color: FounderLightTheme.primaryBlue,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 12),
+
           // Governed Badge
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
@@ -496,27 +580,46 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           group: 'OPERATIONS',
           label: 'Operations Overview',
           builder: (_) => FounderOperationsOverviewWeb(
-                onMissionControl: () => setState(() => _subTab = _findModuleIndex('Mission Control')),
-                onMissionWatch: () => setState(() => _subTab = _findModuleIndex('Mission Watch')),
-                onStudentHealth: () => setState(() => _subTab = _findModuleIndex('Student Delivery Health')),
-                onRevenue: () => setState(() => _subTab = _findModuleIndex('Revenue & Subscriptions')),
-                onAdminGovernance: () => setState(() => _subTab = _findModuleIndex('Admin Governance')),
-                onSystemOps: () => setState(() => _subTab = _findModuleIndex('System Ops / Dev Mode')),
-                onDocuments: () => setState(() => _subTab = _findModuleIndex('Document Command Center')),
+                onMissionControl: () => setState(
+                    () => _subTab = _findModuleIndex('Mission Control')),
+                onMissionWatch: () =>
+                    setState(() => _subTab = _findModuleIndex('Mission Watch')),
+                onStudentHealth: () => setState(() =>
+                    _subTab = _findModuleIndex('Student Delivery Health')),
+                onRevenue: () => setState(() =>
+                    _subTab = _findModuleIndex('Revenue & Subscriptions')),
+                onAdminGovernance: () => setState(
+                    () => _subTab = _findModuleIndex('Admin Governance')),
+                onSystemOps: () => setState(
+                    () => _subTab = _findModuleIndex('System Ops / Dev Mode')),
+                onDocuments: () => setState(() =>
+                    _subTab = _findModuleIndex('Document Command Center')),
                 onVerification: () => setState(() => _openMissionDetail(1, 0)),
                 onFactory: () => setState(() => _openMissionDetail(2, 0)),
                 onPublish: () => setState(() => _openMissionDetail(3, 0)),
-                onAdminWork: () => setState(() => _subTab = _findModuleIndex('Admin Work Queue')),
-                onStudyMaster: () => setState(() => _subTab = _findModuleIndex('Study Master Library')),
-                onIntelligence: () => setState(() => _subTab = _findModuleIndex('Intelligence Room')),
-                onActivity: () => setState(() => _subTab = _findModuleIndex('Recent Activity Log')),
-                onMyAccess: () => setState(() => _subTab = _findModuleIndex('My Access')),
-          )));
+                onAdminWork: () => setState(
+                    () => _subTab = _findModuleIndex('Admin Work Queue')),
+                onStudyMaster: () => setState(
+                    () => _subTab = _findModuleIndex('Study Master Library')),
+                onIntelligence: () => setState(
+                    () => _subTab = _findModuleIndex('Intelligence Room')),
+                onActivity: () => setState(
+                    () => _subTab = _findModuleIndex('Recent Activity Log')),
+                onMyAccess: () =>
+                    setState(() => _subTab = _findModuleIndex('My Access')),
+              )));
       list.add(_ConsoleModule(
           group: 'MISSION & DELIVERY',
           label: 'Mission Control',
           builder: (_) =>
               const MissionControlRoom(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          group: 'OPERATIONS',
+          label: 'Grouped Exceptions Desk',
+          builder: (_) => GroupedAutomationExceptionsWeb(
+                onBack: () => setState(
+                    () => _subTab = _findModuleIndex('Operations Overview')),
+              )));
       if (widget.founderDeliveryPreviewBuilder != null) {
         list.add(_ConsoleModule(
             group: 'MISSION & DELIVERY',
@@ -567,7 +670,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                   setState(() {
                     _activeTaskId = taskId;
                     _subTab = _findModuleIndex(
-                      taskType == 'DOCUMENT_REVIEW' || taskType == 'OCR_REPROCESS_REVIEW'
+                      taskType == 'DOCUMENT_REVIEW' ||
+                              taskType == 'OCR_REPROCESS_REVIEW'
                           ? 'Document Command Center'
                           : 'Mission Control',
                     );
@@ -577,15 +681,18 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       list.add(_ConsoleModule(
           group: 'ADMIN & AI OPERATIONS',
           label: 'Study Master Library',
-          builder: (_) => const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
+          builder: (_) =>
+              const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
       list.add(_ConsoleModule(
           group: 'ADMIN & AI OPERATIONS',
           label: 'Intelligence Room',
-          builder: (_) => const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.founder)));
+          builder: (_) =>
+              const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.founder)));
       list.add(_ConsoleModule(
           group: 'ADMIN & AI OPERATIONS',
           label: 'Recent Activity Log',
-          builder: (_) => const RecentActivityWeb(roleMode: ConsoleRoleMode.founder)));
+          builder: (_) =>
+              const RecentActivityWeb(roleMode: ConsoleRoleMode.founder)));
       list.add(_ConsoleModule(
           group: 'ADMIN & AI OPERATIONS',
           label: 'My Access',
@@ -680,7 +787,8 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
   void _openMissionDetail(int detailTab, int subTab) {
     if (MissionControlRoom.selectedMissionId == null) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Open a mission from Mission Control first.')),
+        const SnackBar(
+            content: Text('Open a mission from Mission Control first.')),
       );
       _subTab = _findModuleIndex('Mission Control');
       return;

@@ -103,6 +103,7 @@ class _EliteOfferScreenState extends State<EliteOfferScreen> {
   }
 
   Widget _buildPlanCard(RevenuePlan plan) {
+    final scheme = Theme.of(context).colorScheme;
     final selected = plan.kind == _selected;
     return GestureDetector(
       onTap: () => setState(() => _selected = plan.kind),

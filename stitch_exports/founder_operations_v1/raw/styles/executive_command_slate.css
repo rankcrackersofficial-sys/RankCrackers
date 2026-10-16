@@ -1,0 +1,53 @@
+/* Executive Command Slate Light Theme Specification */
+:root {
+  --rc-canvas: #F8F9FC;
+  --rc-surface: #FFFFFF;
+  --rc-surface-subtle: #F1F5F9;
+  --rc-surface-hover: #E2E8F0;
+  --rc-hairline: #E2E8F0;
+  --rc-border-strong: #CBD5E1;
+  --rc-text-primary: #0F172A;
+  --rc-text-secondary: #475569;
+  --rc-text-muted: #64748B;
+  --rc-text-disabled: #94A3B8;
+
+  --rc-gold: #9A7B38;
+  --rc-gold-hover: #84692E;
+  --rc-gold-bg: #FEF9C3;
+  --rc-gold-border: #FDE68A;
+
+  --rc-status-emerald: #15803D;
+  --rc-status-emerald-bg: #DCFCE7;
+  --rc-status-emerald-border: #86EFAC;
+
+  --rc-status-crimson: #DC2626;
+  --rc-status-crimson-bg: #FEE2E2;
+  --rc-status-crimson-border: #FECACA;
+
+  --rc-status-amber: #D97706;
+  --rc-status-amber-bg: #FEF3C7;
+  --rc-status-amber-border: #FDE68A;
+
+  --rc-status-blue: #2563EB;
+  --rc-status-blue-bg: #EFF6FF;
+  --rc-status-blue-border: #BFDBFE;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--rc-surface-subtle);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--rc-border-strong);
+  border-radius: 4px;
+}
+
+.tab-active {
+  background-color: var(--rc-gold-bg) !important;
+  color: #854D0E !important;
+  font-weight: 700 !important;
+  border-left: 3px solid var(--rc-gold) !important;
+}

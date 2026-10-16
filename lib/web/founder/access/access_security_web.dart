@@ -9,4 +9,3 @@ class AccessSecurityWeb extends StatelessWidget {
     return const PeopleAccessCenter();
   }
 }
-

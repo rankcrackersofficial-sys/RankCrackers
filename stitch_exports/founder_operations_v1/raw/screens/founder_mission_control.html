@@ -1,0 +1,611 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>RankCrackers // Founder Unified Command Console (Light Mode)</title>
+<!-- Google Fonts: JetBrains Mono & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#9A7B38',
+              'gold-hover': '#866B2F',
+              'gold-light': '#FDF9F0',
+              'gold-border': '#E8DBBE',
+              emerald: '#15803D',
+              'emerald-light': '#F0FDF4',
+              'emerald-border': '#BBF7D0',
+            },
+            slate: {
+              surface: '#FFFFFF',
+              base: '#F8F9FC',
+              subtle: '#F1F5F9',
+              muted: '#64748B',
+              dark: '#0F172A',
+              border: '#E2E8F0',
+              'border-code': '#CBD5E1',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 2px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #9A7B38;
+    }
+  </style>
+</head>
+<body class="bg-[#F8F9FC] text-[#0F172A] antialiased font-sans h-screen flex flex-col overflow-hidden selection:bg-[#9A7B38]/20 selection:text-[#0F172A]">
+<!-- ========================================================================= -->
+<!-- 1. TOP DUAL-TIER COMMAND HEADER (LIGHT MODE TWIN)                         -->
+<!-- ========================================================================= -->
+<header class="bg-white border-b border-[#E2E8F0] flex-none z-30 select-none shadow-[0_1px_2px_rgba(15,23,42,0.04)]">
+<!-- Tier-1 Primary Header Strip -->
+<div class="flex justify-between items-center w-full px-4 py-2 border-b border-[#E2E8F0]">
+<!-- Brand & Security Clearance -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[#9A7B38] text-xl font-bold" data-icon="diamond">diamond</span>
+<span class="font-mono text-[14px] font-bold tracking-wider text-[#0F172A]">
+            RANKCRACKERS <span class="text-[#9A7B38]">//</span> FOUNDER COMMAND
+          </span>
+</div>
+<div class="h-4 w-[1px] bg-[#E2E8F0] hidden sm:block"></div>
+<!-- Telemetry Sync Chip -->
+<div class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 border border-[#BBF7D0] bg-[#F0FDF4] text-[#15803D] font-mono text-[11px] font-semibold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#15803D] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#15803D]"></span>
+</span>
+          [• GRID_SYNC_OK]
+        </div>
+<!-- Security Clearance Tag -->
+<span class="hidden md:inline-flex items-center px-2 py-0.5 border border-[#E8DBBE] bg-[#FDF9F0] text-[#9A7B38] font-mono text-[10px] font-bold tracking-wide uppercase">
+          [LVL-0 FOUNDER AUTH: VERIFIED]
+        </span>
+</div>
+<!-- Center Hierarchy Navigation Groups -->
+<nav class="hidden lg:flex items-center space-x-6 text-[11px] font-mono font-bold tracking-wider uppercase">
+<a class="text-[#9A7B38] border-b-2 border-[#9A7B38] py-1 flex items-center gap-1.5" href="#mission">
+<span class="w-1.5 h-1.5 bg-[#9A7B38]"></span>
+          MISSION &amp; DELIVERY
+        </a>
+<a class="text-[#64748B] hover:text-[#0F172A] py-1 transition-colors" href="#pipeline">
+          CONTENT PIPELINE
+        </a>
+<a class="text-[#64748B] hover:text-[#0F172A] py-1 transition-colors" href="#students">
+          STUDENT &amp; HEALTH
+        </a>
+<a class="text-[#64748B] hover:text-[#0F172A] py-1 transition-colors" href="#system">
+          SYSTEM &amp; GOVERNANCE
+        </a>
+</nav>
+<!-- Quick Action Buttons & Tools -->
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1.5 px-3 py-1 bg-[#9A7B38] text-white font-mono text-[11px] font-bold hover:bg-[#866B2F] transition-colors rounded-none shadow-sm">
+<span class="material-symbols-outlined text-[13px]" data-icon="rocket_launch">rocket_launch</span>
+          DEPLOY CHANGES
+        </button>
+<button class="hidden sm:flex items-center gap-1 px-2.5 py-1 border border-[#DC2626] text-[#DC2626] bg-red-50 hover:bg-red-100 transition-colors font-mono text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[13px]" data-icon="history">history</span>
+          EMERGENCY ROLLBACK
+        </button>
+<div class="h-4 w-[1px] bg-[#E2E8F0] hidden sm:block"></div>
+<div class="flex items-center gap-0.5">
+<button class="p-1 text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] transition-colors rounded" title="Sync">
+<span class="material-symbols-outlined text-[18px]" data-icon="sync">sync</span>
+</button>
+<button class="p-1 text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] transition-colors rounded" title="Terminal">
+<span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+</button>
+<button class="relative p-1 text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] transition-colors rounded" title="Notifications">
+<span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-[#9A7B38] rounded-full"></span>
+</button>
+</div>
+<!-- Founder User Chip -->
+<div class="w-7 h-7 border border-[#9A7B38] p-0.5 bg-[#FDF9F0] flex items-center justify-center ml-1">
+<img alt="Founder Commander" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC05G_5lmDl5tyuH9Tgr2dFEnDYXwS_oVseikcZtaJCvfxGFSRsdPzb23auVRmK7qqiJWj_uXZUcb6fOCLlj7atvg6qh9QmPLbfdCeDvV4X-0MlaQgGrZPkkjQ0LhJ9PkQpZt5BLH1TaIdQncTIndqCMf-VRaGMfTuFx_eglMlaoUlol1jHp5ddoSZJvHzILgf18vJ5vDqrtpLb7KUJwFKvygNIL3Df3Zu6WLaotjIeiL6uSALeARgWILE3LfjmKKTxEFDxrHwKWdk">
+</div>
+</div>
+</div>
+<!-- Tier-2 Secondary Sub-Navigation Tier -->
+<div class="flex items-center px-4 py-1.5 bg-[#F1F5F9] border-t border-[#E2E8F0] overflow-x-auto custom-scrollbar text-[11px] font-mono gap-1"><a href="#operations-overview" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">dashboard</span> OPERATIONS OVERVIEW</a><a href="#mission-control" class="px-2.5 py-1 bg-white text-[#9A7B38] border border-[#CBD5E1] font-bold shadow-xs flex items-center gap-1.5 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span> MISSION CONTROL</a><a href="#mission-watch" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">monitoring</span> MISSION WATCH</a><a href="#student-delivery" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">school</span> STUDENT DELIVERY <span class="px-1 py-0.2 bg-[#F0FDF4] text-[#15803D] border border-[#BBF7D0] text-[9px] font-bold">LIVE</span></a><a href="#monetization" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">payments</span> MONETIZATION</a><a href="#official-docs" class="px-2.5 py-1 bg-[#FDF9F0] text-[#9A7B38] border border-[#E8DBBE] font-bold flex items-center gap-1.5 whitespace-nowrap"><span class="material-symbols-outlined text-[13px]">folder_managed</span> OFFICIAL DOCUMENTS <span class="px-1 py-0.2 bg-[#9A7B38] text-white text-[9px] font-bold">3 ACTIVE</span></a><a href="#notification-extraction" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">notifications_active</span> NOTIFICATION EXTRACTION</a><a href="#syllabus-verification" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">verified</span> SYLLABUS &amp; VERIFICATION</a><a href="#factory-hub" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">precision_manufacturing</span> FACTORY HUB</a><a href="#publish-gate" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">publish</span> PUBLISH GATE</a><a href="#admin-queue" class="px-2.5 py-1 text-[#64748B] hover:text-[#0F172A] hover:bg-white/80 transition-colors whitespace-nowrap flex items-center gap-1.5 border border-transparent hover:border-[#CBD5E1]"><span class="material-symbols-outlined text-[13px]">admin_panel_settings</span> ADMIN QUEUE <span class="px-1 py-0.2 bg-red-50 text-[#DC2626] border border-red-200 text-[9px] font-bold">1 REVIEW</span></a></div>
+</header>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE CONTAINER                                                  -->
+<!-- ========================================================================= -->
+<main class="flex-1 flex flex-col overflow-y-auto custom-scrollbar p-4 lg:p-6 space-y-4 max-w-[1680px] w-full mx-auto">
+<!-- ======================================================================= -->
+<!-- 2. BREADCRUMB & MISSION HEADER BAR                                      -->
+<!-- ======================================================================= -->
+<div class="bg-white border border-[#E2E8F0] p-4 lg:p-5 shadow-xs flex flex-col gap-3">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-1 text-[#64748B] hover:text-[#0F172A] font-mono text-[12px] font-semibold transition-colors" href="#">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_back">arrow_back</span>
+            Back to Mission Control
+          </a>
+<span class="text-[#CBD5E1]">/</span>
+<!-- Status Badge -->
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 border border-[#BBF7D0] bg-[#F0FDF4] text-[#15803D] font-mono text-[11px] font-bold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            PIPELINE ORCHESTRATION: ONLINE
+          </span>
+</div>
+<!-- Telemetry Cluster -->
+<div class="flex items-center gap-4 text-[11px] font-mono text-[#64748B]">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#9A7B38]" data-icon="speed">speed</span>
+            TELEMETRY FREQUENCY: <strong class="text-[#0F172A]">1000ms Realtime</strong>
+</span>
+<span class="hidden md:inline">•</span>
+<span class="hidden md:flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-[#15803D]" data-icon="groups">groups</span>
+            COHORT REACH: <strong class="text-[#0F172A]">Awaiting live sync</strong>
+</span>
+</div>
+</div>
+<!-- Mission Title & Operational Tags -->
+<div class="flex flex-col md:flex-row md:items-baseline justify-between gap-3 pt-1 border-t border-[#E2E8F0]">
+<div>
+<h1 class="text-[20px] lg:text-[24px] font-bold text-[#0F172A] tracking-tight">
+            NEET 2026 UG – Chemical Bonding &amp; Molecular Structure Master Realm
+          </h1>
+<div class="flex flex-wrap items-center gap-2 mt-2">
+<span class="inline-flex items-center px-2 py-0.5 font-mono text-[11px] font-semibold text-[#0F172A] bg-[#F1F5F9] border border-[#CBD5E1]">
+              realm_neet_chem_bond_2026_v4
+            </span>
+<span class="inline-flex items-center px-2 py-0.5 font-mono text-[11px] font-bold text-[#15803D] bg-[#F0FDF4] border border-[#BBF7D0]">
+              GATE_SYNC: CLEAR
+            </span>
+<span class="inline-flex items-center px-2 py-0.5 font-mono text-[11px] font-bold text-[#9A7B38] bg-[#FDF9F0] border border-[#E8DBBE]">
+              CANONICAL_INDEX_24
+            </span>
+</div>
+</div>
+<div class="flex items-center gap-2 self-start md:self-auto">
+<span class="font-mono text-[11px] text-[#64748B]">STATUS ID:</span>
+<span class="font-mono text-[11px] font-bold text-[#0F172A] px-2 py-0.5 bg-[#F1F5F9] border border-[#E2E8F0]">
+            MC-NODE-4482
+          </span>
+</div>
+</div>
+</div>
+<!-- ======================================================================= -->
+<!-- 3. 4 FACT CARDS GRID (4 COLUMNS, #FFFFFF, #E2E8F0 BORDERS)             -->
+<!-- ======================================================================= -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between text-[#64748B] mb-2">
+<span class="font-mono text-[10px] font-bold uppercase tracking-wider">STUDENT VISIBILITY</span>
+<span class="material-symbols-outlined text-[18px] text-[#15803D]" data-icon="visibility">visibility</span>
+</div>
+<div>
+<div class="text-[20px] font-bold text-[#15803D] tracking-tight">STUDENT LIVE</div>
+<p class="font-mono text-[11px] text-[#64748B] mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            Active in app catalog
+          </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between text-[#64748B] mb-2">
+<span class="font-mono text-[10px] font-bold uppercase tracking-wider">LIFECYCLE</span>
+<span class="material-symbols-outlined text-[18px] text-[#15803D]" data-icon="published_with_changes">published_with_changes</span>
+</div>
+<div>
+<div class="text-[20px] font-bold text-[#15803D] tracking-tight">PUBLISHED</div>
+<p class="font-mono text-[11px] text-[#64748B] mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            Version v4.2 in production
+          </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between text-[#64748B] mb-2">
+<span class="font-mono text-[10px] font-bold uppercase tracking-wider">MISSION AUTHORITY</span>
+<span class="material-symbols-outlined text-[18px] text-[#15803D]" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<div class="text-[20px] font-bold text-[#15803D] tracking-tight">COMPLETE</div>
+<p class="font-mono text-[11px] text-[#64748B] mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            All 7 clearance checks cleared
+          </p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div class="flex items-center justify-between text-[#64748B] mb-2">
+<span class="font-mono text-[10px] font-bold uppercase tracking-wider">SOURCE DOCUMENT</span>
+<span class="material-symbols-outlined text-[18px] text-[#15803D]" data-icon="link">link</span>
+</div>
+<div>
+<div class="text-[20px] font-bold text-[#15803D] tracking-tight">3 CONNECTED</div>
+<p class="font-mono text-[11px] text-[#64748B] mt-1 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            100% hash parity verified
+          </p>
+</div>
+</div>
+</div>
+<!-- ======================================================================= -->
+<!-- 4. NEXT ACTION HERO BEACON STRIP                                        -->
+<!-- ======================================================================= -->
+<div class="bg-white border-l-4 border-l-[#9A7B38] border-y border-r border-[#E2E8F0] p-3 px-4 shadow-xs flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9A7B38] text-[18px]" data-icon="bolt">bolt</span>
+<span class="font-mono text-[11px] font-bold text-[#64748B] uppercase tracking-wider">
+          NEXT ACTION | PENDING FOUNDER AUDIT
+        </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-2 font-mono text-[13px] font-bold text-[#9A7B38] bg-[#FDF9F0] px-3 py-1 border border-[#E8DBBE]">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#9A7B38] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-[#9A7B38]"></span>
+</span>
+          ● ● REVIEW PUBLISH READINESS
+        </span>
+</div>
+<div class="flex items-center gap-2 font-mono text-[11px] font-semibold text-[#15803D]">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+        • SOURCE CONNECTED
+      </div>
+</div>
+<!-- ======================================================================= -->
+<!-- 5. ACTION BAR & GOVERNED CONTROLS                                       -->
+<!-- ======================================================================= -->
+<div class="bg-white border border-[#E2E8F0] p-3 shadow-xs flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2"><button class="px-3 py-1.5 bg-[#9A7B38] text-white font-mono text-[11px] font-bold hover:bg-[#866B2F] transition-colors rounded-none flex items-center gap-1.5 shadow-xs"><span class="material-symbols-outlined text-[14px]">tune</span> MISSION VARIABLES <span class="px-1.5 py-0.5 bg-black/20 text-[9px] font-bold uppercase tracking-wider">LIVE</span></button><button class="px-3 py-1.5 bg-white border border-[#CBD5E1] text-[#0F172A] font-mono text-[11px] font-semibold hover:bg-[#F1F5F9] transition-colors rounded-none flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-[#64748B]">schema</span> DOCUMENT PIPELINE <span class="px-1.5 py-0.5 bg-blue-50 text-blue-600 border border-blue-200 text-[9px] font-bold uppercase tracking-wider">AI PROCESSING</span></button><button class="px-3 py-1.5 bg-[#FDF9F0] border border-[#E8DBBE] text-[#9A7B38] font-mono text-[11px] font-bold hover:bg-[#9A7B38]/10 transition-colors rounded-none flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">fact_check</span> PUBLISH READINESS <span class="px-1.5 py-0.5 bg-[#FDF9F0] text-[#9A7B38] border border-[#E8DBBE] text-[9px] font-bold uppercase tracking-wider">AI CONSENSUS / POLICY OVERRIDE ONLY</span></button><button class="px-3 py-1.5 bg-white border border-[#CBD5E1] text-[#64748B] hover:text-[#0F172A] font-mono text-[11px] font-semibold hover:bg-[#F1F5F9] transition-colors rounded-none flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px]">rule</span> VERIFICATION GATE <span class="px-1.5 py-0.5 bg-red-50 text-[#DC2626] border border-red-200 text-[9px] font-bold uppercase tracking-wider">AI VERIFICATION STATE</span></button><div class="px-3 py-1.5 bg-[#F1F5F9] border border-[#CBD5E1] text-[#64748B] font-mono text-[11px] font-medium flex items-center gap-1.5 cursor-not-allowed"><span class="material-symbols-outlined text-[14px]">lock</span> LIFECYCLE GOVERNED <span class="px-1.5 py-0.5 bg-[#E2E8F0] text-[#64748B] text-[9px] font-bold uppercase tracking-wider">BLOCKED</span></div></div>
+<!-- Right Immutable State -->
+<div class="flex items-center gap-1.5 font-mono text-[11px] font-bold text-[#64748B] bg-[#F1F5F9] px-2.5 py-1 border border-[#E2E8F0]">
+<span class="material-symbols-outlined text-[13px] text-[#0F172A]" data-icon="lock_clock">lock_clock</span>
+        🔒 IMMUTABLE SNAPSHOT: ACTIVE
+      </div>
+</div>
+<!-- ======================================================================= -->
+<!-- 6. CONNECTED OFFICIAL DOCUMENTS LEDGER TABLE                            -->
+<!-- ======================================================================= -->
+<div class="bg-white border border-[#E2E8F0] shadow-xs flex flex-col">
+<!-- Ledger Header Bar -->
+<div class="p-3 lg:px-4 bg-[#F8F9FC] border-b border-[#E2E8F0] flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9A7B38] text-[20px]" data-icon="folder_managed">folder_managed</span>
+<h3 class="font-mono text-[12px] font-bold uppercase tracking-wider text-[#0F172A]">
+            CONNECTED OFFICIAL DOCUMENTS (3 Active Sources)
+          </h3>
+</div>
+<div class="flex items-center gap-3 font-mono text-[11px]">
+<span class="text-[#64748B] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+            • Sync Registry: <strong class="text-[#0F172A]">LOCKED</strong>
+</span>
+<button class="px-2.5 py-1 bg-white border border-[#CBD5E1] text-[#0F172A] hover:bg-[#F1F5F9] hover:border-[#9A7B38] transition-colors flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[13px]" data-icon="refresh">refresh</span>
+            🔄 Check Integrity
+          </button>
+</div>
+</div>
+<!-- Table Body -->
+<div class="overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse font-mono text-[12px]">
+<thead class="bg-[#F1F5F9] text-[#64748B] text-[10px] uppercase font-bold tracking-wider border-b border-[#E2E8F0]">
+<tr>
+<th class="py-2.5 px-4">DOCUMENT NAME &amp; FORMAT</th>
+<th class="py-2.5 px-4 w-28">FILE SIZE</th>
+<th class="py-2.5 px-4 w-52">INGESTION HASH / ID</th>
+<th class="py-2.5 px-4 w-36">LINKAGE STATUS</th>
+<th class="py-2.5 px-4 text-right w-32">OFFICIAL BADGE</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E2E8F0]">
+<!-- Row 1: PDF -->
+<tr class="hover:bg-[#F8F9FC] transition-colors group">
+<td class="py-3 px-4">
+<div class="flex items-start gap-3">
+<div class="p-1.5 bg-red-50 text-red-600 border border-red-200 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div>
+<div class="font-sans font-bold text-[#0F172A] text-[13px] group-hover:text-[#9A7B38] transition-colors">
+                      NTA NEET UG Official Information Bulletin 2026.pdf
+                    </div>
+<div class="text-[11px] text-[#64748B] font-sans">
+                      National Testing Agency (NTA) Official Release
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-[#0F172A] font-semibold">
+                14.2 MB
+              </td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 bg-[#F1F5F9] border border-[#CBD5E1] text-[#0F172A] text-[11px] select-all">
+                  sha256:7f8a92...c01
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 border border-[#BBF7D0] bg-[#F0FDF4] text-[#15803D] font-bold text-[10px] tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+                  VERIFIED
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 border border-[#E8DBBE] bg-[#FDF9F0] text-[#9A7B38] font-bold text-[10px] tracking-wide uppercase">
+                  CANONICAL
+                </span>
+</td>
+</tr>
+<!-- Row 2: DOCX -->
+<tr class="hover:bg-[#F8F9FC] transition-colors group">
+<td class="py-3 px-4">
+<div class="flex items-start gap-3">
+<div class="p-1.5 bg-blue-50 text-blue-600 border border-blue-200 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="description">description</span>
+</div>
+<div>
+<div class="font-sans font-bold text-[#0F172A] text-[13px] group-hover:text-[#9A7B38] transition-colors">
+                      NCERT Class 11 Chemistry Chapter 4 Canonical Syllabus.docx
+                    </div>
+<div class="text-[11px] text-[#64748B] font-sans">
+                      NCERT Textbook Board Standards Revision 2025-26
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-[#0F172A] font-semibold">
+                4.1 MB
+              </td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 bg-[#F1F5F9] border border-[#CBD5E1] text-[#0F172A] text-[11px] select-all">
+                  sha256:3a4b12...f89
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 border border-[#CBD5E1] bg-[#F1F5F9] text-[#0F172A] font-bold text-[10px] tracking-wide uppercase">
+                  INGESTED
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 border border-[#E8DBBE] bg-[#FDF9F0] text-[#9A7B38] font-bold text-[10px] tracking-wide uppercase">
+                  CANONICAL
+                </span>
+</td>
+</tr>
+<!-- Row 3: XLSX -->
+<tr class="hover:bg-[#F8F9FC] transition-colors group">
+<td class="py-3 px-4">
+<div class="flex items-start gap-3">
+<div class="p-1.5 bg-emerald-50 text-emerald-600 border border-emerald-200 mt-0.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="table_chart">table_chart</span>
+</div>
+<div>
+<div class="font-sans font-bold text-[#0F172A] text-[13px] group-hover:text-[#9A7B38] transition-colors">
+                      NEET 10-Year PYQ Answer Key Matrix.xlsx
+                    </div>
+<div class="text-[11px] text-[#64748B] font-sans">
+                      Archival Examination Answer Audits 2015-2025
+                    </div>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-[#0F172A] font-semibold">
+                1.8 MB
+              </td>
+<td class="py-3 px-4">
+<span class="inline-block px-2 py-0.5 bg-[#F1F5F9] border border-[#CBD5E1] text-[#0F172A] text-[11px] select-all">
+                  sha256:9c12e5...b44
+                </span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 border border-[#BBF7D0] bg-[#F0FDF4] text-[#15803D] font-bold text-[10px] tracking-wide uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+                  VERIFIED
+                </span>
+</td>
+<td class="py-3 px-4 text-right">
+<span class="inline-flex items-center px-2 py-0.5 border border-cyan-300 bg-cyan-50 text-cyan-800 font-bold text-[10px] tracking-wide uppercase">
+                  LINKED
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Summary Strip -->
+<div class="p-3 px-4 bg-[#F8F9FC] border-t border-[#E2E8F0] flex flex-wrap items-center justify-between gap-3 text-[11px] font-mono">
+<div class="flex items-center gap-2 text-[#15803D] font-semibold">
+<span class="material-symbols-outlined text-[15px]" data-icon="task_alt">task_alt</span>
+          ✓ Syllabus boundary parser verified: 48 atomic concept keys extracted.
+        </div>
+<div class="flex items-center gap-4">
+<span class="text-[#64748B]">PARITY: <strong class="text-[#15803D]">100% MATCH</strong></span>
+<a class="text-[#9A7B38] font-bold hover:underline flex items-center gap-0.5" href="#">
+            Download Audit Manifest →
+          </a>
+</div>
+</div>
+</div>
+<!-- ======================================================================= -->
+<!-- 7. BOTTOM TELEMETRY DECK (3 COLUMNS)                                    -->
+<!-- ======================================================================= -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Deck Column 1: CONCEPT NODE CLEARANCE -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between border-b border-[#E2E8F0] pb-2 mb-3">
+<span class="font-mono text-[11px] font-bold text-[#0F172A] uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-2.5 bg-[#9A7B38]"></span>
+              CONCEPT NODE CLEARANCE
+            </span>
+<span class="font-mono text-[10px] font-bold text-[#15803D] bg-[#F0FDF4] px-1.5 py-0.5 border border-[#BBF7D0]">
+              24/24 BOUND
+            </span>
+</div>
+<!-- Progress Rows -->
+<div class="space-y-3 font-mono text-[11px]">
+<div>
+<div class="flex justify-between text-[#0F172A] mb-1">
+<span class="">Valence Bond Theory</span>
+<span class="text-[#15803D] font-bold">100% Validated</span>
+</div>
+<div class="w-full h-1.5 bg-[#F1F5F9] border border-[#E2E8F0]">
+<div class="bg-[#15803D] h-full" style="width: 100%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[#0F172A] mb-1">
+<span class="">Molecular Orbital Configurations</span>
+<span class="text-[#15803D] font-bold">100% Validated</span>
+</div>
+<div class="w-full h-1.5 bg-[#F1F5F9] border border-[#E2E8F0]">
+<div class="bg-[#15803D] h-full" style="width: 100%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-[#0F172A] mb-1">
+<span class="">VSEPR Geometry Matrix</span>
+<span class="text-[#9A7B38] font-bold">Review Pending</span>
+</div>
+<div class="w-full h-1.5 bg-[#F1F5F9] border border-[#E2E8F0]">
+<div class="bg-[#9A7B38] h-full" style="width: 78%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-[#E2E8F0] flex justify-end">
+<a class="font-mono text-[11px] font-bold text-[#9A7B38] hover:underline flex items-center gap-1" href="#">
+            Inspect Graph →
+          </a>
+</div>
+</div>
+<!-- Deck Column 2: PYQ LINKAGE TELEMETRY -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between border-b border-[#E2E8F0] pb-2 mb-3">
+<span class="font-mono text-[11px] font-bold text-[#0F172A] uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-2.5 bg-[#9A7B38]"></span>
+              PYQ LINKAGE TELEMETRY
+            </span>
+<span class="font-mono text-[10px] font-bold text-[#0F172A] bg-[#F1F5F9] px-1.5 py-0.5 border border-[#CBD5E1]">
+              312 QUESTIONS
+            </span>
+</div>
+<!-- Metrics -->
+<div class="grid grid-cols-1 gap-2 font-mono">
+<div class="p-2 bg-[#F8F9FC] border border-[#E2E8F0] flex justify-between items-center">
+<span class="text-[11px] text-[#64748B]">DIRECT NTA HITS</span>
+<span class="text-[14px] font-bold text-[#0F172A]">142 DIRECT NTA HITS</span>
+</div>
+<div class="p-2 bg-[#F8F9FC] border border-[#E2E8F0] flex justify-between items-center">
+<span class="text-[11px] text-[#64748B]">ANSWER MATCH PARITY</span>
+<span class="text-[14px] font-bold text-[#15803D]">98.6% ANSWER MATCH PARITY</span>
+</div>
+<div class="p-2 bg-[#F8F9FC] border border-[#E2E8F0] flex justify-between items-center">
+<span class="text-[11px] text-[#64748B]">SYLLABUS DRIFT</span>
+<span class="text-[14px] font-bold text-[#0F172A]">0 SYLLABUS OUTLIERS</span>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-[#E2E8F0] flex justify-end">
+<a class="font-mono text-[11px] font-bold text-[#9A7B38] hover:underline flex items-center gap-1" href="#">
+            Full Ledger →
+          </a>
+</div>
+</div>
+<!-- Deck Column 3: LIVE DELIVERY GATEWAY -->
+<div class="bg-white border border-[#E2E8F0] p-4 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between border-b border-[#E2E8F0] pb-2 mb-3">
+<span class="font-mono text-[11px] font-bold text-[#0F172A] uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-2.5 bg-[#9A7B38]"></span>
+              LIVE DELIVERY GATEWAY
+            </span>
+<span class="font-mono text-[10px] font-bold text-[#15803D] bg-[#F0FDF4] px-1.5 py-0.5 border border-[#BBF7D0]">
+              EDGE: NOMINAL
+            </span>
+</div>
+<!-- Metrics -->
+<div class="space-y-2 font-mono text-[11px]">
+<div class="flex justify-between items-center py-1 border-b border-[#E2E8F0]/60">
+<span class="text-[#64748B]">Production Edge CDN:</span>
+<span class="font-bold text-[#0F172A]">edge-del-01 (12ms)</span>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-[#E2E8F0]/60">
+<span class="text-[#64748B]">Active Test Sessions:</span>
+<span class="font-bold text-[#15803D]">1,402 Students</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-[#64748B]">OMR Parsing Error Rate:</span>
+<span class="font-bold text-[#0F172A]">0.000%</span>
+</div>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-[#E2E8F0] flex justify-end">
+<a class="font-mono text-[11px] font-bold text-[#9A7B38] hover:underline flex items-center gap-1" href="#">
+            Open Health Matrix →
+          </a>
+</div>
+</div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- 8. WORKSTATION SYSTEM FOOTER                                              -->
+<!-- ========================================================================= -->
+<footer class="bg-white border-t border-[#E2E8F0] px-4 py-2 flex-none z-30 select-none shadow-[0_-1px_2px_rgba(15,23,42,0.02)]">
+<div class="flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] text-[#64748B]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#15803D]"></span>
+<span class="">• FOUNDER NODE STATUS: <strong class="text-[#0F172A]">NODE: DEL-ALPHA-01 // V4.12</strong></span>
+<span class="text-[#CBD5E1]">|</span>
+<span class="">ENCRYPTION: <strong class="text-[#0F172A]">AES-256 GCM</strong></span>
+<span class="text-[#CBD5E1]">|</span>
+<span class="">SYSTEM HEALTH: <strong class="text-[#15803D]">100% OPERATIONAL</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="">LATENCY: <strong class="text-[#0F172A]">18ms</strong></span>
+<span class="text-[#CBD5E1]">|</span>
+<span class="">CLUSTER: <strong class="text-[#0F172A]">AP-SOUTH-1A</strong></span>
+<span class="text-[#CBD5E1]">|</span>
+<span class="text-[#9A7B38] font-bold">RANKCRACKERS DEFENSE-GRADE ENGINE</span>
+</div>
+</div>
+</footer>
+
+
+</body></html>

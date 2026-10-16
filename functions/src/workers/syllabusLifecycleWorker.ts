@@ -31,7 +31,7 @@ export type SyllabusLifecycleState =
   | 'B4_COMPLETE'
   | 'GOVERNANCE_REVIEW'
   | 'PUBLICATION_READY'
-  | 'HOLD_PENDING_FOUNDER'
+  | 'AUTOMATION_EXCEPTION_HOLD'
   | 'FAILED_TERMINAL';
 
 interface LifecycleEvent {
@@ -327,8 +327,8 @@ export const syllabusLifecycleWorker = functions.firestore
                 nextState = 'ACADEMIC_CORPUS_VERIFIED';
                 reason = 'Academic corpus verified successfully.';
             } else {
-                nextState = 'HOLD_PENDING_FOUNDER';
-                reason = 'Corpus verification failed fidelity checks.';
+                nextState = 'AUTOMATION_EXCEPTION_HOLD';
+                reason = 'Independent AI verification failed fidelity checks; grouped automation exception created.';
             }
         } else if (finalType === 'SYLLABUS_B3') {
             nextState = 'B3_COMPLETE';

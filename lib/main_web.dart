@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:html' as html;
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
@@ -200,8 +201,43 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       final provider = GoogleAuthProvider();
       provider.setCustomParameters({'prompt': 'select_account'});
-      await FirebaseAuth.instance.signInWithPopup(provider);
+      await FirebaseAuth.instance
+          .signInWithPopup(provider)
+          .timeout(const Duration(seconds: 12));
     } catch (e) {
+      // Some managed Chrome sessions block the popup even though the same
+      // provider is valid. Redirect is the supported web fallback and keeps
+      // the authenticated return path inside this web console.
+      if (e is FirebaseAuthException &&
+          (e.code == 'popup-blocked' ||
+              e.code == 'operation-not-supported-in-this-environment')) {
+        try {
+          final provider = GoogleAuthProvider();
+          provider.setCustomParameters({'prompt': 'select_account'});
+          await FirebaseAuth.instance.signInWithRedirect(provider);
+          return;
+        } on FirebaseAuthException catch (redirectError) {
+          if (mounted) {
+            setState(() => _error =
+                '${redirectError.code}: ${redirectError.message ?? redirectError.toString()}');
+          }
+          return;
+        }
+      }
+      if (e is FirebaseAuthException || e is TimeoutException) {
+        try {
+          final provider = GoogleAuthProvider();
+          provider.setCustomParameters({'prompt': 'select_account'});
+          await FirebaseAuth.instance.signInWithRedirect(provider);
+          return;
+        } on FirebaseAuthException catch (redirectError) {
+          if (mounted) {
+            setState(() => _error =
+                '${redirectError.code}: ${redirectError.message ?? redirectError.toString()}');
+          }
+          return;
+        }
+      }
       setState(() => _error = e.toString());
     } finally {
       if (mounted) setState(() => _googleBusy = false);
@@ -233,20 +269,19 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 70,
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: rcSurfaceAlt,
+                      // The approved web mark is white-on-black; keep the
+                      // black badge so it remains visible on the light panel.
+                      color: Colors.black,
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
                         color: rcGold.withValues(alpha: 0.24),
                         width: 1.5,
                       ),
                     ),
-                    child: const Text(
-                      'RC',
-                      style: TextStyle(
-                        color: rcGold,
-                        fontSize: 24,
-                        fontWeight: FontWeight.w900,
-                      ),
+                    child: Image.asset(
+                      'assets/images/logo_white.png',
+                      fit: BoxFit.contain,
+                      semanticLabel: 'RankCrackers logo',
                     ),
                   ),
                 ),
@@ -277,7 +312,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          '\u0915\u0930\u094D\u092E\u0923\u094D\u092F\u0947\u0935\u093E\u0927\u093F\u0915\u093E\u0930\u0938\u094D\u0924\u0947',
+                          '\u0924\u0947\u091c\u0938\u094D\u0935\u093F \u0928\u093E\u0935\u0927\u0940\u0924\u092e\u0938\u094D\u0924\u0941\u0964',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w800,
@@ -296,7 +331,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         SizedBox(height: 2),
                         Text(
-                          "(Your right is to action alone.)",
+                          'May Our Learning Be Radiant.',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w400,
@@ -387,11 +422,28 @@ class _WebShellState extends State<WebShell> {
   Future<void> _loadClaims() async {
     final token = await widget.user.getIdTokenResult(true);
     final claims = token.claims ?? {};
-    setState(() {
-      final bool claimFounder = claims['founder'] == true;
-      _isFounder = claimFounder;
-      _isAdmin = claims['admin'] == true;
+    var claimFounder = claims['founder'] == true;
+    var claimAdmin = claims['admin'] == true;
 
+    // A freshly granted Founder can briefly have a stale browser token after
+    // Google sign-in. Web must never fall through to the mobile Student panel
+    // while the governed Firestore role already identifies this account as a
+    // Founder/Admin. Claims remain authoritative when present; this is only a
+    // controlled bootstrap fallback for the signed-in user's own record.
+    if (!claimFounder && !claimAdmin) {
+      final userSnap = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(widget.user.uid)
+          .get();
+      final role = (userSnap.data()?['role'] ?? '').toString().toUpperCase();
+      claimFounder = role == 'FOUNDER';
+      claimAdmin = role == 'ADMIN' || role == 'ADMINISTRATOR';
+    }
+
+    if (!mounted) return;
+    setState(() {
+      _isFounder = claimFounder;
+      _isAdmin = claimAdmin;
       _claimsLoaded = true;
     });
   }

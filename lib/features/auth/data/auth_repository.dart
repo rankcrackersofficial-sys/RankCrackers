@@ -25,6 +25,23 @@ class AuthRepositoryImpl implements AuthRepository {
   @override
   Future<UserCredential?> signInWithGoogle() async {
     try {
+      // The web build must use Firebase's web provider directly. The
+      // google_sign_in plugin is native-first and can fail before it ever
+      // reaches Firebase when running on the hosted Founder/Student console.
+      if (kIsWeb) {
+        final provider = GoogleAuthProvider();
+        provider.setCustomParameters({'prompt': 'select_account'});
+        try {
+          return await _auth.signInWithPopup(provider);
+        } catch (_) {
+          // Hosted/managed browsers may close or block the popup without
+          // exposing a stable error code. Redirect is safe for every web
+          // popup failure and lets Firebase return to this same console.
+          await _auth.signInWithRedirect(provider);
+          return null;
+        }
+      }
+
       debugPrint('G00_PREVIOUS_GOOGLE_SESSION_CLEAR_STARTED');
       await _googleSignIn.signOut().timeout(
             const Duration(seconds: 8),

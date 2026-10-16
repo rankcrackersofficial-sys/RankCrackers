@@ -214,7 +214,7 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.profile,
-      builder: (context, state) => const ProfileScreen(),
+      builder: (context, state) => ProfileScreen(),
     ),
     GoRoute(
       path: AppRoutes.pyqVault,
@@ -230,7 +230,7 @@ final GoRouter appRouter = GoRouter(
     ),
     GoRoute(
       path: AppRoutes.testArena,
-      builder: (context, state) => const TestArenaScreen(),
+      builder: (context, state) => TestArenaScreen(),
     ),
     if (kDebugMode)
       GoRoute(

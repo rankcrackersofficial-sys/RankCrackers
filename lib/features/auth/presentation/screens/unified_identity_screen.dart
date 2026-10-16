@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -805,6 +806,25 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             color: scheme.onSurface,
           ),
         ),
+        if (kIsWeb)
+          Text(
+            "तेजस्वि नावधीतमस्तु।",
+            textAlign: TextAlign.center,
+            style: GoogleFonts.poppins(
+              fontSize: 12,
+              fontWeight: FontWeight.w700,
+              color: goldAccent.withValues(alpha: .92),
+              letterSpacing: 0.35,
+            ).copyWith(
+              fontFamilyFallback: const [
+                'Nirmala UI',
+                'Mangal',
+                'Kokila',
+                'Noto Sans Devanagari',
+                'sans-serif',
+              ],
+            ),
+          ),
         Text(
           "May Our Learning Be Radiant.",
           style: GoogleFonts.poppins(
@@ -963,7 +983,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   Image.asset(
                     "assets/images/Google.png",
                     width: 20,
-                    errorBuilder: (context, error, stackTrace) => const Icon(
+                    errorBuilder: (context, error, stackTrace) => Icon(
                       Icons.g_mobiledata_rounded,
                       color: scheme.onSurface,
                       size: 20,

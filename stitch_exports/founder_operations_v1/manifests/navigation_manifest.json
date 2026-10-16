@@ -1,0 +1,212 @@
+{
+  "project": "RankCrackers-55",
+  "target": "Founder and Admin Operations Web Panel",
+  "shell": {
+    "header": {
+      "logo": "assets/logo_on_black.png",
+      "title": "RankCrackers",
+      "roleBadge": "FOUNDER CONSOLE",
+      "missionContext": "NEET UG 2026 – Chemical Bonding & Molecular Structure (realm_neet_chem_bond_2026_v4)",
+      "globalSearchHotkey": "Ctrl+K / Cmd+K",
+      "executiveActions": [
+        "Emergency Halt Pipeline",
+        "Halt Student Delivery",
+        "Archive Mission",
+        "System Policy Settings"
+      ]
+    },
+    "sidebarGroups": [
+      {
+        "group": "OPERATIONS",
+        "items": [
+          {
+            "id": "overview",
+            "label": "Operations Overview",
+            "route": "/operations/overview",
+            "icon": "dashboard",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN_SCOPED"
+            ]
+          },
+          {
+            "id": "mission-control",
+            "label": "Mission Control",
+            "route": "/operations/missions",
+            "icon": "target",
+            "permissions": [
+              "FOUNDER"
+            ]
+          },
+          {
+            "id": "mission-watch",
+            "label": "Mission Watch (4 Slots)",
+            "route": "/operations/mission-watch",
+            "icon": "radar",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN_VIEW"
+            ]
+          },
+          {
+            "id": "student-delivery",
+            "label": "Student Delivery Reports",
+            "route": "/operations/student-delivery",
+            "icon": "rocket_launch",
+            "permissions": [
+              "FOUNDER"
+            ]
+          },
+          {
+            "id": "monetization",
+            "label": "Monetization & Revenue",
+            "route": "/operations/monetization",
+            "icon": "payments",
+            "permissions": [
+              "FOUNDER"
+            ]
+          },
+          {
+            "id": "exceptions",
+            "label": "Grouped Exceptions",
+            "route": "/operations/exceptions",
+            "icon": "report_problem",
+            "permissions": [
+              "FOUNDER"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "ACADEMIC PIPELINE",
+        "items": [
+          {
+            "id": "source-pair",
+            "label": "Official Documents",
+            "route": "/academic/documents",
+            "icon": "description",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "facts-review",
+            "label": "Notification Extraction",
+            "route": "/academic/notification-extraction",
+            "icon": "fact_check",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "syllabus-decomposition",
+            "label": "Syllabus Decomposition",
+            "route": "/academic/syllabus-decomposition",
+            "icon": "account_tree",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "pyq-crucible",
+            "label": "Crucible & DigiBook",
+            "route": "/academic/crucible-digibook",
+            "icon": "science",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "publish-gate",
+            "label": "Publish Gate (13 Gates)",
+            "route": "/academic/publish-gate",
+            "icon": "verified",
+            "permissions": [
+              "FOUNDER"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "ADMIN AND AI",
+        "items": [
+          {
+            "id": "admin-queue",
+            "label": "Admin Work Queue",
+            "route": "/admin/queue",
+            "icon": "checklist",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "worker-telemetry",
+            "label": "AI Worker Telemetry",
+            "route": "/system/workers",
+            "icon": "memory",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN_VIEW"
+            ]
+          },
+          {
+            "id": "activity-log",
+            "label": "Activity Log",
+            "route": "/system/activity-log",
+            "icon": "history",
+            "permissions": [
+              "FOUNDER",
+              "ADMIN"
+            ]
+          },
+          {
+            "id": "governance",
+            "label": "Founder Governance",
+            "route": "/system/governance",
+            "icon": "security",
+            "permissions": [
+              "FOUNDER"
+            ]
+          },
+          {
+            "id": "sys-ops",
+            "label": "System Operations",
+            "route": "/system/operations",
+            "icon": "settings",
+            "permissions": [
+              "FOUNDER"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "roleMatrix": {
+    "FOUNDER": {
+      "accessLevel": "LEVEL-0 (FULL_OPERATIONAL_AUTHORITY)",
+      "canApprovePublish": false,
+      "canOverridePolicy": true,
+      "canHaltPipeline": true,
+      "canHaltDelivery": true,
+      "canArchiveMission": true,
+      "canManageRBAC": true
+    },
+    "ADMIN": {
+      "accessLevel": "SCOPED_OPERATIONAL",
+      "canOverridePolicy": false,
+      "canHaltPipeline": false,
+      "canHaltDelivery": false,
+      "canArchiveMission": false,
+      "forbiddenRoutes": [
+        "/academic/publish-gate",
+        "/operations/monetization",
+        "/system/governance"
+      ]
+    }
+  }
+}

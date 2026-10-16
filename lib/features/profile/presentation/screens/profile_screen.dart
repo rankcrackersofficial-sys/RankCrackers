@@ -313,7 +313,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     required String subtitle,
     required VoidCallback onTap,
     Color iconColor = AppColors.gold,
-    Color titleColor = _text,
+    Color? titleColor,
     bool isDestructive = false,
   }) {
     return GestureDetector(
@@ -337,7 +337,7 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
                     title,
                     style: AppTypography.cardTitle.copyWith(
                       fontSize: 13,
-                      color: isDestructive ? Colors.redAccent : titleColor,
+                      color: isDestructive ? Colors.redAccent : (titleColor ?? _text),
                       fontWeight: isDestructive ? FontWeight.bold : null,
                     ),
                   ),

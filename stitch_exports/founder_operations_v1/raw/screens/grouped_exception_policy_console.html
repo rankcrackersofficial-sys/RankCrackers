@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grouped Exception &amp; Executive Policy Resolution Console | RankCrackers</title>
+<!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary": "#000000",
+            "outline-variant": "#c6c6cd",
+            "on-primary-container": "#7c839b",
+            "secondary-fixed": "#ffdea0",
+            "secondary-fixed-dim": "#e7c277",
+            "on-secondary-fixed": "#261a00",
+            "surface-container": "#edeef1",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#bec6e0",
+            "error": "#ba1a1a",
+            "background": "#f8f9fc",
+            "on-tertiary-fixed-variant": "#3323cc",
+            "on-surface-variant": "#45464d",
+            "tertiary-container": "#0f0069",
+            "secondary": "#765a1a",
+            "on-background": "#191c1e",
+            "primary-container": "#131b2e",
+            "surface-container-high": "#e7e8eb",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#e2dfff",
+            "surface-dim": "#d9dadd",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#dae2fd",
+            "on-tertiary-fixed": "#0f0069",
+            "secondary-container": "#fed88b",
+            "surface-tint": "#565e74",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e1e2e5",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#795d1c",
+            "on-primary-fixed-variant": "#3f465c",
+            "surface": "#f8f9fc",
+            "surface-bright": "#f8f9fc",
+            "on-secondary": "#ffffff",
+            "surface-variant": "#e1e2e5",
+            "inverse-on-surface": "#f0f1f4",
+            "tertiary-fixed-dim": "#c3c0ff",
+            "inverse-surface": "#2e3133",
+            "primary": "#000000",
+            "on-secondary-fixed-variant": "#5c4301",
+            "on-surface": "#191c1e",
+            "inverse-primary": "#bec6e0",
+            "on-tertiary-container": "#7671ff",
+            "surface-container-low": "#f2f3f6",
+            "outline": "#76777d",
+            "on-primary-fixed": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-lg": "1.25rem",
+            "margin": "1rem",
+            "space-md": "0.75rem",
+            "space-xs": "0.25rem",
+            "margin-desktop": "2rem",
+            "space-xl": "1.75rem",
+            "gutter-desktop": "1.25rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "mono-sm": ["JetBrains Mono"],
+            "label-md": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "mono-data": ["JetBrains Mono"],
+            "body-md": ["Inter"]
+          },
+          "fontSize": {
+            "mono-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "mono-data": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      font-size: 18px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md min-h-screen flex flex-col select-none">
+<!-- ================= TOP TELEMETRY BAR (JSON ANCHOR: TopNavBar) ================= -->
+<header class="bg-surface-container-low border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-space-md py-space-xs">
+<!-- Brand & Status Beacon Cluster -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 bg-primary flex items-center justify-center rounded-DEFAULT text-white">
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+</div>
+<span class="text-headline-md font-headline-md tracking-wider text-primary font-bold">
+            RANKCRACKERS // FOUNDER COMMAND
+          </span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-DEFAULT bg-emerald-50 border border-emerald-200 text-emerald-800 text-mono-sm font-mono-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+            GRID_SYNC_OK
+          </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-amber-50 border border-amber-300 text-amber-900 text-mono-sm font-mono-sm">
+<span class="material-symbols-outlined text-xs" data-icon="verified_user">verified_user</span>
+            LVL-0 FOUNDER AUTH: VERIFIED
+          </span>
+</div>
+</div>
+<!-- Navigation Links from JSON Anchor -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#">
+          Syllabus Pipeline
+        </a>
+<a class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#">
+          PYQ Linkage
+        </a>
+<a class="text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#">
+          Cockpit Telemetry
+        </a>
+<a class="text-primary border-b-2 border-primary font-label-md text-label-md uppercase tracking-wider py-1" href="#">
+          Gate Clearance
+        </a>
+</nav>
+<!-- Trailing Icon Cluster & Primary/Secondary Actions -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 border-r border-outline-variant pr-space-sm mr-1">
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-DEFAULT transition-colors" title="Sync Mesh">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-DEFAULT transition-colors" title="CLI Shell">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-DEFAULT relative transition-colors" title="Alerts">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-error rounded-full"></span>
+</button>
+</div>
+<button class="px-2.5 py-1 text-label-md font-label-md border border-error text-error bg-surface-container-lowest hover:bg-red-50 rounded-DEFAULT transition-colors active:scale-[0.99]">
+          Emergency Rollback
+        </button>
+<button class="px-3 py-1 text-label-md font-label-md bg-[#9A7B38] hover:bg-[#85692E] text-white rounded-DEFAULT flex items-center gap-1 transition-colors active:scale-[0.99] shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
+          Deploy Changes
+        </button>
+<div class="pl-2 border-l border-outline-variant flex items-center">
+<div class="w-7 h-7 rounded-DEFAULT bg-primary flex items-center justify-center text-white text-mono-sm font-mono-sm font-bold border border-outline-variant">
+            FC
+          </div>
+</div>
+</div>
+</div>
+</header>
+<!-- ================= SUB-HEADER CONTEXT BAR ================= -->
+<section class="bg-surface-container-lowest border-b border-[#E2E8F0] px-space-md py-2 flex flex-wrap items-center justify-between gap-y-2">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-outline">
+<span>Operations</span>
+<span>/</span>
+<span>Exceptions &amp; Policies</span>
+<span>/</span>
+<span class="text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-[#9A7B38]" data-icon="folder_special">folder_special</span>
+        Grouped Exception EXC-2026-084
+      </span>
+</div>
+<!-- Active Realm & Gate State -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-1 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline">REALM:</span>
+<span class="text-mono-sm font-mono-sm font-semibold text-primary">NEET UG 2026 Chemistry</span>
+<span class="text-mono-sm font-mono-sm text-outline">#realm_neet_chem_bond_2026_v4</span>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded-DEFAULT bg-red-50 border border-red-200 text-error">
+<span class="material-symbols-outlined text-sm" data-icon="lock_clock">lock_clock</span>
+<span class="text-mono-sm font-mono-sm font-bold uppercase tracking-wider">GATE 12 EXCEPTION HOLD</span>
+</div>
+<div class="text-mono-sm font-mono-sm text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        1000ms Realtime | Node: DEL-ALPHA-01 // v4.12
+      </div>
+</div>
+</section>
+<!-- ================= MAIN WORKSPACE AREA ================= -->
+<div class="flex-1 flex overflow-hidden">
+<!-- ================= LEFT SIDE NAVIGATION (JSON ANCHOR: SideNavBar) ================= -->
+<aside class="hidden lg:flex flex-col justify-between h-auto w-64 border-r border-outline-variant bg-surface-container-lowest py-space-md flex-shrink-0">
+<div class="flex flex-col gap-space-md">
+<!-- Header seal -->
+<div class="px-space-md flex items-center gap-2">
+<div class="w-8 h-8 rounded-DEFAULT bg-surface-container-high border border-outline-variant flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base" data-icon="token">token</span>
+</div>
+<div>
+<div class="text-label-md font-label-md font-bold text-primary tracking-wide">RC // OP-GRID</div>
+<div class="text-mono-sm font-mono-sm text-outline">STATUS: LIVE TELEMETRY</div>
+</div>
+</div>
+<div class="px-space-md">
+<button class="w-full py-1.5 px-2 bg-surface-container-low border border-outline-variant hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 rounded-DEFAULT transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+            Run Audit Diagnostics
+          </button>
+</div>
+<!-- Side Navigation Tab Items -->
+<nav class="flex flex-col gap-0.5">
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="biotech">biotech</span>
+<span>NEET Master</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span>JEE Advanced</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="account_balance">account_balance</span>
+<span>UPSC Prelims</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="hub">hub</span>
+<span>PYQ Engine</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="fact_check">fact_check</span>
+<span>Forensic Ledger</span>
+</a>
+<a class="flex items-center gap-space-sm bg-surface-container-high text-primary border-l-2 border-primary px-space-md py-space-xs font-label-md text-label-md uppercase tracking-wider" href="#">
+<span class="material-symbols-outlined text-base" data-icon="lock_clock">lock_clock</span>
+<span>Gate Controls</span>
+</a>
+</nav>
+</div>
+<!-- Footer Tabs from SideNavBar JSON -->
+<div class="flex flex-col gap-1 border-t border-outline-variant pt-space-sm">
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-1 font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="terminal">terminal</span>
+<span>System Shell</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-1 font-label-md text-label-md uppercase tracking-wider transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="tune">tune</span>
+<span>Config Registry</span>
+</a>
+<div class="px-space-md pt-2">
+<div class="bg-surface-container p-2 rounded-DEFAULT border border-outline-variant text-mono-sm font-mono-sm text-on-surface-variant flex justify-between items-center">
+<span>MEM: 38%</span>
+<span class="text-emerald-700 font-semibold">PARITY: 99.8%</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- ================= CONSOLE CANVAS BODY ================= -->
+<main class="flex-1 overflow-y-auto custom-scroll p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<!-- ================= 4-COLUMN KPI METRICS STRIP ================= -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest border border-[#E2E8F0] p-space-md rounded-DEFAULT shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="flex items-center justify-between">
+<span class="text-mono-sm font-mono-sm text-outline uppercase tracking-wider">1. TOTAL ATOMS &amp; ITEMS</span>
+<span class="material-symbols-outlined text-outline" data-icon="dataset">dataset</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary tracking-tight mt-1">1,517</div>
+<div class="text-body-sm font-body-sm text-outline mt-0.5 truncate">
+            Extracted from 3 connected canonical sources
+          </div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest border border-[#E2E8F0] p-space-md rounded-DEFAULT shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="flex items-center justify-between">
+<span class="text-mono-sm font-mono-sm text-emerald-700 uppercase tracking-wider">2. AUTO-PASSED (CONSENSUS)</span>
+<span class="material-symbols-outlined text-emerald-600" data-icon="verified">verified</span>
+</div>
+<div class="text-display-lg font-display-lg text-emerald-700 tracking-tight mt-1">1,482</div>
+<div class="text-body-sm font-body-sm text-emerald-800 flex items-center gap-1 mt-0.5">
+<span class="font-semibold font-mono-sm text-mono-sm bg-emerald-100 text-emerald-800 px-1 rounded-DEFAULT">97.7%</span>
+<span>Dual-Worker Parity verified</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest border border-[#E2E8F0] p-space-md rounded-DEFAULT shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="flex items-center justify-between">
+<span class="text-mono-sm font-mono-sm text-blue-700 uppercase tracking-wider">3. AUTO-REPAIRED (AI RULES)</span>
+<span class="material-symbols-outlined text-blue-600" data-icon="auto_fix_high">auto_fix_high</span>
+</div>
+<div class="text-display-lg font-display-lg text-primary tracking-tight mt-1">34</div>
+<div class="text-body-sm font-body-sm text-outline mt-0.5 truncate">
+            Low/Med syntax &amp; mapping heuristics applied
+          </div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-red-50 border border-red-200 p-space-md rounded-DEFAULT shadow-[0_1px_3px_0_rgba(220,38,38,0.08)]">
+<div class="flex items-center justify-between">
+<span class="text-mono-sm font-mono-sm text-error font-bold uppercase tracking-wider">4. ACTIVE GROUPED EXCEPTIONS</span>
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+</div>
+<div class="text-display-lg font-display-lg text-error tracking-tight mt-1">1</div>
+<div class="text-body-sm font-body-sm text-red-700 font-semibold mt-0.5">
+            CRITICAL POLICY BLOCKER - Gate 12 Hold
+          </div>
+</div>
+</section>
+<!-- ================= GROUPED EXCEPTION BANNER ================= -->
+<section class="bg-surface-container-lowest border-2 border-red-200 rounded-DEFAULT shadow-[0_2px_4px_0_rgba(15,23,42,0.04)] overflow-hidden">
+<div class="bg-red-50/70 border-b border-red-200 px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 bg-red-600 text-white text-mono-sm font-mono-sm font-bold rounded-DEFAULT tracking-wider uppercase">
+              EXC-2026-084
+            </span>
+<span class="px-2 py-0.5 bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38] text-mono-sm font-mono-sm font-bold rounded-DEFAULT">
+              FOUNDER POLICY OVERRIDE ONLY
+            </span>
+<span class="text-mono-sm font-mono-sm text-error uppercase font-medium tracking-wide">
+              [SEVERITY: CRITICAL POLICY LEVEL-0]
+            </span>
+</div>
+<div class="text-mono-sm font-mono-sm text-outline flex items-center gap-2">
+<span>DETECTION: 2026-03-30T10:14:02Z</span>
+<span class="h-3 w-px bg-outline-variant"></span>
+<span>PIPELINE: V4-BONDING-OCTAHEDRAL</span>
+</div>
+</div>
+<div class="p-space-lg">
+<h2 class="text-headline-md font-headline-md text-primary tracking-tight">
+            Systemic Nomenclature Drift: NCERT 2026 vs Archival NEET Answer Keys on sp3d2 Hybridization Axial Bond Angles
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1">
+            Worker dual-pass validation identified semantic divergence between freshly parsed NCERT 2026 Edition (rigid symmetric octahedral 90°/180° phrasing) and the historical 10-year official NTA answer keys which accept Jahn-Teller or axial equatorial distortion variance in SF6-derivative items.
+          </p>
+<!-- Scope Impact Strip -->
+<div class="mt-space-md pt-space-sm border-t border-[#E2E8F0] grid grid-cols-2 md:grid-cols-4 gap-2">
+<div class="bg-surface-container-low p-2 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline block">PYQ POOL IMPACT</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">42 Questions</span>
+<span class="text-mono-sm font-mono-sm text-error block">Score Contradiction</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline block">SYLLABUS ATOM</span>
+<span class="text-body-md font-body-md font-bold text-primary block truncate">CHEM-BOND-ATOM-042</span>
+<span class="text-mono-sm font-mono-sm text-outline block truncate">Octahedral sp3d2 Geometry</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline block">CRUCIBLE 98-DAY TEST</span>
+<span class="text-body-md font-body-md font-bold text-primary block">Day 14 Micro-Test</span>
+<span class="text-mono-sm font-mono-sm text-amber-700 block">Pending Release (Gate 12)</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline block">DIGIBOOK MAPPING</span>
+<span class="text-body-md font-body-md font-bold text-primary block truncate">Unit 04 § 4.5.2</span>
+<span class="text-mono-sm font-mono-sm text-blue-700 block">Corrigendum Hook Ready</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= DUAL-WORKER FORENSIC SPLIT EVIDENCE ================= -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left Worker 1 -->
+<div class="bg-surface-container-lowest border border-[#E2E8F0] rounded-DEFAULT p-space-md shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="flex items-center justify-between pb-2 border-b border-[#F1F5F9]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-blue-600"></span>
+<span class="text-label-md font-label-md text-primary font-bold uppercase">WORKER 1: CANONICAL EXTRACTOR</span>
+</div>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-DEFAULT bg-blue-50 text-blue-700 text-mono-sm font-mono-sm font-semibold border border-blue-200">
+              CONFIDENCE: 99.1%
+            </span>
+</div>
+<div class="mt-3 space-y-2 text-body-sm font-body-sm">
+<div>
+<span class="text-mono-sm font-mono-sm text-outline uppercase block">SOURCE ARTIFACT:</span>
+<span class="font-medium text-primary">NCERT 2026 Edition Chemistry Part 1, Page 142, Section 4.5.2</span>
+</div>
+<div>
+<span class="text-mono-sm font-mono-sm text-outline uppercase block">CONTENT HASH:</span>
+<code class="text-mono-sm font-mono-sm text-outline bg-surface-container-low px-1 py-0.5 rounded-DEFAULT block truncate">
+                sha256:3a4b12e88f9a22cc814a09e0998fde1423871adcf89
+              </code>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline uppercase block mb-1">EXTRACTED STATEMENT:</span>
+<p class="text-primary font-medium italic">
+                "Rigid axial 90°/180° geometry in SF6 and d-orbital hybridization model with zero equatorial distortion allowed under standard state."
+              </p>
+</div>
+<div class="flex items-center justify-between text-mono-sm font-mono-sm text-outline pt-1">
+<span>Engine: Claude 3.5 Sonnet / OCR v4.2</span>
+<span class="text-emerald-700 font-medium">Validation Flag: PARSED_EXACT</span>
+</div>
+</div>
+</div>
+<!-- Right Worker 2 -->
+<div class="bg-surface-container-lowest border border-[#E2E8F0] rounded-DEFAULT p-space-md shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="flex items-center justify-between pb-2 border-b border-[#F1F5F9]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-purple-600"></span>
+<span class="text-label-md font-label-md text-primary font-bold uppercase">WORKER 2: INDEPENDENT VERIFIER</span>
+</div>
+<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-DEFAULT bg-purple-50 text-purple-700 text-mono-sm font-mono-sm font-semibold border border-purple-200">
+              CONFIDENCE: 98.6%
+            </span>
+</div>
+<div class="mt-3 space-y-2 text-body-sm font-body-sm">
+<div>
+<span class="text-mono-sm font-mono-sm text-outline uppercase block">SOURCE ARTIFACT:</span>
+<span class="font-medium text-primary">Archival NTA Official Answer Keys 2018–2024 (10-Year Matrix)</span>
+</div>
+<div>
+<span class="text-mono-sm font-mono-sm text-outline uppercase block">CONTENT HASH:</span>
+<code class="text-mono-sm font-mono-sm text-outline bg-surface-container-low px-1 py-0.5 rounded-DEFAULT block truncate">
+                sha256:9c12e5fd01ba472910eeff5611293a00192e44b44
+              </code>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-DEFAULT border border-[#E2E8F0]">
+<span class="text-mono-sm font-mono-sm text-outline uppercase block mb-1">VERIFICATION FINDING:</span>
+<p class="text-primary font-medium italic">
+                "Historical NTA exam scoring accepts Jahn-Teller distorted equatorial-axial variance as valid key across 42 prior NEET questions."
+              </p>
+</div>
+<div class="flex items-center justify-between text-mono-sm font-mono-sm text-outline pt-1">
+<span>Engine: Blind Validator Worker B</span>
+<span class="text-amber-700 font-medium">Contradiction: DRIFT_DETECTED</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contradiction & Consensus Assessment Banner -->
+<div class="bg-[#FEF2F2] border border-[#FECACA] p-space-sm rounded-DEFAULT flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-base" data-icon="gpp_bad">gpp_bad</span>
+<span class="font-semibold">CONSENSUS ENGINE STATUS: FAILED</span>
+<span class="text-outline">|</span>
+<span class="text-on-surface">Dual-Worker Conflict detected between 2026 textbook authority and 7-year testing agency scoring precedence. Zero automated deployment permitted without Level-0 founder signature.</span>
+</div>
+<span class="text-mono-sm font-mono-sm text-error font-bold uppercase whitespace-nowrap ml-2">HOLD ENFORCED</span>
+</div>
+<!-- ================= AI RECOMMENDATION BOX ================= -->
+<section class="bg-[#FAF6EE] border border-[#EAD8B1] rounded-DEFAULT p-space-lg shadow-[0_1px_3px_0_rgba(154,123,56,0.08)]">
+<div class="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-[#EAD8B1]/60">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9A7B38]" data-icon="psychology">psychology</span>
+<span class="text-label-md font-label-md font-bold text-[#9A7B38] tracking-wider uppercase">
+              AUTONOMOUS ACADEMIC ENGINE POLICY RECOMMENDATION
+            </span>
+</div>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-white text-[#9A7B38] text-mono-sm font-mono-sm font-bold border border-[#EAD8B1]">
+            AI CONFIDENCE: 99.4%
+          </span>
+</div>
+<div class="mt-3">
+<div class="flex items-baseline gap-2">
+<span class="text-label-md font-label-md bg-[#9A7B38] text-white px-1.5 py-0.5 rounded-DEFAULT uppercase">
+              PROPOSED POLICY
+            </span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">Rule POL-902: Enable Dual-Answer Acceptance with Corrigendum Footnote</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface mt-2 leading-relaxed">
+            System will auto-update 42 dependent question answer keys to award full marks for both NCERT 2026 rigid wording (<code class="bg-white px-1 border border-[#E2E8F0] font-mono-sm text-mono-sm text-primary font-semibold">Option B: 90° and 180°</code>) and archival NTA phrasing (<code class="bg-white px-1 border border-[#E2E8F0] font-mono-sm text-mono-sm text-primary font-semibold">Option B &amp; D Dual Award</code>). Inject contextual editorial callout in DigiBook Unit 04 explaining syllabus transition. Safe for instant student delivery with zero scoring bias.
+          </p>
+</div>
+<!-- Executive Policy Action Bar -->
+<div class="mt-space-md pt-space-md border-t border-[#EAD8B1]/70 flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2">
+<!-- Action 1 (Primary Gold) -->
+<button class="px-4 py-2 bg-[#9A7B38] hover:bg-[#85692E] text-white text-label-md font-label-md rounded-DEFAULT flex items-center gap-2 transition-colors active:scale-[0.98] shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="rocket_launch">rocket_launch</span>
+<span>[Apply AI Policy Rule POL-902 &amp; Auto-Release (42 Items)]</span>
+</button>
+<!-- Action 2 (White with Slate Border & red accent) -->
+<button class="px-3 py-2 bg-surface-container-lowest border border-[#CBD5E1] hover:bg-surface-container-low text-primary text-label-md font-label-md rounded-DEFAULT flex items-center gap-1.5 transition-colors active:scale-[0.98]">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>[Hold Affected Items Only &amp; Release Balance (1,475 Items)]</span>
+</button>
+<!-- Action 3 (Secondary Slate) -->
+<button class="px-3 py-2 bg-surface-container-lowest border border-[#CBD5E1] hover:bg-surface-container text-outline hover:text-primary text-label-md font-label-md rounded-DEFAULT transition-colors active:scale-[0.98]">
+              [Escalate to Academic Council for Manual Adjudication]
+            </button>
+</div>
+<!-- Checkbox ledger receipt -->
+<label class="flex items-center gap-2 cursor-pointer text-body-sm font-body-sm text-on-surface">
+<input checked="" class="rounded-DEFAULT border-[#94A3B8] text-primary focus:ring-0 focus:ring-offset-0 h-4 w-4" type="checkbox"/>
+<span class="font-mono-sm text-mono-sm">Cryptographic non-repudiation audit receipt log to Coldline Immutable Ledger</span>
+</label>
+</div>
+</section>
+<!-- ================= AFFECTED ITEMS TABLE / INSPECTION DECK ================= -->
+<section class="bg-surface-container-lowest border border-[#E2E8F0] rounded-DEFAULT shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]">
+<div class="p-space-md border-b border-[#F1F5F9] flex flex-wrap items-center justify-between gap-2">
+<div>
+<div class="text-label-md font-label-md font-bold text-primary tracking-wide uppercase">
+              AFFECTED ITEMS INSPECTION DECK (SAMPLE 5 OF 42 ITEMS)
+            </div>
+<div class="text-body-sm font-body-sm text-outline">
+              Review individual question keys prior to global policy enforcement
+            </div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-mono-sm font-mono-sm bg-surface-container px-2 py-1 rounded-DEFAULT border border-[#E2E8F0]">
+              QUERY FILTER: tag:sp3d2_bond_drift
+            </span>
+<button class="p-1 hover:bg-surface-container rounded-DEFAULT text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-mono-sm font-mono-sm text-outline border-b border-[#E2E8F0]">
+<th class="py-2.5 px-space-md font-medium uppercase">Question ID</th>
+<th class="py-2.5 px-space-md font-medium uppercase">Canonical Year / Exam</th>
+<th class="py-2.5 px-space-md font-medium uppercase">Current Archival Key</th>
+<th class="py-2.5 px-space-md font-medium uppercase">Proposed Dual Key (POL-902)</th>
+<th class="py-2.5 px-space-md font-medium uppercase text-center">Status</th>
+<th class="py-2.5 px-space-md font-medium uppercase text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#F1F5F9] text-body-sm font-body-sm">
+<!-- Item 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-md font-mono-sm text-mono-sm font-semibold text-primary">
+                  Q-NEET-23-P1-CHEM-044
+                </td>
+<td class="py-2.5 px-space-md">NEET 2023 Phase-1</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-mono-sm text-mono-sm border border-[#CBD5E1]">
+                    KEY: [B] (90° only)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-[#FAF6EE] text-[#9A7B38] font-mono-sm text-mono-sm border border-[#EAD8B1] font-semibold">
+                    KEY: [B OR D] (Corrigendum attached)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-red-50 text-error border border-red-200 text-mono-sm font-mono-sm font-bold uppercase">
+                    BLOCKED AT GATE 12
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<button class="text-outline hover:text-primary p-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Item 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-md font-mono-sm text-mono-sm font-semibold text-primary">
+                  Q-NEET-21-MAIN-018
+                </td>
+<td class="py-2.5 px-space-md">NEET 2021 Main Examination</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-mono-sm text-mono-sm border border-[#CBD5E1]">
+                    KEY: [C] (Distorted 89.5°)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-[#FAF6EE] text-[#9A7B38] font-mono-sm text-mono-sm border border-[#EAD8B1] font-semibold">
+                    KEY: [B OR C] (Dual Award Mode)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-red-50 text-error border border-red-200 text-mono-sm font-mono-sm font-bold uppercase">
+                    BLOCKED AT GATE 12
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<button class="text-outline hover:text-primary p-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Item 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-md font-mono-sm text-mono-sm font-semibold text-primary">
+                  Q-NEET-19-ODISHA-052
+                </td>
+<td class="py-2.5 px-space-md">NEET 2019 Odisha Re-exam</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-mono-sm text-mono-sm border border-[#CBD5E1]">
+                    KEY: [D] (Equatorial-Axial Variance)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-[#FAF6EE] text-[#9A7B38] font-mono-sm text-mono-sm border border-[#EAD8B1] font-semibold">
+                    KEY: [A OR D] (Dual Award Mode)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-red-50 text-error border border-red-200 text-mono-sm font-mono-sm font-bold uppercase">
+                    BLOCKED AT GATE 12
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<button class="text-outline hover:text-primary p-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Item 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-md font-mono-sm text-mono-sm font-semibold text-primary">
+                  Q-NEET-18-NAT-089
+                </td>
+<td class="py-2.5 px-space-md">NEET 2018 National Test</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-mono-sm text-mono-sm border border-[#CBD5E1]">
+                    KEY: [A] (Jahn-Teller accepted)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-[#FAF6EE] text-[#9A7B38] font-mono-sm text-mono-sm border border-[#EAD8B1] font-semibold">
+                    KEY: [A OR B] (Dual Award Mode)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-red-50 text-error border border-red-200 text-mono-sm font-mono-sm font-bold uppercase">
+                    BLOCKED AT GATE 12
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<button class="text-outline hover:text-primary p-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Item 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-2.5 px-space-md font-mono-sm text-mono-sm font-semibold text-primary">
+                  Q-NEET-24-REV-031
+                </td>
+<td class="py-2.5 px-space-md">NEET 2024 Re-Test Matrix</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-mono-sm text-mono-sm border border-[#CBD5E1]">
+                    KEY: [B] (90° Strict)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-[#FAF6EE] text-[#9A7B38] font-mono-sm text-mono-sm border border-[#EAD8B1] font-semibold">
+                    KEY: [B OR C] (Dual Award Mode)
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-2 py-0.5 rounded-DEFAULT bg-red-50 text-error border border-red-200 text-mono-sm font-mono-sm font-bold uppercase">
+                    BLOCKED AT GATE 12
+                  </span>
+</td>
+<td class="py-2.5 px-space-md text-right">
+<button class="text-outline hover:text-primary p-1">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-sm bg-surface-container-low border-t border-[#E2E8F0] flex items-center justify-between text-mono-sm font-mono-sm text-outline">
+<span>Showing 5 of 42 blocked question records</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-0.5 bg-surface-container-lowest border border-[#CBD5E1] rounded-DEFAULT text-primary hover:bg-surface-container">Prev</button>
+<span class="px-1 text-primary">1 / 9</span>
+<button class="px-2 py-0.5 bg-surface-container-lowest border border-[#CBD5E1] rounded-DEFAULT text-primary hover:bg-surface-container">Next</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- ================= BOTTOM TELEMETRY & AUDIT FOOTER ================= -->
+<footer class="bg-surface-container-low border-t border-outline-variant px-space-md py-1.5 flex flex-wrap items-center justify-between text-mono-sm font-mono-sm text-outline z-40">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="lock">lock</span>
+        IMMUTABLE LEDGER HASH:
+        <code class="text-primary font-bold">sha256:889fc12d098e4ba77c01bfe92a101f3e</code>
+</span>
+<span class="hidden sm:inline text-outline-variant">|</span>
+<span class="hidden sm:inline">CLUSTER: AP-SOUTH-1A</span>
+<span class="hidden sm:inline text-outline-variant">|</span>
+<span class="text-emerald-700 font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        LATENCY: 12ms
+      </span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-primary font-medium">RankCrackers Defense-Grade Academic Engine</span>
+<span class="text-outline-variant">//</span>
+<span class="text-outline">ENV: PRODUCTION-SECURE</span>
+</div>
+</footer>
+</body></html>

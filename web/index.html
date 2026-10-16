@@ -100,7 +100,16 @@
   </script>
 </head>
 <body>
-  <div id="splash" class="center splash-brand" aria-hidden="true">RankCrackers</div>
+  <div id="splash" class="center" style="display: flex; flex-direction: column; align-items: center; gap: 16px;" aria-hidden="true">
+    <div style="width: 72px; height: 72px; background: #000000; border-radius: 16px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+      <img src="favicon.png" alt="RankCrackers" width="56" height="56" style="border-radius: 10px; object-fit: contain;" />
+    </div>
+    <div class="splash-brand">RankCrackers</div>
+    <div class="splash-motto" style="text-align: center; color: #64748B; font-family: system-ui, sans-serif;">
+      <div style="font-size: 14px; font-weight: 600; letter-spacing: 0.05em; color: #475569;">तेजस्वि नावधीतमस्तु।</div>
+      <div style="font-size: 11px; font-weight: 500; letter-spacing: 0.03em; color: #94A3B8; margin-top: 2px;">May Our Learning Be Radiant.</div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.mjs" type="module"></script>
   <script type="module">
   var { pdfjsLib } = globalThis;
@@ -122,6 +131,30 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
+  <script>
+    // Web-only release guard: remove stale Flutter PWA workers/caches left by
+    // older deployments before the current Founder console is bootstrapped.
+    (async function clearLegacyWebRuntime() {
+      if (!('serviceWorker' in navigator) || !('caches' in window)) return;
+      const key = 'rc-web-runtime-reset-20261016';
+      if (sessionStorage.getItem(key) === 'done') return;
+      try {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        const hadLegacyWorker = registrations.length > 0;
+        await Promise.all(registrations.map((registration) => registration.unregister()));
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames.map((name) => caches.delete(name)));
+        sessionStorage.setItem(key, 'done');
+        if (hadLegacyWorker || cacheNames.length > 0) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('rc_runtime_reset', '1');
+          window.location.replace(url.toString());
+        }
+      } catch (_) {
+        // Cache cleanup is best-effort; the app must still be allowed to boot.
+      }
+    })();
+  </script>
   <script src="flutter_bootstrap.js" async=""></script>
 
 

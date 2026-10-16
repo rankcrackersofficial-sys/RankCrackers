@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RankCrackers // Canonical Automation-First Operations Console</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#9A7B38',
+              'gold-hover': '#84692E',
+              'gold-light': '#FEF9C3',
+              'gold-subtle': '#FEF08A'
+            },
+            status: {
+              emerald: '#15803D',
+              'emerald-bg': '#DCFCE7',
+              'emerald-border': '#86EFAC',
+              amber: '#D97706',
+              'amber-bg': '#FEF3C7',
+              'amber-border': '#FDE68A',
+              crimson: '#DC2626',
+              'crimson-bg': '#FEE2E2',
+              'crimson-border': '#FECACA',
+              blue: '#2563EB',
+              'blue-bg': '#EFF6FF',
+              'blue-border': '#BFDBFE'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F8F9FC;
+      color: #0F172A;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 4px;
+    }
+    .tab-active {
+      background-color: #FEF9C3 !important;
+      color: #854D0E !important;
+      font-weight: 700 !important;
+      border-left: 3px solid #9A7B38 !important;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#F8F9FC] text-[#0F172A] selection:bg-[#FEF08A] selection:text-[#854D0E]">
+<!-- TOP CONTEXT BAR: BRANDING, TELEMETRY CHIPS & FOUNDER ACTIONS -->
+<header class="h-[62px] bg-white border-b border-[#E2E8F0] px-4 md:px-6 flex items-center justify-between sticky top-0 z-40 select-none">
+<!-- Left Section: 40x40 Black Logo, Bold Title, Gold Pill & Telemetry Chips -->
+<div class="flex items-center space-x-3.5">
+<!-- Official RankCrackers Solid Black Logo Symbol -->
+<div class="w-10 h-10 bg-[#000000] rounded-xl flex items-center justify-center shadow-sm shrink-0">
+<svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<!-- Geometric Shield & Spark Logo Mark -->
+<polygon points="12 2 20 6.5 20 12.5 12 22 4 12.5 4 6.5 12 2"></polygon>
+<path d="M12 7v5l3 3"></path>
+<circle cx="12" cy="12" fill="currentColor" r="1.5"></circle>
+</svg>
+</div>
+<div class="flex items-center space-x-2.5">
+<span class="text-xl font-black text-slate-900 tracking-tight font-sans">RankCrackers</span>
+<span class="bg-amber-50 text-amber-800 border border-amber-300 font-mono text-[10px] font-bold px-2 py-0.5 rounded-full tracking-wider uppercase">
+          FOUNDER CONSOLE
+        </span>
+</div>
+<div class="h-5 w-[1px] bg-[#E2E8F0] hidden xl:block"></div>
+<!-- Secondary Telemetry Chips -->
+<div class="hidden xl:flex items-center space-x-2">
+<span class="flex items-center space-x-1 px-2.5 py-1 bg-[#F8FAFC] border border-[#CBD5E1] rounded text-[11px] font-mono text-slate-700 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+<span>[LVL-0 FOUNDER AUTH: VERIFIED]</span>
+</span>
+<span class="flex items-center space-x-1 px-2.5 py-1 bg-[#EFF6FF] border border-[#BFDBFE] rounded text-[11px] font-mono text-[#2563EB] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse"></span>
+<span>FIRESTORE: automation_runs</span>
+</span>
+</div>
+</div>
+<!-- Center Section: Top Executive Navigation Links -->
+<nav class="hidden lg:flex items-center space-x-1 text-xs font-semibold text-slate-600 font-mono">
+<button class="px-3 py-1.5 rounded hover:text-slate-900 hover:bg-[#F1F5F9] transition-colors" onclick="switchView('overview')">
+        Syllabi Pipeline
+      </button>
+<button class="px-3 py-1.5 rounded hover:text-slate-900 hover:bg-[#F1F5F9] transition-colors" onclick="switchView('pyq-crucible')">
+        PYQ Linkage
+      </button>
+<button class="px-3 py-1.5 rounded text-[#9A7B38] bg-amber-50/80 border border-amber-200/60 font-bold transition-colors" onclick="switchView('overview')">
+        Cockpit Telemetry (Active)
+      </button>
+<button class="px-3 py-1.5 rounded hover:text-slate-900 hover:bg-[#F1F5F9] transition-colors" onclick="switchView('publish-gate')">
+        Gate Clearance
+      </button>
+</nav>
+<!-- Right Section: Quick Actions & Operator Vitals -->
+<div class="flex items-center space-x-2.5">
+<!-- Quick Action: Emergency Rollback -->
+<button class="border border-[#DC2626] text-[#DC2626] hover:bg-[#FEE2E2] text-xs font-bold font-mono tracking-wider px-2.5 py-1.5 rounded transition-all flex items-center space-x-1 active:scale-95" onclick="triggerEmergencyRollback()">
+<span class="material-symbols-outlined text-[15px]">history</span>
+<span class="hidden sm:inline">Emergency Rollback</span>
+<span class="sm:hidden">Rollback</span>
+</button>
+<!-- Quick Action: Deploy Changes -->
+<button class="bg-[#15803D] hover:bg-[#166534] text-white text-xs font-bold font-mono tracking-wider px-3 py-1.5 rounded shadow-sm transition-all flex items-center space-x-1 active:scale-95" onclick="executePublishRelease()">
+<span class="material-symbols-outlined text-[15px]">rocket_launch</span>
+<span>Deploy Changes</span>
+</button>
+<!-- Notification Bell -->
+<button class="relative p-1.5 rounded-md hover:bg-[#F1F5F9] text-[#475569] transition-colors" onclick="toggleFlyout('notificationFlyout')">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-[#DC2626] rounded-full border border-white"></span>
+</button>
+<!-- User Avatar Profile -->
+<div class="flex items-center space-x-2 pl-1 border-l border-[#E2E8F0]">
+<div class="w-7 h-7 rounded-full bg-[#9A7B38] text-white flex items-center justify-center font-bold text-xs ring-2 ring-[#FEF08A]">
+          FK
+        </div>
+</div>
+</div>
+</header>
+<!-- MISSION CONTROL STRIP: REALM SCOPE & FOUNDER EXECUTIVE AUTHORITY CONTROLS -->
+<section class="bg-white border-b border-[#E2E8F0] px-4 md:px-6 py-2.5 select-none shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+<!-- Realm Context & Identifier -->
+<div class="flex items-center space-x-3">
+<div class="p-2 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg">
+<span class="material-symbols-outlined text-[20px] text-[#9A7B38]">token</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm md:text-base font-extrabold text-slate-900 tracking-tight">
+              NEET UG 2026 – Chemical Bonding &amp; Molecular Structure
+            </h2>
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] border border-[#86EFAC] rounded text-[10px] font-mono font-bold">ACTIVE REALM</span>
+</div>
+<div class="flex items-center space-x-2 text-xs font-mono text-slate-500 mt-0.5">
+<span>Mission Realm Scope:</span>
+<code class="px-1.5 py-0.2 bg-[#F1F5F9] text-slate-800 rounded font-bold">realm_neet_chem_bond_2026_v4</code>
+<span class="text-slate-300">|</span>
+<span class="text-[#2563EB]">Dual-Worker Consensus Active</span>
+</div>
+</div>
+</div>
+<!-- Prominent Mission-Level Founder Executive Authority Controls -->
+<div class="flex items-center flex-wrap gap-2">
+<!-- Emergency Halt Pipeline -->
+<button class="border border-[#DC2626] text-[#DC2626] hover:bg-[#FEE2E2] px-3 py-1.5 rounded text-xs font-mono font-bold tracking-wider transition-all flex items-center space-x-1.5" onclick="emergencyHaltPipeline()">
+<span class="material-symbols-outlined text-[16px]">emergency_home</span>
+<span>Emergency Halt Pipeline</span>
+</button>
+<!-- Halt Student Delivery -->
+<button class="border border-[#D97706] text-[#D97706] hover:bg-[#FEF3C7] px-3 py-1.5 rounded text-xs font-mono font-bold tracking-wider transition-all flex items-center space-x-1.5" onclick="haltStudentDelivery()">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+<span>Halt Student Delivery</span>
+</button>
+<!-- Archive Mission -->
+<button class="border border-slate-300 text-slate-700 hover:bg-slate-100 px-3 py-1.5 rounded text-xs font-mono font-bold tracking-wider transition-all flex items-center space-x-1.5" onclick="archiveMission()">
+<span class="material-symbols-outlined text-[16px]">archive</span>
+<span>Archive Mission</span>
+</button>
+<!-- System Policy Settings -->
+<button class="bg-[#9A7B38] hover:bg-[#84692E] text-white px-3.5 py-1.5 rounded text-xs font-mono font-bold tracking-wider transition-all flex items-center space-x-1.5 shadow-sm" onclick="openPolicySettings()">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>System Policy Settings</span>
+</button>
+</div>
+</div>
+</section>
+<!-- WORKSPACE BODY WITH SIDEBAR + MAIN STAGE -->
+<div class="flex flex-1 overflow-hidden relative">
+<!-- COLLAPSIBLE LEFT SIDEBAR (260px) -->
+<aside class="w-64 bg-white border-r border-[#E2E8F0] flex flex-col justify-between shrink-0 h-[calc(100vh-120px)] overflow-y-auto custom-scrollbar select-none z-30 transition-all duration-200" id="sidebar">
+<div class="p-3 space-y-5">
+<!-- Group 1: AUTOMATION & PIPELINES -->
+<div>
+<div class="px-3 pb-1 text-[10px] font-mono font-bold uppercase tracking-wider text-[#94A3B8]">
+            Automation Architecture
+          </div>
+<nav class="space-y-0.5 text-xs font-medium">
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all tab-active" id="nav-overview" onclick="switchView('overview')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Cockpit Telemetry</span>
+</div>
+<span class="text-[10px] font-mono px-1.5 py-0.2 bg-[#FEF08A] text-[#854D0E] rounded font-bold">GATE 12</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-mission-control" onclick="switchView('mission-control')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>Missions &amp; Realms</span>
+</div>
+<span class="text-[9px] font-mono text-[#15803D] bg-[#DCFCE7] px-1 rounded">18 SYNC</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-mission-watch" onclick="switchView('mission-watch')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">radar</span>
+<span>Mission Watch (NTA/NCERT)</span>
+</div>
+<span class="w-2 h-2 rounded-full bg-[#15803D] animate-pulse"></span>
+</button>
+</nav>
+</div>
+<!-- Group 2: CANONICAL LEDGERS & EXCEPTIONS -->
+<div>
+<div class="px-3 pb-1 text-[10px] font-mono font-bold uppercase tracking-wider text-[#94A3B8]">
+            Contract Governance
+          </div>
+<nav class="space-y-0.5 text-xs font-medium">
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-source-pair" onclick="switchView('source-pair')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>SHA-256 Provenance</span>
+</div>
+<span class="text-[10px] font-mono text-[#64748B]">Locked</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-facts-review" onclick="switchView('facts-review')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+<span>Structured Notification Facts</span>
+</div>
+<span class="text-[9px] font-mono text-[#15803D] bg-[#DCFCE7] px-1 rounded">26/26</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-pyq-crucible" onclick="switchView('pyq-crucible')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">science</span>
+<span>PYQ &amp; Crucible Studio</span>
+</div>
+<span class="text-[10px] font-mono text-[#15803D]">98.6%</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-publish-gate" onclick="switchView('publish-gate')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+<span>Gate 12 Clearance</span>
+</div>
+<span class="text-[9px] font-mono bg-[#FEF3C7] text-[#D97706] font-bold px-1.5 rounded">HOLD</span>
+</button>
+</nav>
+</div>
+<!-- Group 3: BACKEND CONTRACTS & AUDIT -->
+<div>
+<div class="px-3 pb-1 text-[10px] font-mono font-bold uppercase tracking-wider text-[#94A3B8]">
+            Collections &amp; Security
+          </div>
+<nav class="space-y-0.5 text-xs font-medium">
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-sys-ops" onclick="switchView('sys-ops')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">dataset</span>
+<span>automation_runs</span>
+</div>
+<span class="text-[9px] font-mono text-[#15803D]">14ms</span>
+</button>
+<button class="w-full flex items-center justify-between px-3 py-2 rounded-md hover:bg-[#F1F5F9] text-[#334155] transition-all" id="nav-admin-queue" onclick="switchView('admin-queue')">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span>Coldline Audit Ledger</span>
+</div>
+<span class="text-[10px] font-mono text-slate-500">AES-256</span>
+</button>
+</nav>
+</div>
+</div>
+<!-- Bottom Global States Preview Switcher (For Auditing UI States) -->
+<div class="p-3 bg-[#F8FAFC] border-t border-[#E2E8F0] space-y-2">
+<div class="text-[10px] font-mono font-bold text-[#64748B] uppercase tracking-wider flex items-center justify-between">
+<span>Simulation Rig:</span>
+</div>
+<select class="w-full text-xs font-mono bg-white border border-[#CBD5E1] rounded px-2 py-1 text-[#334155] focus:outline-none" id="stateSimulator" onchange="simulateUIState(this.value)">
+<option value="normal">Active Automation Mode</option>
+<option value="loading">Loading Skeleton</option>
+<option value="empty">Empty Collection State</option>
+<option value="blocked">Gate 12 Policy Override View</option>
+</select>
+</div>
+</aside>
+<!-- MAIN VIEWPORT CANVAS -->
+<main class="flex-1 overflow-y-auto h-[calc(100vh-120px)] p-4 md:p-6 custom-scrollbar bg-[#F8F9FC]">
+<!-- SKELETON LOADING OVERLAY (Toggled by state simulator) -->
+<div class="hidden space-y-6 animate-pulse" id="loadingOverlay">
+<div class="h-8 bg-slate-200 rounded w-1/3"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="h-24 bg-slate-200 rounded"></div>
+<div class="h-24 bg-slate-200 rounded"></div>
+<div class="h-24 bg-slate-200 rounded"></div>
+<div class="h-24 bg-slate-200 rounded"></div>
+</div>
+<div class="h-64 bg-slate-200 rounded"></div>
+</div>
+<!-- EMPTY STATE VIEW (Toggled by state simulator) -->
+<div class="hidden p-12 text-center bg-white rounded-lg border border-[#E2E8F0] shadow-sm my-8 max-w-2xl mx-auto" id="emptyStateView">
+<span class="material-symbols-outlined text-5xl text-[#94A3B8] mb-3">inventory_2</span>
+<h3 class="text-lg font-bold text-[#0F172A]">No Active Automation Runs In Flight</h3>
+<p class="text-sm text-[#64748B] mt-1 mb-4">Firestore collection `automation_runs` has 0 open exceptions. All 18 missions are operating under verified consensus.</p>
+<button class="bg-[#9A7B38] text-white px-4 py-2 rounded text-xs font-bold font-mono tracking-wider hover:bg-[#84692E]" onclick="switchView('overview')">RETURN TO TELEMETRY →</button>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 1: COCKPIT TELEMETRY & AUTOMATION LEDGER (DEFAULT) -->
+<!-- ======================================================== -->
+<div class="view-panel space-y-6" id="view-overview">
+<!-- PROMINENT FOUNDER DIRECTIVE BANNER: ZERO MANUAL CLICKS MANDATE -->
+<div class="bg-white border-2 border-amber-300/80 rounded-xl p-4 shadow-sm relative overflow-hidden bg-gradient-to-r from-amber-50/70 via-white to-amber-50/40">
+<div class="flex items-start space-x-3.5">
+<div class="p-2 bg-amber-100/90 text-amber-900 rounded-lg shrink-0 mt-0.5 border border-amber-200">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center space-x-2">
+<span class="text-xs font-mono font-black text-amber-900 uppercase tracking-widest bg-amber-200/70 px-2 py-0.5 rounded">
+                  FOUNDER EXECUTIVE MANDATE
+                </span>
+<span class="text-xs font-mono font-bold text-slate-500">POLICY-DIR-001</span>
+<span class="text-xs font-mono text-[#15803D] font-bold">● ACTIVE ENFORCEMENT</span>
+</div>
+<p class="text-xs md:text-sm font-semibold text-slate-900 leading-snug">
+                "ZERO MANUAL REVIEW MANDATE: No micro atom approvals or per-question endorsements. System auto-reconciles by mathematical consensus or stops at Gate 12 for high-level Founder Policy override. State: Deterministic Contract Enforced."
+              </p>
+<div class="text-[11px] font-mono text-slate-500 flex flex-wrap gap-x-4 gap-y-1 pt-1">
+<span>Micro-clicks eliminated: <strong>100%</strong></span>
+<span>Consensus Engine: <strong>Dual-Worker Independent Parity</strong></span>
+<span>Immutable Proof: <strong>Active SHA-256 Digest</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- 7 REAL PIPELINE STAGE COUNTERS & REAL STATUSES -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-600 flex items-center space-x-1.5">
+<span class="material-symbols-outlined text-[15px] text-[#9A7B38]">schema</span>
+<span>Autonomous Pipeline Stage Telemetry [Contract: `automation_runs`]</span>
+</h3>
+<span class="text-[11px] font-mono text-slate-500">Live Workers: 8 Online</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2.5">
+<!-- 1. Queued -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3 shadow-sm hover:border-slate-400 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-slate-500">1. Queued</div>
+<div class="text-xl font-extrabold text-slate-800 mt-1">0 tasks</div>
+<div class="text-[10px] text-slate-500 font-mono mt-0.5 flex items-center space-x-1">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+<span>status: idle</span>
+</div>
+</div>
+<!-- 2. Generating -->
+<div class="bg-white border border-[#BFDBFE] bg-blue-50/20 rounded-lg p-3 shadow-sm hover:border-blue-400 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-[#2563EB]">2. Generating</div>
+<div class="text-xl font-extrabold text-[#2563EB] mt-1">1 active</div>
+<div class="text-[10px] text-[#2563EB] font-mono mt-0.5 truncate" title="worker_extract_04">
+                worker_extract_04
+              </div>
+</div>
+<!-- 3. Verifying -->
+<div class="bg-white border border-[#BFDBFE] bg-blue-50/20 rounded-lg p-3 shadow-sm hover:border-blue-400 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-[#2563EB]">3. Verifying</div>
+<div class="text-xl font-extrabold text-[#2563EB] mt-1">1 running</div>
+<div class="text-[10px] text-slate-600 font-mono mt-0.5 truncate">
+                parity check
+              </div>
+</div>
+<!-- 4. Reconciling -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3 shadow-sm hover:border-slate-400 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-purple-700">4. Reconciling</div>
+<div class="text-xl font-extrabold text-purple-700 mt-1">1 dual</div>
+<div class="text-[10px] text-purple-600 font-mono mt-0.5">
+                consensus engine
+              </div>
+</div>
+<!-- 5. Auto-Passed -->
+<div class="bg-white border border-[#86EFAC] bg-emerald-50/30 rounded-lg p-3 shadow-sm hover:border-emerald-500 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-[#15803D]">5. Auto-Passed</div>
+<div class="text-xl font-extrabold text-[#15803D] mt-1">128 atoms</div>
+<div class="text-[10px] text-[#15803D] font-mono mt-0.5 font-bold">
+                &gt;99.2% confidence
+              </div>
+</div>
+<!-- 6. Auto-Hold -->
+<div class="bg-white border-2 border-amber-400 bg-amber-50/40 rounded-lg p-3 shadow-sm hover:border-amber-500 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-amber-800">6. Auto-Hold</div>
+<div class="text-xl font-extrabold text-amber-900 mt-1">1 policy halt</div>
+<div class="text-[10px] text-amber-800 font-mono mt-0.5 font-bold">
+                Gate 12 req.
+              </div>
+</div>
+<!-- 7. Failed -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3 shadow-sm hover:border-slate-400 transition-colors">
+<div class="text-[10px] font-mono font-bold uppercase text-slate-500">7. Failed</div>
+<div class="text-xl font-extrabold text-slate-800 mt-1">0 fatal</div>
+<div class="text-[10px] text-[#15803D] font-mono mt-0.5">
+                0 errors logged
+              </div>
+</div>
+</div>
+</div>
+<!-- REAL FIRESTORE CONTRACT BINDING CARD -->
+<div class="bg-white border border-[#E2E8F0] rounded-xl shadow-sm p-5 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#E2E8F0] gap-2">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[20px] text-[#9A7B38]">data_object</span>
+<div>
+<h3 class="text-sm font-bold text-slate-900 font-sans">
+                  Active Firestore Run Document
+                </h3>
+<span class="text-xs font-mono text-slate-500">Collection: <code>automation_runs/run_2026_chem_001</code></span>
+</div>
+</div>
+<div class="flex items-center space-x-2">
+<span class="px-2.5 py-1 bg-amber-100 text-amber-900 border border-amber-300 font-mono text-[11px] font-bold rounded">
+                `publicationEligible`: FALSE (HALTED AT GATE 12)
+              </span>
+</div>
+</div>
+<!-- Structured Contract Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-mono">
+<div class="p-3 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg space-y-1">
+<div class="text-[10px] text-slate-500 uppercase font-bold">Contract run_id</div>
+<div class="font-bold text-slate-900 text-sm">run_2026_chem_001</div>
+<div class="text-[11px] text-slate-500">Timestamp: 2026-03-29T10:42:18Z</div>
+</div>
+<div class="p-3 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg space-y-1 md:col-span-2">
+<div class="text-[10px] text-slate-500 uppercase font-bold">decisionReason Contract String</div>
+<p class="font-bold text-amber-900 text-xs leading-relaxed">
+                "Discrepancy detected between NCERT 2026 Edition and archival answer keys on sp3d2 geometry."
+              </p>
+<div class="text-[10px] text-slate-500">Autonomous resolution stopped at Gate 12 per deterministic protocol.</div>
+</div>
+</div>
+<!-- Dual-Worker Independent Results -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
+<!-- Worker 1 -->
+<div class="p-4 bg-white border border-[#CBD5E1] rounded-lg space-y-2">
+<div class="flex items-center justify-between border-b pb-2">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-[#15803D]"></span>
+<span class="font-bold text-slate-900">Worker 1 (generatorResult)</span>
+</div>
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] rounded text-[10px] font-bold">99.1% Confidence</span>
+</div>
+<div class="text-slate-700 leading-relaxed">
+<strong>Model:</strong> Claude 3.5 Sonnet (Ingestion Rig Del-04)<br/>
+<strong>Source:</strong> NCERT 2026 Chemistry Edition, Ch. 4, Pg 142.<br/>
+<strong>Decomposition Result:</strong> ATOM-042 classified as distorted octahedral geometry with axial bond elongation.
+              </div>
+</div>
+<!-- Worker 2 -->
+<div class="p-4 bg-white border border-[#CBD5E1] rounded-lg space-y-2">
+<div class="flex items-center justify-between border-b pb-2">
+<div class="flex items-center space-x-1.5">
+<span class="w-2 h-2 rounded-full bg-[#2563EB]"></span>
+<span class="font-bold text-slate-900">Worker 2 (verifierResult)</span>
+</div>
+<span class="px-2 py-0.5 bg-[#EFF6FF] text-[#2563EB] rounded text-[10px] font-bold">98.6% Confidence</span>
+</div>
+<div class="text-slate-700 leading-relaxed">
+<strong>Engine:</strong> Independent Verifier Engine (Cross-Audit Rig)<br/>
+<strong>Source:</strong> Archival NTA Official Answer Keys (2018–2024).<br/>
+<strong>Decomposition Result:</strong> Historical questions awarded marks only for regular octahedral geometry without distortion notation.
+              </div>
+</div>
+</div>
+</div>
+<!-- GROUPED EXCEPTION VIEW & EXECUTIVE POLICY RESOLUTION (GATE 12) -->
+<div class="bg-white border-2 border-amber-400 rounded-xl shadow-md overflow-hidden">
+<div class="px-5 py-3.5 bg-gradient-to-r from-amber-100/90 to-amber-50 border-b border-amber-300 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-[20px] text-amber-900">report_problem</span>
+<div>
+<span class="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-200 px-2 py-0.5 rounded">
+                  CRITICAL POLICY LEVEL-0
+                </span>
+<h3 class="text-sm font-bold text-slate-900 font-sans mt-0.5">
+                  Grouped Exception: <code class="font-mono text-amber-900 font-bold">exc_sp3d2_084</code>
+</h3>
+</div>
+</div>
+<div class="text-right font-mono text-xs text-slate-600">
+              Collection: <code>automation_exceptions</code>
+</div>
+</div>
+<div class="p-5 space-y-4 font-mono text-xs">
+<!-- Exception Scope Metadata Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="p-3 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg">
+<span class="text-[10px] text-slate-500 uppercase block">Affected Questions</span>
+<span class="text-base font-extrabold text-slate-900">42 Items</span>
+<span class="text-[10px] text-slate-500 block">NEET &amp; JEE Multi-year Bank</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg">
+<span class="text-[10px] text-slate-500 uppercase block">Knowledge Atom</span>
+<span class="text-base font-extrabold text-[#9A7B38]">ATOM-042</span>
+<span class="text-[10px] text-slate-600 block">sp3d2 Molecular Geometry</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] border border-[#CBD5E1] rounded-lg">
+<span class="text-[10px] text-slate-500 uppercase block">Target DigiBook</span>
+<span class="text-base font-extrabold text-slate-900">Unit 04: Bonding</span>
+<span class="text-[10px] text-[#15803D] block font-bold">SHA-256 Verified Source</span>
+</div>
+</div>
+<!-- AI Policy Recommendation Box -->
+<div class="p-4 bg-amber-50/70 border border-amber-300 rounded-lg space-y-1.5">
+<div class="flex items-center space-x-2 text-amber-900 font-bold text-xs uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>Autonomous Consensus Recommendation:</span>
+</div>
+<p class="text-slate-800 text-xs md:text-sm font-sans font-semibold">
+                "Rule POL-902: Enable Dual-Answer Acceptance with Corrigendum Footnote"
+              </p>
+<p class="text-[11px] text-slate-600 font-sans">
+                Applies system-wide parity: student submissions matching either NCERT 2026 textbook revised geometry or legacy NTA answer keys receive full evaluation score with an advisory footnote link in the student review portal.
+              </p>
+</div>
+<!-- Cryptographic Audit Non-Repudiation Checkbox -->
+<div class="p-3.5 bg-slate-50 border border-slate-300 rounded-lg flex items-start space-x-3">
+<input checked="" class="mt-1 h-4 w-4 rounded border-slate-300 text-[#9A7B38] focus:ring-[#9A7B38] cursor-pointer" id="auditCheck" type="checkbox"/>
+<label class="text-[11px] text-slate-700 leading-normal cursor-pointer" for="auditCheck">
+<strong>Cryptographic non-repudiation audit receipt:</strong> Log transaction to Coldline Immutable Ledger (sha256 signature generated upon override). No manual atom-level clicks permitted.
+              </label>
+</div>
+<!-- Executive Systemic Action Buttons -->
+<div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-slate-200">
+<div class="flex items-center space-x-2.5">
+<!-- Primary Systemic Policy Override Button -->
+<button class="bg-[#9A7B38] hover:bg-[#84692E] text-white px-4 py-2.5 rounded text-xs font-bold font-mono tracking-wider shadow-sm flex items-center space-x-1.5 active:scale-95 transition-all" onclick="applyPolicyOverride('exc_sp3d2_084', 'POL-902')">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Apply Policy Override: Dual Answer Acceptance Rule POL-902</span>
+</button>
+<!-- Keep in Auto-Hold Button -->
+<button class="bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 px-4 py-2.5 rounded text-xs font-bold font-mono tracking-wider transition-all" onclick="keepInAutoHold('exc_sp3d2_084')">
+                  Keep in Auto-Hold
+                </button>
+</div>
+<!-- Escalation Link -->
+<button class="text-xs font-mono text-slate-500 hover:text-slate-900 underline text-left sm:text-right" onclick="escalateToCouncil('exc_sp3d2_084')">
+                Escalate to Academic Council for Manual Adjudication
+              </button>
+</div>
+</div>
+</div>
+<!-- RECENT EXCEPTION RESOLUTION LEDGER (AUDIT TRAIL) -->
+<div class="bg-white border border-[#E2E8F0] rounded-xl shadow-sm overflow-hidden">
+<div class="px-5 py-3 border-b border-[#E2E8F0] bg-[#F8FAFC] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px] text-[#9A7B38]">receipt_long</span>
+<h3 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-900">
+                Recent Exception Resolution Ledger (Audit Trail)
+              </h3>
+</div>
+<span class="text-[11px] font-mono text-slate-500">Live Coldline Sync Enabled</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs font-mono">
+<thead class="bg-[#F8FAFC] border-b border-[#E2E8F0] text-slate-500 text-[10px] uppercase">
+<tr>
+<th class="px-4 py-3">Exception ID</th>
+<th class="px-4 py-3">Resolution Mechanism</th>
+<th class="px-4 py-3">Audit SHA-256 Digest</th>
+<th class="px-4 py-3">Final Contract Status</th>
+<th class="px-4 py-3 text-right">Ledger</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E2E8F0]">
+<tr class="hover:bg-[#F8F9FC]">
+<td class="px-4 py-3 font-bold text-slate-900">exc_sol_019</td>
+<td class="px-4 py-3 text-slate-700">Auto-resolved via Rule POL-881 (Henry's Law Constant Units)</td>
+<td class="px-4 py-3 text-slate-500 text-[11px]">sha256:8f9a2b...c011</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] font-bold rounded text-[10px]">AUTO_PASSED</span>
+</td>
+<td class="px-4 py-3 text-right text-slate-400">Recorded</td>
+</tr>
+<tr class="hover:bg-[#F8F9FC]">
+<td class="px-4 py-3 font-bold text-slate-900">exc_thermo_004</td>
+<td class="px-4 py-3 text-slate-700">Full consensus reconciled for work done (Isochoric heat capacity)</td>
+<td class="px-4 py-3 text-slate-500 text-[11px]">sha256:4d7c11...98ae</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 bg-[#EFF6FF] text-[#2563EB] font-bold rounded text-[10px]">PUBLISHED</span>
+</td>
+<td class="px-4 py-3 text-right text-slate-400">Recorded</td>
+</tr>
+<tr class="hover:bg-[#F8F9FC]">
+<td class="px-4 py-3 font-bold text-slate-900">exc_atomic_088</td>
+<td class="px-4 py-3 text-slate-700">Founder Policy Override POL-844 (Rydberg constant precision)</td>
+<td class="px-4 py-3 text-slate-500 text-[11px]">sha256:1a89bb...77f2</td>
+<td class="px-4 py-3">
+<span class="px-2 py-0.5 bg-amber-100 text-amber-900 font-bold rounded text-[10px]">OVERRIDDEN</span>
+</td>
+<td class="px-4 py-3 text-right text-slate-400">Recorded</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 2: MISSIONS & REALMS -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-mission-control">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Mission Control &amp; Canonical Inventory</h2>
+<p class="text-xs text-[#64748B]">Multi-exam lifecycle registry, recruitment parity, and realm synchronization.</p>
+</div>
+</div>
+<!-- 3-Way Reconciliation Bar -->
+<div class="bg-white border border-[#E2E8F0] p-4 rounded-lg shadow-sm">
+<div class="text-xs font-mono font-bold text-[#64748B] uppercase mb-2">3-Way Architecture Reconciliation:</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 font-mono text-xs">
+<div class="p-2.5 bg-[#F8FAFC] border border-[#CBD5E1] rounded flex items-center justify-between">
+<span>mission_realms: <strong>18 Active</strong></span>
+<span class="text-[#15803D] font-bold">✓ 100% SYNC</span>
+</div>
+<div class="p-2.5 bg-[#F8FAFC] border border-[#CBD5E1] rounded flex items-center justify-between">
+<span>recruitments: <strong>18 Bound</strong></span>
+<span class="text-[#15803D] font-bold">✓ MATCHED</span>
+</div>
+<div class="p-2.5 bg-[#F8FAFC] border border-[#CBD5E1] rounded flex items-center justify-between">
+<span>student_catalog: <strong>12 Published</strong></span>
+<span class="text-[#9A7B38] font-bold">6 Governed Gate</span>
+</div>
+</div>
+</div>
+<!-- Mission Data Table -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs">
+<thead class="bg-[#F8FAFC] border-b border-[#E2E8F0] text-[#64748B] font-mono text-[10px] uppercase">
+<tr>
+<th class="px-4 py-3">Mission Name</th>
+<th class="px-4 py-3">Exam Family</th>
+<th class="px-4 py-3">Authority</th>
+<th class="px-4 py-3">Lifecycle</th>
+<th class="px-4 py-3">Student Visibility</th>
+<th class="px-4 py-3">Blockers</th>
+<th class="px-4 py-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#E2E8F0] font-mono">
+<tr class="hover:bg-[#F8F9FC]">
+<td class="px-4 py-3 font-sans font-bold text-[#0F172A]">NEET 2026 UG – Chemical Bonding Master Realm</td>
+<td class="px-4 py-3 text-[#475569]">NEET Medical</td>
+<td class="px-4 py-3"><span class="px-2 py-0.5 bg-[#F1F5F9] border rounded text-[10px]">NTA</span></td>
+<td class="px-4 py-3"><span class="px-2 py-0.5 bg-amber-100 text-amber-900 font-bold rounded">GATE 12 HOLD</span></td>
+<td class="px-4 py-3 text-amber-700">● Held (Staged)</td>
+<td class="px-4 py-3 text-amber-700 font-bold">1 Policy Wait</td>
+<td class="px-4 py-3 text-right space-x-2">
+<button class="text-[#9A7B38] font-bold hover:underline" onclick="switchView('overview')">Inspect Run</button>
+</td>
+</tr>
+<tr class="hover:bg-[#F8F9FC]">
+<td class="px-4 py-3 font-sans font-bold text-[#0F172A]">JEE Advanced 2026 – Electrostatics &amp; Gauss Law Rig</td>
+<td class="px-4 py-3 text-[#475569]">JEE Engineering</td>
+<td class="px-4 py-3"><span class="px-2 py-0.5 bg-[#F1F5F9] border rounded text-[10px]">IIT KANPUR</span></td>
+<td class="px-4 py-3"><span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] font-bold rounded">LIVE</span></td>
+<td class="px-4 py-3 text-[#15803D]">● Visible (34.1k)</td>
+<td class="px-4 py-3 text-[#15803D]">0</td>
+<td class="px-4 py-3 text-right space-x-2">
+<button class="text-[#9A7B38] font-bold hover:underline" onclick="switchView('overview')">Inspect Run</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 3: MISSION WATCH -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-mission-watch">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Mission Watch: Autonomous Authority Monitor</h2>
+<p class="text-xs text-[#64748B]">Read-only verified evidence stream from NTA, NCERT, and official state examination portals.</p>
+</div>
+</div>
+<div class="bg-white border border-[#E2E8F0] rounded-lg shadow-sm p-4">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0] mb-3">
+<div>
+<span class="text-xs font-mono font-bold text-[#D97706] uppercase tracking-wider">DETECTED OFFICIAL CORRIGENDUM (DIFF AUDIT)</span>
+<h4 class="font-bold text-sm text-[#0F172A] mt-0.5">NTA NEET (UG) 2026 Information Bulletin — Section 4.2 Revision</h4>
+</div>
+<div class="flex items-center space-x-2 text-xs font-mono">
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] font-bold rounded">AI CONFIDENCE: 98.4%</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+<div class="p-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded">
+<div class="text-[10px] text-[#64748B] font-bold mb-1 uppercase">PREVIOUS VERIFIED TEXT (Page 18)</div>
+<p class="text-[#334155] leading-relaxed">"Tie-breaking criteria will prioritize higher marks obtained in Biology, followed by Chemistry, followed by Physics."</p>
+</div>
+<div class="p-3 bg-[#FEF9C3] border border-[#FDE047] rounded">
+<div class="text-[10px] text-[#854D0E] font-bold mb-1 uppercase">NEW AUTHORITY INGESTION (Page 18 - Revised)</div>
+<p class="text-[#713F12] leading-relaxed font-bold">"Tie-breaking criteria will prioritize higher marks obtained in Biology, followed by Chemistry, followed by Physics, <mark class="bg-[#FEF08A] px-1">followed by application submission timestamp</mark>."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 4: PROVENANCE SHA-256 -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-source-pair">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Cryptographic Source Pair Provenance</h2>
+<p class="text-xs text-[#64748B]">NCERT and NTA PDF canonical registration. Immutable SHA-256 digests.</p>
+</div>
+<span class="px-2.5 py-1 bg-[#DCFCE7] text-[#15803D] font-mono text-xs font-bold rounded border border-[#86EFAC]">
+            PROVENANCE REGISTRY: LOCKED
+          </span>
+</div>
+<div class="bg-white border border-[#E2E8F0] rounded-lg shadow-sm p-6 max-w-4xl font-mono text-xs space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="border border-[#CBD5E1] bg-[#F8FAFC] rounded-lg p-4">
+<div class="font-bold text-[#0F172A] text-sm mb-1">Notification Bulletin PDF</div>
+<div class="text-slate-500 text-[11px]">sha256:7f8a92e104ba9023c01 (14.2 MB)</div>
+<div class="mt-2 text-[#15803D] font-bold">✓ Cryptographically Locked</div>
+</div>
+<div class="border border-[#CBD5E1] bg-[#F8FAFC] rounded-lg p-4">
+<div class="font-bold text-[#0F172A] text-sm mb-1">NCERT Syllabus Chapter 4</div>
+<div class="text-slate-500 text-[11px]">sha256:3a4b12c8812eef49f89 (4.1 MB)</div>
+<div class="mt-2 text-[#15803D] font-bold">✓ Cryptographically Locked</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 5: NOTIFICATION FACTS -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-facts-review">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Structured Notification Facts</h2>
+<p class="text-xs text-[#64748B]">Deterministic source page provenance for exam eligibility, dates, and atomic syllabus mapping.</p>
+</div>
+<span class="text-xs font-mono font-bold text-[#15803D] bg-[#DCFCE7] px-2.5 py-1 rounded border border-[#86EFAC]">
+            ALL 26 FACTS SOURCED
+          </span>
+</div>
+<div class="bg-white border border-[#E2E8F0] rounded-lg shadow-sm p-4 space-y-3 font-mono text-xs">
+<div class="p-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded flex justify-between items-start">
+<div>
+<div class="text-[10px] text-[#64748B] uppercase">Notification Number &amp; Exam Date</div>
+<div class="font-bold text-[#0F172A] mt-0.5">NTA-NEET-UG-2026-01 // Sunday, May 3, 2026</div>
+<div class="text-[10px] text-[#9A7B38] mt-1">Source: Page 4, Bullet 1.2 (SHA: 7f8a92)</div>
+</div>
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] text-[10px] font-bold rounded">CONSENSUS VERIFIED</span>
+</div>
+<div class="p-3 bg-[#F8FAFC] border border-[#E2E8F0] rounded flex justify-between items-start">
+<div>
+<div class="text-[10px] text-[#64748B] uppercase">Age Eligibility &amp; Relaxation</div>
+<div class="font-bold text-[#0F172A] mt-0.5">Min 17 years completed as on 31 Dec 2026 (No Upper Limit)</div>
+<div class="text-[10px] text-[#9A7B38] mt-1">Source: Page 12, Table 3.1</div>
+</div>
+<span class="px-2 py-0.5 bg-[#DCFCE7] text-[#15803D] text-[10px] font-bold rounded">CONSENSUS VERIFIED</span>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 6: PYQ & CRUCIBLE STUDIO -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-pyq-crucible">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">PYQ Linkage &amp; Crucible Studio</h2>
+<p class="text-xs text-[#64748B]">Automated 10-year question mapping to syllabus atoms.</p>
+</div>
+<span class="text-xs font-mono font-bold text-[#15803D] bg-[#DCFCE7] px-2.5 py-1 rounded">
+            PARITY: 98.6% (312 PYQs)
+          </span>
+</div>
+<div class="bg-white border border-[#E2E8F0] rounded-lg shadow-sm p-4 space-y-3 font-mono text-xs">
+<div class="flex justify-between items-center border-b pb-2">
+<span class="font-bold text-[#9A7B38]">NEET 2024 PYQ #48 // Chemistry</span>
+<span class="px-2 py-0.5 bg-[#F1F5F9] rounded text-[10px]">AUTO-LINKED TO ATOM-042</span>
+</div>
+<p class="text-[#0F172A] font-sans font-medium text-sm leading-relaxed">
+            "Which of the following molecules has zero dipole moment according to VSEPR theory?"
+          </p>
+<div class="p-2.5 bg-[#F1F5F9] rounded text-[11px] text-[#475569]">
+<strong>System Status:</strong> Bound under Rule POL-902 dual-acceptance policy. Zero human per-question intervention required.
+          </div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 7: GATE CLEARANCE -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-publish-gate">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Release Readiness Gate 12</h2>
+<p class="text-xs text-[#64748B]">Zero student visibility is granted until Gate 12 policy override is signed.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 font-mono text-xs">
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>1. Mission Canonical ID</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>2. Notification Hash</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>3. NCERT Alignment</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>4. 48 Atomic Nodes Clearance</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>5. 10-Yr PYQ Boundary Match</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>6. Crucible 98-Day Rig</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>7. DigiBook Academic Text</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>8. Hindi Translation Parity</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>9. LaTeX Rendering Vectors</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>10. Edge Gateway Cache</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-white border border-[#E2E8F0] rounded flex justify-between items-center">
+<span>11. Monetization Plan Linked</span>
+<span class="text-[#15803D] font-bold">PASS ✓</span>
+</div>
+<div class="p-3 bg-amber-50 border border-amber-300 rounded flex justify-between items-center font-bold">
+<span class="text-amber-900">12. Executive Policy Override</span>
+<span class="text-amber-800">HOLD: exc_sp3d2_084</span>
+</div>
+<div class="p-3 bg-white border border-slate-200 text-slate-400 rounded flex justify-between items-center">
+<span>13. Production Student Release</span>
+<span>AWAITING GATE 12</span>
+</div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 8: COLDLINE AUDIT LEDGER -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-admin-queue">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Coldline Audit Ledger</h2>
+<p class="text-xs text-[#64748B]">Immutable cryptographic receipts for all automated pipeline runs and overrides.</p>
+</div>
+</div>
+<div class="p-4 bg-white border border-[#E2E8F0] rounded-lg shadow-sm font-mono text-xs">
+<div class="text-[#15803D] font-bold">✓ All transactions appended with SHA-256 signatures</div>
+<div class="text-slate-500 mt-1">GCS Bucket: <code>rankcrackers-coldline-audit/v4/2026/</code></div>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- VIEW 9: BACKEND CONTRACTS: automation_runs -->
+<!-- ======================================================== -->
+<div class="view-panel hidden space-y-6" id="view-sys-ops">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div>
+<h2 class="text-xl font-bold text-[#0F172A]">Firestore Realtime Stream: automation_runs</h2>
+<p class="text-xs text-[#64748B]">Cloud cluster performance, dual-worker synchronizers, and cryptographic state backups.</p>
+</div>
+<span class="text-xs font-mono font-bold text-[#15803D] bg-[#DCFCE7] px-2.5 py-1 rounded">
+            CLUSTER HEALTH: 100% OPERATIONAL
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-mono text-xs">
+<div class="p-4 bg-white border border-[#E2E8F0] rounded-lg shadow-sm">
+<div class="text-[#64748B] text-[10px] uppercase font-bold">Edge Gateway</div>
+<div class="text-xl font-bold text-[#0F172A] mt-1">14ms Latency</div>
+<div class="text-[10px] text-[#15803D] mt-0.5">edge-del-01 (AP-SOUTH-1)</div>
+</div>
+<div class="p-4 bg-white border border-[#E2E8F0] rounded-lg shadow-sm">
+<div class="text-[#64748B] text-[10px] uppercase font-bold">Firestore Sync Status</div>
+<div class="text-xl font-bold text-[#15803D] mt-1">0 Pending Writes</div>
+<div class="text-[10px] text-[#64748B] mt-0.5">Real-time replication active</div>
+</div>
+<div class="p-4 bg-white border border-[#E2E8F0] rounded-lg shadow-sm">
+<div class="text-[#64748B] text-[10px] uppercase font-bold">Immutable Coldline Backup</div>
+<div class="text-xl font-bold text-[#0F172A] mt-1">Active Sync</div>
+<div class="text-[10px] text-[#9A7B38] mt-0.5">AES-256-GCM Verified</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- PERSISTENT FOOTER BAR -->
+<footer class="h-8 bg-white border-t border-[#E2E8F0] px-6 flex items-center justify-between text-[10px] font-mono text-[#64748B] select-none">
+<div class="flex items-center space-x-3">
+<span class="text-[#15803D] font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+        FOUNDER NODE: DEL-ALPHA-01 // V4.12
+      </span>
+<span>•</span>
+<span>Live Firestore collection: automation_runs</span>
+<span>•</span>
+<span>Realtime heartbeat: 14ms</span>
+<span>•</span>
+<span>AES-256 GCM</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="text-[#9A7B38] font-bold uppercase">RankCrackers Defense-Grade Engine</span>
+<span>•</span>
+<span id="liveClock">12:34:56 IST</span>
+</div>
+</footer>
+<!-- NOTIFICATION FLYOUT -->
+<div class="hidden fixed top-[64px] right-4 w-80 bg-white border border-[#CBD5E1] rounded-lg shadow-2xl z-50 p-4 font-mono text-xs space-y-3" id="notificationFlyout">
+<div class="flex justify-between items-center border-b pb-2">
+<span class="font-bold text-[#0F172A]">Telemetry Alerts (2 Active)</span>
+<button class="text-[#64748B]" onclick="toggleFlyout('notificationFlyout')">✕</button>
+</div>
+<div class="space-y-2 text-[11px]">
+<div class="p-2 bg-amber-50 rounded border border-amber-300">
+<div class="font-bold text-amber-900">Gate 12 Policy Halt</div>
+<div class="text-amber-800">exc_sp3d2_084 awaiting executive policy rule.</div>
+</div>
+<div class="p-2 bg-[#F8FAFC] rounded border">
+<div class="font-bold text-[#0F172A]">Coldline Backup Created</div>
+<div class="text-[#64748B]">Automated coldline sync completed (sha256 signed).</div>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER -->
+<div class="hidden fixed bottom-12 right-6 bg-[#0F172A] text-white px-4 py-2.5 rounded-lg shadow-xl font-mono text-xs flex items-center space-x-2 z-50" id="toast">
+<span class="material-symbols-outlined text-[16px] text-[#86EFAC]">check_circle</span>
+<span id="toastMessage">Action completed successfully.</span>
+</div>
+<!-- JAVASCRIPT CONTROLLER -->
+<script>
+    // Realtime Clock simulation
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('liveClock').textContent = now.toLocaleTimeString('en-IN') + ' IST';
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Tab / View Switching
+    function switchView(viewId) {
+      const panels = document.querySelectorAll('.view-panel');
+      panels.forEach(panel => panel.classList.add('hidden'));
+
+      const navButtons = document.querySelectorAll('aside nav button');
+      navButtons.forEach(btn => btn.classList.remove('tab-active'));
+
+      const targetPanel = document.getElementById('view-' + viewId);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+
+      const targetNav = document.getElementById('nav-' + viewId);
+      if (targetNav) {
+        targetNav.classList.add('tab-active');
+      }
+
+      const mainEl = document.querySelector('main');
+      if (mainEl) mainEl.scrollTop = 0;
+    }
+
+    // Modal & Flyout Helpers
+    function toggleFlyout(flyoutId) {
+      const flyout = document.getElementById(flyoutId);
+      flyout.classList.toggle('hidden');
+    }
+
+    // Toast Trigger
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastMessage').textContent = message;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 4000);
+    }
+
+    // Founder Executive Authority Control Handlers
+    function emergencyHaltPipeline() {
+      if (confirm('CRITICAL ACTION: Emergency halt all workers for mission realm realm_neet_chem_bond_2026_v4?')) {
+        showToast('EMERGENCY HALT EXECUTED: All background generation and verification workers suspended.');
+      }
+    }
+
+    function haltStudentDelivery() {
+      if (confirm('HALT DELIVERY: Suspend all candidate edge gateway distribution for this realm?')) {
+        showToast('DELIVERY HALTED: Realm taken offline from candidate devices.');
+      }
+    }
+
+    function archiveMission() {
+      if (confirm('ARCHIVE: Lock realm and freeze all active Firestore collections?')) {
+        showToast('REALM ARCHIVED: Coldline snapshot stored.');
+      }
+    }
+
+    function openPolicySettings() {
+      showToast('Opening Executive System Policy Registry...');
+    }
+
+    // Systemic Policy Override Handler (Zero Micro-Clicks)
+    function applyPolicyOverride(exceptionId, ruleId) {
+      const auditConfirmed = document.getElementById('auditCheck').checked;
+      if (!auditConfirmed) {
+        alert('Please confirm cryptographic audit receipt logging.');
+        return;
+      }
+      showToast(`POLICY OVERRIDE APPLIED: ${ruleId} enforced for ${exceptionId}. 42 questions auto-reconciled. Gate 12 CLEARED.`);
+    }
+
+    function keepInAutoHold(exceptionId) {
+      showToast(`${exceptionId} kept in Auto-Hold state. Student release remains blocked at Gate 12.`);
+    }
+
+    function escalateToCouncil(exceptionId) {
+      showToast(`Escalated ${exceptionId} to Academic Advisory Council. Docket #AAC-2026-99 created.`);
+    }
+
+    function triggerEmergencyRollback() {
+      if (confirm('EMERGENCY ROLLBACK INITIATION: Are you sure you want to revert live student edge nodes to Snapshot v4.1?')) {
+        showToast('Initiating cryptographic atomic rollback to v4.1...');
+      }
+    }
+
+    function executePublishRelease() {
+      showToast('Gate 12 verification running... Release pipeline active.');
+    }
+
+    // State Simulator for UI audit
+    function simulateUIState(state) {
+      const panels = document.querySelectorAll('.view-panel');
+      const skeleton = document.getElementById('loadingOverlay');
+      const emptyState = document.getElementById('emptyStateView');
+
+      skeleton.classList.add('hidden');
+      emptyState.classList.add('hidden');
+
+      if (state === 'normal') {
+        switchView('overview');
+      } else if (state === 'loading') {
+        panels.forEach(p => p.classList.add('hidden'));
+        skeleton.classList.remove('hidden');
+      } else if (state === 'empty') {
+        panels.forEach(p => p.classList.add('hidden'));
+        emptyState.classList.remove('hidden');
+      } else if (state === 'blocked') {
+        switchView('publish-gate');
+      }
+    }
+  </script>
+</body></html>

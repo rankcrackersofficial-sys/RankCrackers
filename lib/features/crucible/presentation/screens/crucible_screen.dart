@@ -906,7 +906,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             title: 'Rebuild Day • Day $nextRebuildDay',
             subtitle: 'Personalized concept repair window for Block $currentPhase',
           ),
-          const Padding(
+          Padding(
             padding: EdgeInsets.symmetric(vertical: 6),
             child: Divider(color: scheme.outline),
           ),

@@ -643,7 +643,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         unit.isNotEmpty ? '$subject • $unit' : subject,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
+                        style: TextStyle(
                             color: scheme.onSurfaceVariant, fontSize: 10),
                       ),
                     ],
@@ -909,7 +909,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                     ),
                     subtitle: Text(
                       '${topics.length} Topics • $availableInUnit DigiBook Lessons',
-                      style: const TextStyle(
+                      style: TextStyle(
                           color: scheme.onSurfaceVariant, fontSize: 10.5),
                     ),
                     trailing: Icon(
@@ -1176,7 +1176,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         ),
                         Text(
                           entry.subject,
-                          style: const TextStyle(
+                          style: TextStyle(
                               color: scheme.onSurfaceVariant, fontSize: 10),
                         ),
                       ],

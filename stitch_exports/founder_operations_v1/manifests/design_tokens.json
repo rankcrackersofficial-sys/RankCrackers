@@ -1,0 +1,74 @@
+{
+  "designSystemName": "Executive Command Slate",
+  "paradigm": "100% Strict Daylight / Light Theme",
+  "brandIdentity": {
+    "emblem": "Official RankCrackers white geometric crest",
+    "container": "Solid black (#000000) rounded-square or circular container",
+    "containerRadius": "10px / rounded-xl",
+    "containerDimensions": "40px × 40px",
+    "isolationRule": "Black background is strictly restricted inside the logo badge. The rest of the web console is daylight slate."
+  },
+  "colors": {
+    "canvas": "#F8F9FC",
+    "surfaceCard": "#FFFFFF",
+    "surfaceSubtle": "#F1F5F9",
+    "hairlines": "#E2E8F0",
+    "borders": "#CBD5E1",
+    "textPrimary": "#0F172A",
+    "textSecondary": "#475569",
+    "textMuted": "#64748B",
+    "textDisabled": "#94A3B8",
+    "brandGold": "#9A7B38",
+    "brandGoldHover": "#84692E",
+    "brandGoldBg": "#FEF9C3",
+    "statusEmerald": "#15803D",
+    "statusEmeraldBg": "#DCFCE7",
+    "statusEmeraldBorder": "#86EFAC",
+    "statusCrimson": "#DC2626",
+    "statusCrimsonBg": "#FEE2E2",
+    "statusCrimsonBorder": "#FECACA",
+    "statusAmber": "#D97706",
+    "statusAmberBg": "#FEF3C7",
+    "statusAmberBorder": "#FDE68A",
+    "statusBlue": "#2563EB",
+    "statusBlueBg": "#EFF6FF",
+    "statusBlueBorder": "#BFDBFE"
+  },
+  "typography": {
+    "headlineFont": "Plus Jakarta Sans, sans-serif",
+    "bodyFont": "Inter, sans-serif",
+    "monoFont": "JetBrains Mono, monospace",
+    "weights": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700,
+      "black": 800
+    },
+    "sizes": {
+      "caption": "10px",
+      "telemetrySm": "11px",
+      "bodySm": "12px",
+      "bodyMd": "13px",
+      "bodyLg": "15px",
+      "titleSm": "16px",
+      "titleMd": "18px",
+      "titleLg": "20px",
+      "headlineLg": "24px",
+      "displayXl": "32px"
+    }
+  },
+  "elevation": {
+    "tier0": "0 1px 2px 0 rgba(15, 23, 42, 0.03)",
+    "tier1": "0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02)",
+    "tier2": "0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04)",
+    "tier3": "0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04)"
+  },
+  "radii": {
+    "sm": "2px",
+    "md": "4px",
+    "lg": "8px",
+    "xl": "12px",
+    "pill": "9999px"
+  }
+}

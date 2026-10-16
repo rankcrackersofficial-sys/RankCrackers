@@ -226,7 +226,7 @@ class _VennDiagramPainter extends CustomPainter {
 
     // Label U
     final uTextPainter = TextPainter(
-      text: const TextSpan(
+      text: TextSpan(
         text: 'U',
         style: TextStyle(
           color: isLight ? const Color(0xFF475569) : const Color(0xFF777F8B),

@@ -10,7 +10,12 @@ import '../theme/founder_light_theme.dart';
 class MissionWatchWeb extends StatelessWidget {
   const MissionWatchWeb({super.key});
 
-  static const _slots = <String>['00:00 IST', '06:00 IST', '12:00 IST', '18:00 IST'];
+  static const _slots = <String>[
+    '00:00 IST',
+    '06:00 IST',
+    '12:00 IST',
+    '18:00 IST'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -74,8 +79,7 @@ class _Header extends StatelessWidget {
             children: [
               const Text('MISSION WATCH', style: _overline),
               const SizedBox(height: 6),
-              Text('Authority watch & mission change control',
-                  style: _title),
+              Text('Authority watch & mission change control', style: _title),
               const SizedBox(height: 6),
               Text('Four governed checks per day • Asia/Kolkata',
                   style: _bodyMuted),
@@ -111,7 +115,8 @@ class _EvidenceBanner extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Icon(Icons.visibility_outlined, size: 19, color: FounderLightTheme.gold),
+          const Icon(Icons.visibility_outlined,
+              size: 19, color: FounderLightTheme.gold),
           const SizedBox(width: 10),
           Expanded(child: Text(message, style: _bodyMuted)),
         ],
@@ -133,8 +138,7 @@ class _ScheduleCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Authority watch runs at four fixed slots.',
-              style: _body),
+          Text('Authority watch runs at four fixed slots.', style: _body),
           const SizedBox(height: 14),
           Wrap(
             spacing: 8,
@@ -227,17 +231,23 @@ class _SlotEvidence extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: hasEvidence ? FounderLightTheme.surface : FounderLightTheme.surfaceAlt,
+        color: hasEvidence
+            ? FounderLightTheme.surface
+            : FounderLightTheme.surfaceAlt,
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: hasEvidence ? FounderLightTheme.success.withValues(alpha: .35) : FounderLightTheme.border,
+          color: hasEvidence
+              ? FounderLightTheme.success.withValues(alpha: .35)
+              : FounderLightTheme.border,
         ),
       ),
       child: Row(
         children: [
           Icon(hasEvidence ? Icons.check_circle_outline : Icons.hourglass_empty,
               size: 18,
-              color: hasEvidence ? FounderLightTheme.success : FounderLightTheme.textMuted),
+              color: hasEvidence
+                  ? FounderLightTheme.success
+                  : FounderLightTheme.textMuted),
           const SizedBox(width: 9),
           Expanded(
             child: Column(
@@ -373,7 +383,8 @@ const _label = TextStyle(
 String _statusFor(Map<String, dynamic> data) {
   final status = data['status']?.toString().toUpperCase();
   if (status == 'ONLINE' || status == 'HEALTHY') return 'ONLINE';
-  if (status == 'DEGRADED' || status == 'ERROR' || status == 'FAILED') return 'DEGRADED';
+  if (status == 'DEGRADED' || status == 'ERROR' || status == 'FAILED')
+    return 'DEGRADED';
   if (data['success'] == true) return 'ONLINE';
   return 'DEGRADED';
 }

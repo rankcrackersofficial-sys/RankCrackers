@@ -9,4 +9,3 @@ class FounderSystemOperationsWeb extends StatelessWidget {
     return const SystemHealthCenter();
   }
 }
-

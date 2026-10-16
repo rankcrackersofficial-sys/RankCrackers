@@ -10,7 +10,6 @@ import { derivePhysicalPageAuthority, assertPersistablePageAuthority } from '../
 // Require helper modules from services
 const { classifyRouting } = require('../../services/routing_classifier');
 const { extractScannedPage } = require('../../services/scanned_extraction_service');
-const { PDFParse } = require('pdf-parse');
 const {
   shouldBypassQueueForTest,
   shouldQuarantineLegacyQueueInProduction,
@@ -99,6 +98,9 @@ async function downloadBytes(path: string): Promise<Buffer> {
  * Helper to extract pages natively from PDF bytes using pdf-parse.
  */
 async function extractPagesNatively(bytes: Buffer, start: number, end: number) {
+  // Lazy-load the optional PDF renderer. Import-time canvas initialization can
+  // prevent unrelated Cloud Functions from booting in the server runtime.
+  const { PDFParse } = require('pdf-parse');
   const parser = new PDFParse({ data: bytes });
   try {
     const pages = [];
@@ -325,7 +327,11 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
         total_batches: data.total_batches,
         extraction_text: text,
         extraction_status: 'extracted_draft',
-        review_status: 'pending_founder_verification',
+        review_status: 'pending_ai_verification',
+        verificationOwner: 'ai_verifier_worker_v1',
+        automationStatus: 'queued',
+        founderVerificationRequired: false,
+        publicationEligible: false,
         extracted_by_task_id: taskId,
         extraction_method: method,
         source_proof: {

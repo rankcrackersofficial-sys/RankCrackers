@@ -394,9 +394,7 @@ class _StatusCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(value,
                 style: const TextStyle(
-                    color: rcText,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w800)),
+                    color: rcText, fontSize: 16, fontWeight: FontWeight.w800)),
             const SizedBox(height: 5),
             Text(status,
                 style: TextStyle(
@@ -426,9 +424,7 @@ class _OfferRow extends StatelessWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(title,
               style: const TextStyle(
-                  color: rcText,
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700)),
+                  color: rcText, fontSize: 13, fontWeight: FontWeight.w700)),
           const SizedBox(height: 3),
           Text(purpose, style: const TextStyle(color: rcMuted, fontSize: 11))
         ])),
@@ -450,7 +446,6 @@ class _ChecklistItem extends StatelessWidget {
             size: 17, color: done ? rcGreen : rcMuted),
         const SizedBox(width: 10),
         Text(text,
-            style:
-                TextStyle(color: done ? rcText : rcMuted, fontSize: 12))
+            style: TextStyle(color: done ? rcText : rcMuted, fontSize: 12))
       ]));
 }

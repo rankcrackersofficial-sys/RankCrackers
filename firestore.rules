@@ -134,6 +134,20 @@ service cloud.firestore {
       allow write: if false; // Worker generated
     }
 
+    // 🔱 AUTOMATION-FIRST PIPELINE
+    // Runs and exceptions are server-authored. Founder/Admin may inspect the
+    // automation outcome, but routine content verification is never a client
+    // write operation.
+    match /automation_runs/{runId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /automation_exceptions/{exceptionId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
     
     // 🔱 PRODUCTION SOURCE TRUST P2A RULES (Immutable Evidence & Governed Trust)
     match /official_byte_artifacts/{artifactId} {
@@ -236,6 +250,14 @@ service cloud.firestore {
 
       // Current projection is written only by canonical reconciliation workers.
       match /current_syllabus_projection/{unitId} {
+        allow read: if isFounder();
+        allow write: if false;
+      }
+
+      // Decomposed syllabus atoms are generated and verified by server workers.
+      // Founder can inspect the audit state, but client writes must remain closed
+      // so verification cannot be bypassed from the console.
+      match /syllabus_atoms/{atomId} {
         allow read: if isFounder();
         allow write: if false;
       }

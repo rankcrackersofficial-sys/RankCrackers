@@ -16,7 +16,8 @@ import 'subject_models.dart';
 
 class StudyMasterLibraryWeb extends StatefulWidget {
   final ConsoleRoleMode roleMode;
-  const StudyMasterLibraryWeb({super.key, this.roleMode = ConsoleRoleMode.founder});
+  const StudyMasterLibraryWeb(
+      {super.key, this.roleMode = ConsoleRoleMode.founder});
 
   @override
   State<StudyMasterLibraryWeb> createState() => _StudyMasterLibraryWebState();
@@ -1769,8 +1770,8 @@ class _StudyMasterLibraryWebState extends State<StudyMasterLibraryWeb> {
                 ),
                 if (widget.roleMode == ConsoleRoleMode.founder)
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [

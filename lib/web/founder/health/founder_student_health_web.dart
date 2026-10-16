@@ -166,7 +166,7 @@ class FounderStudentHealthWeb extends StatelessWidget {
       (
         'PYQ Vault',
         'NOT READY',
-        'Founder-approved PYQ source pipeline is required.'
+        'AI-verified PYQ source pipeline is not published.'
       ),
       (
         'Test Arena',
@@ -369,17 +369,4 @@ class _HealthRecord {
     required this.detail,
     required this.canFounderMutateTruth,
   });
-
-  factory _HealthRecord.fromMap(String id, Map<String, dynamic> data) {
-    return _HealthRecord(
-      id: id,
-      surface: (data['surface'] ?? data['surfaceName'] ?? '').toString(),
-      status: (data['status'] ?? 'NOT READY').toString(),
-      studentState: (data['studentState'] ?? 'Safe state pending').toString(),
-      founderState: (data['founderState'] ?? 'Health state pending').toString(),
-      detail: (data['detail'] ?? data['message'] ?? 'No detail published.')
-          .toString(),
-      canFounderMutateTruth: data['canFounderMutateTruth'] == true,
-    );
-  }
 }

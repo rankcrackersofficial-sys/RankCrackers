@@ -39,7 +39,7 @@ class NotificationCenterScreen extends ConsumerWidget {
               Expanded(
                 child: notificationsAsync.when(
                   data: (notifications) => notifications.isEmpty
-                    ? const Center(
+                    ? Center(
                         child: Text(
                           'No active notifications.',
                           style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 14),

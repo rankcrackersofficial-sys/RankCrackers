@@ -1,0 +1,21 @@
+/* RankCrackers Executive Command Slate Typography Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-headline: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .font-headline {
+  font-family: var(--font-headline);
+}
+
+code, pre, .font-mono, .telemetry-cell {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}

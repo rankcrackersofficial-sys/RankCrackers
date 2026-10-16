@@ -9,4 +9,3 @@ class IngestionReviewWeb extends StatelessWidget {
     return const IngestionRefineryCenter();
   }
 }
-

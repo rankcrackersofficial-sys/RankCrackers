@@ -765,7 +765,7 @@ describe('🔱 B1 PAGEWISE GENERIC AUTOMATION TEST SUITE (G01-G18)', () => {
       await wrapped(snap, { params: { taskId } });
 
       const pageSnap = await db.collection(`mission_realms/${missionId}/official_documents/${docId}/page_extractions`).doc('1').get();
-      expect(pageSnap.data()?.review_status).toBe('pending_founder_verification');
+      expect(pageSnap.data()?.review_status).toBe('pending_ai_verification');
     });
 
     test('PAI-T14: cross-mission leakage zero', async () => {

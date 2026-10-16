@@ -80,6 +80,11 @@ exports.manageUserAccess = functions.https.onCall(async (data, context) => {
     const userUpdate = {
       role: newRole,
       accessLevel: newClaims.accessLevel || 0,
+      // Lifecycle-sensitive Founder operations require an explicitly active
+      // Firestore account, not only an Auth custom claim. Keep the grant
+      // operation self-contained so a newly elevated Founder can immediately
+      // execute governed mission actions.
+      ...(action === 'grant' ? { status: 'ACTIVE' } : {}),
       updatedAt: admin.firestore.FieldValue.serverTimestamp()
     };
     if (newClaims.scopes) {

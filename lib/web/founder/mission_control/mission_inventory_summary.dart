@@ -67,14 +67,13 @@ MissionJurisdictionBucket missionJurisdictionBucket(
   final hierarchyMap = hierarchy is Map
       ? Map<String, dynamic>.from(hierarchy)
       : const <String, dynamic>{};
-  final rawJurisdiction =
-      (realm['jurisdictionLevel'] ??
-              realm['jurisdictionType'] ??
-              realm['jurisdiction'] ??
-              hierarchyMap['jurisdiction'])
-          ?.toString()
-          .trim()
-          .toUpperCase();
+  final rawJurisdiction = (realm['jurisdictionLevel'] ??
+          realm['jurisdictionType'] ??
+          realm['jurisdiction'] ??
+          hierarchyMap['jurisdiction'])
+      ?.toString()
+      .trim()
+      .toUpperCase();
 
   if (rawJurisdiction == 'CENTRAL' ||
       rawJurisdiction == 'NATIONAL' ||

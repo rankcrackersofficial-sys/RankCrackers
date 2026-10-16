@@ -11,4 +11,3 @@ class RecentActivityWeb extends StatelessWidget {
     return const FounderActivityLedger();
   }
 }
-

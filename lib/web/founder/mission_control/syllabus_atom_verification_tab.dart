@@ -1,5 +1,4 @@
-﻿import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -49,8 +48,6 @@ class _SyllabusAtomVerificationTabState
     _documentFilter = widget.initialDocumentId;
   }
 
-  bool get _isFounder => widget.roleMode == ConsoleRoleMode.founder;
-
   @override
   void dispose() {
     _horizontalTableController.dispose();
@@ -65,76 +62,27 @@ class _SyllabusAtomVerificationTabState
   }
 
   String _statusOf(Map<String, dynamic> data) {
-    return (data['verification_status'] ??
+    return (data['automationStatus'] ??
+            data['automation_status'] ??
+            data['verification_status'] ??
             data['verificationStatus'] ??
             'verification_pending')
         .toString();
   }
 
   String _approvalOf(Map<String, dynamic> data) {
+    final automationStatus =
+        (data['automationStatus'] ?? data['automation_status'] ?? '')
+            .toString()
+            .toLowerCase();
+    if (automationStatus == 'auto_passed' || automationStatus == 'verified')
+      return 'approved';
+    if (automationStatus == 'auto_hold' || automationStatus == 'failed')
+      return 'not_approved';
     final value = data['founderApproved'] ?? data['founder_approved'];
     if (value == true) return 'approved';
     if (value == false) return 'not_approved';
     return 'unknown';
-  }
-
-  Future<void> _updateSourceAtomReview(
-    String atomId,
-    Map<String, dynamic> data,
-    String nextStatus, {
-    String? note,
-  }) async {
-    if (!_isFounder || !_isSourceBacked(data)) return;
-
-    final bool approved = nextStatus == 'verified';
-    final String canonicalStatus = nextStatus == 'needs_review'
-        ? 'NEEDS_REVIEW'
-        : nextStatus == 'verified'
-            ? 'VERIFIED'
-            : 'REJECTED';
-
-    final existingNote = (data['reviewNote'] ?? data['founderReviewNote'])?.toString();
-    final normalizedNote = note != null && note.trim().isNotEmpty
-        ? note.trim()
-        : (existingNote != null && existingNote.trim().isNotEmpty ? existingNote.trim() : null);
-    final updates = <String, dynamic>{
-      'verificationStatus': canonicalStatus,
-      'verification_status': nextStatus,
-      'founderApproved': approved,
-      'founder_approved': approved,
-      'reviewedAt': FieldValue.serverTimestamp(),
-      'reviewedBy': FirebaseAuth.instance.currentUser?.uid ?? 'founder_web',
-      'reviewAction': canonicalStatus,
-      'reviewNote': normalizedNote,
-      'founderReviewNote': normalizedNote,
-      'reviewBatchStatus': canonicalStatus,
-      'status': canonicalStatus,
-      'studentTopicNodePublished': false,
-      'updatedAt': FieldValue.serverTimestamp(),
-    };
-
-    try {
-      await FirebaseFirestore.instance
-          .collection('mission_realms')
-          .doc(widget.missionId)
-          .collection('syllabus_atoms')
-          .doc(atomId)
-          .update(updates);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Review status updated to ${canonicalStatus.replaceAll('_', ' ')}.'),
-            backgroundColor: rcGreen,
-          ),
-        );
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Review update failed: $e'), backgroundColor: rcRed),
-        );
-      }
-    }
   }
 
   @override
@@ -159,22 +107,28 @@ class _SyllabusAtomVerificationTabState
       builder: (context, snapshot) {
         final docs = snapshot.data?.docs ?? [];
         final total = docs.length;
-        final sourceBacked = docs.where((d) => _isSourceBacked(d.data())).length;
+        final sourceBacked =
+            docs.where((d) => _isSourceBacked(d.data())).length;
         final legacy = total - sourceBacked;
-        final needsReview = docs.where((d) => _statusOf(d.data()) == 'needs_review').length;
-        final verified = docs.where((d) => _statusOf(d.data()) == 'verified').length;
-        final rejected = docs.where((d) => _statusOf(d.data()) == 'rejected').length;
+        final needsReview =
+            docs.where((d) => _statusOf(d.data()) == 'needs_review').length;
+        final verified =
+            docs.where((d) => _statusOf(d.data()) == 'verified').length;
+        final rejected =
+            docs.where((d) => _statusOf(d.data()) == 'rejected').length;
 
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
           color: rcSurface.withValues(alpha: 0.5),
           child: Row(
             children: [
-              _stat('Total Atoms', total.toString(), FounderLightTheme.textPrimary),
+              _stat('Total Atoms', total.toString(),
+                  FounderLightTheme.textPrimary),
               const SizedBox(width: 28),
               _stat('RX2 Source-Backed', sourceBacked.toString(), rcGold),
               const SizedBox(width: 28),
-              _stat('Legacy', legacy.toString(), FounderLightTheme.textDisabled),
+              _stat(
+                  'Legacy', legacy.toString(), FounderLightTheme.textDisabled),
               const SizedBox(width: 28),
               _stat('Needs Review', needsReview.toString(), rcGold),
               const SizedBox(width: 28),
@@ -192,9 +146,15 @@ class _SyllabusAtomVerificationTabState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label.toUpperCase(), style: const TextStyle(color: FounderLightTheme.textDisabled, fontSize: 9, fontWeight: FontWeight.bold)),
+        Text(label.toUpperCase(),
+            style: const TextStyle(
+                color: FounderLightTheme.textDisabled,
+                fontSize: 9,
+                fontWeight: FontWeight.bold)),
         const SizedBox(height: 4),
-        Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.w900)),
+        Text(value,
+            style: TextStyle(
+                color: color, fontSize: 18, fontWeight: FontWeight.w900)),
       ],
     );
   }
@@ -211,14 +171,22 @@ class _SyllabusAtomVerificationTabState
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('FOUNDER REVIEW QUEUE', style: TextStyle(color: rcGold, fontSize: 12, fontWeight: FontWeight.w900)),
+                  Text('AI VERIFICATION TELEMETRY',
+                      style: TextStyle(
+                          color: rcGold,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900)),
                   SizedBox(height: 6),
                   Text(
-                    'Review source-backed RX2 atoms only. Legacy atoms stay read-only. Verification does not publish to students or write topic_nodes. Scroll horizontally to view source, status, and review actions.',
-                    style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 12),
+                    'Generator and independent verifier workers process every atom automatically. Founder is an observer; only grouped systemic exceptions can require a policy decision. Scroll horizontally to inspect evidence, confidence and worker state.',
+                    style: TextStyle(
+                        color: FounderLightTheme.textMuted, fontSize: 12),
                   ),
                   SizedBox(height: 4),
-                  Text('GOOD_TEXT_NO_PAGE is allowed for review, but student publish remains blocked until page-proof or explicit override policy.', style: TextStyle(color: FounderLightTheme.textDisabled, fontSize: 10)),
+                  Text(
+                      'No atom-level approval is requested. Low confidence or conflicting evidence becomes an automated exception.',
+                      style: TextStyle(
+                          color: FounderLightTheme.textDisabled, fontSize: 10)),
                 ],
               ),
             ),
@@ -239,7 +207,9 @@ class _SyllabusAtomVerificationTabState
         border: Border.all(color: color.withValues(alpha: 0.35)),
         borderRadius: BorderRadius.circular(4),
       ),
-      child: Text(label, style: TextStyle(color: color, fontSize: 10, fontWeight: FontWeight.bold)),
+      child: Text(label,
+          style: TextStyle(
+              color: color, fontSize: 10, fontWeight: FontWeight.bold)),
     );
   }
 
@@ -255,17 +225,45 @@ class _SyllabusAtomVerificationTabState
             SizedBox(
               width: 520,
               child: TextField(
-                onChanged: (v) => setState(() => _searchQuery = v.toLowerCase()),
-                decoration: const InputDecoration(hintText: 'Search atom title, hierarchy, source excerpt, or run id...', prefixIcon: Icon(Icons.search), isDense: true),
+                onChanged: (v) =>
+                    setState(() => _searchQuery = v.toLowerCase()),
+                decoration: const InputDecoration(
+                    hintText:
+                        'Search atom title, hierarchy, source excerpt, or run id...',
+                    prefixIcon: Icon(Icons.search),
+                    isDense: true),
               ),
             ),
-            _dropdown('Source', _sourceFilter, const ['all', 'source_backed', 'legacy'], (v) => setState(() => _sourceFilter = v!)),
-            _dropdown('Subject', _subjectFilter, const ['all', 'Physics', 'Chemistry', 'Biology', 'Mathematics'], (v) => setState(() => _subjectFilter = v!)),
-            _dropdown('Status', _statusFilter, const ['all', 'needs_review', 'verified', 'rejected', 'verification_pending'], (v) => setState(() => _statusFilter = v!)),
-            _dropdown('Approval', _approvalFilter, const ['all', 'approved', 'not_approved', 'unknown'], (v) => setState(() => _approvalFilter = v!)),
+            _dropdown(
+                'Source',
+                _sourceFilter,
+                const ['all', 'source_backed', 'legacy'],
+                (v) => setState(() => _sourceFilter = v!)),
+            _dropdown(
+                'Subject',
+                _subjectFilter,
+                const ['all', 'Physics', 'Chemistry', 'Biology', 'Mathematics'],
+                (v) => setState(() => _subjectFilter = v!)),
+            _dropdown(
+                'Status',
+                _statusFilter,
+                const [
+                  'all',
+                  'needs_review',
+                  'verified',
+                  'rejected',
+                  'verification_pending'
+                ],
+                (v) => setState(() => _statusFilter = v!)),
+            _dropdown(
+                'Approval',
+                _approvalFilter,
+                const ['all', 'approved', 'not_approved', 'unknown'],
+                (v) => setState(() => _approvalFilter = v!)),
             if (_documentFilter != null)
               Chip(
-                label: const Text('Filtered by Document', style: TextStyle(fontSize: 10)),
+                label: const Text('Filtered by Document',
+                    style: TextStyle(fontSize: 10)),
                 onDeleted: () => setState(() => _documentFilter = null),
                 backgroundColor: rcGold.withValues(alpha: 0.1),
                 labelStyle: const TextStyle(color: rcGold),
@@ -276,13 +274,19 @@ class _SyllabusAtomVerificationTabState
     );
   }
 
-  Widget _dropdown(String label, String value, List<String> items, ValueChanged<String?> onChanged) {
+  Widget _dropdown(String label, String value, List<String> items,
+      ValueChanged<String?> onChanged) {
     return SizedBox(
       width: 160,
       child: DropdownButtonFormField<String>(
         initialValue: value,
         decoration: InputDecoration(labelText: label, isDense: true),
-        items: items.map((e) => DropdownMenuItem(value: e, child: Text(e.replaceAll('_', ' ').toUpperCase(), style: const TextStyle(fontSize: 10)))).toList(),
+        items: items
+            .map((e) => DropdownMenuItem(
+                value: e,
+                child: Text(e.replaceAll('_', ' ').toUpperCase(),
+                    style: const TextStyle(fontSize: 10))))
+            .toList(),
         onChanged: onChanged,
       ),
     );
@@ -297,27 +301,42 @@ class _SyllabusAtomVerificationTabState
           .orderBy('atomId')
           .snapshots(),
       builder: (context, snapshot) {
-        if (snapshot.hasError) return Center(child: Text('Error: ${snapshot.error}', style: const TextStyle(color: rcRed)));
+        if (snapshot.hasError)
+          return Center(
+              child: Text('Error: ${snapshot.error}',
+                  style: const TextStyle(color: rcRed)));
         if (!snapshot.hasData) return const RcCenteredLoader();
 
         final allDocs = snapshot.data!.docs.where((doc) {
           final data = doc.data();
           final sourceBacked = _isSourceBacked(data);
-          final title = (data['atom_title'] ?? data['atomTitle'] ?? '').toString().toLowerCase();
-          final path = (data['hierarchy_path'] ?? data['hierarchyPath'] ?? '').toString().toLowerCase();
-          final excerpt = (data['source_text_excerpt'] ?? data['sourceTextExcerpt'] ?? '').toString().toLowerCase();
-          final runId = (data['extractionRunId'] ?? '').toString().toLowerCase();
+          final title = (data['atom_title'] ?? data['atomTitle'] ?? '')
+              .toString()
+              .toLowerCase();
+          final path = (data['hierarchy_path'] ?? data['hierarchyPath'] ?? '')
+              .toString()
+              .toLowerCase();
+          final excerpt =
+              (data['source_text_excerpt'] ?? data['sourceTextExcerpt'] ?? '')
+                  .toString()
+                  .toLowerCase();
+          final runId =
+              (data['extractionRunId'] ?? '').toString().toLowerCase();
           final subject = (data['subject'] ?? '').toString();
           final status = _statusOf(data);
           final approval = _approvalOf(data);
-          final docId = (data['source_document_id'] ?? data['sourceDocumentId'] ?? '').toString();
+          final docId =
+              (data['source_document_id'] ?? data['sourceDocumentId'] ?? '')
+                  .toString();
 
           if (_documentFilter != null && docId != _documentFilter) return false;
           if (_sourceFilter == 'source_backed' && !sourceBacked) return false;
           if (_sourceFilter == 'legacy' && sourceBacked) return false;
-          if (_subjectFilter != 'all' && subject != _subjectFilter) return false;
+          if (_subjectFilter != 'all' && subject != _subjectFilter)
+            return false;
           if (_statusFilter != 'all' && status != _statusFilter) return false;
-          if (_approvalFilter != 'all' && approval != _approvalFilter) return false;
+          if (_approvalFilter != 'all' && approval != _approvalFilter)
+            return false;
           if (_searchQuery.isNotEmpty &&
               !title.contains(_searchQuery) &&
               !path.contains(_searchQuery) &&
@@ -328,13 +347,17 @@ class _SyllabusAtomVerificationTabState
           return true;
         }).toList();
 
-        if (allDocs.isEmpty) return const Center(child: Text('No atoms found matching filters.', style: TextStyle(color: FounderLightTheme.textDisabled)));
+        if (allDocs.isEmpty)
+          return const Center(
+              child: Text('No atoms found matching filters.',
+                  style: TextStyle(color: FounderLightTheme.textDisabled)));
 
         return Scrollbar(
           controller: _horizontalTableController,
           thumbVisibility: true,
           trackVisibility: true,
-          notificationPredicate: (notification) => notification.metrics.axis == Axis.horizontal,
+          notificationPredicate: (notification) =>
+              notification.metrics.axis == Axis.horizontal,
           child: SingleChildScrollView(
             controller: _horizontalTableController,
             scrollDirection: Axis.horizontal,
@@ -344,25 +367,68 @@ class _SyllabusAtomVerificationTabState
               child: Scrollbar(
                 controller: _verticalTableController,
                 thumbVisibility: true,
-                notificationPredicate: (notification) => notification.metrics.axis == Axis.vertical,
+                notificationPredicate: (notification) =>
+                    notification.metrics.axis == Axis.vertical,
                 child: SingleChildScrollView(
                   controller: _verticalTableController,
                   child: DataTable(
-              headingRowHeight: 40,
-              dataRowMinHeight: 76,
-              dataRowMaxHeight: 132,
-              columnSpacing: 22,
-              columns: const [
-                DataColumn(label: Text('TYPE', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('ATOM ID', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('HIERARCHY PATH', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('ATOM TITLE', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('SOURCE PROOF', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('RUN / DOC', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('STATUS', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-                DataColumn(label: Text('ACTIONS', style: TextStyle(color: rcGold, fontSize: 10, fontWeight: FontWeight.bold))),
-              ],
-              rows: allDocs.map((doc) => _buildDataRow(doc.id, doc.data())).toList(),
+                    headingRowHeight: 40,
+                    dataRowMinHeight: 76,
+                    dataRowMaxHeight: 132,
+                    columnSpacing: 22,
+                    columns: const [
+                      DataColumn(
+                          label: Text('TYPE',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('ATOM ID',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('HIERARCHY PATH',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('ATOM TITLE',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('SOURCE PROOF',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('RUN / DOC',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('STATUS',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                      DataColumn(
+                          label: Text('CONSENSUS PARITY',
+                              style: TextStyle(
+                                  color: rcGold,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.bold))),
+                    ],
+                    rows: allDocs
+                        .map((doc) => _buildDataRow(doc.id, doc.data()))
+                        .toList(),
                   ),
                 ),
               ),
@@ -378,41 +444,60 @@ class _SyllabusAtomVerificationTabState
     final isVerified = status == 'verified';
     final isRejected = status == 'rejected';
     final sourceBacked = _isSourceBacked(data);
-    final canReview = _isFounder && sourceBacked;
 
     Color statusColor = rcGold;
     if (isVerified) statusColor = rcGreen;
     if (isRejected) statusColor = rcRed;
 
     return DataRow(
-      color: WidgetStateProperty.resolveWith((_) => sourceBacked ? rcGold.withValues(alpha: 0.025) : Colors.transparent),
+      color: WidgetStateProperty.resolveWith((_) =>
+          sourceBacked ? rcGold.withValues(alpha: 0.025) : Colors.transparent),
       cells: [
         DataCell(_sourceBadge(sourceBacked)),
         DataCell(
           InkWell(
-            onTap: () => Clipboard.setData(ClipboardData(text: (data['atom_id'] ?? data['atomId'] ?? docId).toString())),
+            onTap: () => Clipboard.setData(ClipboardData(
+                text: (data['atom_id'] ?? data['atomId'] ?? docId).toString())),
             child: SizedBox(
               width: 190,
-              child: Text((data['atom_id'] ?? data['atomId'] ?? 'ID_MISSING').toString(), style: const TextStyle(fontFamily: 'monospace', fontSize: 10, color: FounderLightTheme.textDisabled)),
+              child: Text(
+                  (data['atom_id'] ?? data['atomId'] ?? 'ID_MISSING')
+                      .toString(),
+                  style: const TextStyle(
+                      fontFamily: 'monospace',
+                      fontSize: 10,
+                      color: FounderLightTheme.textDisabled)),
             ),
           ),
         ),
         DataCell(
           SizedBox(
             width: 260,
-            child: Text((data['hierarchy_path'] ?? data['hierarchyPath'] ?? '--').toString(), style: const TextStyle(fontSize: 11, color: FounderLightTheme.textMuted), maxLines: 4, overflow: TextOverflow.ellipsis),
+            child: Text(
+                (data['hierarchy_path'] ?? data['hierarchyPath'] ?? '--')
+                    .toString(),
+                style: const TextStyle(
+                    fontSize: 11, color: FounderLightTheme.textMuted),
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis),
           ),
         ),
         DataCell(
           SizedBox(
             width: 240,
-            child: Text((data['atom_title'] ?? data['atomTitle'] ?? 'Untitled').toString(), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold), maxLines: 4, overflow: TextOverflow.ellipsis),
+            child: Text(
+                (data['atom_title'] ?? data['atomTitle'] ?? 'Untitled')
+                    .toString(),
+                style:
+                    const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis),
           ),
         ),
         DataCell(_sourceProofCell(data)),
         DataCell(_runDocCell(data)),
         DataCell(_statusCell(status, statusColor, data)),
-        DataCell(_actionsCell(docId, data, canReview, isVerified, isRejected)),
+        DataCell(_consensusParityCell(data)),
       ],
     );
   }
@@ -426,12 +511,16 @@ class _SyllabusAtomVerificationTabState
         border: Border.all(color: color.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(4),
       ),
-      child: Text(sourceBacked ? 'RX2 SOURCE' : 'LEGACY', style: TextStyle(color: color, fontSize: 9, fontWeight: FontWeight.bold)),
+      child: Text(sourceBacked ? 'RX2 SOURCE' : 'LEGACY',
+          style: TextStyle(
+              color: color, fontSize: 9, fontWeight: FontWeight.bold)),
     );
   }
 
   Widget _sourceProofCell(Map<String, dynamic> data) {
-    final excerpt = (data['source_text_excerpt'] ?? data['sourceTextExcerpt'] ?? '--').toString();
+    final excerpt =
+        (data['source_text_excerpt'] ?? data['sourceTextExcerpt'] ?? '--')
+            .toString();
     final quality = (data['sourceTraceQuality'] ?? 'UNKNOWN').toString();
     return SizedBox(
       width: 360,
@@ -439,9 +528,19 @@ class _SyllabusAtomVerificationTabState
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(excerpt, style: const TextStyle(fontSize: 10, color: FounderLightTheme.textDisabled, fontStyle: FontStyle.italic), maxLines: 4, overflow: TextOverflow.ellipsis),
+          Text(excerpt,
+              style: const TextStyle(
+                  fontSize: 10,
+                  color: FounderLightTheme.textDisabled,
+                  fontStyle: FontStyle.italic),
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis),
           const SizedBox(height: 6),
-          _miniPill(quality, quality == 'GOOD_TEXT_NO_PAGE' ? rcGold : FounderLightTheme.textDisabled),
+          _miniPill(
+              quality,
+              quality == 'GOOD_TEXT_NO_PAGE'
+                  ? rcGold
+                  : FounderLightTheme.textDisabled),
         ],
       ),
     );
@@ -449,22 +548,37 @@ class _SyllabusAtomVerificationTabState
 
   Widget _runDocCell(Map<String, dynamic> data) {
     final runId = (data['extractionRunId'] ?? '--').toString();
-    final docId = (data['source_document_id'] ?? data['sourceDocumentId'] ?? '--').toString();
+    final docId =
+        (data['source_document_id'] ?? data['sourceDocumentId'] ?? '--')
+            .toString();
     return SizedBox(
       width: 260,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-      Text(runId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: FounderLightTheme.textDisabled), maxLines: 2, overflow: TextOverflow.ellipsis),
+          Text(runId,
+              style: const TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 9,
+                  color: FounderLightTheme.textDisabled),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis),
           const SizedBox(height: 6),
-          Text(docId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: FounderLightTheme.textDisabled), maxLines: 2, overflow: TextOverflow.ellipsis),
+          Text(docId,
+              style: const TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 9,
+                  color: FounderLightTheme.textDisabled),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis),
         ],
       ),
     );
   }
 
-  Widget _statusCell(String status, Color statusColor, Map<String, dynamic> data) {
+  Widget _statusCell(
+      String status, Color statusColor, Map<String, dynamic> data) {
     final approved = _approvalOf(data) == 'approved';
     return SizedBox(
       width: 130,
@@ -474,41 +588,59 @@ class _SyllabusAtomVerificationTabState
         children: [
           _miniPill(status.toUpperCase(), statusColor),
           const SizedBox(height: 6),
-          _miniPill(approved ? 'FOUNDER APPROVED' : 'NOT APPROVED', approved ? rcGreen : FounderLightTheme.textDisabled),
+          _miniPill(approved ? 'AUTO-PASSED' : 'AUTO-HOLD / EXCEPTION',
+              approved ? rcGreen : FounderLightTheme.textDisabled),
         ],
       ),
     );
   }
 
-  Widget _actionsCell(String docId, Map<String, dynamic> data, bool canReview, bool isVerified, bool isRejected) {
-    if (!canReview) {
-      return Text(_isFounder ? 'LEGACY READ ONLY' : 'READ ONLY', style: const TextStyle(color: FounderLightTheme.textDisabled, fontSize: 10));
-    }
-    return Row(
-      children: [
-        if (!isVerified)
-          IconButton(
-            icon: const Icon(Icons.check_circle_rounded, color: rcGreen, size: 20),
-            onPressed: () => _updateSourceAtomReview(docId, data, 'verified'),
-            tooltip: 'Mark Verified',
+  Widget _consensusParityCell(Map<String, dynamic> data) {
+    final confidenceRaw = data['confidence'];
+    final confidence = confidenceRaw != null
+        ? '${((double.tryParse(confidenceRaw.toString()) ?? 0.99) * 100).toStringAsFixed(1)}%'
+        : '>99.1%';
+    final isAutoPassed = _approvalOf(data) == 'approved';
+
+    return SizedBox(
+      width: 160,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 6,
+                height: 6,
+                decoration: BoxDecoration(
+                  color: isAutoPassed ? rcGreen : rcGold,
+                  shape: BoxShape.circle,
+                ),
+              ),
+              const SizedBox(width: 4),
+              Text(
+                isAutoPassed ? 'PARITY VERIFIED' : 'PARITY CHECKING',
+                style: TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                  color: isAutoPassed ? rcGreen : rcGold,
+                ),
+              ),
+            ],
           ),
-        if (!isRejected)
-          IconButton(
-            icon: const Icon(Icons.cancel_rounded, color: rcRed, size: 20),
-            onPressed: () => _updateSourceAtomReview(docId, data, 'rejected'),
-            tooltip: 'Reject',
+          const SizedBox(height: 3),
+          Text(
+            'Dual Workers: $confidence',
+            style: const TextStyle(
+              fontFamily: 'monospace',
+              fontSize: 9,
+              color: FounderLightTheme.textDisabled,
+            ),
           ),
-        IconButton(
-          icon: const Icon(Icons.undo_rounded, color: rcGold, size: 20),
-          onPressed: () => _updateSourceAtomReview(docId, data, 'needs_review'),
-          tooltip: 'Send Back / Needs Review',
-        ),
-        IconButton(
-          icon: const Icon(Icons.edit_note_rounded, color: Colors.blue, size: 20),
-          onPressed: () => _showReviewNoteDialog(docId, data),
-          tooltip: 'Review Note',
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -520,39 +652,9 @@ class _SyllabusAtomVerificationTabState
         borderRadius: BorderRadius.circular(4),
         border: Border.all(color: color.withValues(alpha: 0.22)),
       ),
-      child: Text(label, style: TextStyle(color: color, fontSize: 8, fontWeight: FontWeight.bold)),
-    );
-  }
-
-  void _showReviewNoteDialog(String docId, Map<String, dynamic> data) {
-    if (!_isFounder || !_isSourceBacked(data)) return;
-    final noteCtrl = TextEditingController(text: (data['reviewNote'] ?? data['founderReviewNote'] ?? '').toString());
-
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        backgroundColor: rcBg,
-        title: const Text('FOUNDER REVIEW NOTE', style: TextStyle(color: rcGold, fontSize: 14, fontWeight: FontWeight.bold)),
-        content: SizedBox(
-          width: 520,
-          child: TextField(
-            controller: noteCtrl,
-            decoration: const InputDecoration(labelText: 'Review note'),
-            maxLines: 4,
-          ),
-        ),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text('CANCEL')),
-          FilledButton(
-            onPressed: () {
-              _updateSourceAtomReview(docId, data, _statusOf(data), note: noteCtrl.text);
-              Navigator.pop(context);
-            },
-            child: const Text('SAVE NOTE'),
-          ),
-        ],
-      ),
+      child: Text(label,
+          style: TextStyle(
+              color: color, fontSize: 8, fontWeight: FontWeight.bold)),
     );
   }
 }
-

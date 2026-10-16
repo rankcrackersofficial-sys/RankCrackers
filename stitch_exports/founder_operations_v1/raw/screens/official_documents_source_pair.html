@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Official Documents Command Center &amp; Approved Mission Source Pair Ingestion Console | RankCrackers</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#7671ff",
+            "on-primary-container": "#7c839b",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#fed88b",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#000000",
+            "on-secondary-fixed": "#261a00",
+            "on-primary-fixed": "#131b2e",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdea0",
+            "inverse-surface": "#2e3133",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#e2dfff",
+            "surface-container-low": "#f2f3f6",
+            "on-primary-fixed-variant": "#3f465c",
+            "primary-fixed": "#dae2fd",
+            "surface-tint": "#565e74",
+            "secondary-fixed-dim": "#e7c277",
+            "background": "#f8f9fc",
+            "on-tertiary-fixed": "#0f0069",
+            "on-primary": "#ffffff",
+            "on-surface": "#191c1e",
+            "on-secondary-container": "#795d1c",
+            "surface-variant": "#e1e2e5",
+            "surface-dim": "#d9dadd",
+            "outline": "#76777d",
+            "surface-container-highest": "#e1e2e5",
+            "surface": "#f8f9fc",
+            "on-tertiary-fixed-variant": "#3323cc",
+            "surface-container": "#edeef1",
+            "primary-container": "#131b2e",
+            "secondary": "#765a1a",
+            "on-surface-variant": "#45464d",
+            "tertiary-fixed-dim": "#c3c0ff",
+            "outline-variant": "#c6c6cd",
+            "surface-bright": "#f8f9fc",
+            "error": "#ba1a1a",
+            "inverse-primary": "#bec6e0",
+            "on-background": "#191c1e",
+            "tertiary-container": "#0f0069",
+            "surface-container-high": "#e7e8eb",
+            "primary-fixed-dim": "#bec6e0",
+            "primary": "#000000",
+            "on-secondary": "#ffffff",
+            "inverse-on-surface": "#f0f1f4",
+            "on-secondary-fixed-variant": "#5c4301"
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem"
+          },
+          spacing: {
+            "gutter-desktop": "1.25rem",
+            "margin-desktop": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "gutter": "1rem",
+            "space-md": "0.75rem",
+            "space-xl": "1.75rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem"
+          },
+          fontFamily: {
+            "label-md": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "mono-data": ["JetBrains Mono"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "mono-sm": ["JetBrains Mono"]
+          },
+          fontSize: {
+            "label-md": ["11px", { lineHeight: "14px", letterSpacing: "0.04em", fontWeight: "600" }],
+            "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "label-lg": ["13px", { lineHeight: "18px", fontWeight: "500" }],
+            "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
+            "mono-data": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+            "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
+            "body-md": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+            "headline-sm": ["16px", { lineHeight: "24px", letterSpacing: "-0.005em", fontWeight: "600" }],
+            "body-lg": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+            "mono-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.02em", fontWeight: "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c6c6cd;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TOP SHARED NAV BAR (From Shared Components JSON) -->
+<header class="bg-surface-container-low border-b border-outline-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-space-md py-space-xs border-b border-outline-variant">
+<!-- Left: Logo & Search -->
+<div class="flex items-center gap-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="text-headline-md font-headline-md tracking-wider text-primary font-bold">RANKCRACKERS // FOUNDER COMMAND</span>
+</div>
+<div class="relative hidden lg:block w-72">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-base">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm pl-8 pr-3 py-1 rounded focus:outline-none focus:border-primary text-on-surface" placeholder="Search mission hashes, bulletins, nodes..." type="text"/>
+</div>
+</div>
+<!-- Center: Navigation Links -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-primary border-b-2 border-primary font-label-caps text-label-caps uppercase tracking-wider py-1 font-label-md text-label-md" href="#">Syllabus Pipeline</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider hover:text-on-surface py-1 transition-colors font-label-md text-label-md" href="#">PYQ Linkage</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider hover:text-on-surface py-1 transition-colors font-label-md text-label-md" href="#">Cockpit Telemetry</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider hover:text-on-surface py-1 transition-colors font-label-md text-label-md" href="#">Gate Clearance</a>
+</nav>
+<!-- Right: Trailing Actions -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1 border-r border-outline-variant pr-space-sm mr-space-xs">
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded active:scale-[0.99] transition-transform" title="Sync Pipelines">
+<span class="material-symbols-outlined">sync</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded active:scale-[0.99] transition-transform" title="System Console">
+<span class="material-symbols-outlined">terminal</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary hover:bg-surface-container-highest rounded active:scale-[0.99] transition-transform relative" title="Telemetry Alerts">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-1.5 h-1.5 bg-[#DC2626] rounded-full"></span>
+</button>
+</div>
+<button class="hidden sm:inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:bg-surface-container font-label-md text-label-md uppercase tracking-wider rounded active:scale-[0.99] transition-all">
+          Emergency Rollback
+        </button>
+<button class="inline-flex items-center gap-1 px-space-md py-1 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider rounded active:scale-[0.99] transition-transform shadow-sm hover:bg-[#1E293B]">
+          Deploy Changes
+        </button>
+<div class="flex items-center pl-space-xs border-l border-outline-variant ml-space-xs">
+<div class="w-7 h-7 rounded border border-outline-variant bg-surface-container-high flex items-center justify-center font-mono-data text-mono-data text-primary font-semibold" title="Founder Commander Operational Avatar">
+            FC
+          </div>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SHARED SIDE NAV DOCK (From Shared Components JSON) -->
+<aside class="hidden xl:flex flex-col justify-between w-64 bg-surface-container-lowest border-r border-outline-variant py-space-md shrink-0">
+<div class="space-y-space-md">
+<!-- Dock Header -->
+<div class="px-space-md pb-space-xs border-b border-outline-variant">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold">RC // OP-GRID</span>
+<span class="material-symbols-outlined text-outline text-base" title="Tactical Operations Unit Seal">shield</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-pulse"></span>
+<span class="font-mono-sm text-mono-sm uppercase text-outline tracking-wider">STATUS: LIVE TELEMETRY</span>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="space-y-0.5">
+<a class="flex items-center gap-space-sm bg-surface-container-high text-primary border-l-2 border-primary px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">biotech</span>
+<span>NEET Master</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span>JEE Advanced</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span>UPSC Prelims</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">hub</span>
+<span>PYQ Engine</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">fact_check</span>
+<span>Forensic Ledger</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined">lock_clock</span>
+<span>Gate Controls</span>
+</a>
+</nav>
+<!-- CTA in Side Dock -->
+<div class="px-space-md pt-space-xs">
+<button class="w-full py-1.5 px-space-sm bg-surface-container-low border border-outline-variant hover:border-outline text-on-surface font-label-md text-label-md rounded active:scale-[0.98] transition-transform flex items-center justify-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-sm">troubleshoot</span>
+<span>Run Audit Diagnostics</span>
+</button>
+</div>
+</div>
+<!-- Dock Footer Tabs -->
+<div class="border-t border-outline-variant pt-space-sm px-space-xs space-y-0.5">
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span>System Shell</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-caps text-label-caps uppercase tracking-wider transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-sm">tune</span>
+<span>Config Registry</span>
+</a>
+</div>
+</aside>
+<!-- MAIN SCROLLABLE CONTENT CANVAS -->
+<main class="flex-1 overflow-y-auto px-space-md lg:px-space-xl py-space-lg space-y-space-lg custom-scroll bg-surface">
+<!-- TOP CONTEXT & TELEMETRY BAR -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded p-space-md shadow-xs space-y-space-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-1.5 font-body-sm text-body-sm text-outline flex-wrap">
+<span class="text-on-surface-variant font-medium">Academic Pipeline</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant font-medium">Official Documents</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">Approved Source Pair Ingestion</span>
+</div>
+<!-- Top Right Controls -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38] font-mono-sm text-mono-sm rounded font-medium">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span>[LVL-0 FOUNDER AUTH: VERIFIED]</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+<span>ONLINE (OCR V4.2)</span>
+</div>
+<a class="inline-flex items-center gap-1 px-space-sm py-1 bg-surface-container-lowest border border-outline-variant text-[#0F172A] hover:bg-surface-container hover:border-outline font-label-md text-label-md rounded transition-colors" href="#">
+<span>← Back to Operations Overview</span>
+</a>
+</div>
+</div>
+<!-- Active Mission Context Strip -->
+<div class="flex items-center justify-between border-t border-outline-variant pt-space-xs mt-space-xs text-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Active Mission Realm:</span>
+<span class="font-headline-sm text-headline-sm text-[#0F172A] font-bold">NEET 2026 UG – Chemical Bonding &amp; Molecular Structure Master Realm</span>
+<span class="font-mono-data text-mono-data text-outline bg-surface-container px-1.5 py-0.5 rounded border border-outline-variant">(realm_neet_chem_bond_2026_v4)</span>
+</div>
+<div class="hidden lg:flex items-center gap-3 font-mono-sm text-mono-sm text-outline">
+<span>PIPELINE: CANONICAL BIND</span>
+<span>HASH: ED25519-STRICT</span>
+<span class="text-[#15803D]">STATE: STAGED_VERIFIED</span>
+</div>
+</div>
+</section>
+<!-- SECTION 1: APPROVED MISSION SOURCE PAIR INGESTION FORM -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-xs space-y-6">
+<!-- Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-4 gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#9A7B38]" style="font-variation-settings: 'FILL' 1;">rule</span>
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A]">Approved Mission Source Pair Ingestion Form</h2>
+</div>
+<p class="font-body-md text-body-md text-[#45464d] mt-1">Cryptographically binds the canonical official notification bulletin and the official syllabus document to this mission realm before extraction.</p>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 bg-[#EEF2FF] border border-[#C7D2FE] text-[#4338CA] font-mono-sm text-mono-sm rounded uppercase tracking-wider font-semibold self-start sm:self-auto">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4338CA] animate-pulse"></span>
+            Staging Buffer: Ready
+          </span>
+</div>
+<!-- Grid Fields (2 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Field 1: Mission ID -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-outline flex items-center justify-between">
+<span>Canonical Mission ID</span>
+<span class="text-outline-variant font-mono-sm">SYSTEM IMMUTABLE</span>
+</label>
+<div class="bg-[#F1F5F9] border border-outline-variant px-3 py-2 rounded font-mono-data text-mono-data text-[#0F172A] flex items-center justify-between">
+<span>realm_neet_chem_bond_2026_v4</span>
+<span class="material-symbols-outlined text-outline text-base">lock</span>
+</div>
+</div>
+<!-- Field 2: Cycle & Authority -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-outline flex items-center justify-between">
+<span>Cycle Key &amp; Exam Authority</span>
+<span class="text-outline-variant font-mono-sm">COCKPIT PAIR</span>
+</label>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-[#F1F5F9] border border-outline-variant px-3 py-2 rounded font-mono-data text-mono-data text-[#0F172A]">
+                2026_CYCLE_MAIN
+              </div>
+<div class="bg-[#F1F5F9] border border-outline-variant px-3 py-2 rounded font-mono-data text-mono-data text-[#0F172A]">
+                NTA_UG_EXAM_AUTH
+              </div>
+</div>
+</div>
+<!-- Field 3: Official Notification HTTPS URL -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-outline">Official Notification HTTPS URL</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest border border-outline-variant font-mono-data text-mono-data text-[#0F172A] px-3 py-2 pr-44 rounded focus:outline-none focus:border-primary" readonly="" type="text" value="https://exams.nta.ac.in/NEET/doc/NEET_UG_2026_Bulletin.pdf"/>
+<div class="absolute right-1.5 flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">
+<span>✓ HTTPS SSL VERIFIED</span>
+</span>
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-variant font-mono-sm text-mono-sm text-on-surface rounded border border-outline-variant">VALIDATE</button>
+</div>
+</div>
+</div>
+<!-- Field 4: Official Syllabus HTTPS URL -->
+<div class="space-y-1">
+<label class="font-label-md text-label-md uppercase tracking-wider text-outline">Official Syllabus HTTPS URL</label>
+<div class="relative flex items-center">
+<input class="w-full bg-surface-container-lowest border border-outline-variant font-mono-data text-mono-data text-[#0F172A] px-3 py-2 pr-44 rounded focus:outline-none focus:border-primary" readonly="" type="text" value="https://ncert.nic.in/pdf/syllabus/chem_class11_ch4_2026.pdf"/>
+<div class="absolute right-1.5 flex items-center gap-1.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">
+<span>✓ HTTPS SSL VERIFIED</span>
+</span>
+<button class="px-2 py-0.5 bg-surface-container hover:bg-surface-variant font-mono-sm text-mono-sm text-on-surface rounded border border-outline-variant">VALIDATE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2 Dropzone Upload Boxes Side-by-Side -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg pt-1">
+<!-- Box A -->
+<div class="border-2 border-dashed border-[#BBF7D0] bg-[#F0FDF4]/30 rounded-lg p-space-lg relative flex flex-col justify-between hover:bg-[#F0FDF4]/50 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded bg-[#15803D]/10 border border-[#BBF7D0] flex items-center justify-center text-[#15803D] shrink-0">
+<span class="material-symbols-outlined text-2xl">description</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-[#0F172A]">Box A: Select Official Notification PDF</h3>
+<p class="font-mono-data text-mono-data text-[#0F172A] font-semibold mt-0.5">NTA_NEET_UG_2026_Bulletin_Official.pdf</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Payload footprint: <span class="font-mono-sm font-semibold text-[#0F172A]">14.2 MB</span> • 164 Vector pages staged</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#15803D]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="mt-4 pt-3 border-t border-[#BBF7D0] flex flex-wrap items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded">
+<span class="font-semibold">SHA-256:</span>
+<span>7f8a92e44b912c0199f12d8a3...c01</span>
+</div>
+<button class="font-mono-sm text-mono-sm text-outline hover:text-[#0F172A] underline underline-offset-2">Replace File</button>
+</div>
+</div>
+<!-- Box B -->
+<div class="border-2 border-dashed border-[#BBF7D0] bg-[#F0FDF4]/30 rounded-lg p-space-lg relative flex flex-col justify-between hover:bg-[#F0FDF4]/50 transition-colors">
+<div class="flex items-start justify-between">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded bg-[#15803D]/10 border border-[#BBF7D0] flex items-center justify-center text-[#15803D] shrink-0">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-[#0F172A]">Box B: Select Official Syllabus PDF</h3>
+<p class="font-mono-data text-mono-data text-[#0F172A] font-semibold mt-0.5">NCERT_Chem_Class11_Ch4_2026.pdf</p>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Payload footprint: <span class="font-mono-sm font-semibold text-[#0F172A]">4.1 MB</span> • 38 Structured sections</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#15803D]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="mt-4 pt-3 border-t border-[#BBF7D0] flex flex-wrap items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded">
+<span class="font-semibold">SHA-256:</span>
+<span>3a4b12df88e99a4f8902c31e2...f89</span>
+</div>
+<button class="font-mono-sm text-mono-sm text-outline hover:text-[#0F172A] underline underline-offset-2">Replace File</button>
+</div>
+</div>
+</div>
+<!-- Verification Results Banner -->
+<div class="p-3 bg-[#F0FDF4] border border-[#BBF7D0] rounded flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#15803D]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-mono-data text-mono-data text-[#15803D] font-semibold">✓ Source pair cryptographically locked. 0 duplicate sources detected. OCR Extraction Queue ID: Q-NTA-2026-8841.</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-[#166534] bg-[#BBF7D0]/40 px-2 py-0.5 rounded">STATUS: DUAL_LOCKED</span>
+</div>
+<!-- Action Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-2 border-t border-outline-variant">
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-space-md py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container font-label-md text-label-md text-[#0F172A] rounded transition-colors active:scale-[0.99] flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-base">fact_check</span>
+<span>[Validate Source Pair Integrity]</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container font-label-md text-label-md text-[#0F172A] rounded transition-colors active:scale-[0.99] flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-base">cloud_upload</span>
+<span>[Upload Staged Files to Secure Storage]</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container font-label-md text-label-md text-[#0F172A] rounded transition-colors active:scale-[0.99] flex items-center gap-1.5 shadow-xs">
+<span class="material-symbols-outlined text-base">fingerprint</span>
+<span>[Verify Hashes &amp; Provenance]</span>
+</button>
+</div>
+<button class="px-6 py-2.5 bg-[#9A7B38] hover:bg-[#86682b] text-white font-headline-sm text-headline-sm rounded font-bold transition-all shadow-md active:scale-[0.98] flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span>[FINALIZE SOURCE PAIR &amp; QUEUE AI EXTRACTION]</span>
+</button>
+</div>
+</section>
+<!-- SECTION 2: OFFICIAL DOCUMENTS COMMAND CENTER (Tabs & Data Table) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-xs space-y-space-md">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-outline-variant gap-2">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A]">Official Documents Command Center</h2>
+<p class="font-body-md text-body-md text-[#45464d] mt-0.5">Authoritative repository index for the active realm. All ingested items maintain cryptographic provenance.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">filter_alt</span> Filter
+            </button>
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">download</span> Export Ledger
+            </button>
+</div>
+</div>
+<!-- Document Category Tabs -->
+<div class="flex items-center gap-2 border-b border-outline-variant overflow-x-auto pb-px custom-scroll">
+<button class="px-space-md py-2 border-b-2 border-[#0F172A] text-[#0F172A] font-label-md text-label-md whitespace-nowrap">
+            Notification (1)
+          </button>
+<button class="px-space-md py-2 border-b-2 border-transparent hover:border-outline text-outline hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Syllabus (1)
+          </button>
+<button class="px-space-md py-2 border-b-2 border-transparent hover:border-outline text-outline hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Amendment / Corrigendum (1)
+          </button>
+<button class="px-space-md py-2 border-b-2 border-transparent hover:border-outline text-outline hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Update Notice (2)
+          </button>
+<button class="px-space-md py-2 border-b-2 border-transparent hover:border-outline text-outline hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            PYQ Archive (10)
+          </button>
+<button class="px-space-md py-2 border-b-2 border-transparent hover:border-outline text-outline hover:text-on-surface font-label-md text-label-md whitespace-nowrap">
+            Study Material (4)
+          </button>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto border border-outline-variant rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant font-label-md text-label-md text-outline uppercase tracking-wider">
+<th class="py-2.5 px-3">Canonical Document Name</th>
+<th class="py-2.5 px-3">Authority</th>
+<th class="py-2.5 px-3">Payload Size</th>
+<th class="py-2.5 px-3">Pages</th>
+<th class="py-2.5 px-3">SHA-256 Digest</th>
+<th class="py-2.5 px-3">Upload</th>
+<th class="py-2.5 px-3">Extraction</th>
+<th class="py-2.5 px-3">Verification</th>
+<th class="py-2.5 px-3">Classification</th>
+<th class="py-2.5 px-3 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#DC2626]">picture_as_pdf</span>
+<span class="font-medium text-[#0F172A]">NTA NEET UG Official Information Bulletin 2026.pdf</span>
+</div>
+</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">NTA</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">14.2 MB</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">164 Pages</td>
+<td class="py-3 px-3 font-mono-sm text-mono-sm text-outline" title="7f8a92e44b912c0199f12d8a3...c01">
+<span class="bg-[#F1F5F9] px-1.5 py-0.5 rounded border border-outline-variant">7f8a...c01</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">COMPLETE</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">FINISHED</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">VERIFIED</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38]">[CANONICAL]</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1 font-label-md text-label-md">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">View Source PDF</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">Audit Hashes</button>
+<button class="px-2 py-1 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded">Extract Facts</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#2563EB]">description</span>
+<span class="font-medium text-[#0F172A]">NCERT Class 11 Chemistry Chapter 4 Canonical Syllabus.docx</span>
+</div>
+</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">NCERT</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">4.1 MB</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">38 Pages</td>
+<td class="py-3 px-3 font-mono-sm text-mono-sm text-outline" title="3a4b12df88e99a4f8902c31e2...f89">
+<span class="bg-[#F1F5F9] px-1.5 py-0.5 rounded border border-outline-variant">3a4b...f89</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">COMPLETE</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">FINISHED</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">VERIFIED</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38]">[CANONICAL]</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1 font-label-md text-label-md">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">View Source PDF</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">Audit Hashes</button>
+<button class="px-2 py-1 bg-[#0F172A] hover:bg-[#1E293B] text-white rounded">Extract Facts</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors bg-[#FFFBEB]/20">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#D97706]">warning</span>
+<span class="font-medium text-[#0F172A]">NTA NEET Corrigendum Notice 01-2026.pdf</span>
+</div>
+</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">NTA</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">820 KB</td>
+<td class="py-3 px-3 font-mono-data text-mono-data">2 Pages</td>
+<td class="py-3 px-3 font-mono-sm text-mono-sm text-outline" title="1a8ec990141fbb22013149...33b">
+<span class="bg-[#F1F5F9] px-1.5 py-0.5 rounded border border-outline-variant">1a8e...33b</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D]">COMPLETE</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#FFFBEB] border border-[#FDE68A] text-[#B45309]">PENDING REVIEW</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#FFFBEB] border border-[#FDE68A] text-[#B45309]">NEEDS REVIEW</span>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded font-mono-sm text-mono-sm font-semibold bg-[#F8FAFC] border border-[#E2E8F0] text-[#64748B]">[AMENDMENT]</span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="flex items-center justify-end gap-1 font-label-md text-label-md">
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">View Source PDF</button>
+<button class="px-2 py-1 bg-surface-container hover:bg-surface-variant text-[#0F172A] rounded border border-outline-variant">Audit Hashes</button>
+<button class="px-2 py-1 bg-[#D97706] hover:bg-[#b45309] text-white rounded">Extract Facts</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 3: NOTIFICATION FACTS INGESTION & REVIEW PREVIEW (Split Panel Layout) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 shadow-xs space-y-6">
+<!-- Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between border-b border-outline-variant pb-4 gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#2563EB]">auto_stories</span>
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A]">Notification Facts Ingestion &amp; Review Preview</h2>
+</div>
+<p class="font-body-md text-body-md text-[#45464d] mt-1">Multi-stage pipeline telemetry with parsed factual extractions ready for executive founder endorsement.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-mono-sm text-mono-sm text-outline">AUTO-SYNCHRONIZED: 18ms ago</span>
+<span class="w-2 h-2 rounded-full bg-[#15803D]"></span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Notification Extraction Stepper (4 cols) -->
+<div class="lg:col-span-4 border border-outline-variant rounded-lg p-space-md bg-[#F8F9FC] space-y-space-md">
+<div class="border-b border-outline-variant pb-2 flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-[#0F172A]">Extraction Pipeline Stepper</h3>
+<span class="font-mono-sm text-mono-sm text-outline bg-surface-container-high px-1.5 py-0.5 rounded">PHASE 5/6</span>
+</div>
+<!-- Steps List -->
+<div class="space-y-4 relative before:absolute before:left-3.5 before:top-3 before:bottom-3 before:w-0.5 before:bg-[#E2E8F0]">
+<!-- Step 1 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#15803D] text-white flex items-center justify-center shrink-0 z-10 shadow-xs">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-[#0F172A]">1. Source Received</p>
+<p class="font-mono-sm text-mono-sm text-[#15803D]">Payload 14.2 MB verified</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#15803D] text-white flex items-center justify-center shrink-0 z-10 shadow-xs">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-[#0F172A]">2. File Verified</p>
+<p class="font-mono-sm text-mono-sm text-[#15803D]">SHA-256 integrity passed</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#15803D] text-white flex items-center justify-center shrink-0 z-10 shadow-xs">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-[#0F172A]">3. OCR Page Extraction</p>
+<p class="font-mono-sm text-mono-sm text-[#15803D]">164/164 pages mapped</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#15803D] text-white flex items-center justify-center shrink-0 z-10 shadow-xs">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-[#0F172A]">4. Facts Structured</p>
+<p class="font-mono-sm text-mono-sm text-[#15803D]">Semantic vectors generated</p>
+</div>
+</div>
+<!-- Step 5 (Current) -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#FAF6EE] border-2 border-[#9A7B38] text-[#9A7B38] flex items-center justify-center shrink-0 z-10 shadow-xs animate-pulse">
+<span class="material-symbols-outlined text-sm font-bold">hourglass_empty</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-[#9A7B38] font-bold">5. Founder Audit PENDING</p>
+<p class="font-mono-sm text-mono-sm text-[#B45309]">Awaiting founder sign-off</p>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="flex items-start gap-3 relative">
+<div class="w-7 h-7 rounded-full bg-[#F1F5F9] border border-outline-variant text-outline flex items-center justify-center shrink-0 z-10">
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-outline">6. Live Catalog Publish</p>
+<p class="font-mono-sm text-mono-sm text-outline">Locked until Step 5 completes</p>
+</div>
+</div>
+</div>
+<!-- Stepper Audit Stats Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-3 space-y-2 mt-4">
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-outline">Extracted Fact Entities:</span>
+<span class="font-mono-data text-mono-data font-bold text-[#0F172A]">4 Core Nodes</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-outline">Mean Confidence:</span>
+<span class="font-mono-data text-mono-data font-bold text-[#15803D]">99.95%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-outline">Parser Model:</span>
+<span class="font-mono-data text-mono-data text-outline">Claude 3.5 Sonnet + OCR v4.2</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Extracted Facts Cards Grid (8 cols) -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Fact Card 1: Identity -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-md flex flex-col justify-between hover:shadow-sm transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-mono-sm text-mono-sm font-semibold uppercase text-outline">
+<span class="material-symbols-outlined text-sm text-[#2563EB]">badge</span>
+                    Fact 01 // Identity
+                  </span>
+<span class="px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">Confidence: 100%</span>
+</div>
+<div class="mt-2 space-y-1">
+<p class="text-body-sm text-outline">Exam Name:</p>
+<p class="font-headline-sm text-headline-sm text-[#0F172A] font-bold">National Eligibility cum Entrance Test (UG) 2026</p>
+</div>
+<div class="pt-1 flex items-center justify-between text-body-sm">
+<span class="text-outline">Release Date:</span>
+<span class="font-mono-data text-mono-data font-semibold text-[#0F172A]">15-Jan-2026</span>
+</div>
+<div class="pt-1 text-mono-sm text-mono-sm text-outline border-t border-outline-variant">
+                  Source Reference: <span class="text-[#0F172A] font-semibold">Page 3, Section 1.2</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-outline-variant flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded">Edit for Review</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-[#15803D] text-[#15803D] hover:bg-[#F0FDF4] font-label-md text-label-md rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Approve Fact</span>
+</button>
+</div>
+</div>
+<!-- Fact Card 2: Timeline -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-md flex flex-col justify-between hover:shadow-sm transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-mono-sm text-mono-sm font-semibold uppercase text-outline">
+<span class="material-symbols-outlined text-sm text-[#D97706]">calendar_today</span>
+                    Fact 02 // Timeline
+                  </span>
+<span class="px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">Confidence: 99.8%</span>
+</div>
+<div class="mt-2 space-y-1">
+<p class="text-body-sm text-outline">Application Window:</p>
+<p class="font-headline-sm text-headline-sm text-[#0F172A] font-bold">09-Feb-2026 to 09-Mar-2026</p>
+</div>
+<div class="pt-1 flex items-center justify-between text-body-sm">
+<span class="text-outline">Exam Date:</span>
+<span class="font-mono-data text-mono-data font-semibold text-[#0F172A]">03-May-2026</span>
+</div>
+<div class="pt-1 text-mono-sm text-mono-sm text-outline border-t border-outline-variant">
+                  Source Reference: <span class="text-[#0F172A] font-semibold">Page 7, Table 2.1</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-outline-variant flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded">Edit for Review</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-[#15803D] text-[#15803D] hover:bg-[#F0FDF4] font-label-md text-label-md rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Approve Fact</span>
+</button>
+</div>
+</div>
+<!-- Fact Card 3: Eligibility -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-md flex flex-col justify-between hover:shadow-sm transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-mono-sm text-mono-sm font-semibold uppercase text-outline">
+<span class="material-symbols-outlined text-sm text-[#15803D]">school</span>
+                    Fact 03 // Eligibility
+                  </span>
+<span class="px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">Confidence: 100%</span>
+</div>
+<div class="mt-2 space-y-1">
+<p class="text-body-sm text-outline">Age Criteria:</p>
+<p class="font-headline-sm text-headline-sm text-[#0F172A] font-bold">Age minimum 17 years</p>
+</div>
+<div class="pt-1 text-body-sm text-outline">
+                  Academic: <span class="text-[#0F172A] font-medium">10+2 with Physics, Chemistry, Biology/Biotech</span>
+</div>
+<div class="pt-1 text-mono-sm text-mono-sm text-outline border-t border-outline-variant">
+                  Source Reference: <span class="text-[#0F172A] font-semibold">Page 12, Clause 5.1</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-outline-variant flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded">Edit for Review</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-[#15803D] text-[#15803D] hover:bg-[#F0FDF4] font-label-md text-label-md rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Approve Fact</span>
+</button>
+</div>
+</div>
+<!-- Fact Card 4: Selection Process -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-md flex flex-col justify-between hover:shadow-sm transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-mono-sm text-mono-sm font-semibold uppercase text-outline">
+<span class="material-symbols-outlined text-sm text-[#9A7B38]">assignment_turned_in</span>
+                    Fact 04 // Selection Process
+                  </span>
+<span class="px-2 py-0.5 bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-mono-sm rounded font-medium">Confidence: 100%</span>
+</div>
+<div class="mt-2 space-y-1">
+<p class="text-body-sm text-outline">Format &amp; Questions:</p>
+<p class="font-headline-sm text-headline-sm text-[#0F172A] font-bold">Pen &amp; Paper OMR, 200 Questions</p>
+</div>
+<div class="pt-1 text-body-sm text-outline">
+                  Marking Scheme: <span class="text-[#0F172A] font-medium">720 Marks (+4 correct, -1 negative)</span>
+</div>
+<div class="pt-1 text-mono-sm text-mono-sm text-outline border-t border-outline-variant">
+                  Source Reference: <span class="text-[#0F172A] font-semibold">Page 24, Chapter 3</span>
+</div>
+</div>
+<div class="pt-3 mt-3 border-t border-outline-variant flex items-center justify-end gap-2">
+<button class="px-2.5 py-1 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container text-[#0F172A] font-label-md text-label-md rounded">Edit for Review</button>
+<button class="px-3 py-1 bg-surface-container-lowest border border-[#15803D] text-[#15803D] hover:bg-[#F0FDF4] font-label-md text-label-md rounded font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check</span>
+<span>Approve Fact</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- PERSISTENT DIAGNOSTICS BAR FOOTER -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant px-space-md py-1.5 shrink-0 z-40 text-mono-sm text-mono-sm text-outline">
+<div class="flex flex-col sm:flex-row items-center justify-between gap-2">
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#15803D]"></span>
+<span class="font-semibold text-[#0F172A]">FOUNDER NODE 01:</span>
+<span>CLUSTER AP-SOUTH-1A</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">lock</span>
+<span>ENCRYPTION: AES-256 GCM</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">speed</span>
+<span class="text-[#15803D]">LATENCY: 18ms</span>
+</div>
+<span class="text-outline-variant">|</span>
+<div>
+<span>ZONE: PROD-MUMBAI-DC3</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span>SESSION: #RC-SESS-90928</span>
+<span class="text-[#0F172A] font-semibold">ALL TELEMETRY NOMINAL</span>
+</div>
+</div>
+</footer>
+</body></html>

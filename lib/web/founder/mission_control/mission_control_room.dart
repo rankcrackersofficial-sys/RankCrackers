@@ -273,8 +273,8 @@ class _SelectedMissionDetail extends StatelessWidget {
                       documents.docs.isEmpty
                           ? 'SOURCE → INGESTION → VERIFICATION'
                           : 'SOURCE CONNECTED',
-                      style:
-                          const TextStyle(fontSize: 9, color: FounderLightTheme.textDisabled)),
+                      style: const TextStyle(
+                          fontSize: 9, color: FounderLightTheme.textDisabled)),
                 ]),
               ),
             ),
@@ -340,8 +340,8 @@ class _DetailHeader extends StatelessWidget {
               children: [
                 Text(title, style: Theme.of(context).textTheme.headlineSmall),
                 SelectableText(missionId,
-                    style:
-                        const TextStyle(color: FounderLightTheme.textMuted, fontSize: 11)),
+                    style: const TextStyle(
+                        color: FounderLightTheme.textMuted, fontSize: 11)),
               ],
             ),
           ),

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Publish Gate &amp; 13-Point Release Readiness Matrix — RankCrackers Founder Command</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #F8F9FC;
+      color: #0F172A;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+  </style>
+</link></head>
+<body class="min-h-screen flex flex-col bg-[#F8F9FC] text-[#0F172A] antialiased">
+<!-- TOP CONTEXT BAR & GLOBAL FOUNDER HEADER -->
+<header class="bg-white border-b border-[#E2E8F0] px-6 py-2.5 sticky top-0 z-50 shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+<div class="flex items-center justify-between">
+<!-- Left: Breadcrumb, Brand & Back Action -->
+<div class="flex items-center space-x-4">
+<a class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold text-[#475569] bg-[#F1F5F9] hover:bg-[#E2E8F0] rounded border border-[#CBD5E1] transition-colors" href="#">
+<span class="material-symbols-outlined text-[15px]">arrow_back</span>
+<span>Back to Operations Overview</span>
+</a>
+<div class="h-4 w-[1px] bg-[#E2E8F0]"></div>
+<div class="flex items-center space-x-2">
+<span class="text-[#9A7B38] font-bold text-sm tracking-wider font-mono-code">RANKCRACKERS</span>
+<span class="text-[#CBD5E1]">/</span>
+<span class="text-[11px] font-mono-code text-[#64748B] uppercase tracking-wider">Academic Pipeline</span>
+<span class="text-[#CBD5E1]">/</span>
+<span class="text-[11px] font-mono-code text-[#64748B] uppercase tracking-wider">Publish Gate</span>
+<span class="text-[#CBD5E1]">/</span>
+<span class="text-[11px] font-bold font-mono-code text-[#0F172A] uppercase tracking-wider bg-[#F1F5F9] px-2 py-0.5 rounded border border-[#E2E8F0]">Release Readiness Matrix</span>
+</div>
+</div>
+<!-- Right: Telemetry & Level-0 Auth Verification -->
+<div class="flex items-center space-x-3 text-[11px] font-mono-code">
+<div class="flex items-center space-x-1.5 px-2.5 py-1 bg-[#F0FDF4] border border-[#BBF7D0] rounded text-[#15803D]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D] animate-pulse"></span>
+<span>SYSTEM LATENCY: 14ms</span>
+</div>
+<div class="px-2.5 py-1 bg-[#FEF9C3] border border-[#FEF08A] rounded text-[#854D0E] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span>[LVL-0 FOUNDER AUTH: VERIFIED]</span>
+</div>
+<div class="h-4 w-[1px] bg-[#E2E8F0]"></div>
+<div class="flex items-center space-x-1">
+<button class="p-1 text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] rounded" title="Sync Registry">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+<button class="p-1 text-[#64748B] hover:text-[#0F172A] hover:bg-[#F1F5F9] rounded" title="Terminal Diagnostics">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</button>
+</div>
+<div class="w-7 h-7 rounded bg-[#E2E8F0] border border-[#CBD5E1] overflow-hidden">
+<img alt="Commander Avatar" class="w-full h-full object-cover" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+</div>
+</div>
+<!-- Active Mission & Release Version Sub-Context Strip -->
+<div class="mt-2 pt-2 border-t border-[#F1F5F9] flex flex-wrap items-center justify-between text-[11px] font-mono-code">
+<div class="flex items-center space-x-2">
+<span class="text-[#64748B] uppercase font-bold tracking-wider text-[10px]">Active Mission Realm:</span>
+<span class="text-[#0F172A] font-bold font-sans">NEET 2026 UG – Chemical Bonding &amp; Molecular Structure Master Realm</span>
+<span class="text-[#64748B] bg-[#F1F5F9] px-2 py-0.5 rounded border border-[#E2E8F0]">realm_neet_chem_bond_2026_v4</span>
+<span class="px-2 py-0.5 rounded bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] font-bold text-[10px]">COHORT: Awaiting live sync</span>
+</div>
+<div class="flex items-center space-x-3 text-[#475569]">
+<div>
+<span class="text-[#64748B] text-[10px] uppercase">Target Release:</span>
+<span class="font-bold text-[#0F172A] bg-[#FEF3C7] text-[#92400E] px-2 py-0.5 rounded border border-[#FDE68A]">Candidate v4.2</span>
+</div>
+<span>•</span>
+<div>
+<span class="text-[#64748B] text-[10px] uppercase">Rollback Safe Version:</span>
+<span class="font-bold text-[#475569] bg-[#F1F5F9] px-2 py-0.5 rounded border border-[#CBD5E1]">Snapshot v4.1 (Immutable)</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN OPERATIONAL WORKSPACE -->
+<main class="flex-1 p-6 space-y-6 max-w-[1920px] mx-auto w-full">
+<!-- HERO RELEASE STATUS STRIP -->
+<section class="bg-[#FEF2F2] border border-[#FECACA] rounded-xl p-5 shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+<!-- Left: Status Beacon -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-lg bg-white border border-[#FECACA] text-[#DC2626] flex items-center justify-center shadow-sm flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">gpp_maybe</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold tracking-wider font-mono-code bg-[#DC2626] text-white uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+                STATUS: RELEASE BLOCKED
+              </span>
+<span class="text-[12px] font-mono-code text-[#DC2626] font-bold">(1 CRITICAL BLOCKER DETECTED)</span>
+</div>
+<p class="text-[13px] text-[#475569] mt-1">
+              Candidate v4.2 has satisfied 12 release gates. Production deployment is halted at Gate 12 due to NCERT textbook nomenclature divergence.
+            </p>
+</div>
+</div>
+<!-- Center: Readiness Gauge & Progress Bar -->
+<div class="flex-1 max-w-md bg-white border border-[#FECACA]/60 rounded-lg p-3 shadow-xs">
+<div class="flex justify-between items-center text-[11px] font-mono-code mb-1.5">
+<span class="font-bold text-[#0F172A]">12 / 13 GATES CLEARED</span>
+<span class="text-[#15803D] font-bold">92.3% READINESS</span>
+</div>
+<!-- Segmented Progress Bar (13 segments) -->
+<div class="grid grid-cols-13 gap-1 h-2.5 w-full bg-[#F1F5F9] p-0.5 rounded">
+<!-- 1 to 11 passed (Green) -->
+<div class="bg-[#15803D] rounded-xs" title="Gate 01: Canonical Mission Identity - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 02: Notification PDF - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 03: Syllabus Linkage - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 04: Facts Extraction - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 05: Atoms Decomposition - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 06: PYQ Linkage - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 07: Crucible Schedule - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 08: DigiBook Units - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 09: Hindi Translation - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 10: Catalog Routing - PASSED"></div>
+<div class="bg-[#15803D] rounded-xs" title="Gate 11: Security &amp; Auth - PASSED"></div>
+<!-- 12 blocked (Red) -->
+<div class="bg-[#DC2626] rounded-xs animate-pulse" title="Gate 12: NCERT Text Parity - BLOCKED"></div>
+<!-- 13 pending (Amber) -->
+<div class="bg-[#D97706] rounded-xs" title="Gate 13: Cryptographic Signature - PENDING"></div>
+</div>
+<div class="flex justify-between text-[9px] font-mono-code text-[#64748B] mt-1">
+<span>11 PASS</span>
+<span class="text-[#DC2626] font-bold">1 BLOCK</span>
+<span class="text-[#D97706] font-bold">1 PENDING</span>
+</div>
+</div>
+<!-- Right: Action Buttons -->
+<div class="flex items-center space-x-2.5 flex-shrink-0">
+<a class="px-4 py-2.5 bg-[#DC2626] hover:bg-[#B91C1C] text-white rounded-lg text-[12px] font-bold font-mono-code tracking-wider uppercase flex items-center gap-1.5 shadow-sm transition-all active:scale-95" href="#blocker-desk">
+<span class="material-symbols-outlined text-[16px]">build</span>
+<span>RESOLVE BLOCKER</span>
+</a>
+<button class="px-4 py-2.5 bg-[#E2E8F0] text-[#94A3B8] border border-[#CBD5E1] rounded-lg text-[12px] font-bold font-mono-code tracking-wider uppercase cursor-not-allowed flex items-center gap-1.5" disabled="" title="Clear Gate 12 to enable production authorization">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>AUTHORIZE PRODUCTION PUBLISH</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 13-POINT RELEASE READINESS MATRIX (3 COLUMNS) -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-2 font-mono-code">
+<span class="w-2.5 h-2.5 bg-[#9A7B38] rounded-xs"></span>
+<h2 class="text-sm font-bold uppercase tracking-wider text-[#0F172A]">13-Point Release Readiness Matrix</h2>
+<span class="text-[11px] text-[#64748B] font-normal">| Strict Academic Governance Protocol (Release Gate v4.2)</span>
+</div>
+<div class="text-[11px] font-mono-code text-[#64748B]">
+          Audit Timestamp: <span class="text-[#0F172A] font-bold">Today, 01:24:18 IST</span> • Engine: <span class="text-[#9A7B38] font-bold">Defense-Grade Rule v4.12</span>
+</div>
+</div>
+<!-- 3-Column Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- COLUMN 1: Foundation & Authority (4 Gates) -->
+<div class="space-y-3">
+<div class="px-3 py-1.5 bg-[#F1F5F9] border border-[#E2E8F0] rounded-t-lg flex items-center justify-between font-mono-code text-[11px]">
+<span class="font-bold text-[#334155] uppercase tracking-wider">01. Foundation &amp; Authority</span>
+<span class="text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded text-[10px] border border-[#BBF7D0]">4/4 PASS</span>
+</div>
+<!-- Gate 01 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 01 // IDENTITY</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Canonical Mission Identity</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              100% hash parity with recruitment registry. Canonical realm index match verified against central catalog authority.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>ID: <code class="text-[#0F172A]">realm_neet_chem_bond_v4</code></span>
+<span class="text-[#15803D] font-semibold">100% PARITY</span>
+</div>
+</div>
+<!-- Gate 02 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 02 // PROVENANCE</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Official Notification PDF Ingestion</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              NTA NEET UG Bulletin 2026 parsed and verified. Immutable cryptographic file lock validated.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>HASH: <code class="text-[#0F172A]">sha256:7f8a92...c01</code></span>
+<span class="text-[#15803D] font-semibold">CANONICAL</span>
+</div>
+</div>
+<!-- Gate 03 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 03 // SYLLABUS SPEC</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Official Syllabus Document Linkage</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              NCERT Class 11 Chemistry Chapter 4 Canonical Syllabus linked and locked to active pipeline worker.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>HASH: <code class="text-[#0F172A]">sha256:3a4b12...f89</code></span>
+<span class="text-[#15803D] font-semibold">VERIFIED</span>
+</div>
+</div>
+<!-- Gate 04 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 04 // FACT EXTRACTION</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Notification Facts Audit</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              24/24 critical notification facts approved by Founder with zero unresolved confidence alerts.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>AUDIT: <strong class="text-[#0F172A]">24/24 SIGNED</strong></span>
+<span class="text-[#15803D] font-semibold">100% CONFIDENCE</span>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: Academic Content & Delivery (5 Gates) -->
+<div class="space-y-3">
+<div class="px-3 py-1.5 bg-[#F1F5F9] border border-[#E2E8F0] rounded-t-lg flex items-center justify-between font-mono-code text-[11px]">
+<span class="font-bold text-[#334155] uppercase tracking-wider">02. Academic Content &amp; Delivery</span>
+<span class="text-[#15803D] font-bold bg-[#DCFCE7] px-2 py-0.5 rounded text-[10px] border border-[#BBF7D0]">5/5 PASS</span>
+</div>
+<!-- Gate 05 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 05 // ATOM DECOMPOSITION</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Syllabus Atoms Decomposition</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              48/48 atomic concept keys validated. Tree structure: Exam &gt; Paper &gt; Unit &gt; Concept validated without orphan nodes.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>ATOMS: <strong class="text-[#0F172A]">48/48 BOUND</strong></span>
+<span class="text-[#15803D] font-semibold">0 ORPHANS</span>
+</div>
+</div>
+<!-- Gate 06 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 06 // PYQ MAPPING</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">10-Year PYQ Answer Key Parity</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              312 archival exam questions mapped across 2014-2025. Answer fidelity matches official NTA master keys.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>MAPPED: <strong class="text-[#0F172A]">312 QUESTIONS</strong></span>
+<span class="text-[#15803D] font-semibold">98.6% PARITY</span>
+</div>
+</div>
+<!-- Gate 07 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 07 // CRUCIBLE CADENCE</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Crucible 98-Day Schedule &amp; Micro-Tests</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              98/98 days populated with micro-practice drills, remediation buffers, and macro-schedules. Zero missing days.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>SCHEDULE: <strong class="text-[#0F172A]">98/98 SLOTS</strong></span>
+<span class="text-[#15803D] font-semibold">0 GAP DAYS</span>
+</div>
+</div>
+<!-- Gate 08 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 08 // DIGIBOOK</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">DigiBook Concept Units &amp; Diagrams</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              12 interactive textbook units compiled. Chemical bonding molecular geometry vectors validated.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>COMPILED: <strong class="text-[#0F172A]">12 UNITS</strong></span>
+<span class="text-[#15803D] font-semibold">SOURCE GROUNDED</span>
+</div>
+</div>
+<!-- Gate 09 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 09 // BILINGUAL PARITY</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Hindi Translation &amp; Terminology</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              100% scientific glossaries aligned with Commission for Scientific and Technical Terminology (CSTT).
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>PARITY: <strong class="text-[#0F172A]">100% MATCH</strong></span>
+<span class="text-[#15803D] font-semibold">0 UNTRANSLATED</span>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: Edge Delivery & Governance (4 Gates) -->
+<div class="space-y-3">
+<div class="px-3 py-1.5 bg-[#FEF2F2] border border-[#FECACA] rounded-t-lg flex items-center justify-between font-mono-code text-[11px]">
+<span class="font-bold text-[#991B1B] uppercase tracking-wider">03. Edge Delivery &amp; Governance</span>
+<span class="text-[#DC2626] font-bold bg-[#FEE2E2] px-2 py-0.5 rounded text-[10px] border border-[#FECACA]">2 PASS • 1 BLOCK • 1 PENDING</span>
+</div>
+<!-- Gate 10 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 10 // CATALOG ROUTING</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Student Mission Catalog Routing</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              Visibility flags staged in student catalog schema. Pre-computed routing nodes verified across Edge CDN.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>EDGE CDN: <strong class="text-[#0F172A]">edge-del-01..04</strong></span>
+<span class="text-[#15803D] font-semibold">SYNC READY</span>
+</div>
+</div>
+<!-- Gate 11 -->
+<div class="bg-white border border-[#E2E8F0] rounded-lg p-3.5 shadow-xs hover:border-[#CBD5E1] transition-all">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#64748B] uppercase font-bold tracking-wider">GATE 11 // SECURITY</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Security &amp; Firestore Auth Rules</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                PASSED
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              0 unauthorized mutation vectors. Read-only student isolation verified. Mastery records cryptographic shield active.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>SECURITY AUDIT: <strong class="text-[#0F172A]">0 VULNS</strong></span>
+<span class="text-[#15803D] font-semibold">AIR-GAPPED</span>
+</div>
+</div>
+<!-- Gate 12: CRITICAL BLOCKER -->
+<div class="bg-[#FFF5F5] border-2 border-[#DC2626] rounded-lg p-3.5 shadow-sm relative overflow-hidden">
+<div class="absolute -top-1 -right-1 w-8 h-8 bg-[#DC2626] text-white flex items-center justify-center transform rotate-12 rounded-bl-lg">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#DC2626] uppercase font-bold tracking-wider flex items-center gap-1">
+<span>GATE 12 // NCERT EDITION PARITY</span>
+</div>
+<div class="text-sm font-bold text-[#991B1B] mt-0.5">NCERT 2026 Edition Text Parity</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#FEE2E2] text-[#DC2626] border border-[#FECACA] flex items-center gap-1 mr-4">
+<span class="w-1.5 h-1.5 rounded-full bg-[#DC2626] animate-pulse"></span>
+                BLOCKED
+              </span>
+</div>
+<div class="mt-2 p-2 bg-white/80 border border-[#FECACA] rounded text-[11px] text-[#7F1D1D] font-mono-code">
+<strong>CRITICAL:</strong> Page 142 chemical bonding hybridization nomenclature differs from archival question key. Requires human reconciliation.
+            </div>
+<div class="mt-2.5 pt-2 border-t border-[#FECACA] flex items-center justify-between text-[10px] font-mono-code text-[#DC2626]">
+<span>DIFF: <strong class="text-[#991B1B]">NCERT Ch.4 pg.142</strong></span>
+<a class="font-bold underline hover:text-[#7F1D1D]" href="#blocker-desk">RESOLVE BELOW ↓</a>
+</div>
+</div>
+<!-- Gate 13: PENDING -->
+<div class="bg-white border border-[#FDE68A] rounded-lg p-3.5 shadow-xs">
+<div class="flex items-start justify-between">
+<div>
+<div class="text-[10px] font-mono-code text-[#D97706] uppercase font-bold tracking-wider">GATE 13 // LEVEL-0 SIGNATURE</div>
+<div class="text-sm font-bold text-[#0F172A] mt-0.5">Cryptographic Founder Signature</div>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold font-mono-code bg-[#FEF3C7] text-[#D97706] border border-[#FDE68A] flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">pending</span>
+                PENDING
+              </span>
+</div>
+<p class="text-[11px] text-[#475569] mt-2">
+              Mandatory human sign-off. Air-gapped key authorization waiting on prerequisite clearance of Gate 12.
+            </p>
+<div class="mt-2.5 pt-2 border-t border-[#F1F5F9] flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<span>STATUS: <strong class="text-[#D97706]">Awaiting Gate 12</strong></span>
+<span class="text-[#94A3B8] font-semibold">LOCKED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BLOCKER FORENSICS & RESOLUTION DESK -->
+<section class="bg-white border border-[#E2E8F0] rounded-xl shadow-sm overflow-hidden scroll-mt-20" id="blocker-desk">
+<!-- Desk Header -->
+<div class="px-6 py-4 bg-[#F8FAFC] border-b border-[#E2E8F0] flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded bg-[#FEE2E2] text-[#DC2626] border border-[#FECACA] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">troubleshoot</span>
+</div>
+<div>
+<div class="flex items-center space-x-2">
+<h3 class="text-sm font-bold text-[#0F172A] font-mono-code uppercase tracking-wider">
+                Blocker Forensics &amp; Reconciliation Desk
+              </h3>
+<span class="px-2 py-0.5 bg-[#DC2626] text-white text-[10px] font-bold font-mono-code rounded">HIGH SEVERITY</span>
+</div>
+<p class="text-[12px] text-[#64748B] mt-0.5">
+              Deep inspection for Gate 12: NCERT 2026 Edition Text Parity Mismatch
+            </p>
+</div>
+</div>
+<div class="flex items-center space-x-3 text-[11px] font-mono-code">
+<span class="text-[#64748B]">Impacted Student Cohort:</span>
+<span class="px-2.5 py-1 bg-[#FEF3C7] text-[#92400E] border border-[#FDE68A] rounded font-bold">
+            Awaiting live sync
+          </span>
+</div>
+</div>
+<!-- Desk Body Split Layout -->
+<div class="p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left 7 Cols: Evidence & Comparison Diff -->
+<div class="lg:col-span-7 space-y-4">
+<div class="text-[11px] font-mono-code font-bold uppercase tracking-wider text-[#64748B] flex items-center justify-between">
+<span>Canonical Evidence Diff (Side-by-Side Audit)</span>
+<span class="text-[#475569]">Source: NCERT Class 11 Chemistry Chapter 4 Canonical Syllabus.docx</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-[11px] font-mono-code">
+<!-- Left: NCERT 2026 Canonical Release -->
+<div class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg p-3">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-[#E2E8F0] text-[#0F172A] font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#2563EB]">menu_book</span>
+                  NCERT 2026 Edition (Page 142)
+                </span>
+<span class="text-[9px] bg-[#EFF6FF] text-[#1D4ED8] px-1.5 py-0.5 rounded border border-[#BFDBFE]">NEW TEXT</span>
+</div>
+<p class="text-[#334155] leading-relaxed">
+                “In $sp^3d^2$ hybridization, the axial bonds experience <span class="bg-[#FEF08A] text-[#854D0E] font-bold px-1 rounded">greater inter-electronic repulsion</span> compared to equatorial bonds in octahedral complexes, giving rise to asymmetric distortion.”
+              </p>
+<div class="mt-2 text-[9px] text-[#64748B]">
+                Ingestion Ref: NCERT-CH4-P142 // SHA: <code class="text-[#0F172A]">3a4b12...f89</code>
+</div>
+</div>
+<!-- Right: Archival Exam Key (Legacy) -->
+<div class="bg-[#FFF5F5] border border-[#FECACA] rounded-lg p-3">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-[#FECACA] text-[#991B1B] font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#DC2626]">history_edu</span>
+                  Archival PYQ Key (2018-2024)
+                </span>
+<span class="text-[9px] bg-[#FEE2E2] text-[#DC2626] px-1.5 py-0.5 rounded border border-[#FECACA]">LEGACY CANON</span>
+</div>
+<p class="text-[#7F1D1D] leading-relaxed">
+                “Octahedral hybridization maintains <span class="bg-[#FECACA] text-[#991B1B] font-bold px-1 rounded">symmetric equivalence of axial and equatorial bonds</span> unless perturbed by Jahn-Teller electronic asymmetry.”
+              </p>
+<div class="mt-2 text-[9px] text-[#DC2626]">
+                Conflict: 14 Questions in Question Bank currently mark legacy phrasing as correct.
+              </div>
+</div>
+</div>
+<!-- AI Suggested Fix Explanation -->
+<div class="bg-[#F0FDF4] border border-[#BBF7D0] rounded-lg p-4 font-mono-code text-[11px]">
+<div class="flex items-center space-x-2 text-[#15803D] font-bold mb-1">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+<span>AI Worker Recommended Fix (Autonomous Academic Engine):</span>
+</div>
+<p class="text-[#166534] leading-relaxed">
+              “Apply corrigendum mapping rule: Accept revised NCERT IUPAC notation with legacy PYQ synonym pointer. Update the 14 dependent test answer keys to accept both interpretations for the 2026 cohort with an explanatory footnote.”
+            </p>
+<div class="mt-2 text-[10px] text-[#15803D] flex items-center gap-2">
+<span class="font-bold">• CONFIDENCE: 99.4%</span>
+<span>• Zero candidate marks penalized under dual-acceptance model.</span>
+</div>
+</div>
+</div>
+<!-- Right 5 Cols: Founder Resolution Controls -->
+<div class="lg:col-span-5 bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg p-5 flex flex-col justify-between space-y-4">
+<div>
+<div class="text-[11px] font-mono-code font-bold uppercase tracking-wider text-[#0F172A] flex items-center justify-between pb-2 border-b border-[#E2E8F0]">
+<span>Founder Decision Station</span>
+<span class="text-[#D97706] font-bold">MANDATORY HUMAN OVERRIDE</span>
+</div>
+<div class="mt-3 space-y-3 text-[12px]">
+<div>
+<label class="block text-[11px] font-mono-code text-[#475569] mb-1 font-semibold">
+                  Founder Override Audit Comment (Immutable):
+                </label>
+<textarea class="w-full text-[11px] font-mono-code p-2.5 bg-white border border-[#CBD5E1] rounded text-[#0F172A] focus:outline-none focus:border-[#9A7B38]" placeholder="Enter justification for dual-canon mapping or direct textbook override..." rows="3">Reconciled per NCERT 2026 Corrigendum. Dual-acceptance activated for PYQ keys 2018-2024.</textarea>
+</div>
+<div class="p-2.5 bg-white border border-[#E2E8F0] rounded text-[11px] font-mono-code text-[#64748B] space-y-1">
+<div class="flex justify-between">
+<span>Authorized Identity:</span>
+<span class="font-bold text-[#0F172A]">Founder Commander [LVL-0]</span>
+</div>
+<div class="flex justify-between">
+<span>Cryptographic Key ID:</span>
+<span class="text-[#0F172A]">ED25519-FC-98441</span>
+</div>
+<div class="flex justify-between">
+<span>Audit Event:</span>
+<span class="text-[#15803D] font-bold">BLOCKER_RESOLVE_DUAL_KEY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-2 pt-2 border-t border-[#E2E8F0]">
+<button class="w-full py-2.5 bg-[#9A7B38] hover:bg-[#85682D] text-white rounded-lg text-[11px] font-bold font-mono-code tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm transition-all active:scale-98">
+<span class="material-symbols-outlined text-[16px]">rule</span>
+<span>APPLY AI CORRIGENDUM MAPPING &amp; UNBLOCK</span>
+</button>
+<button class="w-full py-2 bg-white border border-[#CBD5E1] hover:bg-[#F1F5F9] text-[#475569] rounded-lg text-[11px] font-bold font-mono-code tracking-wider uppercase flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px]">edit_note</span>
+<span>OVERRIDE WITH CUSTOM FOUNDER COMMENT</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- PUBLISH CONFIRMATION ACCORDION & ROLLBACK SAFEGUARD -->
+<section class="bg-white border border-[#E2E8F0] rounded-xl shadow-sm p-6 space-y-5">
+<div class="flex items-center justify-between pb-3 border-b border-[#E2E8F0]">
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 rounded bg-[#FEF9C3] text-[#854D0E] border border-[#FEF08A] flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">rocket</span>
+</div>
+<div>
+<h3 class="text-sm font-bold text-[#0F172A] font-mono-code uppercase tracking-wider">
+              Production Release Protocol &amp; Atomic Rollback Guarantee
+            </h3>
+<p class="text-[12px] text-[#64748B]">
+              Staged Candidate: <strong class="text-[#0F172A]">v4.2</strong> • Defense-Grade Distributed Propagation
+            </p>
+</div>
+</div>
+<div class="px-3 py-1 bg-[#F0FDF4] border border-[#BBF7D0] rounded text-[11px] font-mono-code text-[#15803D] font-bold flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#15803D]"></span>
+<span>180-SECOND ATOMIC ROLLBACK GUARANTEE ACTIVE</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-[11px] font-mono-code">
+<!-- Impact 1 -->
+<div class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg p-3.5">
+<div class="text-[10px] text-[#64748B] uppercase font-bold">COHORT REVENUE &amp; REACH</div>
+<div class="text-lg font-bold text-[#0F172A] mt-1 font-sans">Awaiting live sync</div>
+<p class="text-[#475569] text-[10px] mt-1">
+            Immediate push broadcast across edge nodes (edge-del-01 through 04) with zero app restarts.
+          </p>
+</div>
+<!-- Impact 2 -->
+<div class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg p-3.5">
+<div class="text-[10px] text-[#64748B] uppercase font-bold">ROLLBACK SAFEGUARD</div>
+<div class="text-lg font-bold text-[#15803D] mt-1 font-mono-code">Snapshot v4.1</div>
+<p class="text-[#475569] text-[10px] mt-1">
+            1-click atomic reversal to immutable snapshot within 180 seconds in case of student regression.
+          </p>
+</div>
+<!-- Impact 3 -->
+<div class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg p-3.5">
+<div class="text-[10px] text-[#64748B] uppercase font-bold">CRYPTOGRAPHIC LEDGER</div>
+<div class="text-lg font-bold text-[#0F172A] mt-1 font-mono-code">SHA-256 Validated</div>
+<p class="text-[#475569] text-[10px] mt-1">
+            Signed release manifest automatically logged to immutable audit ledger with Level-0 key.
+          </p>
+</div>
+</div>
+<!-- Release Authorization Footer -->
+<div class="pt-4 border-t border-[#E2E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="text-[11px] font-mono-code text-[#64748B]">
+<span class="text-[#DC2626] font-bold">• LOCK NOTE:</span> Final production release authorization is locked until Gate 12 is cleared above.
+        </div>
+<div class="flex items-center space-x-3">
+<button class="px-4 py-2 border border-[#CBD5E1] text-[#475569] hover:bg-[#F1F5F9] rounded-lg text-[11px] font-bold font-mono-code tracking-wider uppercase transition-colors">
+            DOWNLOAD RELEASE MANIFEST
+          </button>
+<button class="px-6 py-2.5 bg-[#E2E8F0] text-[#94A3B8] border border-[#CBD5E1] rounded-lg text-[12px] font-bold font-mono-code tracking-wider uppercase flex items-center gap-2 cursor-not-allowed shadow-none" disabled="" title="Resolve Gate 12 to unlock release button">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>AUTHORIZE PRODUCTION RELEASE</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- PERSISTENT FOOTER TELEMETRY STRIP -->
+<footer class="bg-white border-t border-[#E2E8F0] px-6 py-2 flex items-center justify-between text-[10px] font-mono-code text-[#64748B]">
+<div class="flex items-center space-x-4">
+<div class="flex items-center space-x-1.5 text-[#15803D]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#15803D]"></span>
+<span>FOUNDER NODE: DEL-ALPHA-01 // V4.12</span>
+</div>
+<span>•</span>
+<span>SECURITY LAYER: AES-256 GCM</span>
+<span>•</span>
+<span>PUBLISH GATE ID: PG-NEET26-CHEMBOND-04</span>
+</div>
+<div class="flex items-center space-x-4">
+<span>LATENCY: 14ms</span>
+<span>CLUSTER: AP-SOUTH-1A</span>
+<span class="text-[#9A7B38] font-bold uppercase">RANKCRACKERS DEFENSE-GRADE ENGINE</span>
+</div>
+</footer>
+</body>
+</html>

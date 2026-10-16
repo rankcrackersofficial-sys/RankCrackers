@@ -6,7 +6,9 @@ const WORKER_MODES = Object.freeze({
   DISABLED: 'DISABLED'
 });
 
-const DEFAULT_WORKER_MODE = WORKER_MODES.MANUAL_DEBUG;
+// Production default is automation-first. MANUAL_DEBUG remains available for
+// local diagnostics, but must never become the Founder panel's normal path.
+const DEFAULT_WORKER_MODE = WORKER_MODES.SAFE_AUTO;
 
 const AUTO_DETECT_POLICY = Object.freeze({
   DEFAULT_ALLOWED: false,
@@ -31,7 +33,9 @@ const SAFETY_REQUIREMENTS = Object.freeze({
   parentSideEffectBlockRequired: true,
   studentDeliveryBlockRequired: true,
   baselineDriftDetectionRequired: true,
-  founderApprovalRequiredForPublish: true
+  founderApprovalRequiredForPublish: false,
+  founderPolicyOverrideOnly: true,
+  routineFounderVerificationForbidden: true
 });
 
 const PRO_VERIFICATION_POLICY = Object.freeze({
@@ -50,7 +54,8 @@ const PRO_VERIFICATION_POLICY = Object.freeze({
   ]),
   canBlock: true,
   canPublish: false,
-  founderFinalApprovalRequired: true
+  founderFinalApprovalRequired: false,
+  founderPolicyOverrideOnly: true
 });
 
 module.exports = {

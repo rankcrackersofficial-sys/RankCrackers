@@ -36,7 +36,6 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: Colors.white.withValues(alpha: 0.03),
-        textStyle: const TextStyle(color: AppColors.primaryText),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
@@ -90,7 +89,6 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: surfaceAlt,
-        textStyle: const TextStyle(color: text),
         hintStyle: const TextStyle(color: mutedText),
         labelStyle: const TextStyle(color: mutedText),
         border: OutlineInputBorder(

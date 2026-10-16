@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="pip-auto-passed" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="6" fill="#15803D" stroke="#86EFAC" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="pip-auto-hold" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="6" fill="#DC2626" stroke="#FECACA" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="pip-auto-repaired" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="6" fill="#D97706" stroke="#FDE68A" stroke-width="1.5"/>
+  </symbol>
+  <symbol id="pip-generating" viewBox="0 0 16 16">
+    <circle cx="8" cy="8" r="6" fill="#2563EB" stroke="#BFDBFE" stroke-width="1.5"/>
+  </symbol>
+</svg>

@@ -1,0 +1,100 @@
+{
+  "collections": {
+    "automationRuns": "automation_runs",
+    "automationExceptions": "automation_exceptions"
+  },
+  "lifecycleStages": [
+    {
+      "name": "queued",
+      "description": "Job enqueued in worker queue awaiting dispatch"
+    },
+    {
+      "name": "generating",
+      "description": "Worker 1 (Extractor/Generator) analyzing source documents"
+    },
+    {
+      "name": "verifying",
+      "description": "Worker 2 (Independent Verifier) executing blind validation prompt"
+    },
+    {
+      "name": "reconciling",
+      "description": "Reconciliation worker computing mathematical consensus"
+    },
+    {
+      "name": "auto_passed",
+      "description": "Dual-worker parity verified (>90% conf); auto-promoted to student delivery"
+    },
+    {
+      "name": "auto_repaired",
+      "description": "Deterministic syntax, spacing or alias auto-healed"
+    },
+    {
+      "name": "auto_hold",
+      "description": "Contradiction or missing evidence; held at Gate 12 for Founder Policy override"
+    },
+    {
+      "name": "failed",
+      "description": "Fatal unrecoverable pipeline failure"
+    }
+  ],
+  "automationRunFields": {
+    "runId": "string",
+    "workerId": "string",
+    "workerVersion": "string",
+    "domain": "string",
+    "input": "object",
+    "evidence": "array<string>",
+    "generatorResult": {
+      "verdict": "string ('pass' | 'fail')",
+      "confidence": "number (0.0 to 1.0)",
+      "output": "object",
+      "ocrSource": "object | string | null (OCR provider, page/source references and extraction method)",
+      "vectorHashes": "array<string> (content/vector integrity hashes)",
+      "evidence": "array",
+      "sourceHash": "string (sha256)"
+    },
+    "verifierResult": {
+      "verdict": "string ('pass' | 'fail')",
+      "confidence": "number (0.0 to 1.0)",
+      "output": "object",
+      "evidence": "array",
+      "sourceHash": "string (sha256)"
+    },
+    "canonicalOutput": "object",
+    "confidence": "number",
+    "publicationEligible": "boolean",
+    "decisionReason": "string",
+    "exceptionId": "string | null",
+    "exceptionStatus": "string ('open' | 'resolved' | 'overridden')",
+    "founderVerificationRequired": "boolean (always false for routine content)",
+    "founderPolicyOverrideAvailable": "boolean",
+    "completedAt": "timestamp"
+  },
+  "automationExceptionFields": {
+    "exceptionId": "string",
+    "runId": "string",
+    "status": "string ('open' | 'resolved' | 'overridden')",
+    "severity": "string ('LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL')",
+    "reason": "string",
+    "confidence": "number",
+    "founderAction": "POLICY_DECISION_ONLY",
+    "routineContentVerificationRequired": false,
+    "affectedItemsScope": {
+      "questions": "number",
+      "atoms": "number",
+      "crucibleTests": "number",
+      "digiBookLessons": "number"
+    },
+    "aiPolicyRecommendation": "string",
+    "createdAt": "timestamp"
+  },
+  "zeroFabricatedMetricsPolicy": {
+    "rule": "Never invent live candidate numbers, simulated high revenues, or arbitrary portal counts.",
+    "fallbackStates": [
+      "Awaiting live sync",
+      "No evidence",
+      "Demo data (Simulation Mode)",
+      "Not connected"
+    ]
+  }
+}

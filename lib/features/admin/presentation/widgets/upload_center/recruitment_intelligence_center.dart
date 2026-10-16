@@ -48,7 +48,7 @@ class _RecruitmentIntelligenceCenterState
         ),
         const SizedBox(height: 32),
 
-        // Section: RECRUITMENT CANDIDATES (Ready for Manifestation)
+        // Section: RECRUITMENT CANDIDATES (AI-verified and ready for manifestation)
         _candidatesSection(),
         const SizedBox(height: 40),
 
@@ -220,7 +220,7 @@ class _RecruitmentIntelligenceCenterState
         StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance
               .collection('sentinel_drafts')
-              .where('status', isEqualTo: 'READY_FOR_FOUNDER_APPROVAL')
+              .where('status', whereIn: ['verified', 'auto_passed'])
               .snapshots(),
           builder: (context, snapshot) {
             final docs = snapshot.data?.docs ?? [];

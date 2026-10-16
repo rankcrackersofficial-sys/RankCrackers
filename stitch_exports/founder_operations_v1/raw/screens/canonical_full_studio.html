@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RankCrackers Autonomous Operations Command Center</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#131b2e",
+            "inverse-on-surface": "#f0f1f4",
+            "on-tertiary-fixed": "#0f0069",
+            "on-surface-variant": "#45464d",
+            "on-background": "#191c1e",
+            "surface-container-high": "#e7e8eb",
+            "on-secondary-fixed-variant": "#5c4301",
+            "on-primary-container": "#7c839b",
+            "error-container": "#ffdad6",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary": "#ffffff",
+            "inverse-surface": "#2e3133",
+            "tertiary-fixed-dim": "#c3c0ff",
+            "secondary-container": "#fed88b",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#000000",
+            "surface-tint": "#565e74",
+            "secondary-fixed": "#ffdea0",
+            "secondary": "#765a1a",
+            "surface-container-low": "#f2f3f6",
+            "background": "#f8f9fc",
+            "primary-container": "#131b2e",
+            "surface-container-highest": "#e1e2e5",
+            "outline-variant": "#c6c6cd",
+            "on-secondary-container": "#795d1c",
+            "on-primary-fixed-variant": "#3f465c",
+            "on-tertiary-fixed-variant": "#3323cc",
+            "on-tertiary-container": "#7671ff",
+            "on-secondary-fixed": "#261a00",
+            "surface-variant": "#e1e2e5",
+            "primary-fixed-dim": "#bec6e0",
+            "secondary-fixed-dim": "#e7c277",
+            "primary": "#000000",
+            "error": "#ba1a1a",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "tertiary-fixed": "#e2dfff",
+            "surface-bright": "#f8f9fc",
+            "primary-fixed": "#dae2fd",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#bec6e0",
+            "surface-dim": "#d9dadd",
+            "on-surface": "#191c1e",
+            "outline": "#76777d",
+            "tertiary-container": "#0f0069",
+            "surface": "#f8f9fc",
+            "surface-container": "#edeef1"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.25rem",
+            "margin-desktop": "2rem",
+            "margin": "1rem",
+            "gutter": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-desktop": "1.25rem",
+            "space-xl": "1.75rem",
+            "space-md": "0.75rem"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "mono-sm": ["JetBrains Mono"],
+            "mono-data": ["JetBrains Mono"],
+            "display-lg": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "label-lg": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-lg": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "mono-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "mono-data": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-lg": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 1;
+    }
+    /* Daylight Precision Card Shadows */
+    .tier-1-panel {
+      box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.02);
+    }
+    .tier-2-panel {
+      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col font-body-md select-none">
+<!-- TOP APP BAR / BRAND HEADER (Shared Component: TopNavBar with high-density telemetry layout) -->
+<header class="bg-surface-container-low text-primary border-b border-outline-variant w-full sticky top-0 z-40">
+<div class="flex justify-between items-center w-full px-space-md py-space-xs">
+<!-- Left: Brand Monogram + Title + Indicators -->
+<div class="flex items-center gap-space-md">
+<!-- 40x40 black rounded-square mark -->
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shrink-0 shadow-sm border border-black">
+<svg class="w-6 h-6 text-on-primary" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+<polyline points="2 17 12 22 22 17"></polyline>
+<polyline points="2 12 12 17 22 12"></polyline>
+</svg>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="text-headline-md font-headline-md tracking-wider text-primary font-bold">RankCrackers</span>
+<span class="text-on-surface-variant font-mono-sm font-semibold text-xs tracking-tight">// FOUNDER COMMAND</span>
+<!-- Founder Console Badge -->
+<span class="bg-[#FEF3C7] border border-[#FDE68A] text-[#92400E] font-mono-sm font-bold px-2 py-0.5 rounded text-[10px] tracking-wide uppercase">
+              FOUNDER CONSOLE
+            </span>
+</div>
+<!-- System Status Indicators -->
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-mono-sm text-[10px]">
+<span class="flex items-center gap-1 text-[#15803D] font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] inline-block animate-pulse"></span>
+              [• AUTOMATION ENGINE: ACTIVE]
+            </span>
+<span class="text-outline-variant">|</span>
+<span class="text-[#765a1a] font-medium">[LVL-0 FOUNDER AUTH: VERIFIED]</span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline font-mono-sm">COLLECTION: <code class="text-on-surface font-semibold">automation_runs</code></span>
+</div>
+</div>
+</div>
+<!-- Center: High-Density Telemetry Nav Links -->
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-on-surface-variant font-label-md text-xs uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#pipeline">Syllabus Pipeline</a>
+<a class="text-on-surface-variant font-label-md text-xs uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#linkage">PYQ Linkage</a>
+<a class="text-primary border-b-2 border-primary font-label-md text-xs uppercase tracking-wider py-1 font-semibold" href="#telemetry">Cockpit Telemetry</a>
+<a class="text-on-surface-variant font-label-md text-xs uppercase tracking-wider hover:text-on-surface py-1 transition-colors" href="#gate">Gate Clearance</a>
+</nav>
+<!-- Right: Trailing Primary/Secondary Actions & Telemetry Icons -->
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant pr-2 border-r border-outline-variant">
+<button class="p-1.5 hover:bg-surface-container-highest rounded text-on-surface-variant hover:text-on-surface active:scale-[0.99] transition-transform" title="Sync Pipelines">
+<span class="material-symbols-outlined text-[18px]" data-icon="sync">sync</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded text-on-surface-variant hover:text-on-surface active:scale-[0.99] transition-transform" title="Terminal Shell">
+<span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+</button>
+<button class="p-1.5 hover:bg-surface-container-highest rounded text-on-surface-variant hover:text-on-surface active:scale-[0.99] transition-transform relative" title="Telemetry Alerts">
+<span class="material-symbols-outlined text-[18px]" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-[#DC2626]"></span>
+</button>
+</div>
+<button class="border border-[#DC2626] text-[#DC2626] hover:bg-red-50 font-mono-sm text-xs font-bold px-2.5 py-1.5 rounded flex items-center gap-1.5 active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span>
+<span>Emergency Rollback</span>
+</button>
+<button class="bg-primary text-on-primary hover:bg-[#1E293B] font-mono-sm text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 shadow-sm active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
+<span>Deploy Changes</span>
+</button>
+<!-- Founder Avatar -->
+<div class="w-8 h-8 rounded-lg bg-surface-container border border-outline-variant flex items-center justify-center font-mono-sm text-xs font-bold text-primary ml-1" title="Founder Commander Operational Avatar">
+          FC-0
+        </div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 w-full overflow-hidden">
+<!-- SIDE NAV DOCK (Shared Component: SideNavBar) -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant flex flex-col justify-between shrink-0 hidden lg:flex select-none">
+<div class="p-space-md">
+<!-- Dock Header -->
+<div class="pb-3 border-b border-outline-variant flex items-center justify-between">
+<div>
+<div class="text-headline-sm font-headline-sm text-primary font-bold tracking-tight">RC // OP-GRID</div>
+<div class="text-mono-sm font-mono-sm text-[#15803D] flex items-center gap-1.5 mt-0.5 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-ping"></span>
+              STATUS: LIVE TELEMETRY
+            </div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]" data-icon="hub">hub</span>
+</div>
+<!-- Navigation Tabs -->
+<div class="mt-4 space-y-1">
+<div class="text-mono-sm font-mono-sm text-outline uppercase tracking-wider px-2 py-1">Mission Realms</div>
+<a class="flex items-center gap-space-sm bg-surface-container-high text-primary border-l-2 border-primary px-space-md py-space-xs font-label-md text-xs font-bold uppercase tracking-wider rounded-r" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="biotech">biotech</span>
+<span>NEET Master</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-xs uppercase tracking-wider transition-colors rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span>JEE Advanced</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-xs uppercase tracking-wider transition-colors rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance">account_balance</span>
+<span>UPSC Prelims</span>
+</a>
+<div class="pt-3 text-mono-sm font-mono-sm text-outline uppercase tracking-wider px-2 py-1">Validation Machinery</div>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-xs uppercase tracking-wider transition-colors rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="hub">hub</span>
+<span>PYQ Engine</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-xs uppercase tracking-wider transition-colors rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="fact_check">fact_check</span>
+<span>Forensic Ledger</span>
+</a>
+<a class="flex items-center gap-space-sm text-outline hover:bg-surface-container hover:text-on-surface px-space-md py-space-xs font-label-md text-xs uppercase tracking-wider transition-colors rounded" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="lock_clock">lock_clock</span>
+<span>Gate Controls</span>
+</a>
+</div>
+</div>
+<!-- Side Bar Bottom CTAs & Diagnostic Actions -->
+<div class="p-space-md border-t border-outline-variant bg-surface-container-low space-y-3">
+<button class="w-full bg-surface-container-lowest border border-outline-variant hover:border-outline text-on-surface font-mono-sm text-xs py-2 px-3 rounded flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="troubleshoot">troubleshoot</span>
+<span>Run Audit Diagnostics</span>
+</button>
+<div class="flex items-center justify-between text-mono-sm font-mono-sm text-outline pt-1">
+<div class="flex items-center gap-1.5 hover:text-on-surface cursor-pointer">
+<span class="material-symbols-outlined text-[14px]" data-icon="terminal">terminal</span>
+<span>System Shell</span>
+</div>
+<div class="flex items-center gap-1.5 hover:text-on-surface cursor-pointer">
+<span class="material-symbols-outlined text-[14px]" data-icon="tune">tune</span>
+<span>Config Registry</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN OPERATIONAL WORKSPACE -->
+<main class="flex-1 overflow-y-auto bg-background p-space-lg lg:p-space-xl flex flex-col gap-6">
+<!-- EXECUTIVE AUTHORITY BAR (Founder controls strictly at mission level, NOT atom level) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg tier-1-panel">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+<!-- Mission Realm Scope Title & Metadata -->
+<div>
+<div class="flex items-center gap-2 text-mono-sm text-outline font-semibold mb-1">
+<span class="text-[#9A7B38] font-bold">MISSION REALM SCOPE</span>
+<span>/</span>
+<span class="text-on-surface font-mono">NEET UG // SYLLABUS DIRECTORY 2026</span>
+<span class="px-1.5 py-0.2 bg-[#EEF2FF] border border-[#C7D2FE] text-[#4338CA] rounded font-mono-sm">ACTIVE DAG PIPELINE</span>
+</div>
+<div class="flex items-baseline gap-3">
+<h1 class="text-headline-lg font-headline-lg text-[#0F172A] font-bold tracking-tight">
+                NEET UG 2026 – Chemical Bonding &amp; Molecular Structure
+              </h1>
+<span class="font-mono-data text-mono-sm text-outline bg-surface-container px-2 py-0.5 rounded border border-outline-variant">
+                realm_neet_chem_bond_2026_v4
+              </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+              Deterministic automated verification pipeline governing Chapter 4 atomic knowledge structures, molecular geometry invariants, and historical PYQ parity matrices.
+            </p>
+</div>
+<!-- Executive Controls (Mission-Level Directives) -->
+<div class="flex flex-wrap items-center gap-2.5 shrink-0">
+<button class="border border-[#DC2626] text-[#DC2626] hover:bg-red-50 font-mono-sm text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 active:scale-[0.99] transition-all" title="Immediately freeze worker threads for this realm">
+<span class="material-symbols-outlined text-[15px]" data-icon="pause_circle">pause_circle</span>
+<span>Emergency Halt Pipeline</span>
+</button>
+<button class="border border-[#D97706] text-[#D97706] hover:bg-amber-50 font-mono-sm text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 active:scale-[0.99] transition-all" title="Block downstream student DigiBook publishing">
+<span class="material-symbols-outlined text-[15px]" data-icon="block">block</span>
+<span>Halt Student Delivery</span>
+</button>
+<button class="border border-[#64748B] text-[#475569] hover:bg-slate-100 font-mono-sm text-xs font-bold px-3 py-1.5 rounded flex items-center gap-1.5 active:scale-[0.99] transition-all" title="Archive entire mission schema version">
+<span class="material-symbols-outlined text-[15px]" data-icon="archive">archive</span>
+<span>Archive Mission</span>
+</button>
+<button class="bg-[#9A7B38] text-white hover:bg-[#85682D] font-mono-sm text-xs font-bold px-3.5 py-1.5 rounded flex items-center gap-1.5 shadow-sm active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-[15px]" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span>System Policy Settings</span>
+</button>
+</div>
+</div>
+<!-- Zero Manual Review Principle Banner -->
+<div class="mt-4 pt-3 border-t border-surface-container-high flex flex-wrap items-center justify-between gap-2 text-mono-sm text-outline">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#15803D]" data-icon="shield">shield</span>
+<span class="font-bold text-on-surface">ZERO MANUAL REVIEW MANDATE:</span>
+<span>No micro atom approvals or per-question endorsements. System auto-reconciles by mathematical consensus or stops at Gate 12 for high-level Founder Policy override.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+<span>State: Deterministic Contract Enforced</span>
+</div>
+</div>
+</section>
+<!-- 1. PIPELINE HEALTH & REAL STAGE COUNTERS (Firestore: automation_runs) -->
+<section class="space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-mono-sm font-bold text-xs uppercase tracking-wider text-on-surface">1. Pipeline Health &amp; Real Stage Counters</span>
+<span class="text-outline-variant">/</span>
+<span class="font-mono-sm text-[11px] text-[#64748B]">Real DAG Worker Ledger</span>
+</div>
+<div class="flex items-center gap-2 text-mono-sm text-[11px] text-outline">
+<span class="material-symbols-outlined text-[14px] text-[#15803D]" data-icon="database">database</span>
+<span>Telemetry Source: Firestore collection: <strong class="text-on-surface">automation_runs</strong> | State: Connected (1000ms heartbeat)</span>
+</div>
+</div>
+<!-- Stage Metric Cards Grid (Strict Light Slate Styling) -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+<!-- QUEUED -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-space-md tier-1-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-outline">QUEUED</span>
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#0F172A] leading-none">0</span>
+<span class="text-mono-sm text-outline">tasks</span>
+</div>
+<div class="text-[10px] font-mono-sm text-outline border-t border-surface-container pt-1">
+              status: <span class="text-[#64748B] font-semibold">idle</span>
+</div>
+</div>
+<!-- GENERATING -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-space-md tier-1-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-[#4338CA]">GENERATING</span>
+<span class="w-2 h-2 rounded-full bg-[#4338CA] animate-pulse"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#0F172A] leading-none">1</span>
+<span class="text-mono-sm text-[#4338CA] font-medium">active worker</span>
+</div>
+<div class="text-[10px] font-mono-sm text-[#4338CA] border-t border-surface-container pt-1">
+              worker_extract_04
+            </div>
+</div>
+<!-- VERIFYING -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-space-md tier-1-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-[#B45309]">VERIFYING</span>
+<span class="w-2 h-2 rounded-full bg-[#D97706] animate-pulse"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#0F172A] leading-none">1</span>
+<span class="text-mono-sm text-[#B45309] font-medium">running</span>
+</div>
+<div class="text-[10px] font-mono-sm text-outline border-t border-surface-container pt-1">
+              independent parity
+            </div>
+</div>
+<!-- RECONCILING -->
+<div class="bg-surface-container-lowest border border-[#FED88B] rounded p-space-md tier-1-panel flex flex-col justify-between bg-amber-50/20">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-[#92400E]">RECONCILING</span>
+<span class="w-2 h-2 rounded-full bg-[#9A7B38] animate-ping"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#92400E] leading-none">1</span>
+<span class="text-mono-sm text-[#92400E] font-medium">consensus</span>
+</div>
+<div class="text-[10px] font-mono-sm text-[#92400E] border-t border-amber-200/60 pt-1 font-semibold">
+              dual-worker engine
+            </div>
+</div>
+<!-- AUTO_PASSED -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-space-md tier-1-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-[#15803D]">AUTO_PASSED</span>
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#16A34A] leading-none">128</span>
+<span class="text-mono-sm text-[#15803D] font-medium">atoms</span>
+</div>
+<div class="text-[10px] font-mono-sm text-[#15803D] border-t border-surface-container pt-1">
+              &gt;99.2% confidence
+            </div>
+</div>
+<!-- AUTO_HOLD -->
+<div class="bg-[#FAF6EE] border border-[#EAD8B1] rounded p-space-md tier-2-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-[#9A7B38]">AUTO_HOLD</span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#DC2626] animate-pulse"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#9A7B38] leading-none">1</span>
+<span class="text-mono-sm text-[#DC2626] font-bold">policy halt</span>
+</div>
+<div class="text-[10px] font-mono-sm text-[#92400E] border-t border-[#EAD8B1] pt-1 font-semibold">
+              Gate 12 clearance req.
+            </div>
+</div>
+<!-- FAILED -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded p-space-md tier-1-panel flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-mono-sm text-[10px] uppercase font-bold text-outline">FAILED</span>
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+</div>
+<div class="mt-2 mb-1 flex items-baseline gap-2">
+<span class="text-display-lg font-headline-lg font-bold text-[#0F172A] leading-none">0</span>
+<span class="text-mono-sm text-outline">fatal</span>
+</div>
+<div class="text-[10px] font-mono-sm text-outline border-t border-surface-container pt-1">
+              0 worker crashes
+            </div>
+</div>
+</div>
+</section>
+<!-- 2. ACTIVE RUN TELEMETRY & 4. GROUPED POLICY EXCEPTION (Bento 2-Column Split) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6 items-start">
+<!-- SECTION 2: ACTIVE RUN TELEMETRY (Left Column: 5 Cols) -->
+<section class="xl:col-span-5 bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg tier-1-panel flex flex-col gap-4">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-high">
+<div>
+<div class="font-mono-sm text-[10px] uppercase text-[#64748B] font-bold">2. Active Run Telemetry</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-mono-data text-body-lg font-bold text-[#0F172A]">run_2026_chem_001</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50 border border-amber-200 text-[#92400E] font-mono-sm text-[10px] font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D97706] animate-pulse"></span>
+                  reconciling
+                </span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] font-mono-sm text-outline">TARGET REALM</div>
+<div class="text-mono-sm font-semibold text-on-surface">neet_chem_bond_v4</div>
+</div>
+</div>
+<!-- Gate 12 Publication Status Indicator Banner -->
+<div class="p-3 bg-[#FEF2F2] border border-[#FECACA] rounded flex items-start gap-3">
+<span class="material-symbols-outlined text-[#DC2626] text-[20px] shrink-0 mt-0.5" data-icon="gpp_bad">gpp_bad</span>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-mono-sm font-bold text-[#DC2626] uppercase">Publication Eligible: FALSE</span>
+<span class="text-[10px] font-mono bg-white text-[#DC2626] px-1.5 py-0.2 rounded border border-[#FECACA] font-bold">HALTED AT GATE 12</span>
+</div>
+<div class="text-body-sm font-body-sm text-[#991B1B] mt-0.5 leading-snug">
+                Autonomous Decision Reason: <span class="font-medium">"Discrepancy detected between NCERT 2026 Edition and archival answer keys on sp3d2 geometry."</span>
+</div>
+</div>
+</div>
+<!-- Dual-Worker Engine Deep Inspection -->
+<div class="space-y-3">
+<div class="flex items-center justify-between text-mono-sm">
+<span class="font-bold text-xs text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="compare_arrows">compare_arrows</span>
+                Dual-Worker Validation Engine
+              </span>
+<span class="text-outline text-[11px]">Consensus Delta: <strong class="text-[#DC2626]">Conflict</strong></span>
+</div>
+<!-- Worker 1: Canonical Extractor -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-3 text-body-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+<span class="font-mono-sm font-bold text-xs text-on-surface">Worker 1 (Canonical Extractor)</span>
+<span class="text-mono-sm text-[10px] text-outline font-mono">generatorResult</span>
+</div>
+<span class="bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-[10px] px-1.5 py-0.5 rounded font-bold">
+                  99.1% Confidence
+                </span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                Extracted from <strong class="text-[#0F172A]">NCERT 2026 Ed. Ch 4, Pg 142</strong>: Defines SF₆ and generic sp³d² complexes strictly as <em class="text-[#0F172A]">"rigid octahedral geometry with uniform 90° bond angles and zero axial variance in fundamental states"</em>.
+              </p>
+<div class="mt-2 text-mono-sm text-[10px] text-outline flex items-center gap-2">
+<span>Vector Hash: <code class="text-on-surface">ncert_26_c4_p142#sp3d2</code></span>
+<span>•</span>
+<span>Ground Truth: Direct</span>
+</div>
+</div>
+<!-- Worker 2: Independent Verifier -->
+<div class="bg-surface-container-low border border-outline-variant rounded p-3 text-body-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
+<span class="font-mono-sm font-bold text-xs text-on-surface">Worker 2 (Independent Verifier)</span>
+<span class="text-mono-sm text-[10px] text-outline font-mono">verifierResult</span>
+</div>
+<span class="bg-[#FFFBEB] border border-[#FDE68A] text-[#B45309] font-mono-sm text-[10px] px-1.5 py-0.5 rounded font-bold">
+                  98.6% Confidence
+                </span>
+</div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                Archival Audit: <strong class="text-[#0F172A]">NTA Official Answer Keys (2018–2024)</strong>. Across 42 past exam items, questions accepted Jahn-Teller distorted axial variance phrasing (Options B &amp; D dual-credit) rather than rigid singular answer.
+              </p>
+<div class="mt-2 text-mono-sm text-[10px] text-outline flex items-center gap-2">
+<span>Vector Hash: <code class="text-on-surface">nta_pyq_18_24_anskey_distort</code></span>
+<span>•</span>
+<span>Historical Precedent</span>
+</div>
+</div>
+</div>
+<!-- Consensus Status Explanation -->
+<div class="bg-surface-container rounded p-3 border border-outline-variant/60 text-xs">
+<div class="font-mono-sm font-bold text-[#0F172A] mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-[#9A7B38]" data-icon="policy">policy</span>
+              Autonomous Gate Consensus Evaluation
+            </div>
+<p class="text-on-surface-variant leading-normal">
+              Autonomous consensus engine flagged conflict between fresh authoritative textbook doctrine and historical scoring precedent. Zero routine human clicks required; system proactively held atom group publication until mission-level policy override is registered.
+            </p>
+</div>
+<!-- Real Evidence State Badge -->
+<div class="text-mono-sm text-[10px] text-outline flex items-center justify-between pt-1 border-t border-surface-container">
+<span>Evidence State: <strong class="text-[#15803D]">Cryptographically Bound</strong></span>
+<span>Heartbeat: <strong class="text-on-surface">14ms</strong></span>
+</div>
+</section>
+<!-- SECTION 4: GROUPED POLICY EXCEPTION (Right Column: 7 Cols) -->
+<section class="xl:col-span-7 bg-surface-container-lowest border-2 border-[#EAD8B1] rounded-lg p-space-lg tier-2-panel flex flex-col gap-5">
+<!-- Exception Banner & Identity -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[#F1F5F9]">
+<div>
+<div class="flex items-center gap-2">
+<span class="bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38] font-mono-sm text-xs font-bold px-2 py-0.5 rounded uppercase">
+                  FOUNDER POLICY OVERRIDE ONLY
+                </span>
+<span class="font-mono-data text-body-lg font-bold text-[#0F172A]">exc_sp3d2_084</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                Firestore Target: <code class="text-on-surface font-semibold">automation_exceptions/exc_sp3d2_084</code>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-[#FEF2F2] border border-[#FECACA] text-[#DC2626] font-mono-sm text-[11px] font-bold px-2.5 py-1 rounded">
+                CRITICAL POLICY LEVEL-0
+              </span>
+</div>
+</div>
+<!-- Scope of Impact Metric Ribbon -->
+<div class="grid grid-cols-3 gap-3">
+<div class="bg-surface-container-low border border-outline-variant rounded p-3">
+<div class="text-mono-sm text-[10px] text-outline uppercase font-semibold">Affected Questions</div>
+<div class="text-headline-md font-headline-md font-bold text-[#0F172A] mt-0.5">42 Items</div>
+<div class="text-mono-sm text-[10px] text-[#64748B]">PYQ 2018–2024 items</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant rounded p-3">
+<div class="text-mono-sm text-[10px] text-outline uppercase font-semibold">Knowledge Atom</div>
+<div class="text-body-lg font-mono font-bold text-[#0F172A] mt-0.5 truncate" title="CHEM-BOND-ATOM-042">ATOM-042</div>
+<div class="text-mono-sm text-[10px] text-[#64748B]">sp3d2 Molecular Geometry</div>
+</div>
+<div class="bg-surface-container-low border border-outline-variant rounded p-3">
+<div class="text-mono-sm text-[10px] text-outline uppercase font-semibold">Target DigiBook</div>
+<div class="text-headline-md font-headline-md font-bold text-[#0F172A] mt-0.5">Unit 04</div>
+<div class="text-mono-sm text-[10px] text-[#64748B]">1 Lesson held together</div>
+</div>
+</div>
+<!-- System Proposed Policy & Evidence -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-mono-sm font-bold text-xs uppercase tracking-wide text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-[#9A7B38]" data-icon="auto_awesome">auto_awesome</span>
+                AI Policy Recommendation &amp; Evidence Synthesis
+              </span>
+<span class="text-mono-sm text-[11px] text-[#15803D] font-semibold">Parity Engine POL-902 ready</span>
+</div>
+<div class="bg-[#F8F9FC] border border-outline-variant rounded-lg p-4 text-body-sm space-y-3">
+<div class="font-mono-sm text-xs text-[#0F172A] font-bold bg-white p-2 rounded border border-outline-variant/80">
+                Rule POL-902: Enable Dual-Answer Acceptance with Corrigendum Footnote
+              </div>
+<p class="text-on-surface-variant text-xs leading-relaxed">
+                "Auto-update 42 dependent question answer keys to award marks for both NCERT 2026 rigid wording (<strong class="text-[#0F172A]">Option B: 90° and 180°</strong>) and archival NTA phrasing (<strong class="text-[#0F172A]">Option B &amp; D Dual Award</strong>). Inject dynamic transition footnote in DigiBook Unit 04 clarifying the pedagogical evolution."
+              </p>
+<!-- Algorithmic Proof Specs -->
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-outline-variant/60 text-mono-sm text-[11px]">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-[#16A34A]" data-icon="check_circle">check_circle</span>
+<span>Zero student test score regression</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[14px] text-[#16A34A]" data-icon="check_circle">check_circle</span>
+<span>100% NCERT 2026 syllabus compliance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Cryptographic Non-Repudiation Checkbox -->
+<div class="bg-white border border-outline-variant rounded p-3 flex items-start gap-3">
+<input checked="" class="mt-1 h-4 w-4 rounded border-[#94A3B8] text-primary focus:ring-primary focus:ring-offset-0" id="coldline-audit" type="checkbox"/>
+<label class="text-xs text-on-surface-variant leading-snug cursor-pointer" for="coldline-audit">
+<strong class="text-[#0F172A]">Cryptographic non-repudiation audit receipt:</strong> Log transaction to Coldline Immutable Ledger (<code class="text-on-surface font-mono text-[10px]">sha256 signature generated upon override</code>). Required for Level-0 Founder authority audit trail.
+            </label>
+</div>
+<!-- Founder Policy Override Action Buttons -->
+<div class="space-y-2 pt-2 border-t border-surface-container-high">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+<!-- High-emphasis gold approval button -->
+<button class="flex-1 bg-[#9A7B38] text-white hover:bg-[#85682D] font-mono-sm text-xs font-bold py-2.5 px-4 rounded flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified_user">verified_user</span>
+<span>Apply Policy Override: Dual Answer Acceptance Rule POL-902</span>
+</button>
+<!-- Neutral outline hold button -->
+<button class="border border-outline-variant text-[#0F172A] hover:bg-surface-container font-mono-sm text-xs font-bold py-2.5 px-4 rounded flex items-center justify-center gap-2 active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="pause_presentation">pause_presentation</span>
+<span>Keep in Auto-Hold</span>
+</button>
+</div>
+<!-- Secondary council button -->
+<div class="flex justify-between items-center pt-1 text-mono-sm text-[11px]">
+<button class="text-outline hover:text-[#DC2626] font-medium flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]" data-icon="gavel">gavel</span>
+<span>Escalate to Academic Council for Manual Adjudication</span>
+</button>
+<span class="text-outline">Re-evaluates at Next Gazette Sync (T-04:22:18)</span>
+</div>
+</div>
+</section>
+</div>
+<!-- 5. RECENT EXCEPTION RESOLUTION LOG & WORKER TELEMETRY FOOTER -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg tier-1-panel space-y-3">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="font-mono-sm font-bold text-xs uppercase tracking-wider text-on-surface">5. Recent Exception Resolution Ledger</span>
+<span class="text-outline-variant">/</span>
+<span class="font-mono-sm text-[11px] text-[#64748B]">Coldline Audit Log (Last 24 Hours)</span>
+</div>
+<span class="font-mono-sm text-[11px] text-[#15803D] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span>
+            Immutable Storage Sync: Active
+          </span>
+</div>
+<!-- High-Density Forensic Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs font-mono-data border-collapse">
+<thead>
+<tr class="border-b border-surface-container-high text-outline font-mono-sm text-[10px] uppercase">
+<th class="py-2 px-3">Exception ID</th>
+<th class="py-2 px-3">Realm Scope</th>
+<th class="py-2 px-3">Discrepancy Nature</th>
+<th class="py-2 px-3">Resolution Mechanism</th>
+<th class="py-2 px-3">Status</th>
+<th class="py-2 px-3 text-right">Cryptographic Hash</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-mono font-bold text-[#0F172A]">exc_sol_019</td>
+<td class="py-2.5 px-3 text-on-surface-variant">realm_neet_solutions_v3</td>
+<td class="py-2.5 px-3 text-on-surface">Henry's Law constant units mismatch (bar vs kPa)</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-mono text-xs">Auto-resolved via Rule POL-881 (Dynamic Unit Normalizer)</td>
+<td class="py-2.5 px-3">
+<span class="bg-[#F0FDF4] border border-[#BBF7D0] text-[#15803D] font-mono-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase">
+                    AUTO_PASSED
+                  </span>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-[10px] text-outline">0x7f2a...89c1</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-mono font-bold text-[#0F172A]">exc_thermo_004</td>
+<td class="py-2.5 px-3 text-on-surface-variant">realm_jee_thermo_2025_v2</td>
+<td class="py-2.5 px-3 text-on-surface">IUPAC sign convention for work done (W = -PΔV)</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-mono text-xs">Full consensus reconciled with 100% parity across JEE 2012-2024</td>
+<td class="py-2.5 px-3">
+<span class="bg-[#F0FDF4] border border-[#86EFAC] text-[#166534] font-mono-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase">
+                    PUBLISHED
+                  </span>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-[10px] text-outline">0x3b11...90fe</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-3 font-mono font-bold text-[#0F172A]">exc_atomic_088</td>
+<td class="py-2.5 px-3 text-on-surface-variant">realm_neet_atomic_phys_v1</td>
+<td class="py-2.5 px-3 text-on-surface">Rydberg constant decimal precision in wave number calc</td>
+<td class="py-2.5 px-3 text-on-surface-variant font-mono text-xs">Founder Policy Override POL-844 (Round to 1.097 x 10^7 m^-1)</td>
+<td class="py-2.5 px-3">
+<span class="bg-[#FAF6EE] border border-[#EAD8B1] text-[#9A7B38] font-mono-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase">
+                    OVERRIDDEN
+                  </span>
+</td>
+<td class="py-2.5 px-3 text-right font-mono text-[10px] text-outline">0x99e4...b712</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SYSTEM FOOTER (Telemetry Metadata) -->
+<footer class="pt-2 pb-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-mono-sm text-[11px] text-outline border-t border-outline-variant">
+<div class="flex items-center gap-3">
+<span>Founder Node: <strong class="text-on-surface">DEL-ALPHA-01 // v4.12</strong></span>
+<span>•</span>
+<span>Encryption: <strong class="text-on-surface">AES-256 GCM</strong></span>
+<span>•</span>
+<span>Latency: <strong class="text-[#16A34A]">14ms</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span>
+<span>Defense-Grade Academic Knowledge Engine // Zero Manual Clicks Protocol</span>
+</div>
+</footer>
+</main>
+</div>
+<!-- Inline Script for Interactive Command Simulators (Toast feedback on founder actions) -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Emergency buttons interactive feedback
+      const emergencyBtn = document.querySelector('button[title*="Emergency Rollback"]');
+      if (emergencyBtn) {
+        emergencyBtn.addEventListener('click', () => {
+          alert('CONFIRMATION REQUIRED: Level-0 Founder Rollback initiated. Rolling back pipeline run_2026_chem_001 to checkpoint CP-991.');
+        });
+      }
+
+      // Founder Policy Override Button Interaction
+      const overrideBtn = document.querySelector('button:has(.material-symbols-outlined[data-icon="verified_user"])');
+      if (overrideBtn) {
+        overrideBtn.addEventListener('click', () => {
+          const coldlineBox = document.getElementById('coldline-audit');
+          const isSigned = coldlineBox && coldlineBox.checked;
+          if (isSigned) {
+            alert('FOUNDER POLICY OVERRIDE CONFIRMED: Rule POL-902 executed. 42 Dependent question items reconciled. Corrigendum note injected into DigiBook Unit 04. SHA-256 transaction logged to Coldline Storage.');
+          } else {
+            alert('AUTHORIZATION REJECTED: Cryptographic Coldline Audit Checkbox must remain enabled for Level-0 Founder overrides.');
+          }
+        });
+      }
+    });
+  </script>
+</body></html>

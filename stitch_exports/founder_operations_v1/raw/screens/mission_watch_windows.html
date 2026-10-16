@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed-dim": "#c3c0ff",
+          "on-primary-container": "#7c839b",
+          "on-secondary-fixed-variant": "#5c4301",
+          "error": "#ba1a1a",
+          "secondary-fixed-dim": "#e7c277",
+          "surface-variant": "#e1e2e5",
+          "primary-fixed": "#dae2fd",
+          "primary": "#000000",
+          "surface-container": "#edeef1",
+          "on-primary": "#ffffff",
+          "outline": "#76777d",
+          "on-error-container": "#93000a",
+          "inverse-primary": "#bec6e0",
+          "on-tertiary": "#ffffff",
+          "tertiary": "#000000",
+          "inverse-surface": "#2e3133",
+          "surface": "#f8f9fc",
+          "on-background": "#191c1e",
+          "on-secondary-container": "#795d1c",
+          "surface-container-low": "#f2f3f6",
+          "on-surface": "#191c1e",
+          "error-container": "#ffdad6",
+          "primary-fixed-dim": "#bec6e0",
+          "surface-container-highest": "#e1e2e5",
+          "on-error": "#ffffff",
+          "inverse-on-surface": "#f0f1f4",
+          "surface-tint": "#565e74",
+          "on-tertiary-container": "#7671ff",
+          "tertiary-fixed": "#e2dfff",
+          "surface-dim": "#d9dadd",
+          "secondary-fixed": "#ffdea0",
+          "surface-container-high": "#e7e8eb",
+          "on-primary-fixed": "#131b2e",
+          "background": "#f8f9fc",
+          "on-surface-variant": "#45464d",
+          "tertiary-container": "#0f0069",
+          "secondary-container": "#fed88b",
+          "outline-variant": "#c6c6cd",
+          "surface-bright": "#f8f9fc",
+          "on-primary-fixed-variant": "#3f465c",
+          "primary-container": "#131b2e",
+          "on-secondary": "#ffffff",
+          "on-secondary-fixed": "#261a00",
+          "on-tertiary-fixed": "#0f0069",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary-fixed-variant": "#3323cc",
+          "secondary": "#765a1a"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "gutter-desktop": "1.25rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.25rem",
+          "margin": "1rem",
+          "space-xl": "1.75rem",
+          "gutter": "1rem",
+          "margin-desktop": "2rem",
+          "space-sm": "0.5rem",
+          "space-md": "0.75rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Inter"
+          ],
+          "label-lg": [
+            "Inter"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "mono-data": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "mono-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Inter"
+          ],
+          "display-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "body-sm": [
+            "Inter"
+          ],
+          "label-md": [
+            "Inter"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-lg": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-md": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-data": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "mono-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "16px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "display-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-md": [
+            "11px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="h-14 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><span class="material-symbols-outlined text-primary text-[20px]">terminal</span><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none">RankCrackers</span><span class="font-mono-sm text-mono-sm uppercase text-on-surface-variant tracking-wider mt-0.5">Founder Ops Platform</span></div></div><nav class="px-space-sm py-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg"><div class="px-space-sm pt-space-xs pb-space-xs font-mono-sm text-mono-sm uppercase text-on-surface-variant font-semibold tracking-wider">Operations</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="operations-overview" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span>Operations Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="mission-control" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span>Mission Control</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg" data-path="mission-watch" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">schedule</span><span>Mission Watch</span></div><span class="font-mono-sm text-mono-sm px-1 py-0.2 bg-surface-container rounded-sm">4X</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="student-delivery" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span>Student Delivery</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="monetization-revenue" href="#"><span class="material-symbols-outlined text-[18px]">payments</span><span>Monetization &amp; Revenue</span></a><div class="px-space-sm pt-space-md pb-space-xs font-mono-sm text-mono-sm uppercase text-on-surface-variant font-semibold tracking-wider">Academic Pipeline</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="official-documents-source-pair" href="#"><span class="material-symbols-outlined text-[18px]">library_books</span><span>Official Docs &amp; Pair</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="notification-extraction" href="#"><span class="material-symbols-outlined text-[18px]">feed</span><span>Notification Extract</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="syllabus-verification" href="#"><span class="material-symbols-outlined text-[18px]">verified</span><span>Syllabus Verification</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="pyq-question-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">quiz</span><span>PYQ &amp; Questions</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="factory-hub" href="#"><span class="material-symbols-outlined text-[18px]">precision_manufacturing</span><span>Factory Hub</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="crucible-engine" href="#"><span class="material-symbols-outlined text-[18px]">science</span><span>Crucible Engine</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="digibook-flow" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>DigiBook Flow</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="publish-gate" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[18px]">fact_check</span><span>Publish Gate</span></div><span class="font-mono-sm text-mono-sm px-1 py-0.2 bg-secondary-container text-on-secondary-container rounded-sm font-semibold">13-PT</span></a><div class="px-space-sm pt-space-md pb-space-xs font-mono-sm text-mono-sm uppercase text-on-surface-variant font-semibold tracking-wider">Governance &amp; Admin</div><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="admin-work-queue" href="#"><span class="material-symbols-outlined text-[18px]">assignment</span><span>Admin Work Queue</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="study-master" href="#"><span class="material-symbols-outlined text-[18px]">bookmark_manager</span><span>Study Master</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="ai-intelligence-ops" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span><span>AI Intelligence Ops</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="activity-audit-log" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span>Activity &amp; Audit Log</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="founder-access-governance" href="#"><span class="material-symbols-outlined text-[18px]">shield_person</span><span>Founder Governance</span></a><a class="flex items-center gap-space-sm px-space-sm py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-lg text-label-lg transition-colors" data-path="system-operations" href="#"><span class="material-symbols-outlined text-[18px]">settings_system_daydream</span><span>System Operations</span></a></nav></div><div class="p-space-sm bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-xs"><span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Role: Founder Active</span><div class="flex gap-0.5 p-0.5 bg-surface-container rounded"><button class="font-mono-sm text-mono-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-semibold">FND</button><button class="font-mono-sm text-mono-sm px-1.5 py-0.5 rounded text-on-surface-variant hover:text-on-surface">ADM</button></div></div><div class="flex flex-col px-space-xs pt-1"><div class="flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm"><span class="font-medium">DEL-ALPHA-01</span><span>v4.12.0</span></div><div class="flex items-center gap-1 font-mono-sm text-mono-sm text-on-surface-variant mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>AP-SOUTH-1A (MUMBAI)</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-14 px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm uppercase tracking-tight text-on-surface">RankCrackers</span><span class="font-mono-sm text-mono-sm text-on-surface-variant">//</span><span class="font-mono-data text-mono-data uppercase font-bold text-on-surface tracking-wide">Founder Command</span></div><div class="hidden xl:flex items-center gap-space-xs px-2 py-0.5 rounded bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-mono-sm text-mono-sm font-semibold tracking-wider text-on-surface">SYNC: NOMINAL</span></div><div class="hidden 2xl:flex items-center gap-space-xs px-2 py-0.5 rounded bg-surface-container-lowest text-secondary shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-[14px]">verified_user</span><span class="font-mono-sm text-mono-sm font-semibold uppercase tracking-wider">LVL-0 Founder Auth: Verified</span></div></div><div class="flex items-center gap-space-sm"><button class="h-8 px-space-sm flex items-center gap-1.5 rounded bg-tertiary-container text-on-tertiary font-label-md text-label-md uppercase tracking-wider shadow-[0_1px_4px_rgba(0,0,0,0.04)] hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-[16px]">bolt</span><span>Deploy Changes</span></button><button class="h-8 px-space-sm flex items-center gap-1.5 rounded bg-surface-container-lowest text-error font-label-md text-label-md uppercase tracking-wider shadow-[0_1px_4px_rgba(0,0,0,0.02)] hover:bg-error-container hover:text-on-error-container transition-colors"><span class="material-symbols-outlined text-[16px]">crisis_alert</span><span>Emergency Rollback</span></button><div class="flex items-center gap-1 pl-space-xs"><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-colors" title="Terminal Toggle"><span class="material-symbols-outlined text-[18px]">terminal</span></button><button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-colors" title="Synchronize System"><span class="material-symbols-outlined text-[18px]">sync</span></button><button class="relative w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-colors" title="Notifications"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="h-7 px-gutter-desktop bg-surface-container-low flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm"><div class="flex items-center gap-space-xs"><span>RC-ROOT</span><span>/</span><span>CONSOLE</span><span>/</span><span class="font-semibold text-on-surface uppercase">Operations Live</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>PIPELINE ENGINE: IDLE</span></span><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>WORKERS: 18/18</span></span></div></div></header><main class="relative pt-20 w-full px-gutter-desktop min-h-screen bg-surface"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Context & Action Strip -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="text-outline-variant font-mono-sm">/</span>
+<a class="hover:text-primary transition-colors" data-path="operations-overview" href="#">Operations</a>
+<span class="text-outline-variant font-mono-sm">/</span>
+<span class="font-medium text-primary">Mission Watch: 4 Daily Polling Windows</span>
+</div>
+<div class="flex items-center gap-2 pt-0.5">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Authority Mission Watch</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-mono-sm text-mono-sm font-semibold tracking-wide shadow-sm">
+          POLLING ENGINE: 4X DAILY
+        </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-wider">
+          Next Polling Window: <strong class="text-primary font-semibold">18:00 IST</strong> <span class="text-secondary">(T-minus 42m)</span>
+</span>
+</div>
+<a class="h-8 px-3 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container-high transition-colors flex items-center gap-1.5 font-label-md text-label-md uppercase tracking-wider shadow-sm" data-path="operations-overview" href="#">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span>Operations Overview</span>
+</a>
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center gap-1.5 font-label-md text-label-md uppercase tracking-wider shadow-sm" id="triggerManualAuditBtn">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Trigger Immediate Audit</span>
+</button>
+</div>
+</section>
+<!-- Authority Targets Banner Pill -->
+<section class="mb-space-lg p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-sm font-mono-sm text-mono-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-semibold uppercase">Cadence: Active</span>
+<span class="text-on-surface-variant">5 Target Authorities Supervised:</span>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-medium">NTA (National Testing Agency)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-medium">NMC (National Medical Commission)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-medium">NCERT Textbooks</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-medium">UPSC Gazette</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-medium">CBSE Academic</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-mono-sm text-mono-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Sub-second DOM Mutation Fingerprinting</span>
+</div>
+</section>
+<!-- Top Telemetry Metrics (4 Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Card 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm uppercase text-on-surface-variant tracking-wider">Worker Telemetry</span>
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">8 / 8</span>
+<span class="font-mono-sm text-mono-sm text-secondary font-medium">NOMINAL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">0 worker dropouts • 12ms edge latency</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm">
+<span>DEL-CORE / AP-SOUTH</span>
+<span class="text-secondary font-semibold">100% HEALTH</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm uppercase text-on-surface-variant tracking-wider">Last Audit Window</span>
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">12:00 IST</span>
+<span class="font-mono-sm text-mono-sm text-secondary font-medium">CLEAN</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Zero faults detected • 14 portals audited</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm">
+<span>EXECUTION: 18.2s</span>
+<span class="text-primary font-semibold">ALL HASHES MATCH</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm uppercase text-secondary tracking-wider font-semibold">Source Drift Alert</span>
+<span class="w-6 h-6 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary tracking-tight">1 ADVISORY</span>
+<span class="font-mono-sm text-mono-sm px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container font-semibold">HIGH</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">NTA NEET UG Bulletin Corrigendum</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm">
+<span>DETECTED: 17:45 GMT</span>
+<span class="text-secondary font-semibold">NEEDS ATTENTION</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<span class="font-mono-sm text-mono-sm uppercase text-on-surface-variant tracking-wider">Founder Queue</span>
+<span class="w-6 h-6 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[14px]">gavel</span>
+</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tight">1 PENDING</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">LVL-0 AUTH</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tie-breaker rules clarification decision</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm">
+<span>AUTO-ESCALATED</span>
+<span class="text-primary font-semibold">ACTION REQ.</span>
+</div>
+</div>
+</section>
+<!-- The 4 Daily Schedule Windows Grid -->
+<section class="mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">4 Daily Synchronous Execution Windows</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-medium">(24h Rolling Telemetry Cycle)</span>
+</div>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Automated Chromium Headless Farm</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Slot 1: 00:00 IST -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">00:00 IST WINDOW</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-sm text-mono-sm font-semibold tracking-wider">
+              COMPLETED - PASS
+            </span>
+</div>
+<div class="space-y-1.5 text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex justify-between">
+<span>Authorities Polled:</span>
+<span class="font-semibold text-primary">14 Portals</span>
+</div>
+<div class="flex justify-between">
+<span>Diff Detected:</span>
+<span class="font-medium text-primary">0 Bytes (Zero Drift)</span>
+</div>
+<div class="flex justify-between">
+<span>Exec Timestamp:</span>
+<span class="text-primary">00:00:14 IST</span>
+</div>
+<div class="flex justify-between items-center pt-1">
+<span>Evidence Hash:</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-primary text-[10px] font-mono-data">sha256:e01b44...</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full h-8 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>Inspect Log</span>
+</button>
+</div>
+</div>
+<!-- Slot 2: 06:00 IST -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">06:00 IST WINDOW</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-sm text-mono-sm font-semibold tracking-wider">
+              COMPLETED - PASS
+            </span>
+</div>
+<div class="space-y-1.5 text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex justify-between">
+<span>Authorities Polled:</span>
+<span class="font-semibold text-primary">14 Portals</span>
+</div>
+<div class="flex justify-between">
+<span>Diff Detected:</span>
+<span class="font-medium text-primary">0 Bytes</span>
+</div>
+<div class="flex justify-between">
+<span>Exec Timestamp:</span>
+<span class="text-primary">06:00:21 IST</span>
+</div>
+<div class="flex justify-between items-center pt-1">
+<span>Evidence Hash:</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-primary text-[10px] font-mono-data">sha256:c44a89...</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full h-8 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>Inspect Log</span>
+</button>
+</div>
+</div>
+<!-- Slot 3: 12:00 IST -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">12:00 IST WINDOW</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-sm text-mono-sm font-semibold tracking-wider">
+              COMPLETED - PASS
+            </span>
+</div>
+<div class="space-y-1.5 text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex justify-between">
+<span>Authorities Polled:</span>
+<span class="font-semibold text-primary">14 Portals</span>
+</div>
+<div class="flex justify-between">
+<span>Diff Detected:</span>
+<span class="font-medium text-primary">0 Bytes</span>
+</div>
+<div class="flex justify-between">
+<span>Exec Timestamp:</span>
+<span class="text-primary">12:00:18 IST</span>
+</div>
+<div class="flex justify-between items-center pt-1">
+<span>Evidence Hash:</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-primary text-[10px] font-mono-data">sha256:889fc1...</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full h-8 px-2 rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[15px]">code</span>
+<span>Inspect Log</span>
+</button>
+</div>
+</div>
+<!-- Slot 4: 18:00 IST (Active / Review Required) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between transition-all hover:shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">18:00 IST WINDOW</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono-sm text-mono-sm font-bold tracking-wider">
+              UPDATE DETECTED
+            </span>
+</div>
+<div class="space-y-1.5 text-on-surface-variant font-mono-sm text-mono-sm">
+<div class="flex justify-between">
+<span>Authorities Polled:</span>
+<span class="font-semibold text-primary">14 Portals</span>
+</div>
+<div class="flex justify-between items-start">
+<span>Diff:</span>
+<span class="font-bold text-secondary text-right line-clamp-1">1 Source Mutation (NTA)</span>
+</div>
+<div class="flex justify-between">
+<span>Exec Timestamp:</span>
+<span class="text-primary font-medium">18:00:09 IST</span>
+</div>
+<div class="flex justify-between items-center pt-1">
+<span>Payload Artifact:</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-primary text-[10px] font-mono-data font-semibold">PDF 1.4 MB (6 pgs)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs">
+<button class="w-full h-8 px-2 rounded-lg bg-tertiary-container text-on-tertiary hover:bg-primary-container transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-sm" id="scrollToDiffBtn">
+<span class="material-symbols-outlined text-[15px]">splitscreen</span>
+<span>Review Advisory</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Real-time Authority Watch Feed & Portal Auditing -->
+<section class="mb-space-lg">
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<!-- Card Header -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Authority Surveillance Radar</h2>
+<p class="font-mono-sm text-mono-sm text-on-surface-variant">Live endpoint state machine &amp; change fingerprint tracker</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant px-2 py-1 rounded bg-surface-container">14 Active Scrapers</span>
+<span class="font-mono-sm text-mono-sm text-secondary font-semibold px-2 py-1 rounded bg-secondary-container">1 Escalation Pending</span>
+</div>
+</div>
+<!-- Feed Rows -->
+<div class="divide-y-0 flex flex-col">
+<!-- Row 1: NTA (Update Detected) -->
+<div class="p-space-md bg-surface-container-low/40 hover:bg-surface-container transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3 max-w-3xl">
+<div class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">announcement</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">nta.ac.in/neet</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono-sm text-mono-sm font-bold tracking-wider">
+                  UPDATE DETECTED
+                </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-highest text-error font-mono-sm text-mono-sm font-semibold">
+                  SEVERITY: HIGH
+                </span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Target Mission: NEET 2026 UG</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-medium text-primary">AI Autonomous Extract:</strong> “Public Corrigendum to Section 5.3: Age criteria and subsequent tie-breaker sequence adjusted for candidates sharing identical percentile scores. Canonical exam syllabus remains unaltered.”
+              </p>
+<div class="flex items-center gap-3 font-mono-sm text-mono-sm text-on-surface-variant pt-0.5">
+<span>Mutation Hash: <code class="text-primary font-mono-data">sha256:7b91...</code></span>
+<span>•</span>
+<span>Latency: 84ms</span>
+<span>•</span>
+<span>Artifact: <a class="underline hover:text-primary" href="#">NEET_UG_2026_Corrigendum_01.pdf</a></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_task</span>
+<span>Create Mission Task</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-1 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Diff</span>
+</button>
+</div>
+</div>
+<!-- Row 2: NCERT (Stable) -->
+<div class="p-space-md hover:bg-surface-container transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">ncert.nic.in/textbooks</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-sm text-mono-sm font-semibold tracking-wider">
+                  STABLE / NO DIFF
+                </span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Class XI &amp; XII Physics, Chemistry, Biology</span>
+</div>
+<div class="flex items-center gap-3 font-mono-sm text-mono-sm text-on-surface-variant">
+<span>Audited: 12:00 IST</span>
+<span>•</span>
+<span class="text-primary font-semibold">Parity: 100%</span>
+<span>•</span>
+<span>Evidence Hash: <code class="text-primary font-mono-data">sha256:3a4b...</code></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Status Verified</span>
+</div>
+</div>
+<!-- Row 3: NMC (Stable) -->
+<div class="p-space-md hover:bg-surface-container transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">nmc.org.in/regulations</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-mono-sm text-mono-sm font-semibold tracking-wider">
+                  STABLE / NO DIFF
+                </span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Undergraduate Medical Education Board</span>
+</div>
+<div class="flex items-center gap-3 font-mono-sm text-mono-sm text-on-surface-variant">
+<span>Audited: 12:00 IST</span>
+<span>•</span>
+<span class="text-primary font-semibold">Parity: 100%</span>
+<span>•</span>
+<span>Evidence Hash: <code class="text-primary font-mono-data">sha256:11e9...</code></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Status Verified</span>
+</div>
+</div>
+<!-- Row 4: UPSC (Awaiting Sync) -->
+<div class="p-space-md hover:bg-surface-container transition-colors flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">hourglass_empty</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-mono-data text-mono-data font-bold text-primary">upsc.gov.in/notifications</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono-sm text-mono-sm font-medium tracking-wider">
+                  AWAITING SYNC
+                </span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Civil Services &amp; Combined Geoscientist</span>
+</div>
+<div class="flex items-center gap-3 font-mono-sm text-mono-sm text-on-surface-variant">
+<span>State: Idle</span>
+<span>•</span>
+<span>Queued For Next Window: 18:00 IST</span>
+<span>•</span>
+<span>Prior Hash: <code class="text-primary font-mono-data">sha256:91fd...</code></span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<span class="font-mono-sm text-mono-sm text-on-surface-variant font-mono">T-42m</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Watch Inspector & Diff Evidence Split Panel (Section 5) -->
+<section class="mb-space-lg" id="diffInspectorSection">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">Watch Inspector // Diff Evidence Matrix</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-mono-sm text-mono-sm font-bold">
+          MUTATION REF #NTA-2026-081
+        </span>
+</div>
+<div class="flex items-center gap-2 font-mono-sm text-mono-sm text-on-surface-variant">
+<span>Source: NTA Official Gazette</span>
+<span class="text-outline-variant">|</span>
+<span class="text-secondary font-semibold">Requires Founder Level-0 Signoff</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: Raw HTTP Header & Evidence Hash Payload -->
+<div class="lg:col-span-5 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">Raw Portal Evidence</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-1.5 py-0.2 rounded bg-surface-container text-primary font-semibold">HTTP 200 OK</span>
+</div>
+<!-- HTTP Headers Monospace Block -->
+<div class="p-space-sm rounded-lg bg-surface-container-low font-mono-data text-mono-data text-on-surface space-y-1.5 overflow-x-auto">
+<div class="text-on-surface-variant text-[11px] font-semibold uppercase tracking-wider mb-1">Response Headers &amp; Fingerprint</div>
+<div><span class="text-on-surface-variant font-normal">Endpoint:</span> <span class="font-medium text-primary">https://nta.ac.in/neet/public-notice-corrigendum</span></div>
+<div><span class="text-on-surface-variant font-normal">ETag:</span> <span class="font-bold text-primary">"w/592-62819-99a1"</span></div>
+<div><span class="text-on-surface-variant font-normal">Content-Length:</span> <span class="font-bold text-primary">1,468,201 bytes</span></div>
+<div><span class="text-on-surface-variant font-normal">Content-Type:</span> application/pdf</div>
+<div><span class="text-on-surface-variant font-normal">Last-Modified:</span> Today, 17:45:00 GMT</div>
+<div><span class="text-on-surface-variant font-normal">SHA256:</span> 7b91d283e1fa0c228d9c12e84...</div>
+<div><span class="text-on-surface-variant font-normal">Edge PoP:</span> DEL-BOM-GW03 (Cloudflare Tier-1)</div>
+</div>
+<!-- Visual Artifact Card Preview -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-lowest shadow-sm flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-primary">NEET_UG_Corrigendum_TieBreaker.pdf</span>
+<span class="font-mono-sm text-mono-sm text-on-surface-variant">Official Document Signed • 6 Pages • 1.4 MB</span>
+</div>
+</div>
+<button class="h-7 px-2.5 rounded bg-surface-container-lowest text-primary hover:bg-surface-container-high transition-colors font-label-md text-label-md flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+<span>Open</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-mono-sm text-mono-sm">
+<span>Worker Node: AP-SOUTH-1A</span>
+<span>Verified Non-Repudiation Logged</span>
+</div>
+</div>
+<!-- Right: AI Autonomous Extraction Analysis & Founder Intervention -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-xs mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary">AI Extraction Analysis &amp; Impact Assessment</span>
+</div>
+<span class="font-mono-sm text-mono-sm px-2 py-0.5 rounded bg-surface-container text-primary font-bold">CONFIDENCE: 99.4%</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Impact Assessment Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-lg text-label-lg font-semibold text-primary">Section Drift: Clause 5.3.2 (Inter-se Merit Determination)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+                NTA has reinstated the criterion of <span class="font-medium text-primary">“higher marks/percentile score in Biology (Botany &amp; Zoology)”</span> followed by Chemistry, followed by Physics, prior to age-based tie breaking. This reverses the tentative circular from last month and restores the classical tie-breaker sequence.
+              </p>
+</div>
+<!-- Risk Matrix Strip -->
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2 rounded-lg bg-surface-container">
+<div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Syllabus Invalidation</div>
+<div class="font-mono-data text-mono-data font-bold text-primary mt-0.5">0% (NONE)</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container">
+<div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Question Bank Drift</div>
+<div class="font-mono-data text-mono-data font-bold text-primary mt-0.5">ZERO KEYS</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container">
+<div class="font-mono-sm text-mono-sm text-on-surface-variant uppercase">Admissions Logic</div>
+<div class="font-mono-data text-mono-data font-bold text-secondary mt-0.5">MUTATED</div>
+</div>
+</div>
+<!-- Recommended Action -->
+<div class="p-space-sm rounded-lg bg-secondary-container/40">
+<div class="flex items-center gap-1.5 text-secondary font-headline-sm text-headline-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>Recommended Founder Action:</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+                Approve Corrigendum mapping note into student counsel handbook. No question bank regeneration or digibook invalidation is necessary. Founder authorization is strictly required to archive this alert from active surveillance.
+              </p>
+</div>
+</div>
+</div>
+<!-- Founder Action Bar -->
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5 font-mono-sm text-mono-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Awaiting Level-0 Key Holder Decision</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-1.5 shadow-sm" id="escalateAcademicBtn">
+<span class="material-symbols-outlined text-[16px]">school</span>
+<span>Escalate to Academic Team</span>
+</button>
+<button class="h-8 px-4 rounded-lg bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-1.5 shadow-sm font-bold" id="approveDismissBtn">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Approve &amp; Dismiss Alert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Diagnostics Footer Strip (Section 6) -->
+<footer class="mt-space-md p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm font-mono-sm text-mono-sm text-on-surface-variant">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">dns</span>
+<span>FOUNDER NODE: <strong class="text-primary font-semibold">DEL-ALPHA-01 // v4.12</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">lock</span>
+<span>ENCRYPTION: <strong class="text-primary font-semibold">AES-256 GCM</strong></span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+<span>CRON SYNC: <strong class="text-primary font-semibold">00:00 / 06:00 / 12:00 / 18:00 IST</strong></span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="uppercase tracking-wider">ALL 8 WORKER FLEETS SYNCHRONIZED</span>
+</div>
+</footer>
+</div>
+<script>
+  // Simple micro-interactions for dashboard actions
+  document.getElementById('scrollToDiffBtn')?.addEventListener('click', () => {
+    const section = document.getElementById('diffInspectorSection');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  document.getElementById('approveDismissBtn')?.addEventListener('click', function() {
+    this.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+    this.classList.add('bg-surface-container', 'text-primary');
+    this.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> <span>APPROVED & SIGNED</span>';
+    this.disabled = true;
+    
+    // Provide visual confirmation toast
+    const note = document.createElement('div');
+    note.className = 'fixed bottom-5 right-5 z-50 px-4 py-2 bg-surface-container-lowest text-primary font-mono-sm text-mono-sm rounded-lg shadow-lg flex items-center gap-2';
+    note.innerHTML = '<span class="material-symbols-outlined text-secondary text-[18px]">verified</span> <span>Founder Override Confirmed. Advisory #NTA-2026-081 archived.</span>';
+    document.body.appendChild(note);
+    setTimeout(() => note.remove(), 4000);
+  });
+
+  document.getElementById('escalateAcademicBtn')?.addEventListener('click', function() {
+    this.innerHTML = '<span class="material-symbols-outlined text-[16px]">forward_to_inbox</span> <span>ESCALATED</span>';
+    this.classList.add('opacity-75');
+  });
+
+  document.getElementById('triggerManualAuditBtn')?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    if (icon) icon.classList.add('animate-spin');
+    setTimeout(() => {
+      if (icon) icon.classList.remove('animate-spin');
+      alert('Manual Audit completed. 14 Authority endpoints validated against canonical hashes.');
+    }, 1200);
+  });
+</script></main></div></body></html>

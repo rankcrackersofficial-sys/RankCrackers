@@ -54,6 +54,7 @@ const { queueWorker } = require("./lib/workers/queueWorker");
 // 🔱 UNIFIED MISSION ENRICHMENT WORKER (W1 live integration — B2/B3 contracts inside)
 const { missionEnrichmentWorker } = require("./workers/mission_enrichment_worker");
 const { authorityWatchWorker } = require("./workers/authority_watch_worker");
+const { automationPipelineWorker } = require("./workers/automation_pipeline_worker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -69,6 +70,7 @@ exports.knowledgeManifestationWorker = knowledgeManifestationWorker;
 exports.queueWorker = queueWorker;
 exports.missionEnrichmentWorker = missionEnrichmentWorker;
 exports.authorityWatchWorker = authorityWatchWorker;
+exports.automationPipelineWorker = automationPipelineWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");

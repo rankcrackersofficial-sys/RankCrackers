@@ -1,0 +1,535 @@
+{
+  "project": "RankCrackers-55",
+  "target": "Founder and Admin Operations Web Panel",
+  "designSystem": "Executive Command Slate (Canonical Daylight Light Theme)",
+  "stitchProjectId": "projects/4118470231548818114",
+  "screens": [
+    {
+      "id": "SCR-01",
+      "name": "Operations Overview",
+      "route": "/operations/overview",
+      "category": "OPERATIONS",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/01_operations_overview.html",
+      "layout": "Desktop 12-column modular grid with sticky header, context bar, collapsible sidebar, 7 stage counter tiles, dual-worker run telemetry card, and grouped exception desk.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 24px Bold",
+        "metrics": "JetBrains Mono 18px Bold",
+        "body": "Inter 13px Regular"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A",
+        "accent": "#9A7B38"
+      },
+      "buttons": [
+        "[Emergency Halt Pipeline]",
+        "[Halt Student Delivery]",
+        "[Archive Mission]",
+        "[System Policy Settings]",
+        "[Apply Policy Override: Dual Answer Acceptance Rule POL-902]"
+      ],
+      "accessibilityLabels": {
+        "header": "Platform Executive Header",
+        "telemetryDeck": "Realtime Pipeline Health Deck",
+        "activeRun": "Active Pipeline Extraction Run Status",
+        "exceptionDesk": "Grouped Policy Discrepancy Desk"
+      }
+    },
+    {
+      "id": "SCR-02",
+      "name": "Mission Control",
+      "route": "/operations/missions",
+      "category": "OPERATIONS",
+      "stitchScreenId": "79fee639226c4dabaf54f6a223d007b3",
+      "screenshotPath": "screenshots/founder_mission_control.png",
+      "rawScreenPath": "raw/screens/02_mission_control.html",
+      "layout": "Mission realm selection grid, active stage status, student delivery toggle, cryptographic source binding status, and mission archive controls.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "metrics": "JetBrains Mono 14px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Select Mission Realm]",
+        "[Halt Mission Delivery]",
+        "[Archive Realm]",
+        "[Inspect DAG]"
+      ],
+      "accessibilityLabels": {
+        "missionList": "Active Exam Mission Realms List",
+        "actions": "Mission Lifecycle Control Bar"
+      }
+    },
+    {
+      "id": "SCR-03",
+      "name": "Mission Watch",
+      "route": "/operations/mission-watch",
+      "category": "OPERATIONS",
+      "stitchScreenId": "2e623f23c5a943e7b47077f0818654f5",
+      "screenshotPath": "screenshots/mission_watch_windows.png",
+      "rawScreenPath": "raw/screens/03_mission_watch.html",
+      "layout": "4 daily automated scan windows (00:00, 06:00, 12:00, 18:00 IST), gazette hash comparison, official source scraper logs, drift detector.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "time": "JetBrains Mono 16px Bold",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A",
+        "emerald": "#15803D"
+      },
+      "buttons": [
+        "[Trigger Immediate Watch Scan]",
+        "[View Scraper Hash Log]",
+        "[Filter by Authority]"
+      ],
+      "accessibilityLabels": {
+        "scanSchedule": "Four Daily Scheduled Scans Timeline",
+        "authorityStatus": "Exam Authority Watch Status"
+      }
+    },
+    {
+      "id": "SCR-04",
+      "name": "Mission Documents",
+      "route": "/academic/documents",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "3abc3494d62e4a5ea4ffc79c421049b3",
+      "screenshotPath": "screenshots/official_documents_source_pair.png",
+      "rawScreenPath": "raw/screens/04_mission_documents.html",
+      "layout": "Cryptographic HTTPS Binding Console, dual PDF dropzones (Information Bulletin + Official Syllabus), SHA-256 fingerprinter, and ingest lock stepper.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "hash": "JetBrains Mono 11px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A",
+        "accent": "#9A7B38"
+      },
+      "buttons": [
+        "[Ingest & Lock Source Pair]",
+        "[Verify SSL Hash]",
+        "[Reprocess Documents]"
+      ],
+      "accessibilityLabels": {
+        "documentUpload": "Official Source Pair PDF Upload",
+        "hashReview": "SHA-256 Fingerprint Review"
+      }
+    },
+    {
+      "id": "SCR-05",
+      "name": "Notification/Form Extraction",
+      "route": "/academic/notification-extraction",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/05_notification_extraction.html",
+      "layout": "Dual-worker extracted facts review table: Exam dates, eligibility criteria, stages, vacancies, fee matrix with source page citations and parity verdict.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "mono": "JetBrains Mono 12px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Inspect Source Page Citation]",
+        "[Override Discrepancy Policy]"
+      ],
+      "accessibilityLabels": {
+        "factsGrid": "Extracted Examination Facts Table"
+      }
+    },
+    {
+      "id": "SCR-06",
+      "name": "Syllabus Decomposition",
+      "route": "/academic/syllabus-decomposition",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "cb698bcf53bf4ed580e32ae45493bf72",
+      "screenshotPath": "screenshots/syllabus_tree_pyq_pipeline.png",
+      "rawScreenPath": "raw/screens/06_syllabus_decomposition.html",
+      "layout": "Multi-tier tree view: Subject > Topic > Subtopic > Atom. Dual-worker confidence indicator beads. Zero atom-level manual review buttons.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "treeNode": "Inter 13px Medium",
+        "mono": "JetBrains Mono 11px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Expand Full Hierarchy]",
+        "[Export Canonical Syllabus JSON]"
+      ],
+      "accessibilityLabels": {
+        "syllabusTree": "Autonomous Syllabus Hierarchy Tree"
+      }
+    },
+    {
+      "id": "SCR-07",
+      "name": "Crucible Factory",
+      "route": "/academic/crucible-factory",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/07_crucible_factory.html",
+      "layout": "Automated test generator telemetry: 98-day syllabus coverage matrix, difficulty distribution (Easy 30%, Med 50%, Hard 20%), question-atom linkage status.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "metrics": "JetBrains Mono 14px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Trigger Autonomous Test Regeneration]",
+        "[Inspect Day Blueprint]"
+      ],
+      "accessibilityLabels": {
+        "testMatrix": "Crucible 98-Day Schedule Matrix"
+      }
+    },
+    {
+      "id": "SCR-08",
+      "name": "DigiBook Factory",
+      "route": "/academic/digibook-factory",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/08_digibook_factory.html",
+      "layout": "Chapter & unit generator studio: Light-mode compatible markdown, textbook citations, dynamic transition footnotes (Rule POL-902), reading score.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "body": "Inter 13px",
+        "mono": "JetBrains Mono 11px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Preview Unit in Daylight]",
+        "[Re-index Citations]"
+      ],
+      "accessibilityLabels": {
+        "chapterViewer": "DigiBook Curriculum Units Deck"
+      }
+    },
+    {
+      "id": "SCR-09",
+      "name": "Publish Gate",
+      "route": "/academic/publish-gate",
+      "category": "ACADEMIC PIPELINE",
+      "stitchScreenId": "ae24425d4c1247509ca0646d5d1b9a55",
+      "screenshotPath": "screenshots/publish_gate_readiness_matrix.png",
+      "rawScreenPath": "raw/screens/09_publish_gate.html",
+      "layout": "13 automated release gates, segmented readiness gauge, blocker forensics at Gate 12, 180s atomic rollback timer, cryptographic release receipt.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 24px Bold",
+        "gauge": "JetBrains Mono 28px Bold",
+        "gateTitle": "Plus Jakarta Sans 14px Semibold"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A",
+        "crimson": "#DC2626",
+        "emerald": "#15803D"
+      },
+      "buttons": [
+        "[Evaluate All Gates]",
+        "[Execute 180s Atomic Rollback]",
+        "[View Gate Forensics]"
+      ],
+      "accessibilityLabels": {
+        "gateMatrix": "Thirteen Automated Release Gates Matrix",
+        "readinessScore": "Automated Release Readiness Gauge"
+      }
+    },
+    {
+      "id": "SCR-10",
+      "name": "Student Delivery Report",
+      "route": "/operations/student-delivery",
+      "category": "OPERATIONS",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/10_student_delivery_report.html",
+      "layout": "Student Panel route smoke tests, Edge CDN cache replication status, syllabus atom visibility telemetry, automatic rollback alerts.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "status": "JetBrains Mono 12px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Purge Edge CDN Cache]",
+        "[Run Smoke Route Check]",
+        "[Freeze Delivery]"
+      ],
+      "accessibilityLabels": {
+        "deliveryDeck": "Student Delivery Health Deck"
+      }
+    },
+    {
+      "id": "SCR-11",
+      "name": "Monetization and Revenue",
+      "route": "/operations/monetization",
+      "category": "OPERATIONS",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/11_monetization_revenue.html",
+      "layout": "Mission monetization status: 'Awaiting live sync' / 'Simulation Mode', plan pricing tier configurations, payment gateway webhook heartbeats.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "mono": "JetBrains Mono 13px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Configure Pricing Rules]",
+        "[Test Webhook Heartbeat]"
+      ],
+      "accessibilityLabels": {
+        "pricingRules": "Platform Pricing & Monetization Table"
+      }
+    },
+    {
+      "id": "SCR-12",
+      "name": "Grouped Automation Exceptions",
+      "route": "/operations/exceptions",
+      "category": "OPERATIONS",
+      "stitchScreenId": "75a64a7be8cc4141b19341cb00f9199c",
+      "screenshotPath": "screenshots/grouped_exception_policy_console.png",
+      "rawScreenPath": "raw/screens/12_grouped_automation_exceptions.html",
+      "layout": "Dedicated Grouped Exception Desk (EXC-2026-084), dual-worker split evidence, AI policy recommendation box, 1-click global override rule bar.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 22px Bold",
+        "mono": "JetBrains Mono 12px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#FDE68A",
+        "text": "#0F172A",
+        "gold": "#9A7B38"
+      },
+      "buttons": [
+        "[Apply Policy Override: Dual Answer Acceptance Rule POL-902]",
+        "[Keep in Auto-Hold]",
+        "[Escalate to Academic Council]"
+      ],
+      "accessibilityLabels": {
+        "exceptionDesk": "Grouped Policy Exception Desk",
+        "overrideControl": "Policy Override Action Bar"
+      }
+    },
+    {
+      "id": "SCR-13",
+      "name": "Admin Workflow",
+      "route": "/admin/queue",
+      "category": "ADMIN AND AI",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/13_admin_workflow.html",
+      "layout": "Admin scoped work queue, role-based module filtering, assigned document OCR monitoring tasks, view-only telemetry cards.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Claim Ingestion Task]",
+        "[View Permitted Modules]"
+      ],
+      "accessibilityLabels": {
+        "adminQueue": "Assigned Admin Tasks Table"
+      }
+    },
+    {
+      "id": "SCR-14",
+      "name": "AI Worker Telemetry",
+      "route": "/system/workers",
+      "category": "ADMIN AND AI",
+      "stitchScreenId": "3c7b8616d14e416d888f76b1b4ae0e52",
+      "screenshotPath": "screenshots/canonical_full_studio.png",
+      "rawScreenPath": "raw/screens/14_ai_worker_telemetry.html",
+      "layout": "12 autonomous worker lifecycle monitors, prompt token consumption, heartbeat latency, memory profiles, error rate tracker.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "mono": "JetBrains Mono 12px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Restart Worker Thread]",
+        "[Inspect Worker Log Stream]"
+      ],
+      "accessibilityLabels": {
+        "workerStatus": "Autonomous AI Worker Registry Grid"
+      }
+    },
+    {
+      "id": "SCR-15",
+      "name": "Activity Log",
+      "route": "/system/activity-log",
+      "category": "ADMIN AND AI",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/15_activity_log.html",
+      "layout": "Immutable system event stream: automated decisions, worker dispatches, policy overrides, Coldline ledger receipts with SHA-256 digests.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "hash": "JetBrains Mono 11px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Filter by Event Type]",
+        "[Export Audit CSV]"
+      ],
+      "accessibilityLabels": {
+        "eventStream": "System Operational Audit Log"
+      }
+    },
+    {
+      "id": "SCR-16",
+      "name": "Founder Access and Governance",
+      "route": "/system/governance",
+      "category": "ADMIN AND AI",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/16_founder_governance.html",
+      "layout": "Founder Level-0 key management, RBAC permission assignment, admin privilege revoker, session timeout policy, cryptographic signer.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Rotate Level-0 Key]",
+        "[Update RBAC Matrix]"
+      ],
+      "accessibilityLabels": {
+        "governancePanel": "Executive Governance & Key Ring"
+      }
+    },
+    {
+      "id": "SCR-17",
+      "name": "System Operations",
+      "route": "/system/operations",
+      "category": "ADMIN AND AI",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/17_system_operations.html",
+      "layout": "Firestore connection health, Cloud Functions cold-start telemetry, secret manager integrity, automated backup schedules.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 20px Bold",
+        "mono": "JetBrains Mono 12px",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Trigger Backup Snapshot]",
+        "[Purge Dead Task Queues]"
+      ],
+      "accessibilityLabels": {
+        "sysOpsGrid": "Infrastructure Health Console"
+      }
+    },
+    {
+      "id": "SCR-18",
+      "name": "Auxiliary & Error States",
+      "route": "/states/auxiliary",
+      "category": "STATES AND SIMULATION",
+      "stitchScreenId": "0ac4ac453d0f4650a4ddd858f921500b",
+      "screenshotPath": "screenshots/canonical_autonomous_command_center.png",
+      "rawScreenPath": "raw/screens/18_auxiliary_states.html",
+      "layout": "Dedicated modal and state simulator: Animate-pulse loading skeleton, zero-record empty state, offline network recovery, and 403 Level-0 Permission Denied screen.",
+      "typography": {
+        "headline": "Plus Jakarta Sans 18px Bold",
+        "body": "Inter 13px"
+      },
+      "colors": {
+        "canvas": "#F8F9FC",
+        "cards": "#FFFFFF",
+        "borders": "#E2E8F0",
+        "text": "#0F172A"
+      },
+      "buttons": [
+        "[Simulate Skeleton]",
+        "[Simulate Empty]",
+        "[Simulate Blocked]",
+        "[Simulate Denied]"
+      ],
+      "accessibilityLabels": {
+        "stateSimulator": "Console State Simulation Dock"
+      }
+    }
+  ]
+}

@@ -98,6 +98,7 @@ class MainNavigationShell extends ConsumerWidget {
     required int effectiveIndex,
   }) {
     final bool active = effectiveIndex == index;
+    final scheme = Theme.of(context).colorScheme;
 
     return GestureDetector(
       onTap: () => navigationShell.goBranch(

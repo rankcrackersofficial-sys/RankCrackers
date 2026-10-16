@@ -4,15 +4,15 @@ import '../theme/founder_light_theme.dart';
 import '../mission_control/mission_control_room.dart';
 import '../mission_control/mission_documents_tab.dart';
 import '../../shared/unified_command_console.dart';
+import 'package:rank_crackers/features/admin/presentation/widgets/upload_center/widgets/mission_source_pair_form.dart';
 
-typedef DocumentMissionPickerBuilderForTest =
-    Widget Function(BuildContext context, ValueChanged<String> onSelected);
-typedef DocumentWorkspaceBuilderForTest =
-    Widget Function(
-      BuildContext context,
-      String missionId,
-      VoidCallback onChangeMission,
-    );
+typedef DocumentMissionPickerBuilderForTest = Widget Function(
+    BuildContext context, ValueChanged<String> onSelected);
+typedef DocumentWorkspaceBuilderForTest = Widget Function(
+  BuildContext context,
+  String missionId,
+  VoidCallback onChangeMission,
+);
 
 class DocumentCommandCenter extends StatefulWidget {
   final ConsoleRoleMode roleMode;
@@ -74,6 +74,19 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
           );
         return Column(
           children: [
+            if (missionId == 'ssc_cgl')
+              const Padding(
+                padding: EdgeInsets.fromLTRB(24, 16, 24, 0),
+                child: MissionSourcePairForm(
+                  initialMission: 'ssc_cgl',
+                  initialCycle: '2026',
+                  initialAuthority: 'auth_in_ssc',
+                  initialNotificationUrl:
+                      'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf',
+                  initialSyllabusUrl:
+                      'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf',
+                ),
+              ),
             _DocumentWorkspaceSummary(
               missionId: missionId,
               mission: mission,
@@ -94,127 +107,126 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
   }
 
   Widget _buildMissionSelection() => Padding(
-    padding: const EdgeInsets.all(24),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'DOCUMENT COMMAND CENTER',
-          style: Theme.of(context).textTheme.headlineSmall,
-        ),
-        const SizedBox(height: 6),
-        const Text(
-          'Select a mission to manage its official source documents.',
-          style: TextStyle(color: FounderLightTheme.textMuted),
-        ),
-        const SizedBox(height: 20),
-        const Text(
-          'SELECT MISSION',
-          style: TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFFE8C766),
-          ),
-        ),
-        const SizedBox(height: 10),
-        Expanded(
-          child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
-            stream: FirebaseFirestore.instance
-                .collection('mission_realms')
-                .snapshots(),
-            builder: (context, snapshot) {
-              if (snapshot.hasError)
-                return _PermissionAwareError(
-                  error: snapshot.error,
-                  missionId: null,
-                );
-              if (!snapshot.hasData)
-                return const Center(child: CircularProgressIndicator());
-              final docs = snapshot.data!.docs;
-              if (docs.isEmpty)
-                return const Center(
-                  child: Text(
-                    'No missions are available in the canonical inventory.',
-                  ),
-                );
-              return GridView.builder(
-                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 360,
-                  mainAxisExtent: 116,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
-                ),
-                itemCount: docs.length,
-                itemBuilder: (context, index) {
-                  final doc = docs[index];
-                  final data = doc.data();
-                  final title =
-                      (data['displayName'] ??
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'DOCUMENT COMMAND CENTER',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            const SizedBox(height: 6),
+            const Text(
+              'Select a mission to manage its official source documents.',
+              style: TextStyle(color: FounderLightTheme.textMuted),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'SELECT MISSION',
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFFE8C766),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Expanded(
+              child: StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
+                stream: FirebaseFirestore.instance
+                    .collection('mission_realms')
+                    .snapshots(),
+                builder: (context, snapshot) {
+                  if (snapshot.hasError)
+                    return _PermissionAwareError(
+                      error: snapshot.error,
+                      missionId: null,
+                    );
+                  if (!snapshot.hasData)
+                    return const Center(child: CircularProgressIndicator());
+                  final docs = snapshot.data!.docs;
+                  if (docs.isEmpty)
+                    return const Center(
+                      child: Text(
+                        'No missions are available in the canonical inventory.',
+                      ),
+                    );
+                  return GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 360,
+                      mainAxisExtent: 116,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                    ),
+                    itemCount: docs.length,
+                    itemBuilder: (context, index) {
+                      final doc = docs[index];
+                      final data = doc.data();
+                      final title = (data['displayName'] ??
                               data['title'] ??
                               data['name'] ??
                               doc.id)
                           .toString();
-                  final live =
-                      data['cardVisible'] == true &&
-                      data['userPanelVisible'] == true &&
-                      data['archived'] != true;
-                  return Card(
-                    child: InkWell(
-                      onTap: () => _selectMission(doc.id),
-                      child: Padding(
-                        padding: const EdgeInsets.all(14),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                      final live = data['cardVisible'] == true &&
+                          data['userPanelVisible'] == true &&
+                          data['archived'] != true;
+                      return Card(
+                        child: InkWell(
+                          onTap: () => _selectMission(doc.id),
+                          child: Padding(
+                            padding: const EdgeInsets.all(14),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  title,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const Spacer(),
+                                Text(
+                                  live ? 'LIVE FOR STUDENTS' : 'FOUNDER DRAFT',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: live
+                                        ? Colors.greenAccent
+                                        : Colors.orangeAccent,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                const Text(
+                                  'Open source-document workspace →',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    color: FounderLightTheme.textMuted,
+                                  ),
+                                ),
+                              ],
                             ),
-                            const Spacer(),
-                            Text(
-                              live ? 'LIVE FOR STUDENTS' : 'FOUNDER DRAFT',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.bold,
-                                color: live
-                                    ? Colors.greenAccent
-                                    : Colors.orangeAccent,
-                              ),
-                            ),
-                            const SizedBox(height: 4),
-                            const Text(
-                              'Open source-document workspace →',
-                              style: TextStyle(
-                                fontSize: 11,
-                                color: FounderLightTheme.textMuted,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
-                      ),
-                    ),
+                      );
+                    },
                   );
                 },
-              );
-            },
-          ),
+              ),
+            ),
+          ],
         ),
-      ],
-    ),
-  );
+      );
 
   void _selectMission(String id) => setState(() {
-    _missionId = id;
-    MissionControlRoom.selectedMissionId = id;
-  });
+        _missionId = id;
+        MissionControlRoom.selectedMissionId = id;
+      });
   void _clearMission() => setState(() {
-    _missionId = null;
-    MissionControlRoom.selectedMissionId = null;
-  });
+        _missionId = null;
+        MissionControlRoom.selectedMissionId = null;
+      });
 
   Stream<List<DocumentSnapshot<Map<String, dynamic>>>> _missionSnapshots(
     String missionId,
@@ -242,14 +254,12 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final title =
-        (mission['displayName'] ??
-                mission['title'] ??
-                mission['recruitment_name'] ??
-                missionId)
-            .toString();
-    final live =
-        mission['cardVisible'] == true &&
+    final title = (mission['displayName'] ??
+            mission['title'] ??
+            mission['recruitment_name'] ??
+            missionId)
+        .toString();
+    final live = mission['cardVisible'] == true &&
         mission['userPanelVisible'] == true &&
         mission['archived'] != true;
     return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
@@ -287,38 +297,35 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
     Map<String, dynamic>? refinery,
   ) {
     final data = source?.data() ?? const <String, dynamic>{};
-    final ingestionRaw =
-        (refinery?['status'] ??
-                data['ingestionStatus'] ??
-                data['aiQueueStatus'] ??
-                (source == null ? 'NOT_STARTED' : 'PENDING'))
-            .toString()
-            .toUpperCase();
-    final reviewRaw = (data['reviewStatus'] ?? 'PENDING')
+    final ingestionRaw = (refinery?['status'] ??
+            data['ingestionStatus'] ??
+            data['aiQueueStatus'] ??
+            (source == null ? 'NOT_STARTED' : 'PENDING'))
         .toString()
         .toUpperCase();
+    final reviewRaw =
+        (data['reviewStatus'] ?? 'PENDING').toString().toUpperCase();
     final failed =
         ingestionRaw.contains('FAIL') || reviewRaw.contains('REJECT');
     final verified = reviewRaw == 'VERIFIED' || reviewRaw == 'APPROVED';
     final nextAction = source == null
         ? 'UPLOAD SOURCE DOCUMENT'
         : failed
-        ? 'REVIEW EXTRACTION FAILURE'
-        : !verified
-        ? (ingestionRaw.contains('COMPLETE')
-              ? 'OPEN VERIFICATION CENTER'
-              : 'WAITING FOR INGESTION')
-        : 'READY FOR FACTORY';
+            ? 'REVIEW EXTRACTION FAILURE'
+            : !verified
+                ? (ingestionRaw.contains('COMPLETE')
+                    ? 'OPEN VERIFICATION CENTER'
+                    : 'WAITING FOR INGESTION')
+                : 'READY FOR FACTORY';
     final fileName =
         (data['originalFileName'] ?? data['fileName'] ?? 'NOT PROVIDED')
             .toString();
-    final hash =
-        (refinery?['fileHash'] ??
-                data['sourceSha256'] ??
-                (source?.id.startsWith('hash_') == true
-                    ? source!.id.substring(5)
-                    : 'NOT PROVIDED'))
-            .toString();
+    final hash = (refinery?['fileHash'] ??
+            data['sourceSha256'] ??
+            (source?.id.startsWith('hash_') == true
+                ? source!.id.substring(5)
+                : 'NOT PROVIDED'))
+        .toString();
     return Container(
       margin: const EdgeInsets.fromLTRB(18, 12, 18, 8),
       padding: const EdgeInsets.all(14),
@@ -392,12 +399,14 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           if (source == null)
             const Text(
               'No approved official source document is currently connected to this mission.',
-              style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 11),
+              style:
+                  TextStyle(color: FounderLightTheme.textMuted, fontSize: 11),
             )
           else
             Text(
               '$fileName  •  SHA-256 ${hash == 'NOT PROVIDED' ? hash : '${hash.substring(0, hash.length > 16 ? 16 : hash.length)}…'}',
-              style: const TextStyle(color: FounderLightTheme.textSecondary, fontSize: 11),
+              style: const TextStyle(
+                  color: FounderLightTheme.textSecondary, fontSize: 11),
             ),
           const SizedBox(height: 9),
           Row(
@@ -421,7 +430,8 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
               const Spacer(),
               const Text(
                 'SOURCE → INGESTION → VERIFICATION → FACTORY → PUBLISH READINESS',
-                style: TextStyle(fontSize: 9, color: FounderLightTheme.textDisabled),
+                style: TextStyle(
+                    fontSize: 9, color: FounderLightTheme.textDisabled),
               ),
             ],
           ),
@@ -431,37 +441,37 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
   }
 
   Widget _fact(String label, String value, bool ok) => Container(
-    width: 190,
-    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-    decoration: BoxDecoration(
-      color: FounderLightTheme.surfaceAlt,
-      borderRadius: BorderRadius.circular(6),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: const TextStyle(
-            fontSize: 8,
-            color: FounderLightTheme.textDisabled,
-            fontWeight: FontWeight.bold,
-          ),
+        width: 190,
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+        decoration: BoxDecoration(
+          color: FounderLightTheme.surfaceAlt,
+          borderRadius: BorderRadius.circular(6),
         ),
-        const SizedBox(height: 3),
-        Text(
-          value,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            fontSize: 10,
-            fontWeight: FontWeight.bold,
-            color: ok ? Colors.greenAccent : Colors.orangeAccent,
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              label,
+              style: const TextStyle(
+                fontSize: 8,
+                color: FounderLightTheme.textDisabled,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 3),
+            Text(
+              value,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                color: ok ? Colors.greenAccent : Colors.orangeAccent,
+              ),
+            ),
+          ],
         ),
-      ],
-    ),
-  );
+      );
 
   String _friendly(String value) => value.replaceAll('_', ' ');
 }
@@ -493,38 +503,38 @@ class _DocumentEmptyState extends StatelessWidget {
   final VoidCallback onBack;
   @override
   Widget build(BuildContext context) => Center(
-    child: ConstrainedBox(
-      constraints: const BoxConstraints(maxWidth: 560),
-      child: Card(
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(
-                Icons.description_outlined,
-                size: 34,
-                color: Color(0xFFE8C766),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 560),
+          child: Card(
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.description_outlined,
+                    size: 34,
+                    color: Color(0xFFE8C766),
+                  ),
+                  const SizedBox(height: 12),
+                  const Text(
+                    'NO SOURCE DOCUMENT',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    'No approved source document is currently connected to $missionId.',
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 16),
+                  OutlinedButton(
+                    onPressed: onBack,
+                    child: const Text('SELECT ANOTHER MISSION'),
+                  ),
+                ],
               ),
-              const SizedBox(height: 12),
-              const Text(
-                'NO SOURCE DOCUMENT',
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'No approved source document is currently connected to $missionId.',
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 16),
-              OutlinedButton(
-                onPressed: onBack,
-                child: const Text('SELECT ANOTHER MISSION'),
-              ),
-            ],
+            ),
           ),
         ),
-      ),
-    ),
-  );
+      );
 }

@@ -230,7 +230,8 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
             child: Text('Payable amount',
                 style: AppTypography.body.copyWith(fontSize: 13))),
         Text(amount, style: AppTypography.hero.copyWith(fontSize: 22))
-      ]);
+      ]),
+    );
   }
 
   Widget _methodTile(

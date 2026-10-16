@@ -216,6 +216,27 @@ exports.sentinelBackgroundWorker = functions
         },
       });
 
+      // Automation-first handoff: the Founder is not a routine verifier.
+      // A separate Generator/Independent Verifier/Reconciler pipeline owns
+      // the decision. The promotion worker is reached only after auto-pass.
+      await admin.firestore().collection('automation_runs').doc(`run_${draftId}`).set({
+        domain: extractionIntent,
+        status: 'queued',
+        input: refinement,
+        evidence: [{
+          sourceId,
+          fileHash: payload.fileHash || null,
+          storagePath: payload.storagePath || null,
+          extractionMethod,
+          draftId,
+        }],
+        sourceHash: payload.fileHash || null,
+        autoPromote: true,
+        target: { collection: 'sentinel_drafts', docId: draftId },
+        founderVerificationRequired: false,
+        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      }, { merge: true });
+
       // Update Ingestion Refinery
       await admin.firestore().collection("ingestion_refinery").doc(sourceId).set({
         status: "under_review",

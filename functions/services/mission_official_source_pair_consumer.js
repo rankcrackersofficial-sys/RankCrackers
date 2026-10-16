@@ -94,7 +94,9 @@ async function executeMissionSourcePair({ transaction, db, taskId, preflight, re
         document_type: role, source_path: source.storagePath, sourceSha256: source.sha256,
         expectedSha256: source.sha256, language: source.language, page_start: pageStart, page_end: pageEnd,
         expected_physical_pages: pageCount, page_batch_index: batchIndex, total_batches: totalBatches,
-        expected_output: 'page_extractions', review_status: 'pending_founder_verification', createdAt: recordedAt };
+        expected_output: 'page_extractions', review_status: 'pending_ai_verification',
+        verificationOwner: 'ai_verifier_worker_v1', automationStatus: 'queued', founderVerificationRequired: false,
+        publicationEligible: false, createdAt: recordedAt };
     });
   });
   // All authoritative records and child job snapshots have been read above.
