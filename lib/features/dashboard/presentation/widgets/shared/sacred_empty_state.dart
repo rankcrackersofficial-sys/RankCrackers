@@ -76,6 +76,7 @@ class _SacredEmptyStateState
   Widget build(
       BuildContext context,
       ) {
+    final scheme = Theme.of(context).colorScheme;
 
     return AnimatedBuilder(
 
@@ -195,7 +196,7 @@ class _SacredEmptyStateState
                   GoogleFonts.cinzel(
 
                     color:
-                    Colors.white,
+                    scheme.onSurface,
 
                     fontSize: 28,
 
@@ -226,7 +227,7 @@ class _SacredEmptyStateState
                   GoogleFonts.poppins(
 
                     color:
-                    Colors.white60,
+                    scheme.onSurfaceVariant,
 
                     fontSize: 14,
 

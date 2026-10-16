@@ -68,6 +68,7 @@ class _SacredErrorStateState
   Widget build(
       BuildContext context,
       ) {
+    final scheme = Theme.of(context).colorScheme;
 
     return AnimatedBuilder(
 
@@ -202,7 +203,7 @@ class _SacredErrorStateState
                                 .circle,
 
                             color:
-                            Colors.white
+                            scheme.onSurface
                                 .withValues(
                               alpha:
                               0.9,
@@ -233,7 +234,7 @@ class _SacredErrorStateState
                   GoogleFonts.cinzel(
 
                     color:
-                    Colors.white,
+                    scheme.onSurface,
 
                     fontSize: 28,
 
@@ -264,7 +265,7 @@ class _SacredErrorStateState
                   GoogleFonts.poppins(
 
                     color:
-                    Colors.white60,
+                    scheme.onSurfaceVariant,
 
                     fontSize: 14,
 

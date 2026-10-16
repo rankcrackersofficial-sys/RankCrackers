@@ -16,13 +16,14 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           title,
           style: AppTypography.cardTitle.copyWith(
-            color: gold ? AppColors.gold : AppColors.primaryText,
+            color: gold ? AppColors.gold : scheme.onSurface,
           ),
         ),
 
@@ -31,7 +32,7 @@ class SectionTitle extends StatelessWidget {
 
           Text(
             subtitle!,
-            style: AppTypography.label,
+            style: AppTypography.label.copyWith(color: scheme.onSurfaceVariant),
           ),
         ],
       ],
