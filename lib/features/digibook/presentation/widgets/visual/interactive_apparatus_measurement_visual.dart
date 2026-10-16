@@ -61,6 +61,7 @@ class _InteractiveApparatusMeasurementVisualState
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final msr = _measuredMm.floor();
     final vsd = (((_measuredMm - msr) * 10).round()).clamp(0, 9);
     final totalReading = msr + (vsd * 0.1);
@@ -78,14 +79,14 @@ class _InteractiveApparatusMeasurementVisualState
               IconButton(
                 icon: Icon(
                   _isAutoSweeping ? Icons.pause_circle_filled_rounded : Icons.play_circle_filled_rounded,
-                  color: const Color(0xFFC3A568),
+                  color: scheme.primary,
                   size: 26,
                 ),
                 onPressed: _toggleAutoSweep,
                 tooltip: _isAutoSweeping ? 'Pause animation' : 'Auto sweep measurement',
               ),
               IconButton(
-                icon: const Icon(Icons.restart_alt_rounded, color: Color(0xFF777F8B), size: 22),
+                icon: Icon(Icons.restart_alt_rounded, color: scheme.onSurfaceVariant, size: 22),
                 onPressed: _reset,
                 tooltip: 'Reset to default',
               ),
@@ -93,9 +94,9 @@ class _InteractiveApparatusMeasurementVisualState
               Expanded(
                 child: SliderTheme(
                   data: SliderTheme.of(context).copyWith(
-                    activeTrackColor: const Color(0xFFC3A568),
-                    inactiveTrackColor: const Color(0xFF21262D),
-                    thumbColor: const Color(0xFFC3A568),
+                    activeTrackColor: scheme.primary,
+                    inactiveTrackColor: scheme.outline,
+                    thumbColor: scheme.primary,
                     trackHeight: 3,
                   ),
                   child: Slider(
@@ -136,9 +137,9 @@ class _InteractiveApparatusMeasurementVisualState
             width: double.infinity,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: scheme.surface,
               borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: scheme.outline, width: 1),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -156,17 +157,18 @@ class _InteractiveApparatusMeasurementVisualState
   }
 
   Widget _buildReadoutColumn(String title, String value, {bool isHighlight = false}) {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         Text(
           title,
-          style: const TextStyle(color: Color(0xFF777F8B), fontSize: 11, fontWeight: FontWeight.w500),
+          style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11, fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 4),
         Text(
           value,
           style: TextStyle(
-            color: isHighlight ? const Color(0xFFC3A568) : const Color(0xFFF3F4F6),
+            color: isHighlight ? scheme.primary : scheme.onSurface,
             fontSize: 13.5,
             fontWeight: isHighlight ? FontWeight.bold : FontWeight.w600,
           ),
