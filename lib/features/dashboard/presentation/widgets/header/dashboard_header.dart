@@ -20,6 +20,7 @@ class DashboardHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return SliverAppBar(
       pinned: true,
       elevation: 0,
@@ -34,9 +35,8 @@ class DashboardHeader extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              AppColors.background,
-              AppColors.background
-                  .withValues(alpha: 0.96),
+              scheme.surface,
+              scheme.surface.withValues(alpha: 0.96),
             ],
           ),
 
@@ -130,7 +130,7 @@ class DashboardHeader extends StatelessWidget {
                         TextOverflow.ellipsis,
 
                         style: AppTypography.label.copyWith(
-                           color: AppColors.secondaryText,
+                           color: scheme.onSurfaceVariant,
                         ),
                       ),
 
@@ -210,11 +210,11 @@ class DashboardHeader extends StatelessWidget {
                         borderRadius:
                         BorderRadius.circular(16),
 
-                        color: Colors.white
+                        color: scheme.onSurface
                             .withValues(alpha: 0.04),
 
                         border: Border.all(
-                          color: Colors.white
+                            color: scheme.onSurface
                               .withValues(alpha: 0.06),
                         ),
                       ),
@@ -247,7 +247,7 @@ class DashboardHeader extends StatelessWidget {
                             ),
 
                             border: Border.all(
-                              color: Colors.white,
+                        color: scheme.onSurface,
                               width: 1,
                             ),
                           ),
@@ -258,7 +258,7 @@ class DashboardHeader extends StatelessWidget {
                             style: AppTypography.label.copyWith(
                               fontSize: 9,
                               fontWeight: FontWeight.w700,
-                              color: Colors.white,
+                              color: scheme.onError,
                             ),
                           ),
                         ),

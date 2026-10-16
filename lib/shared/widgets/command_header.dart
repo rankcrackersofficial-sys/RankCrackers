@@ -51,6 +51,7 @@ class CommandHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: EdgeInsets.fromLTRB(
         ResponsiveHelper.wp(context, 0.05),
@@ -68,7 +69,7 @@ class CommandHeader extends StatelessWidget {
                 },
                 child: CircleAvatar(
                   radius: ResponsiveHelper.sp(context, 18),
-                  backgroundColor: AppColors.surface,
+                  backgroundColor: scheme.surfaceContainerHighest,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(22),
                     child: userPhoto != null
@@ -91,7 +92,7 @@ class CommandHeader extends StatelessWidget {
                   child: Icon(
                     Icons.edit,
                     size: ResponsiveHelper.sp(context, 6),
-                    color: Colors.black,
+                    color: scheme.onPrimary,
                   ),
                 ),
               ),
@@ -104,7 +105,7 @@ class CommandHeader extends StatelessWidget {
               children: [
                 Text(_greeting().toUpperCase(),
                     style: AppTypography.label.copyWith(
-                        color: Colors.white54,
+                        color: scheme.onSurfaceVariant,
                         fontSize: ResponsiveHelper.sp(context, 8),
                         letterSpacing: 1.5)),
                 const SizedBox(height: 2),
@@ -113,7 +114,7 @@ class CommandHeader extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                     style: AppTypography.hero.copyWith(
                         fontSize: ResponsiveHelper.sp(context, 18),
-                        color: Colors.white)),
+                        color: scheme.onSurface)),
                 const SizedBox(height: 2),
                 Text(
                   examName.toUpperCase(),
@@ -121,7 +122,7 @@ class CommandHeader extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.label.copyWith(
                       fontSize: ResponsiveHelper.sp(context, 10),
-                      color: Colors.white70),
+                      color: scheme.onSurfaceVariant),
                 ),
                 Text(
                   _missionEvidenceLine(),
