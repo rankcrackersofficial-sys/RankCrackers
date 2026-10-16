@@ -29,6 +29,7 @@ class BattleToolCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
     final sessionUser =
         ref.watch(sessionUserProvider).valueOrNull ?? SessionUser.getSync();
     final stats = ref.watch(userProfileStatsProvider);
@@ -178,7 +179,7 @@ class BattleToolCard extends ConsumerWidget {
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.cardTitle.copyWith(
                     fontSize: 13.5,
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -189,7 +190,7 @@ class BattleToolCard extends ConsumerWidget {
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.subtitle.copyWith(
                     fontSize: 10.5,
-                    color: isReady ? AppColors.gold : Colors.white60,
+                    color: isReady ? AppColors.gold : scheme.onSurfaceVariant,
                   ),
                 ),
               ],
@@ -206,15 +207,16 @@ class BattleToolCard extends ConsumerWidget {
     String statusCode,
     String explanation,
   ) {
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
-      barrierColor: Colors.black.withValues(alpha: 0.6),
+      barrierColor: scheme.scrim.withValues(alpha: 0.6),
       isScrollControlled: true,
       builder: (ctx) {
         return Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF090D1A),
+          decoration: BoxDecoration(
+            color: scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(24),
               topRight: Radius.circular(24),
@@ -241,7 +243,7 @@ class BattleToolCard extends ConsumerWidget {
                       toolTitle,
                       style: AppTypography.hero.copyWith(
                         fontSize: 18,
-                        color: Colors.white,
+                        color: scheme.onSurface,
                         letterSpacing: 0.5,
                       ),
                     ),
@@ -271,7 +273,7 @@ class BattleToolCard extends ConsumerWidget {
                 'STATUS',
                 style: AppTypography.label.copyWith(
                   fontSize: 11,
-                  color: Colors.white70,
+                  color: scheme.onSurfaceVariant,
                   letterSpacing: 1.0,
                   fontWeight: FontWeight.bold,
                 ),
@@ -281,7 +283,7 @@ class BattleToolCard extends ConsumerWidget {
                 explanation,
                 style: AppTypography.body.copyWith(
                   fontSize: 13,
-                  color: Colors.white70,
+                  color: scheme.onSurfaceVariant,
                   height: 1.45,
                 ),
               ),
@@ -291,9 +293,9 @@ class BattleToolCard extends ConsumerWidget {
                 child: ElevatedButton(
                   onPressed: () => Navigator.pop(ctx),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF16213E),
-                    foregroundColor: Colors.white,
-                    side: const BorderSide(color: AppColors.border),
+                    backgroundColor: scheme.surface,
+                    foregroundColor: scheme.onSurface,
+                    side: BorderSide(color: scheme.outline),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),

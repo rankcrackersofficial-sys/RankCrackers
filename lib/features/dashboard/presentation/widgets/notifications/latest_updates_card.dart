@@ -14,11 +14,12 @@ class LatestUpdatesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return DarkCard(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       child: Row(
         children: [
-          const Icon(
+          Icon(
             Icons.notification_important_rounded,
             color: AppColors.gold,
             size: 18,
@@ -35,7 +36,7 @@ class LatestUpdatesCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.cardTitle.copyWith(
                     fontSize: 13.5,
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -44,7 +45,7 @@ class LatestUpdatesCard extends StatelessWidget {
                   "${item["tag"]} • ${item["meta"]}",
                   style: AppTypography.label.copyWith(
                     fontSize: 11.5,
-                    color: Colors.white70,
+                    color: scheme.onSurfaceVariant,
                   ),
                 ),
               ],
