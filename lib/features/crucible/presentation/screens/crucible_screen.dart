@@ -62,7 +62,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         );
       },
       loading: () => Scaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: TacticalNoirBackground(
           child: const Center(
             child: CircularProgressIndicator(color: AppColors.gold),
@@ -82,8 +82,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required dynamic readiness,
     required dynamic momentum,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: Column(
@@ -102,7 +103,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 child: Text(
                   'DAILY TRAINING PLAN',
                   style: AppTypography.cardTitle.copyWith(
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontSize: 14,
                     letterSpacing: 1.0,
                   ),
@@ -118,9 +119,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: AppColors.surface,
+                            color: scheme.surfaceContainerHighest,
                             borderRadius: BorderRadius.circular(16),
-                            border: Border.all(color: AppColors.borderSoft),
+                            border: Border.all(color: scheme.outline),
                           ),
                           child: const Icon(
                             Icons.local_fire_department_rounded,
@@ -133,7 +134,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                           'CRUCIBLE PREPARATION',
                           style: AppTypography.hero.copyWith(
                             fontSize: 18,
-                            color: Colors.white,
+                            color: scheme.onSurface,
                             letterSpacing: 1.1,
                           ),
                         ),
@@ -143,7 +144,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                           textAlign: TextAlign.center,
                           style: AppTypography.body.copyWith(
                             fontSize: 13,
-                            color: Colors.white70,
+                            color: scheme.onSurfaceVariant,
                             height: 1.45,
                           ),
                         ),
@@ -165,6 +166,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required dynamic readiness,
     required dynamic momentum,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     final now = DateTime.now();
 
     // Sovereign Global Clock Authority
@@ -192,7 +194,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final dayInScheduleLabel = isDayB ? 'Day B of 2' : 'Day A of 2';
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: SingleChildScrollView(
@@ -219,7 +221,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text(
                         'DAILY TRAINING PLAN',
                         style: AppTypography.cardTitle.copyWith(
-                          color: Colors.white,
+                          color: scheme.onSurface,
                           fontSize: 14,
                           letterSpacing: 1.0,
                         ),
