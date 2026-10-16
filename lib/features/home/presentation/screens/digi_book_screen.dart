@@ -44,6 +44,16 @@ class DigiBookScreen extends ConsumerStatefulWidget {
 
 class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     with SingleTickerProviderStateMixin {
+  Color get _readerBackground => Theme.of(context).colorScheme.surface;
+  Color get _readerCard =>
+      Theme.of(context).colorScheme.surfaceContainerHighest;
+  Color get _readerInset => Theme.of(context).colorScheme.surface;
+  Color get _readerBorder => Theme.of(context).colorScheme.outline;
+  Color get _readerText => Theme.of(context).colorScheme.onSurface;
+  Color get _readerMuted => Theme.of(context).colorScheme.onSurfaceVariant;
+  Color get _readerSubtle =>
+      Theme.of(context).colorScheme.onSurfaceVariant.withValues(alpha: 0.78);
+
   late TabController _tabController;
   final DateTime _startTime = DateTime.now();
   final ScrollController _scrollController = ScrollController();
@@ -114,8 +124,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     final bridge = DigiBookCanonicalBridgeService.instance;
     if (!bridge.isInitialized) await bridge.initialize();
 
-    final args =
-        await bridge.buildLaunchArgs(_currentArgs!.generationUnitId);
+    final args = await bridge.buildLaunchArgs(_currentArgs!.generationUnitId);
 
     if (mounted) {
       setState(() {
@@ -127,7 +136,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
   Future<void> _loadAtomicFactsCache() async {
     try {
-      final jsonStr = await rootBundle.loadString('assets/data/verified_atomic_facts_cache.json');
+      final jsonStr = await rootBundle
+          .loadString('assets/data/verified_atomic_facts_cache.json');
       final data = json.decode(jsonStr);
       final map = <String, Map<String, dynamic>>{};
       if (data is Map<String, dynamic>) {
@@ -178,17 +188,32 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       return 'Sets, Relations and Functions';
     }
     if (args.subject.toLowerCase() == 'physics') {
-      if (id.contains('U01') || args.generationUnitId.contains('PHY_9008')) return 'Units and Measurements';
+      if (id.contains('U01') || args.generationUnitId.contains('PHY_9008'))
+        return 'Units and Measurements';
       if (id.contains('U02')) return 'Kinematics';
-      if (id.contains('U03') || args.generationUnitId.contains('PHY_FCA3') || args.generationUnitId.contains('PHY_10A1')) return 'Laws of Motion';
+      if (id.contains('U03') ||
+          args.generationUnitId.contains('PHY_FCA3') ||
+          args.generationUnitId.contains('PHY_10A1')) return 'Laws of Motion';
       if (id.contains('U04')) return 'Work, Energy and Power';
-      if (id.contains('U05') || args.generationUnitId.contains('PHY_9A3C') || args.generationUnitId.contains('PHY_REM')) return 'Rotational Motion';
-      if (id.contains('U06') || args.generationUnitId.contains('PHY_A8EB') || args.generationUnitId.contains('PHY_B821') || args.generationUnitId.contains('PHY_BACF')) return 'Gravitation';
+      if (id.contains('U05') ||
+          args.generationUnitId.contains('PHY_9A3C') ||
+          args.generationUnitId.contains('PHY_REM')) return 'Rotational Motion';
+      if (id.contains('U06') ||
+          args.generationUnitId.contains('PHY_A8EB') ||
+          args.generationUnitId.contains('PHY_B821') ||
+          args.generationUnitId.contains('PHY_BACF')) return 'Gravitation';
       return 'Units and Measurements';
     }
     if (args.subject.toLowerCase() == 'chemistry') {
-      if (id.contains('U01') || args.generationUnitId.contains('CHE_2679') || args.generationUnitId.contains('CHE_910B') || args.generationUnitId.contains('CHE_024A')) return 'Some Basic Concepts in Chemistry';
-      if (id.contains('U02') || args.generationUnitId.contains('CHE_4DB2') || args.generationUnitId.contains('CHE_4DF3')) return 'Structure of Atom';
+      if (id.contains('U01') ||
+          args.generationUnitId.contains('CHE_2679') ||
+          args.generationUnitId.contains('CHE_910B') ||
+          args.generationUnitId.contains('CHE_024A'))
+        return 'Some Basic Concepts in Chemistry';
+      if (id.contains('U02') ||
+          args.generationUnitId.contains('CHE_4DB2') ||
+          args.generationUnitId.contains('CHE_4DF3'))
+        return 'Structure of Atom';
       return 'Some Basic Concepts in Chemistry';
     }
     return 'Fundamental Theory';
@@ -215,8 +240,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     } else if (widget.node != null && widget.node?.id != oldWidget.node?.id) {
       setState(() {
         _currentNode = widget.node;
-        _contentFuture =
-            KnowledgeContentService.fetchContent(_currentNode!.contentRegistryId);
+        _contentFuture = KnowledgeContentService.fetchContent(
+            _currentNode!.contentRegistryId);
       });
     }
   }
@@ -246,19 +271,18 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     // 1. CANONICAL BRIDGE MODE (DigiBookLaunchArgs)
     if (_currentArgs != null) {
       if (_isLoadingArgs) {
-        return const Scaffold(
-          backgroundColor: AppColors.background,
-          body: Center(
-              child: CircularProgressIndicator(color: AppColors.gold)),
+        return Scaffold(
+          backgroundColor: _readerBackground,
+          body: Center(child: CircularProgressIndicator(color: AppColors.gold)),
         );
       }
 
       return TacticalSecureLayer(
         isPremium: !user.isElite,
         child: Scaffold(
-          backgroundColor: const Color(0xFF090C10),
+          backgroundColor: _readerBackground,
           body: Container(
-            color: const Color(0xFF090C10),
+            color: _readerBackground,
             child: SafeArea(
               child: Column(
                 children: [
@@ -289,16 +313,16 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       future: _contentFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(
-            backgroundColor: AppColors.background,
-            body: Center(
-                child: CircularProgressIndicator(color: AppColors.gold)),
+          return Scaffold(
+            backgroundColor: _readerBackground,
+            body:
+                Center(child: CircularProgressIndicator(color: AppColors.gold)),
           );
         }
 
         if (snapshot.hasError || snapshot.data == null) {
           return Scaffold(
-            backgroundColor: AppColors.background,
+            backgroundColor: _readerBackground,
             body: Center(
               child: Padding(
                 padding: const EdgeInsets.all(24.0),
@@ -313,12 +337,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       style: AppTypography.heading.copyWith(
                           color: AppColors.gold, fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Text(
                       "Learning content is not available for this topic yet.",
                       textAlign: TextAlign.center,
                       style: AppTypography.body
-                          .copyWith(fontSize: 12, color: Colors.white70),
+                          .copyWith(fontSize: 12, color: _readerMuted),
                     ),
                     const SizedBox(height: 24),
                     if (context.canPop())
@@ -357,7 +381,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         return TacticalSecureLayer(
           isPremium: !user.isElite,
           child: Scaffold(
-            backgroundColor: AppColors.background,
+            backgroundColor: _readerBackground,
             body: TacticalNoirBackground(
               child: SafeArea(
                 child: Column(
@@ -404,21 +428,21 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
           // 1. CANONICAL OPENING BLOCK (Section 10 & 11)
           Text(
             _getCanonicalBreadcrumb(args),
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 12.5,
-              color: Color(0xFFA7ADB7),
+              color: _readerMuted,
               fontWeight: FontWeight.w500,
               letterSpacing: 0.3,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
             args.topicTitle,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 27,
               height: 1.25,
               fontWeight: FontWeight.w700,
-              color: Color(0xFFF3F4F6),
+              color: _readerText,
               letterSpacing: -0.5,
             ),
           ),
@@ -487,12 +511,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               if (mounted) {
                 final evidence = dwellTime >= 2.0 && _maxScrollPercent >= 0.70;
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  backgroundColor: const Color(0xFF161B22),
+                  backgroundColor: _readerCard,
                   content: Text(
                     evidence
                         ? 'READING SESSION RECORDED'
                         : '⚠️ READING SESSION SAVED (INSUFFICIENT DWELL TIME)',
-                    style: const TextStyle(color: Color(0xFFF3F4F6)),
+                    style: TextStyle(color: _readerText),
                   ),
                 ));
               }
@@ -521,16 +545,16 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("1. OVERVIEW", Icons.explore_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
 
         // Why this matters
         Container(
           width: double.infinity,
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -550,11 +574,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   ),
                 ],
               ),
-              const SizedBox(height: 8),
+              SizedBox(height: 8),
               FormattedMathText(
                 whyMatters,
-                style: const TextStyle(
-                  color: Color(0xFFF3F4F6),
+                style: TextStyle(
+                  color: _readerText,
                   fontSize: 14,
                   height: 1.5,
                 ),
@@ -568,18 +592,19 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         if (learnBullets.isNotEmpty) ...[
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: _readerCard,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: _readerBorder, width: 1),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: const [
-                    Icon(Icons.checklist_rounded, size: 16, color: Color(0xFFC3A568)),
+                    Icon(Icons.checklist_rounded,
+                        size: 16, color: Color(0xFFC3A568)),
                     SizedBox(width: 8),
                     Text(
                       "WHAT YOU'LL LEARN",
@@ -594,24 +619,26 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 ),
                 const SizedBox(height: 10),
                 ...learnBullets.map((b) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("• ", style: TextStyle(color: Color(0xFFC3A568), fontSize: 14)),
-                      Expanded(
-                        child: FormattedMathText(
-                          b,
-                          style: const TextStyle(
-                            color: Color(0xFFF3F4F6),
-                            fontSize: 13.5,
-                            height: 1.4,
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("• ",
+                              style: TextStyle(
+                                  color: Color(0xFFC3A568), fontSize: 14)),
+                          Expanded(
+                            child: FormattedMathText(
+                              b,
+                              style: TextStyle(
+                                color: _readerText,
+                                fontSize: 13.5,
+                                height: 1.4,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                )),
+                    )),
               ],
             ),
           ),
@@ -628,12 +655,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
             letterSpacing: 0.8,
           ),
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: 8),
         FormattedMathText(
           overviewText,
           textAlign: TextAlign.justify,
-          style: const TextStyle(
-            color: Color(0xFFF3F4F6),
+          style: TextStyle(
+            color: _readerText,
             fontSize: 16.0,
             height: 1.55,
           ),
@@ -659,7 +686,10 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     final concepts = args.componentConcepts;
     final blocks = concepts?['blocks'] as List<dynamic>? ?? [];
     if (blocks.isNotEmpty) {
-      return blocks.take(4).map((b) => (b['title'] as String? ?? 'Core Concept')).toList();
+      return blocks
+          .take(4)
+          .map((b) => (b['title'] as String? ?? 'Core Concept'))
+          .toList();
     }
     return [
       'Rigorous mathematical definitions and notation',
@@ -680,18 +710,17 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("2. CONCEPTS", Icons.menu_book_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         if (blocks.isEmpty) ...[
-          const Text(
+          Text(
             "Foundational conceptual blocks loaded.",
-            style: TextStyle(color: Color(0xFFA7ADB7), fontSize: 14),
+            style: TextStyle(color: _readerMuted, fontSize: 14),
           ),
           if (visualWidget != null) ...[
             const SizedBox(height: 16),
             visualWidget,
           ],
-        ]
-        else ...[
+        ] else ...[
           for (int i = 0; i < blocks.length; i++) ...[
             Builder(builder: (context) {
               final b = blocks[i];
@@ -699,25 +728,25 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               final content = b['contentMarkdown'] as String? ?? '';
 
               return Padding(
-                padding: const EdgeInsets.only(bottom: 24),
+                padding: EdgeInsets.only(bottom: 24),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       title,
-                      style: const TextStyle(
-                        color: Color(0xFFF3F4F6),
+                      style: TextStyle(
+                        color: _readerText,
                         fontSize: 18.5,
                         fontWeight: FontWeight.w700,
                         letterSpacing: -0.2,
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10),
                     FormattedMathText(
                       content,
                       textAlign: TextAlign.justify,
-                      style: const TextStyle(
-                        color: Color(0xFFF3F4F6),
+                      style: TextStyle(
+                        color: _readerText,
                         fontSize: 16.0,
                         height: 1.55,
                       ),
@@ -745,19 +774,19 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("3. FORMULA REGISTER", Icons.functions_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         if (formulaTable.isEmpty)
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: _readerCard,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: _readerBorder, width: 1),
             ),
-            child: const Text(
+            child: Text(
               "No quantitative formulas required for this conceptual topic.",
-              style: TextStyle(color: Color(0xFFA7ADB7), fontSize: 13.5),
+              style: TextStyle(color: _readerMuted, fontSize: 13.5),
             ),
           )
         else
@@ -769,12 +798,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
             return Container(
               width: double.infinity,
-              margin: const EdgeInsets.only(bottom: 14),
-              padding: const EdgeInsets.all(16),
+              margin: EdgeInsets.only(bottom: 14),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF161B22),
+                color: _readerCard,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFF252B33), width: 1),
+                border: Border.all(color: _readerBorder, width: 1),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -782,9 +811,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFC3A568).withValues(alpha: 0.15),
+                          color:
+                              const Color(0xFFC3A568).withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: const Text(
@@ -797,12 +828,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           name,
-                          style: const TextStyle(
-                            color: Color(0xFFA7ADB7),
+                          style: TextStyle(
+                            color: _readerMuted,
                             fontSize: 13,
                             fontWeight: FontWeight.w500,
                           ),
@@ -812,19 +843,20 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       ),
                     ],
                   ),
-                  const SizedBox(height: 12),
+                  SizedBox(height: 12),
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF101419),
+                      color: _readerInset,
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: const Color(0xFF252B33), width: 1),
+                      border: Border.all(color: _readerBorder, width: 1),
                     ),
                     child: FormattedMathText(
                       expr,
-                      style: const TextStyle(
-                        color: Color(0xFFF3F4F6),
+                      style: TextStyle(
+                        color: _readerText,
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         height: 1.4,
@@ -832,11 +864,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                     ),
                   ),
                   if (constraints.isNotEmpty) ...[
-                    const SizedBox(height: 10),
+                    SizedBox(height: 10),
                     FormattedMathText(
                       constraints,
-                      style: const TextStyle(
-                        color: Color(0xFFA7ADB7),
+                      style: TextStyle(
+                        color: _readerMuted,
                         fontSize: 13,
                         height: 1.4,
                       ),
@@ -858,29 +890,30 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _componentHeader("4. COMMON MISCONCEPTIONS", Icons.warning_amber_rounded),
-        const SizedBox(height: 16),
+        _componentHeader(
+            "4. COMMON MISCONCEPTIONS", Icons.warning_amber_rounded),
+        SizedBox(height: 16),
         Container(
           width: double.infinity,
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Icon(Icons.info_outline_rounded,
                   color: Color(0xFFC3A568), size: 18),
-              const SizedBox(width: 12),
+              SizedBox(width: 12),
               Expanded(
                 child: Text(
                   status == 'EVIDENCE_NOT_AVAILABLE'
                       ? "No verified misconception note is available for this lesson yet."
                       : "Verified misconception patterns loaded.",
-                  style: const TextStyle(
-                    color: Color(0xFFA7ADB7),
+                  style: TextStyle(
+                    color: _readerMuted,
                     fontSize: 13.5,
                     height: 1.4,
                   ),
@@ -902,19 +935,19 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("5. WORKED EXAMPLES", Icons.psychology_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         if (examples.isEmpty)
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: _readerCard,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: _readerBorder, width: 1),
             ),
-            child: const Text(
+            child: Text(
               "Guided examples prepared for target problem types.",
-              style: TextStyle(color: Color(0xFFA7ADB7), fontSize: 13.5),
+              style: TextStyle(color: _readerMuted, fontSize: 13.5),
             ),
           )
         else
@@ -930,12 +963,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
             return Container(
               width: double.infinity,
-              margin: const EdgeInsets.only(bottom: 16),
-              padding: const EdgeInsets.all(16),
+              margin: EdgeInsets.only(bottom: 16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF161B22),
+                color: _readerCard,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFF252B33), width: 1),
+                border: Border.all(color: _readerBorder, width: 1),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -943,9 +976,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFC3A568).withValues(alpha: 0.15),
+                          color:
+                              const Color(0xFFC3A568).withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -958,12 +993,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           ),
                         ),
                       ),
-                      const SizedBox(width: 10),
+                      SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           title,
-                          style: const TextStyle(
-                            color: Color(0xFFF3F4F6),
+                          style: TextStyle(
+                            color: _readerText,
                             fontSize: 13.5,
                             fontWeight: FontWeight.w600,
                           ),
@@ -972,15 +1007,16 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF252B33),
+                          color: _readerBorder,
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
                           diff,
-                          style: const TextStyle(
-                            color: Color(0xFFA7ADB7),
+                          style: TextStyle(
+                            color: _readerMuted,
                             fontSize: 9.5,
                             fontWeight: FontWeight.bold,
                           ),
@@ -988,22 +1024,22 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       ),
                     ],
                   ),
-                  const SizedBox(height: 12),
-                  const Text(
+                  SizedBox(height: 12),
+                  Text(
                     "PROBLEM",
                     style: TextStyle(
-                      color: Color(0xFFA7ADB7),
+                      color: _readerMuted,
                       fontSize: 10.5,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 0.6,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  SizedBox(height: 6),
                   FormattedMathText(
                     problem,
                     textAlign: TextAlign.justify,
-                    style: const TextStyle(
-                      color: Color(0xFFF3F4F6),
+                    style: TextStyle(
+                      color: _readerText,
                       fontSize: 15.0,
                       height: 1.55,
                     ),
@@ -1019,29 +1055,30 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                         letterSpacing: 0.6,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    SizedBox(height: 8),
                     ...steps.map((step) => Padding(
-                      padding: const EdgeInsets.only(bottom: 6),
-                      child: FormattedMathText(
-                        step.toString(),
-                        style: const TextStyle(
-                          color: Color(0xFFF3F4F6),
-                          fontSize: 13.5,
-                          height: 1.5,
-                        ),
-                      ),
-                    )),
+                          padding: EdgeInsets.only(bottom: 6),
+                          child: FormattedMathText(
+                            step.toString(),
+                            style: TextStyle(
+                              color: _readerText,
+                              fontSize: 13.5,
+                              height: 1.5,
+                            ),
+                          ),
+                        )),
                   ],
                   if (finalAns.isNotEmpty) ...[
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.all(12),
+                      padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF101419),
+                        color: _readerInset,
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(
-                            color: const Color(0xFF4A8B6F).withValues(alpha: 0.4)),
+                            color:
+                                const Color(0xFF4A8B6F).withValues(alpha: 0.4)),
                       ),
                       child: FormattedMathText(
                         "Final Answer: $finalAns",
@@ -1070,25 +1107,26 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("6. SELF-CHECKS", Icons.fact_check_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         if (questions.isEmpty)
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF161B22),
+              color: _readerCard,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF252B33), width: 1),
+              border: Border.all(color: _readerBorder, width: 1),
             ),
-            child: const Text(
+            child: Text(
               "Self-check questions prepared for knowledge verification.",
-              style: TextStyle(color: Color(0xFFA7ADB7), fontSize: 13.5),
+              style: TextStyle(color: _readerMuted, fontSize: 13.5),
             ),
           )
         else
           ...questions.asMap().entries.map((entry) {
             final qIdx = entry.key;
-            final Map<String, dynamic> q = Map<String, dynamic>.from(entry.value);
+            final Map<String, dynamic> q =
+                Map<String, dynamic>.from(entry.value);
             final prompt = q['prompt'] as String? ?? '';
             final options = q['options'] as List<dynamic>? ?? [];
             final correctIdx = q['correctOptionIndex'] as int? ?? 0;
@@ -1097,12 +1135,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
             return Container(
               width: double.infinity,
-              margin: const EdgeInsets.only(bottom: 16),
-              padding: const EdgeInsets.all(16),
+              margin: EdgeInsets.only(bottom: 16),
+              padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF161B22),
+                color: _readerCard,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: const Color(0xFF252B33), width: 1),
+                border: Border.all(color: _readerBorder, width: 1),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -1110,9 +1148,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFC3A568).withValues(alpha: 0.15),
+                          color:
+                              const Color(0xFFC3A568).withValues(alpha: 0.15),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -1127,32 +1167,34 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  SizedBox(height: 10),
                   FormattedMathText(
                     prompt,
-                    style: const TextStyle(
-                      color: Color(0xFFF3F4F6),
+                    style: TextStyle(
+                      color: _readerText,
                       fontSize: 14.5,
                       fontWeight: FontWeight.w600,
                       height: 1.4,
                     ),
                   ),
-                  const SizedBox(height: 14),
+                  SizedBox(height: 14),
                   ...options.asMap().entries.map((optEntry) {
                     final oIdx = optEntry.key;
                     final oText = optEntry.value.toString();
                     final isSelected = selectedOpt == oIdx;
                     final isCorrect = oIdx == correctIdx;
 
-                    Color borderColor = const Color(0xFF252B33);
-                    Color bgColor = const Color(0xFF101419);
+                    Color borderColor = _readerBorder;
+                    Color bgColor = _readerInset;
                     if (selectedOpt != null) {
                       if (isCorrect) {
                         borderColor = const Color(0xFF4A8B6F);
-                        bgColor = const Color(0xFF4A8B6F).withValues(alpha: 0.1);
+                        bgColor =
+                            const Color(0xFF4A8B6F).withValues(alpha: 0.1);
                       } else if (isSelected) {
                         borderColor = const Color(0xFF9E4A4A);
-                        bgColor = const Color(0xFF9E4A4A).withValues(alpha: 0.1);
+                        bgColor =
+                            const Color(0xFF9E4A4A).withValues(alpha: 0.1);
                       }
                     }
 
@@ -1167,7 +1209,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                         borderRadius: BorderRadius.circular(8),
                         child: Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 10),
                           decoration: BoxDecoration(
                             color: bgColor,
                             borderRadius: BorderRadius.circular(8),
@@ -1183,8 +1226,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                                   shape: BoxShape.circle,
                                   border: Border.all(
                                     color: isSelected
-                                        ? const Color(0xFFC3A568)
-                                        : const Color(0xFF777F8B),
+                                        ? Color(0xFFC3A568)
+                                        : _readerSubtle,
                                     width: 1.5,
                                   ),
                                 ),
@@ -1192,21 +1235,20 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                                   String.fromCharCode(65 + oIdx),
                                   style: TextStyle(
                                     color: isSelected
-                                        ? const Color(0xFFC3A568)
-                                        : const Color(0xFFA7ADB7),
+                                        ? Color(0xFFC3A568)
+                                        : _readerMuted,
                                     fontSize: 11,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
-                              const SizedBox(width: 12),
+                              SizedBox(width: 12),
                               Expanded(
                                 child: FormattedMathText(
                                   oText,
                                   style: TextStyle(
-                                    color: isSelected
-                                        ? const Color(0xFFF3F4F6)
-                                        : const Color(0xFFA7ADB7),
+                                    color:
+                                        isSelected ? _readerText : _readerMuted,
                                     fontSize: 13.5,
                                   ),
                                 ),
@@ -1218,14 +1260,14 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                     );
                   }),
                   if (selectedOpt != null && explanation.isNotEmpty) ...[
-                    const SizedBox(height: 12),
+                    SizedBox(height: 12),
                     Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.all(12),
+                      padding: EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF101419),
+                        color: _readerInset,
                         borderRadius: BorderRadius.circular(8),
-                        border: Border.all(color: const Color(0xFF252B33)),
+                        border: Border.all(color: _readerBorder),
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1242,11 +1284,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                               fontSize: 11,
                             ),
                           ),
-                          const SizedBox(height: 6),
+                          SizedBox(height: 6),
                           FormattedMathText(
                             explanation,
-                            style: const TextStyle(
-                              color: Color(0xFFA7ADB7),
+                            style: TextStyle(
+                              color: _readerMuted,
                               fontSize: 12.5,
                               height: 1.4,
                             ),
@@ -1272,14 +1314,14 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _componentHeader("7. ASSESSMENT PREVIEW", Icons.quiz_rounded),
-        const SizedBox(height: 16),
+        SizedBox(height: 16),
         Container(
           width: double.infinity,
-          padding: const EdgeInsets.all(16),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1293,21 +1335,21 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   letterSpacing: 0.8,
                 ),
               ),
-              const SizedBox(height: 8),
-              const Text(
+              SizedBox(height: 8),
+              Text(
                 "Direct standard questions test subset axioms, Venn diagram operations, and set-builder notation.",
                 style: TextStyle(
-                  color: Color(0xFFF3F4F6),
+                  color: _readerText,
                   fontSize: 14,
                   height: 1.5,
                 ),
               ),
               if (patterns.isNotEmpty) ...[
-                const SizedBox(height: 14),
-                const Text(
+                SizedBox(height: 14),
+                Text(
                   "KEY PROBLEM PATTERNS",
                   style: TextStyle(
-                    color: Color(0xFFA7ADB7),
+                    color: _readerMuted,
                     fontSize: 10.5,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 0.6,
@@ -1315,24 +1357,26 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 ),
                 const SizedBox(height: 8),
                 ...patterns.map((p) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text("• ", style: TextStyle(color: Color(0xFFC3A568), fontSize: 13)),
-                      Expanded(
-                        child: FormattedMathText(
-                          p.toString(),
-                          style: const TextStyle(
-                            color: Color(0xFFA7ADB7),
-                            fontSize: 13,
-                            height: 1.4,
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("• ",
+                              style: TextStyle(
+                                  color: Color(0xFFC3A568), fontSize: 13)),
+                          Expanded(
+                            child: FormattedMathText(
+                              p.toString(),
+                              style: TextStyle(
+                                color: _readerMuted,
+                                fontSize: 13,
+                                height: 1.4,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                    ],
-                  ),
-                )),
+                    )),
               ],
             ],
           ),
@@ -1344,9 +1388,9 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
   Widget _buildReaderFooter(DigiBookLaunchArgs args) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 16),
-      decoration: const BoxDecoration(
-        border: Border(top: BorderSide(color: Color(0xFF252B33), width: 1)),
+      padding: EdgeInsets.symmetric(vertical: 16),
+      decoration: BoxDecoration(
+        border: Border(top: BorderSide(color: _readerBorder, width: 1)),
       ),
       child: Center(
         child: OutlinedButton.icon(
@@ -1354,9 +1398,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
           style: OutlinedButton.styleFrom(
             side: const BorderSide(color: Color(0xFFC3A568), width: 1),
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           ),
-          icon: const Icon(Icons.arrow_back_rounded, color: Color(0xFFC3A568), size: 18),
+          icon: const Icon(Icons.arrow_back_rounded,
+              color: Color(0xFFC3A568), size: 18),
           label: const Text(
             "BACK TO LIBRARY",
             style: TextStyle(
@@ -1396,18 +1442,18 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
     return Container(
       height: 48,
-      padding: const EdgeInsets.symmetric(horizontal: 12),
-      decoration: const BoxDecoration(
-        color: Color(0xFF090C10),
-        border: Border(bottom: BorderSide(color: Color(0xFF252B33), width: 1)),
+      padding: EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(
+        color: _readerBackground,
+        border: Border(bottom: BorderSide(color: _readerBorder, width: 1)),
       ),
       child: Row(
         children: [
           IconButton(
             onPressed: () => context.pop(),
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: Color(0xFFA7ADB7),
+              color: _readerMuted,
               size: 18,
             ),
           ),
@@ -1421,9 +1467,9 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   _getCanonicalBreadcrumbShort(args),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 11,
-                    color: Color(0xFFA7ADB7),
+                    color: _readerMuted,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -1431,9 +1477,9 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   args.topicTitle,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 13.5,
-                    color: Color(0xFFF3F4F6),
+                    color: _readerText,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
@@ -1482,13 +1528,13 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
           padding: const EdgeInsets.all(28),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            children: const [
+            children: [
               Icon(Icons.menu_book_rounded, color: Color(0xFFC3A568), size: 40),
               SizedBox(height: 16),
               Text(
                 "Academic Reconciliation",
                 style: TextStyle(
-                  color: Color(0xFFF3F4F6),
+                  color: _readerText,
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
                 ),
@@ -1498,7 +1544,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 "Verified fact statements for this lesson are undergoing academic reconciliation.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: Color(0xFFA7ADB7),
+                  color: _readerMuted,
                   fontSize: 13,
                   height: 1.5,
                 ),
@@ -1520,15 +1566,17 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         final locator = fact['sourceLocator'] as String? ?? '';
         final sourceCitation = rawCitation.isNotEmpty
             ? rawCitation
-            : (locator.isNotEmpty ? 'NCERT Official • $locator' : 'NCERT Official');
+            : (locator.isNotEmpty
+                ? 'NCERT Official • $locator'
+                : 'NCERT Official');
 
         return Container(
-          margin: const EdgeInsets.only(bottom: 12),
-          padding: const EdgeInsets.all(16),
+          margin: EdgeInsets.only(bottom: 12),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1536,7 +1584,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: const Color(0xFFC3A568).withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(4),
@@ -1551,32 +1600,32 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       ),
                     ),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   Text(
                     "#${index + 1}",
-                    style: const TextStyle(
-                      color: Color(0xFF777F8B),
+                    style: TextStyle(
+                      color: _readerSubtle,
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               FormattedMathText(
                 statement,
-                style: const TextStyle(
-                  color: Color(0xFFF3F4F6),
+                style: TextStyle(
+                  color: _readerText,
                   fontSize: 14.5,
                   height: 1.55,
                 ),
               ),
               if (sourceCitation.isNotEmpty) ...[
-                const SizedBox(height: 10),
+                SizedBox(height: 10),
                 Text(
                   sourceCitation,
-                  style: const TextStyle(
-                    color: Color(0xFF777F8B),
+                  style: TextStyle(
+                    color: _readerSubtle,
                     fontSize: 11,
                     fontStyle: FontStyle.italic,
                   ),
@@ -1593,7 +1642,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     final comp = args.componentSelfChecks;
     final questions = comp?['selfChecks'] as List<dynamic>? ?? [];
 
-    if (questions.isEmpty) return _buildEmptyState("No practice questions loaded.");
+    if (questions.isEmpty)
+      return _buildEmptyState("No practice questions loaded.");
 
     return ListView.builder(
       padding: const EdgeInsets.all(20),
@@ -1608,12 +1658,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         final isSubmitted = _submittedMcqs[index] == true;
 
         return Container(
-          margin: const EdgeInsets.only(bottom: 16),
-          padding: const EdgeInsets.all(16),
+          margin: EdgeInsets.only(bottom: 16),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1621,7 +1671,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(
                       color: const Color(0xFFC3A568).withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(4),
@@ -1638,25 +1689,25 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               FormattedMathText(
                 prompt,
-                style: const TextStyle(
-                  color: Color(0xFFF3F4F6),
+                style: TextStyle(
+                  color: _readerText,
                   fontSize: 14.5,
                   fontWeight: FontWeight.w600,
                   height: 1.4,
                 ),
               ),
-              const SizedBox(height: 14),
+              SizedBox(height: 14),
               ...options.asMap().entries.map((e) {
                 final oIdx = e.key;
                 final oText = e.value.toString();
                 final isThisSelected = selected == oIdx;
                 final isCorrect = oIdx == correctIdx;
 
-                Color borderColor = const Color(0xFF252B33);
-                Color bgColor = const Color(0xFF101419);
+                Color borderColor = _readerBorder;
+                Color bgColor = _readerInset;
                 if (isSubmitted) {
                   if (isCorrect) {
                     borderColor = const Color(0xFF4A8B6F);
@@ -1683,7 +1734,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                     borderRadius: BorderRadius.circular(8),
                     child: Container(
                       width: double.infinity,
-                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12, vertical: 10),
                       decoration: BoxDecoration(
                         color: bgColor,
                         borderRadius: BorderRadius.circular(8),
@@ -1699,8 +1751,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                               shape: BoxShape.circle,
                               border: Border.all(
                                 color: isThisSelected
-                                    ? const Color(0xFFC3A568)
-                                    : const Color(0xFF777F8B),
+                                    ? Color(0xFFC3A568)
+                                    : _readerSubtle,
                                 width: 1.5,
                               ),
                             ),
@@ -1708,21 +1760,20 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                               String.fromCharCode(65 + oIdx),
                               style: TextStyle(
                                 color: isThisSelected
-                                    ? const Color(0xFFC3A568)
-                                    : const Color(0xFFA7ADB7),
+                                    ? Color(0xFFC3A568)
+                                    : _readerMuted,
                                 fontSize: 11,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
-                          const SizedBox(width: 12),
+                          SizedBox(width: 12),
                           Expanded(
                             child: FormattedMathText(
                               oText,
                               style: TextStyle(
-                                color: isThisSelected
-                                    ? const Color(0xFFF3F4F6)
-                                    : const Color(0xFFA7ADB7),
+                                color:
+                                    isThisSelected ? _readerText : _readerMuted,
                                 fontSize: 13.5,
                               ),
                             ),
@@ -1746,23 +1797,27 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           }
                         : null,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFC3A568),
-                      foregroundColor: const Color(0xFF090C10),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                      backgroundColor: Color(0xFFC3A568),
+                      foregroundColor: _readerBackground,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 8),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6)),
                     ),
-                    child: const Text("CHECK ANSWER", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                    child: const Text("CHECK ANSWER",
+                        style: TextStyle(
+                            fontSize: 11, fontWeight: FontWeight.bold)),
                   ),
                 ),
               if (isSubmitted && explanation.isNotEmpty) ...[
-                const SizedBox(height: 10),
+                SizedBox(height: 10),
                 Container(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(12),
+                  padding: EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF101419),
+                    color: _readerInset,
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: const Color(0xFF252B33)),
+                    border: Border.all(color: _readerBorder),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -1777,11 +1832,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           fontSize: 11,
                         ),
                       ),
-                      const SizedBox(height: 6),
+                      SizedBox(height: 6),
                       FormattedMathText(
                         explanation,
-                        style: const TextStyle(
-                          color: Color(0xFFA7ADB7),
+                        style: TextStyle(
+                          color: _readerMuted,
                           fontSize: 12.5,
                           height: 1.4,
                         ),
@@ -1828,12 +1883,12 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       itemBuilder: (context, index) {
         final item = oneLiners[index];
         return Container(
-          margin: const EdgeInsets.only(bottom: 12),
-          padding: const EdgeInsets.all(16),
+          margin: EdgeInsets.only(bottom: 12),
+          padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF161B22),
+            color: _readerCard,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF252B33), width: 1),
+            border: Border.all(color: _readerBorder, width: 1),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1841,7 +1896,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: const Color(0xFFC3A568).withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(4),
@@ -1856,22 +1912,22 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                       ),
                     ),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   Text(
                     "#${index + 1}",
-                    style: const TextStyle(
-                      color: Color(0xFF777F8B),
+                    style: TextStyle(
+                      color: _readerSubtle,
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 10),
+              SizedBox(height: 10),
               FormattedMathText(
                 item['text']!,
-                style: const TextStyle(
-                  color: Color(0xFFF3F4F6),
+                style: TextStyle(
+                  color: _readerText,
                   fontSize: 14.5,
                   height: 1.5,
                 ),
@@ -1903,7 +1959,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 color: const Color(0xFFC3A568).withValues(alpha: 0.12),
                 shape: BoxShape.circle,
               ),
-              child: const Icon(Icons.military_tech_rounded, color: Color(0xFFC3A568), size: 36),
+              child: const Icon(Icons.military_tech_rounded,
+                  color: Color(0xFFC3A568), size: 36),
             ),
             const SizedBox(height: 18),
             const Text(
@@ -1915,22 +1972,22 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 letterSpacing: 1.0,
               ),
             ),
-            const SizedBox(height: 8),
-            const Text(
+            SizedBox(height: 8),
+            Text(
               "No active Crucible task for this lesson.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Color(0xFFF3F4F6),
+                color: _readerText,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10),
             Text(
               "This lesson establishes verified foundational theory for $topic ($subject). When this unit appears in your Crucible target rotation, adaptive challenge sets and diagnostic drills will be assigned here.",
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Color(0xFFA7ADB7),
+              style: TextStyle(
+                color: _readerMuted,
                 fontSize: 13,
                 height: 1.5,
               ),
@@ -1941,28 +1998,23 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     );
   }
 
-
-
   Widget _buildTopBar(NodeRuntimeState state) {
     final title = _currentNode?.title ?? 'Topic';
     final subject = _currentNode?.subjectId ?? 'Subject';
     final chapter = _currentNode?.chapterId ?? 'Chapter';
 
     return Container(
-      padding: EdgeInsets.fromLTRB(
-          16,
-          ResponsiveHelper.hp(context, 0.012),
-          24,
+      padding: EdgeInsets.fromLTRB(16, ResponsiveHelper.hp(context, 0.012), 24,
           ResponsiveHelper.hp(context, 0.012)),
-      decoration: const BoxDecoration(
-          border: Border(bottom: BorderSide(color: AppColors.borderSoft))),
+      decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(color: _readerBorder))),
       child: Row(
         children: [
           IconButton(
             onPressed: () => context.pop(),
             icon: Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: AppColors.secondaryText,
+              color: _readerMuted,
               size: ResponsiveHelper.sp(context, 18),
             ),
           ),
@@ -1993,8 +2045,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
             height: ResponsiveHelper.sp(context, 32),
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(
-                    color: AppColors.gold.withValues(alpha: 0.2))),
+                border:
+                    Border.all(color: AppColors.gold.withValues(alpha: 0.2))),
             child: Center(
               child: Text(
                 "${(state.mastery * 100).toInt()}%",
@@ -2014,7 +2066,11 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       {'label': 'Overview', 'isComponent': true, 'key': _overviewKey},
       {'label': 'Concepts', 'isComponent': true, 'key': _conceptsKey},
       {'label': 'Formulas', 'isComponent': true, 'key': _formulasKey},
-      {'label': 'Misconceptions', 'isComponent': true, 'key': _misconceptionsKey},
+      {
+        'label': 'Misconceptions',
+        'isComponent': true,
+        'key': _misconceptionsKey
+      },
       {'label': 'Examples', 'isComponent': true, 'key': _examplesKey},
       {'label': 'Self-Check', 'isComponent': true, 'key': _selfChecksKey},
       {'label': 'Preview', 'isComponent': true, 'key': _previewKey},
@@ -2027,9 +2083,9 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     return Container(
       height: 38,
       width: double.infinity,
-      decoration: const BoxDecoration(
-        color: Color(0xFF090C10),
-        border: Border(bottom: BorderSide(color: Color(0xFF252B33), width: 1)),
+      decoration: BoxDecoration(
+        color: _readerBackground,
+        border: Border(bottom: BorderSide(color: _readerBorder, width: 1)),
       ),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -2064,16 +2120,14 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
               padding: const EdgeInsets.symmetric(horizontal: 12),
               decoration: BoxDecoration(
                 border: isSelected
-                    ? const Border(
+                    ? Border(
                         bottom: BorderSide(color: Color(0xFFC3A568), width: 2))
                     : null,
               ),
               child: Text(
                 label,
                 style: TextStyle(
-                  color: isSelected
-                      ? const Color(0xFFC3A568)
-                      : const Color(0xFFA7ADB7),
+                  color: isSelected ? Color(0xFFC3A568) : _readerMuted,
                   fontSize: 12,
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w400,
                   letterSpacing: 0.3,
@@ -2096,7 +2150,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         dividerColor: Colors.transparent,
         indicatorColor: AppColors.gold,
         labelColor: AppColors.gold,
-        unselectedLabelColor: Colors.white30,
+        unselectedLabelColor: _readerSubtle,
         labelPadding: EdgeInsets.symmetric(
             horizontal: ResponsiveHelper.wp(context, 0.06)),
         labelStyle: AppTypography.label.copyWith(
@@ -2114,7 +2168,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
     );
   }
 
-  Widget _buildImmersiveReader(NodeRuntimeState state, DigiBookContent payload) {
+  Widget _buildImmersiveReader(
+      NodeRuntimeState state, DigiBookContent payload) {
     final String immersiveText = _getRenderedText(state, payload);
     final title = _currentNode?.title ?? 'Topic';
 
@@ -2155,7 +2210,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   scrollDepthPercent: _maxScrollPercent,
                 );
                 if (mounted) {
-                  final evidence = dwellTime >= 2.0 && _maxScrollPercent >= 0.70;
+                  final evidence =
+                      dwellTime >= 2.0 && _maxScrollPercent >= 0.70;
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text(evidence
                           ? 'MISSION PROGRESS RECORDED'
@@ -2169,8 +2225,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
             _sectionLabel("STRATEGIC REVISION"),
             SizedBox(height: ResponsiveHelper.hp(context, 0.02)),
             DarkCard(
-              padding: const EdgeInsets.all(22),
-              backgroundColor: AppColors.surface2,
+              padding: EdgeInsets.all(22),
+              backgroundColor: _readerCard,
               child: Column(
                 children: payload.revisionPoints
                     .map((point) => Padding(
@@ -2221,15 +2277,14 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.only(bottom: 18),
         child: McqCard(
-            nodeId: nodeId,
-            mcq: mcqs[index],
-            currentMastery: state.mastery),
+            nodeId: nodeId, mcq: mcqs[index], currentMastery: state.mastery),
       ),
     );
   }
 
   Widget _buildAtomicFactsTab(DigiBookContent payload) {
-    if (payload.facts.isEmpty) return _buildEmptyState("No Atomic Facts found.");
+    if (payload.facts.isEmpty)
+      return _buildEmptyState("No Atomic Facts found.");
     return ListView.builder(
       padding: const EdgeInsets.all(20),
       itemCount: payload.facts.length,
@@ -2257,8 +2312,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                 FormattedMathText(
                   fact.statement,
                   style: AppTypography.body.copyWith(
-                      fontSize: ResponsiveHelper.sp(context, 15),
-                      height: 1.5),
+                      fontSize: ResponsiveHelper.sp(context, 15), height: 1.5),
                 ),
               ],
             ),
@@ -2292,8 +2346,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
   Widget _sectionLabel(String text) => Text(text.toUpperCase(),
       style: AppTypography.label.copyWith(
-          color: AppColors.secondaryText,
-          fontSize: ResponsiveHelper.sp(context, 10)));
+          color: _readerMuted, fontSize: ResponsiveHelper.sp(context, 10)));
 
   Widget _buildEmptyState(String message) {
     return Center(
@@ -2303,10 +2356,10 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
           Icon(Icons.auto_stories_rounded,
               color: Colors.white.withValues(alpha: 0.05),
               size: ResponsiveHelper.sp(context, 64)),
-          const SizedBox(height: 20),
+          SizedBox(height: 20),
           Text(message,
               style: AppTypography.section.copyWith(
-                  color: Colors.white10,
+                  color: _readerSubtle,
                   fontSize: ResponsiveHelper.sp(context, 20))),
         ],
       ),
