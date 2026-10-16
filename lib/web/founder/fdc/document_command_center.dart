@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import '../theme/founder_light_theme.dart';
 import '../mission_control/mission_control_room.dart';
 import '../mission_control/mission_documents_tab.dart';
 import '../../shared/unified_command_console.dart';
@@ -322,8 +323,8 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(18, 12, 18, 8),
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(0xFF0B141D),
-        border: Border.all(color: Colors.white12),
+        color: FounderLightTheme.surface,
+        border: Border.all(color: FounderLightTheme.border),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -341,7 +342,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
                       'DOCUMENT COMMAND CENTER',
                       style: TextStyle(
                         fontSize: 9,
-                        color: Colors.white54,
+                        color: FounderLightTheme.textMuted,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -350,7 +351,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
                       missionId,
                       style: const TextStyle(
                         fontSize: 10,
-                        color: Colors.white38,
+                        color: FounderLightTheme.textMuted,
                       ),
                     ),
                   ],
@@ -396,7 +397,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           else
             Text(
               '$fileName  •  SHA-256 ${hash == 'NOT PROVIDED' ? hash : '${hash.substring(0, hash.length > 16 ? 16 : hash.length)}…'}',
-              style: const TextStyle(color: Colors.white60, fontSize: 11),
+              style: const TextStyle(color: FounderLightTheme.textSecondary, fontSize: 11),
             ),
           const SizedBox(height: 9),
           Row(
@@ -405,7 +406,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
                 'NEXT ACTION  ',
                 style: TextStyle(
                   fontSize: 9,
-                  color: Colors.white38,
+                  color: FounderLightTheme.textMuted,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -433,7 +434,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
     width: 190,
     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
     decoration: BoxDecoration(
-      color: Colors.black26,
+      color: FounderLightTheme.surfaceAlt,
       borderRadius: BorderRadius.circular(6),
     ),
     child: Column(

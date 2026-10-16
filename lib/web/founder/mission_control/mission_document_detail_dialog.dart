@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/founder_light_theme.dart';
 
 class MissionDocumentDetailDialog extends StatelessWidget {
   final String missionId;
@@ -21,7 +22,7 @@ class MissionDocumentDetailDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: const Color(0xFF101822),
+      backgroundColor: FounderLightTheme.surface,
       title: Text('Document: $documentId'),
       content: SingleChildScrollView(
         child: Text((data ?? {}).toString()),
