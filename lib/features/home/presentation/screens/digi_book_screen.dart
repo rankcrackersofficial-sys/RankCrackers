@@ -50,6 +50,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
   Color get _readerInset => Theme.of(context).colorScheme.surface;
   Color get _readerBorder => Theme.of(context).colorScheme.outline;
   Color get _readerText => Theme.of(context).colorScheme.onSurface;
+  Color get _readerOnPrimary => Theme.of(context).colorScheme.onPrimary;
   Color get _readerMuted => Theme.of(context).colorScheme.onSurfaceVariant;
   Color get _readerSubtle =>
       Theme.of(context).colorScheme.onSurfaceVariant.withValues(alpha: 0.78);
@@ -353,7 +354,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           onPressed: () => context.pop(),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.tacticalGold,
-                            foregroundColor: Colors.black,
+                            foregroundColor: _readerOnPrimary,
                             elevation: 0,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -362,7 +363,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                           child: Text(
                             'Close',
                             style: AppTypography.button.copyWith(
-                              color: Colors.black,
+                              color: _readerOnPrimary,
                               fontWeight: FontWeight.bold,
                               fontSize: 13,
                             ),
@@ -2354,7 +2355,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(Icons.auto_stories_rounded,
-              color: Colors.white.withValues(alpha: 0.05),
+              color: _readerSubtle.withValues(alpha: 0.18),
               size: ResponsiveHelper.sp(context, 64)),
           SizedBox(height: 20),
           Text(message,
