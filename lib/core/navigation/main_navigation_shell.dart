@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import '../theme/app_colors.dart';
 import '../../features/dashboard/presentation/providers/dashboard_scroll_provider.dart';
 
 class MainNavigationShell extends ConsumerWidget {
@@ -14,6 +13,7 @@ class MainNavigationShell extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
     final int effectiveIndex = navigationShell.currentIndex;
 
     // Root dashboard may exit normally. Other tabs must always provide a
@@ -32,15 +32,15 @@ class MainNavigationShell extends ConsumerWidget {
         bottomNavigationBar: Container(
           height: 78,
           decoration: BoxDecoration(
-            color: AppColors.surface,
-            border: const Border(
+            color: scheme.surfaceContainerHighest,
+            border: Border(
               top: BorderSide(
-                color: AppColors.borderSoft,
+                color: scheme.outline,
               ),
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withValues(alpha: 0.24),
+                color: scheme.shadow.withValues(alpha: 0.18),
                 blurRadius: 20,
               ),
             ],
@@ -106,13 +106,13 @@ class MainNavigationShell extends ConsumerWidget {
         ),
         decoration: BoxDecoration(
           color: active
-              ? AppColors.gold.withValues(alpha: 0.12)
+              ? scheme.primary.withValues(alpha: 0.12)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Icon(
           icon,
-          color: active ? AppColors.gold : Colors.white54,
+          color: active ? scheme.primary : scheme.onSurfaceVariant,
           size: 24,
         ),
       ),

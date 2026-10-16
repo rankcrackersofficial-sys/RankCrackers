@@ -18,14 +18,17 @@ class NotificationTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isRead ? Colors.transparent : AppColors.surface,
+        color: isRead ? Colors.transparent : scheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isRead ? Colors.white.withValues(alpha: 0.05) : AppColors.gold.withValues(alpha: 0.1),
+          color: isRead
+              ? scheme.outline.withValues(alpha: 0.35)
+              : AppColors.gold.withValues(alpha: 0.1),
         ),
       ),
       child: Row(
@@ -60,7 +63,10 @@ class NotificationTile extends StatelessWidget {
                 const SizedBox(height: 8),
                 Text(
                   time,
-                  style: AppTypography.label.copyWith(fontSize: 9, color: Colors.white24),
+                  style: AppTypography.label.copyWith(
+                    fontSize: 9,
+                    color: scheme.onSurfaceVariant,
+                  ),
                 ),
               ],
             ),

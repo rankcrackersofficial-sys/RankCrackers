@@ -16,6 +16,7 @@ class TacticalButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return SizedBox(
       width: double.infinity,
       height: 54,
@@ -23,8 +24,9 @@ class TacticalButton extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           backgroundColor: color ?? AppColors.tacticalGold,
-          foregroundColor: Colors.black,
-          disabledBackgroundColor: Colors.white10,
+          foregroundColor: scheme.onPrimary,
+          disabledBackgroundColor: scheme.surfaceContainerHighest,
+          disabledForegroundColor: scheme.onSurfaceVariant,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -32,7 +34,7 @@ class TacticalButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: AppTypography.cardTitle.copyWith(color: Colors.black),
+          style: AppTypography.cardTitle.copyWith(color: scheme.onPrimary),
         ),
       ),
     );
