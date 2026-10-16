@@ -17,6 +17,8 @@ const { handleSentinelAction } = require("./callable/handle_sentinel_action");
 const { handleMissionAction } = require("./callable/handle_mission_action");
 const { forceMissionPipeline } = require("./callable/force_mission_pipeline");
 const { getSecureAssetUrl } = require("./callable/secure_download");
+const { getFounderOfficialUpdatesProjectionV1 } = require("./callable/get_founder_official_updates_projection_v1");
+const { scanAuthorityNow } = require("./callable/scan_authority_now");
 const { setSovereignClaims } = require("./index_legacy"); // Keeping legacy for bootstrapping if needed
 
 exports.manageUserAccess = manageUserAccess;
@@ -32,6 +34,8 @@ exports.handleSentinelAction = handleSentinelAction;
 exports.handleMissionAction = handleMissionAction;
 exports.forceMissionPipeline = forceMissionPipeline;
 exports.getSecureAssetUrl = getSecureAssetUrl;
+exports.getFounderOfficialUpdatesProjectionV1 = getFounderOfficialUpdatesProjectionV1;
+exports.scanAuthorityNow = scanAuthorityNow;
 exports.setSovereignClaims = setSovereignClaims;
 
 // 🔱 WORKER EXPORTS (Background Intelligence)
@@ -49,6 +53,7 @@ const { knowledgeManifestationWorker } = require("./workers/manifestation_worker
 const { queueWorker } = require("./lib/workers/queueWorker");
 // 🔱 UNIFIED MISSION ENRICHMENT WORKER (W1 live integration — B2/B3 contracts inside)
 const { missionEnrichmentWorker } = require("./workers/mission_enrichment_worker");
+const { authorityWatchWorker } = require("./workers/authority_watch_worker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -63,6 +68,7 @@ exports.certificateRenderWorker = certificateRenderWorker;
 exports.knowledgeManifestationWorker = knowledgeManifestationWorker;
 exports.queueWorker = queueWorker;
 exports.missionEnrichmentWorker = missionEnrichmentWorker;
+exports.authorityWatchWorker = authorityWatchWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");
