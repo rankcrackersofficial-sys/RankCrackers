@@ -17,6 +17,7 @@ class NotificationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return GestureDetector(
       onTap: onTap,
       child: Padding(
@@ -24,12 +25,12 @@ class NotificationCard extends StatelessWidget {
         child: DarkCard(
           padding: const EdgeInsets.all(16),
           border: item.read 
-            ? Border.all(color: AppColors.borderSoft) 
+            ? Border.all(color: scheme.outline)
             : Border.all(color: AppColors.gold.withValues(alpha: 0.5), width: 1.2),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _priorityIndicator(item.priority),
+              _priorityIndicator(item.priority, scheme.onSurfaceVariant),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
@@ -39,7 +40,7 @@ class NotificationCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(item.source.toUpperCase(), style: AppTypography.label.copyWith(fontSize: 8, color: AppColors.gold)),
-                        Text(_timeAgo(item.createdAt), style: AppTypography.label.copyWith(fontSize: 8, color: Colors.white24)),
+                        Text(_timeAgo(item.createdAt), style: AppTypography.label.copyWith(fontSize: 8, color: scheme.onSurfaceVariant)),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -47,14 +48,14 @@ class NotificationCard extends StatelessWidget {
                       item.title, 
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTypography.cardTitle.copyWith(fontSize: 14, color: item.read ? Colors.white70 : Colors.white)
+                      style: AppTypography.cardTitle.copyWith(fontSize: 14, color: item.read ? scheme.onSurfaceVariant : scheme.onSurface)
                     ),
                     const SizedBox(height: 4),
                     Text(
                       item.body, 
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTypography.body.copyWith(fontSize: 12, color: item.read ? Colors.white38 : Colors.white60)
+                      style: AppTypography.body.copyWith(fontSize: 12, color: item.read ? scheme.onSurfaceVariant : scheme.onSurface)
                     ),
                   ],
                 ),
@@ -66,13 +67,13 @@ class NotificationCard extends StatelessWidget {
     );
   }
 
-  Widget _priorityIndicator(NotificationPriority priority) {
+  Widget _priorityIndicator(NotificationPriority priority, Color muted) {
     Color color;
     switch (priority) {
       case NotificationPriority.critical: color = AppColors.error; break;
       case NotificationPriority.high: color = AppColors.gold; break;
       case NotificationPriority.medium: color = AppColors.info; break;
-      case NotificationPriority.low: color = Colors.white24; break;
+      case NotificationPriority.low: color = muted; break;
     }
     return Container(
       width: 4,

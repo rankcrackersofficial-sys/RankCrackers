@@ -13,10 +13,11 @@ class NotificationCenterScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
     final notificationsAsync = ref.watch(notificationListProvider);
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: Column(
@@ -28,7 +29,7 @@ class NotificationCenterScreen extends ConsumerWidget {
                   children: [
                     IconButton(
                       onPressed: () => context.pop(),
-                      icon: const Icon(Icons.arrow_back_ios_new_rounded, color: Colors.white, size: 20),
+                      icon: Icon(Icons.arrow_back_ios_new_rounded, color: scheme.onSurface, size: 20),
                     ),
                     const SizedBox(width: 4),
                     Text('NOTIFICATION CENTER', style: AppTypography.hero.copyWith(fontSize: 20)),
@@ -41,7 +42,7 @@ class NotificationCenterScreen extends ConsumerWidget {
                     ? const Center(
                         child: Text(
                           'No active notifications.',
-                          style: TextStyle(color: Colors.white24, fontSize: 14),
+                          style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 14),
                         ),
                       )
                     : ListView.builder(

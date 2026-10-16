@@ -10,18 +10,19 @@ class OpportunitiesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_rounded, color: Colors.white, size: 18),
+          icon: Icon(Icons.arrow_back_ios_rounded, color: scheme.onSurface, size: 18),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           'Career Signals',
-          style: AppTypography.cardTitle.copyWith(color: Colors.white, fontSize: 16),
+          style: AppTypography.cardTitle.copyWith(color: scheme.onSurface, fontSize: 16),
         ),
       ),
       body: TacticalNoirBackground(
@@ -58,7 +59,7 @@ class OpportunitiesScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: AppTypography.hero.copyWith(
                           fontSize: 18,
-                          color: Colors.white,
+                          color: scheme.onSurface,
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -67,7 +68,7 @@ class OpportunitiesScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: AppTypography.body.copyWith(
                           fontSize: 13,
-                          color: Colors.white70,
+                          color: scheme.onSurfaceVariant,
                           height: 1.45,
                         ),
                       ),
@@ -75,9 +76,9 @@ class OpportunitiesScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
                         decoration: BoxDecoration(
-                          color: Colors.white10,
+                          color: scheme.surface,
                           borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: Colors.white24),
+                          border: Border.all(color: scheme.outline),
                         ),
                         child: Text(
                           'Student Opportunity Hub',

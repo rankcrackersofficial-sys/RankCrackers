@@ -9,21 +9,22 @@ class SentinelCenterScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              _buildHeader(),
+              _buildHeader(context),
               SliverPadding(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
                 sliver: SliverList(
                   delegate: SliverChildListDelegate([
                     _sectionLabel("Academic Trend Intelligence"),
                     const SizedBox(height: 24),
-                    _alertPlaceholder("Sentinel intelligence monitoring is active. Verified trend updates and pattern intelligence will appear here as new insights are published for your preparation mission."),
+                    _alertPlaceholder(context, "Sentinel intelligence monitoring is active. Verified trend updates and pattern intelligence will appear here as new insights are published for your preparation mission."),
                     const SizedBox(height: 48),
                     Center(
                       child: Column(
@@ -31,7 +32,7 @@ class SentinelCenterScreen extends ConsumerWidget {
                           Icon(Icons.shield_rounded, color: AppColors.gold.withValues(alpha: 0.2), size: 64),
                           const SizedBox(height: 16),
                           Text("No active trend alerts",
-                            style: AppTypography.label.copyWith(color: Colors.white24)),
+                            style: AppTypography.label.copyWith(color: scheme.onSurfaceVariant)),
                         ],
                       ),
                     ),
@@ -45,7 +46,8 @@ class SentinelCenterScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -54,7 +56,7 @@ class SentinelCenterScreen extends ConsumerWidget {
           children: [
             Text("SENTINEL CENTER", style: AppTypography.hero),
             const SizedBox(height: 8),
-            Text("Sovereign Academic Trend Intelligence", style: AppTypography.label.copyWith(color: Colors.white24)),
+            Text("Sovereign Academic Trend Intelligence", style: AppTypography.label.copyWith(color: scheme.onSurfaceVariant)),
           ],
         ),
       ),
@@ -65,15 +67,16 @@ class SentinelCenterScreen extends ConsumerWidget {
     return Text(text.toUpperCase(), style: AppTypography.label.copyWith(color: AppColors.gold, fontSize: 10));
   }
 
-  Widget _alertPlaceholder(String text) {
+  Widget _alertPlaceholder(BuildContext context, String text) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: AppColors.surface,
+        color: scheme.surfaceContainerHighest,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
-      child: Text(text, style: AppTypography.body.copyWith(fontSize: 13, color: Colors.white70)),
+      child: Text(text, style: AppTypography.body.copyWith(fontSize: 13, color: scheme.onSurfaceVariant)),
     );
   }
 }
