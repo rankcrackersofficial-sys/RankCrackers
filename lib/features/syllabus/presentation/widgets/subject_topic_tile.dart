@@ -21,6 +21,7 @@ class SubjectTopicTile
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
 
     return Container(
 
@@ -37,7 +38,7 @@ class SubjectTopicTile
 
       decoration: BoxDecoration(
 
-        color: Colors.white,
+        color: scheme.surfaceContainerHighest,
 
         borderRadius:
         BorderRadius.circular(
@@ -76,9 +77,7 @@ class SubjectTopicTile
               color:
               completed
                   ? null
-                  : const Color(
-                0xFFF2F5FF,
-              ),
+              : scheme.surface,
 
               borderRadius:
               BorderRadius.circular(
@@ -98,7 +97,7 @@ class SubjectTopicTile
 
               completed
 
-                  ? Colors.white
+                  ? scheme.onPrimary
 
                   : AppColors.primary,
             ),
@@ -128,8 +127,7 @@ class SubjectTopicTile
                     FontWeight.w700,
 
                     color:
-                    AppColors
-                        .textPrimary,
+                        scheme.onSurface,
                   ),
                 ),
 
@@ -159,8 +157,7 @@ class SubjectTopicTile
 
                         ? Colors.green
 
-                        : AppColors
-                        .textSecondary,
+                        : scheme.onSurfaceVariant,
                   ),
                 ),
               ],
@@ -174,7 +171,7 @@ class SubjectTopicTile
             size: 16,
 
             color:
-            AppColors.textSecondary,
+            scheme.onSurfaceVariant,
           ),
         ],
       ),

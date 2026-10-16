@@ -21,11 +21,12 @@ class SubjectDetailsScreen
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
 
       backgroundColor:
-      const Color(0xFFF4F8FF),
+      scheme.surface,
 
       appBar: AppBar(
 
@@ -44,7 +45,7 @@ class SubjectDetailsScreen
             fontWeight:
             FontWeight.w700,
 
-            color: Colors.white,
+            color: scheme.onPrimary,
           ),
         ),
       ),
@@ -119,7 +120,7 @@ class SubjectDetailsScreen
                       FontWeight.w800,
 
                       color:
-                      Colors.white,
+                      scheme.onPrimary,
                     ),
                   ),
 
@@ -137,7 +138,7 @@ class SubjectDetailsScreen
                       fontSize: 12,
 
                       color:
-                      Colors.white
+                      scheme.onPrimary
                           .withValues(
                         alpha: 0.82,
                       ),
@@ -165,13 +166,13 @@ class SubjectDetailsScreen
                       minHeight: 14,
 
                       backgroundColor:
-                      Colors.white
+                      scheme.onPrimary
                           .withValues(
                         alpha: 0.18,
                       ),
 
                       color:
-                      Colors.white,
+                      scheme.onPrimary,
                     ),
                   ),
                 ],
@@ -193,7 +194,7 @@ class SubjectDetailsScreen
                 FontWeight.w800,
 
                 color:
-                AppColors.textPrimary,
+                scheme.onSurface,
               ),
             ),
 
