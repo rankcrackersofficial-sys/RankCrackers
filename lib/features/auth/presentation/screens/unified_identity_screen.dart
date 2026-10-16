@@ -505,13 +505,15 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     required List<String> items,
     required Function(String) onSelected,
   }) {
+    final sheetScheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
-      backgroundColor: royalBlack,
+      backgroundColor: sheetScheme.surface,
       isScrollControlled: true,
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) {
+        final scheme = Theme.of(context).colorScheme;
         List<String> filteredItems = List<String>.from(items);
         final searchController = TextEditingController();
         return StatefulBuilder(
@@ -528,7 +530,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                           style:
                               AppTypography.cardTitle.copyWith(color: goldAccent)),
                       IconButton(
-                        icon: const Icon(Icons.close, color: Colors.white54, size: 20),
+                        icon: Icon(Icons.close,
+                            color: scheme.onSurfaceVariant, size: 20),
                         onPressed: () => Navigator.pop(context),
                       ),
                     ],
@@ -538,19 +541,20 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     key: const ValueKey('state_search_input'),
                     controller: searchController,
                     autofocus: true,
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: scheme.onSurface),
                     decoration: InputDecoration(
                       hintText: "Search State / UT...",
-                      hintStyle: const TextStyle(color: Colors.white24),
+                      hintStyle: TextStyle(color: scheme.onSurfaceVariant),
                       prefixIcon: const Icon(Icons.search, color: goldAccent),
                       filled: true,
-                      fillColor: Colors.white10,
+                      fillColor: scheme.surfaceVariant,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none),
                       suffixIcon: searchController.text.isNotEmpty
                           ? IconButton(
-                              icon: const Icon(Icons.clear, color: Colors.white38, size: 18),
+                              icon: Icon(Icons.clear,
+                                  color: scheme.onSurfaceVariant, size: 18),
                               onPressed: () {
                                 setModalState(() {
                                   searchController.clear();
@@ -579,7 +583,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                         ? Center(
                             child: Text(
                               'No matching states found',
-                              style: AppTypography.body.copyWith(color: Colors.white38),
+                              style: AppTypography.body.copyWith(
+                                  color: scheme.onSurfaceVariant),
                             ),
                           )
                         : ListView.builder(
@@ -594,7 +599,9 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                                   title: Text(
                                     item,
                                     style: TextStyle(
-                                      color: isSelected ? goldAccent : Colors.white70,
+                                      color: isSelected
+                                          ? goldAccent
+                                          : scheme.onSurfaceVariant,
                                       fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                                     ),
                                   ),
@@ -620,17 +627,20 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   void _showSnackBar(String message) {
+    final scheme = Theme.of(context).colorScheme;
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-          backgroundColor: const Color(0xFF111625),
+          backgroundColor: scheme.inverseSurface,
           content:
-              Text(message, style: GoogleFonts.poppins(color: Colors.white))),
+              Text(message,
+                  style: GoogleFonts.poppins(color: scheme.onInverseSurface))),
     );
   }
 
   @override
   Widget build(BuildContext context) {
     debugPrint('UnifiedIdentityScreen: build called');
+    final scheme = Theme.of(context).colorScheme;
     final authState = ref.watch(authNotifierProvider);
     final user = authState.user ??
         ((widget.disableFirebaseAuthLookupForTest || SessionManager.disableFirebaseForTest)
@@ -639,7 +649,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     final showProfileSetup = widget.forceProfileSetupForTest || user != null;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       resizeToAvoidBottomInset: true,
       body: TacticalNoirBackground(
         child: Stack(
