@@ -76,6 +76,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final knowledge = ref.watch(knowledgeEngineProvider);
     final coverage = knowledge.coverageState;
     final risk = knowledge.riskState;
@@ -94,7 +95,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     );
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: CustomScrollView(
@@ -146,7 +147,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                           fontSize: 11,
                           letterSpacing: 1.2,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white70)),
+                          color: scheme.onSurfaceVariant)),
                 ),
               ),
 
@@ -222,7 +223,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                           fontSize: 11,
                           letterSpacing: 1.2,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white70)),
+                          color: scheme.onSurfaceVariant)),
                 ),
               ),
 
@@ -247,7 +248,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                           fontSize: 11,
                           letterSpacing: 1.2,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white70)),
+                          color: scheme.onSurfaceVariant)),
                 ),
               ),
 
@@ -318,7 +319,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 style: AppTypography.label.copyWith(
                     fontSize: secondary ? 11 : 12,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white)),
+                    color: Theme.of(context).colorScheme.onSurface)),
           ],
         ),
       ),
@@ -338,7 +339,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 fontSize: 11,
                 letterSpacing: 1.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.white70)),
+                color: scheme.onSurfaceVariant)),
         const SizedBox(height: 8),
         DarkCard(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
@@ -353,7 +354,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                             'Your first priority unlocks after the first assessment',
                         style: AppTypography.cardTitle.copyWith(
                             fontSize: 14,
-                            color: Colors.white,
+                            color: Theme.of(context).colorScheme.onSurface,
                             fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     Text(
@@ -364,7 +365,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                                 : 'Target: ${(state.mastery * 100).toInt()}% Mastery',
                         style: AppTypography.body.copyWith(
                             fontSize: 12.5,
-                            color: Colors.white70,
+                            color: Theme.of(context).colorScheme.onSurfaceVariant,
                             height: 1.35)),
                   ],
                 ),
@@ -403,7 +404,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             fontSize: 11,
             letterSpacing: 1.2,
             fontWeight: FontWeight.bold,
-            color: Colors.white70,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
           ),
         ),
         const SizedBox(height: 8),
@@ -451,7 +452,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                     : "Pending",
                 color: hasRiskEvidence
                     ? (risk.highRisk ? Colors.redAccent : Colors.greenAccent)
-                    : Colors.white,
+                    : Theme.of(context).colorScheme.onSurfaceVariant,
                 icon: Icons.shield_outlined,
                 isPending: !hasRiskEvidence,
               ),
@@ -473,7 +474,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       border: Border.all(
         color: isPending
-            ? AppColors.borderSoft
+            ? Theme.of(context).colorScheme.outline
             : color.withValues(alpha: 0.35),
         width: 1.0,
       ),
@@ -492,7 +493,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                   fontSize: 11.5,
                   letterSpacing: 1.1,
                   fontWeight: FontWeight.w700,
-                  color: Colors.white70,
+                  color: Theme.of(context).colorScheme.onSurfaceVariant,
                 ),
               ),
               Container(
