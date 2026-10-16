@@ -82,7 +82,6 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   late Animation<double> glowAnimation;
 
   static const Color goldAccent = AppColors.gold;
-  static const Color royalBlack = AppColors.background;
 
   @override
   void initState() {
@@ -153,16 +152,17 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         final status = data['status']?.toString() ?? 'active';
         if (status == 'deactivated') {
           if (!mounted) return;
+          final scheme = Theme.of(context).colorScheme;
           final reinstate = await showDialog<bool>(
             context: context,
             barrierDismissible: false,
             builder: (ctx) => AlertDialog(
-              backgroundColor: AppColors.background,
-              title: const Text('Reactivate Account', style: TextStyle(color: Colors.white)),
-              content: const Text('Your profile is currently deactivated. Would you like to reinstate it and restore all your data?', style: TextStyle(color: Colors.white70)),
+              backgroundColor: scheme.surface,
+              title: Text('Reactivate Account', style: TextStyle(color: scheme.onSurface)),
+              content: Text('Your profile is currently deactivated. Would you like to reinstate it and restore all your data?', style: TextStyle(color: scheme.onSurfaceVariant)),
               actions: [
                 TextButton(
-                  child: const Text('Cancel', style: TextStyle(color: Colors.white24)),
+                  child: Text('Cancel', style: TextStyle(color: scheme.onSurfaceVariant)),
                   onPressed: () => Navigator.of(ctx).pop(false),
                 ),
                 TextButton(
