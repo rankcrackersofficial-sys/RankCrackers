@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rank_crackers/features/admin/presentation/widgets/mission_control/mission_control_center.dart';
 import 'package:rank_crackers/features/admin/presentation/widgets/upload_factory/upload_factory_center.dart';
 import 'package:rank_crackers/web/founder/mission_control/mission_variable_authority_panel.dart';
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 import 'mission_documents_tab.dart';
 import 'mission_publish_readiness_panel.dart';
 
@@ -255,7 +256,7 @@ class _SelectedMissionDetail extends StatelessWidget {
                   const Text('NEXT ACTION',
                       style: TextStyle(
                           fontSize: 9,
-                          color: Colors.white54,
+                          color: FounderLightTheme.textMuted,
                           fontWeight: FontWeight.bold)),
                   const SizedBox(width: 14),
                   Expanded(
@@ -273,7 +274,7 @@ class _SelectedMissionDetail extends StatelessWidget {
                           ? 'SOURCE → INGESTION → VERIFICATION'
                           : 'SOURCE CONNECTED',
                       style:
-                          const TextStyle(fontSize: 9, color: Colors.white38)),
+                          const TextStyle(fontSize: 9, color: FounderLightTheme.textDisabled)),
                 ]),
               ),
             ),
@@ -340,7 +341,7 @@ class _DetailHeader extends StatelessWidget {
                 Text(title, style: Theme.of(context).textTheme.headlineSmall),
                 SelectableText(missionId,
                     style:
-                        const TextStyle(color: Colors.white54, fontSize: 11)),
+                        const TextStyle(color: FounderLightTheme.textMuted, fontSize: 11)),
               ],
             ),
           ),
@@ -366,7 +367,7 @@ class _DetailFact extends StatelessWidget {
                 Text(label,
                     style: const TextStyle(
                         fontSize: 9,
-                        color: Colors.white54,
+                        color: FounderLightTheme.textMuted,
                         fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
                 Text(value,

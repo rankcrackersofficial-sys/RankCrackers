@@ -241,7 +241,7 @@ class _OfferOperationsPanelState extends State<_OfferOperationsPanel> {
           width: width,
           child: TextField(
               controller: controller,
-              style: const TextStyle(color: Colors.white, fontSize: 12),
+              style: const TextStyle(color: rcText, fontSize: 12),
               decoration: InputDecoration(
                   labelText: label,
                   labelStyle: const TextStyle(color: rcMuted, fontSize: 11),
@@ -346,7 +346,7 @@ class _CouponOperationsPanelState extends State<_CouponOperationsPanel> {
             padding: const EdgeInsets.only(top: 12),
             child: Text('Generated code: $_generatedCode',
                 style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.w700))),
+                    color: rcText, fontWeight: FontWeight.w700))),
       if (_message != null)
         Padding(
             padding: const EdgeInsets.only(top: 8),
@@ -360,7 +360,7 @@ class _CouponOperationsPanelState extends State<_CouponOperationsPanel> {
           width: width,
           child: TextField(
               controller: controller,
-              style: const TextStyle(color: Colors.white, fontSize: 12),
+              style: const TextStyle(color: rcText, fontSize: 12),
               decoration: InputDecoration(
                   labelText: label,
                   labelStyle: const TextStyle(color: rcMuted, fontSize: 11),
@@ -394,7 +394,7 @@ class _StatusCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(value,
                 style: const TextStyle(
-                    color: Colors.white,
+                    color: rcText,
                     fontSize: 16,
                     fontWeight: FontWeight.w800)),
             const SizedBox(height: 5),
@@ -426,7 +426,7 @@ class _OfferRow extends StatelessWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(title,
               style: const TextStyle(
-                  color: Colors.white,
+                  color: rcText,
                   fontSize: 13,
                   fontWeight: FontWeight.w700)),
           const SizedBox(height: 3),
@@ -451,6 +451,6 @@ class _ChecklistItem extends StatelessWidget {
         const SizedBox(width: 10),
         Text(text,
             style:
-                TextStyle(color: done ? Colors.white : rcMuted, fontSize: 12))
+                TextStyle(color: done ? rcText : rcMuted, fontSize: 12))
       ]));
 }

@@ -7,6 +7,7 @@ import '../../shared/rc_colors.dart';
 import '../../shared/rc_loaders.dart';
 import '../../shared/rc_panel.dart';
 import '../../shared/unified_command_console.dart';
+import '../theme/founder_light_theme.dart';
 
 class SyllabusAtomVerificationTab extends StatefulWidget {
   final String missionId;
@@ -169,11 +170,11 @@ class _SyllabusAtomVerificationTabState
           color: rcSurface.withValues(alpha: 0.5),
           child: Row(
             children: [
-              _stat('Total Atoms', total.toString(), Colors.white),
+              _stat('Total Atoms', total.toString(), FounderLightTheme.textPrimary),
               const SizedBox(width: 28),
               _stat('RX2 Source-Backed', sourceBacked.toString(), rcGold),
               const SizedBox(width: 28),
-              _stat('Legacy', legacy.toString(), Colors.white38),
+              _stat('Legacy', legacy.toString(), FounderLightTheme.textDisabled),
               const SizedBox(width: 28),
               _stat('Needs Review', needsReview.toString(), rcGold),
               const SizedBox(width: 28),
@@ -191,7 +192,7 @@ class _SyllabusAtomVerificationTabState
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(label.toUpperCase(), style: const TextStyle(color: Colors.white24, fontSize: 9, fontWeight: FontWeight.bold)),
+        Text(label.toUpperCase(), style: const TextStyle(color: FounderLightTheme.textDisabled, fontSize: 9, fontWeight: FontWeight.bold)),
         const SizedBox(height: 4),
         Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.w900)),
       ],
@@ -214,16 +215,16 @@ class _SyllabusAtomVerificationTabState
                   SizedBox(height: 6),
                   Text(
                     'Review source-backed RX2 atoms only. Legacy atoms stay read-only. Verification does not publish to students or write topic_nodes. Scroll horizontally to view source, status, and review actions.',
-                    style: TextStyle(color: Colors.white54, fontSize: 12),
+                    style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 12),
                   ),
                   SizedBox(height: 4),
-                  Text('GOOD_TEXT_NO_PAGE is allowed for review, but student publish remains blocked until page-proof or explicit override policy.', style: TextStyle(color: Colors.white30, fontSize: 10)),
+                  Text('GOOD_TEXT_NO_PAGE is allowed for review, but student publish remains blocked until page-proof or explicit override policy.', style: TextStyle(color: FounderLightTheme.textDisabled, fontSize: 10)),
                 ],
               ),
             ),
             _legendChip('SOURCE-BACKED', rcGold),
             const SizedBox(width: 8),
-            _legendChip('LEGACY READ-ONLY', Colors.white30),
+            _legendChip('LEGACY READ-ONLY', FounderLightTheme.textDisabled),
           ],
         ),
       ),
@@ -327,7 +328,7 @@ class _SyllabusAtomVerificationTabState
           return true;
         }).toList();
 
-        if (allDocs.isEmpty) return const Center(child: Text('No atoms found matching filters.', style: TextStyle(color: Colors.white24)));
+        if (allDocs.isEmpty) return const Center(child: Text('No atoms found matching filters.', style: TextStyle(color: FounderLightTheme.textDisabled)));
 
         return Scrollbar(
           controller: _horizontalTableController,
@@ -392,14 +393,14 @@ class _SyllabusAtomVerificationTabState
             onTap: () => Clipboard.setData(ClipboardData(text: (data['atom_id'] ?? data['atomId'] ?? docId).toString())),
             child: SizedBox(
               width: 190,
-              child: Text((data['atom_id'] ?? data['atomId'] ?? 'ID_MISSING').toString(), style: const TextStyle(fontFamily: 'monospace', fontSize: 10, color: Colors.white38)),
+              child: Text((data['atom_id'] ?? data['atomId'] ?? 'ID_MISSING').toString(), style: const TextStyle(fontFamily: 'monospace', fontSize: 10, color: FounderLightTheme.textDisabled)),
             ),
           ),
         ),
         DataCell(
           SizedBox(
             width: 260,
-            child: Text((data['hierarchy_path'] ?? data['hierarchyPath'] ?? '--').toString(), style: const TextStyle(fontSize: 11, color: Colors.white54), maxLines: 4, overflow: TextOverflow.ellipsis),
+            child: Text((data['hierarchy_path'] ?? data['hierarchyPath'] ?? '--').toString(), style: const TextStyle(fontSize: 11, color: FounderLightTheme.textMuted), maxLines: 4, overflow: TextOverflow.ellipsis),
           ),
         ),
         DataCell(
@@ -417,7 +418,7 @@ class _SyllabusAtomVerificationTabState
   }
 
   Widget _sourceBadge(bool sourceBacked) {
-    final color = sourceBacked ? rcGold : Colors.white30;
+    final color = sourceBacked ? rcGold : FounderLightTheme.textDisabled;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
       decoration: BoxDecoration(
@@ -438,9 +439,9 @@ class _SyllabusAtomVerificationTabState
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(excerpt, style: const TextStyle(fontSize: 10, color: Colors.white38, fontStyle: FontStyle.italic), maxLines: 4, overflow: TextOverflow.ellipsis),
+          Text(excerpt, style: const TextStyle(fontSize: 10, color: FounderLightTheme.textDisabled, fontStyle: FontStyle.italic), maxLines: 4, overflow: TextOverflow.ellipsis),
           const SizedBox(height: 6),
-          _miniPill(quality, quality == 'GOOD_TEXT_NO_PAGE' ? rcGold : Colors.white30),
+          _miniPill(quality, quality == 'GOOD_TEXT_NO_PAGE' ? rcGold : FounderLightTheme.textDisabled),
         ],
       ),
     );
@@ -455,9 +456,9 @@ class _SyllabusAtomVerificationTabState
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(runId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: Colors.white38), maxLines: 2, overflow: TextOverflow.ellipsis),
+      Text(runId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: FounderLightTheme.textDisabled), maxLines: 2, overflow: TextOverflow.ellipsis),
           const SizedBox(height: 6),
-          Text(docId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: Colors.white24), maxLines: 2, overflow: TextOverflow.ellipsis),
+          Text(docId, style: const TextStyle(fontFamily: 'monospace', fontSize: 9, color: FounderLightTheme.textDisabled), maxLines: 2, overflow: TextOverflow.ellipsis),
         ],
       ),
     );
@@ -473,7 +474,7 @@ class _SyllabusAtomVerificationTabState
         children: [
           _miniPill(status.toUpperCase(), statusColor),
           const SizedBox(height: 6),
-          _miniPill(approved ? 'FOUNDER APPROVED' : 'NOT APPROVED', approved ? rcGreen : Colors.white30),
+          _miniPill(approved ? 'FOUNDER APPROVED' : 'NOT APPROVED', approved ? rcGreen : FounderLightTheme.textDisabled),
         ],
       ),
     );
@@ -481,7 +482,7 @@ class _SyllabusAtomVerificationTabState
 
   Widget _actionsCell(String docId, Map<String, dynamic> data, bool canReview, bool isVerified, bool isRejected) {
     if (!canReview) {
-      return Text(_isFounder ? 'LEGACY READ ONLY' : 'READ ONLY', style: const TextStyle(color: Colors.white10, fontSize: 10));
+      return Text(_isFounder ? 'LEGACY READ ONLY' : 'READ ONLY', style: const TextStyle(color: FounderLightTheme.textDisabled, fontSize: 10));
     }
     return Row(
       children: [

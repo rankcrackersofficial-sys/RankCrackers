@@ -105,7 +105,7 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
         const SizedBox(height: 6),
         const Text(
           'Select a mission to manage its official source documents.',
-          style: TextStyle(color: Colors.white60),
+          style: TextStyle(color: FounderLightTheme.textMuted),
         ),
         const SizedBox(height: 20),
         const Text(
@@ -190,7 +190,7 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
                               'Open source-document workspace →',
                               style: TextStyle(
                                 fontSize: 11,
-                                color: Colors.white54,
+                                color: FounderLightTheme.textMuted,
                               ),
                             ),
                           ],
@@ -392,7 +392,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           if (source == null)
             const Text(
               'No approved official source document is currently connected to this mission.',
-              style: TextStyle(color: Colors.white60, fontSize: 11),
+              style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 11),
             )
           else
             Text(
@@ -421,7 +421,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
               const Spacer(),
               const Text(
                 'SOURCE → INGESTION → VERIFICATION → FACTORY → PUBLISH READINESS',
-                style: TextStyle(fontSize: 9, color: Colors.white38),
+                style: TextStyle(fontSize: 9, color: FounderLightTheme.textDisabled),
               ),
             ],
           ),
@@ -444,7 +444,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           label,
           style: const TextStyle(
             fontSize: 8,
-            color: Colors.white38,
+            color: FounderLightTheme.textDisabled,
             fontWeight: FontWeight.bold,
           ),
         ),

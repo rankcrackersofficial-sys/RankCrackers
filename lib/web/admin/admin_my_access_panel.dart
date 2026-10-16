@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 
 /// Read-only self-service view of the persisted Admin access record.
 /// This is a presentation surface; backend claims/rules remain authoritative.
@@ -37,28 +38,28 @@ class AdminMyAccessPanel extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text('MY ACCESS', style: TextStyle(
-              color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+              color: FounderLightTheme.textPrimary, fontSize: 18, fontWeight: FontWeight.bold)),
           const SizedBox(height: 12),
           Text('Account role: $role',
-              style: const TextStyle(color: Colors.white70)),
+              style: const TextStyle(color: FounderLightTheme.textMuted)),
           Text('Account status: ${active ? 'ACTIVE' : 'NOT ACTIVE'}',
-              style: const TextStyle(color: Colors.white70)),
+              style: const TextStyle(color: FounderLightTheme.textMuted)),
           const SizedBox(height: 16),
           const Text('Explicit Admin permissions',
-              style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+              style: TextStyle(color: FounderLightTheme.textPrimary, fontWeight: FontWeight.w600)),
           const SizedBox(height: 8),
           if (scopes.isEmpty)
             const Text('No explicit Admin module permissions are recorded.',
-                style: TextStyle(color: Colors.white70)),
+                style: TextStyle(color: FounderLightTheme.textMuted)),
           for (final scope in scopes)
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),
-              child: Text(scope, style: const TextStyle(color: Colors.white70)),
+              child: Text(scope, style: const TextStyle(color: FounderLightTheme.textMuted)),
             ),
           const SizedBox(height: 16),
           const Text('Changes to access require Founder authorization. '
               'This display does not grant permissions.',
-              style: TextStyle(color: Colors.white54, fontSize: 12)),
+              style: TextStyle(color: FounderLightTheme.textDisabled, fontSize: 12)),
         ],
       ),
     );

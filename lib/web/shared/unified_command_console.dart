@@ -11,6 +11,7 @@ import '../founder/mission_control/mission_control_room.dart';
 import '../founder/mission_control/mission_publish_readiness_panel.dart';
 import '../founder/system/founder_system_operations_web.dart';
 import '../founder/revenue/revenue_subscription_control_web.dart';
+import '../founder/watch/mission_watch_web.dart';
 import '../../features/admin/presentation/widgets/review_queue/admin_tasks_list.dart';
 import '../admin/admin_my_access_panel.dart';
 
@@ -509,6 +510,10 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           group: 'STUDENT & HEALTH',
           label: 'Student Delivery Health',
           builder: (_) => const FounderStudentHealthWeb()));
+      list.add(_ConsoleModule(
+          group: 'MISSION & DELIVERY',
+          label: 'Mission Watch',
+          builder: (_) => const MissionWatchWeb()));
       list.add(_ConsoleModule(
           group: 'REVENUE & GROWTH',
           label: 'Revenue & Subscriptions',

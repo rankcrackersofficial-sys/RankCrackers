@@ -17,6 +17,7 @@ import '../../shared/rc_file_helpers.dart';
 import '../../shared/rc_loaders.dart';
 import '../../shared/rc_panel.dart';
 import '../../shared/mission_processing_health_bar.dart';
+import '../theme/founder_light_theme.dart';
 
 import '../../shared/unified_command_console.dart';
 import 'mission_document_detail_dialog.dart';
@@ -943,7 +944,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                       letterSpacing: 1)),
               subtitle: Text(
                   '${slots.length} canonical source slot${slots.length == 1 ? '' : 's'}',
-                  style: const TextStyle(color: Colors.white54, fontSize: 11)),
+                  style: const TextStyle(color: FounderLightTheme.textMuted, fontSize: 11)),
               children: slots.map((slotDoc) {
                 final slot = slotDoc.data();
                 return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
@@ -961,7 +962,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                               (slot['documentFamily'] ?? 'OFFICIAL SOURCE')
                                   .toString(),
                               style: const TextStyle(
-                                  color: Colors.white70,
+                                  color: FounderLightTheme.textSecondary,
                                   fontWeight: FontWeight.bold)),
                           const SizedBox(height: 6),
                           for (final versionDoc in versions)
@@ -1047,7 +1048,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             _chip('SUPERSEDED $superseded'),
             const Text(
                 'Upload is candidate-only. Student truth changes only after verified Founder activation.',
-                style: TextStyle(color: Colors.white54, fontSize: 11)),
+                style: TextStyle(color: FounderLightTheme.textMuted, fontSize: 11)),
           ])),
     );
   }
@@ -1225,7 +1226,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             const SizedBox(height: 6),
             const Text(
               'Optional. If blank, the file name becomes the source title.',
-              style: TextStyle(color: Colors.white38, fontSize: 11),
+              style: TextStyle(color: FounderLightTheme.textDisabled, fontSize: 11),
             ),
             if (_error != null) ...[
               const SizedBox(height: 12),
@@ -1238,7 +1239,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
             const SizedBox(height: 18),
             const Text(
               'Upload one or more supported official source files.',
-              style: TextStyle(color: Colors.white38, fontSize: 11),
+              style: TextStyle(color: FounderLightTheme.textDisabled, fontSize: 11),
             ),
             const SizedBox(height: 8),
             FilledButton.icon(
@@ -1410,7 +1411,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
               Expanded(
                   child: Text(title,
                       style: const TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold))),
+                          color: FounderLightTheme.textPrimary, fontWeight: FontWeight.bold))),
               if (isUnsafe)
                 _chip('QUALITY UNSAFE', color: rcRed)
               else
@@ -1467,7 +1468,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
           ),
           const SizedBox(height: 8),
           Text(path.isEmpty ? 'No storage path recorded.' : path,
-              style: const TextStyle(color: Colors.white38, fontSize: 11)),
+              style: const TextStyle(color: FounderLightTheme.textDisabled, fontSize: 11)),
           const SizedBox(height: 12),
           Wrap(
             spacing: 8,
@@ -1572,7 +1573,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                   label: const Text('Review PYQ Questions'),
                   style: FilledButton.styleFrom(
                       backgroundColor: Colors.blue,
-                      foregroundColor: Colors.white),
+                      foregroundColor: FounderLightTheme.textPrimary),
                 ),
             ],
           ),
@@ -1638,7 +1639,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
           const SizedBox(height: 8),
           if (docs.isEmpty)
             const Text('No visible documents in this group.',
-                style: TextStyle(color: Colors.white38))
+                style: TextStyle(color: FounderLightTheme.textDisabled))
           else
             ...docs.map((doc) {
               final data = doc.data();
@@ -1660,7 +1661,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     );
   }
 
-  Widget _chip(String label, {Color color = Colors.white54}) {
+  Widget _chip(String label, {Color color = FounderLightTheme.textMuted}) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(

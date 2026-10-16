@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 
 class MissionVariableAuthorityPanel extends StatefulWidget {
   const MissionVariableAuthorityPanel({super.key, this.initialMissionId});
@@ -273,7 +274,7 @@ class _MissionVariableAuthorityPanelState
                     style: Theme.of(context).textTheme.titleLarge),
                 Text(_missionId!,
                     style:
-                        const TextStyle(fontSize: 10, color: Colors.white38)),
+                        const TextStyle(fontSize: 10, color: FounderLightTheme.textDisabled)),
               ])),
           if (!_realmPresent)
             const Chip(
@@ -412,7 +413,7 @@ class _MissionVariableAuthorityPanelState
       dense: true,
       title: Text(label, style: const TextStyle(fontWeight: FontWeight.w600)),
       trailing: Text('${pack.length} item${pack.length == 1 ? '' : 's'}',
-          style: const TextStyle(color: Colors.white54)),
+          style: const TextStyle(color: FounderLightTheme.textMuted)),
       children: pack.isEmpty
           ? const [
               Padding(
@@ -420,7 +421,7 @@ class _MissionVariableAuthorityPanelState
                   child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text('No source-backed items.',
-                          style: TextStyle(color: Colors.white38))))
+                          style: TextStyle(color: FounderLightTheme.textDisabled))))
             ]
           : List.generate(pack.length, (index) {
               final item = Map<String, dynamic>.from(pack[index] as Map);
