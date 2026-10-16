@@ -51,30 +51,35 @@ class MainNavigationShell extends ConsumerWidget {
               _navItem(
                 context,
                 icon: Icons.home_rounded,
+                label: 'Home',
                 index: 0,
                 effectiveIndex: effectiveIndex,
               ),
               _navItem(
                 context,
                 icon: Icons.local_fire_department_rounded,
+                label: 'Crucible',
                 index: 1,
                 effectiveIndex: effectiveIndex,
               ),
               _navItem(
                 context,
                 icon: Icons.auto_stories_rounded,
+                label: 'DigiBook',
                 index: 2,
                 effectiveIndex: effectiveIndex,
               ),
               _navItem(
                 context,
                 icon: Icons.account_tree_rounded,
+                label: 'Syllabus',
                 index: 3,
                 effectiveIndex: effectiveIndex,
               ),
               _navItem(
                 context,
                 icon: Icons.work_outline_rounded,
+                label: 'Career',
                 index: 4,
                 effectiveIndex: effectiveIndex,
               ),
@@ -88,6 +93,7 @@ class MainNavigationShell extends ConsumerWidget {
   Widget _navItem(
     BuildContext context, {
     required IconData icon,
+    required String label,
     required int index,
     required int effectiveIndex,
   }) {
@@ -100,20 +106,31 @@ class MainNavigationShell extends ConsumerWidget {
       ),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
-        padding: const EdgeInsets.symmetric(
-          horizontal: 14,
-          vertical: 10,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
           color: active
               ? scheme.primary.withValues(alpha: 0.12)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: Icon(
-          icon,
-          color: active ? scheme.primary : scheme.onSurfaceVariant,
-          size: 24,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              icon,
+              color: active ? scheme.primary : scheme.onSurfaceVariant,
+              size: 21,
+            ),
+            const SizedBox(height: 2),
+            Text(
+              label,
+              style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                    color: active ? scheme.primary : scheme.onSurfaceVariant,
+                    fontWeight: active ? FontWeight.w700 : FontWeight.w500,
+                    letterSpacing: 0.15,
+                  ),
+            ),
+          ],
         ),
       ),
     );
