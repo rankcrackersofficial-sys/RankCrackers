@@ -1,9 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../theme/app_colors.dart';
 import '../../theme/app_typography.dart';
 import '../dark_card.dart';
 import '../premium_button.dart';
+import '../../utils/app_routes.dart';
 
 class PremiumPaywallWidget extends StatelessWidget {
   final String title;
@@ -13,7 +15,8 @@ class PremiumPaywallWidget extends StatelessWidget {
   const PremiumPaywallWidget({
     super.key,
     this.title = 'Elite Intelligence Locked',
-    this.description = 'Upgrade to Elite Tier to unlock deep cognitive insights and predictive analysis.',
+    this.description =
+        'Upgrade to Elite Tier to unlock deep cognitive insights and predictive analysis.',
     this.onUpgrade,
   });
 
@@ -30,7 +33,7 @@ class PremiumPaywallWidget extends StatelessWidget {
             ),
           ),
         ),
-        
+
         Center(
           child: Padding(
             padding: const EdgeInsets.all(24.0),
@@ -44,31 +47,26 @@ class PremiumPaywallWidget extends StatelessWidget {
                     color: AppColors.gold,
                     size: 42,
                   ),
-
                   const SizedBox(height: 24),
-
                   Text(
                     'Deep Analytics Locked',
                     textAlign: TextAlign.center,
                     style: AppTypography.cardTitle,
                   ),
-
                   const SizedBox(height: 18),
-
                   Text(
                     'Upgrade to Elite to unlock your cognitive profile and weakness map.',
                     textAlign: TextAlign.center,
                     style: AppTypography.body,
                   ),
-
                   const SizedBox(height: 28),
-
                   SizedBox(
                     width: double.infinity,
                     height: 54,
                     child: PremiumButton(
                       text: 'UPGRADE TO ELITE',
-                      onTap: onUpgrade,
+                      onTap: onUpgrade ??
+                          () => context.push(AppRoutes.eliteAccess),
                     ),
                   ),
                 ],

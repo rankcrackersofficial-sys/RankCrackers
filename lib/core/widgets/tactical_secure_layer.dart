@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'paywall/premium_paywall_widget.dart';
 
 class TacticalSecureLayer extends StatelessWidget {
   final Widget child;
@@ -12,6 +13,14 @@ class TacticalSecureLayer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return child;
+    if (!isPremium) return child;
+
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        child,
+        const PremiumPaywallWidget(),
+      ],
+    );
   }
 }

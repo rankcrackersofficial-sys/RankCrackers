@@ -19,6 +19,33 @@ service cloud.firestore {
       return isActualFounder() || isDelegatedAdmin();
     }
 
+    // Monetization is server-authoritative. Students never write offers,
+    // coupons, orders, redemptions, or entitlements from the client.
+    match /revenue_offers/{offerId} {
+      allow read: if isFounder() || (request.auth != null && resource.data.status == 'published');
+      allow write: if false;
+    }
+
+    match /revenue_coupons/{couponId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
+    match /revenue_payment_orders/{orderId} {
+      allow read: if isFounder() || (request.auth != null && resource.data.uid == request.auth.uid);
+      allow write: if false;
+    }
+
+    match /revenue_entitlements/{entitlementId} {
+      allow read: if isFounder() || (request.auth != null && resource.data.uid == request.auth.uid);
+      allow write: if false;
+    }
+
+    match /revenue_coupon_redemptions/{redemptionId} {
+      allow read: if isFounder();
+      allow write: if false;
+    }
+
     // Every Student mission subcollection must inherit the parent realm's
     // visibility authority. Authentication alone never exposes hidden realms.
     function isStudentVisibleMission(realmId) {

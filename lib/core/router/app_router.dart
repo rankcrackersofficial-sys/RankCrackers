@@ -36,6 +36,9 @@ import '../theme/tactical_noir_background.dart';
 import '../../features/crucible/presentation/widgets/sacred_micro_test_chamber.dart';
 import '../../features/crucible/presentation/widgets/sacred_macro_test_citadel.dart';
 import '../../features/crucible/presentation/widgets/sacred_rebuild_chamber.dart';
+import '../../features/monetization/presentation/screens/elite_offer_screen.dart';
+import '../../features/monetization/presentation/screens/upi_checkout_screen.dart';
+import '../../features/monetization/domain/revenue_plan.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
@@ -183,6 +186,21 @@ final GoRouter appRouter = GoRouter(
       ),
     ),
     GoRoute(
+      path: AppRoutes.eliteAccess,
+      builder: (context, state) => const EliteOfferScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.eliteCheckout,
+      builder: (context, state) {
+        final extra = state.extra as Map<String, dynamic>? ?? {};
+        final kind = extra['planKind'] as RevenuePlanKind? ??
+            RevenuePlanKind.missionPass;
+        final plan =
+            RevenuePlan.catalog.firstWhere((item) => item.kind == kind);
+        return UpiCheckoutScreen(plan: plan);
+      },
+    ),
+    GoRoute(
       path: AppRoutes.deepProfile,
       builder: (context, state) => const DeepProfileScreen(),
     ),
@@ -285,6 +303,7 @@ final GoRouter appRouter = GoRouter(
                               },
                             });
 
+                            if (!context.mounted) return;
                             Navigator.pop(context);
 
                             if (result.data != null &&
@@ -303,6 +322,7 @@ final GoRouter appRouter = GoRouter(
                               );
                             }
                           } catch (e) {
+                            if (!context.mounted) return;
                             Navigator.pop(context);
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(content: Text('Error: $e')),

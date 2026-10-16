@@ -31,4 +31,6 @@ class AppRoutes {
   static const String sacredMicroChamber = '/crucible/micro';
   static const String sacredMacroCitadel = '/crucible/macro';
   static const String sacredRebuildChamber = '/crucible/rebuild';
+  static const String eliteAccess = '/elite-access';
+  static const String eliteCheckout = '/elite-checkout';
 }
