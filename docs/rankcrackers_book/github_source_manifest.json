@@ -1,8 +1,8 @@
 {
   "repository": "rankcrackersofficial-sys/RankCrackers",
-  "branch": "safety/rc-g2-pre-notification-schema",
-  "last_scanned_commit": "bfee5c70814af5c2c2c3f3ba9fd9163361441d87",
-  "last_scanned_at": "2026-10-10T02:55:24Z",
+  "branch": "codex/pr19-student-gate-fix-20261015",
+  "last_scanned_commit": "d9f7b74e723bf497a01496020be11842b6623a2a",
+  "last_scanned_at": "2026-10-16T01:10:00Z",
   "tracking_policy": "A remote document is tracked in the book only after its commit, path, semantic change set and local implementation-parity status are recorded.",
   "tracked_sources": [
     {
