@@ -89,3 +89,9 @@ service-account.json
 /docs/academic_review/47b5/
 /docs/academic_review/47b6/
 /docs/authority/jee_mission_*_authority_decision.json
+
+# Local-only cleanup residue; never ship backup or connector scratch files.
+*.bak
+/.codex-remote-attachments/
+/docs/rankcrackers_book/.tmp.drivedownload/
+/docs/rankcrackers_book/.tmp.driveupload/
