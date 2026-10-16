@@ -180,14 +180,15 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   }
 
   void _showTruthfulUnavailableDialog(BuildContext context, String title) {
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
       builder: (ctx) {
         return Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF0F172A),
+          decoration: BoxDecoration(
+            color: scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
             border: Border(
               top: BorderSide(color: AppColors.gold, width: 1.5),
@@ -208,7 +209,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: Colors.white24,
+                    color: scheme.onSurfaceVariant,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -219,9 +220,9 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: AppColors.surface2,
+                      color: scheme.surface,
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: AppColors.borderSoft),
+                      border: Border.all(color: scheme.outline),
                     ),
                     child: const Icon(
                       Icons.menu_book_rounded,
@@ -235,7 +236,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                       'LEARNING CONTENT',
                       style: AppTypography.hero.copyWith(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: scheme.onSurface,
                         letterSpacing: 1.0,
                       ),
                     ),
@@ -255,7 +256,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                 'Learning content for this topic is currently being assembled under zero-hallucination verification. Please check back as new governed chapters are published.',
                 style: AppTypography.body.copyWith(
                   fontSize: 12.5,
-                  color: Colors.white70,
+                  color: scheme.onSurfaceVariant,
                   height: 1.5,
                 ),
               ),
@@ -266,7 +267,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   onPressed: () => Navigator.pop(ctx),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.tacticalGold,
-                    foregroundColor: Colors.black,
+                    foregroundColor: scheme.onPrimary,
                     elevation: 0,
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
@@ -276,7 +277,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   child: Text(
                     'Got it',
                     style: AppTypography.button.copyWith(
-                      color: Colors.black,
+                      color: scheme.onPrimary,
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
@@ -292,13 +293,14 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final syllabusTree = ref.watch(syllabusTreeProvider);
     final allAtoms = ref.watch(allNodesProvider);
     final bridge = DigiBookCanonicalBridgeService.instance;
     final prefs = DigiBookUserPreferencesService.instance;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: Column(
@@ -323,6 +325,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   }
 
   Widget _buildTopHeader(int availableCount) {
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 8),
       child: Row(
@@ -330,9 +333,9 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: AppColors.surface2,
+              color: scheme.surfaceContainerHighest,
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: AppColors.borderSoft),
+              border: Border.all(color: scheme.outline),
             ),
             child: const Icon(
               Icons.auto_stories_rounded,
@@ -349,7 +352,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   'LIBRARY',
                   style: AppTypography.hero.copyWith(
                     fontSize: ResponsiveHelper.sp(context, 16),
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     letterSpacing: 1.0,
                   ),
                 ),
@@ -358,7 +361,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   'JEE MAIN • 54 Units • $availableCount Lessons Available',
                   style: AppTypography.body.copyWith(
                     fontSize: ResponsiveHelper.sp(context, 10.5),
-                    color: Colors.white54,
+                    color: scheme.onSurfaceVariant,
                   ),
                 ),
               ],
@@ -370,19 +373,20 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   }
 
   Widget _buildSearchBar() {
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
       child: Container(
         height: 44,
         decoration: BoxDecoration(
-          color: AppColors.surface2,
+          color: scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: AppColors.borderSoft),
+          border: Border.all(color: scheme.outline),
         ),
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Row(
           children: [
-            const Icon(Icons.search_rounded, color: Colors.white54, size: 18),
+            Icon(Icons.search_rounded, color: scheme.onSurfaceVariant, size: 18),
             const SizedBox(width: 10),
             Expanded(
               child: Theme(
@@ -401,11 +405,11 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                 child: TextField(
                   controller: _searchController,
                   focusNode: _searchFocusNode,
-                  style: const TextStyle(color: Colors.white, fontSize: 13),
+                  style: TextStyle(color: scheme.onSurface, fontSize: 13),
                   cursorColor: AppColors.gold,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     hintText: 'Search chapters (e.g. Sets, Friction, Mole)...',
-                    hintStyle: TextStyle(color: Colors.white38, fontSize: 12.5),
+                    hintStyle: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12.5),
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
@@ -425,8 +429,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   _searchController.clear();
                   _searchFocusNode.unfocus();
                 },
-                child: const Icon(Icons.close_rounded,
-                    color: Colors.white54, size: 18),
+                child: Icon(Icons.close_rounded,
+                    color: scheme.onSurfaceVariant, size: 18),
               ),
           ],
         ),
@@ -460,22 +464,23 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
 
   Widget _tabPill(
       String tabKey, String label, bool isSelected, VoidCallback onTap) {
+    final scheme = Theme.of(context).colorScheme;
     return GestureDetector(
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.gold.withValues(alpha: 0.15) : AppColors.surface,
+          color: isSelected ? AppColors.gold.withValues(alpha: 0.15) : scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isSelected ? AppColors.gold : AppColors.borderSoft,
+            color: isSelected ? AppColors.gold : scheme.outline,
             width: isSelected ? 1.2 : 1.0,
           ),
         ),
         child: Text(
           label,
           style: TextStyle(
-            color: isSelected ? AppColors.gold : Colors.white70,
+            color: isSelected ? AppColors.gold : scheme.onSurfaceVariant,
             fontSize: 11,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
@@ -488,6 +493,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       List<SyllabusNode> subjects,
       DigiBookCanonicalBridgeService bridge,
       List<MicroTopicNode> allAtoms) {
+    final scheme = Theme.of(context).colorScheme;
     final query = _searchQuery.toLowerCase();
     final matchedTopics = <Map<String, dynamic>>[];
     final seenGuIds = <String>{};
@@ -549,20 +555,20 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.search_off_rounded,
-                  color: Colors.white24, size: 48),
+              Icon(Icons.search_off_rounded,
+                  color: scheme.onSurfaceVariant, size: 48),
               const SizedBox(height: 12),
               Text(
                 'No matching chapters found',
                 style: AppTypography.cardTitle
-                    .copyWith(color: Colors.white70, fontSize: 14),
+                    .copyWith(color: scheme.onSurface, fontSize: 14),
               ),
               const SizedBox(height: 6),
               Text(
                 'Try searching for core topics like "Sets", "Friction", or "Thermodynamics"',
                 textAlign: TextAlign.center,
                 style: AppTypography.body
-                    .copyWith(color: Colors.white38, fontSize: 11.5),
+                    .copyWith(color: scheme.onSurfaceVariant, fontSize: 11.5),
               ),
             ],
           ),
@@ -602,19 +608,19 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   decoration: BoxDecoration(
                     color: isAvailable
                         ? AppColors.gold.withValues(alpha: 0.12)
-                        : AppColors.surface2,
+                        : scheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
                       color: isAvailable
                           ? AppColors.gold.withValues(alpha: 0.4)
-                          : AppColors.borderSoft,
+                          : scheme.outline,
                     ),
                   ),
                   child: Icon(
                     isAvailable
                         ? Icons.menu_book_rounded
                         : Icons.lock_outline_rounded,
-                    color: isAvailable ? AppColors.gold : Colors.white38,
+                    color: isAvailable ? AppColors.gold : scheme.onSurfaceVariant,
                     size: 18,
                   ),
                 ),
@@ -629,7 +635,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         overflow: TextOverflow.ellipsis,
                         style: AppTypography.cardTitle.copyWith(
                           fontSize: 13,
-                          color: Colors.white,
+                          color: scheme.onSurface,
                         ),
                       ),
                       const SizedBox(height: 2),
@@ -638,7 +644,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                            color: Colors.white38, fontSize: 10),
+                            color: scheme.onSurfaceVariant, fontSize: 10),
                       ),
                     ],
                   ),
@@ -650,19 +656,19 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   decoration: BoxDecoration(
                     color: isAvailable
                         ? AppColors.gold.withValues(alpha: 0.15)
-                        : AppColors.surface2,
+                        : scheme.surfaceContainerHighest,
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
                       color: isAvailable
                           ? AppColors.gold
-                          : AppColors.borderSoft,
+                          : scheme.outline,
                       width: 0.8,
                     ),
                   ),
                   child: Text(
                     isAvailable ? 'READ' : 'MAP',
                     style: TextStyle(
-                      color: isAvailable ? AppColors.gold : Colors.white38,
+                      color: isAvailable ? AppColors.gold : scheme.onSurfaceVariant,
                       fontSize: 9.5,
                       fontWeight: FontWeight.bold,
                     ),
