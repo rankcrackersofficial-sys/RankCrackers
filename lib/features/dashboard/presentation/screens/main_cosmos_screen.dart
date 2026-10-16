@@ -10,7 +10,6 @@ import '../../../profile/presentation/screens/profile_screen.dart';
 
 import '../widgets/navigation/dashboard_bottom_nav.dart';
 
-import '../widgets/shared/dashboard_constants.dart';
 
 class MainCosmosScreen extends StatefulWidget {
 
@@ -70,12 +69,12 @@ class _MainCosmosScreenState
   Widget build(
       BuildContext context,
       ) {
+    final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
 
       backgroundColor:
-      DashboardConstants
-          .scaffoldBackground,
+      scheme.surface,
 
       body: PageView(
 
