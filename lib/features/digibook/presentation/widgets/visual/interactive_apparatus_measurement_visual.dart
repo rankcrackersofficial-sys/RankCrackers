@@ -62,6 +62,7 @@ class _InteractiveApparatusMeasurementVisualState
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final isLight = Theme.of(context).brightness == Brightness.light;
     final msr = _measuredMm.floor();
     final vsd = (((_measuredMm - msr) * 10).round()).clamp(0, 9);
     final totalReading = msr + (vsd * 0.1);
@@ -127,7 +128,7 @@ class _InteractiveApparatusMeasurementVisualState
             height: 150,
             width: double.infinity,
             child: CustomPaint(
-              painter: _VernierScalePainter(measuredMm: _measuredMm),
+              painter: _VernierScalePainter(measuredMm: _measuredMm, isLight: isLight),
             ),
           ),
           const SizedBox(height: 12),
@@ -180,22 +181,23 @@ class _InteractiveApparatusMeasurementVisualState
 
 class _VernierScalePainter extends CustomPainter {
   final double measuredMm;
+  final bool isLight;
 
-  _VernierScalePainter({required this.measuredMm});
+  _VernierScalePainter({required this.measuredMm, required this.isLight});
 
   @override
   void paint(Canvas canvas, Size size) {
     // 1. Background beam
     final beamRect = Rect.fromLTWH(0, 10, size.width, 60);
-    final beamPaint = Paint()..color = const Color(0xFF161B22);
+    final beamPaint = Paint()..color = isLight ? const Color(0xFFF1F5F9) : const Color(0xFF161B22);
     canvas.drawRRect(RRect.fromRectAndRadius(beamRect, const Radius.circular(4)), beamPaint);
 
     final linePaint = Paint()
-      ..color = const Color(0xFF777F8B)
+      ..color = isLight ? const Color(0xFF64748B) : const Color(0xFF777F8B)
       ..strokeWidth = 1.0;
 
     final majorLinePaint = Paint()
-      ..color = const Color(0xFFC9D1D9)
+      ..color = isLight ? const Color(0xFF334155) : const Color(0xFFC9D1D9)
       ..strokeWidth = 1.5;
 
     // Scale pixels per mm
@@ -217,7 +219,7 @@ class _VernierScalePainter extends CustomPainter {
         final tp = TextPainter(
           text: TextSpan(
             text: '${mm ~/ 10}',
-            style: const TextStyle(color: Color(0xFFA7ADB7), fontSize: 10, fontWeight: FontWeight.w600),
+            style: TextStyle(color: isLight ? const Color(0xFF475569) : const Color(0xFFA7ADB7), fontSize: 10, fontWeight: FontWeight.w600),
           ),
           textDirection: TextDirection.ltr,
         )..layout();
@@ -229,7 +231,7 @@ class _VernierScalePainter extends CustomPainter {
     final vernierStartX = startX + measuredMm * pxPerMm;
     final vernierRect = Rect.fromLTWH(vernierStartX - 8, 75, 10 * pxPerMm * 0.9 + 16, 55);
 
-    final vernierPaint = Paint()..color = const Color(0xFF21262D);
+    final vernierPaint = Paint()..color = isLight ? const Color(0xFFE2E8F0) : const Color(0xFF21262D);
     canvas.drawRRect(RRect.fromRectAndRadius(vernierRect, const Radius.circular(6)), vernierPaint);
 
     final vernierBorder = Paint()
@@ -266,6 +268,6 @@ class _VernierScalePainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _VernierScalePainter oldDelegate) {
-    return oldDelegate.measuredMm != measuredMm;
+    return oldDelegate.measuredMm != measuredMm || oldDelegate.isLight != isLight;
   }
 }

@@ -77,6 +77,7 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final isLight = Theme.of(context).brightness == Brightness.light;
     return DigiBookVisualContainer(
       title: 'Venn Diagram & Set Algebra Explorer',
       visualType: 'INTERACTIVE VENN DIAGRAM',
@@ -108,7 +109,7 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
             height: 210,
             width: double.infinity,
             child: CustomPaint(
-              painter: _VennDiagramPainter(operation: _currentOp),
+              painter: _VennDiagramPainter(operation: _currentOp, isLight: isLight),
             ),
           ),
           const SizedBox(height: 14),
@@ -203,8 +204,9 @@ class _InteractiveVennSetDiagramState extends State<InteractiveVennSetDiagram> {
 
 class _VennDiagramPainter extends CustomPainter {
   final VennSetOperation operation;
+  final bool isLight;
 
-  _VennDiagramPainter({required this.operation});
+  _VennDiagramPainter({required this.operation, required this.isLight});
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -212,12 +214,12 @@ class _VennDiagramPainter extends CustomPainter {
 
     // 1. Draw Universal Set U background
     final uPaint = Paint()
-      ..color = const Color(0xFF0D1117)
+      ..color = isLight ? const Color(0xFFF8FAFC) : const Color(0xFF0D1117)
       ..style = PaintingStyle.fill;
     canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(8)), uPaint);
 
     final uBorderPaint = Paint()
-      ..color = const Color(0xFF30363D)
+      ..color = isLight ? const Color(0xFFCBD5E1) : const Color(0xFF30363D)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.5;
     canvas.drawRRect(RRect.fromRectAndRadius(rect, const Radius.circular(8)), uBorderPaint);
@@ -227,7 +229,7 @@ class _VennDiagramPainter extends CustomPainter {
       text: const TextSpan(
         text: 'U',
         style: TextStyle(
-          color: Color(0xFF777F8B),
+          color: isLight ? const Color(0xFF475569) : const Color(0xFF777F8B),
           fontSize: 16,
           fontWeight: FontWeight.bold,
         ),
@@ -330,6 +332,6 @@ class _VennDiagramPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _VennDiagramPainter oldDelegate) {
-    return oldDelegate.operation != operation;
+    return oldDelegate.operation != operation || oldDelegate.isLight != isLight;
   }
 }

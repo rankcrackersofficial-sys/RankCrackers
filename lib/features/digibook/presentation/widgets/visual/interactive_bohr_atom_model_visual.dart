@@ -95,6 +95,7 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final isLight = Theme.of(context).brightness == Brightness.light;
     return DigiBookVisualContainer(
       title: 'Quantized Bohr Atom & Photon Emission',
       visualType: 'ATOMIC SCHEMATIC & SIMULATION',
@@ -137,6 +138,7 @@ class _InteractiveBohrAtomModelVisualState extends State<InteractiveBohrAtomMode
                     activeShell: _initialShell,
                     targetShell: _finalShell,
                     photonColor: _photonColor,
+                    isLight: isLight,
                   ),
                 );
               },
@@ -227,12 +229,14 @@ class _BohrAtomPainter extends CustomPainter {
   final int activeShell;
   final int targetShell;
   final Color photonColor;
+  final bool isLight;
 
   _BohrAtomPainter({
     required this.animationValue,
     required this.activeShell,
     required this.targetShell,
     required this.photonColor,
+    required this.isLight,
   });
 
   @override
@@ -242,7 +246,7 @@ class _BohrAtomPainter extends CustomPainter {
     // 1. Draw Concentric Quantized Orbits (n = 1, 2, 3, 4)
     final shellRadii = [28.0, 52.0, 78.0, 102.0];
     final orbitPaint = Paint()
-      ..color = const Color(0xFF30363D)
+      ..color = isLight ? const Color(0xFFCBD5E1) : const Color(0xFF30363D)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.0;
 
@@ -260,7 +264,7 @@ class _BohrAtomPainter extends CustomPainter {
       final tp = TextPainter(
         text: TextSpan(
           text: 'n=${i + 1}',
-          style: const TextStyle(color: Color(0xFF58A6FF), fontSize: 9, fontWeight: FontWeight.bold),
+          style: TextStyle(color: isLight ? const Color(0xFF2563EB) : const Color(0xFF58A6FF), fontSize: 9, fontWeight: FontWeight.bold),
         ),
         textDirection: TextDirection.ltr,
       )..layout();

@@ -47,11 +47,7 @@ class SubjectTopicTile
 
         border: Border.all(
 
-          color:
-          AppColors.border
-              .withValues(
-            alpha: 0.4,
-          ),
+          color: scheme.outline.withValues(alpha: 0.7),
         ),
       ),
 
