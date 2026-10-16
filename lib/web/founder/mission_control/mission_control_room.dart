@@ -72,10 +72,22 @@ class _MissionControlRoomState extends State<MissionControlRoom> {
       );
     }
     if (missionId != null && MissionControlRoom.targetDetailTab == 2) {
-      return const UploadFactoryCenter();
+      return Column(
+        children: [
+          _DetailHeader(
+            title: 'FACTORY HUB',
+            missionId: missionId,
+            onBack: _backFromSubView,
+          ),
+          const Expanded(child: UploadFactoryCenter()),
+        ],
+      );
     }
     if (missionId != null && MissionControlRoom.targetDetailTab == 3) {
-      return MissionPublishReadinessPanel(missionId: missionId);
+      return MissionPublishReadinessPanel(
+        missionId: missionId,
+        onBack: _backFromSubView,
+      );
     }
     if (missionId != null && _showVariables) {
       return Column(
@@ -126,6 +138,14 @@ class _MissionControlRoomState extends State<MissionControlRoom> {
     setState(() {
       _selectedMissionId = null;
       MissionControlRoom.selectedMissionId = null;
+      MissionControlRoom.targetDetailTab = 0;
+      MissionControlRoom.targetSubTab = 0;
+      _showVariables = false;
+    });
+  }
+
+  void _backFromSubView() {
+    setState(() {
       MissionControlRoom.targetDetailTab = 0;
       MissionControlRoom.targetSubTab = 0;
       _showVariables = false;

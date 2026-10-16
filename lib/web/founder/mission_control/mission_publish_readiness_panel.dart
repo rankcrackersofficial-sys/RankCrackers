@@ -2,9 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class MissionPublishReadinessPanel extends StatelessWidget {
-  const MissionPublishReadinessPanel({super.key, required this.missionId});
+  const MissionPublishReadinessPanel({
+    super.key,
+    required this.missionId,
+    this.onBack,
+  });
 
   final String missionId;
+  final VoidCallback? onBack;
 
   @override
   Widget build(BuildContext context) {
@@ -82,6 +87,15 @@ class MissionPublishReadinessPanel extends StatelessWidget {
         return ListView(
           padding: const EdgeInsets.all(24),
           children: [
+            if (onBack != null)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: TextButton.icon(
+                  onPressed: onBack,
+                  icon: const Icon(Icons.arrow_back_rounded, size: 18),
+                  label: const Text('BACK TO MISSION'),
+                ),
+              ),
             Text('PUBLISH GATE',
                 style: Theme.of(context).textTheme.headlineSmall),
             const SizedBox(height: 6),
