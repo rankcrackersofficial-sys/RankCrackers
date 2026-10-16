@@ -328,6 +328,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
 
   Widget _buildTodayFocusSection(
       MicroTopicNode? priorityNode, KnowledgeEngine knowledge) {
+    final scheme = Theme.of(context).colorScheme;
     final state =
         priorityNode != null ? knowledge.getState(priorityNode.id) : null;
 
