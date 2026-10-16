@@ -16,12 +16,13 @@ import '../../../../core/widgets/dark_card.dart';
 /// STUDENT_VISIBLE_INTERNAL_MAJOR_READINESS_COUNTER_COUNT = 0
 /// UNGOVERNED_RANK_PLACEHOLDER_COUNT = 0
 class TestArenaScreen extends ConsumerWidget {
-  const TestArenaScreen({super.key});
+  TestArenaScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: SingleChildScrollView(
@@ -35,7 +36,7 @@ class TestArenaScreen extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
+                      icon: Icon(Icons.arrow_back_rounded, color: scheme.onSurface),
                       onPressed: () => context.pop(),
                     ),
                     Container(
@@ -66,14 +67,14 @@ class TestArenaScreen extends ConsumerWidget {
                     fontSize: 24,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 1.2,
-                    color: Colors.white,
+                    color: scheme.onSurface,
                   ),
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: 4),
                 Text(
                   'Standardized Benchmarking & Major Examination Surface',
                   style: AppTypography.subtitle.copyWith(
-                    color: AppColors.textSecondary,
+                    color: scheme.onSurfaceVariant,
                     fontSize: 12,
                   ),
                 ),
@@ -88,9 +89,9 @@ class TestArenaScreen extends ConsumerWidget {
                       Row(
                         children: [
                           Container(
-                            padding: const EdgeInsets.all(8),
+                            padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
-                              color: Colors.white.withValues(alpha: 0.05),
+                              color: scheme.surface,
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: const Icon(Icons.military_tech_outlined, color: AppColors.gold, size: 22),
@@ -100,19 +101,19 @@ class TestArenaScreen extends ConsumerWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
+                                Text(
                                   'No Test Arena event is ready yet.',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: scheme.onSurface,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                const SizedBox(height: 2),
+                                SizedBox(height: 2),
                                 Text(
                                   'Check back when a new event is available.',
                                   style: AppTypography.subtitle.copyWith(
-                                    color: AppColors.textSecondary,
+                                    color: scheme.onSurfaceVariant,
                                     fontSize: 11,
                                   ),
                                 ),
@@ -121,11 +122,11 @@ class TestArenaScreen extends ConsumerWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 14),
+                      SizedBox(height: 14),
                       Text(
                         'Standardized competitive assessments, official Major simulations (300 Marks), and All-India benchmarking papers will be scheduled and published here.',
                         style: AppTypography.body.copyWith(
-                          color: AppColors.textSecondary,
+                          color: scheme.onSurfaceVariant,
                           fontSize: 12,
                           height: 1.4,
                         ),
@@ -151,11 +152,11 @@ class TestArenaScreen extends ConsumerWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      _buildSpecRow('Structure', '75 Questions (Physics: 25, Chemistry: 25, Math: 25)'),
-                      _buildSpecRow('Duration', '180 Minutes (Full Standard Simulation)'),
-                      _buildSpecRow('Scoring', '+4 for Correct, -1 for Incorrect, 0 for Unattempted (300 Marks)'),
-                      _buildSpecRow('Form Law', 'Identical standardized question form for all cohort participants'),
-                      _buildSpecRow('AIR Authority', 'Aggregated only over identical comparable live cohorts'),
+                      _buildSpecRow(context, 'Structure', '75 Questions (Physics: 25, Chemistry: 25, Math: 25)'),
+                      _buildSpecRow(context, 'Duration', '180 Minutes (Full Standard Simulation)'),
+                      _buildSpecRow(context, 'Scoring', '+4 for Correct, -1 for Incorrect, 0 for Unattempted (300 Marks)'),
+                      _buildSpecRow(context, 'Form Law', 'Identical standardized question form for all cohort participants'),
+                      _buildSpecRow(context, 'AIR Authority', 'Aggregated only over identical comparable live cohorts'),
                     ],
                   ),
                 ),
@@ -167,7 +168,8 @@ class TestArenaScreen extends ConsumerWidget {
     );
   }
 
-  Widget _buildSpecRow(String label, String value) {
+  Widget _buildSpecRow(BuildContext context, String label, String value) {
+    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
@@ -177,13 +179,13 @@ class TestArenaScreen extends ConsumerWidget {
             width: 90,
             child: Text(
               label,
-              style: const TextStyle(color: AppColors.textSecondary, fontSize: 11, fontWeight: FontWeight.w600),
+              style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11, fontWeight: FontWeight.w600),
             ),
           ),
           Expanded(
             child: Text(
               value,
-              style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w500),
+              style: TextStyle(color: scheme.onSurface, fontSize: 11, fontWeight: FontWeight.w500),
             ),
           ),
         ],
