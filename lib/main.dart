@@ -10,6 +10,7 @@ import 'core/router/app_router.dart';
 import 'core/firebase/firebase_emulator_config.dart';
 import 'core/ai/ai_queue_service.dart';
 import 'core/theme/app_theme.dart';
+import 'core/theme/app_theme_controller.dart';
 import 'core/errors/global_error_handler.dart';
 import 'shared/session/session_manager.dart';
 
@@ -42,9 +43,10 @@ Future<void> main() async {
       debugPrint('Telemetry bootstrap failed safely: $e');
     }
 
+    final themeController = await AppThemeController.bootstrap();
     runApp(
-      const ProviderScope(
-        child: RankCrackersApp(),
+      ProviderScope(
+        child: RankCrackersApp(themeController: themeController),
       ),
     );
   } catch (e, stack) {
@@ -53,16 +55,26 @@ Future<void> main() async {
 }
 
 class RankCrackersApp extends StatelessWidget {
-  const RankCrackersApp({super.key});
+  final AppThemeController themeController;
+
+  const RankCrackersApp({required this.themeController, super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      scaffoldMessengerKey: aiQueueMessengerKey,
-      debugShowCheckedModeBanner: false,
-      title: 'RankCrackers',
-      theme: AppTheme.darkTheme,
-      routerConfig: appRouter,
+    return AnimatedBuilder(
+      animation: themeController,
+      builder: (context, child) => AppThemeScope(
+        controller: themeController,
+        child: MaterialApp.router(
+          scaffoldMessengerKey: aiQueueMessengerKey,
+          debugShowCheckedModeBanner: false,
+          title: 'RankCrackers',
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: themeController.themeMode,
+          routerConfig: appRouter,
+        ),
+      ),
     );
   }
 }
