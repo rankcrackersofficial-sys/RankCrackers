@@ -20,7 +20,6 @@ class DashboardBottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return DarkCard(
       height: 84,
       padding: EdgeInsets.zero,
@@ -127,6 +126,7 @@ class DashboardBottomNav extends StatelessWidget {
 
     required String route,
   }) {
+    final scheme = Theme.of(context).colorScheme;
 
     final bool isActive =
         currentIndex == index;
@@ -261,7 +261,7 @@ class DashboardBottomNav extends StatelessWidget {
                   : DashboardConstants
                   .goldAccent
 
-                  : Colors.white54,
+              : scheme.onSurfaceVariant,
             ),
 
             const SizedBox(
@@ -285,7 +285,7 @@ class DashboardBottomNav extends StatelessWidget {
                     ? DashboardConstants
                     .goldAccent
 
-                    : Colors.white54,
+                    : scheme.onSurfaceVariant,
               ),
             ),
           ],
