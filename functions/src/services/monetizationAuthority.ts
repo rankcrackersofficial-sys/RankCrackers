@@ -47,6 +47,12 @@ function assertDateWindow(data: FirebaseFirestore.DocumentData, now: number): vo
   if (expiresAt && now >= Number(expiresAt)) throw new functions.https.HttpsError('failed-precondition', 'This offer has expired.');
 }
 
+const DEFAULT_REVENUE_CATALOG = [
+  { offerId: 'starter_7d', title: 'Starter Pass', amountPaise: 4900, durationDays: 7 },
+  { offerId: 'rank_mission_90d', title: '90-Day Rank Mission', amountPaise: 49900, durationDays: 90 },
+  { offerId: 'elite_annual', title: 'Elite Annual', amountPaise: 149900, durationDays: 365 },
+] as const;
+
 async function loadOffer(offerId: string): Promise<FirebaseFirestore.DocumentData> {
   const snap = await db.collection('revenue_offers').doc(offerId).get();
   if (!snap.exists || snap.data()?.status !== 'published') {
@@ -100,6 +106,35 @@ export const createRevenueOffer = functions.https.onCall(async (data, context) =
   };
   await db.collection('revenue_offers').doc(offerId).set(offer, { merge: true });
   return { offerId, status: 'draft' };
+});
+
+export const ensureRevenueCatalog = functions.https.onCall(async (_data, context) => {
+  const uid = requireFounder(context);
+  const batch = db.batch();
+  const existing = await Promise.all(
+    DEFAULT_REVENUE_CATALOG.map((preset) =>
+      db.collection('revenue_offers').doc(preset.offerId).get(),
+    ),
+  );
+  const result: Array<{ offerId: string; status: string }> = [];
+  existing.forEach((snap, index) => {
+    const preset = DEFAULT_REVENUE_CATALOG[index];
+    if (snap.exists) {
+      result.push({ offerId: preset.offerId, status: snap.data()?.status ?? 'existing' });
+      return;
+    }
+    batch.set(db.collection('revenue_offers').doc(preset.offerId), {
+      ...preset,
+      currency: 'INR',
+      status: 'draft',
+      createdBy: uid,
+      createdAt: FieldValue.serverTimestamp(),
+      updatedAt: FieldValue.serverTimestamp(),
+    });
+    result.push({ offerId: preset.offerId, status: 'draft_created' });
+  });
+  if (result.some((item) => item.status === 'draft_created')) await batch.commit();
+  return { offers: result };
 });
 
 export const publishRevenueOffer = functions.https.onCall(async (data, context) => {

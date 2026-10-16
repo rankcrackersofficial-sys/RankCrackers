@@ -17,3 +17,13 @@ export { buildPersonalizedRecruitmentDossier, buildDeliveryDecision, buildDiscov
 export { deriveCanonicalLearningState, canWriteCanonicalLearningState } from './services/learningStateAuthority';
 export { resolveRevisionCandidate, compressRevisionCandidates, transitionRecovery } from './services/revisionDeskAuthority';
 export { createQualifiedEvidence, buildRankRadarProjection, compatibleTrajectory } from './services/qualifiedRankingAuthority';
+export {
+  createRevenueOffer,
+  ensureRevenueCatalog,
+  publishRevenueOffer,
+  createRevenueCoupon,
+  publishRevenueCoupon,
+  createUpiPaymentOrder,
+  verifyUpiPaymentOrder,
+  recordUpiProviderAuthorization,
+} from './services/monetizationAuthority';
