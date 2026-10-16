@@ -11,7 +11,6 @@ class AppTypography {
   static final hero = GoogleFonts.sora(
     fontSize: 28,
     fontWeight: FontWeight.w700,
-    color: AppColors.primaryText,
     letterSpacing: -0.5,
     height: 1.2,
   );
@@ -20,7 +19,6 @@ class AppTypography {
   static final section = GoogleFonts.sora(
     fontSize: 20,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryText,
     letterSpacing: -0.2,
   );
 
@@ -28,7 +26,6 @@ class AppTypography {
   static final heading = GoogleFonts.inter(
     fontSize: 18,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryText,
     letterSpacing: 0.1,
   );
 
@@ -36,7 +33,6 @@ class AppTypography {
   static final cardTitle = GoogleFonts.inter(
     fontSize: 15,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryText,
     letterSpacing: 0.1,
   );
 
@@ -44,14 +40,12 @@ class AppTypography {
   static final body = GoogleFonts.inter(
     fontSize: 15,
     height: 1.7, // Generous line height for reading
-    color: AppColors.primaryText.withValues(alpha: 0.85),
     fontWeight: FontWeight.w400,
   );
 
   // Subtitle / Metadata
   static final subtitle = GoogleFonts.inter(
     fontSize: 13,
-    color: AppColors.secondaryText,
     fontWeight: FontWeight.w400,
     height: 1.5,
   );
@@ -68,7 +62,6 @@ class AppTypography {
   static final metric = GoogleFonts.sora(
     fontSize: 34,
     fontWeight: FontWeight.w800,
-    color: AppColors.primaryText,
     letterSpacing: -1.0,
   );
 
@@ -76,7 +69,6 @@ class AppTypography {
   static final readingContent = GoogleFonts.notoSans(
     fontSize: 17,
     height: 2.0,
-    color: AppColors.primaryText.withValues(alpha: 0.9),
     letterSpacing: 0.2,
     fontWeight: FontWeight.w400,
   );

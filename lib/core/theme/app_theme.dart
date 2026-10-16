@@ -6,6 +6,14 @@ class AppTheme {
   static ThemeData get darkTheme {
     return ThemeData(
       brightness: Brightness.dark,
+      colorScheme: const ColorScheme.dark(
+        primary: AppColors.gold,
+        secondary: AppColors.gold,
+        surface: AppColors.surface,
+        onSurface: AppColors.primaryText,
+        outline: AppColors.border,
+        onPrimary: Colors.black,
+      ),
       primaryColor: AppColors.gold,
       scaffoldBackgroundColor: AppColors.background,
       cardColor: AppColors.surface,
@@ -61,6 +69,7 @@ class AppTheme {
         surface: surface,
         onSurface: text,
         outline: border,
+        onPrimary: Colors.black,
       ),
       appBarTheme: const AppBarTheme(
         backgroundColor: surface,

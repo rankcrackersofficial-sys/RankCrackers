@@ -30,6 +30,7 @@ class DarkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     // PREMIUM MATTE DNA (Radius = 16.0)
     final effectiveRadius = borderRadius ?? 
         decoration?.borderRadius as BorderRadius? ?? 
@@ -43,11 +44,11 @@ class DarkCard extends StatelessWidget {
       height: height,
       margin: margin,
       decoration: decoration ?? BoxDecoration(
-        color: backgroundColor ?? AppColors.surface,
+        color: backgroundColor ?? scheme.surface,
         gradient: gradient, 
         borderRadius: effectiveRadius,
         border: border ?? Border.all(
-          color: AppColors.borderSoft,
+          color: scheme.outline,
           width: 1.0,
         ),
         boxShadow: boxShadow,

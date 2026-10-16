@@ -25,13 +25,14 @@ class _EliteOfferScreenState extends State<EliteOfferScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
-        backgroundColor: AppColors.background,
+        backgroundColor: scheme.surface,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_rounded, color: Colors.white),
+          icon: Icon(Icons.arrow_back_rounded, color: scheme.onSurface),
           onPressed: () => context.pop(),
         ),
         title: Text('ELITE ACCESS', style: AppTypography.label),
@@ -50,14 +51,14 @@ class _EliteOfferScreenState extends State<EliteOfferScreen> {
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
-                color: AppColors.surface,
+                color: scheme.surface,
                 borderRadius: BorderRadius.circular(20),
                 border:
                     Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.workspace_premium_rounded,
+                  Icon(Icons.workspace_premium_rounded,
                       color: AppColors.gold, size: 34),
                   const SizedBox(width: 14),
                   Expanded(
@@ -111,11 +112,11 @@ class _EliteOfferScreenState extends State<EliteOfferScreen> {
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
           color: selected
-              ? AppColors.surface
-              : AppColors.surface.withValues(alpha: 0.62),
+              ? scheme.surface
+              : scheme.surface.withValues(alpha: 0.62),
           borderRadius: BorderRadius.circular(18),
           border: Border.all(
-              color: selected ? AppColors.gold : Colors.white12,
+              color: selected ? AppColors.gold : scheme.outline,
               width: selected ? 1.5 : 1),
         ),
         child: Column(
@@ -154,7 +155,7 @@ class _EliteOfferScreenState extends State<EliteOfferScreen> {
             ...plan.benefits.map((benefit) => Padding(
                   padding: const EdgeInsets.only(bottom: 6),
                   child: Row(children: [
-                    const Icon(Icons.check_rounded,
+                    Icon(Icons.check_rounded,
                         color: AppColors.gold, size: 16),
                     const SizedBox(width: 8),
                     Expanded(

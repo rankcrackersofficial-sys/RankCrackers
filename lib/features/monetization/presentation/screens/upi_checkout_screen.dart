@@ -95,16 +95,17 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final amount = _amountPaise == null
         ? widget.plan.price
         : '₹${(_amountPaise! / 100).toStringAsFixed(0)}';
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       appBar: AppBar(
-        backgroundColor: AppColors.background,
+        backgroundColor: scheme.surface,
         elevation: 0,
         leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            icon: Icon(Icons.arrow_back, color: scheme.onSurface),
             onPressed: () => context.pop()),
         title: Text('SECURE UPI CHECKOUT', style: AppTypography.label),
       ),
@@ -138,15 +139,15 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
             TextField(
               controller: _couponController,
               textCapitalization: TextCapitalization.characters,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: scheme.onSurface),
               decoration: InputDecoration(
                 hintText: 'Enter founder-published code',
                 hintStyle: TextStyle(color: AppColors.textSecondary),
                 filled: true,
-                fillColor: AppColors.surface,
+                fillColor: scheme.surface,
                 suffixIcon: IconButton(
                     icon:
-                        const Icon(Icons.check_rounded, color: AppColors.gold),
+                        Icon(Icons.check_rounded, color: AppColors.gold),
                     onPressed: _createOrder),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(14),
@@ -172,7 +173,7 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
               Center(
                   child: Container(
                       padding: const EdgeInsets.all(16),
-                      color: Colors.white,
+              color: scheme.surface,
                       child: QrImageView(data: _upiIntent!, size: 220))),
             if (_mode == _UpiMode.collect)
               _infoCard(
@@ -214,36 +215,41 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
     );
   }
 
-  Widget _summaryCard(String amount) => Container(
+  Widget _summaryCard(String amount) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-          color: AppColors.surface,
+          color: scheme.surface,
           borderRadius: BorderRadius.circular(18),
           border: Border.all(color: AppColors.gold.withValues(alpha: .35))),
       child: Row(children: [
-        const Icon(Icons.lock_rounded, color: AppColors.gold),
+        Icon(Icons.lock_rounded, color: AppColors.gold),
         const SizedBox(width: 12),
         Expanded(
             child: Text('Payable amount',
                 style: AppTypography.body.copyWith(fontSize: 13))),
         Text(amount, style: AppTypography.hero.copyWith(fontSize: 22))
-      ]));
+      ]);
+  }
 
   Widget _methodTile(
       _UpiMode mode, IconData icon, String title, String subtitle) {
     final active = _mode == mode;
+    final scheme = Theme.of(context).colorScheme;
     return GestureDetector(
         onTap: () => setState(() => _mode = mode),
         child: Container(
             margin: const EdgeInsets.only(bottom: 8),
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-                color: AppColors.surface,
+                color: scheme.surface,
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(
-                    color: active ? AppColors.gold : Colors.white12)),
+                    color: active ? AppColors.gold : scheme.outline)),
             child: Row(children: [
-              Icon(icon, color: active ? AppColors.gold : Colors.white70),
+              Icon(icon,
+                  color: active ? AppColors.gold : scheme.onSurfaceVariant),
               const SizedBox(width: 12),
               Expanded(
                   child: Column(
@@ -259,13 +265,14 @@ class _UpiCheckoutScreenState extends State<UpiCheckoutScreen> {
                   active
                       ? Icons.radio_button_checked
                       : Icons.radio_button_unchecked,
-                  color: active ? AppColors.gold : Colors.white38)
+                  color: active ? AppColors.gold : scheme.onSurfaceVariant)
             ])));
   }
 
   Widget _infoCard(String text) => Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-          color: AppColors.surface, borderRadius: BorderRadius.circular(14)),
+          color: Theme.of(context).colorScheme.surface,
+          borderRadius: BorderRadius.circular(14)),
       child: Text(text, style: AppTypography.body.copyWith(fontSize: 12)));
 }

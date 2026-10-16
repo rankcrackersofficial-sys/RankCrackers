@@ -14,17 +14,17 @@ class TacticalNoirBackground extends StatelessWidget {
   Widget build(BuildContext context) {
     final double screenWidth = ResponsiveHelper.width(context);
     final double screenHeight = ResponsiveHelper.height(context);
+    final isLight = Theme.of(context).brightness == Brightness.light;
+    final gradient = isLight
+        ? const [Color(0xFFF7F8FA), Color(0xFFF1F4F8), Color(0xFFFFFFFF)]
+        : const [Color(0xFF0A0F17), Color(0xFF070B11), Color(0xFF05070D)];
 
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            Color(0xFF0A0F17),
-            Color(0xFF070B11),
-            Color(0xFF05070D),
-          ],
+          colors: gradient,
         ),
       ),
       child: Stack(
@@ -52,7 +52,8 @@ class TacticalNoirBackground extends StatelessWidget {
               height: screenWidth * 0.6,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Colors.white.withValues(alpha: 0.015),
+                color: (isLight ? Colors.black : Colors.white)
+                    .withValues(alpha: isLight ? 0.018 : 0.015),
               ),
             ),
           ),
