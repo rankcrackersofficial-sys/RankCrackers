@@ -20,10 +20,11 @@ class DigiBookLessonSelectionSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        color: AppColors.surface,
+      decoration: BoxDecoration(
+        color: scheme.surface,
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       child: Column(
@@ -65,9 +66,9 @@ class DigiBookLessonSelectionSheet extends StatelessWidget {
                     child: Container(
                       padding: const EdgeInsets.all(14),
                       decoration: BoxDecoration(
-                        color: AppColors.surface2,
+                        color: scheme.surfaceContainerHighest,
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: AppColors.borderSoft),
+                        border: Border.all(color: scheme.outline),
                       ),
                       child: Row(
                         children: [
@@ -96,7 +97,7 @@ class DigiBookLessonSelectionSheet extends StatelessWidget {
                                   style: AppTypography.body.copyWith(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.white,
+                                    color: scheme.onSurface,
                                   ),
                                 ),
                               ],

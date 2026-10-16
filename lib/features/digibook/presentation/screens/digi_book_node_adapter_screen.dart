@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../../core/models/micro_topic_node.dart';
-import '../../../../core/theme/app_colors.dart';
 import '../../../../shared/session/session_manager.dart';
 import '../../domain/models/digibook_launch_args.dart';
 import '../../domain/services/digibook_canonical_resolver.dart';
@@ -40,14 +39,15 @@ class _DigiBookNodeAdapterScreenState extends State<DigiBookNodeAdapterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return FutureBuilder<DigiBookLaunchArgs?>(
       future: _resolveFuture,
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Scaffold(
-            backgroundColor: AppColors.background,
+          return Scaffold(
+            backgroundColor: scheme.surface,
             body: Center(
-              child: CircularProgressIndicator(color: AppColors.gold),
+              child: CircularProgressIndicator(color: scheme.primary),
             ),
           );
         }
