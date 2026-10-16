@@ -84,6 +84,10 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
     throw new functions.https.HttpsError('unauthenticated', '🔱 COMMAND DENIED: Must be authenticated to accept invitation.');
   }
 
+  if (auth.token.founder === true) {
+    throw new functions.https.HttpsError('failed-precondition', 'FOUNDER_ACCOUNT_CANNOT_ACCEPT_ADMIN_INVITE');
+  }
+
   const callerEmail = auth.token.email;
   if (!callerEmail || typeof callerEmail !== 'string') {
     throw new functions.https.HttpsError('failed-precondition', '🔱 CALLER_EMAIL_REQUIRED: Verified account email required.');
@@ -124,8 +128,12 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
       throw new functions.https.HttpsError('permission-denied', 'INVITATION_EMAIL_MISMATCH');
     }
 
+    if (doc.status !== 'ISSUED' && doc.status !== 'CLAIMS_PENDING') {
+      throw new functions.https.HttpsError('failed-precondition', 'INVITATION_STATE_INVALID');
+    }
+
     // State machine concurrency lock: Check if already locked by another user
-    if (doc.status === 'CLAIMS_PENDING' && doc.claimedByUid && doc.claimedByUid !== auth.uid) {
+    if (doc.status === 'CLAIMS_PENDING' && doc.claimedByUid !== auth.uid) {
       throw new functions.https.HttpsError('permission-denied', 'INVITATION_CLAIMED_BY_ANOTHER_USER');
     }
 
@@ -165,6 +173,21 @@ exports.acceptAdminInvite = functions.https.onCall(async (data, context) => {
 
   // STEP 3: Final Transaction (CLAIMS_PENDING -> ACCEPTED)
   await db.runTransaction(async (txn) => {
+    const inviteSnap = await txn.get(inviteRef);
+    if (!inviteSnap.exists) {
+      throw new functions.https.HttpsError('not-found', 'INVITATION_NOT_FOUND');
+    }
+    const currentInvite = inviteSnap.data();
+    if (currentInvite.status !== 'CLAIMS_PENDING' || currentInvite.claimedByUid !== auth.uid) {
+      throw new functions.https.HttpsError('permission-denied', 'INVITATION_CLAIM_OWNERSHIP_LOST');
+    }
+    if (currentInvite.redeemed === true) {
+      throw new functions.https.HttpsError('already-exists', 'INVITATION_ALREADY_REDEEMED');
+    }
+    if (callerEmail.trim().toLowerCase() !== (currentInvite.targetEmail || '').trim().toLowerCase()) {
+      throw new functions.https.HttpsError('permission-denied', 'INVITATION_EMAIL_MISMATCH');
+    }
+
     txn.update(inviteRef, {
       status: 'ACCEPTED',
       redeemed: true,
