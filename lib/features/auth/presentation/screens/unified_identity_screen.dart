@@ -781,6 +781,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildHeader() {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         Text(
@@ -788,7 +789,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           style: GoogleFonts.sora(
             fontSize: ResponsiveHelper.sp(context, 24),
             fontWeight: FontWeight.w900,
-            color: Colors.white,
+            color: scheme.onSurface,
           ),
         ),
         Text(
@@ -806,13 +807,14 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildAccountControlBar(String? email) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
       decoration: BoxDecoration(
-        color: AppColors.surface.withValues(alpha: 0.68),
+        color: scheme.surface.withValues(alpha: 0.68),
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: AppColors.borderSoft),
+        border: Border.all(color: scheme.outline),
       ),
       child: Row(
         children: [
@@ -850,6 +852,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildLoginSection(bool isLoading) {
+    final scheme = Theme.of(context).colorScheme;
     return Column(
       children: [
         _miniField(
@@ -901,13 +904,13 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
         const SizedBox(height: 20),
         Row(
           children: [
-            const Expanded(child: Divider(color: Colors.white10)),
+            Expanded(child: Divider(color: scheme.outline.withValues(alpha: .55))),
             Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Text("OR",
                     style: AppTypography.label
-                        .copyWith(fontSize: 8, color: Colors.white24))),
-            const Expanded(child: Divider(color: Colors.white10)),
+                        .copyWith(fontSize: 8, color: scheme.onSurfaceVariant))),
+            Expanded(child: Divider(color: scheme.outline.withValues(alpha: .55))),
           ],
         ),
         const SizedBox(height: 20),
@@ -919,7 +922,11 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             width: double.infinity,
             height: 56,
             decoration: BoxDecoration(
-              gradient: AppColors.madhavCardGradient,
+              gradient: LinearGradient(
+                colors: [scheme.surfaceVariant, scheme.surface],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: goldAccent.withValues(alpha: isLoading ? 0.32 : 0.2),
@@ -945,7 +952,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     width: 20,
                     errorBuilder: (context, error, stackTrace) => const Icon(
                       Icons.g_mobiledata_rounded,
-                      color: Colors.white,
+                      color: scheme.onSurface,
                       size: 20,
                     ),
                   ),
@@ -956,7 +963,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600, color: Colors.white),
+                        fontWeight: FontWeight.w600, color: scheme.onSurface),
                   ),
                 ),
               ],
@@ -970,6 +977,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   Widget _buildIdentityForm({
     String? userPhotoUrl,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: EdgeInsets.all(ResponsiveHelper.isCompact(context) ? 14 : 18),
       decoration: BoxDecoration(
@@ -977,12 +985,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.surface2.withValues(alpha: 0.96),
-            AppColors.surface.withValues(alpha: 0.98),
+            scheme.surfaceVariant.withValues(alpha: 0.96),
+            scheme.surface.withValues(alpha: 0.98),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: AppColors.border.withValues(alpha: 0.92)),
+        border: Border.all(color: scheme.outline.withValues(alpha: 0.92)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.34),
@@ -1073,7 +1081,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                       "I agree to the Privacy Policy and Terms of Service.",
                       style: AppTypography.body.copyWith(
                         fontSize: 11,
-                        color: Colors.white70,
+                        color: scheme.onSurfaceVariant,
                         height: 1.35,
                       ),
                     ),
@@ -1101,6 +1109,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
 
   Widget _buildProfilePhotoPrompt(String? userPhotoUrl) {
     final hasPhoto = userPhotoUrl != null && userPhotoUrl.isNotEmpty;
+    final scheme = Theme.of(context).colorScheme;
 
     return InkWell(
       borderRadius: BorderRadius.circular(18),
@@ -1114,12 +1123,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.elevatedSurface.withValues(alpha: 0.96),
-              AppColors.surface2.withValues(alpha: 0.92),
+              scheme.surfaceVariant.withValues(alpha: 0.96),
+              scheme.surface.withValues(alpha: 0.92),
             ],
           ),
           borderRadius: BorderRadius.circular(18),
-          border: Border.all(color: AppColors.border.withValues(alpha: 0.9)),
+          border: Border.all(color: scheme.outline.withValues(alpha: 0.9)),
         ),
         child: Row(
           children: [
@@ -1180,6 +1189,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildIdentityEstablishedBadge() {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(minHeight: 62),
@@ -1189,8 +1199,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.elevatedSurface.withValues(alpha: 0.96),
-            AppColors.surface.withValues(alpha: 0.98),
+            scheme.surfaceVariant.withValues(alpha: 0.96),
+            scheme.surface.withValues(alpha: 0.98),
           ],
         ),
         borderRadius: BorderRadius.circular(18),
@@ -1230,7 +1240,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.sora(
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontSize: 12,
                     fontWeight: FontWeight.w800,
                     letterSpacing: 0.9,
@@ -1252,12 +1262,13 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildFooter() {
+    final scheme = Theme.of(context).colorScheme;
     return Center(
       child: Text(
         "Secure | Focused | Adaptive",
         style: AppTypography.label.copyWith(
           fontSize: 7,
-          color: Colors.white12,
+          color: scheme.onSurfaceVariant.withValues(alpha: .55),
         ),
       ),
     );
@@ -1275,22 +1286,23 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
     bool minimalSurface = false,
     Widget? suffixIcon,
   }) {
+    final scheme = Theme.of(context).colorScheme;
     final isFocused = focusNode?.hasFocus ?? false;
     final fieldBorder = minimalSurface
         ? (isFocused
             ? goldAccent.withValues(alpha: 0.42)
             : goldAccent.withValues(alpha: 0.18))
-        : AppColors.border.withValues(alpha: 0.95);
+        : scheme.outline.withValues(alpha: 0.95);
     final fieldFill = minimalSurface
         ? Colors.transparent
-        : AppColors.elevatedSurface.withValues(alpha: 0.94);
+        : scheme.surfaceVariant.withValues(alpha: 0.94);
     final fieldGradient = minimalSurface
         ? LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              AppColors.surface2.withValues(alpha: isFocused ? 0.44 : 0.34),
-              AppColors.surface.withValues(alpha: isFocused ? 0.36 : 0.28),
+              scheme.surfaceVariant.withValues(alpha: isFocused ? 0.44 : 0.34),
+              scheme.surface.withValues(alpha: isFocused ? 0.36 : 0.28),
             ],
           )
         : null;
@@ -1325,11 +1337,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             : obscure
                 ? const [AutofillHints.password]
                 : null,
-        style: const TextStyle(color: Colors.white, fontSize: 13),
+        style: TextStyle(color: scheme.onSurface, fontSize: 13),
         decoration: InputDecoration(
           hintText: hint,
           hintStyle: TextStyle(
-            color: Colors.white.withValues(alpha: minimalSurface ? 0.34 : 0.10),
+            color: scheme.onSurfaceVariant
+                .withValues(alpha: minimalSurface ? 0.62 : 0.40),
             fontSize: 13,
           ),
           prefixIcon: Icon(icon,
@@ -1344,6 +1357,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
   }
 
   Widget _buildDualModeStateField() {
+    final scheme = Theme.of(context).colorScheme;
     final isFocused = stateFocusNode.hasFocus;
     final text = stateController.text.trim();
     final bool hasExactMatch = IndiaStates.statesAndUTs.any(
@@ -1361,12 +1375,12 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           duration: const Duration(milliseconds: 160),
           height: ResponsiveHelper.fieldHeight(context),
           decoration: BoxDecoration(
-            color: AppColors.elevatedSurface.withValues(alpha: 0.94),
+            color: scheme.surfaceVariant.withValues(alpha: 0.94),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
               color: isFocused
                   ? goldAccent.withValues(alpha: 0.42)
-                  : AppColors.border.withValues(alpha: 0.95),
+                  : scheme.outline.withValues(alpha: 0.95),
               width: 1,
             ),
             boxShadow: [
@@ -1382,14 +1396,14 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
             controller: stateController,
             focusNode: stateFocusNode,
             textCapitalization: TextCapitalization.words,
-            style: const TextStyle(color: Colors.white, fontSize: 13),
+            style: TextStyle(color: scheme.onSurface, fontSize: 13),
             onChanged: (val) {
               setState(() {});
             },
             decoration: InputDecoration(
               hintText: "Select State",
               hintStyle: TextStyle(
-                color: Colors.white.withValues(alpha: 0.10),
+                color: scheme.onSurfaceVariant.withValues(alpha: 0.40),
                 fontSize: 13,
               ),
               prefixIcon: Icon(
@@ -1402,7 +1416,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                 children: [
                   if (stateController.text.isNotEmpty)
                     IconButton(
-                      icon: const Icon(Icons.clear, color: Colors.white38, size: 16),
+                      icon: Icon(Icons.clear,
+                          color: scheme.onSurfaceVariant, size: 16),
                       tooltip: "Clear state",
                       splashRadius: 16,
                       onPressed: () {
@@ -1413,8 +1428,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                     ),
                   IconButton(
                     key: const ValueKey('browse_states_button'),
-                    icon: const Icon(Icons.keyboard_arrow_down_rounded,
-                        color: Colors.white38, size: 20),
+                    icon: Icon(Icons.keyboard_arrow_down_rounded,
+                        color: scheme.onSurfaceVariant, size: 20),
                     tooltip: "Browse all states",
                     splashRadius: 18,
                     onPressed: () => _showSearchSheet(
@@ -1440,7 +1455,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
           Container(
             constraints: const BoxConstraints(maxHeight: 180),
             decoration: BoxDecoration(
-              color: AppColors.surface2,
+              color: scheme.surface,
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: goldAccent.withValues(alpha: 0.35),
@@ -1458,8 +1473,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
               shrinkWrap: true,
               padding: const EdgeInsets.symmetric(vertical: 4),
               itemCount: suggestions.length,
-              separatorBuilder: (_, __) => const Divider(
-                color: Colors.white10,
+              separatorBuilder: (_, __) => Divider(
+                color: scheme.outline.withValues(alpha: .55),
                 height: 1,
                 thickness: 0.5,
               ),
@@ -1489,8 +1504,8 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                           Expanded(
                             child: Text(
                               suggestion,
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style: TextStyle(
+                                color: scheme.onSurface,
                                 fontSize: 13,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -1553,6 +1568,20 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
   Widget build(BuildContext context) {
     final active = widget.enabled || widget.isLoading;
     final goldStrength = active ? 1.0 : 0.34;
+    final scheme = Theme.of(context).colorScheme;
+    final isLight = Theme.of(context).brightness == Brightness.light;
+    final ctaGradient = isLight
+        ? [
+            Color.lerp(const Color(0xFFE3C878), _gold, 0.28 * goldStrength)!,
+            Color.lerp(const Color(0xFFB39B5D), const Color(0xFF8C7B4D),
+                0.72 * goldStrength)!,
+          ]
+        : [
+            Color.lerp(
+                const Color(0xFF33270F), _gold, 0.28 * goldStrength)!,
+            Color.lerp(_black, const Color(0xFF171109), 0.72 * goldStrength)!,
+            Color.lerp(_black, _deepGold, 0.28 * goldStrength)!,
+          ];
 
     return Semantics(
       button: !widget.isLoading,
@@ -1576,13 +1605,7 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Color.lerp(
-                      const Color(0xFF33270F), _gold, 0.28 * goldStrength)!,
-                  Color.lerp(
-                      _black, const Color(0xFF171109), 0.72 * goldStrength)!,
-                  Color.lerp(_black, _deepGold, 0.28 * goldStrength)!,
-                ],
+                colors: ctaGradient,
               ),
               borderRadius: BorderRadius.circular(18),
               border: Border.all(
@@ -1609,8 +1632,8 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
                   child: Container(
                     height: 1,
                     decoration: BoxDecoration(
-                      color:
-                          Colors.white.withValues(alpha: active ? 0.24 : 0.06),
+                      color: (isLight ? Colors.white : Colors.white)
+                          .withValues(alpha: active ? 0.24 : 0.06),
                       borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(18),
                       ),
@@ -1625,7 +1648,8 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
                       height: 29,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: _black.withValues(alpha: 0.36),
+                        color: (isLight ? scheme.onPrimary : _black)
+                            .withValues(alpha: 0.36),
                         border: Border.all(
                           color: _gold.withValues(alpha: active ? 0.42 : 0.16),
                         ),
@@ -1644,9 +1668,12 @@ class _SovereignIdentityCtaState extends State<_SovereignIdentityCta> {
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.center,
                         style: GoogleFonts.sora(
-                          color: active
-                              ? Colors.white
-                              : Colors.white.withValues(alpha: 0.38),
+                          color: isLight
+                              ? scheme.onPrimary.withValues(
+                                  alpha: active ? 1 : 0.45)
+                              : active
+                                  ? Colors.white
+                                  : Colors.white.withValues(alpha: 0.38),
                           fontSize: 12,
                           fontWeight: FontWeight.w800,
                           letterSpacing: 0.9,
