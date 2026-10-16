@@ -81,14 +81,15 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   void _showTruthfulUnavailableDialog(SyllabusNode node) {
+    final scheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
       builder: (ctx) {
         return Container(
-          decoration: const BoxDecoration(
-            color: Color(0xFF0F172A),
+          decoration: BoxDecoration(
+            color: scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
             border: Border(
               top: BorderSide(color: AppColors.gold, width: 1.5),
@@ -109,7 +110,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   width: 40,
                   height: 4,
                   decoration: BoxDecoration(
-                    color: Colors.white24,
+                    color: scheme.onSurfaceVariant,
                     borderRadius: BorderRadius.circular(2),
                   ),
                 ),
@@ -120,9 +121,9 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
-                      color: AppColors.surface2,
+                      color: scheme.surface,
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: AppColors.borderSoft),
+                      border: Border.all(color: scheme.outline),
                     ),
                     child: const Icon(
                       Icons.menu_book_rounded,
@@ -136,7 +137,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                       'SYLLABUS NODE',
                       style: AppTypography.hero.copyWith(
                         fontSize: 16,
-                        color: Colors.white,
+                        color: scheme.onSurface,
                         letterSpacing: 1.0,
                       ),
                     ),
@@ -156,7 +157,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 'Learning and diagnostic content for this node is currently being assembled under zero-hallucination verification.',
                 style: AppTypography.body.copyWith(
                   fontSize: 12.5,
-                  color: Colors.white70,
+                  color: scheme.onSurfaceVariant,
                   height: 1.5,
                 ),
               ),
@@ -167,7 +168,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   onPressed: () => Navigator.pop(ctx),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.tacticalGold,
-                    foregroundColor: Colors.black,
+                    foregroundColor: scheme.onPrimary,
                     elevation: 0,
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
@@ -177,7 +178,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   child: Text(
                     'Got it',
                     style: AppTypography.button.copyWith(
-                      color: Colors.black,
+                      color: scheme.onPrimary,
                       fontWeight: FontWeight.bold,
                       fontSize: 13,
                     ),
@@ -203,6 +204,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final knowledge = KnowledgeEngine.instance;
     final sessionUser =
         ref.watch(sessionUserProvider).valueOrNull ?? SessionUser.getSync();
@@ -231,7 +233,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
         }
       },
       child: Scaffold(
-        backgroundColor: AppColors.background,
+        backgroundColor: scheme.surface,
         body: TacticalNoirBackground(
           child: SafeArea(
             child: CustomScrollView(
@@ -268,6 +270,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _buildSearchSection() {
+    final scheme = Theme.of(context).colorScheme;
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),
@@ -275,22 +278,22 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Syllabus',
-                style: AppTypography.hero.copyWith(fontSize: 22, color: Colors.white)),
+                style: AppTypography.hero.copyWith(fontSize: 22, color: scheme.onSurface)),
             const SizedBox(height: 12),
             Container(
               decoration: BoxDecoration(
-                color: AppColors.surface,
+                color: scheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: AppColors.borderSoft),
+                border: Border.all(color: scheme.outline),
               ),
               child: TextField(
                 controller: _searchController,
                 focusNode: _searchFocusNode,
-                style: AppTypography.body.copyWith(color: Colors.white),
+                style: AppTypography.body.copyWith(color: scheme.onSurface),
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Search Topics...',
-                  hintStyle: AppTypography.body.copyWith(color: Colors.white38),
+                  hintStyle: AppTypography.body.copyWith(color: scheme.onSurfaceVariant),
                   prefixIcon:
                       const Icon(Icons.search_rounded, color: AppColors.gold),
                   contentPadding: const EdgeInsets.all(16),
@@ -305,13 +308,14 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _buildBreadcrumbs(String examName) {
+    final scheme = Theme.of(context).colorScheme;
     if (_navigationStack.isEmpty) {
       return SliverToBoxAdapter(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
           child: Text(
             '$examName • Complete Curriculum Map',
-            style: const TextStyle(color: Colors.white54, fontSize: 11),
+            style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
           ),
         ),
       );
@@ -328,7 +332,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.bold)),
             ),
             for (int i = 0; i < _navigationStack.length; i++) ...[
-              const Icon(Icons.chevron_right_rounded, color: Colors.white38, size: 14),
+              Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant, size: 14),
               GestureDetector(
                 onTap: () {
                   setState(() {
@@ -338,7 +342,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 child: Text(
                   _navigationStack[i].title,
                   style: TextStyle(
-                    color: i == _navigationStack.length - 1 ? Colors.white : AppColors.gold,
+                    color: i == _navigationStack.length - 1 ? scheme.onSurface : AppColors.gold,
                     fontSize: 12,
                     fontWeight: i == _navigationStack.length - 1 ? FontWeight.bold : FontWeight.normal,
                   ),
@@ -374,6 +378,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _syllabusNodeCard(SyllabusNode node) {
+    final scheme = Theme.of(context).colorScheme;
     final isLeaf = node.type == 'atom' || (node.type == 'topic' && node.children.isEmpty);
 
     return GestureDetector(
@@ -424,7 +429,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                     overflow: TextOverflow.ellipsis,
                     style: AppTypography.cardTitle.copyWith(
                       fontSize: 14,
-                      color: Colors.white,
+                      color: scheme.onSurface,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -435,7 +440,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                         : node.type == 'unit'
                             ? '${node.topicCount} Topics'
                             : 'Topic Node',
-                    style: const TextStyle(color: Colors.white54, fontSize: 11),
+                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
                   ),
                 ],
               ),
@@ -453,6 +458,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _buildSearchResults() {
+    final scheme = Theme.of(context).colorScheme;
     final query = _searchController.text.toLowerCase();
     final allNodes = ref.watch(allNodesProvider);
     final filtered = allNodes
@@ -460,11 +466,11 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
         .toList();
 
     if (filtered.isEmpty) {
-      return const SliverToBoxAdapter(
+      return SliverToBoxAdapter(
         child: Padding(
           padding: EdgeInsets.all(32),
           child: Center(
-            child: Text('No matching topics found', style: TextStyle(color: Colors.white54)),
+            child: Text('No matching topics found', style: TextStyle(color: scheme.onSurfaceVariant)),
           ),
         ),
       );
@@ -494,6 +500,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _buildTruthfulEmptyState(String examName, KnowledgeEngine knowledge) {
+    final scheme = Theme.of(context).colorScheme;
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -505,7 +512,7 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
               const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 36),
               const SizedBox(height: 12),
               Text('Loading Syllabus for $examName...',
-                  style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold)),
+                  style: TextStyle(color: scheme.onSurface, fontSize: 15, fontWeight: FontWeight.bold)),
             ],
           ),
         ),
