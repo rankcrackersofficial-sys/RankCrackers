@@ -7,8 +7,11 @@ import '../founder/access/access_security_web.dart';
 import '../founder/activity/recent_activity_web.dart';
 import '../founder/fdc/document_command_center.dart';
 import '../founder/health/founder_student_health_web.dart';
+import '../founder/home/founder_operations_overview_web.dart';
+import '../founder/intelligence/intelligence_room_web.dart';
 import '../founder/mission_control/mission_control_room.dart';
 import '../founder/mission_control/mission_publish_readiness_panel.dart';
+import '../founder/study_master/study_master_library_web.dart';
 import '../founder/system/founder_system_operations_web.dart';
 import '../founder/revenue/revenue_subscription_control_web.dart';
 import '../founder/watch/mission_watch_web.dart';
@@ -164,6 +167,7 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
               children: [
                 _buildNavGroupHeader('OPERATIONS'),
+                _buildNavItem(modules, 'Operations Overview', Icons.space_dashboard_outlined),
                 _buildNavItem(
                     modules, 'Mission Control', Icons.explore_outlined),
                 if (widget.founderDeliveryPreviewBuilder != null)
@@ -188,6 +192,15 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
                     modules, 'Admin Governance', Icons.people_outline_rounded),
                 _buildNavItem(
                     modules, 'System Ops / Dev Mode', Icons.computer_outlined),
+                if (widget.roleMode == ConsoleRoleMode.founder) ...[
+                  const SizedBox(height: 16),
+                  _buildNavGroupHeader('ADMIN & AI OPERATIONS'),
+                  _buildNavItem(modules, 'Admin Work Queue', Icons.assignment_outlined),
+                  _buildNavItem(modules, 'Study Master Library', Icons.menu_book_outlined),
+                  _buildNavItem(modules, 'Intelligence Room', Icons.lightbulb_outline_rounded),
+                  _buildNavItem(modules, 'Recent Activity Log', Icons.history_rounded),
+                  _buildNavItem(modules, 'My Access', Icons.shield_outlined),
+                ],
                 if (widget.roleMode == ConsoleRoleMode.admin) ...[
                   const SizedBox(height: 16),
                   _buildNavGroupHeader('ADMIN WORK'),
@@ -480,6 +493,26 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
 
     if (isFounder) {
       list.add(_ConsoleModule(
+          group: 'OPERATIONS',
+          label: 'Operations Overview',
+          builder: (_) => FounderOperationsOverviewWeb(
+                onMissionControl: () => setState(() => _subTab = _findModuleIndex('Mission Control')),
+                onMissionWatch: () => setState(() => _subTab = _findModuleIndex('Mission Watch')),
+                onStudentHealth: () => setState(() => _subTab = _findModuleIndex('Student Delivery Health')),
+                onRevenue: () => setState(() => _subTab = _findModuleIndex('Revenue & Subscriptions')),
+                onAdminGovernance: () => setState(() => _subTab = _findModuleIndex('Admin Governance')),
+                onSystemOps: () => setState(() => _subTab = _findModuleIndex('System Ops / Dev Mode')),
+                onDocuments: () => setState(() => _subTab = _findModuleIndex('Document Command Center')),
+                onVerification: () => setState(() => _openMissionDetail(1, 0)),
+                onFactory: () => setState(() => _openMissionDetail(2, 0)),
+                onPublish: () => setState(() => _openMissionDetail(3, 0)),
+                onAdminWork: () => setState(() => _subTab = _findModuleIndex('Admin Work Queue')),
+                onStudyMaster: () => setState(() => _subTab = _findModuleIndex('Study Master Library')),
+                onIntelligence: () => setState(() => _subTab = _findModuleIndex('Intelligence Room')),
+                onActivity: () => setState(() => _subTab = _findModuleIndex('Recent Activity Log')),
+                onMyAccess: () => setState(() => _subTab = _findModuleIndex('My Access')),
+          )));
+      list.add(_ConsoleModule(
           group: 'MISSION & DELIVERY',
           label: 'Mission Control',
           builder: (_) =>
@@ -526,6 +559,40 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
           group: 'SYSTEM & GOVERNANCE',
           label: 'System Ops / Dev Mode',
           builder: (_) => const FounderSystemOperationsWeb()));
+      list.add(_ConsoleModule(
+          group: 'ADMIN & AI OPERATIONS',
+          label: 'Admin Work Queue',
+          builder: (_) => AdminTasksList(
+                onOpenTask: (taskId, taskType, missionId) {
+                  setState(() {
+                    _activeTaskId = taskId;
+                    _subTab = _findModuleIndex(
+                      taskType == 'DOCUMENT_REVIEW' || taskType == 'OCR_REPROCESS_REVIEW'
+                          ? 'Document Command Center'
+                          : 'Mission Control',
+                    );
+                  });
+                },
+              )));
+      list.add(_ConsoleModule(
+          group: 'ADMIN & AI OPERATIONS',
+          label: 'Study Master Library',
+          builder: (_) => const StudyMasterLibraryWeb(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          group: 'ADMIN & AI OPERATIONS',
+          label: 'Intelligence Room',
+          builder: (_) => const IntelligenceRoomWeb(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          group: 'ADMIN & AI OPERATIONS',
+          label: 'Recent Activity Log',
+          builder: (_) => const RecentActivityWeb(roleMode: ConsoleRoleMode.founder)));
+      list.add(_ConsoleModule(
+          group: 'ADMIN & AI OPERATIONS',
+          label: 'My Access',
+          builder: (_) => AdminMyAccessPanel(
+                permissions: widget.permissions,
+                userDoc: widget.userDoc,
+              )));
     } else {
       list.add(_ConsoleModule(
           label: 'My Work Queue',
@@ -608,6 +675,19 @@ class _UnifiedCommandConsoleState extends State<UnifiedCommandConsole> {
       if (modules[i].label == label) return i;
     }
     return 0;
+  }
+
+  void _openMissionDetail(int detailTab, int subTab) {
+    if (MissionControlRoom.selectedMissionId == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Open a mission from Mission Control first.')),
+      );
+      _subTab = _findModuleIndex('Mission Control');
+      return;
+    }
+    MissionControlRoom.targetDetailTab = detailTab;
+    MissionControlRoom.targetSubTab = subTab;
+    _subTab = _findModuleIndex('Mission Control');
   }
 
   Widget _buildVerificationCenterLanding() {
