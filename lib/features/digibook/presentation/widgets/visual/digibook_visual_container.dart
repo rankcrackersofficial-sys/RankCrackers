@@ -25,18 +25,19 @@ class DigiBookVisualContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Semantics(
       label: accessibleDescription ?? '$title ($visualType)',
       container: true,
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 18),
         decoration: BoxDecoration(
-          color: const Color(0xFF101419),
+          color: scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: const Color(0xFF252B33), width: 1.2),
+          border: Border.all(color: scheme.outline, width: 1.2),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.35),
+            color: scheme.shadow.withValues(alpha: 0.35),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -48,14 +49,14 @@ class DigiBookVisualContainer extends StatelessWidget {
             // Top metadata bar
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-              decoration: const BoxDecoration(
-                color: Color(0xFF161B22),
+              decoration: BoxDecoration(
+                color: scheme.surface,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(13),
                   topRight: Radius.circular(13),
                 ),
                 border: Border(
-                  bottom: BorderSide(color: Color(0xFF252B33), width: 1),
+                  bottom: BorderSide(color: scheme.outline, width: 1),
                 ),
               ),
               child: Row(
@@ -63,14 +64,14 @@ class DigiBookVisualContainer extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFC3A568).withValues(alpha: 0.15),
+                      color: scheme.primary.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: const Color(0xFFC3A568).withValues(alpha: 0.4), width: 0.8),
+                      border: Border.all(color: scheme.primary.withValues(alpha: 0.4), width: 0.8),
                     ),
                     child: Text(
                       visualType.toUpperCase(),
-                      style: const TextStyle(
-                        color: Color(0xFFC3A568),
+                      style: TextStyle(
+                        color: scheme.primary,
                         fontSize: 9.5,
                         fontWeight: FontWeight.w700,
                         letterSpacing: 0.8,
@@ -81,8 +82,8 @@ class DigiBookVisualContainer extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      style: const TextStyle(
-                        color: Color(0xFFF3F4F6),
+                      style: TextStyle(
+                        color: scheme.onSurface,
                         fontSize: 13.5,
                         fontWeight: FontWeight.w600,
                       ),
@@ -106,10 +107,10 @@ class DigiBookVisualContainer extends StatelessWidget {
             if (controlBar != null) ...[
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                decoration: const BoxDecoration(
-                  color: Color(0xFF161B22),
+                decoration: BoxDecoration(
+                  color: scheme.surface,
                   border: Border(
-                    top: BorderSide(color: Color(0xFF252B33), width: 1),
+                    top: BorderSide(color: scheme.outline, width: 1),
                   ),
                 ),
                 child: controlBar!,
@@ -119,14 +120,14 @@ class DigiBookVisualContainer extends StatelessWidget {
             // Governed Provenance & Educational Footnote
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              decoration: const BoxDecoration(
-                color: Color(0xFF0D1117),
+              decoration: BoxDecoration(
+                color: scheme.surface,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(13),
                   bottomRight: Radius.circular(13),
                 ),
                 border: Border(
-                  top: BorderSide(color: Color(0xFF1B2028), width: 1),
+                  top: BorderSide(color: scheme.outline, width: 1),
                 ),
               ),
               child: Column(
@@ -135,8 +136,8 @@ class DigiBookVisualContainer extends StatelessWidget {
                   if (explanatoryCaption != null && explanatoryCaption!.isNotEmpty) ...[
                     Text(
                       explanatoryCaption!,
-                      style: const TextStyle(
-                        color: Color(0xFFC9D1D9),
+                      style: TextStyle(
+                        color: scheme.onSurface,
                         fontSize: 12.5,
                         height: 1.45,
                       ),
@@ -145,13 +146,13 @@ class DigiBookVisualContainer extends StatelessWidget {
                   ],
                   Row(
                     children: [
-                      const Icon(Icons.verified_outlined, size: 12, color: Color(0xFF777F8B)),
+                      Icon(Icons.verified_outlined, size: 12, color: scheme.onSurfaceVariant),
                       const SizedBox(width: 5),
                       Expanded(
                         child: Text(
                           sourceCitation,
-                          style: const TextStyle(
-                            color: Color(0xFF777F8B),
+                          style: TextStyle(
+                            color: scheme.onSurfaceVariant,
                             fontSize: 10.5,
                             fontStyle: FontStyle.italic,
                           ),
