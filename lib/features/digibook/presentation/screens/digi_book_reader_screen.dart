@@ -39,11 +39,12 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     final args = widget.args;
     final hasLessonData = args.rawLessonData != null && args.components != null;
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
         child: SafeArea(
           child: Column(
@@ -74,18 +75,19 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildTopBar(BuildContext context, DigiBookLaunchArgs args) {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 8, 16, 10),
-      decoration: const BoxDecoration(
-        color: Color(0xFF0F172A),
-        border: Border(bottom: BorderSide(color: AppColors.borderSoft, width: 1)),
+      decoration: BoxDecoration(
+        color: scheme.surfaceContainerHighest,
+        border: Border(bottom: BorderSide(color: scheme.outline, width: 1)),
       ),
       child: Row(
         children: [
           IconButton(
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,
-              color: AppColors.secondaryText,
+              color: scheme.onSurfaceVariant,
               size: 20,
             ),
             onPressed: () {
@@ -131,7 +133,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.cardTitle.copyWith(
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontSize: 15,
                     fontWeight: FontWeight.w700,
                   ),
@@ -145,8 +147,9 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildTabBar() {
+    final scheme = Theme.of(context).colorScheme;
     return Container(
-      color: const Color(0xFF0B1120),
+      color: scheme.surface,
       child: TabBar(
         controller: _tabController,
         isScrollable: true,
@@ -154,7 +157,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
         indicatorColor: AppColors.gold,
         indicatorWeight: 2.5,
         labelColor: AppColors.gold,
-        unselectedLabelColor: Colors.white54,
+        unselectedLabelColor: scheme.onSurfaceVariant,
         labelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, letterSpacing: 0.5),
         unselectedLabelStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
         tabs: const [
@@ -168,6 +171,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildOverviewTab(BuildContext context, DigiBookLaunchArgs args) {
+    final scheme = Theme.of(context).colorScheme;
     final overview = args.componentOverview;
     final overviewText = overview?['overviewText'] as String? ?? 'No overview summary available.';
     final visualWidget = DigiBookVisualRegistry.resolveVisual(args);
@@ -187,9 +191,9 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: const Color(0xFF1E293B),
+              color: scheme.surfaceContainerHighest,
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: AppColors.borderSoft),
+              border: Border.all(color: scheme.outline),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -208,7 +212,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                 Text(
                   overviewText,
                   style: AppTypography.body.copyWith(
-                    color: Colors.white.withValues(alpha: 0.9),
+                    color: scheme.onSurface.withValues(alpha: 0.9),
                     fontSize: 14,
                     height: 1.5,
                   ),
@@ -222,6 +226,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildConceptsTab(BuildContext context, DigiBookLaunchArgs args) {
+    final scheme = Theme.of(context).colorScheme;
     final conceptsData = args.componentConcepts;
     final blocks = (conceptsData?['blocks'] as List<dynamic>?)
             ?.map((e) => e as Map<String, dynamic>)
@@ -244,9 +249,9 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
           margin: const EdgeInsets.only(bottom: 16),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF1E293B),
+            color: scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.borderSoft),
+            border: Border.all(color: scheme.outline),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -262,7 +267,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
               Text(
                 content,
                 style: AppTypography.body.copyWith(
-                  color: Colors.white.withValues(alpha: 0.9),
+                  color: scheme.onSurface.withValues(alpha: 0.9),
                   fontSize: 13.5,
                   height: 1.5,
                 ),
@@ -275,6 +280,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildFormulasTab(BuildContext context, DigiBookLaunchArgs args) {
+    final scheme = Theme.of(context).colorScheme;
     final formulaData = args.componentFormulaRegister;
     final formulas = (formulaData?['formulaTable'] as List<dynamic>?)
             ?.map((e) => e as Map<String, dynamic>)
@@ -298,9 +304,9 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
           margin: const EdgeInsets.only(bottom: 14),
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: const Color(0xFF1E293B),
+            color: scheme.surfaceContainerHighest,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: AppColors.borderSoft),
+            border: Border.all(color: scheme.outline),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -314,14 +320,14 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0F172A),
+                  color: scheme.surface,
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.white12),
+                  border: Border.all(color: scheme.outline),
                 ),
                 child: Text(
                   formula,
                   style: const TextStyle(
-                    color: Colors.white,
+                    color: scheme.onSurface,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'monospace',
@@ -333,7 +339,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                 Text(
                   'Constraints: $constraints',
                   style: TextStyle(
-                    color: Colors.white.withValues(alpha: 0.5),
+                    color: scheme.onSurfaceVariant.withValues(alpha: 0.75),
                     fontSize: 11,
                     fontStyle: FontStyle.italic,
                   ),
@@ -347,6 +353,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildPracticeTab(BuildContext context, DigiBookLaunchArgs args) {
+    final scheme = Theme.of(context).colorScheme;
     final workedData = args.componentWorkedExamples;
     final workedList = (workedData?['workedExamples'] as List<dynamic>?)
             ?.map((e) => e as Map<String, dynamic>)
@@ -385,9 +392,9 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
               margin: const EdgeInsets.only(bottom: 14),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF1E293B),
+                color: scheme.surfaceContainerHighest,
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: AppColors.borderSoft),
+                border: Border.all(color: scheme.outline),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -395,7 +402,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                   Text(
                     title,
                     style: const TextStyle(
-                      color: Colors.white,
+                      color: scheme.onSurface,
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
@@ -404,20 +411,20 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
                   Text(
                     problem,
                     style: TextStyle(
-                      color: Colors.white.withValues(alpha: 0.85),
+                      color: scheme.onSurface.withValues(alpha: 0.85),
                       fontSize: 13,
                     ),
                   ),
                   if (steps.isNotEmpty) ...[
                     const SizedBox(height: 10),
-                    const Divider(color: Colors.white10),
+                    Divider(color: scheme.outline.withValues(alpha: 0.6)),
                     const SizedBox(height: 6),
                     ...steps.map((s) => Padding(
                           padding: const EdgeInsets.only(bottom: 6),
                           child: Text(
                             s,
                             style: TextStyle(
-                              color: Colors.white.withValues(alpha: 0.7),
+                              color: scheme.onSurfaceVariant.withValues(alpha: 0.9),
                               fontSize: 12,
                             ),
                           ),
@@ -451,19 +458,21 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
   }
 
   Widget _buildEmptySection(String message) {
+    final scheme = Theme.of(context).colorScheme;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(32),
         child: Text(
           message,
           textAlign: TextAlign.center,
-          style: const TextStyle(color: Colors.white38, fontSize: 13),
+          style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
         ),
       ),
     );
   }
 
   Widget _buildUnavailableContent(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Center(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -476,7 +485,7 @@ class _DigiBookReaderScreenState extends State<DigiBookReaderScreen>
               'Learning content is not available yet.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white,
+                color: scheme.onSurface,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
               ),
@@ -510,8 +519,9 @@ class DigiBookUnavailableScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: scheme.surface,
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -524,8 +534,8 @@ class DigiBookUnavailableScreen extends StatelessWidget {
                 Text(
                   message,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    color: scheme.onSurface,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
