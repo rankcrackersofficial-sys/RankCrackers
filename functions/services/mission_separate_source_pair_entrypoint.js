@@ -16,7 +16,7 @@ function sourceInput(payload, role) {
   return {
     sourceType: role,
     sourceUrl: required(payload[`${prefix}SourceUrl`], `MISSION_${role.toUpperCase()}_URL_REQUIRED`),
-    stagedStoragePath: required(payload[`${prefix}StagedStoragePath`], `MISSION_${role.toUpperCase()}_STAGED_PATH_REQUIRED`),
+    stagedStoragePath: payload[`${prefix}StagedStoragePath`] || null,
     mimeType: payload[`${prefix}MimeType`] || 'application/pdf',
   };
 }

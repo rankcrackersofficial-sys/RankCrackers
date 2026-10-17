@@ -110,15 +110,45 @@ function extractGenericVariableFamilies(rawData, sourceId) {
  * PRELOAD PHASE (the only I/O): loads every bound source draft and its
  * immutable ingestion record into memory before graph execution.
  */
-async function preloadSourceData({ db, wantedSources }) {
+async function preloadSourceData({ db, missionId, wantedSources }) {
   const preloaded = {};
   for (const want of wantedSources) {
     const draftSnap = await db.collection('sentinel_drafts').doc(want.sourceId).get();
     const refinerySnap = await db.collection('ingestion_refinery').doc(want.sourceId).get();
+    let draft = draftSnap.exists ? (draftSnap.data() || {}) : null;
+    // URL-based official acquisition persists its governed source in the
+    // mission realm rather than the legacy sentinel draft collection. Build a
+    // read-only enrichment projection from that verified record; no upload or
+    // human review is introduced.
+    if (!draft && missionId) {
+      const officialSnap = await db.collection('mission_realms').doc(missionId)
+        .collection('official_documents').doc(want.sourceId).get();
+      if (officialSnap.exists) {
+        const source = officialSnap.data() || {};
+        draft = {
+          status: String(source.verificationState || source.status || '').toLowerCase(),
+          sourceType: source.sourceType,
+          governanceStatus: source.governanceStatus,
+          isOfficial: source.isOfficial,
+          officialDomain: source.officialDomain,
+          language: source.language,
+          fileHash: source.sha256 || source.actualSha256,
+          actualSha256: source.actualSha256,
+          authorityKey: source.authorityKey,
+          linkedRealmId: source.boundMissionId,
+          linkedCycleKey: source.boundCycleKey,
+          rawData: {
+            official_website: source.sourceUrl || source.originUrl || source.officialDomain,
+            source_sha256: source.sha256 || source.actualSha256,
+            source_type: source.sourceType,
+          },
+        };
+      }
+    }
     preloaded[want.sourceId] = {
       expectedSourceType: want.sourceType,
       versionRef: want.binding ? want.binding.versionRef : null,
-      draft: draftSnap.exists ? (draftSnap.data() || {}) : null,
+      draft,
       ingestionRecord: refinerySnap.exists ? (refinerySnap.data() || {}) : null,
     };
   }
@@ -173,7 +203,7 @@ async function executeMissionEnrichmentCycle({ db, missionId, cycleKey, cycleDat
   if (syllabusBindingMode === 'SEPARATE' && syllabusBinding && syllabusBinding.sourceId) {
     wantedSources.push({ sourceId: syllabusBinding.sourceId, sourceType: 'syllabus', binding: syllabusBinding });
   }
-  const preloaded = await preloadSourceData({ db, wantedSources });
+  const preloaded = await preloadSourceData({ db, missionId: normalizedMissionId, wantedSources });
 
   // ----- generic stage handlers (sync, injected into the canonical W1C graph) --
 
@@ -457,19 +487,46 @@ if (functionsSdk) {
   const adminSdk = getAdminSdk();
   exports.missionEnrichmentWorker = functionsSdk.firestore
     .document('mission_realms/{missionId}/cycles/{cycleKey}')
-    .onCreate(async (snap, context) => {
+    .onWrite(async (change, context) => {
+      const snap = change.after;
+      if (!snap.exists) return null;
+      const data = snap.data() || {};
+      if (data.enrichmentStatus !== 'PENDING_ENRICHMENT') return null;
+
+      // The cycle is created before source acquisition completes. Claim the
+      // first subsequent governed update atomically so source-pair completion
+      // can start enrichment without a Founder click and without duplicate
+      // concurrent runs.
+      const claimId = context.eventId || `${context.params.missionId}/${context.params.cycleKey}`;
+      const claimed = await adminSdk.firestore().runTransaction(async (transaction) => {
+        const currentSnap = await transaction.get(snap.ref);
+        const current = currentSnap.data() || {};
+        if (current.enrichmentStatus !== 'PENDING_ENRICHMENT') return false;
+        transaction.update(snap.ref, {
+          enrichmentStatus: 'ENRICHMENT_RUNNING',
+          enrichmentClaimId: claimId,
+          enrichmentClaimedAt: new Date().toISOString(),
+        });
+        return true;
+      });
+      if (!claimed) return null;
+
       try {
         return await executeMissionEnrichmentCycle({
           db: adminSdk.firestore(),
           missionId: context.params.missionId,
           cycleKey: context.params.cycleKey,
-          cycleData: snap.data() || {},
+          cycleData: {...data, enrichmentStatus: 'PENDING_ENRICHMENT'},
           recordedAt: new Date().toISOString(),
         });
       } catch (err) {
         console.error(`MISSION_ENRICHMENT_WORKER_ERROR: ${context.params.missionId}/${context.params.cycleKey}: ${err.message}`);
-        // Fail closed: the cycle stays in its current enrichment state for a
-        // governed retry; no publication/visibility side effect is possible.
+        await snap.ref.update({
+          enrichmentStatus: 'ENRICHMENT_FAILED',
+          enrichmentError: err.message || 'ENRICHMENT_FAILED',
+          enrichmentClaimId: claimId,
+          updatedAt: new Date().toISOString(),
+        });
         return { error: err.message };
       }
     });

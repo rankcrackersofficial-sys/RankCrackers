@@ -1,3 +1,4 @@
+import 'dart:html' as html;
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       setState(() {
-        _errorMessage = 'Authentication required. Sign in with your authorized email first.';
+        _errorMessage =
+            'Authentication required. Sign in with your authorized email first.';
       });
       return;
     }
@@ -35,7 +37,8 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
     });
 
     try {
-      final callable = FirebaseFunctions.instance.httpsCallable('acceptAdminInvite');
+      final callable =
+          FirebaseFunctions.instance.httpsCallable('acceptAdminInvite');
       final result = await callable.call<Map<String, dynamic>>({
         'token': widget.token.trim(),
       });
@@ -45,6 +48,7 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
       final scopes = (data['scopes'] as List? ?? []).cast<String>();
 
       if (mounted) {
+        html.window.sessionStorage.remove('pendingAdminInviteToken');
         setState(() {
           _accepted = true;
           _grantedScopes = scopes;
@@ -84,7 +88,9 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
-                  _accepted ? Icons.check_circle_outline : Icons.verified_user_outlined,
+                  _accepted
+                      ? Icons.check_circle_outline
+                      : Icons.verified_user_outlined,
                   size: 42,
                   color: _accepted ? Colors.green : scheme.primary,
                 ),
@@ -104,13 +110,15 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
                         ? 'Single-use invitation token detected. Secure server verification is required to activate Admin privileges.'
                         : 'A valid invitation link is required. Contact the Founder.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
+                    style:
+                        TextStyle(color: scheme.onSurfaceVariant, fontSize: 13),
                   ),
                   const SizedBox(height: 12),
                   Text(
                     'No invitation has been accepted and no access has been granted.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
+                    style:
+                        TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
                   ),
                   if (hasInvite) ...[
                     const SizedBox(height: 24),
@@ -133,20 +141,25 @@ class _AdminInviteScreenState extends State<AdminInviteScreen> {
                     Text(
                       _errorMessage!,
                       textAlign: TextAlign.center,
-                      style: const TextStyle(color: Colors.redAccent, fontSize: 12),
+                      style: const TextStyle(
+                          color: Colors.redAccent, fontSize: 12),
                     ),
                   ],
                 ] else ...[
                   const Text(
                     'Invitation Accepted: Admin privileges activated.',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.greenAccent, fontSize: 14, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        color: Colors.greenAccent,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 12),
                   Text(
                     'Explicit scopes assigned: ${_grantedScopes.join(", ")}',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
+                    style:
+                        TextStyle(color: scheme.onSurfaceVariant, fontSize: 12),
                   ),
                 ],
               ],

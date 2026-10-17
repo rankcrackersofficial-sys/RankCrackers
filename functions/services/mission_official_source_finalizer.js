@@ -1,10 +1,9 @@
 'use strict';
 
 const crypto = require('crypto');
-const { PDFDocument } = require('pdf-lib');
 const { canonicalAuthorityRegistry } = require('./authority_intelligence');
 const { assertVerifiedOfficialSourcePair } = require('./mission_official_source_pair');
-const { corroborateOfficialOrigin } = require('./mission_official_origin_provenance');
+const { acquireOfficialSourceBytes, corroborateOfficialOrigin } = require('./mission_official_origin_provenance');
 
 const ALLOWED_SOURCE_TYPES = Object.freeze(['notification', 'syllabus']);
 const ALLOWED_MIME_TYPES = new Set(['application/pdf']);
@@ -39,7 +38,10 @@ function assertPdf(bytes, mimeType) {
 }
 async function readPdfPageCount(bytes) {
   let document;
-  try { document = await PDFDocument.load(bytes); } catch (_) { throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_UNREADABLE'); }
+  try {
+    const { PDFDocument } = require('pdf-lib');
+    document = await PDFDocument.load(bytes);
+  } catch (_) { throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_UNREADABLE'); }
   const pageCount = document.getPageCount();
   if (!Number.isSafeInteger(pageCount) || pageCount < 1 || pageCount > 4000) throw new Error('OFFICIAL_SOURCE_PAGE_COUNT_OUT_OF_RANGE');
   return pageCount;
@@ -70,14 +72,23 @@ function buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourc
 }
 async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityKey, sourceType, sourceUrl, stagedStoragePath, mimeType, recordedAt, officialBytesFetcher }) {
   if (!storage || typeof storage.bucket !== 'function') throw new Error('OFFICIAL_SOURCE_STORAGE_REQUIRED');
-  const staged = requiredString(stagedStoragePath, 'OFFICIAL_SOURCE_STAGED_PATH_REQUIRED');
-  const allowedStagingPath = staged.startsWith('mission_source_staging/')
-    || staged.startsWith('ingestion_refinery/mission_source_staging/');
-  if (!allowedStagingPath || staged.includes('..')) throw new Error('OFFICIAL_SOURCE_STAGED_PATH_INVALID');
-  const file = storage.bucket().file(staged);
-  const [metadata] = await file.getMetadata();
-  const effectiveMime = mimeType || metadata.contentType || '';
-  const [bytes] = await file.download();
+  let bytes;
+  let effectiveMime = mimeType || 'application/pdf';
+  let acquisition = 'BACKEND_OFFICIAL_URL_FETCH';
+  if (stagedStoragePath) {
+    const staged = requiredString(stagedStoragePath, 'OFFICIAL_SOURCE_STAGED_PATH_REQUIRED');
+    const allowedStagingPath = staged.startsWith('mission_source_staging/')
+      || staged.startsWith('ingestion_refinery/mission_source_staging/');
+    if (!allowedStagingPath || staged.includes('..')) throw new Error('OFFICIAL_SOURCE_STAGED_PATH_INVALID');
+    const file = storage.bucket().file(staged);
+    const [metadata] = await file.getMetadata();
+    effectiveMime = mimeType || metadata.contentType || '';
+    [bytes] = await file.download();
+    acquisition = 'FOUNDER_STAGED_UPLOAD_CORROBORATED';
+  } else {
+    const acquired = await acquireOfficialSourceBytes({ sourceUrl, authorityKey, officialBytesFetcher });
+    bytes = acquired.bytes;
+  }
   const base = buildFinalizedOfficialSource({ missionId, cycleKey, authorityKey, sourceType, sourceUrl, bytes, mimeType: effectiveMime, recordedAt });
   const pageCount = await readPdfPageCount(bytes);
   // Independently download the approved HTTPS source and compare its bytes
@@ -86,7 +97,7 @@ async function finalizeOfficialSource({ storage, missionId, cycleKey, authorityK
   const originProof = await corroborateOfficialOrigin({
     sourceUrl: base.sourceUrl, authorityKey, bytes, officialBytesFetcher,
   });
-  const source = Object.freeze({ ...base, ...originProof, pageCount });
+  const source = Object.freeze({ ...base, ...originProof, pageCount, acquisition });
   const destination = storage.bucket().file(source.storagePath);
   const [exists] = await destination.exists();
   if (!exists) await destination.save(bytes, { resumable: false, metadata: { contentType: effectiveMime, metadata: { sourceSha256: source.sha256, missionId, cycleKey, authorityKey, sourceType, pageCount: String(source.pageCount) } } });

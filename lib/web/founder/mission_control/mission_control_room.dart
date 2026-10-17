@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rank_crackers/features/admin/presentation/widgets/mission_control/mission_control_center.dart';
-import 'package:rank_crackers/features/admin/presentation/widgets/upload_factory/upload_factory_center.dart';
 import 'package:rank_crackers/web/founder/mission_control/mission_variable_authority_panel.dart';
 import 'package:rank_crackers/web/founder/theme/founder_light_theme.dart';
 import 'mission_documents_tab.dart';
 import 'mission_publish_readiness_panel.dart';
+import '../fdc/document_command_center.dart';
 
 import '../../shared/unified_command_console.dart';
 
@@ -73,16 +73,9 @@ class _MissionControlRoomState extends State<MissionControlRoom> {
       );
     }
     if (missionId != null && MissionControlRoom.targetDetailTab == 2) {
-      return Column(
-        children: [
-          _DetailHeader(
-            title: 'FACTORY HUB',
-            missionId: missionId,
-            onBack: _backFromSubView,
-          ),
-          const Expanded(child: UploadFactoryCenter()),
-        ],
-      );
+      // The Founder command surface is server-acquisition only. The legacy
+      // upload factory is deliberately unreachable from this web panel.
+      return const DocumentCommandCenter();
     }
     if (missionId != null && MissionControlRoom.targetDetailTab == 3) {
       return MissionPublishReadinessPanel(
@@ -264,7 +257,7 @@ class _SelectedMissionDetail extends StatelessWidget {
                     !realm.exists
                         ? 'REPAIR FOUNDER AUTHORITY'
                         : documents.docs.isEmpty
-                            ? 'UPLOAD SOURCE DOCUMENT'
+                            ? 'START AUTOMATED SOURCE ACQUISITION'
                             : 'REVIEW PUBLISH READINESS',
                     style: const TextStyle(
                         color: Color(0xFFE8C766), fontWeight: FontWeight.bold),

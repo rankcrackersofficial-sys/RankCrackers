@@ -43,6 +43,18 @@ async function defaultOfficialBytesFetcher(url) {
   return Buffer.from(response.data);
 }
 
+async function acquireOfficialSourceBytes({ sourceUrl, authorityKey, officialBytesFetcher = defaultOfficialBytesFetcher }) {
+  const validatedUrl = validateOfficialFetchUrl(sourceUrl, authorityKey);
+  if (typeof officialBytesFetcher !== 'function') throw new Error('OFFICIAL_ORIGIN_FETCHER_REQUIRED');
+  let bytes;
+  try { bytes = await officialBytesFetcher(validatedUrl); } catch (_) { throw new Error('OFFICIAL_ORIGIN_FETCH_FAILED'); }
+  if (!Buffer.isBuffer(bytes) || bytes.length === 0 || bytes.length > MAX_OFFICIAL_BYTES
+      || bytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
+    throw new Error('OFFICIAL_ORIGIN_REMOTE_PDF_INVALID');
+  }
+  return Object.freeze({ url: validatedUrl, bytes });
+}
+
 async function corroborateOfficialOrigin({
   sourceUrl, authorityKey, bytes, officialBytesFetcher = defaultOfficialBytesFetcher,
 }) {
@@ -61,17 +73,9 @@ async function corroborateOfficialOrigin({
       throw new Error('OFFICIAL_ORIGIN_EXTERNAL_FETCH_FORBIDDEN_IN_EMULATOR');
     }
   }
-  let officialBytes;
-  try {
-    officialBytes = await officialBytesFetcher(validatedUrl);
-  } catch (_) {
-    throw new Error('OFFICIAL_ORIGIN_FETCH_FAILED');
-  }
-  if (!Buffer.isBuffer(officialBytes) || officialBytes.length === 0
-      || officialBytes.length > MAX_OFFICIAL_BYTES
-      || officialBytes.subarray(0, 5).toString('ascii') !== '%PDF-') {
-    throw new Error('OFFICIAL_ORIGIN_REMOTE_PDF_INVALID');
-  }
+  const { bytes: officialBytes } = await acquireOfficialSourceBytes({
+    sourceUrl: validatedUrl, authorityKey, officialBytesFetcher,
+  });
   const stagedSha = sha256(bytes);
   const originSha = sha256(officialBytes);
   if (stagedSha !== originSha) throw new Error('OFFICIAL_ORIGIN_BYTES_MISMATCH');
@@ -85,5 +89,5 @@ async function corroborateOfficialOrigin({
 
 module.exports = {
   MAX_OFFICIAL_BYTES, ORIGIN_PROOF_METHOD,
-  validateOfficialFetchUrl, corroborateOfficialOrigin,
+  validateOfficialFetchUrl, acquireOfficialSourceBytes, corroborateOfficialOrigin,
 };

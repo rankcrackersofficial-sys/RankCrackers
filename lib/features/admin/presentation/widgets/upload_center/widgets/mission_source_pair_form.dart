@@ -1,18 +1,16 @@
-import 'dart:typed_data';
-
 import 'package:cloud_functions/cloud_functions.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 
 import 'package:rank_crackers/core/theme/app_colors.dart';
 import 'package:rank_crackers/core/theme/app_typography.dart';
 import 'package:rank_crackers/core/widgets/dark_card.dart';
-import 'package:rank_crackers/features/admin/core/admin_storage_service.dart';
 import 'package:rank_crackers/shared/widgets/tactical_button.dart';
 
-/// Founder-only, mission-bound source-pair upload. Both documents are staged
-/// first and finalized together by the trusted callable; neither document is
-/// self-certified by the browser.
+/// Mission-bound source-pair finalizer.
+///
+/// The Founder web surface is intentionally URL-only: the backend acquires,
+/// hashes, verifies and queues the official bytes. There is no browser upload
+/// or human verification path in this control.
 class MissionSourcePairForm extends StatefulWidget {
   final String initialMission;
   final String initialCycle;
@@ -39,10 +37,6 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
   final authority = TextEditingController();
   final notificationUrl = TextEditingController();
   final syllabusUrl = TextEditingController();
-  Uint8List? notificationBytes;
-  Uint8List? syllabusBytes;
-  String? notificationName;
-  String? syllabusName;
   bool busy = false;
 
   @override
@@ -63,25 +57,6 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
     notificationUrl.dispose();
     syllabusUrl.dispose();
     super.dispose();
-  }
-
-  Future<void> _pick(bool notification) async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: const ['pdf'],
-      withData: true,
-    );
-    final file = result?.files.single;
-    if (file?.bytes == null) return;
-    setState(() {
-      if (notification) {
-        notificationBytes = file!.bytes;
-        notificationName = file.name;
-      } else {
-        syllabusBytes = file!.bytes;
-        syllabusName = file.name;
-      }
-    });
   }
 
   Future<void> _finalize() async {
@@ -105,28 +80,12 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
         cycleKey.isEmpty ||
         authorityKey.isEmpty ||
         notificationOfficialUrl.isEmpty ||
-        syllabusOfficialUrl.isEmpty ||
-        notificationBytes == null ||
-        syllabusBytes == null) {
-      _message(
-          'Mission, cycle, authority, both official URLs and both PDFs are required.');
+        syllabusOfficialUrl.isEmpty) {
+      _message('Mission, cycle, authority and both official URLs are required.');
       return;
     }
     setState(() => busy = true);
     try {
-      final stamp = DateTime.now().microsecondsSinceEpoch;
-      final notificationPath =
-          'ingestion_refinery/mission_source_staging/${stamp}_notification.pdf';
-      final syllabusPath =
-          'ingestion_refinery/mission_source_staging/${stamp}_syllabus.pdf';
-      await AdminStorageService.upload(
-          bytes: notificationBytes!,
-          path: notificationPath,
-          contentType: 'application/pdf');
-      await AdminStorageService.upload(
-          bytes: syllabusBytes!,
-          path: syllabusPath,
-          contentType: 'application/pdf');
       final response =
           await FirebaseFunctions.instanceFor(region: 'us-central1')
               .httpsCallable('handleSentinelAction')
@@ -139,8 +98,6 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
           'sourceLanguage': 'english',
           'notificationSourceUrl': notificationOfficialUrl,
           'syllabusSourceUrl': syllabusOfficialUrl,
-          'notificationStagedStoragePath': notificationPath,
-          'syllabusStagedStoragePath': syllabusPath,
         },
       });
       _message(
@@ -185,7 +142,7 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
                   .copyWith(color: AppColors.gold, fontSize: 12)),
           const SizedBox(height: 8),
           Text(
-              'Both official PDFs are required. The server verifies authority URL bytes before queueing decomposition.',
+              'The backend acquires both official PDFs, verifies their origin and queues decomposition automatically.',
               style: AppTypography.label
                   .copyWith(color: Colors.white60, fontSize: 10)),
           const SizedBox(height: 20),
@@ -194,22 +151,8 @@ class _MissionSourcePairFormState extends State<MissionSourcePairForm> {
           _field('AUTHORITY KEY', authority, hint: 'e.g. nta'),
           _field('NOTIFICATION OFFICIAL HTTPS URL', notificationUrl),
           _field('SYLLABUS OFFICIAL HTTPS URL', syllabusUrl),
-          Row(children: [
-            Expanded(
-                child: TacticalButton(
-                    title: notificationName == null
-                        ? 'SELECT NOTIFICATION PDF'
-                        : notificationName!,
-                    onTap: busy ? null : () => _pick(true))),
-            const SizedBox(width: 12),
-            Expanded(
-                child: TacticalButton(
-                    title: syllabusName == null
-                        ? 'SELECT SYLLABUS PDF'
-                        : syllabusName!,
-                    onTap: busy ? null : () => _pick(false)))
-          ]),
-          const SizedBox(height: 16),
+          Text('No upload or manual verification is required. The server fetches and independently verifies both official PDFs.',
+              style: AppTypography.label.copyWith(color: Colors.white54, fontSize: 10)),
           TacticalButton(
               title: busy ? 'VERIFYING AND QUEUING…' : 'FINALIZE SOURCE PAIR',
               onTap: busy ? null : _finalize,

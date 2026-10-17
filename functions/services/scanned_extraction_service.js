@@ -79,7 +79,19 @@ async function extractScannedPage({ missionId, documentId, sourceSha256, pdfByte
 
   let result;
   try {
-    const [response] = await client.batchAnnotateFiles(request);
+    // Bound the gRPC call. The default client retry policy can keep a single
+    // scanned page lease alive indefinitely when Vision is transiently slow.
+    // The queue worker can then retry the governed page batch cleanly.
+    const visionCall = client.batchAnnotateFiles(request, {
+      timeout: 90000,
+      autoRetry: false
+    });
+    let timeoutHandle;
+    const timeoutCall = new Promise((_, reject) => {
+      timeoutHandle = setTimeout(() => reject(new Error('VISION_CALL_TIMEOUT')), 90000);
+    });
+    const [response] = await Promise.race([visionCall, timeoutCall]);
+    clearTimeout(timeoutHandle);
     result = response;
   } catch (e) {
     throw new Error(`RC_SYLLABUS_P1_BLOCKED_VISION_PROVIDER_ERROR: ${e.message}`);

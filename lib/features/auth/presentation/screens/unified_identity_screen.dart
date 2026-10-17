@@ -981,7 +981,7 @@ class _UnifiedIdentityScreenState extends ConsumerState<UnifiedIdentityScreen>
                   )
                 else
                   Image.asset(
-                    "assets/images/google.png",
+                    "assets/images/Google.png",
                     width: 20,
                     errorBuilder: (context, error, stackTrace) => Icon(
                       Icons.g_mobiledata_rounded,

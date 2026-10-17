@@ -96,6 +96,28 @@ function buildCyclePublicationPlan({ missionId, cycleKey, cycle, reason, request
   }
   const eligibility = assertCyclePublicationEligibility(cycle);
 
+  const missionIdentity = normalizedMissionId === 'ssc_cgl'
+    ? {
+        id: normalizedMissionId,
+        missionId: normalizedMissionId,
+        title: 'SSC CGL 2026',
+        displayName: 'SSC CGL 2026',
+        examId: normalizedMissionId,
+        examCategory: 'competitive',
+        category: 'competitive',
+        authorityGroupKey: 'ssc',
+        authorityDisplayName: 'Staff Selection Commission (SSC)',
+        jurisdictionLevel: 'CENTRAL',
+        state: 'Central',
+        stateName: 'Central',
+        stateCode: 'IN',
+        studentPublicationState: 'AVAILABLE',
+        catalogStatus: 'PUBLISHED',
+        missionSelectionReady: true,
+        quickEntryEnabled: true,
+      }
+    : {};
+
   const plan = {
     type: 'CYCLE_PUBLICATION',
     missionId: normalizedMissionId,
@@ -109,7 +131,14 @@ function buildCyclePublicationPlan({ missionId, cycleKey, cycle, reason, request
     historicalCyclesPreserved: true,
     projectionUpdates: {
       mission_realms: {
+        ...missionIdentity,
         status: 'ACTIVE',
+        // Student discovery queries are intentionally fail-closed on this
+        // field. Publication must always materialize the explicit default,
+        // otherwise a visible mission is silently excluded by the Android
+        // query `archived == false`.
+        archived: false,
+        catalogDiscoverable: true,
         userPanelVisible: true,
         cardVisible: true,
         visibilityGate: {

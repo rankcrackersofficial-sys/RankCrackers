@@ -41,6 +41,13 @@ export interface AtomicNode {
   runId: string;
   createdAt: admin.firestore.FieldValue;
   updatedAt: admin.firestore.FieldValue;
+  candidateState: 'DRAFT_DERIVED' | 'EVIDENCE_PENDING' | 'VERIFIED' | 'REJECTED';
+  publicationState: 'INTERNAL_ONLY' | 'STUDENT_READY';
+  sourceRole: 'ai_candidate';
+  derivationMethod: string;
+  confidence: number;
+  isStudentVisible: boolean;
+  requiresIndependentVerification: boolean;
 }
 
 export class GenericB4Worker {
@@ -206,12 +213,22 @@ export class GenericB4Worker {
           sourcePages,
           sourceTextAnchor,
           decompositionVersion: GenericB4Worker.VERSION,
+          // B4 is a decomposition candidate worker only. Gemini output is
+          // never allowed to become an atomic syllabus fact or student-facing
+          // content without the independent verifier and provenance checks.
           verificationState: 'UNVERIFIED',
           workerRevision: GenericB4Worker.REVISION,
           verifierRevision: GenericB4Worker.REVISION, // compatibility
           runId,
           createdAt: admin.firestore.FieldValue.serverTimestamp(),
-          updatedAt: admin.firestore.FieldValue.serverTimestamp()
+          updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+          candidateState: 'EVIDENCE_PENDING',
+          publicationState: 'INTERNAL_ONLY',
+          sourceRole: 'ai_candidate',
+          derivationMethod: 'AI candidate generation from verified B3 topic; independent evidence verification required',
+          confidence: 0,
+          isStudentVisible: false,
+          requiresIndependentVerification: true,
         });
       }
     }

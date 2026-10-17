@@ -932,7 +932,7 @@ class _LoginBodyEngineState
 
                             Image.asset(
 
-                              "assets/images/google.png",
+                              "assets/images/Google.png",
 
                               width: 24,
                               height: 24,

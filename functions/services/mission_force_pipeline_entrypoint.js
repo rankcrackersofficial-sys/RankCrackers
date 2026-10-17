@@ -34,9 +34,7 @@ async function runTrustedForcePipeline({
     }
   }
   if (!auth || !auth.uid) throw new Error('FORCE_PIPELINE_EXECUTOR_AUTHORITY_MISSING');
-  if (!request || typeof request.stagedStoragePath !== 'string' || request.stagedStoragePath.trim() === '') {
-    throw new Error('FORCE_PIPELINE_STAGED_SOURCE_REQUIRED');
-  }
+  if (!request || typeof request !== 'object') throw new Error('FORCE_PIPELINE_REQUEST_REQUIRED');
 
   const userSnap = await db.collection('users').doc(auth.uid).get();
   assertActiveFounder(auth, userSnap.exists ? userSnap.data() : {});

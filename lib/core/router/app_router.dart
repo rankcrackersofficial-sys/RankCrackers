@@ -105,6 +105,15 @@ final GoRouter appRouter = GoRouter(
 
     // 🔱 Authority 4: Mission Gate (Must select valid mission)
     final String? selectedExam = SessionManager.selectedExamSync();
+    // A persisted canonical mission is enough to keep the user on the
+    // authenticated shell while the authoritative catalog snapshot hydrates.
+    // Once the snapshot arrives, the normal validity gate still applies.
+    if (selectedExam != null &&
+        selectedExam.trim().isNotEmpty &&
+        !SessionManager.accessSnapshotReady) {
+      debugPrint('🔱 ROUTER: Waiting for mission catalog hydration');
+      return null;
+    }
     final bool isMissionValid = SessionManager.isMissionValid(selectedExam);
     if (!isMissionValid && !isPrivileged) {
       debugPrint("🔱 ROUTER: Mission missing or invalid, routing to Realm");

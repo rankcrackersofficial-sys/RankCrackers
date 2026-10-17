@@ -70,6 +70,7 @@ class SessionManager {
   /// Dynamic Mission Access Snapshot (Section 4 & 5)
   static MissionAccessSnapshot _currentSnapshot = MissionAccessSnapshot.uninitialized();
   static MissionAccessSnapshot get currentSnapshot => _currentSnapshot;
+  static bool get accessSnapshotReady => _currentSnapshot.snapshotReady;
 
   static void updateAccessSnapshot(MissionAccessSnapshot snapshot) {
     _currentSnapshot = snapshot;

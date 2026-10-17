@@ -672,15 +672,15 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
   String _getGroundedWhyItMatters(DigiBookLaunchArgs args) {
     if (args.subject.toLowerCase() == 'mathematics') {
-      return 'Sets provide the bedrock for relations, functions, calculus, and probability across the entire JEE Mathematics syllabus.';
+      return 'This foundation supports the connected topics, applications, and assessments in the active mission syllabus.';
     }
     if (args.subject.toLowerCase() == 'physics') {
-      return 'Mastering quantitative foundations and physical dimensions is essential for error-free derivations and dimensional consistency across JEE Physics.';
+      return 'Mastering quantitative foundations and dimensions is essential for accurate reasoning in the active mission.';
     }
     if (args.subject.toLowerCase() == 'chemistry') {
       return 'Fundamental chemical concepts and atomic models form the prerequisite bridge to stoichiometry, equilibrium, and physical chemistry.';
     }
-    return 'Establishes verified academic foundations for competitive JEE problem solving.';
+    return 'Establishes verified academic foundations for competitive-exam problem solving.';
   }
 
   List<String> _getGroundedWhatYouLearn(DigiBookLaunchArgs args) {
@@ -847,8 +847,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   SizedBox(height: 12),
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 12),
+                    padding: EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                     decoration: BoxDecoration(
                       color: _readerInset,
                       borderRadius: BorderRadius.circular(8),
@@ -1008,8 +1007,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 6, vertical: 2),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
                           color: _readerBorder,
                           borderRadius: BorderRadius.circular(4),
@@ -1946,7 +1945,7 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
 
   Widget _buildMissionTab([DigiBookLaunchArgs? args]) {
     final topic = args?.topicTitle ?? 'this chapter';
-    final subject = args?.subject ?? 'JEE';
+    final subject = args?.subject ?? 'MISSION';
 
     return Center(
       child: Padding(
@@ -1964,8 +1963,8 @@ class _DigiBookScreenState extends ConsumerState<DigiBookScreen>
                   color: Color(0xFFC3A568), size: 36),
             ),
             const SizedBox(height: 18),
-            const Text(
-              "ACTIVE MISSION: JEE MAIN 2027",
+            Text(
+              "ACTIVE MISSION: ${subject.toUpperCase()}",
               style: TextStyle(
                 color: Color(0xFFC3A568),
                 fontSize: 12,

@@ -3,9 +3,6 @@ const admin = require("firebase-admin");
 const axios = require("axios");
 const { extractSentinelPdfText } = require("../services/sentinel_pdf_text");
 const { isQueueWorkerOwnedMissionTask } = require("../services/sentinel_queue_ownership");
-const mammoth = require("mammoth");
-const XLSX = require("xlsx");
-const vision = require("@google-cloud/vision");
 const { callGemini } = require("../services/gemini_service");
 const { logAiAudit, logFounderActivity } = require("../services/audit_service");
 const { trackSystemBudget } = require("../services/budget_service");
@@ -16,6 +13,9 @@ const calculateTokenEstimate = require("../helpers/token_estimator");
 
 const WORKER_VERSION = "9.2.0 (Forensic-Supreme)";
 let visionClient = null;
+let vision = null;
+let mammoth = null;
+let XLSX = null;
 const ALLOWED_STORAGE_HOSTS = ["firebasestorage.googleapis.com"];
 
 /**
@@ -135,6 +135,7 @@ exports.sentinelBackgroundWorker = functions
         if (!rawText || rawText.trim().length < 150) {
             console.log(`OCR: Scanned PDF detected. Invoking Vision API with Buffer.`);
             if (!visionClient) {
+                if (!vision) vision = require('@google-cloud/vision');
                 visionClient = new vision.ImageAnnotatorClient();
             }
             const [result] = await visionClient.documentTextDetection({ content: fileBuffer });
@@ -145,6 +146,7 @@ exports.sentinelBackgroundWorker = functions
       else if (['png', 'jpg', 'jpeg', 'webp'].includes(extension)) {
         console.log(`OCR: Processing image source via Vision API.`);
         if (!visionClient) {
+            if (!vision) vision = require('@google-cloud/vision');
             visionClient = new vision.ImageAnnotatorClient();
         }
         const [result] = await visionClient.textDetection({ content: fileBuffer });
@@ -152,10 +154,12 @@ exports.sentinelBackgroundWorker = functions
         extractionMethod = "OCR";
       }
       else if (extension === "docx") {
+        if (!mammoth) mammoth = require('mammoth');
         const result = await mammoth.extractRawText({ buffer: fileBuffer });
         rawText = result.value;
       }
       else if (extension === "xlsx" || extension === "xls") {
+        if (!XLSX) XLSX = require('xlsx');
         const workbook = XLSX.read(fileBuffer, { type: 'buffer' });
         rawText = workbook.SheetNames.map(name => {
             const sheet = workbook.Sheets[name];

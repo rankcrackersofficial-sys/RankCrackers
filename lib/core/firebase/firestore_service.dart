@@ -740,6 +740,17 @@ class FirestoreService {
     return _firestore
         .collection(nodeCollection)
         .where('examId', isEqualTo: examId)
+        // The student rule is mission-canonical, not merely exam-labelled.
+        // Keeping both predicates prevents cross-mission and legacy rows from
+        // making the entire Firestore query fail closed.
+        .where('canonicalMissionId', isEqualTo: examId)
+        .where('status', isEqualTo: 'published')
+        .where('studentVisibilityAuthorized', isEqualTo: true)
+        .where('sourceApproved', isEqualTo: true)
+        .where('verificationStatus', isEqualTo: 'VERIFIED')
+        .where('isSynthetic', isEqualTo: false)
+        .where('isStructuralHold', isEqualTo: false)
+        .where('isStale', isEqualTo: false)
         .snapshots()
         .map((snapshot) {
           return snapshot.docs
@@ -837,7 +848,7 @@ class FirestoreService {
         return UserProfile(
           uid: uid,
           name: 'Founder',
-          email: 'rankcrackersofficial@gmail.com',
+          email: 'founder.rcofficial@gmail.com',
           tier: SubscriptionTier.elite,
         );
       }

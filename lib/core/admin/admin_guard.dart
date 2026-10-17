@@ -3,7 +3,7 @@ class AdminGuard {
   static const List<String>
       adminEmails = [
 
-    'rankcrackersofficial@gmail.com',
+    'founder.rcofficial@gmail.com',
   ];
 
   static bool isAdmin(

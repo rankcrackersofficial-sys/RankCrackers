@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:rank_crackers/core/admin/admin_permission_resolver.dart';
+import 'package:rank_crackers/core/constants/official_mission_sources.dart';
 import '../../shared/rc_colors.dart';
 import '../../shared/rc_field.dart';
 import '../../shared/rc_file_helpers.dart';
@@ -50,6 +51,10 @@ class MissionDocumentsTab extends StatefulWidget {
 
 class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     with SingleTickerProviderStateMixin {
+  // Founder truth is produced by the server pipeline. Keep the legacy
+  // upload/review widgets out of the Founder web surface so they cannot
+  // create a second, manual source-of-truth path.
+  static const bool _founderManualSourceControlsEnabled = false;
   late TabController _tabController;
   final _titleCtrl = TextEditingController();
   final _searchCtrl = TextEditingController();
@@ -140,12 +145,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final bool isFounder = widget.roleMode == ConsoleRoleMode.founder;
     final perms = widget.permissions ?? {};
     final currentSubTabLabels = [
-      if (isFounder) 'Upload Source',
+      if (isFounder && _founderManualSourceControlsEnabled) 'Upload Source',
       'Source Documents',
-      if (isFounder) 'Student Visibility',
-      if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
+      if (isFounder && _founderManualSourceControlsEnabled) 'Student Visibility',
+      if (!isFounder && AdminPermissionResolver.canSeeSyllabusReview(perms))
         'Syllabus Verification',
-      if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+      if (!isFounder && AdminPermissionResolver.canSeePyqReview(perms))
         'PYQ Verification',
     ];
     final idx = currentSubTabLabels.indexOf(tabLabel);
@@ -160,9 +165,9 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final bool isFounder = widget.roleMode == ConsoleRoleMode.founder;
     final perms = widget.permissions ?? {};
     int len = 1; // Registry
-    if (isFounder) len += 2; // Upload, Review
-    if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms)) len++;
-    if (isFounder || AdminPermissionResolver.canSeePyqReview(perms)) len++;
+    if (isFounder && _founderManualSourceControlsEnabled) len += 2; // Upload, Review
+    if (!isFounder && AdminPermissionResolver.canSeeSyllabusReview(perms)) len++;
+    if (!isFounder && AdminPermissionResolver.canSeePyqReview(perms)) len++;
 
     _tabController = TabController(length: len, vsync: this);
 
@@ -177,12 +182,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
       if (targetIndex == 4) requestedLabel = 'PYQ Verification';
 
       final currentSubTabLabels = [
-        if (isFounder) 'Upload Source',
+        if (isFounder && _founderManualSourceControlsEnabled) 'Upload Source',
         'Source Documents',
-        if (isFounder) 'Student Visibility',
-        if (isFounder || AdminPermissionResolver.canSeeSyllabusReview(perms))
+        if (isFounder && _founderManualSourceControlsEnabled) 'Student Visibility',
+        if (!isFounder && AdminPermissionResolver.canSeeSyllabusReview(perms))
           'Syllabus Verification',
-        if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+        if (!isFounder && AdminPermissionResolver.canSeePyqReview(perms))
           'PYQ Verification',
       ];
 
@@ -263,7 +268,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
     final configured = widget.mission['officialSourceUrl']?.toString().trim();
     if (configured != null && configured.isNotEmpty) return configured;
     if (widget.missionId == 'ssc_cgl') {
-      return 'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf';
+      return OfficialMissionSources.notificationUrl(widget.missionId);
     }
     return null;
   }
@@ -1083,13 +1088,15 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                 docs.where((doc) => _isStudentVisible(doc.data())).toList();
 
             final detailTabs = [
-              if (isFounder) const Tab(text: 'Upload Source'),
+              if (isFounder && _founderManualSourceControlsEnabled)
+                const Tab(text: 'Upload Source'),
               const Tab(text: 'Source Documents'),
-              if (isFounder) const Tab(text: 'Student Visibility'),
-              if (isFounder ||
+              if (isFounder && _founderManualSourceControlsEnabled)
+                const Tab(text: 'Student Visibility'),
+              if (!isFounder &&
                   AdminPermissionResolver.canSeeSyllabusReview(perms))
                 const Tab(text: 'Syllabus Verification'),
-              if (isFounder || AdminPermissionResolver.canSeePyqReview(perms))
+              if (!isFounder && AdminPermissionResolver.canSeePyqReview(perms))
                 const Tab(text: 'PYQ Verification'),
             ];
 
@@ -1112,10 +1119,12 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                   child: TabBarView(
                     controller: _tabController,
                     children: [
-                      if (isFounder) _buildUploadSection(variables),
+                      if (isFounder && _founderManualSourceControlsEnabled)
+                        _buildUploadSection(variables),
                       _buildRegistrySection(filteredDocs, variables),
-                      if (isFounder) _buildStudentReviewSection(visibleDocs),
-                      if (isFounder ||
+                      if (isFounder && _founderManualSourceControlsEnabled)
+                        _buildStudentReviewSection(visibleDocs),
+                      if (!isFounder &&
                           AdminPermissionResolver.canSeeSyllabusReview(perms))
                         SyllabusAtomVerificationTab(
                           missionId: widget.missionId,
@@ -1124,7 +1133,7 @@ class _MissionDocumentsTabState extends State<MissionDocumentsTab>
                           roleMode: widget.roleMode,
                           permissions: perms,
                         ),
-                      if (isFounder ||
+                      if (!isFounder &&
                           AdminPermissionResolver.canSeePyqReview(perms))
                         PyqVerificationTab(
                           missionId: widget.missionId,

@@ -8,6 +8,35 @@ const { logFounderActivity } = require('../services/audit_service');
 const { CANONICAL_ADMIN_SCOPES, normalizeScopes } = require('../services/admin_scope_authority');
 
 /**
+ * Validate an invitation before the client is allowed to enter account
+ * creation mode. The bearer token is required, but no privileged data is
+ * returned until the invitation is found, unexpired, and unused.
+ */
+exports.validateAdminInvite = functions.https.onCall(async (data) => {
+  const { inviteToken } = data || {};
+  if (typeof inviteToken !== 'string' || !inviteToken.trim()) {
+    throw new functions.https.HttpsError('invalid-argument', 'INVITATION_TOKEN_REQUIRED');
+  }
+
+  const tokenHash = crypto.createHash('sha256').update(inviteToken.trim()).digest('hex');
+  const snapshot = await admin.firestore().collection('admin_invitations').doc(tokenHash).get();
+  if (!snapshot.exists) {
+    throw new functions.https.HttpsError('not-found', 'INVITATION_NOT_FOUND');
+  }
+
+  const invite = snapshot.data() || {};
+  const expiresMillis = invite.expiresAt?.toMillis ? invite.expiresAt.toMillis() : 0;
+  if (invite.redeemed === true || invite.status === 'ACCEPTED' || Date.now() > expiresMillis) {
+    throw new functions.https.HttpsError('failed-precondition', 'INVITATION_INVALID_OR_EXPIRED');
+  }
+
+  return {
+    success: true,
+    email: typeof invite.targetEmail === 'string' ? invite.targetEmail.trim().toLowerCase() : null,
+  };
+});
+
+/**
  * 🔱 SECURE ADMIN INVITATION LIFECYCLE (P0)
  * Tokens are cryptographically digested via SHA-256 before Firestore storage.
  * Plaintext tokens are NEVER stored in Firestore and NEVER logged.

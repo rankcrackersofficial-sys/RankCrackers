@@ -23,6 +23,11 @@ class DigiBookRepository {
   static Stream<List<DigiBookUnit>> streamUnits(String realmId) {
     return _firestore.collection(unitCollection)
       .where('realm_id', isEqualTo: realmId)
+      .where('canonicalMissionId', isEqualTo: realmId)
+      .where('status', isEqualTo: 'published')
+      .where('studentVisibilityAuthorized', isEqualTo: true)
+      .where('sourceApproved', isEqualTo: true)
+      .where('verificationStatus', isEqualTo: 'VERIFIED')
       .snapshots()
       .map((snap) => snap.docs.map((doc) => DigiBookUnit.fromMap(doc.data())).toList());
   }

@@ -8,7 +8,8 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 
 const { manageUserAccess, manageAdminScopes } = require("./callable/manage_access");
-const { issueAdminInvite, acceptAdminInvite } = require("./callable/admin_invitations");
+const { issueAdminInvite, acceptAdminInvite, validateAdminInvite } = require("./callable/admin_invitations");
+const { bootstrapFounderSession } = require("./callable/bootstrap_founder_session");
 const { transitionAdminTask, createAdminTask } = require("./callable/admin_tasks");
 const { toggleAiSystem } = require("./callable/toggle_ai_system");
 const { getSystemHealth } = require("./callable/system_health");
@@ -19,12 +20,13 @@ const { forceMissionPipeline } = require("./callable/force_mission_pipeline");
 const { getSecureAssetUrl } = require("./callable/secure_download");
 const { getFounderOfficialUpdatesProjectionV1 } = require("./callable/get_founder_official_updates_projection_v1");
 const { scanAuthorityNow } = require("./callable/scan_authority_now");
-const { setSovereignClaims } = require("./index_legacy"); // Keeping legacy for bootstrapping if needed
 
 exports.manageUserAccess = manageUserAccess;
 exports.manageAdminScopes = manageAdminScopes;
 exports.issueAdminInvite = issueAdminInvite;
 exports.acceptAdminInvite = acceptAdminInvite;
+exports.validateAdminInvite = validateAdminInvite;
+exports.bootstrapFounderSession = bootstrapFounderSession;
 exports.transitionAdminTask = transitionAdminTask;
 exports.createAdminTask = createAdminTask;
 exports.toggleAiSystem = toggleAiSystem;
@@ -36,7 +38,6 @@ exports.forceMissionPipeline = forceMissionPipeline;
 exports.getSecureAssetUrl = getSecureAssetUrl;
 exports.getFounderOfficialUpdatesProjectionV1 = getFounderOfficialUpdatesProjectionV1;
 exports.scanAuthorityNow = scanAuthorityNow;
-exports.setSovereignClaims = setSovereignClaims;
 
 // 🔱 WORKER EXPORTS (Background Intelligence)
 const { sentinelBackgroundWorker } = require("./workers/sentinel_worker");
@@ -53,8 +54,11 @@ const { knowledgeManifestationWorker } = require("./workers/manifestation_worker
 const { queueWorker } = require("./lib/workers/queueWorker");
 // 🔱 UNIFIED MISSION ENRICHMENT WORKER (W1 live integration — B2/B3 contracts inside)
 const { missionEnrichmentWorker } = require("./workers/mission_enrichment_worker");
+const { pilotPublicationWorker } = require("./workers/pilot_publication_worker");
 const { authorityWatchWorker } = require("./workers/authority_watch_worker");
 const { automationPipelineWorker } = require("./workers/automation_pipeline_worker");
+const { pilotMissionAutomationWorker } = require("./workers/pilot_mission_automation_worker");
+const { missionAcademicMaterializerWorker } = require("./workers/mission_academic_materializer_worker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -69,8 +73,11 @@ exports.certificateRenderWorker = certificateRenderWorker;
 exports.knowledgeManifestationWorker = knowledgeManifestationWorker;
 exports.queueWorker = queueWorker;
 exports.missionEnrichmentWorker = missionEnrichmentWorker;
+exports.pilotPublicationWorker = pilotPublicationWorker;
 exports.authorityWatchWorker = authorityWatchWorker;
 exports.automationPipelineWorker = automationPipelineWorker;
+exports.pilotMissionAutomationWorker = pilotMissionAutomationWorker;
+exports.missionAcademicMaterializerWorker = missionAcademicMaterializerWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");

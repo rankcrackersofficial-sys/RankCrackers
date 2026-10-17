@@ -102,6 +102,7 @@ class DigiBookCanonicalBridgeService {
   DigiBookCanonicalBridgeService._();
 
   List<DigiBookAuthorityEntry> _allEntries = [];
+  List<DigiBookAuthorityEntry> _sourceEntries = [];
   final Map<String, List<DigiBookAuthorityEntry>> _canonicalMap = {};
   final Map<String, DigiBookAuthorityEntry> _guMap = {};
   bool _isInitialized = false;
@@ -136,9 +137,11 @@ class DigiBookCanonicalBridgeService {
     final Map<String, dynamic> data = jsonDecode(jsonString);
     final List<dynamic> lessonsList = data['lessons'] as List<dynamic>? ?? [];
 
-    _allEntries = lessonsList
+    _sourceEntries = lessonsList
         .map((e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
         .toList();
+
+    _allEntries = List.of(_sourceEntries);
 
     _canonicalMap.clear();
     _guMap.clear();
@@ -153,13 +156,35 @@ class DigiBookCanonicalBridgeService {
         'DIGIBOOK BRIDGE INITIALIZED: ${_allEntries.length} GUs mapped across ${_canonicalMap.length} canonical node IDs.');
   }
 
+  /// Restrict the authority bridge to the selected mission. A manifest for
+  /// another exam must never be presented as content for the active mission.
+  /// SSC currently has no bundled bridge entries, so it correctly resolves to
+  /// zero lessons until verified SSC lesson artifacts are published.
+  void activateMission(String missionId) {
+    final id = missionId.trim().toLowerCase();
+    final isJee = id == 'jee_main_2026' || id == 'jee_main_2027';
+    final filtered = isJee
+        ? _sourceEntries
+            .where((e) => e.canonicalNodeId.toLowerCase().startsWith('jee_main_'))
+            .toList()
+        : <DigiBookAuthorityEntry>[];
+    _allEntries = filtered;
+    _canonicalMap.clear();
+    _guMap.clear();
+    for (final entry in _allEntries) {
+      _guMap[entry.guId] = entry;
+      _canonicalMap.putIfAbsent(entry.canonicalNodeId, () => []).add(entry);
+    }
+  }
+
   /// Initialize synchronously if raw json map is supplied (for unit tests / mock setup)
   void initializeFromMap(Map<String, dynamic> data) {
     final List<dynamic> lessonsList = data['lessons'] as List<dynamic>? ?? [];
 
-    _allEntries = lessonsList
+    _sourceEntries = lessonsList
         .map((e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
         .toList();
+    _allEntries = List.of(_sourceEntries);
 
     _canonicalMap.clear();
     _guMap.clear();

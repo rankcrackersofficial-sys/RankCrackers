@@ -95,39 +95,99 @@ async function downloadBytes(path: string): Promise<Buffer> {
 }
 
 /**
- * Helper to extract pages natively from PDF bytes using pdf-parse.
+ * Helper to extract pages natively from PDF bytes using the Node-safe pdfjs
+ * legacy build. pdf-parse v2 initializes an optional canvas binding which is
+ * not portable to the Cloud Functions build image; text extraction does not
+ * need that rendering dependency.
  */
 async function extractPagesNatively(bytes: Buffer, start: number, end: number) {
-  // Lazy-load the optional PDF renderer. Import-time canvas initialization can
-  // prevent unrelated Cloud Functions from booting in the server runtime.
-  const { PDFParse } = require('pdf-parse');
-  const parser = new PDFParse({ data: bytes });
+  // pdfjs initializes a rendering-only DOMMatrix constant during module load.
+  // Cloud Functions has no browser canvas, so provide the small 2D subset
+  // needed by pdfjs without pulling in a native canvas binding.
+  if (!(globalThis as any).DOMMatrix) {
+    class TextExtractionDOMMatrix {
+      a = 1; b = 0; c = 0; d = 1; e = 0; f = 0;
+      m11 = 1; m12 = 0; m21 = 0; m22 = 1; m41 = 0; m42 = 0;
+      constructor(value?: any) {
+        if (Array.isArray(value) && value.length >= 6) {
+          [this.a, this.b, this.c, this.d, this.e, this.f] = value;
+        } else if (value && typeof value === 'object') {
+          for (const key of ['a', 'b', 'c', 'd', 'e', 'f']) {
+            if (Number.isFinite(value[key])) (this as any)[key] = value[key];
+          }
+        }
+        this.syncAliases();
+      }
+      private syncAliases() {
+        this.m11 = this.a; this.m12 = this.b; this.m21 = this.c;
+        this.m22 = this.d; this.m41 = this.e; this.m42 = this.f;
+        return this;
+      }
+      multiplySelf(other: any) {
+        const m = new TextExtractionDOMMatrix(other);
+        const a = this.a * m.a + this.c * m.b;
+        const b = this.b * m.a + this.d * m.b;
+        const c = this.a * m.c + this.c * m.d;
+        const d = this.b * m.c + this.d * m.d;
+        const e = this.a * m.e + this.c * m.f + this.e;
+        const f = this.b * m.e + this.d * m.f + this.f;
+        this.a = a; this.b = b; this.c = c; this.d = d; this.e = e; this.f = f;
+        return this.syncAliases();
+      }
+      preMultiplySelf(other: any) {
+        const m = new TextExtractionDOMMatrix(other);
+        return m.multiplySelf(this).copyTo(this);
+      }
+      translate(tx = 0, ty = 0) { return this.multiplySelf([1, 0, 0, 1, tx, ty]); }
+      scale(sx = 1, sy = sx) { return this.multiplySelf([sx, 0, 0, sy, 0, 0]); }
+      invertSelf() {
+        const det = this.a * this.d - this.b * this.c;
+        if (!det) return this;
+        const {a, b, c, d, e, f} = this;
+        this.a = d / det; this.b = -b / det; this.c = -c / det; this.d = a / det;
+        this.e = (c * f - d * e) / det; this.f = (b * e - a * f) / det;
+        return this.syncAliases();
+      }
+      copyTo(target: any) {
+        Object.assign(target, {a: this.a, b: this.b, c: this.c, d: this.d, e: this.e, f: this.f});
+        return target.syncAliases();
+      }
+    }
+    (globalThis as any).DOMMatrix = TextExtractionDOMMatrix;
+  }
+  const loadModule = new Function('specifier', 'return import(specifier)') as
+    (specifier: string) => Promise<any>;
+  const pdfjs: any = await loadModule('pdfjs-dist/legacy/build/pdf.mjs');
+  const document = await pdfjs.getDocument({
+    data: new Uint8Array(bytes),
+    disableWorker: true,
+    disableFontFace: true,
+    useSystemFonts: false,
+    isEvalSupported: false,
+  }).promise;
   try {
     const pages = [];
     for (let p = start; p <= end; p++) pages.push(p);
-
-    const result = await parser.getText({ partial: pages });
-    const totalPagesInDoc = result.total;
+    const totalPagesInDoc = Number(document.numPages);
 
     if (end > totalPagesInDoc) {
       throw new Error(`TASK_PAGE_END_OUT_OF_RANGE: ${end} > ${totalPagesInDoc}`);
     }
 
     const pageMap: {[key: number]: string} = {};
-    if (result.pages && result.pages.length > 0) {
-      result.pages.forEach((pData: any) => {
-        const pageNum = Number(pData.num);
-        if (Number.isFinite(pageNum) && pageNum >= start && pageNum <= end) {
-           pageMap[pageNum] = String(pData.text || '').trim();
-        }
-      });
-    } else if (pages.length === 1 && result.text) {
-      pageMap[start] = String(result.text).trim();
+    for (const pageNum of pages) {
+      const page = await document.getPage(pageNum);
+      const content = await page.getTextContent();
+      pageMap[pageNum] = content.items
+        .map((item: any) => String(item?.str || ''))
+        .join(' ')
+        .trim();
+      page.cleanup();
     }
 
     return { result: pageMap, totalPagesInDoc };
   } finally {
-    await parser.destroy();
+    await document.destroy();
   }
 }
 
@@ -222,25 +282,32 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     const { result: nativeResults, totalPagesInDoc } = await extractPagesNatively(bytes, pageStart, pageEnd);
 
     const pageData: {[key: number]: {text: string, method: string, ocrAudit?: any}} = {};
-    for (let p = pageStart; p <= pageEnd; p++) {
-      const nativeText = nativeResults[p] || '';
-      const routing = classifyRouting(p, nativeText, totalPagesInDoc);
+    // OCR is the slow path. Run a small bounded number concurrently so a
+    // scanned annexure cannot leave a 20-page task lease occupied for hours.
+    const ocrConcurrency = 4;
+    for (let batchStart = pageStart; batchStart <= pageEnd; batchStart += ocrConcurrency) {
+      const batchEnd = Math.min(pageEnd, batchStart + ocrConcurrency - 1);
+      await Promise.all(Array.from({length: batchEnd - batchStart + 1}, async (_, offset) => {
+        const p = batchStart + offset;
+        const nativeText = nativeResults[p] || '';
+        const routing = classifyRouting(p, nativeText, totalPagesInDoc);
 
-      if (routing === 'NATIVE') {
-        pageData[p] = { text: nativeText, method: 'native_pdf_text' };
-      } else if (routing === 'SCANNED') {
-        console.log(`   - Page ${p}: SCANNED detected. Calling Vision OCR...`);
-        const ocrResult = await extractScannedPage({
-          missionId: data.mission_id,
-          documentId: data.document_id,
-          sourceSha256: actualSha,
-          pdfBytes: bytes,
-          pageNumber: p
-        });
-        pageData[p] = { text: ocrResult.text, method: 'VISION_OCR_PAGEWISE', ocrAudit: ocrResult };
-      } else {
-        throw new Error(`RC_SYLLABUS_P1_BLOCKED_ROUTING_${routing}: Page ${p}`);
-      }
+        if (routing === 'NATIVE') {
+          pageData[p] = { text: nativeText, method: 'native_pdf_text' };
+        } else if (routing === 'SCANNED') {
+          console.log(`   - Page ${p}: SCANNED detected. Calling Vision OCR...`);
+          const ocrResult = await extractScannedPage({
+            missionId: data.mission_id,
+            documentId: data.document_id,
+            sourceSha256: actualSha,
+            pdfBytes: bytes,
+            pageNumber: p
+          });
+          pageData[p] = { text: ocrResult.text, method: 'VISION_OCR_PAGEWISE', ocrAudit: ocrResult };
+        } else {
+          throw new Error(`RC_SYLLABUS_P1_BLOCKED_ROUTING_${routing}: Page ${p}`);
+        }
+      }));
     }
 
     // 6. 🛡️ Empty/Simulated Placeholder Check (P04 & P05)
@@ -386,6 +453,12 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
     // 9. Update task to completed
     batch.update(taskRef, {
       status: 'completed',
+      // Clear retry-era failure markers so the founder panel and downstream
+      // materializers cannot mistake a successful rerun for a failed task.
+      failure_reason: admin.firestore.FieldValue.delete(),
+      error_message: admin.firestore.FieldValue.delete(),
+      error: admin.firestore.FieldValue.delete(),
+      failedAt: admin.firestore.FieldValue.delete(),
       completed_at: admin.firestore.FieldValue.serverTimestamp(),
       updated_at: admin.firestore.FieldValue.serverTimestamp(),
       extraction_method: 'hybrid_routing_v1',
@@ -463,9 +536,19 @@ async function handlePagewiseTextExtraction(taskId: string, taskRef: admin.fires
 
 export const queueWorker = functions.firestore
   .document('ai_queue/{taskId}')
-  .onCreate(async (snap, context) => {
+  .onWrite(async (change, context) => {
+    const snap = change.after;
+    if (!snap.exists) return;
     const data = snap.data();
     if (!data) return;
+
+    // Requeued governed page batches are intentionally retriggerable. Legacy
+    // queue work remains quarantined below, while a transition back to queued
+    // resumes a failed official batch without manual verification.
+    if (change.before.exists) {
+      const before = change.before.data() || {};
+      if (before.status === data.status || data.status !== 'queued') return;
+    }
 
     const taskId = context.params.taskId;
     const taskRef = snap.ref;

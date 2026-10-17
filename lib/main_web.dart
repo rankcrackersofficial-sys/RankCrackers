@@ -20,11 +20,22 @@ import 'web/shared/unified_command_console.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.web);
+  final inviteToken = Uri.base.queryParameters['token']?.trim();
+  if (Uri.base.path == '/admin-invite' &&
+      inviteToken != null &&
+      inviteToken.isNotEmpty) {
+    html.window.sessionStorage['pendingAdminInviteToken'] = inviteToken;
+  }
   // Firebase requires the pending redirect credential to be consumed before
   // the auth gate is built. Doing this only inside LoginScreen can race with
   // authStateChanges on mobile Chrome and return the user to the login page.
   try {
-    await FirebaseAuth.instance.getRedirectResult();
+    // A stale/aborted browser redirect must never hold the whole web app on
+    // the native splash screen. Auth state is still observed by AuthGate, so
+    // timing out here is safe and lets the UI report the real access state.
+    await FirebaseAuth.instance
+        .getRedirectResult()
+        .timeout(const Duration(seconds: 8));
   } on FirebaseAuthException catch (e) {
     html.window.sessionStorage['web_google_redirect_error'] = e.code;
     debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: ${e.code}');
@@ -32,7 +43,14 @@ Future<void> main() async {
     html.window.sessionStorage['web_google_redirect_error'] = 'unknown';
     debugPrint('WEB_GOOGLE_REDIRECT_RESULT_FAILED: $e');
   }
-  await SessionManager.initialize();
+  try {
+    await SessionManager.initialize().timeout(const Duration(seconds: 5));
+  } catch (e) {
+    // Preferences are a cache only for the Founder web shell. A storage
+    // failure must not prevent FirebaseAuth from rendering the login/access
+    // screen.
+    debugPrint('WEB_SESSION_INIT_SKIPPED: $e');
+  }
   runApp(const ProviderScope(child: RankCrackersWebApp()));
 }
 
@@ -57,9 +75,7 @@ class RankCrackersWebApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      home: Uri.base.path == '/admin-invite'
-          ? AdminInviteScreen(token: Uri.base.queryParameters['token'] ?? '')
-          : const AuthGate(),
+      home: const AuthGate(),
     );
   }
 }
@@ -105,14 +121,17 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _googleBusy = false;
   String? _error;
   bool _signupMode = false;
+  bool _inviteValidated = false;
   String? _invitedEmail;
 
   @override
   void initState() {
     super.initState();
-    final redirectError = html.window.sessionStorage.remove('web_google_redirect_error');
+    final redirectError =
+        html.window.sessionStorage.remove('web_google_redirect_error');
     if (redirectError != null && redirectError.isNotEmpty) {
-      _error = 'Google sign-in could not be completed ($redirectError). Please try again.';
+      _error =
+          'Google sign-in could not be completed ($redirectError). Please try again.';
     }
     _checkInviteStatus();
   }
@@ -120,25 +139,36 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _checkInviteStatus() async {
     final pendingToken = html.window.sessionStorage['pendingAdminInviteToken'];
     if (pendingToken != null && pendingToken.isNotEmpty) {
-      setState(() => _signupMode = true); // Default to signup for invites
       try {
         final callable = FirebaseFunctions.instance.httpsCallable(
-          'manageUserAccess',
+          'validateAdminInvite',
         );
         final result = await callable.call({
-          'action': 'validateAdminInvite',
           'inviteToken': pendingToken,
         });
         final data = Map<String, dynamic>.from(result.data as Map);
         if (mounted) {
           setState(() {
             _invitedEmail = data['email']?.toString().trim().toLowerCase();
-            if (_invitedEmail != null) {
+            _inviteValidated = data['success'] == true &&
+                _invitedEmail != null &&
+                _invitedEmail!.isNotEmpty;
+            _signupMode = _inviteValidated;
+            if (_inviteValidated) {
               _email.text = _invitedEmail!;
+            } else {
+              _error = 'This admin invitation is not valid or has expired.';
             }
           });
         }
       } catch (e) {
+        if (mounted) {
+          setState(() {
+            _inviteValidated = false;
+            _signupMode = false;
+            _error = 'This admin invitation is not valid or has expired.';
+          });
+        }
         debugPrint('Invite validation failed in LoginScreen: $e');
       }
     }
@@ -163,6 +193,12 @@ class _LoginScreenState extends State<LoginScreen> {
       return;
     }
 
+    if (_signupMode && !_inviteValidated) {
+      setState(
+          () => _error = 'Account creation requires a valid admin invitation.');
+      return;
+    }
+
     setState(() {
       _busy = true;
       _error = null;
@@ -174,33 +210,48 @@ class _LoginScreenState extends State<LoginScreen> {
           email: email,
           password: password,
         );
+        await FirebaseAuth.instance.currentUser?.sendEmailVerification();
+        await FirebaseAuth.instance.signOut();
+        if (mounted) {
+          setState(() => _error =
+              'Account created. Verify your email, then sign in to continue.');
+        }
       } else {
         await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: email,
           password: password,
         );
+        final signedInUser = FirebaseAuth.instance.currentUser;
+        final signedInClaims = signedInUser == null
+            ? const <String, dynamic>{}
+            : (await signedInUser.getIdTokenResult(true)).claims ??
+                const <String, dynamic>{};
+        final isPrivilegedAccount = signedInClaims['founder'] == true ||
+            signedInClaims['admin'] == true;
+        if (signedInUser != null &&
+            !signedInUser.emailVerified &&
+            !isPrivilegedAccount) {
+          await FirebaseAuth.instance.signOut();
+          if (mounted) {
+            setState(
+                () => _error = 'Verify your email address before signing in.');
+          }
+        }
       }
     } on FirebaseAuthException catch (e) {
-      if ((e.code == 'user-not-found' || e.code == 'invalid-credential') &&
-          !_signupMode) {
-        setState(() {
-          _error =
-              'No password account found for this email. Switch to Create mode?';
-          _signupMode = true;
-        });
-      } else if (e.code == 'email-already-in-use' && _signupMode) {
-        setState(() {
-          _error = 'Account already exists. Switch to Login mode?';
-          _signupMode = false;
-        });
-      } else if (e.code == 'invalid-credential' && _signupMode) {
-        setState(
-          () => _error =
-              'Invalid credentials. If this email is linked to Google, use Continue with Google.',
-        );
-      } else {
-        setState(() => _error = e.message ?? e.toString());
-      }
+      final message = switch (e.code) {
+        'invalid-credential' ||
+        'user-not-found' ||
+        'wrong-password' =>
+          'Email or password is incorrect.',
+        'too-many-requests' =>
+          'Too many attempts. Please wait and try again later.',
+        'email-already-in-use' =>
+          'An account already exists for this email. Use Login instead.',
+        'weak-password' => 'Choose a stronger password.',
+        _ => 'Unable to complete sign-in. Please try again.',
+      };
+      setState(() => _error = message);
     } catch (e) {
       setState(() => _error = e.toString());
     } finally {
@@ -217,16 +268,31 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       final provider = GoogleAuthProvider();
       provider.setCustomParameters({'prompt': 'select_account'});
-      // Keep mobile Chrome on one deterministic OAuth transaction. A popup
-      // timeout followed by redirect can leave two transactions alive and
-      // return to the login page after consent.
-      await FirebaseAuth.instance.signInWithRedirect(provider);
+      // Complete the OAuth transaction in the current browser session. This
+      // avoids the redirect callback race that was returning to /login with
+      // FirebaseAuth.currentUser still null on Chrome.
+      try {
+        final result = await FirebaseAuth.instance.signInWithPopup(provider);
+        if (result.user == null) {
+          await FirebaseAuth.instance.signInWithRedirect(provider);
+        }
+      } on FirebaseAuthException catch (e) {
+        const popupRecoveryCodes = {
+          'popup-blocked',
+          'popup-closed-by-user',
+          'cancelled-popup-request',
+        };
+        if (!popupRecoveryCodes.contains(e.code)) rethrow;
+        await FirebaseAuth.instance.signInWithRedirect(provider);
+      }
     } on FirebaseAuthException catch (e) {
       if (mounted) {
-        setState(() => _error = '${e.code}: ${e.message ?? 'Google sign-in failed.'}');
+        setState(() =>
+            _error = '${e.code}: ${e.message ?? 'Google sign-in failed.'}');
       }
     } catch (e) {
-      if (mounted) setState(() => _error = 'Google sign-in failed. Please try again.');
+      if (mounted)
+        setState(() => _error = 'Google sign-in failed. Please try again.');
       debugPrint('WEB_GOOGLE_SIGN_IN_FAILED: $e');
     } finally {
       if (mounted) setState(() => _googleBusy = false);
@@ -357,15 +423,16 @@ class _LoginScreenState extends State<LoginScreen> {
                             : 'Email / Password Login'),
                   ),
                 ),
-                TextButton(
-                  onPressed: () => setState(() => _signupMode = !_signupMode),
-                  child: Text(
-                    _signupMode
-                        ? 'Already have an account? Login'
-                        : 'Need an account? Create one',
-                    style: const TextStyle(fontSize: 12, color: rcGold),
+                if (_inviteValidated)
+                  TextButton(
+                    onPressed: () => setState(() => _signupMode = !_signupMode),
+                    child: Text(
+                      _signupMode
+                          ? 'Already have an account? Login'
+                          : 'Create account using this admin invite',
+                      style: const TextStyle(fontSize: 12, color: rcGold),
+                    ),
                   ),
-                ),
                 const SizedBox(height: 4),
                 OutlinedButton.icon(
                   onPressed: (_busy || _googleBusy) ? null : _loginWithGoogle,
@@ -375,7 +442,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 18,
                           child: CircularProgressIndicator(strokeWidth: 2),
                         )
-                      : Image.asset('assets/images/google.png', width: 18),
+                      : Image.asset('assets/images/Google.png', width: 18),
                   label: Text(
                     _googleBusy ? 'Connecting...' : 'Continue with Google',
                   ),
@@ -401,6 +468,7 @@ class _WebShellState extends State<WebShell> {
   bool _isFounder = false;
   bool _isAdmin = false;
   bool _claimsLoaded = false;
+  String? _claimsError;
 
   @override
   void initState() {
@@ -409,36 +477,64 @@ class _WebShellState extends State<WebShell> {
   }
 
   Future<void> _loadClaims() async {
-    final token = await widget.user.getIdTokenResult(true);
-    final claims = token.claims ?? {};
-    var claimFounder = claims['founder'] == true;
-    var claimAdmin = claims['admin'] == true;
-
-    // A freshly granted Founder can briefly have a stale browser token after
-    // Google sign-in. Web must never fall through to the mobile Student panel
-    // while the governed Firestore role already identifies this account as a
-    // Founder/Admin. Claims remain authoritative when present; this is only a
-    // controlled bootstrap fallback for the signed-in user's own record.
-    if (!claimFounder && !claimAdmin) {
-      final userSnap = await FirebaseFirestore.instance
-          .collection('users')
-          .doc(widget.user.uid)
-          .get();
-      final role = (userSnap.data()?['role'] ?? '').toString().toUpperCase();
-      claimFounder = role == 'FOUNDER';
-      claimAdmin = role == 'ADMIN' || role == 'ADMINISTRATOR';
+    if (mounted) {
+      setState(() {
+        _claimsLoaded = false;
+        _claimsError = null;
+      });
     }
+    try {
+      // The canonical Founder is repaired server-side before the ID token is
+      // read. The callable is UID-bound and cannot elevate arbitrary emails.
+      try {
+        await FirebaseFunctions.instance
+            .httpsCallable('bootstrapFounderSession')
+            .call();
+      } on FirebaseFunctionsException catch (e) {
+        // Keep compatibility with a live backend that has not received the
+        // bootstrap function yet; claims/profile validation remains required.
+        debugPrint('FOUNDER_BOOTSTRAP_UNAVAILABLE: ${e.code}');
+      }
+      final token = await widget.user.getIdTokenResult(true);
+      final claims = token.claims ?? {};
+      var claimFounder = claims['founder'] == true;
+      var claimAdmin = claims['admin'] == true;
 
-    if (!mounted) return;
-    setState(() {
-      _isFounder = claimFounder;
-      _isAdmin = claimAdmin;
-      _claimsLoaded = true;
-    });
+      // A freshly granted Founder can briefly have a stale browser token after
+      // Google sign-in. Web must never fall through to the mobile Student panel
+      // while the governed Firestore role already identifies this account as a
+      // Founder/Admin. Claims remain authoritative when present; this is only a
+      // controlled bootstrap fallback for the signed-in user's own record.
+      if (!claimFounder && !claimAdmin) {
+        final userSnap = await FirebaseFirestore.instance
+            .collection('users')
+            .doc(widget.user.uid)
+            .get();
+        final role = (userSnap.data()?['role'] ?? '').toString().toUpperCase();
+        claimFounder = role == 'FOUNDER';
+        claimAdmin = role == 'ADMIN' || role == 'ADMINISTRATOR';
+      }
+
+      if (!mounted) return;
+      setState(() {
+        _isFounder = claimFounder;
+        _isAdmin = claimAdmin;
+        _claimsLoaded = true;
+      });
+    } catch (e) {
+      debugPrint('WEB_ACCESS_BOOTSTRAP_FAILED: $e');
+      if (!mounted) return;
+      setState(() {
+        _claimsError =
+            'Could not verify your access. Please retry or sign out.';
+        _claimsLoaded = true;
+      });
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    if (_claimsError != null) return _buildAccessError(_claimsError!);
     if (!_claimsLoaded) return const RcCenteredLoader();
 
     // Student/User panel is mobile-only. Web is reserved for Founder/Admin console.
@@ -455,12 +551,28 @@ class _WebShellState extends State<WebShell> {
           .doc(widget.user.uid)
           .snapshots(),
       builder: (context, snapshot) {
-        if (!snapshot.hasData) return const Scaffold(body: RcCenteredLoader());
+        if (snapshot.hasError) {
+          return _buildAccessError(
+            'Could not load your account profile. Please retry or sign out.',
+          );
+        }
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(body: RcCenteredLoader());
+        }
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return _buildAccessError(
+            'Your account profile is unavailable. Contact the Founder.',
+          );
+        }
 
         final userDoc = snapshot.data!.data() ?? {};
         final status = userDoc['status'] ?? 'ACTIVE';
 
-        if (status != 'ACTIVE') {
+        // Founder access is already server-authorized by the verified custom
+        // claim. A stale Firestore status must not strand the canonical
+        // Founder on an inactive-account screen; ordinary Admin accounts
+        // still require an ACTIVE profile.
+        if (status != 'ACTIVE' && !_isFounder) {
           return Scaffold(
             body: Center(
               child: Column(
@@ -509,6 +621,30 @@ class _WebShellState extends State<WebShell> {
           ),
         );
       },
+    );
+  }
+
+  Widget _buildAccessError(String message) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.error_outline, color: rcRed, size: 48),
+            const SizedBox(height: 16),
+            Text(message,
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: rcText)),
+            const SizedBox(height: 20),
+            FilledButton(onPressed: _loadClaims, child: const Text('RETRY')),
+            const SizedBox(height: 8),
+            OutlinedButton(
+              onPressed: () => FirebaseAuth.instance.signOut(),
+              child: const Text('SIGN OUT'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 

@@ -80,6 +80,21 @@ service cloud.firestore {
              (!('description' in data) || data.description != "Materialized via RELIABILITY FF01 progressive publication.");
     }
 
+    // Queryable student publication gate. Every predicate here is represented
+    // by an equality constraint in the student client queries, so Firestore
+    // can prove the list query is safe without inspecting non-queryable
+    // provenance-string length checks.
+    function isPublishedMissionContent(data) {
+      return request.auth != null &&
+             data != null &&
+             data.status == 'published' &&
+             data.studentVisibilityAuthorized == true &&
+             data.sourceApproved == true &&
+             data.verificationStatus == 'VERIFIED' &&
+             data.canonicalMissionId is string &&
+             isStudentVisibleMission(data.canonicalMissionId);
+    }
+
     
     // 🔱 CANONICAL IDENTITY & PHONE CLAIM HELPERS (18P-A2)
     function hasVerifiedCanonicalPhoneClaim() {
@@ -190,7 +205,20 @@ service cloud.firestore {
     }
 
     match /mission_realms/{realmId} {
-      allow read: if isFounder() || isStudentVisibleMission(realmId);
+      // Collection queries must be provable from the document being queried.
+      // Do not call get() on the same parent document here; that causes
+      // authenticated student Mission Realm queries to fail closed with
+      // PERMISSION_DENIED even when the visibility fields are correct.
+      allow read: if isFounder() || (
+        request.auth != null &&
+        resource.data.archived != true &&
+        (
+          resource.data.userPanelVisible == true ||
+          resource.data.cardVisible == true ||
+          resource.data.get('visibilityGate', {}).get('studentVisible', false) == true ||
+          resource.data.get('visibilityGate', {}).get('userPanelVisible', false) == true
+        )
+      );
       allow write: if isFounder();
 
       match /participants/{userId} {
@@ -200,6 +228,26 @@ service cloud.firestore {
 
       match /structured_nodes/{nodeId} {
         allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if isFounder();
+      }
+
+      match /diagnostic_syllabus/{entryId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if false;
+      }
+
+      match /crucible_days/{dayId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if false;
+      }
+
+      match /crucible_tests/{testId} {
+        allow read: if isFounder() || isStudentVisibleMission(realmId);
+        allow write: if false;
+      }
+
+      match /question_bank/{questionId} {
+        allow read: if isFounder();
         allow write: if isFounder();
       }
 
@@ -298,7 +346,7 @@ service cloud.firestore {
 
     // 🔱 CONTENT MATRIX RULES
     match /micro_nodes/{nodeId} {
-      allow read: if isFounder() || isGovernedStudentReadable(resource.data);
+      allow read: if isFounder() || isPublishedMissionContent(resource.data);
       allow write: if isFounder();
     }
 
@@ -309,6 +357,11 @@ service cloud.firestore {
 
     match /digibook_pointers/{guId} {
       allow read: if isFounder() || (request.auth != null && resource.data.status == 'published' && resource.data.studentVisibilityAuthorized == true);
+      allow write: if isFounder();
+    }
+
+    match /digibook_units/{unitId} {
+      allow read: if isFounder() || isPublishedMissionContent(resource.data);
       allow write: if isFounder();
     }
 

@@ -58,3 +58,18 @@ test('real finalizer requires official URL bytes before writing any object', asy
   }), /OFFICIAL_ORIGIN_BYTES_MISMATCH/);
   assert.equal(mismatch.writes, 0);
 });
+
+test('backend acquires official PDF from URL when no Founder staging path is supplied', async () => {
+  const pdf = await PDFDocument.create();
+  pdf.addPage([330, 450]);
+  const bytes = Buffer.from(await pdf.save());
+  const storage = storageFor(bytes);
+  const finalized = await finalizeOfficialSource({
+    ...base, storage: storage.storage, sourceType: 'syllabus',
+    sourceUrl: 'https://ssc.gov.in/official-syllabus.pdf',
+    officialBytesFetcher: async () => bytes,
+  });
+  assert.equal(finalized.acquisition, 'BACKEND_OFFICIAL_URL_FETCH');
+  assert.equal(finalized.originProofState, 'OFFICIAL_URL_BYTES_MATCHED');
+  assert.equal(storage.writes, 1);
+});

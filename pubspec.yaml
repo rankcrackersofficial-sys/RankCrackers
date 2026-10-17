@@ -2,7 +2,7 @@ name: rank_crackers
 description: "The Self Study Coach"
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.0.1+2
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -120,7 +120,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/logo.png
-    - assets/images/google.png
+    - assets/images/Google.png
     - assets/data/preview/jee_main_2027/
     - assets/data/
     - assets/data/digibook_runtime/

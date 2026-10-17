@@ -88,11 +88,18 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     final hasHeaderEvidence =
         nodes.isNotEmpty && coverage != null && coverage.totalNodes > 0;
 
-    final priorityNode = BattleEngine.getPriorityNode(
+    final priorityCandidate = BattleEngine.getPriorityNode(
       nodes,
       knowledge.nodeStates,
       riskFactor: risk?.overallRisk ?? 0.0,
     );
+    final hasStudentEvidence = knowledge.nodeStates.values.any((state) =>
+        state.evidenceScore > 0 ||
+        state.totalStudyMinutes > 0 ||
+        state.battlesWon > 0 ||
+        state.battlesLost > 0 ||
+        state.completed);
+    final priorityNode = hasStudentEvidence ? priorityCandidate : null;
 
     return Scaffold(
       backgroundColor: scheme.surface,
@@ -276,8 +283,6 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 ),
               ),
 
-
-
               SliverToBoxAdapter(
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(
@@ -342,39 +347,58 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 fontWeight: FontWeight.bold,
                 color: scheme.onSurfaceVariant)),
         const SizedBox(height: 8),
-        DarkCard(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-          child: Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                        priorityNode?.title ??
-                            'Your first priority unlocks after the first assessment',
-                        style: AppTypography.cardTitle.copyWith(
-                            fontSize: 14,
-                            color: Theme.of(context).colorScheme.onSurface,
-                            fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 4),
-                    Text(
-                        priorityNode == null
-                            ? 'No weakness has been inferred yet. Start learning to build your map.'
-                            : state == null
-                                ? 'Mastery evidence pending. Start learning to build a real priority signal.'
-                                : 'Target: ${(state.mastery * 100).toInt()}% Mastery',
-                        style: AppTypography.body.copyWith(
-                            fontSize: 12.5,
-                            color: Theme.of(context).colorScheme.onSurfaceVariant,
-                            height: 1.35)),
-                  ],
-                ),
+        Material(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(12),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: priorityNode == null
+                ? null
+                : () => context.push(AppRoutes.digibook, extra: priorityNode),
+            child: DarkCard(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            priorityNode?.title ??
+                                'Your first priority unlocks after the first assessment',
+                            style: AppTypography.cardTitle.copyWith(
+                                fontSize: 14,
+                                color: Theme.of(context).colorScheme.onSurface,
+                                fontWeight: FontWeight.bold)),
+                        const SizedBox(height: 4),
+                        Text(
+                            priorityNode == null
+                                ? 'No weakness has been inferred yet. Start learning to build your map.'
+                                : state == null
+                                    ? 'Mastery evidence pending. Start learning to build a real priority signal.'
+                                    : 'Target: ${(state.mastery * 100).toInt()}% Mastery',
+                            style: AppTypography.body.copyWith(
+                                fontSize: 12.5,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurfaceVariant,
+                                height: 1.35)),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  Icon(
+                    priorityNode == null
+                        ? Icons.lock_outline_rounded
+                        : Icons.arrow_forward_ios_rounded,
+                    color: priorityNode == null
+                        ? scheme.onSurfaceVariant
+                        : AppColors.gold,
+                    size: 14,
+                  ),
+                ],
               ),
-              const SizedBox(width: 8),
-              const Icon(Icons.arrow_forward_ios_rounded,
-                  color: AppColors.gold, size: 14),
-            ],
+            ),
           ),
         ),
       ],
@@ -389,8 +413,17 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
       List<MicroTopicNode> nodes,
       KnowledgeEngine knowledge) {
     final hasMissionNodes = nodes.isNotEmpty;
-    final hasCoverageEvidence =
-        hasMissionNodes && coverage != null && coverage.totalNodes > 0;
+    final hasCoverageEvidence = hasMissionNodes &&
+        coverage != null &&
+        coverage.totalNodes > 0 &&
+        (coverage.completedNodes > 0 ||
+            coverage.masteredNodes > 0 ||
+            coverage.weakNodes > 0 ||
+            knowledge.nodeStates.values.any((state) =>
+                state.evidenceScore > 0 ||
+                state.totalStudyMinutes > 0 ||
+                state.battlesWon > 0 ||
+                state.battlesLost > 0));
     final hasMomentumEvidence =
         momentum != null && momentum.studyStreakDays > 0;
     final hasRiskEvidence = hasCoverageEvidence && risk != null;
@@ -414,7 +447,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             Expanded(
               child: _isolatedStatusCard(
                 label: "READINESS",
-                value: hasReadinessEvidence ? "${readiness.score.toInt()}%" : "Pending",
+                value: hasReadinessEvidence
+                    ? "${readiness.score.toInt()}%"
+                    : "Pending",
                 color: AppColors.gold,
                 icon: Icons.military_tech_rounded,
                 isPending: !hasReadinessEvidence,
@@ -424,7 +459,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             Expanded(
               child: _isolatedStatusCard(
                 label: "COVERAGE",
-                value: hasCoverageEvidence ? "${(coverage.coveragePercent * 100).toInt()}%" : "Pending",
+                value: hasCoverageEvidence
+                    ? "${(coverage.coveragePercent * 100).toInt()}%"
+                    : "Pending",
                 color: Colors.lightBlueAccent,
                 icon: Icons.track_changes_rounded,
                 isPending: !hasCoverageEvidence,
@@ -438,7 +475,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             Expanded(
               child: _isolatedStatusCard(
                 label: "STREAK",
-                value: hasMomentumEvidence ? "${momentum.studyStreakDays}d" : "Pending",
+                value: hasMomentumEvidence
+                    ? "${momentum.studyStreakDays}d"
+                    : "Pending",
                 color: Colors.orangeAccent,
                 icon: Icons.local_fire_department_rounded,
                 isPending: !hasMomentumEvidence,
@@ -512,11 +551,13 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             fit: BoxFit.scaleDown,
             child: isPending
                 ? Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(
                       color: AppColors.gold.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(6),
-                      border: Border.all(color: AppColors.gold.withValues(alpha: 0.2)),
+                      border: Border.all(
+                          color: AppColors.gold.withValues(alpha: 0.2)),
                     ),
                     child: Text(
                       'Pending Evidence',

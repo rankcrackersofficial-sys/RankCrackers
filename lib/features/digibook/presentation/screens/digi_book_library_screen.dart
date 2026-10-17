@@ -10,7 +10,10 @@ import '../../../../core/utils/app_routes.dart';
 import '../../../../core/utils/responsive_helper.dart';
 import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../../core/models/micro_topic_node.dart';
+import '../../../../shared/providers/session_provider.dart';
 import '../../../syllabus/presentation/providers/syllabus_tree_provider.dart';
+import '../../data/models/digibook_unit.dart';
+import '../../data/repositories/digibook_repository.dart';
 import '../../domain/services/digibook_canonical_bridge_service.dart';
 import '../../domain/services/digibook_user_preferences_service.dart';
 
@@ -32,10 +35,16 @@ class DigiBookLibraryScreen extends ConsumerStatefulWidget {
       _DigiBookLibraryScreenState();
 }
 
+final liveDigiBookUnitsProvider =
+    StreamProvider.family<List<DigiBookUnit>, String>(
+  (ref, missionId) => DigiBookRepository.streamUnits(missionId),
+);
+
 class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
-  String _selectedSubject = 'PHYSICS';
+  String _selectedSubject = '';
+  bool _subjectsExpanded = false;
   String _activeTab = 'BROWSE'; // 'BROWSE', 'SAVED', 'RECENT'
   String _searchQuery = '';
   final Set<String> _expandedUnitIds = {};
@@ -43,7 +52,9 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   @override
   void initState() {
     super.initState();
-    DigiBookCanonicalBridgeService.instance.initialize();
+    DigiBookCanonicalBridgeService.instance.initialize().then((_) {
+      if (mounted) setState(() {});
+    });
     DigiBookUserPreferencesService.instance.init();
     _searchController.addListener(() {
       setState(() {
@@ -59,10 +70,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     super.dispose();
   }
 
-  DigiBookBridgeResolveResult _resolveNode(
-      SyllabusNode node,
-      DigiBookCanonicalBridgeService bridge,
-      List<MicroTopicNode> allAtoms) {
+  DigiBookBridgeResolveResult _resolveNode(SyllabusNode node,
+      DigiBookCanonicalBridgeService bridge, List<MicroTopicNode> allAtoms) {
     // 1. Direct ID check
     var res = bridge.resolveCanonicalNode(node.id);
     if (res.isMapped && res.primaryEntry != null) return res;
@@ -74,16 +83,20 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     }
 
     // 3. Atom/MicroTopic check
-    final matchingAtoms = allAtoms.where((a) =>
-        a.id == node.id ||
-        a.topicId == node.id ||
-        a.canonicalTopicId == node.id ||
-        (a.canonicalKnowledgeNodeId != null && a.canonicalKnowledgeNodeId == node.id)).toList();
+    final matchingAtoms = allAtoms
+        .where((a) =>
+            a.id == node.id ||
+            a.topicId == node.id ||
+            a.canonicalTopicId == node.id ||
+            (a.canonicalKnowledgeNodeId != null &&
+                a.canonicalKnowledgeNodeId == node.id))
+        .toList();
 
     for (final a in matchingAtoms) {
       res = bridge.resolveCanonicalNode(a.id);
       if (res.isMapped && res.primaryEntry != null) return res;
-      if (a.canonicalKnowledgeNodeId != null && a.canonicalKnowledgeNodeId!.isNotEmpty) {
+      if (a.canonicalKnowledgeNodeId != null &&
+          a.canonicalKnowledgeNodeId!.isNotEmpty) {
         res = bridge.resolveCanonicalNode(a.canonicalKnowledgeNodeId!);
         if (res.isMapped && res.primaryEntry != null) return res;
       }
@@ -98,8 +111,10 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     }
 
     // 4. Prefix / Canonical Alignment matching
-    final cleanNode = node.title.toLowerCase().replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
-    final nodeWords = cleanNode.split(RegExp(r'\s+')).where((w) => w.length >= 3).toList();
+    final cleanNode =
+        node.title.toLowerCase().replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
+    final nodeWords =
+        cleanNode.split(RegExp(r'\s+')).where((w) => w.length >= 3).toList();
 
     for (final entry in bridge.allEntries) {
       final matchesSubject = node.subjectId.isEmpty ||
@@ -118,13 +133,21 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       }
 
       // Stemmed keyword matching (e.g. "representation" and "representations")
-      final cleanEntry = entry.topic.toLowerCase().replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
-      final entryWords = cleanEntry.split(RegExp(r'\s+')).where((w) => w.length >= 3).toList();
-      final common = nodeWords.where((nw) => entryWords.any((ew) =>
-          ew == nw ||
-          (ew.length >= 4 && nw.length >= 4 && (ew.startsWith(nw.substring(0, 4)) || nw.startsWith(ew.substring(0, 4)))))).toList();
+      final cleanEntry =
+          entry.topic.toLowerCase().replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
+      final entryWords =
+          cleanEntry.split(RegExp(r'\s+')).where((w) => w.length >= 3).toList();
+      final common = nodeWords
+          .where((nw) => entryWords.any((ew) =>
+              ew == nw ||
+              (ew.length >= 4 &&
+                  nw.length >= 4 &&
+                  (ew.startsWith(nw.substring(0, 4)) ||
+                      nw.startsWith(ew.substring(0, 4))))))
+          .toList();
 
-      if (common.length >= 2 || (nodeWords.contains('sets') && entryWords.contains('sets'))) {
+      if (common.length >= 2 ||
+          (nodeWords.contains('sets') && entryWords.contains('sets'))) {
         return DigiBookBridgeResolveResult(
           status: DigiBookBridgeResolveStatus.singleGu,
           canonicalNodeId: entry.canonicalNodeId,
@@ -298,6 +321,16 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     final allAtoms = ref.watch(allNodesProvider);
     final bridge = DigiBookCanonicalBridgeService.instance;
     final prefs = DigiBookUserPreferencesService.instance;
+    final sessionUser = ref.watch(activeSessionUserProvider);
+    final liveUnits =
+        ref.watch(liveDigiBookUnitsProvider(sessionUser.examId)).valueOrNull ??
+            const <DigiBookUnit>[];
+    if (bridge.isInitialized) {
+      bridge.activateMission(sessionUser.examId);
+    }
+    if (_selectedSubject.isEmpty && syllabusTree.isNotEmpty) {
+      _selectedSubject = syllabusTree.first.title.toUpperCase();
+    }
 
     return Scaffold(
       backgroundColor: scheme.surface,
@@ -305,7 +338,12 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              _buildTopHeader(bridge.allEntries.length),
+              _buildTopHeader(
+                sessionUser.displayExamName,
+                syllabusTree.length,
+                syllabusTree.fold<int>(0, (sum, s) => sum + s.unitCount),
+                bridge.allEntries.length,
+              ),
               _buildSearchBar(),
               if (_searchQuery.isEmpty) _buildFilterTabs(prefs),
               Expanded(
@@ -315,7 +353,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         ? _buildSavedSection(bridge, prefs)
                         : _activeTab == 'RECENT'
                             ? _buildRecentSection(bridge, prefs)
-                            : _buildBrowseSection(syllabusTree, bridge, prefs, allAtoms),
+                            : _buildBrowseSection(syllabusTree, bridge, prefs,
+                                allAtoms, liveUnits),
               ),
             ],
           ),
@@ -324,7 +363,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     );
   }
 
-  Widget _buildTopHeader(int availableCount) {
+  Widget _buildTopHeader(
+      String examName, int subjectCount, int unitCount, int availableCount) {
     final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(18, 14, 18, 8),
@@ -358,7 +398,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  'JEE MAIN • 54 Units • $availableCount Lessons Available',
+                  '$examName • $unitCount Units • $availableCount Lessons Available',
                   style: AppTypography.body.copyWith(
                     fontSize: ResponsiveHelper.sp(context, 10.5),
                     color: scheme.onSurfaceVariant,
@@ -386,7 +426,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Row(
           children: [
-            Icon(Icons.search_rounded, color: scheme.onSurfaceVariant, size: 18),
+            Icon(Icons.search_rounded,
+                color: scheme.onSurfaceVariant, size: 18),
             const SizedBox(width: 10),
             Expanded(
               child: Theme(
@@ -409,7 +450,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                   cursorColor: AppColors.gold,
                   decoration: InputDecoration(
                     hintText: 'Search chapters (e.g. Sets, Friction, Mole)...',
-                    hintStyle: TextStyle(color: scheme.onSurfaceVariant, fontSize: 12.5),
+                    hintStyle: TextStyle(
+                        color: scheme.onSurfaceVariant, fontSize: 12.5),
                     border: InputBorder.none,
                     enabledBorder: InputBorder.none,
                     focusedBorder: InputBorder.none,
@@ -454,7 +496,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             setState(() => _activeTab = 'SAVED');
           }),
           const SizedBox(width: 8),
-          _tabPill('RECENT', 'Recent ($recentCount)', _activeTab == 'RECENT', () {
+          _tabPill('RECENT', 'Recent ($recentCount)', _activeTab == 'RECENT',
+              () {
             setState(() => _activeTab = 'RECENT');
           }),
         ],
@@ -470,7 +513,9 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(
-          color: isSelected ? AppColors.gold.withValues(alpha: 0.15) : scheme.surfaceContainerHighest,
+          color: isSelected
+              ? AppColors.gold.withValues(alpha: 0.15)
+              : scheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: isSelected ? AppColors.gold : scheme.outline,
@@ -489,10 +534,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     );
   }
 
-  Widget _buildSearchResults(
-      List<SyllabusNode> subjects,
-      DigiBookCanonicalBridgeService bridge,
-      List<MicroTopicNode> allAtoms) {
+  Widget _buildSearchResults(List<SyllabusNode> subjects,
+      DigiBookCanonicalBridgeService bridge, List<MicroTopicNode> allAtoms) {
     final scheme = Theme.of(context).colorScheme;
     final query = _searchQuery.toLowerCase();
     final matchedTopics = <Map<String, dynamic>>[];
@@ -527,7 +570,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                 resolveResult.isMapped && resolveResult.primaryEntry != null;
             final guId = resolveResult.primaryEntry?.guId;
             if (guId != null && seenGuIds.contains(guId)) {
-              final existing = matchedTopics.firstWhere((m) => m['guId'] == guId);
+              final existing =
+                  matchedTopics.firstWhere((m) => m['guId'] == guId);
               if ((existing['unit'] as String? ?? '').isEmpty) {
                 existing['unit'] = unit.title;
               }
@@ -541,7 +585,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
               'topic': topic,
               'isAvailable': isAvailable,
               'guId': guId,
-              'canonicalNodeId': resolveResult.primaryEntry?.canonicalNodeId ?? topic.id,
+              'canonicalNodeId':
+                  resolveResult.primaryEntry?.canonicalNodeId ?? topic.id,
             });
           }
         }
@@ -594,7 +639,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
               if (guId != null && guId.isNotEmpty) {
                 _openLessonByGuId(guId);
               } else if (item['topic'] is SyllabusNode) {
-                _openLessonByNode(item['topic'] as SyllabusNode, bridge, allAtoms);
+                _openLessonByNode(
+                    item['topic'] as SyllabusNode, bridge, allAtoms);
               } else {
                 _showTruthfulUnavailableDialog(context, title);
               }
@@ -602,81 +648,83 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             child: DarkCard(
               padding: const EdgeInsets.all(12),
               child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: isAvailable
-                        ? AppColors.gold.withValues(alpha: 0.12)
-                        : scheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: BoxDecoration(
                       color: isAvailable
-                          ? AppColors.gold.withValues(alpha: 0.4)
-                          : scheme.outline,
+                          ? AppColors.gold.withValues(alpha: 0.12)
+                          : scheme.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: isAvailable
+                            ? AppColors.gold.withValues(alpha: 0.4)
+                            : scheme.outline,
+                      ),
                     ),
-                  ),
-                  child: Icon(
-                    isAvailable
-                        ? Icons.menu_book_rounded
-                        : Icons.lock_outline_rounded,
-                    color: isAvailable ? AppColors.gold : scheme.onSurfaceVariant,
-                    size: 18,
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.cardTitle.copyWith(
-                          fontSize: 13,
-                          color: scheme.onSurface,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        unit.isNotEmpty ? '$subject • $unit' : subject,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                            color: scheme.onSurfaceVariant, fontSize: 10),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: isAvailable
-                        ? AppColors.gold.withValues(alpha: 0.15)
-                        : scheme.surfaceContainerHighest,
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(
+                    child: Icon(
+                      isAvailable
+                          ? Icons.menu_book_rounded
+                          : Icons.lock_outline_rounded,
                       color: isAvailable
                           ? AppColors.gold
-                          : scheme.outline,
-                      width: 0.8,
+                          : scheme.onSurfaceVariant,
+                      size: 18,
                     ),
                   ),
-                  child: Text(
-                    isAvailable ? 'READ' : 'MAP',
-                    style: TextStyle(
-                      color: isAvailable ? AppColors.gold : scheme.onSurfaceVariant,
-                      fontSize: 9.5,
-                      fontWeight: FontWeight.bold,
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTypography.cardTitle.copyWith(
+                            fontSize: 13,
+                            color: scheme.onSurface,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          unit.isNotEmpty ? '$subject • $unit' : subject,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              color: scheme.onSurfaceVariant, fontSize: 10),
+                        ),
+                      ],
                     ),
                   ),
-                ),
-              ],
+                  const SizedBox(width: 8),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: isAvailable
+                          ? AppColors.gold.withValues(alpha: 0.15)
+                          : scheme.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: isAvailable ? AppColors.gold : scheme.outline,
+                        width: 0.8,
+                      ),
+                    ),
+                    child: Text(
+                      isAvailable ? 'READ' : 'MAP',
+                      style: TextStyle(
+                        color: isAvailable
+                            ? AppColors.gold
+                            : scheme.onSurfaceVariant,
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
           ),
         );
       },
@@ -687,7 +735,11 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       List<SyllabusNode> subjects,
       DigiBookCanonicalBridgeService bridge,
       DigiBookUserPreferencesService prefs,
-      List<MicroTopicNode> allAtoms) {
+      List<MicroTopicNode> allAtoms,
+      List<DigiBookUnit> liveUnits) {
+    if (subjects.isEmpty && liveUnits.isNotEmpty) {
+      return _buildLiveUnitsSection(liveUnits);
+    }
     final continueState = prefs.getContinueReading();
 
     return CustomScrollView(
@@ -702,19 +754,11 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             ),
           ),
 
-        // 2. Subject Selector Tabs
+        // 2. Subject Selector Tabs (derived from the active mission)
         SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
-            child: Row(
-              children: [
-                _subjectPill('PHYSICS', Icons.bolt_rounded),
-                const SizedBox(width: 8),
-                _subjectPill('CHEMISTRY', Icons.science_rounded),
-                const SizedBox(width: 8),
-                _subjectPill('MATHEMATICS', Icons.calculate_rounded),
-              ],
-            ),
+            child: _buildSubjectSelector(subjects),
           ),
         ),
 
@@ -724,6 +768,47 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
           sliver: _buildSubjectUnitsSliver(subjects, bridge, allAtoms),
         ),
       ],
+    );
+  }
+
+  Widget _buildLiveUnitsSection(List<DigiBookUnit> units) {
+    final scheme = Theme.of(context).colorScheme;
+    return ListView.separated(
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 80),
+      itemCount: units.length,
+      separatorBuilder: (_, __) => const SizedBox(height: 10),
+      itemBuilder: (context, index) {
+        final unit = units[index];
+        return DarkCard(
+          padding: const EdgeInsets.all(14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(unit.chapterId,
+                  style:
+                      TextStyle(color: scheme.onSurfaceVariant, fontSize: 10)),
+              const SizedBox(height: 5),
+              Text(unit.concept,
+                  style: AppTypography.cardTitle
+                      .copyWith(color: scheme.onSurface, fontSize: 14)),
+              const SizedBox(height: 7),
+              Text(unit.definition,
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
+                  style: AppTypography.body.copyWith(
+                      color: scheme.onSurfaceVariant,
+                      fontSize: 12,
+                      height: 1.4)),
+              const SizedBox(height: 8),
+              Text('Verified mission unit • ${unit.status.toUpperCase()}',
+                  style: TextStyle(
+                      color: AppColors.gold,
+                      fontSize: 10,
+                      fontWeight: FontWeight.w700)),
+            ],
+          ),
+        );
+      },
     );
   }
 
@@ -739,56 +824,181 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       child: DarkCard(
         padding: const EdgeInsets.all(14),
         child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: AppColors.gold.withValues(alpha: 0.15),
-              shape: BoxShape.circle,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: AppColors.gold.withValues(alpha: 0.15),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.play_arrow_rounded,
+                color: AppColors.gold,
+                size: 20,
+              ),
             ),
-            child: const Icon(
-              Icons.play_arrow_rounded,
-              color: AppColors.gold,
-              size: 20,
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'CONTINUE READING',
-                  style: AppTypography.label.copyWith(
-                    color: AppColors.gold,
-                    fontSize: 8.5,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 1.0,
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'CONTINUE READING',
+                    style: AppTypography.label.copyWith(
+                      color: AppColors.gold,
+                      fontSize: 8.5,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.0,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  topicTitle,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTypography.cardTitle.copyWith(fontSize: 13),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  '$subject • ${(percent * 100).toInt()}% Read',
-                  style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 10),
-                ),
-              ],
+                  const SizedBox(height: 2),
+                  Text(
+                    topicTitle,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTypography.cardTitle.copyWith(fontSize: 13),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    '$subject • ${(percent * 100).toInt()}% Read',
+                    style:
+                        TextStyle(color: scheme.onSurfaceVariant, fontSize: 10),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            const Icon(
+              Icons.arrow_forward_ios_rounded,
+              color: AppColors.gold,
+              size: 13,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSubjectSelector(List<SyllabusNode> subjects) {
+    final scheme = Theme.of(context).colorScheme;
+    final selected = _selectedSubject.isEmpty && subjects.isNotEmpty
+        ? subjects.first.title.toUpperCase()
+        : _selectedSubject;
+    SyllabusNode? selectedNode;
+    for (final item in subjects) {
+      if (item.title.toUpperCase() == selected) {
+        selectedNode = item;
+        break;
+      }
+    }
+    selectedNode ??= subjects.isEmpty ? null : subjects.first;
+    final totalUnits =
+        subjects.fold<int>(0, (sum, item) => sum + item.unitCount);
+    final totalTopics =
+        subjects.fold<int>(0, (sum, item) => sum + item.topicCount);
+    final totalAtomicKeys =
+        subjects.fold<int>(0, (sum, item) => sum + item.atomCount);
+
+    return DarkCard(
+      padding: EdgeInsets.zero,
+      child: Column(
+        children: [
+          InkWell(
+            onTap: subjects.isEmpty
+                ? null
+                : () => setState(() => _subjectsExpanded = !_subjectsExpanded),
+            borderRadius: BorderRadius.circular(12),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
+              child: Row(
+                children: [
+                  const Icon(Icons.menu_book_rounded,
+                      color: AppColors.gold, size: 20),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            subjects.isEmpty
+                                ? 'MISSION SUBJECTS'
+                                : 'MISSION SUBJECTS · ${subjects.length}',
+                            style:
+                                AppTypography.cardTitle.copyWith(fontSize: 14)),
+                        const SizedBox(height: 3),
+                        Text(
+                            selectedNode == null
+                                ? 'No syllabus subjects loaded'
+                                : 'Total: $totalUnits units  •  $totalTopics topics  •  $totalAtomicKeys atomic coverage keys',
+                            style: TextStyle(
+                                color: scheme.onSurfaceVariant,
+                                fontSize: 10.5)),
+                        if (selectedNode != null) ...[
+                          const SizedBox(height: 2),
+                          Text(
+                              'Currently viewing: ${selectedNode!.title}  •  ${selectedNode!.unitCount} units  •  ${selectedNode!.topicCount} topics',
+                              style: TextStyle(
+                                  color: scheme.onSurfaceVariant,
+                                  fontSize: 9.5)),
+                        ],
+                      ],
+                    ),
+                  ),
+                  Icon(
+                      _subjectsExpanded
+                          ? Icons.keyboard_arrow_up_rounded
+                          : Icons.keyboard_arrow_down_rounded,
+                      color: AppColors.gold),
+                ],
+              ),
             ),
           ),
-          const SizedBox(width: 8),
-          const Icon(
-            Icons.arrow_forward_ios_rounded,
-            color: AppColors.gold,
-            size: 13,
-          ),
+          if (_subjectsExpanded && subjects.isNotEmpty)
+            Container(
+              constraints: const BoxConstraints(maxHeight: 240),
+              decoration: BoxDecoration(
+                  color: scheme.surface,
+                  borderRadius:
+                      const BorderRadius.vertical(bottom: Radius.circular(12))),
+              child: ListView.separated(
+                shrinkWrap: true,
+                padding: const EdgeInsets.fromLTRB(10, 4, 10, 10),
+                itemCount: subjects.length,
+                separatorBuilder: (_, __) => const SizedBox(height: 4),
+                itemBuilder: (context, index) {
+                  final item = subjects[index];
+                  final active = item.title.toUpperCase() == selected;
+                  return ListTile(
+                    dense: true,
+                    onTap: () => setState(() {
+                      _selectedSubject = item.title.toUpperCase();
+                      _subjectsExpanded = false;
+                    }),
+                    leading: Icon(Icons.circle,
+                        size: 9,
+                        color:
+                            active ? AppColors.gold : scheme.onSurfaceVariant),
+                    title: Text(item.title,
+                        style: TextStyle(
+                            color: active
+                                ? scheme.onSurface
+                                : scheme.onSurfaceVariant,
+                            fontSize: 12,
+                            fontWeight:
+                                active ? FontWeight.w700 : FontWeight.w500)),
+                    subtitle: Text(
+                        '${item.unitCount} units • ${item.topicCount} topics • ${item.atomCount} atomic',
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 10)),
+                    trailing: active
+                        ? const Icon(Icons.check,
+                            color: AppColors.gold, size: 17)
+                        : null,
+                  );
+                },
+              ),
+            ),
         ],
-      ),
       ),
     );
   }
@@ -823,7 +1033,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
               Text(
                 name,
                 style: TextStyle(
-                  color: isSelected ? scheme.onSurface : scheme.onSurfaceVariant,
+                  color:
+                      isSelected ? scheme.onSurface : scheme.onSurfaceVariant,
                   fontSize: 10,
                   fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                 ),
@@ -835,18 +1046,19 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     );
   }
 
-  Widget _buildSubjectUnitsSliver(
-      List<SyllabusNode> subjects,
-      DigiBookCanonicalBridgeService bridge,
-      List<MicroTopicNode> allAtoms) {
+  Widget _buildSubjectUnitsSliver(List<SyllabusNode> subjects,
+      DigiBookCanonicalBridgeService bridge, List<MicroTopicNode> allAtoms) {
     final scheme = Theme.of(context).colorScheme;
+    final selected = _selectedSubject.isEmpty && subjects.isNotEmpty
+        ? subjects.first.title.toUpperCase()
+        : _selectedSubject;
     final subjectNode = subjects.firstWhere(
-      (s) => s.title.toUpperCase().contains(_selectedSubject),
+      (s) => s.title.toUpperCase().contains(selected),
       orElse: () => SyllabusNode(
         id: '',
-        title: _selectedSubject,
+        title: selected,
         type: 'subject',
-        subjectId: _selectedSubject,
+        subjectId: selected,
       ),
     );
 
@@ -859,7 +1071,8 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             padding: const EdgeInsets.all(32),
             child: Text(
               'Loading curriculum units...',
-              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant),
+              style:
+                  AppTypography.body.copyWith(color: scheme.onSurfaceVariant),
             ),
           ),
         ),
@@ -888,35 +1101,40 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
               padding: EdgeInsets.zero,
               child: Column(
                 children: [
-                  ListTile(
-                    onTap: () {
-                      setState(() {
-                        if (isExpanded) {
-                          _expandedUnitIds.remove(unit.id);
-                        } else {
-                          _expandedUnitIds.add(unit.id);
-                        }
-                      });
-                    },
-                    contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 4),
-                    title: Text(
-                      unit.title,
-                      style: AppTypography.cardTitle.copyWith(
-                        fontSize: 13.5,
-                        color: scheme.onSurface,
+                  Material(
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAlias,
+                    child: ListTile(
+                      onTap: () {
+                        setState(() {
+                          if (isExpanded) {
+                            _expandedUnitIds.remove(unit.id);
+                          } else {
+                            _expandedUnitIds.add(unit.id);
+                          }
+                        });
+                      },
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 14, vertical: 4),
+                      title: Text(
+                        unit.title,
+                        style: AppTypography.cardTitle.copyWith(
+                          fontSize: 13.5,
+                          color: scheme.onSurface,
+                        ),
                       ),
-                    ),
-                    subtitle: Text(
-                      '${topics.length} Topics • $availableInUnit DigiBook Lessons',
-                      style: TextStyle(
-                          color: scheme.onSurfaceVariant, fontSize: 10.5),
-                    ),
-                    trailing: Icon(
-                      isExpanded
-                          ? Icons.keyboard_arrow_up_rounded
-                          : Icons.keyboard_arrow_down_rounded,
-                      color: AppColors.gold,
+                      subtitle: Text(
+                        '${topics.length} Topics • $availableInUnit DigiBook Lessons',
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 10.5),
+                      ),
+                      trailing: Icon(
+                        isExpanded
+                            ? Icons.keyboard_arrow_up_rounded
+                            : Icons.keyboard_arrow_down_rounded,
+                        color: AppColors.gold,
+                      ),
                     ),
                   ),
                   if (isExpanded)
@@ -940,8 +1158,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                               color: Colors.transparent,
                               child: InkWell(
                                 onTap: () {
-                                  _openLessonByNode(
-                                      t, bridge, allAtoms);
+                                  _openLessonByNode(t, bridge, allAtoms);
                                 },
                                 borderRadius: BorderRadius.circular(8),
                                 child: Container(
@@ -950,12 +1167,15 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                                   decoration: BoxDecoration(
                                     color: isAvailable
                                         ? scheme.surfaceContainerHighest
-                                        : scheme.surface.withValues(alpha: 0.35),
+                                        : scheme.surface
+                                            .withValues(alpha: 0.35),
                                     borderRadius: BorderRadius.circular(8),
                                     border: Border.all(
                                       color: isAvailable
-                                          ? AppColors.gold.withValues(alpha: 0.3)
-                                          : scheme.outline.withValues(alpha: 0.5),
+                                          ? AppColors.gold
+                                              .withValues(alpha: 0.3)
+                                          : scheme.outline
+                                              .withValues(alpha: 0.5),
                                     ),
                                   ),
                                   child: Row(
@@ -1075,37 +1295,37 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             child: DarkCard(
               padding: const EdgeInsets.all(12),
               child: Row(
-              children: [
-                const Icon(Icons.bookmark_rounded,
-                    color: AppColors.gold, size: 20),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        entry.topic,
-                        style: AppTypography.cardTitle.copyWith(fontSize: 13),
-                      ),
-                      Text(
-                        entry.subject,
-                        style: TextStyle(
-                            color: scheme.onSurfaceVariant, fontSize: 10),
-                      ),
-                    ],
+                children: [
+                  const Icon(Icons.bookmark_rounded,
+                      color: AppColors.gold, size: 20),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          entry.topic,
+                          style: AppTypography.cardTitle.copyWith(fontSize: 13),
+                        ),
+                        Text(
+                          entry.subject,
+                          style: TextStyle(
+                              color: scheme.onSurfaceVariant, fontSize: 10),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                IconButton(
-                  icon: Icon(Icons.bookmark_remove_rounded,
-                      color: scheme.onSurfaceVariant, size: 18),
-                  onPressed: () async {
-                    await prefs.toggleSave(entry.guId);
-                    setState(() {});
-                  },
-                ),
-              ],
+                  IconButton(
+                    icon: Icon(Icons.bookmark_remove_rounded,
+                        color: scheme.onSurfaceVariant, size: 18),
+                    onPressed: () async {
+                      await prefs.toggleSave(entry.guId);
+                      setState(() {});
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
           ),
         );
       },

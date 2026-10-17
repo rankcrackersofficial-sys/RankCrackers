@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:rank_crackers/core/constants/official_mission_sources.dart';
 import '../theme/founder_light_theme.dart';
 import '../mission_control/mission_control_room.dart';
 import '../mission_control/mission_documents_tab.dart';
@@ -82,9 +83,9 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
                   initialCycle: '2026',
                   initialAuthority: 'auth_in_ssc',
                   initialNotificationUrl:
-                      'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf',
+                      OfficialMissionSources.notificationUrl('ssc_cgl')!,
                   initialSyllabusUrl:
-                      'https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf',
+                      OfficialMissionSources.syllabusUrl('ssc_cgl')!,
                 ),
               ),
             _DocumentWorkspaceSummary(
@@ -309,7 +310,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
         ingestionRaw.contains('FAIL') || reviewRaw.contains('REJECT');
     final verified = reviewRaw == 'VERIFIED' || reviewRaw == 'APPROVED';
     final nextAction = source == null
-        ? 'UPLOAD SOURCE DOCUMENT'
+        ? 'START AUTOMATED SOURCE ACQUISITION'
         : failed
             ? 'REVIEW EXTRACTION FAILURE'
             : !verified
@@ -398,7 +399,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           const SizedBox(height: 10),
           if (source == null)
             const Text(
-              'No approved official source document is currently connected to this mission.',
+                    'No verified source is connected yet. The server will acquire and verify the official pair automatically.',
               style:
                   TextStyle(color: FounderLightTheme.textMuted, fontSize: 11),
             )
@@ -523,7 +524,7 @@ class _DocumentEmptyState extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    'No approved source document is currently connected to $missionId.',
+                    'No verified source is connected to $missionId yet. Start the automated source pair acquisition from the command center.',
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 16),

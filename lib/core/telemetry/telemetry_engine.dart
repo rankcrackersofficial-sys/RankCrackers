@@ -112,14 +112,33 @@ class TelemetryEngine {
   Future<void> flush() async {
     if (_buffer.isEmpty) return;
 
+    final currentUid = FirebaseAuth.instance.currentUser?.uid;
+    if (currentUid == null || currentUid.isEmpty) return;
+
+    // A persisted queue can contain records captured before authentication or
+    // before a mission was selected. Firestore rules intentionally reject
+    // those records; one invalid item must not poison the whole atomic batch.
+    final validRecords = _buffer
+        .where((record) =>
+            record.userId == currentUid &&
+            (record.recruitmentId ?? '').trim().isNotEmpty &&
+            record.eventName.trim().isNotEmpty &&
+            record.sessionId.trim().isNotEmpty)
+        .toList();
+    if (validRecords.isEmpty) {
+      _buffer.clear();
+      await _clearPersistentQueue();
+      return;
+    }
+
     final List<Map<String, dynamic>> items =
-        _buffer.map((r) => r.toMap()).toList();
+        validRecords.map((r) => r.toMap()).toList();
 
     try {
       // Authority: Batch upload to telemetry nexus
       await FirestoreService.uploadBatch('telemetry_nexus', items);
 
-      _buffer.clear();
+      _buffer.removeWhere((record) => validRecords.contains(record));
       await _clearPersistentQueue();
       debugPrint('TELEMETRY FLUSHED: ${items.length} records committed.');
     } catch (e) {

@@ -50,11 +50,12 @@ class KnowledgeEngine extends ChangeNotifier {
 
   StreamSubscription? _progressSubscription;
   StreamSubscription? _nodeSubscription;
-  final Map<String, UserProgress> _userProgressMap = {}; // 🔱 HyperScale Fix: Indexed lookup
+  final Map<String, UserProgress> _userProgressMap =
+      {}; // 🔱 HyperScale Fix: Indexed lookup
   final Map<String, NodeRuntimeState> _nodeStates = {};
-  final Map<String, AtomicMasteryState> _atomicMasteryStates = {}; 
+  final Map<String, AtomicMasteryState> _atomicMasteryStates = {};
   final Map<String, AtomicCoverageState> _atomicCoverageStates = {};
-  final Map<String, AtomicRiskState> _atomicRiskStates = {}; 
+  final Map<String, AtomicRiskState> _atomicRiskStates = {};
 
   CoverageState? _coverageState;
   RiskState? _riskState;
@@ -74,8 +75,10 @@ class KnowledgeEngine extends ChangeNotifier {
   KnowledgeGraph? get graph => _graph;
   List<UserProgress> get userProgress => _userProgressMap.values.toList();
   Map<String, NodeRuntimeState> get nodeStates => _nodeStates;
-  Map<String, AtomicMasteryState> get atomicMasteryStates => _atomicMasteryStates;
-  Map<String, AtomicCoverageState> get atomicCoverageStates => _atomicCoverageStates;
+  Map<String, AtomicMasteryState> get atomicMasteryStates =>
+      _atomicMasteryStates;
+  Map<String, AtomicCoverageState> get atomicCoverageStates =>
+      _atomicCoverageStates;
   Map<String, AtomicRiskState> get atomicRiskStates => _atomicRiskStates;
 
   CoverageState? get coverageState => _coverageState;
@@ -91,12 +94,16 @@ class KnowledgeEngine extends ChangeNotifier {
     if (_isHydrating || _isLoading) return false;
     final sessionUser = SessionUser.getSync();
     final currentUid = sessionUser.uid;
-    final currentRecruitmentId = sessionUser.recruitmentId.isNotEmpty ? sessionUser.recruitmentId : _activeRecruitment?.id;
+    final currentRecruitmentId = sessionUser.recruitmentId.isNotEmpty
+        ? sessionUser.recruitmentId
+        : _activeRecruitment?.id;
 
     if (currentUid.isEmpty || _metricsUid != currentUid) {
       return false;
     }
-    if (currentRecruitmentId == null || currentRecruitmentId.isEmpty || _metricsRecruitmentId != currentRecruitmentId) {
+    if (currentRecruitmentId == null ||
+        currentRecruitmentId.isEmpty ||
+        _metricsRecruitmentId != currentRecruitmentId) {
       return false;
     }
     return _userProgressMap.isNotEmpty;
@@ -107,7 +114,8 @@ class KnowledgeEngine extends ChangeNotifier {
   // INITIALIZATION 🔱
   // ===================================================
 
-  Future<void> initialize({Recruitment? recruitment, bool force = false}) async {
+  Future<void> initialize(
+      {Recruitment? recruitment, bool force = false}) async {
     // 🔱 Hard Mutex
     if (_isHydrating) {
       debugPrint("🔱 KNOWLEDGE HYDRATION LOCK ACTIVE");
@@ -121,7 +129,9 @@ class KnowledgeEngine extends ChangeNotifier {
         final state = SessionManager.getUserStateSync() ?? 'Central';
         final stateCode = SessionManager.getUserStateCodeSync();
         recruitment = Recruitment(
-          id: sessionUser.recruitmentId.isNotEmpty ? sessionUser.recruitmentId : sessionUser.examId,
+          id: sessionUser.recruitmentId.isNotEmpty
+              ? sessionUser.recruitmentId
+              : sessionUser.examId,
           recruitmentGroupId: sessionUser.examId,
           boardId: '',
           examId: sessionUser.examId,
@@ -142,7 +152,7 @@ class KnowledgeEngine extends ChangeNotifier {
     _isHydrating = true;
     _isLoading = true;
     _activeRecruitment = recruitment;
-    
+
     // 🔱 Debounced notification to prevent rebuild-during-build
     Future.microtask(() => notifyListeners());
 
@@ -182,7 +192,8 @@ class KnowledgeEngine extends ChangeNotifier {
 
       // 🔱 Priority B: Load from Knowledge Cache first
       if (_activeRecruitment != null) {
-        final cachedNodes = await KnowledgeCache.loadGraph(_activeRecruitment!.examId);
+        final cachedNodes =
+            await KnowledgeCache.loadGraph(_activeRecruitment!.examId);
         if (cachedNodes != null && _graph == null) {
           _graph = KnowledgeGraph(cachedNodes);
           debugPrint("🔱 CACHE HIT: Graph hydrated from local storage.");
@@ -194,24 +205,17 @@ class KnowledgeEngine extends ChangeNotifier {
 
       // 🔱 1. Subscribe to Live Node Matrix (Syllabus)
       if (_activeRecruitment == null) {
-        debugPrint("🔱 KNOWLEDGE: Delaying node stream until mission is active.");
+        debugPrint(
+            "🔱 KNOWLEDGE: Delaying node stream until mission is active.");
         return;
       }
 
-      final nodesStream = FirestoreService.streamNodesByExam(_activeRecruitment!.examId);
+      final nodesStream =
+          FirestoreService.streamNodesByExam(_activeRecruitment!.examId);
 
-      _nodeSubscription = nodesStream
-        .handleError((e) {
-          debugPrint("🔱 NODE STREAM ERROR: $e");
-        })
-        .timeout(
-          const Duration(seconds: 3),
-          onTimeout: (sink) {
-            debugPrint("🔱 NODE STREAM TIMEOUT");
-            sink.add([]);
-          },
-        )
-        .listen((nodesData) async {
+      _nodeSubscription = nodesStream.handleError((e) {
+        debugPrint("🔱 NODE STREAM ERROR: $e");
+      }).listen((nodesData) async {
         // 🔱 Guard against stale async updates
         if (recruitment?.id != _activeRecruitment?.id) {
           debugPrint("🔱 KNOWLEDGE: Ignoring stale node stream response.");
@@ -221,7 +225,8 @@ class KnowledgeEngine extends ChangeNotifier {
         // 🔱 Type-Safety Debugging
         debugPrint('🔱 NODE STREAM RECEIVED: Type = ${nodesData.runtimeType}');
         if (nodesData.isNotEmpty) {
-          debugPrint('🔱 FIRST NODE ELEMENT: Type = ${nodesData.first.runtimeType}');
+          debugPrint(
+              '🔱 FIRST NODE ELEMENT: Type = ${nodesData.first.runtimeType}');
         }
 
         // 🔱 Type-Safety Hardening: Ensuring nodes are correctly typed
@@ -243,42 +248,41 @@ class KnowledgeEngine extends ChangeNotifier {
             : nodes;
 
         _graph = KnowledgeGraph(filteredNodes);
-        
+
         // Save to cache for next load
         if (_activeRecruitment != null && filteredNodes.isNotEmpty) {
           KnowledgeCache.saveGraph(_activeRecruitment!.examId, filteredNodes);
         }
 
         _isInitialized = true;
-        _isLoading = false; 
+        _isLoading = false;
         _isHydrating = false;
-        
+
         _tryRefresh();
-        
+
         final duration = DateTime.now().millisecondsSinceEpoch - start;
         unawaited(TelemetryEngine.instance.capture(
-          eventName: 'mission_hydration', 
+          eventName: 'mission_hydration',
           durationMs: duration,
           recruitmentId: _activeRecruitment?.id,
         ));
 
-        debugPrint("🔱 KNOWLEDGE INIT COMPLETE (${filteredNodes.length} nodes)");
+        debugPrint(
+            "🔱 KNOWLEDGE INIT COMPLETE (${filteredNodes.length} nodes)");
         notifyListeners();
       });
 
       // 🔱 2. Subscribe to Progress Stream for real-time reactivity
-      _progressSubscription = BackendProvider.adapter.progressStream()
-        .handleError((e) {
-          debugPrint("🔱 PROGRESS STREAM ERROR: $e");
-        })
-        .timeout(
-          const Duration(seconds: 3),
-          onTimeout: (sink) {
-            debugPrint("🔱 PROGRESS STREAM TIMEOUT");
-            sink.add([]);
-          },
-        )
-        .listen((progressData) {
+      _progressSubscription =
+          BackendProvider.adapter.progressStream().handleError((e) {
+        debugPrint("🔱 PROGRESS STREAM ERROR: $e");
+      }).timeout(
+        const Duration(seconds: 3),
+        onTimeout: (sink) {
+          debugPrint("🔱 PROGRESS STREAM TIMEOUT");
+          sink.add([]);
+        },
+      ).listen((progressData) {
         // 🔱 Guard against stale async updates
         if (recruitment?.id != _activeRecruitment?.id) {
           debugPrint("🔱 KNOWLEDGE: Ignoring stale progress stream response.");
@@ -286,19 +290,21 @@ class KnowledgeEngine extends ChangeNotifier {
         }
 
         // 🔱 Type-Safety Debugging
-        debugPrint('🔱 PROGRESS STREAM RECEIVED: Type = ${progressData.runtimeType}');
+        debugPrint(
+            '🔱 PROGRESS STREAM RECEIVED: Type = ${progressData.runtimeType}');
 
-        final List<Map<String, dynamic>> progressMaps = 
-            progressData.map((e) => Map<String, dynamic>.from(e as Map)).toList();
+        final List<Map<String, dynamic>> progressMaps = progressData
+            .map((e) => Map<String, dynamic>.from(e as Map))
+            .toList();
 
         final Map<String, UserProgress> newProgressMap = {
-          for (var m in progressMaps) 
-            m['nodeId']: UserProgress.fromMap(m)
+          for (var m in progressMaps) m['nodeId']: UserProgress.fromMap(m)
         };
-        
+
         // 🔱 Priority A: Identify Changed Nodes for Delta Update (O(K) lookup)
-        final List<String> changedNodeIds = _identifyChanges(_userProgressMap, newProgressMap);
-        
+        final List<String> changedNodeIds =
+            _identifyChanges(_userProgressMap, newProgressMap);
+
         _userProgressMap.clear();
         _userProgressMap.addAll(newProgressMap);
 
@@ -325,7 +331,8 @@ class KnowledgeEngine extends ChangeNotifier {
   }
 
   /// 🔱 DELTA TRACKER
-  List<String> _identifyChanges(Map<String, UserProgress> oldMap, Map<String, UserProgress> newMap) {
+  List<String> _identifyChanges(
+      Map<String, UserProgress> oldMap, Map<String, UserProgress> newMap) {
     final List<String> changed = [];
 
     newMap.forEach((nodeId, progress) {
@@ -359,26 +366,32 @@ class KnowledgeEngine extends ChangeNotifier {
       // --- Delta Atomic Update ---
       for (final atomicId in node.atomicTopicIds) {
         final existingMastery = _atomicMasteryStates[atomicId];
-        final accuracy = progress.battlesWon / (max(1, progress.battlesWon + progress.battlesLost));
-        final retention = MasteryDecayEngine.calculateRetention(lastEvidenceAt: progress.lastReviewed);
-        
+        final accuracy = progress.battlesWon /
+            (max(1, progress.battlesWon + progress.battlesLost));
+        final retention = MasteryDecayEngine.calculateRetention(
+            lastEvidenceAt: progress.lastReviewed);
+
         final double mastScore = MasteryEngine.calculateScore(
-          assessmentEvidence: progress.assessmentEvidence > 0 ? progress.assessmentEvidence : accuracy,
+          assessmentEvidence: progress.assessmentEvidence > 0
+              ? progress.assessmentEvidence
+              : accuracy,
           readingEvidence: progress.readingEvidence,
           revisionEvidence: progress.revisionEvidence,
           retention: retention,
-          difficulty: node.difficulty / 5.0, // 🔱 Audit Fix: Dynamic node difficulty
+          difficulty:
+              node.difficulty / 5.0, // 🔱 Audit Fix: Dynamic node difficulty
         );
 
         _atomicMasteryStates[atomicId] = AtomicMasteryState(
           atomicTopicId: atomicId,
           score: mastScore * 100,
           confidence: MasteryEngine.calculateConfidence(
-            evidenceCount: progress.battlesWon + progress.battlesLost, 
+            evidenceCount: progress.battlesWon + progress.battlesLost,
             lastEvidenceAt: progress.lastReviewed,
           ),
           status: MasteryEngine.determineState(mastScore * 100),
-          trend: MasteryEngine.determineTrend(mastScore, (existingMastery?.score ?? 0) / 100),
+          trend: MasteryEngine.determineTrend(
+              mastScore, (existingMastery?.score ?? 0) / 100),
           lastEvidenceAt: progress.lastReviewed,
           evidenceCount: progress.battlesWon + progress.battlesLost,
         );
@@ -387,24 +400,28 @@ class KnowledgeEngine extends ChangeNotifier {
         _atomicCoverageStates[atomicId] = CoverageEngine.calculateAtomic(
           atomicTopicId: atomicId,
           readingEvidence: progress.readingEvidence,
-          assessmentEvidence: progress.assessmentEvidence > 0 ? progress.assessmentEvidence : accuracy,
+          assessmentEvidence: progress.assessmentEvidence > 0
+              ? progress.assessmentEvidence
+              : accuracy,
           revisionEvidence: progress.revisionEvidence,
           previousState: existingCoverage,
         );
       }
 
       // --- Node Refresh ---
-      final effectiveMastery = HierarchicalAggregationEngine.calculateMicroMastery(node.atomicTopicIds, _atomicMasteryStates);
+      final effectiveMastery =
+          HierarchicalAggregationEngine.calculateMicroMastery(
+              node.atomicTopicIds, _atomicMasteryStates);
       final existingState = _nodeStates[node.id];
 
       _nodeStates[node.id] = NodeRuntimeState(
         nodeId: node.id,
         mastery: effectiveMastery,
         completed: CompletionEngine.isCompleted(
-          mastery: effectiveMastery, 
-          factMastery: progress.factMastery, 
+          mastery: effectiveMastery,
+          factMastery: progress.factMastery,
           revisionLevel: progress.revisionLevel,
-          factCount: node.factCount, 
+          factCount: node.factCount,
         ),
         activeBattle: existingState?.activeBattle ?? false,
         revisionLevel: progress.revisionLevel,
@@ -419,18 +436,30 @@ class KnowledgeEngine extends ChangeNotifier {
         evidenceScore: progress.evidenceScore,
       );
     }
-    debugPrint('🔱 DELTA AGGREGATION: ${changedNodeIds.length} nodes refreshed.');
+    debugPrint(
+        '🔱 DELTA AGGREGATION: ${changedNodeIds.length} nodes refreshed.');
 
     // 🔱 Update Hierarchical Maps (O(K))
-    final nodes = changedNodeIds.map((id) => _graph!.getNode(id)).whereType<MicroTopicNode>().toList();
-    final Map<String, double> microMastery = {for (var n in nodes) n.id: _nodeStates[n.id]?.mastery ?? 0.0};
+    final nodes = changedNodeIds
+        .map((id) => _graph!.getNode(id))
+        .whereType<MicroTopicNode>()
+        .toList();
+    final Map<String, double> microMastery = {
+      for (var n in nodes) n.id: _nodeStates[n.id]?.mastery ?? 0.0
+    };
     final Map<String, double> microCoverage = {
-      for (var n in nodes) n.id: HierarchicalAggregationEngine.calculateMicroCoverage(n.atomicTopicIds, _atomicCoverageStates)
+      for (var n in nodes)
+        n.id: HierarchicalAggregationEngine.calculateMicroCoverage(
+            n.atomicTopicIds, _atomicCoverageStates)
     };
 
     // Update global subject maps for the affected subjects
-    _subjectMastery.addAll(HierarchicalAggregationEngine.aggregateToSubjectMastery(nodes, microMastery));
-    _subjectCoverage.addAll(HierarchicalAggregationEngine.aggregateToSubjectCoverage(nodes, microCoverage));
+    _subjectMastery.addAll(
+        HierarchicalAggregationEngine.aggregateToSubjectMastery(
+            nodes, microMastery));
+    _subjectCoverage.addAll(
+        HierarchicalAggregationEngine.aggregateToSubjectCoverage(
+            nodes, microCoverage));
   }
 
   void _applyProgressToStates() {
@@ -456,39 +485,71 @@ class KnowledgeEngine extends ChangeNotifier {
 
     // 🔱 2. Risk Analytics (Document 35)
     // Only update atomic risks for changed nodes to maintain O(K)
-    final targetNodes = changedNodeIds != null 
-        ? changedNodeIds.map((id) => _graph!.getNode(id)).whereType<MicroTopicNode>().toList()
+    final targetNodes = changedNodeIds != null
+        ? changedNodeIds
+            .map((id) => _graph!.getNode(id))
+            .whereType<MicroTopicNode>()
+            .toList()
         : nodes;
 
     for (final node in targetNodes) {
       for (final atomicId in node.atomicTopicIds) {
         final mastery = _atomicMasteryStates[atomicId];
         final coverage = _atomicCoverageStates[atomicId];
-        final progress = _userProgressMap[node.id] ?? UserProgress.empty(node.id);
-        
+        final progress =
+            _userProgressMap[node.id] ?? UserProgress.empty(node.id);
+
         if (mastery == null || coverage == null) continue;
 
         _atomicRiskStates[atomicId] = RiskEngine.calculateAtomic(
           atomicTopicId: atomicId,
           coverage: coverage,
           mastery: mastery,
-          assessmentWeakness: 1.0 - (progress.assessmentEvidence > 0 ? progress.assessmentEvidence : (progress.battlesWon / max(1, progress.battlesWon + progress.battlesLost))),
-          recencyWeakness: MasteryDecayEngine.calculateRetention(lastEvidenceAt: mastery.lastEvidenceAt) < 0.5 ? 1.0 : 0.0,
+          assessmentWeakness: 1.0 -
+              (progress.assessmentEvidence > 0
+                  ? progress.assessmentEvidence
+                  : (progress.battlesWon /
+                      max(1, progress.battlesWon + progress.battlesLost))),
+          recencyWeakness: MasteryDecayEngine.calculateRetention(
+                      lastEvidenceAt: mastery.lastEvidenceAt) <
+                  0.5
+              ? 1.0
+              : 0.0,
           previousState: _atomicRiskStates[atomicId],
         );
       }
     }
 
     final globalCascadeRisk = _graph!.getGlobalCascadeRisk(_nodeStates);
-    final avgAtomicRisk = _atomicRiskStates.isEmpty 
-        ? 0.0 
-        : _atomicRiskStates.values.fold(0.0, (sum, r) => sum + (r.score / 100)) / _atomicRiskStates.length;
+    final avgAtomicRisk = _atomicRiskStates.isEmpty
+        ? 0.0
+        : _atomicRiskStates.values
+                .fold(0.0, (sum, r) => sum + (r.score / 100)) /
+            _atomicRiskStates.length;
 
-    _riskState = RiskEngine.calculate(
-      coverage: _coverageState!,
-      atomicWeaknessRisk: avgAtomicRisk,
-      cascadeRisk: globalCascadeRisk,
-    );
+    final hasStudentEvidence = _nodeStates.values.any((state) =>
+        state.evidenceScore > 0 ||
+        state.totalStudyMinutes > 0 ||
+        state.battlesWon > 0 ||
+        state.battlesLost > 0 ||
+        state.completed);
+
+    // No calibration evidence means risk is unknown, not HIGH. The raw
+    // coverage/mastery formula would otherwise convert an untouched syllabus
+    // into a false failure prediction before the student's first assessment.
+    _riskState = hasStudentEvidence
+        ? RiskEngine.calculate(
+            coverage: _coverageState!,
+            atomicWeaknessRisk: avgAtomicRisk,
+            cascadeRisk: globalCascadeRisk,
+          )
+        : const RiskState(
+            overallRisk: 0.0,
+            coverageRisk: 0.0,
+            masteryRisk: 0.0,
+            weaknessRisk: 0.0,
+            highRisk: false,
+          );
 
     // 🔱 3. Momentum & Readiness
     _momentumState = MomentumEngine.calculate(
@@ -496,7 +557,8 @@ class KnowledgeEngine extends ChangeNotifier {
       states: _nodeStates,
     );
 
-    final avgMastery = HierarchicalAggregationEngine.aggregateToMissionMastery(_subjectMastery);
+    final avgMastery = HierarchicalAggregationEngine.aggregateToMissionMastery(
+        _subjectMastery);
 
     _readinessState = ReadinessEngine.calculate(
       coverage: _coverageState!,
@@ -508,8 +570,8 @@ class KnowledgeEngine extends ChangeNotifier {
 
     // 🔱 4. Forecasting (Document 32)
     _successProbability = ForecastingEngine.calculateSuccessProbability(
-      readiness: _readinessState!, 
-      risk: _riskState!, 
+      readiness: _readinessState!,
+      risk: _riskState!,
       examDifficulty: _activeRecruitment?.examDifficulty ?? 0.6,
     );
 
@@ -549,7 +611,7 @@ class KnowledgeEngine extends ChangeNotifier {
     double scrollDepthPercent = 0.0,
   }) async {
     if (!_isInitialized) return;
-    
+
     // 🔱 EVIDENCE LAW (Article 7)
     // Evidence is only valid if it meets the physical ingestion thresholds.
     // Minimum 2 minutes of dwell time and 70% scroll depth for full evidence.
@@ -561,7 +623,8 @@ class KnowledgeEngine extends ChangeNotifier {
     }
 
     if (physicalEvidence == 0.0) {
-      debugPrint('🔱 KNOWLEDGE: Ingestion failed. Evidence below physical threshold.');
+      debugPrint(
+          '🔱 KNOWLEDGE: Ingestion failed. Evidence below physical threshold.');
       return;
     }
 
@@ -571,21 +634,28 @@ class KnowledgeEngine extends ChangeNotifier {
         'readingEvidence': physicalEvidence,
         'revisionLevel': 1,
         'lastReviewed': DateTime.now().toIso8601String(),
-        'totalStudyMinutes': dwellTimeMinutes, // 🔱 Audit Fix: Precision restored
+        'totalStudyMinutes':
+            dwellTimeMinutes, // 🔱 Audit Fix: Precision restored
       },
     );
-    
-    debugPrint('🔱 KNOWLEDGE: Reading evidence ($physicalEvidence) recorded for $nodeId.');
+
+    debugPrint(
+        '🔱 KNOWLEDGE: Reading evidence ($physicalEvidence) recorded for $nodeId.');
   }
 
   MicroTopicNode? getNode(String id) => _graph?.getNode(id);
   NodeRuntimeState? getState(String nodeId) => _nodeStates[nodeId];
-  AtomicMasteryState? getAtomicMastery(String atomicId) => _atomicMasteryStates[atomicId];
-  AtomicCoverageState? getAtomicCoverage(String atomicId) => _atomicCoverageStates[atomicId];
-  AtomicRiskState? getAtomicRisk(String atomicId) => _atomicRiskStates[atomicId];
-  
-  double getSubjectMastery(String subjectId) => _subjectMastery[subjectId] ?? 0.0;
-  double getSubjectCoverage(String subjectId) => _subjectCoverage[subjectId] ?? 0.0;
+  AtomicMasteryState? getAtomicMastery(String atomicId) =>
+      _atomicMasteryStates[atomicId];
+  AtomicCoverageState? getAtomicCoverage(String atomicId) =>
+      _atomicCoverageStates[atomicId];
+  AtomicRiskState? getAtomicRisk(String atomicId) =>
+      _atomicRiskStates[atomicId];
+
+  double getSubjectMastery(String subjectId) =>
+      _subjectMastery[subjectId] ?? 0.0;
+  double getSubjectCoverage(String subjectId) =>
+      _subjectCoverage[subjectId] ?? 0.0;
 
   List<MicroTopicNode> getRecommendations({int limit = 5}) {
     return _graph?.getAdaptiveRecommendations(_nodeStates, limit: limit) ?? [];
@@ -604,14 +674,14 @@ class KnowledgeEngine extends ChangeNotifier {
     _isLoading = true;
     _activeRecruitment = recruitment;
     _graph = KnowledgeGraph(nodes);
-    
+
     _userProgressMap.clear();
     for (var p in progress) {
       _userProgressMap[p.nodeId] = p;
     }
 
     _isInitialized = true;
-    
+
     _tryRefresh();
     _isLoading = false;
     notifyListeners();
@@ -638,14 +708,14 @@ class KnowledgeEngine extends ChangeNotifier {
     _isLoading = false;
     _isHydrating = false;
     _isInitialized = false;
-    
+
     _activeRecruitment = null;
     _userProgressMap.clear();
     _nodeStates.clear();
     _atomicMasteryStates.clear();
     _atomicCoverageStates.clear();
     _atomicRiskStates.clear();
-    
+
     _coverageState = null;
     _riskState = null;
     _momentumState = null;
@@ -657,7 +727,7 @@ class KnowledgeEngine extends ChangeNotifier {
 
     _subjectMastery.clear();
     _subjectCoverage.clear();
-    
+
     notifyListeners();
   }
 
@@ -713,8 +783,11 @@ class KnowledgeEngine extends ChangeNotifier {
       }
 
       // 3. Non-Synthetic, Non-Hold, Non-Stale
-      if (node.isSynthetic || node.isStructuralHold || node.isStale ||
-          node.description == "Materialized via RELIABILITY FF01 progressive publication.") {
+      if (node.isSynthetic ||
+          node.isStructuralHold ||
+          node.isStale ||
+          node.description ==
+              "Materialized via RELIABILITY FF01 progressive publication.") {
         continue;
       }
 
@@ -724,10 +797,14 @@ class KnowledgeEngine extends ChangeNotifier {
       }
 
       // 5. Governance Metadata Identifiers
-      if (node.canonicalAtomId == null || node.canonicalAtomId!.isEmpty ||
-          node.canonicalMissionId == null || node.canonicalMissionId != activeMissionId ||
-          node.approvedSourceId == null || node.approvedSourceId!.isEmpty ||
-          node.verificationId == null || node.verificationId!.isEmpty ||
+      if (node.canonicalAtomId == null ||
+          node.canonicalAtomId!.isEmpty ||
+          node.canonicalMissionId == null ||
+          node.canonicalMissionId != activeMissionId ||
+          node.approvedSourceId == null ||
+          node.approvedSourceId!.isEmpty ||
+          node.verificationId == null ||
+          node.verificationId!.isEmpty ||
           node.contentRegistryId.isEmpty) {
         continue;
       }

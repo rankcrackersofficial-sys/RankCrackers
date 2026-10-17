@@ -27,10 +27,14 @@ class SessionUser {
   /// Always returns "JEE Main 2027" for JEE Main missions, NEVER internal "jee_main_2026".
   String get displayExamName {
     final clean = examName.trim();
-    if (clean.isEmpty || clean == 'unresolved' || clean == 'Unresolved Mission') {
-      return 'JEE Main 2027';
+    if (clean.isEmpty ||
+        clean == 'unresolved' ||
+        clean == 'Unresolved Mission') {
+      return 'Mission not selected';
     }
-    if (clean.toLowerCase().contains('jee main') || clean == 'jee_main_2026' || clean == 'jee_main_2027') {
+    if (clean.toLowerCase().contains('jee main') ||
+        clean == 'jee_main_2026' ||
+        clean == 'jee_main_2027') {
       return 'JEE Main 2027';
     }
     return clean;
@@ -41,9 +45,10 @@ class SessionUser {
       try {
         final user = FirebaseAuth.instance.currentUser;
         final cachedUid = SessionManager.getFirebaseUidSync();
-        
+
         // Guard against stale previous-mission cache first frame leakage
-        final isStaleOrLoggedOut = user == null || (cachedUid != null && user.uid != cachedUid);
+        final isStaleOrLoggedOut =
+            user == null || (cachedUid != null && user.uid != cachedUid);
 
         if (isStaleOrLoggedOut) {
           return SessionUser(
@@ -89,7 +94,8 @@ final sessionUserProvider = FutureProvider<SessionUser>((ref) async {
     try {
       final user = FirebaseAuth.instance.currentUser;
       final cachedUid = await SessionManager.getFirebaseUid();
-      final isStaleOrLoggedOut = user == null || (cachedUid != null && user.uid != cachedUid);
+      final isStaleOrLoggedOut =
+          user == null || (cachedUid != null && user.uid != cachedUid);
 
       if (isStaleOrLoggedOut) {
         return SessionUser(
@@ -134,7 +140,9 @@ final sessionUserProvider = FutureProvider<SessionUser>((ref) async {
 /// never receive null or freeze on uninitialized async state.
 final activeSessionUserProvider = Provider<SessionUser>((ref) {
   final asyncUser = ref.watch(sessionUserProvider).valueOrNull;
-  if (asyncUser != null && asyncUser.uid.isNotEmpty && asyncUser.examId != 'unresolved') {
+  if (asyncUser != null &&
+      asyncUser.uid.isNotEmpty &&
+      asyncUser.examId != 'unresolved') {
     return asyncUser;
   }
   return SessionUser.getSync();

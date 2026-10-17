@@ -20,7 +20,13 @@ function classifyRouting(pageNumber, nativeText, totalPages) {
     .trim();
   const letters = content.match(/\p{L}/gu) || [];
   if (letters.length === 0) return 'SCANNED';
-  if (content.length < 100) return 'AMBIGUOUS';
+  const words = content.split(/\s+/).filter(Boolean);
+  // Official PDFs frequently contain short but valid index, table, or
+  // section-heading pages. Once a real text layer is present, routing must
+  // not fail closed merely because the page is concise; empty text is the
+  // only native-layer signal that requires OCR routing.
+  const structuredHeading = words.length >= 5 && letters.length >= 20;
+  if (content.length < 100 && !structuredHeading) return 'AMBIGUOUS';
   return 'NATIVE';
 }
 

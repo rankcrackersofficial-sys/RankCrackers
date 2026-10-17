@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 class FounderIdentity {
   static const founderUid = 'CswjiDlFjrcdHyyEjQ8oGIPYv1h1';
   static const founderEmails = {
-    'rankcrackersofficial@gmail.com',
+    'founder.rcofficial@gmail.com',
   };
 
   static bool isFounderUser(User? user) {

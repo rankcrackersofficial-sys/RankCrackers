@@ -18,6 +18,7 @@ import '../../../../core/knowledge/knowledge_engine.dart';
 import '../../../../core/knowledge/knowledge_engine_provider.dart';
 import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../../../core/utils/responsive_helper.dart';
+import '../../../auth/domain/policies/canonical_phone_binding_policy.dart';
 import 'package:rank_crackers/features/auth/presentation/providers/auth_provider.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
@@ -181,13 +182,27 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
               if (controller.text.isEmpty) return;
               final user = FirebaseAuth.instance.currentUser;
               if (user != null) {
+                final canonical =
+                    CanonicalPhoneBindingPolicy.canonicalVerifiedPhone(user);
+                if (canonical == null) {
+                  if (context.mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(
+                          'Verify this number with phone sign-in before saving it.',
+                        ),
+                      ),
+                    );
+                  }
+                  return;
+                }
                 await FirebaseFirestore.instance
                     .collection('users')
                     .doc(user.uid)
                     .update({
-                  'phone': controller.text,
+                  'mobile': canonical,
                 });
-                await SessionManager.saveStudentMobile(controller.text);
+                await SessionManager.saveStudentMobile(canonical);
                 ref.invalidate(sessionUserProvider);
               }
               if (context.mounted) Navigator.pop(context);

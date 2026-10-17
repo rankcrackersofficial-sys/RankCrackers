@@ -44,14 +44,28 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     final momentum = knowledge.momentumState;
 
     final protocolStateAsync = ref.watch(crucibleProtocolStateProvider);
+    final missionId = sessionUser?.examId ?? '';
+    final publishedDays = missionId.isEmpty
+        ? const <Map<String, dynamic>>[]
+        : ref.watch(publishedCrucibleDaysProvider(missionId)).valueOrNull ??
+            const <Map<String, dynamic>>[];
+    final publishedTests = missionId.isEmpty
+        ? const <Map<String, dynamic>>[]
+        : ref.watch(publishedCrucibleTestsProvider(missionId)).valueOrNull ??
+            const <Map<String, dynamic>>[];
 
     return protocolStateAsync.when(
       data: (protocolState) {
-        if (protocolState == null) {
+        final selectedMission = sessionUser?.examId ?? '';
+        final isJeeSchedule = selectedMission == 'jee_main_2026' ||
+            selectedMission == 'jee_main_2027';
+        if (protocolState == null || !isJeeSchedule) {
           return _buildPreparingState(
             sessionUser: sessionUser,
             readiness: readiness,
             momentum: momentum,
+            publishedDayCount: publishedDays.length,
+            publishedTestCount: publishedTests.length,
           );
         }
         return _buildCrucibleContent(
@@ -81,6 +95,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required SessionUser? sessionUser,
     required dynamic readiness,
     required dynamic momentum,
+    int publishedDayCount = 0,
+    int publishedTestCount = 0,
   }) {
     final scheme = Theme.of(context).colorScheme;
     return Scaffold(
@@ -140,7 +156,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Crucible 98-day continuous orbit is not yet active for ${sessionUser?.examName ?? "this mission"}.\n\nYour schedule will activate as soon as official mission parameters are published.',
+                          publishedDayCount > 0
+                              ? '${sessionUser?.examName ?? "This mission"} has $publishedDayCount published Crucible day(s) and $publishedTestCount published test(s).\n\nYour personal orbit will activate when your mission protocol state is created.'
+                              : 'The mission schedule is not published yet for ${sessionUser?.examName ?? "this mission"}.',
                           textAlign: TextAlign.center,
                           style: AppTypography.body.copyWith(
                             fontSize: 13,
@@ -183,14 +201,20 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
       now: now,
     );
 
-    final currentPhase = CrucibleCanonicalScheduleRegistry.getPhaseForCycleDay(currentCycleDay);
-    final isRebuild = CrucibleCanonicalScheduleRegistry.isRebuildDay(currentCycleDay);
-    final isMacro = CrucibleCanonicalScheduleRegistry.isMacroDay(currentCycleDay);
+    final currentPhase =
+        CrucibleCanonicalScheduleRegistry.getPhaseForCycleDay(currentCycleDay);
+    final isRebuild =
+        CrucibleCanonicalScheduleRegistry.isRebuildDay(currentCycleDay);
+    final isMacro =
+        CrucibleCanonicalScheduleRegistry.isMacroDay(currentCycleDay);
 
-    final activeSchedule = CrucibleCanonicalScheduleRegistry.getScheduleForCycleDay(currentCycleDay);
+    final activeSchedule =
+        CrucibleCanonicalScheduleRegistry.getScheduleForCycleDay(
+            currentCycleDay);
 
     // Calculate position inside the 2-day schedule
-    final isDayB = activeSchedule != null && currentCycleDay == activeSchedule.endCycleDay;
+    final isDayB =
+        activeSchedule != null && currentCycleDay == activeSchedule.endCycleDay;
     final dayInScheduleLabel = isDayB ? 'Day B of 2' : 'Day A of 2';
 
     return Scaffold(
@@ -205,7 +229,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 CommandHeader(
                   userName: sessionUser?.name ?? 'Candidate',
                   userPhoto: sessionUser?.photo,
-                  examName: sessionUser?.examName ?? 'JEE Main 2027',
+                  examName: sessionUser?.examName ?? 'Mission',
                   readiness: readiness,
                   momentum: momentum,
                   missionEvidenceVerified: false,
@@ -228,7 +252,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       ),
                       const SizedBox(height: 8),
                       // 🔱 1. TOP COMPACT HEADER SECTION
-                      _buildCompactHeader(currentCycleDay, currentPhase, orbitNumber),
+                      _buildCompactHeader(
+                        currentCycleDay,
+                        currentPhase,
+                        orbitNumber,
+                        sessionUser?.examName ?? 'Mission',
+                      ),
                       const SizedBox(height: 16),
 
                       // 🔱 2. TODAY'S ACTIVE SCHEDULE CARD
@@ -271,7 +300,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // ---------------------------------------------------------------------------
   // SECTION 1: COMPACT HEADER SECTION (<= 110dp)
   // ---------------------------------------------------------------------------
-  Widget _buildCompactHeader(int currentCycleDay, int currentPhase, int orbitNumber) {
+  Widget _buildCompactHeader(
+      int currentCycleDay, int currentPhase, int orbitNumber, String examName) {
     final scheme = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -284,10 +314,11 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               decoration: BoxDecoration(
                 color: AppColors.gold.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(4),
-                border: Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
+                border:
+                    Border.all(color: AppColors.gold.withValues(alpha: 0.3)),
               ),
-              child: const Text(
-                'JEE MAIN 2027',
+              child: Text(
+                examName.toUpperCase(),
                 style: TextStyle(
                   color: AppColors.gold,
                   fontSize: 10,
@@ -351,28 +382,38 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildTagChip('REBUILD WINDOW', AppColors.gold),
-                Text('Day $currentCycleDay of 98', style: AppTypography.subtitle),
+                Text('Day $currentCycleDay of 98',
+                    style: AppTypography.subtitle),
               ],
             ),
             const SizedBox(height: 12),
             Text(
               'Block $currentPhase Rebuild Window',
-              style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 17),
+              style: AppTypography.section
+                  .copyWith(color: scheme.onSurface, fontSize: 17),
             ),
             const SizedBox(height: 6),
             Text(
               'No assessment evidence yet. Use this window to revisit missed or unfinished learning.',
-              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
+              style: AppTypography.body.copyWith(
+                  color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
             ),
             const SizedBox(height: 14),
             OutlinedButton.icon(
               style: OutlinedButton.styleFrom(
                 side: const BorderSide(color: AppColors.gold),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8)),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
               ),
-              icon: const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 16),
-              label: const Text('EXPLORE SYLLABUS', style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.w700)),
+              icon: const Icon(Icons.menu_book_rounded,
+                  color: AppColors.gold, size: 16),
+              label: const Text('EXPLORE SYLLABUS',
+                  style: TextStyle(
+                      color: AppColors.gold,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700)),
               onPressed: () => context.push(AppRoutes.syllabus),
             ),
           ],
@@ -390,18 +431,21 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildTagChip('MACRO CITADEL', AppColors.gold),
-                Text('Day $currentCycleDay of 98', style: AppTypography.subtitle),
+                Text('Day $currentCycleDay of 98',
+                    style: AppTypography.subtitle),
               ],
             ),
             const SizedBox(height: 12),
             Text(
               'Block $currentPhase Comprehensive Milestone',
-              style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 17),
+              style: AppTypography.section
+                  .copyWith(color: scheme.onSurface, fontSize: 17),
             ),
             const SizedBox(height: 6),
             Text(
               'Block synthesis training milestone (50 Questions / 120 Minutes).',
-              style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
+              style: AppTypography.body.copyWith(
+                  color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
             ),
             const SizedBox(height: 14),
             Container(
@@ -413,12 +457,14 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.info_outline_rounded, color: scheme.onSurfaceVariant, size: 16),
+                  Icon(Icons.info_outline_rounded,
+                      color: scheme.onSurfaceVariant, size: 16),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
                       'Macro assessment is not ready yet.',
-                      style: AppTypography.subtitle.copyWith(color: scheme.onSurfaceVariant, fontSize: 11),
+                      style: AppTypography.subtitle.copyWith(
+                          color: scheme.onSurfaceVariant, fontSize: 11),
                     ),
                   ),
                 ],
@@ -467,7 +513,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              _buildTagChip('${activeSchedule.formattedCode} • $dayInScheduleLabel', AppColors.gold),
+              _buildTagChip(
+                  '${activeSchedule.formattedCode} • $dayInScheduleLabel',
+                  AppColors.gold),
               Text(
                 activeSchedule.subject.toUpperCase(),
                 style: TextStyle(
@@ -504,7 +552,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Row(
             children: [
               Icon(
-                hasContent ? Icons.check_circle_outline_rounded : Icons.radio_button_unchecked_rounded,
+                hasContent
+                    ? Icons.check_circle_outline_rounded
+                    : Icons.radio_button_unchecked_rounded,
                 size: 14,
                 color: hasContent ? AppColors.success : scheme.onSurfaceVariant,
               ),
@@ -514,7 +564,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     ? 'Learning content available'
                     : 'Learning content not available yet',
                 style: TextStyle(
-                  color: hasContent ? AppColors.success : scheme.onSurfaceVariant,
+                  color:
+                      hasContent ? AppColors.success : scheme.onSurfaceVariant,
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.5,
@@ -531,8 +582,11 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 flex: 3,
                 child: ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: hasContent ? AppColors.gold : scheme.surfaceContainerHighest,
-                    foregroundColor: hasContent ? scheme.onPrimary : scheme.onSurfaceVariant,
+                    backgroundColor: hasContent
+                        ? AppColors.gold
+                        : scheme.surfaceContainerHighest,
+                    foregroundColor:
+                        hasContent ? scheme.onPrimary : scheme.onSurfaceVariant,
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
@@ -549,7 +603,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     ),
                   ),
                   onPressed: hasContent
-                      ? () => _handleLearnAction(activeSchedule, resolvedEntries)
+                      ? () =>
+                          _handleLearnAction(activeSchedule, resolvedEntries)
                       : () => _handleUnavailableContent(activeSchedule),
                 ),
               ),
@@ -591,7 +646,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.shield_outlined, color: scheme.onSurfaceVariant, size: 15),
+                Icon(Icons.shield_outlined,
+                    color: scheme.onSurfaceVariant, size: 15),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
@@ -628,7 +684,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         canonicalNodeId: entry.canonicalNodeId,
         revisionId: entry.lessonRevision,
         subject: entry.subject,
-        topicTitle: entry.topic.isNotEmpty ? entry.topic : schedule.canonicalTitle,
+        topicTitle:
+            entry.topic.isNotEmpty ? entry.topic : schedule.canonicalTitle,
         factSemantics: entry.factSemantics,
         atomicFactIds: entry.atomicFactIds,
       );
@@ -653,19 +710,22 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             children: [
               Text(
                 '${schedule.formattedCode} — ${schedule.canonicalTitle}',
-                style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 16),
+                style: AppTypography.section
+                    .copyWith(color: scheme.onSurface, fontSize: 16),
               ),
               const SizedBox(height: 4),
               Text(
                 'Select a learning module to begin (${entries.length} modules available):',
-                style: AppTypography.subtitle.copyWith(color: scheme.onSurfaceVariant, fontSize: 12),
+                style: AppTypography.subtitle
+                    .copyWith(color: scheme.onSurfaceVariant, fontSize: 12),
               ),
               const SizedBox(height: 12),
               Flexible(
                 child: ListView.separated(
                   shrinkWrap: true,
                   itemCount: entries.length,
-                  separatorBuilder: (_, __) => Divider(color: scheme.outline, height: 1),
+                  separatorBuilder: (_, __) =>
+                      Divider(color: scheme.outline, height: 1),
                   itemBuilder: (context, index) {
                     final e = entries[index];
                     return ListTile(
@@ -676,14 +736,21 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         backgroundColor: AppColors.gold.withValues(alpha: 0.15),
                         child: Text(
                           '${index + 1}',
-                          style: const TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold),
+                          style: const TextStyle(
+                              color: AppColors.gold,
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       title: Text(
                         e.topic.isNotEmpty ? e.topic : 'Module ${index + 1}',
-                        style: TextStyle(color: scheme.onSurface, fontSize: 13, fontWeight: FontWeight.w600),
+                        style: TextStyle(
+                            color: scheme.onSurface,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600),
                       ),
-                      trailing: Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant, size: 18),
+                      trailing: Icon(Icons.chevron_right_rounded,
+                          color: scheme.onSurfaceVariant, size: 18),
                       onTap: () {
                         Navigator.pop(ctx);
                         final launchArgs = DigiBookLaunchArgs(
@@ -691,11 +758,15 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                           canonicalNodeId: e.canonicalNodeId,
                           revisionId: e.lessonRevision,
                           subject: e.subject,
-                          topicTitle: e.topic.isNotEmpty ? e.topic : schedule.canonicalTitle,
+                          topicTitle: e.topic.isNotEmpty
+                              ? e.topic
+                              : schedule.canonicalTitle,
                           factSemantics: e.factSemantics,
                           atomicFactIds: e.atomicFactIds,
                         );
-                        this.context.push(AppRoutes.digibookReader, extra: launchArgs);
+                        this
+                            .context
+                            .push(AppRoutes.digibookReader, extra: launchArgs);
                       },
                     );
                   },
@@ -725,18 +796,21 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
             children: [
               Row(
                 children: [
-                  const Icon(Icons.info_outline_rounded, color: AppColors.gold, size: 20),
+                  const Icon(Icons.info_outline_rounded,
+                      color: AppColors.gold, size: 20),
                   const SizedBox(width: 10),
                   Text(
                     'Learning Content Not Available Yet',
-                    style: AppTypography.section.copyWith(color: scheme.onSurface, fontSize: 15),
+                    style: AppTypography.section
+                        .copyWith(color: scheme.onSurface, fontSize: 15),
                   ),
                 ],
               ),
               const SizedBox(height: 10),
               Text(
                 'Learning content for "${schedule.canonicalTitle}" (${schedule.formattedCode}) is not available yet. You may explore related syllabus topics.',
-                style: AppTypography.body.copyWith(color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
+                style: AppTypography.body.copyWith(
+                    color: scheme.onSurfaceVariant, fontSize: 13, height: 1.4),
               ),
               const SizedBox(height: 16),
               SizedBox(
@@ -746,13 +820,16 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     backgroundColor: AppColors.gold,
                     foregroundColor: scheme.onPrimary,
                     padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () {
                     Navigator.pop(ctx);
                     context.push(AppRoutes.syllabus);
                   },
-                  child: const Text('EXPLORE SYLLABUS', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
+                  child: const Text('EXPLORE SYLLABUS',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
                 ),
               ),
             ],
@@ -883,8 +960,10 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // ---------------------------------------------------------------------------
   Widget _buildMilestonesCard(int currentCycleDay, int currentPhase) {
     final scheme = Theme.of(context).colorScheme;
-    final nextRebuildDay = currentPhase * 14 - 1; // e.g. Day 13 for Phase 1, Day 27 for Phase 2...
-    final nextMacroDay = currentPhase * 14; // e.g. Day 14 for Phase 1, Day 28 for Phase 2...
+    final nextRebuildDay =
+        currentPhase * 14 - 1; // e.g. Day 13 for Phase 1, Day 27 for Phase 2...
+    final nextMacroDay =
+        currentPhase * 14; // e.g. Day 14 for Phase 1, Day 28 for Phase 2...
 
     return DarkCard(
       padding: const EdgeInsets.all(18),
@@ -904,7 +983,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           _buildMilestoneRow(
             icon: Icons.build_circle_outlined,
             title: 'Rebuild Day • Day $nextRebuildDay',
-            subtitle: 'Personalized concept repair window for Block $currentPhase',
+            subtitle:
+                'Personalized concept repair window for Block $currentPhase',
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 6),
@@ -913,7 +993,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           _buildMilestoneRow(
             icon: Icons.flag_outlined,
             title: 'Macro Citadel • Day $nextMacroDay',
-            subtitle: 'Block $currentPhase synthesis assessment (50 Questions / 120 Min)',
+            subtitle:
+                'Block $currentPhase synthesis assessment (50 Questions / 120 Min)',
           ),
         ],
       ),
@@ -1008,13 +1089,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     color: isCurrent
                         ? AppColors.gold.withValues(alpha: 0.18)
                         : (isPast
-                            ? scheme.surfaceContainerHighest.withValues(alpha: 0.7)
+                            ? scheme.surfaceContainerHighest
+                                .withValues(alpha: 0.7)
                             : scheme.surface.withValues(alpha: 0.35)),
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
-                      color: isCurrent
-                          ? AppColors.gold
-                          : scheme.outline,
+                      color: isCurrent ? AppColors.gold : scheme.outline,
                       width: isCurrent ? 1.4 : 1.0,
                     ),
                   ),
@@ -1023,7 +1103,11 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text(
                         'B$phaseNum',
                         style: TextStyle(
-                          color: isCurrent ? AppColors.gold : (isPast ? scheme.onSurface : scheme.onSurfaceVariant),
+                          color: isCurrent
+                              ? AppColors.gold
+                              : (isPast
+                                  ? scheme.onSurface
+                                  : scheme.onSurfaceVariant),
                           fontSize: 11,
                           fontWeight: FontWeight.w800,
                         ),
@@ -1032,7 +1116,9 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       Text(
                         '${(phaseNum - 1) * 14 + 1}-${phaseNum * 14}d',
                         style: TextStyle(
-                          color: isCurrent ? AppColors.gold : scheme.onSurfaceVariant,
+                          color: isCurrent
+                              ? AppColors.gold
+                              : scheme.onSurfaceVariant,
                           fontSize: 8,
                         ),
                       ),
@@ -1073,7 +1159,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   color: scheme.surfaceContainerHighest.withValues(alpha: 0.55),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Icon(Icons.military_tech_outlined, color: scheme.onSurfaceVariant, size: 18),
+                child: Icon(Icons.military_tech_outlined,
+                    color: scheme.onSurfaceVariant, size: 18),
               ),
               const SizedBox(width: 12),
               Expanded(
