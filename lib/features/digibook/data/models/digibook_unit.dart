@@ -5,9 +5,10 @@ import 'package:equatable/equatable.dart';
 class DigiBookUnit extends Equatable {
   final String id;
   final String atomicTopicId; // Mandatory Syllabus Mapping
+  final List<String> atomicTopicIds;
   final String chapterId;
   final String realmId;
-  
+
   final String concept;
   final String definition;
   final String explanation;
@@ -18,7 +19,7 @@ class DigiBookUnit extends Equatable {
   final List<String> pyqIds;
   final int pyqCount;
   final double pyqWeightage;
-  
+
   // CRUCIBLE DEPENDENCY (GAP-5)
   final bool crucibleMapped;
   final List<String> crucibleNodeIds;
@@ -30,6 +31,7 @@ class DigiBookUnit extends Equatable {
   const DigiBookUnit({
     required this.id,
     required this.atomicTopicId,
+    this.atomicTopicIds = const [],
     required this.chapterId,
     required this.realmId,
     required this.concept,
@@ -51,6 +53,7 @@ class DigiBookUnit extends Equatable {
     return {
       'id': id,
       'atomic_topic_id': atomicTopicId,
+      'atomicTopicIds': atomicTopicIds,
       'chapter_id': chapterId,
       'realm_id': realmId,
       'concept': concept,
@@ -73,6 +76,12 @@ class DigiBookUnit extends Equatable {
     return DigiBookUnit(
       id: map['id'] ?? '',
       atomicTopicId: map['atomic_topic_id'] ?? '',
+      atomicTopicIds: List<String>.from(
+        map['atomicTopicIds'] ??
+            (map['atomic_topic_id'] != null
+                ? [map['atomic_topic_id']]
+                : const []),
+      ),
       chapterId: map['chapter_id'] ?? '',
       realmId: map['realm_id'] ?? '',
       concept: map['concept'] ?? '',
@@ -92,5 +101,6 @@ class DigiBookUnit extends Equatable {
   }
 
   @override
-  List<Object?> get props => [id, atomicTopicId, chapterId, realmId, status, version];
+  List<Object?> get props =>
+      [id, atomicTopicId, atomicTopicIds, chapterId, realmId, status, version];
 }

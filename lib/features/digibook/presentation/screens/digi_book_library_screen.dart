@@ -327,6 +327,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
             const <DigiBookUnit>[];
     if (bridge.isInitialized) {
       bridge.activateMission(sessionUser.examId);
+      if (liveUnits.isNotEmpty) bridge.activateLiveUnits(liveUnits);
     }
     if (_selectedSubject.isEmpty && syllabusTree.isNotEmpty) {
       _selectedSubject = syllabusTree.first.title.toUpperCase();
@@ -898,6 +899,15 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
         subjects.fold<int>(0, (sum, item) => sum + item.topicCount);
     final totalAtomicKeys =
         subjects.fold<int>(0, (sum, item) => sum + item.atomCount);
+    final totalMicroTopics = subjects.fold<int>(0, (sum, subject) {
+      return sum +
+          subject.children.fold<int>(0, (unitSum, unit) {
+            return unitSum +
+                unit.children.fold<int>(0, (topicSum, topic) {
+                  return topicSum + topic.children.length;
+                });
+          });
+    });
 
     return DarkCard(
       padding: EdgeInsets.zero,
@@ -929,7 +939,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                         Text(
                             selectedNode == null
                                 ? 'No syllabus subjects loaded'
-                                : 'Total: $totalUnits units  •  $totalTopics topics  •  $totalAtomicKeys atomic coverage keys',
+                                : 'Official: $totalUnits units  •  $totalTopics topics  •  $totalMicroTopics micro topics  •  $totalAtomicKeys atomic topics',
                             style: TextStyle(
                                 color: scheme.onSurfaceVariant,
                                 fontSize: 10.5)),
@@ -940,6 +950,14 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                               style: TextStyle(
                                   color: scheme.onSurfaceVariant,
                                   fontSize: 9.5)),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Official syllabus topics are source-bound. Micro/atomic entries are derived RankCrackers study taxonomy with provenance.',
+                            style: TextStyle(
+                                color: scheme.onSurfaceVariant,
+                                fontSize: 8.8,
+                                height: 1.25),
+                          ),
                         ],
                       ],
                     ),

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import '../../data/models/digibook_unit.dart';
 import '../models/digibook_launch_args.dart';
 import 'digibook_revision_service.dart';
 
@@ -61,7 +62,9 @@ class DigiBookAuthorityEntry {
       workedExampleRefs: map['workedExampleRefs'] as List<dynamic>? ?? [],
       selfCheckRefs: map['selfCheckRefs'] as List<dynamic>? ?? [],
       privateLessonAuthorityPath: map['privateLessonAuthorityPath'] ?? '',
-      digiBookAuthorityCommit: map['DigiBookAuthorityCommit'] ?? map['digiBookAuthorityCommit'] ?? '',
+      digiBookAuthorityCommit: map['DigiBookAuthorityCommit'] ??
+          map['digiBookAuthorityCommit'] ??
+          '',
       factSemantics: map['factSemantics'] ?? 'CANARY/PARTIAL',
       assemblyStatus: map['assemblyStatus'] ?? '',
     );
@@ -105,6 +108,7 @@ class DigiBookCanonicalBridgeService {
   List<DigiBookAuthorityEntry> _sourceEntries = [];
   final Map<String, List<DigiBookAuthorityEntry>> _canonicalMap = {};
   final Map<String, DigiBookAuthorityEntry> _guMap = {};
+  final Map<String, Map<String, dynamic>> _liveLessonPayloads = {};
   bool _isInitialized = false;
 
   bool get isInitialized => _isInitialized;
@@ -122,8 +126,8 @@ class DigiBookCanonicalBridgeService {
           'docs/academic_review/digibook_authority_bridge_manifest.json');
     } catch (_) {
       // 2. Fallback to Direct File System (Desktop / Unit Test)
-      final manifestFile = File(
-          'docs/academic_review/digibook_authority_bridge_manifest.json');
+      final manifestFile =
+          File('docs/academic_review/digibook_authority_bridge_manifest.json');
       if (manifestFile.existsSync()) {
         jsonString = await manifestFile.readAsString();
       }
@@ -138,7 +142,8 @@ class DigiBookCanonicalBridgeService {
     final List<dynamic> lessonsList = data['lessons'] as List<dynamic>? ?? [];
 
     _sourceEntries = lessonsList
-        .map((e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
+        .map(
+            (e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
         .toList();
 
     _allEntries = List.of(_sourceEntries);
@@ -165,10 +170,56 @@ class DigiBookCanonicalBridgeService {
     final isJee = id == 'jee_main_2026' || id == 'jee_main_2027';
     final filtered = isJee
         ? _sourceEntries
-            .where((e) => e.canonicalNodeId.toLowerCase().startsWith('jee_main_'))
+            .where(
+                (e) => e.canonicalNodeId.toLowerCase().startsWith('jee_main_'))
             .toList()
         : <DigiBookAuthorityEntry>[];
     _allEntries = filtered;
+    _canonicalMap.clear();
+    _guMap.clear();
+    for (final entry in _allEntries) {
+      _guMap[entry.guId] = entry;
+      _canonicalMap.putIfAbsent(entry.canonicalNodeId, () => []).add(entry);
+    }
+  }
+
+  /// Bind verified Firestore DigiBook units to the canonical bridge. The
+  /// bundled manifest is intentionally JEE-only; live missions resolve from
+  /// student-visible, source-approved Firestore units.
+  void activateLiveUnits(List<DigiBookUnit> units) {
+    _allEntries = units.map((unit) {
+      final canonicalNodeId =
+          unit.id.startsWith('digi_') ? unit.id.substring(5) : unit.id;
+      final guId = unit.id;
+      _liveLessonPayloads[guId] = {
+        'revisionId': 'live_${unit.version}',
+        'topic': unit.concept,
+        'definition': unit.definition,
+        'explanation': unit.explanation,
+        'examples': unit.examples,
+        'keywords': unit.keywords,
+        'atomicFactIds': unit.atomicTopicIds,
+        'factSemantics': 'SOURCE_FACT_COMPLETE',
+      };
+      return DigiBookAuthorityEntry(
+        guId: guId,
+        subject: unit.keywords.isNotEmpty ? unit.keywords.first : '',
+        canonicalNodeId: canonicalNodeId,
+        topic: unit.concept,
+        lessonRevision: 'live_${unit.version}',
+        lessonSha256: '',
+        atomicFactIds: unit.atomicTopicIds,
+        sourceAuthorityRefs: const ['firestore:verified_digibook_unit'],
+        formulaRefs: const [],
+        misconceptionRefs: const [],
+        workedExampleRefs: const [],
+        selfCheckRefs: const [],
+        privateLessonAuthorityPath: '',
+        digiBookAuthorityCommit: 'live_${unit.version}',
+        factSemantics: 'SOURCE_FACT_COMPLETE',
+        assemblyStatus: 'VERIFIED_LIVE_UNIT',
+      );
+    }).toList();
     _canonicalMap.clear();
     _guMap.clear();
     for (final entry in _allEntries) {
@@ -182,7 +233,8 @@ class DigiBookCanonicalBridgeService {
     final List<dynamic> lessonsList = data['lessons'] as List<dynamic>? ?? [];
 
     _sourceEntries = lessonsList
-        .map((e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
+        .map(
+            (e) => DigiBookAuthorityEntry.fromMap(Map<String, dynamic>.from(e)))
         .toList();
     _allEntries = List.of(_sourceEntries);
 
@@ -234,9 +286,13 @@ class DigiBookCanonicalBridgeService {
   }
 
   /// Load private lesson raw content JSON for a given GU
-  Future<Map<String, dynamic>?> loadRawLessonContent(String guId, [String? explicitRevisionId]) async {
+  Future<Map<String, dynamic>?> loadRawLessonContent(String guId,
+      [String? explicitRevisionId]) async {
     final entry = getEntryByGuId(guId);
     if (entry == null) return null;
+
+    final livePayload = _liveLessonPayloads[guId];
+    if (livePayload != null) return livePayload;
 
     final revId = explicitRevisionId ?? entry.lessonRevision;
 
@@ -247,7 +303,8 @@ class DigiBookCanonicalBridgeService {
 
     // 2. Mobile Bundled Offline Asset Fallback
     try {
-      final jsonStr = await rootBundle.loadString('assets/data/digibook_lessons/$guId.json');
+      final jsonStr = await rootBundle
+          .loadString('assets/data/digibook_lessons/$guId.json');
       return jsonDecode(jsonStr) as Map<String, dynamic>;
     } catch (_) {}
 
@@ -286,9 +343,9 @@ class DigiBookCanonicalBridgeService {
     if (entry == null) return null;
 
     // Resolve current revision pointer dynamically
-    final currentRevId = await DigiBookRevisionService.instance
-            .resolveCurrentRevisionId(guId) ??
-        entry.lessonRevision;
+    final currentRevId =
+        await DigiBookRevisionService.instance.resolveCurrentRevisionId(guId) ??
+            entry.lessonRevision;
 
     final rawLesson = await loadRawLessonContent(guId, currentRevId);
 

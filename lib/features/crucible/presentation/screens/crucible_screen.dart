@@ -56,10 +56,15 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
 
     return protocolStateAsync.when(
       data: (protocolState) {
-        final selectedMission = sessionUser?.examId ?? '';
-        final isJeeSchedule = selectedMission == 'jee_main_2026' ||
-            selectedMission == 'jee_main_2027';
-        if (protocolState == null || !isJeeSchedule) {
+        if (publishedDays.isNotEmpty) {
+          return _buildPublishedStudySchedule(
+            sessionUser: sessionUser,
+            readiness: readiness,
+            momentum: momentum,
+            days: publishedDays,
+          );
+        }
+        if (protocolState == null) {
           return _buildPreparingState(
             sessionUser: sessionUser,
             readiness: readiness,
@@ -87,6 +92,97 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         sessionUser: sessionUser,
         readiness: readiness,
         momentum: momentum,
+      ),
+    );
+  }
+
+  Widget _buildPublishedStudySchedule({
+    required SessionUser? sessionUser,
+    required dynamic readiness,
+    required dynamic momentum,
+    required List<Map<String, dynamic>> days,
+  }) {
+    final scheme = Theme.of(context).colorScheme;
+    return Scaffold(
+      backgroundColor: scheme.surface,
+      body: TacticalNoirBackground(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CommandHeader(
+                userName: sessionUser?.name ?? 'Warrior',
+                userPhoto: sessionUser?.photo,
+                examName: sessionUser?.examName ?? 'SSC CGL 2026',
+                readiness: readiness,
+                momentum: momentum,
+                missionEvidenceVerified: true,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
+                child: Text('DAILY TRAINING PLAN',
+                    style: AppTypography.cardTitle.copyWith(
+                        color: scheme.onSurface,
+                        fontSize: 14,
+                        letterSpacing: 1.0)),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                    'Source-bound SSC syllabus study schedule • assessments remain locked until question verification.',
+                    style: AppTypography.body.copyWith(
+                        color: scheme.onSurfaceVariant,
+                        fontSize: 11,
+                        height: 1.35)),
+              ),
+              const SizedBox(height: 8),
+              Expanded(
+                child: ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(24, 8, 24, 100),
+                  itemCount: days.length,
+                  itemBuilder: (context, index) {
+                    final day = days[index];
+                    final subjects =
+                        (day['subjects'] as List?)?.join(' • ') ?? 'SSC CGL';
+                    final count = day['atomCount'] ??
+                        (day['coveredAtomIds'] as List?)?.length ??
+                        0;
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: DarkCard(
+                        padding: const EdgeInsets.all(14),
+                        child: Row(children: [
+                          Text('DAY ${day['day'] ?? index + 1}',
+                              style: AppTypography.cardTitle.copyWith(
+                                  color: AppColors.gold, fontSize: 12)),
+                          const SizedBox(width: 14),
+                          Expanded(
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                Text(subjects,
+                                    style: TextStyle(
+                                        color: scheme.onSurface,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w600)),
+                                const SizedBox(height: 3),
+                                Text(
+                                    '$count verified atomic study topics • Assessment pending verification',
+                                    style: TextStyle(
+                                        color: scheme.onSurfaceVariant,
+                                        fontSize: 10)),
+                              ])),
+                          Icon(Icons.chevron_right_rounded,
+                              color: scheme.onSurfaceVariant),
+                        ]),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

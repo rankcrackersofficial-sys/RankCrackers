@@ -278,7 +278,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Syllabus',
-                style: AppTypography.hero.copyWith(fontSize: 22, color: scheme.onSurface)),
+                style: AppTypography.hero
+                    .copyWith(fontSize: 22, color: scheme.onSurface)),
             const SizedBox(height: 12),
             Container(
               decoration: BoxDecoration(
@@ -293,7 +294,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: 'Search Topics...',
-                  hintStyle: AppTypography.body.copyWith(color: scheme.onSurfaceVariant),
+                  hintStyle: AppTypography.body
+                      .copyWith(color: scheme.onSurfaceVariant),
                   prefixIcon:
                       const Icon(Icons.search_rounded, color: AppColors.gold),
                   contentPadding: const EdgeInsets.all(16),
@@ -313,9 +315,20 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
       return SliverToBoxAdapter(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-          child: Text(
-            '$examName • Complete Curriculum Map',
-            style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '$examName • Complete Curriculum Map',
+                style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
+              ),
+              const SizedBox(height: 5),
+              Text(
+                'Official topics come from the SSC syllabus. Micro and atomic topics are RankCrackers\' bounded derived study taxonomy, not official SSC headings.',
+                style: TextStyle(
+                    color: scheme.onSurfaceVariant, fontSize: 9.5, height: 1.3),
+              ),
+            ],
           ),
         ),
       );
@@ -329,22 +342,31 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
             GestureDetector(
               onTap: () => setState(() => _navigationStack.clear()),
               child: const Text('All',
-                  style: TextStyle(color: AppColors.gold, fontSize: 12, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      color: AppColors.gold,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold)),
             ),
             for (int i = 0; i < _navigationStack.length; i++) ...[
-              Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant, size: 14),
+              Icon(Icons.chevron_right_rounded,
+                  color: scheme.onSurfaceVariant, size: 14),
               GestureDetector(
                 onTap: () {
                   setState(() {
-                    _navigationStack.removeRange(i + 1, _navigationStack.length);
+                    _navigationStack.removeRange(
+                        i + 1, _navigationStack.length);
                   });
                 },
                 child: Text(
                   _navigationStack[i].title,
                   style: TextStyle(
-                    color: i == _navigationStack.length - 1 ? scheme.onSurface : AppColors.gold,
+                    color: i == _navigationStack.length - 1
+                        ? scheme.onSurface
+                        : AppColors.gold,
                     fontSize: 12,
-                    fontWeight: i == _navigationStack.length - 1 ? FontWeight.bold : FontWeight.normal,
+                    fontWeight: i == _navigationStack.length - 1
+                        ? FontWeight.bold
+                        : FontWeight.normal,
                   ),
                 ),
               ),
@@ -356,9 +378,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
   }
 
   Widget _buildActiveLevel(List<SyllabusNode> tree) {
-    final List<SyllabusNode> currentNodes = _navigationStack.isEmpty
-        ? tree
-        : _navigationStack.last.children;
+    final List<SyllabusNode> currentNodes =
+        _navigationStack.isEmpty ? tree : _navigationStack.last.children;
 
     return SliverPadding(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
@@ -379,7 +400,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
 
   Widget _syllabusNodeCard(SyllabusNode node) {
     final scheme = Theme.of(context).colorScheme;
-    final isLeaf = node.type == 'atom' || (node.type == 'topic' && node.children.isEmpty);
+    final isLeaf =
+        node.type == 'atom' || (node.type == 'topic' && node.children.isEmpty);
 
     return GestureDetector(
       onTap: () => _onNodeTap(node),
@@ -436,18 +458,21 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
                   const SizedBox(height: 4),
                   Text(
                     node.type == 'subject'
-                        ? '${node.unitCount} Units • ${node.atomCount} Topics'
+                        ? '${node.unitCount} Units • ${node.topicCount} Official Topics • ${node.atomCount} Atomic Topics'
                         : node.type == 'unit'
-                            ? '${node.topicCount} Topics'
+                            ? '${node.topicCount} Official Topics • ${node.atomCount} Atomic Topics'
                             : 'Topic Node',
-                    style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
+                    style:
+                        TextStyle(color: scheme.onSurfaceVariant, fontSize: 11),
                   ),
                 ],
               ),
             ),
             const SizedBox(width: 8),
             Icon(
-              isLeaf ? Icons.arrow_forward_ios_rounded : Icons.chevron_right_rounded,
+              isLeaf
+                  ? Icons.arrow_forward_ios_rounded
+                  : Icons.chevron_right_rounded,
               color: AppColors.gold,
               size: 16,
             ),
@@ -462,7 +487,9 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
     final query = _searchController.text.toLowerCase();
     final allNodes = ref.watch(allNodesProvider);
     final filtered = allNodes
-        .where((n) => n.title.toLowerCase().contains(query) || n.topic.toLowerCase().contains(query))
+        .where((n) =>
+            n.title.toLowerCase().contains(query) ||
+            n.topic.toLowerCase().contains(query))
         .toList();
 
     if (filtered.isEmpty) {
@@ -470,7 +497,8 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
         child: Padding(
           padding: EdgeInsets.all(32),
           child: Center(
-            child: Text('No matching topics found', style: TextStyle(color: scheme.onSurfaceVariant)),
+            child: Text('No matching topics found',
+                style: TextStyle(color: scheme.onSurfaceVariant)),
           ),
         ),
       );
@@ -509,10 +537,14 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 36),
+              const Icon(Icons.menu_book_rounded,
+                  color: AppColors.gold, size: 36),
               const SizedBox(height: 12),
               Text('Loading Syllabus for $examName...',
-                  style: TextStyle(color: scheme.onSurface, fontSize: 15, fontWeight: FontWeight.bold)),
+                  style: TextStyle(
+                      color: scheme.onSurface,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold)),
             ],
           ),
         ),
