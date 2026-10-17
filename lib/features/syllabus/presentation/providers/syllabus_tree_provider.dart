@@ -97,6 +97,40 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
           weak = 1;
         }
 
+        final hierarchy = n.syllabusHierarchy;
+        final microData = (hierarchy['microTopics'] is List)
+            ? (hierarchy['microTopics'] as List)
+            : const [];
+        final atomicData = (hierarchy['atomicTopics'] is List)
+            ? (hierarchy['atomicTopics'] as List)
+            : const [];
+        final microNodes = <SyllabusNode>[];
+        for (final rawMicro in microData) {
+          if (rawMicro is! Map) continue;
+          final microId = '${n.id}_${rawMicro['id'] ?? rawMicro['title']}';
+          final microAtoms = atomicData.where((rawAtom) {
+            return rawAtom is Map && rawAtom['parentId'] == rawMicro['id'];
+          }).map((rawAtom) {
+            final atomId = '${n.id}_${rawAtom['id'] ?? rawAtom['title']}';
+            return SyllabusNode(
+              id: atomId,
+              title: '${rawAtom['title'] ?? ''}',
+              type: 'atom',
+              parentId: microId,
+              subjectId: sId,
+            );
+          }).toList();
+          microNodes.add(SyllabusNode(
+            id: microId,
+            title: '${rawMicro['title'] ?? ''}',
+            type: 'micro_topic',
+            parentId: n.id,
+            subjectId: sId,
+            children: microAtoms,
+            atomCount: microAtoms.length,
+          ));
+        }
+
         return SyllabusNode(
           id: n.id,
           title: language.isHindi && n.titleHindi.trim().isNotEmpty
@@ -105,7 +139,8 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
           type: 'topic',
           parentId: chapterName,
           subjectId: sId,
-          atomCount: 1,
+          children: microNodes,
+          atomCount: atomicData.length,
           averageMastery: mastery,
           averageCoverage: coverage,
           masteredTopicCount: mastered,
@@ -132,7 +167,7 @@ final syllabusTreeProvider = Provider<List<SyllabusNode>>((ref) {
         subjectId: sId,
         children: topicNodes,
         topicCount: topicNodes.length,
-        atomCount: topicNodes.length,
+        atomCount: topicNodes.fold(0, (sum, t) => sum + t.atomCount),
         masteredTopicCount: topicNodes.fold(0, (sum, t) => sum + t.masteredTopicCount),
         developingTopicCount: topicNodes.fold(0, (sum, t) => sum + t.developingTopicCount),
         weakTopicCount: topicNodes.fold(0, (sum, t) => sum + t.weakTopicCount),

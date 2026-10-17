@@ -69,6 +69,10 @@ class MicroTopicNode extends Equatable {
   final String? canonicalMissionId;
   final String? approvedSourceId;
   final String? verificationId;
+  /// Verified subject → unit → topic → micro → atomic payload from the
+  /// independent taxonomy verifier.  It is intentionally additive so older
+  /// missions remain readable while SSC CGL exposes the full hierarchy.
+  final Map<String, dynamic> syllabusHierarchy;
 
   // DECOUPLED CONTENT PROXIES (For stability during transition)
   String get beginnerContent => '';
@@ -132,6 +136,7 @@ class MicroTopicNode extends Equatable {
     this.canonicalMissionId,
     this.approvedSourceId,
     this.verificationId,
+    this.syllabusHierarchy = const {},
   });
 
   // LEGACY GETTERS FOR STABILIZATION
@@ -188,6 +193,7 @@ class MicroTopicNode extends Equatable {
       'canonicalMissionId': canonicalMissionId,
       'approvedSourceId': approvedSourceId,
       'verificationId': verificationId,
+      'syllabusHierarchy': syllabusHierarchy,
     };
   }
 
@@ -238,6 +244,9 @@ class MicroTopicNode extends Equatable {
       canonicalMissionId: map['canonicalMissionId'],
       approvedSourceId: map['approvedSourceId'],
       verificationId: map['verificationId'],
+      syllabusHierarchy: map['syllabusHierarchy'] is Map
+          ? Map<String, dynamic>.from(map['syllabusHierarchy'] as Map)
+          : const {},
     );
   }
 
@@ -277,6 +286,7 @@ class MicroTopicNode extends Equatable {
     String? sourcePage,
     String? sourceUploadId,
     String? promotionBatchId,
+    Map<String, dynamic>? syllabusHierarchy,
   }) {
     return MicroTopicNode(
       id: id ?? this.id,
@@ -314,6 +324,7 @@ class MicroTopicNode extends Equatable {
       sourcePage: sourcePage ?? this.sourcePage,
       sourceUploadId: sourceUploadId ?? this.sourceUploadId,
       promotionBatchId: promotionBatchId ?? this.promotionBatchId,
+      syllabusHierarchy: syllabusHierarchy ?? this.syllabusHierarchy,
     );
   }
 
@@ -356,5 +367,6 @@ class MicroTopicNode extends Equatable {
         sourcePage,
         sourceUploadId,
         promotionBatchId,
+        syllabusHierarchy,
       ];
 }

@@ -59,6 +59,7 @@ const { authorityWatchWorker } = require("./workers/authority_watch_worker");
 const { automationPipelineWorker } = require("./workers/automation_pipeline_worker");
 const { pilotMissionAutomationWorker } = require("./workers/pilot_mission_automation_worker");
 const { missionAcademicMaterializerWorker } = require("./workers/mission_academic_materializer_worker");
+const { missionTaxonomyVerifierWorker } = require("./workers/mission_taxonomy_verifier_worker");
 
 exports.sentinelBackgroundWorker = sentinelBackgroundWorker;
 exports.structuralWorker = structuralWorker;
@@ -78,6 +79,7 @@ exports.authorityWatchWorker = authorityWatchWorker;
 exports.automationPipelineWorker = automationPipelineWorker;
 exports.pilotMissionAutomationWorker = pilotMissionAutomationWorker;
 exports.missionAcademicMaterializerWorker = missionAcademicMaterializerWorker;
+exports.missionTaxonomyVerifierWorker = missionTaxonomyVerifierWorker;
 
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");
