@@ -120,7 +120,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
-                child: Text('DAILY TRAINING PLAN',
+                child: Text('SSC CGL STUDY ORBIT',
                     style: AppTypography.cardTitle.copyWith(
                         color: scheme.onSurface,
                         fontSize: 14,
@@ -211,6 +211,37 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                                     }).toList(),
                                   ),
                                 ],
+                                const SizedBox(height: 8),
+                                Row(
+                                  children: [
+                                    TextButton.icon(
+                                      onPressed: () =>
+                                          context.push(AppRoutes.syllabus),
+                                      icon: const Icon(
+                                          Icons.account_tree_rounded,
+                                          size: 14),
+                                      label: const Text('SYLLABUS',
+                                          style: TextStyle(fontSize: 9)),
+                                      style: TextButton.styleFrom(
+                                          foregroundColor: AppColors.gold,
+                                          padding: EdgeInsets.zero,
+                                          minimumSize: const Size(0, 28)),
+                                    ),
+                                    const SizedBox(width: 12),
+                                    TextButton.icon(
+                                      onPressed: () =>
+                                          context.push(AppRoutes.digibook),
+                                      icon: const Icon(Icons.menu_book_rounded,
+                                          size: 14),
+                                      label: const Text('DIGIBOOK',
+                                          style: TextStyle(fontSize: 9)),
+                                      style: TextButton.styleFrom(
+                                          foregroundColor: AppColors.gold,
+                                          padding: EdgeInsets.zero,
+                                          minimumSize: const Size(0, 28)),
+                                    ),
+                                  ],
+                                ),
                               ])),
                           Icon(Icons.chevron_right_rounded,
                               color: scheme.onSurfaceVariant),
@@ -253,7 +284,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 16, 24, 0),
                 child: Text(
-                  'DAILY TRAINING PLAN',
+                  'STUDY ORBIT',
                   style: AppTypography.cardTitle.copyWith(
                     color: scheme.onSurface,
                     fontSize: 14,
@@ -379,7 +410,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     children: [
                       const SizedBox(height: 12),
                       Text(
-                        'DAILY TRAINING PLAN',
+                        'STUDY ORBIT',
                         style: AppTypography.cardTitle.copyWith(
                           color: scheme.onSurface,
                           fontSize: 14,
