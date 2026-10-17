@@ -359,7 +359,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   style: AppTypography.cardTitle.copyWith(
                       color: AppColors.gold, fontSize: 14, letterSpacing: 1)),
               const SizedBox(height: 4),
-              Text('Tap a verified topic to open its DigiBook lesson.',
+              Text(
+                  'Tap a verified topic to see its study brief. Open DigiBook only when you are ready to learn.',
                   style:
                       TextStyle(color: scheme.onSurfaceVariant, fontSize: 11)),
               const SizedBox(height: 14),
@@ -422,7 +423,6 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         Text('${newItems.length} new • ${revisionItems.length} revision',
             style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 9)),
         ...items.map((item) {
-          final nodeId = item['nodeId']?.toString();
           return ListTile(
             dense: true,
             contentPadding: EdgeInsets.zero,
@@ -437,13 +437,89 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                 style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 9)),
             trailing: const Icon(Icons.arrow_forward_ios_rounded,
                 color: AppColors.gold, size: 12),
-            onTap: () {
-              Navigator.of(context).pop();
-              context.push(AppRoutes.digibook, extra: nodeId);
-            },
+            onTap: () => _showOrbitTopicDetails(item, subject),
           );
         }),
       ]),
+    );
+  }
+
+  void _showOrbitTopicDetails(Map<String, dynamic> item, String subject) {
+    final scheme = Theme.of(context).colorScheme;
+    final nodeId = item['nodeId']?.toString();
+    final title = item['title']?.toString() ?? 'Verified topic';
+    final unit = item['unit']?.toString() ?? '';
+    final topic = item['topic']?.toString() ?? '';
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: scheme.surface,
+      builder: (sheetContext) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 18, 20, 28),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Row(children: [
+              const Icon(Icons.track_changes_rounded,
+                  color: AppColors.gold, size: 22),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(title,
+                    style: AppTypography.cardTitle
+                        .copyWith(color: scheme.onSurface, fontSize: 16)),
+              ),
+            ]),
+            const SizedBox(height: 12),
+            DarkCard(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('BASIC IDENTITY',
+                        style: const TextStyle(
+                            color: AppColors.gold,
+                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 0.8)),
+                    const SizedBox(height: 8),
+                    Text('Subject: $subject',
+                        style:
+                            TextStyle(color: scheme.onSurface, fontSize: 12)),
+                    Text('Unit: $unit',
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 11)),
+                    Text('Official topic: $topic',
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 11)),
+                    const SizedBox(height: 10),
+                    Text(
+                        'This verified syllabus node is scheduled for today’s interleaved study and revision cycle.',
+                        style: TextStyle(
+                            color: scheme.onSurfaceVariant,
+                            fontSize: 11,
+                            height: 1.35)),
+                  ]),
+            ),
+            const SizedBox(height: 14),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton.icon(
+                onPressed: nodeId == null
+                    ? null
+                    : () {
+                        Navigator.of(sheetContext).pop();
+                        context.push(AppRoutes.digibook, extra: nodeId);
+                      },
+                icon: const Icon(Icons.menu_book_rounded, size: 17),
+                label: const Text('OPEN IN DIGIBOOK'),
+                style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.gold,
+                    foregroundColor: Colors.black,
+                    minimumSize: const Size.fromHeight(46)),
+              ),
+            ),
+          ]),
+        ),
+      ),
     );
   }
 

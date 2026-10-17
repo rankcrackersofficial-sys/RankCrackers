@@ -14,9 +14,9 @@ class PremiumPaywallWidget extends StatelessWidget {
 
   const PremiumPaywallWidget({
     super.key,
-    this.title = 'Elite Intelligence Locked',
+    this.title = 'Your next advantage',
     this.description =
-        'Upgrade to Elite Tier to unlock deep cognitive insights and predictive analysis.',
+        'Go deeper with guided explanations, focused revision and a clearer path through today’s study.',
     this.onUpgrade,
   });
 
@@ -49,13 +49,13 @@ class PremiumPaywallWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 24),
                   Text(
-                    'Deep Analytics Locked',
+                    title,
                     textAlign: TextAlign.center,
                     style: AppTypography.cardTitle,
                   ),
                   const SizedBox(height: 18),
                   Text(
-                    'Upgrade to Elite to unlock your cognitive profile and weakness map.',
+                    description,
                     textAlign: TextAlign.center,
                     style: AppTypography.body,
                   ),
