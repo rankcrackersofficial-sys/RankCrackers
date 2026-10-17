@@ -147,6 +147,10 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     final count = day['atomCount'] ??
                         (day['coveredAtomIds'] as List?)?.length ??
                         0;
+                    final rawLanes = day['subjectLanes'];
+                    final lanes = rawLanes is Map
+                        ? Map<String, dynamic>.from(rawLanes)
+                        : const <String, dynamic>{};
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 8),
                       child: DarkCard(
@@ -171,6 +175,42 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                                     style: TextStyle(
                                         color: scheme.onSurfaceVariant,
                                         fontSize: 10)),
+                                if (lanes.isNotEmpty) ...[
+                                  const SizedBox(height: 6),
+                                  Wrap(
+                                    spacing: 5,
+                                    runSpacing: 4,
+                                    children: lanes.entries.map((entry) {
+                                      final lane = entry.value is Map
+                                          ? Map<String, dynamic>.from(
+                                              entry.value as Map)
+                                          : const <String, dynamic>{};
+                                      final short =
+                                          entry.key == 'Quantitative Aptitude'
+                                              ? 'Quant'
+                                              : entry.key == 'General Awareness'
+                                                  ? 'GA'
+                                                  : entry.key;
+                                      return Container(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 6, vertical: 3),
+                                        decoration: BoxDecoration(
+                                          color: AppColors.gold
+                                              .withValues(alpha: 0.10),
+                                          borderRadius:
+                                              BorderRadius.circular(5),
+                                        ),
+                                        child: Text(
+                                          '$short ${lane['newCount'] ?? 0}N/${lane['revisionCount'] ?? 0}R',
+                                          style: const TextStyle(
+                                              color: AppColors.gold,
+                                              fontSize: 8.5,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                      );
+                                    }).toList(),
+                                  ),
+                                ],
                               ])),
                           Icon(Icons.chevron_right_rounded,
                               color: scheme.onSurfaceVariant),
