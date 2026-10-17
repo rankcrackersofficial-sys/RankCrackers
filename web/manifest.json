@@ -1,11 +1,11 @@
 {
-    "name": "rank_crackers",
-    "short_name": "rank_crackers",
+    "name": "RankCrackers",
+    "short_name": "RankCrackers",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#F8FAFC",
     "theme_color": "#FFFFFF",
-    "description": "A New Fullter Project On The Name Of Madhav",
+    "description": "RankCrackers learning and operations platform",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

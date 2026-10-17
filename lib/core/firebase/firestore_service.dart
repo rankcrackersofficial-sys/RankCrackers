@@ -837,7 +837,7 @@ class FirestoreService {
         return UserProfile(
           uid: uid,
           name: 'Founder',
-          email: 'founder.rcofficial@gmail.com',
+          email: 'rankcrackersofficial@gmail.com',
           tier: SubscriptionTier.elite,
         );
       }
