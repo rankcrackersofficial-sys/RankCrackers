@@ -76,7 +76,7 @@ class _DocumentCommandCenterState extends State<DocumentCommandCenter> {
         return Column(
           children: [
             if (missionId == 'ssc_cgl')
-              const Padding(
+              Padding(
                 padding: EdgeInsets.fromLTRB(24, 16, 24, 0),
                 child: MissionSourcePairForm(
                   initialMission: 'ssc_cgl',
@@ -399,7 +399,7 @@ class _DocumentWorkspaceSummary extends StatelessWidget {
           const SizedBox(height: 10),
           if (source == null)
             const Text(
-                    'No verified source is connected yet. The server will acquire and verify the official pair automatically.',
+              'No verified source is connected yet. The server will acquire and verify the official pair automatically.',
               style:
                   TextStyle(color: FounderLightTheme.textMuted, fontSize: 11),
             )
