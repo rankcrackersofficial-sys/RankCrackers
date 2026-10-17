@@ -61,6 +61,9 @@ for (const marker of policy.requiredBuildMarkers) {
 
 const sourceText = sourceFiles.flatMap(collectFiles).map(readRequired).join('\n');
 const artifactText = [indexText, manifestText, jsText].join('\n');
+for (const marker of policy.requiredSourceMarkers || []) {
+  check(sourceText.includes(marker), `Founder source is missing required auth safety marker: ${marker}`);
+}
 for (const marker of policy.forbiddenMarkers) {
   check(!sourceText.includes(marker), `Founder source contains forbidden legacy marker: ${marker}`);
   check(!artifactText.includes(marker), `Built Founder artifact contains forbidden legacy marker: ${marker}`);
