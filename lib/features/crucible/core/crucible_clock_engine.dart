@@ -38,7 +38,9 @@ class CrucibleClockEngine {
         enrollmentTime.year,
         enrollmentTime.month,
         enrollmentTime.day,
-        10, 0, 0,
+        10,
+        0,
+        0,
       );
     } else {
       final targetDate = hour >= 22
@@ -48,7 +50,9 @@ class CrucibleClockEngine {
         targetDate.year,
         targetDate.month,
         targetDate.day,
-        10, 0, 0,
+        10,
+        0,
+        0,
       );
     }
   }
@@ -95,7 +99,9 @@ class CrucibleClockEngine {
     int? cycleLengthDays,
   }) {
     if (now.isBefore(protocolStartTime)) return 1;
-    final cycleDays = cycleLengthDays ?? blueprint?.cycleLengthDays ?? MissionCrucibleBlueprint.jeeMain2027Blueprint.cycleLengthDays;
+    final cycleDays = cycleLengthDays ??
+        blueprint?.cycleLengthDays ??
+        MissionCrucibleBlueprint.jeeMain2027Blueprint.cycleLengthDays;
     final elapsed = now.difference(protocolStartTime);
     return (elapsed.inSeconds ~/ (cycleDays * 24 * 3600)) + 1;
   }
@@ -136,7 +142,8 @@ class CrucibleClockEngine {
     MissionCrucibleBlueprint? blueprint,
     String? missionId,
   }) {
-    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
+    final bp =
+        _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final now = DateTime.now();
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = now.difference(normalizedStart);
@@ -152,7 +159,8 @@ class CrucibleClockEngine {
       studyDayOffset = studyDaysLimit - 1; // Caps index during rebuild/macro
     }
 
-    final scheduleIdx = (phaseIndex * bp.schedulesPerPhase) + (studyDayOffset ~/ (bp.hoursPerSchedule ~/ 24));
+    final scheduleIdx = (phaseIndex * bp.schedulesPerPhase) +
+        (studyDayOffset ~/ (bp.hoursPerSchedule ~/ 24));
     return scheduleIdx.clamp(0, bp.totalSchedules - 1);
   }
 
@@ -165,7 +173,8 @@ class CrucibleClockEngine {
     MissionCrucibleBlueprint? blueprint,
     String? missionId,
   }) {
-    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
+    final bp =
+        _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final normalizedStart = getNormalizedStart(enrollmentTime);
     final difference = DateTime.now().difference(normalizedStart);
     final cycleDays = difference.inDays % bp.cycleLengthDays;
@@ -184,15 +193,18 @@ class CrucibleClockEngine {
     MissionCrucibleBlueprint? blueprint,
     String? missionId,
   }) {
-    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
-    final now = DateTime.now();
+    final bp =
+        _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final normalizedStart = getNormalizedStart(enrollmentTime);
-    final difference = now.difference(normalizedStart);
-    final cycleDays = difference.inDays % bp.cycleLengthDays;
+    final difference = DateTime.now().difference(normalizedStart);
+    final cycleSeconds =
+        difference.inSeconds % (bp.cycleLengthDays * 24 * 3600);
     final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
-    final phaseDay = cycleDays % daysPerPhase;
-    final macroDay = daysPerPhase - 1;
-    return phaseDay == macroDay && now.hour >= testStartHour && now.hour <= (testStartHour + bp.macroDurationHours);
+    final phaseSeconds = cycleSeconds % (daysPerPhase * 24 * 3600);
+    final rebuildStart = bp.schedulesPerPhase * bp.hoursPerSchedule * 3600;
+    final macroStart = rebuildStart + bp.rebuildDurationHours * 3600;
+    final macroEnd = macroStart + bp.macroDurationHours * 3600;
+    return phaseSeconds >= macroStart && phaseSeconds < macroEnd;
   }
 
   // ===================================================
@@ -213,27 +225,32 @@ class CrucibleClockEngine {
     );
 
     final elapsed = now.difference(state.protocolStartTime);
-    final elapsedWithinCycle = Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
+    final elapsedWithinCycle =
+        Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
 
     final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
-    final phaseIndex = (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
+    final phaseIndex =
+        (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
     final phaseStartDuration = Duration(days: (phaseIndex - 1) * daysPerPhase);
     final elapsedWithinPhase = elapsedWithinCycle - phaseStartDuration;
 
-    final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
+    final studyDuration =
+        Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
     final rebuildStart = studyDuration; // Day 13 start (288 hours)
-    final macroStart = rebuildStart + const Duration(days: 1); // Day 14 start (312 hours)
-    final phaseEnd = macroStart + const Duration(days: 1); // Phase end (336 hours)
+    final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
+    final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
+    final phaseEnd = Duration(days: daysPerPhase);
 
     if (elapsedWithinPhase < rebuildStart) {
-      final elapsedWithinSchedule = elapsedWithinPhase.inHours % bp.hoursPerSchedule;
+      final elapsedWithinSchedule =
+          elapsedWithinPhase.inHours % bp.hoursPerSchedule;
       if (elapsedWithinSchedule >= bp.learningHoursPerSchedule) {
         return 'MICRO';
       }
       return 'LEARNING';
     } else if (elapsedWithinPhase < macroStart) {
       return 'REBUILD';
-    } else if (elapsedWithinPhase < phaseEnd) {
+    } else if (elapsedWithinPhase < macroEnd) {
       return 'MACRO';
     } else {
       return 'RECOVERY';
@@ -256,16 +273,23 @@ class CrucibleClockEngine {
     );
 
     final elapsed = now.difference(state.protocolStartTime);
-    final currentOrbit = (elapsed.inSeconds ~/ (bp.cycleLengthDays * 24 * 3600));
-    final orbitStart = state.protocolStartTime.add(Duration(days: currentOrbit * bp.cycleLengthDays));
-    final elapsedWithinCycle = Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
+    final currentOrbit =
+        (elapsed.inSeconds ~/ (bp.cycleLengthDays * 24 * 3600));
+    final orbitStart = state.protocolStartTime
+        .add(Duration(days: currentOrbit * bp.cycleLengthDays));
+    final elapsedWithinCycle =
+        Duration(seconds: elapsed.inSeconds % (bp.cycleLengthDays * 24 * 3600));
 
     final daysPerPhase = bp.cycleLengthDays ~/ bp.phaseCount;
-    final phaseIndex = (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
-    final phaseStart = orbitStart.add(Duration(days: (phaseIndex - 1) * daysPerPhase));
-    final elapsedWithinPhase = elapsedWithinCycle - Duration(days: (phaseIndex - 1) * daysPerPhase);
+    final phaseIndex =
+        (elapsedWithinCycle.inSeconds ~/ (daysPerPhase * 24 * 3600)) + 1;
+    final phaseStart =
+        orbitStart.add(Duration(days: (phaseIndex - 1) * daysPerPhase));
+    final elapsedWithinPhase =
+        elapsedWithinCycle - Duration(days: (phaseIndex - 1) * daysPerPhase);
 
-    final studyDuration = Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
+    final studyDuration =
+        Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
     final rebuildStart = studyDuration;
     final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
     final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
@@ -274,11 +298,13 @@ class CrucibleClockEngine {
     if (elapsedWithinPhase < rebuildStart) {
       final scheduleOffset = elapsedWithinPhase.inHours ~/ bp.hoursPerSchedule;
       final scheduleHoursOffset = scheduleOffset * bp.hoursPerSchedule;
-      final learningStart = phaseStart.add(Duration(hours: scheduleHoursOffset));
+      final learningStart =
+          phaseStart.add(Duration(hours: scheduleHoursOffset));
       if (type == 'MICRO') {
         return {
           'type': 'MICRO',
-          'start': learningStart.add(Duration(hours: bp.learningHoursPerSchedule)),
+          'start':
+              learningStart.add(Duration(hours: bp.learningHoursPerSchedule)),
           'end': learningStart.add(Duration(hours: bp.hoursPerSchedule)),
         };
       }
@@ -317,7 +343,8 @@ class CrucibleClockEngine {
     required DateTime now,
     MissionCrucibleBlueprint? blueprint,
   }) {
-    final bounds = getCurrentWindowBounds(state: state, now: now, blueprint: blueprint);
+    final bounds =
+        getCurrentWindowBounds(state: state, now: now, blueprint: blueprint);
     final end = bounds['end'] as DateTime;
     if (end.isBefore(now)) {
       return Duration.zero;
@@ -334,7 +361,8 @@ class CrucibleClockEngine {
     MissionCrucibleBlueprint? blueprint,
     String? missionId,
   }) {
-    final bp = _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
+    final bp =
+        _resolveBlueprint(missionId: missionId, explicitBlueprint: blueprint);
     final now = DateTime.now();
     final normalizedStart = getNormalizedStart(enrollmentTime);
     if (now.isBefore(normalizedStart)) {
@@ -352,13 +380,17 @@ class CrucibleClockEngine {
       final scheduleElapsed = phaseElapsed % bp.hoursPerSchedule;
       final scheduleStartOffset = currentCycleHours - scheduleElapsed;
       return normalizedStart.add(Duration(
-        hours: (totalHours - currentCycleHours) + scheduleStartOffset + bp.learningHoursPerSchedule,
+        hours: (totalHours - currentCycleHours) +
+            scheduleStartOffset +
+            bp.learningHoursPerSchedule,
       ));
     } else {
       final currentPhase = currentCycleHours ~/ phaseHours;
       final nextPhaseStart = (currentPhase + 1) * phaseHours;
       return normalizedStart.add(Duration(
-        hours: (totalHours - currentCycleHours) + nextPhaseStart + bp.learningHoursPerSchedule,
+        hours: (totalHours - currentCycleHours) +
+            nextPhaseStart +
+            bp.learningHoursPerSchedule,
       ));
     }
   }

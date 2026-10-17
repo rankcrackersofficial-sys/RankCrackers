@@ -208,6 +208,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                   itemCount: days.length,
                   itemBuilder: (context, index) {
                     final day = days[index];
+                    final eventKind = day['eventKind']?.toString() ?? 'study';
+                    if (eventKind != 'study') {
+                      return _buildPublishedEventCard(day,
+                          dayNumber:
+                              (day['day'] as num?)?.toInt() ?? index + 1);
+                    }
                     final subjects =
                         (day['subjects'] as List?)?.join(' • ') ?? 'SSC CGL';
                     final count = day['atomCount'] ??
@@ -328,6 +334,115 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPublishedEventCard(Map<String, dynamic> day,
+      {required int dayNumber}) {
+    final scheme = Theme.of(context).colorScheme;
+    final eventKind = day['eventKind']?.toString() ?? '';
+    final isRebuild = eventKind == 'rebuild_revision';
+    final isMajor = eventKind == 'major_test';
+    final title = isRebuild
+        ? 'REBUILD & REVISION WINDOW'
+        : isMajor
+            ? 'MAJOR TEST JUNCTION'
+            : 'MACRO TEST JUNCTION';
+    final duration = isRebuild ? '46 hours' : '2 hours';
+    final message = isRebuild
+        ? 'Repair weak atomic topics, revisit DigiBook lessons and consolidate the completed phase.'
+        : '${isMajor ? 'Major' : 'Macro'} assessment is gated by verified questions and student eligibility.';
+    return Padding(
+      key: _orbitDayKeys.putIfAbsent(dayNumber, GlobalKey.new),
+      padding: const EdgeInsets.only(bottom: 8),
+      child: InkWell(
+        onTap: () =>
+            _showPublishedEventDetails(dayNumber, title, duration, message),
+        borderRadius: BorderRadius.circular(14),
+        child: DarkCard(
+          padding: const EdgeInsets.all(14),
+          border: Border.all(
+              color: isRebuild
+                  ? AppColors.gold.withValues(alpha: 0.45)
+                  : scheme.outline),
+          child: Row(children: [
+            Icon(
+                isRebuild
+                    ? Icons.build_circle_outlined
+                    : Icons.military_tech_outlined,
+                color: AppColors.gold,
+                size: 24),
+            const SizedBox(width: 14),
+            Expanded(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                  Text('DAY $dayNumber • $title',
+                      style: AppTypography.cardTitle.copyWith(
+                          color: AppColors.gold,
+                          fontSize: 11,
+                          letterSpacing: 0.6)),
+                  const SizedBox(height: 4),
+                  Text(duration,
+                      style: TextStyle(
+                          color: scheme.onSurface,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700)),
+                  const SizedBox(height: 3),
+                  Text(message,
+                      style: TextStyle(
+                          color: scheme.onSurfaceVariant,
+                          fontSize: 10,
+                          height: 1.3)),
+                ])),
+            Icon(Icons.chevron_right_rounded, color: scheme.onSurfaceVariant),
+          ]),
+        ),
+      ),
+    );
+  }
+
+  void _showPublishedEventDetails(
+      int day, String title, String duration, String message) {
+    final scheme = Theme.of(context).colorScheme;
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: scheme.surface,
+      builder: (sheetContext) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 28),
+          child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('DAY $day',
+                    style: const TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700)),
+                const SizedBox(height: 6),
+                Text(title,
+                    style: AppTypography.cardTitle
+                        .copyWith(color: scheme.onSurface, fontSize: 16)),
+                const SizedBox(height: 6),
+                Text(duration,
+                    style: TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700)),
+                const SizedBox(height: 12),
+                Text(message,
+                    style: TextStyle(
+                        color: scheme.onSurfaceVariant,
+                        fontSize: 12,
+                        height: 1.4)),
+                const SizedBox(height: 12),
+                Text('No unverified or synthetic assessment content is shown.',
+                    style: TextStyle(
+                        color: scheme.onSurfaceVariant, fontSize: 10)),
+              ]),
         ),
       ),
     );

@@ -4,7 +4,8 @@ import '../../../../core/backend/crucible_repository.dart';
 import '../../models/crucible_protocol_state.dart';
 import '../../../../shared/providers/session_provider.dart';
 
-final crucibleProtocolStateProvider = StreamProvider.autoDispose<CrucibleProtocolState?>((ref) {
+final crucibleProtocolStateProvider =
+    StreamProvider.autoDispose<CrucibleProtocolState?>((ref) {
   final sessionUserAsync = ref.watch(sessionUserProvider);
   return sessionUserAsync.when(
     data: (user) => CrucibleRepository.streamProtocolState(user.recruitmentId),
@@ -13,16 +14,30 @@ final crucibleProtocolStateProvider = StreamProvider.autoDispose<CrucibleProtoco
   );
 });
 
-final publishedCrucibleDaysProvider = StreamProvider.family<List<Map<String, dynamic>>, String>((ref, missionId) {
+final publishedCrucibleDaysProvider =
+    StreamProvider.family<List<Map<String, dynamic>>, String>((ref, missionId) {
   return FirebaseFirestore.instance
-      .collection('mission_realms').doc(missionId).collection('crucible_days')
-      .where('status', isEqualTo: 'published').snapshots()
-      .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+      .collection('mission_realms')
+      .doc(missionId)
+      .collection('crucible_days')
+      .where('status', isEqualTo: 'published')
+      .snapshots()
+      .map((snap) {
+    final days = snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList();
+    days.sort((a, b) => ((a['day'] as num?)?.toInt() ?? 0)
+        .compareTo((b['day'] as num?)?.toInt() ?? 0));
+    return days;
+  });
 });
 
-final publishedCrucibleTestsProvider = StreamProvider.family<List<Map<String, dynamic>>, String>((ref, missionId) {
+final publishedCrucibleTestsProvider =
+    StreamProvider.family<List<Map<String, dynamic>>, String>((ref, missionId) {
   return FirebaseFirestore.instance
-      .collection('mission_realms').doc(missionId).collection('crucible_tests')
-      .where('status', isEqualTo: 'published').snapshots()
-      .map((snap) => snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
+      .collection('mission_realms')
+      .doc(missionId)
+      .collection('crucible_tests')
+      .where('status', isEqualTo: 'published')
+      .snapshots()
+      .map((snap) =>
+          snap.docs.map((doc) => {'id': doc.id, ...doc.data()}).toList());
 });
