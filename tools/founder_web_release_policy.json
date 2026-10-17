@@ -1,0 +1,22 @@
+{
+  "entrypoint": "lib/main_web.dart",
+  "appName": "RankCrackers",
+  "shortName": "RankCrackers",
+  "description": "RankCrackers learning and operations platform",
+  "requiredBuildMarkers": [
+    "Founder Console",
+    "FOUNDER OPERATIONS CONSOLE",
+    "Continue with Google"
+  ],
+  "forbiddenMarkers": [
+    "founder.rcofficial@gmail.com",
+    "6TdzjpBr6Zdx1ag3LbMmjJ0DY312",
+    "A New Fullter Project On The Name Of Madhav",
+    "TacticalNoirBackground",
+    "tactical_noir",
+    "darkTheme",
+    "ThemeMode.dark",
+    "Color(0xFF0A0F17",
+    "Color(0xFF070B11"
+  ]
+}

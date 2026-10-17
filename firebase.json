@@ -29,6 +29,9 @@
   "hosting": {
     "site": "rankcrackers-55",
     "public": "build/web",
+      "predeploy": [
+        "node tools/verify_founder_release.js"
+      ],
     "ignore": [
       "firebase.json",
       "**/.*",
