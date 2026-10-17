@@ -1,5 +1,6 @@
 import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
+import { assemble } from '../services/digibookContentPipeline';
 
 /**
  * DIGIBOOK ASSEMBLY AAF WORKER
@@ -31,14 +32,15 @@ export async function digibookAssemblyAafWorker(job: AafJobMetadata): Promise<Aa
         throw new Error('PARITY_VIOLATION: Internal consistency failure.');
     }
 
-    const outputHash = `h_db_asm_${job.targetId}`;
+    const result = await assemble(job);
     return {
       success: true,
-      outputHash,
+      outputHash: `h_db_asm_${job.targetId}`,
       metadata: {
+          autoApprove: true,
           parity: 'PASS',
           bridge: 'DART_PARITY_VERIFIED',
-          blockCount: 0 // Orchestration only
+          assemblyVersion: result.assemblyVersion,
       }
     };
   } catch (error) {

@@ -53,7 +53,7 @@ export class AafDispatcher {
       }
 
       // 5. SUBMIT FOR REVIEW (running -> reviewing)
-      await this.repo.submitForReview(idempotencyKey, workerId, result.outputHash);
+      await this.repo.submitForReview(idempotencyKey, workerId, result.outputHash, result.metadata || null);
 
       // Note: Approval/Materialization/Publication are handled via separate governance triggers or human-in-the-loop steps.
       console.log(`AAF DISPATCHER: Job ${idempotencyKey} submitted for review.`);

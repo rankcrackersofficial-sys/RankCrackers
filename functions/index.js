@@ -81,6 +81,13 @@ exports.pilotMissionAutomationWorker = pilotMissionAutomationWorker;
 exports.missionAcademicMaterializerWorker = missionAcademicMaterializerWorker;
 exports.missionTaxonomyVerifierWorker = missionTaxonomyVerifierWorker;
 
+// 🔱 GOVERNED ACADEMIC FACTORY QUEUE (source-bound DigiBook/Crucible stages)
+// The runtime entrypoint is this JavaScript index; exporting only from the
+// compiled TypeScript index would leave the deployed queue worker unreachable.
+const { aafQueueWorker, aafQueueScheduler } = require("./lib/workers/aafQueueWorker");
+exports.aafQueueWorker = aafQueueWorker;
+exports.aafQueueScheduler = aafQueueScheduler;
+
 // 🔱 FOUNDER ALERT EXPORTS
 const { founderCriticalAlert } = require("./workers/alert_worker");
 exports.founderCriticalAlert = founderCriticalAlert;

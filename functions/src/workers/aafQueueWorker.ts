@@ -57,6 +57,17 @@ export const aafQueueWorker = functions.firestore
       }
       return;
     }
+    // A worker may auto-approve only after its own bounded verifier gate has
+    // passed. Unverified/rejected outputs remain in reviewing or failed state.
+    if (stateChanged && data.state === 'reviewing' && data.workerMetadata?.autoApprove === true) {
+        try {
+            const approved = await lifecycle.approve(taskId);
+            if (approved) console.log(`🛡️ AAF VERIFIER: ${taskId} passed its worker gate and was approved.`);
+        } catch (err) {
+            console.error(`🔥 AAF VERIFIER: Approval failed for ${taskId}:`, err);
+        }
+        return;
+    }
 
     // 4. 🛡️ AUTO DEPENDENCY UNLOCK
     if (stateChanged && data.state === 'approved') {

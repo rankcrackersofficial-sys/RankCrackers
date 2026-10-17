@@ -160,7 +160,7 @@ export class AafQueueRepository {
   /**
    * 🛡️ SUBMIT FOR REVIEW (running -> reviewing)
    */
-  async submitForReview(idempotencyKey: string, workerId: string, outputHash: string): Promise<boolean> {
+  async submitForReview(idempotencyKey: string, workerId: string, outputHash: string, metadata: any = null): Promise<boolean> {
     const docRef = this.db.collection(QUEUE_COLLECTION).doc(idempotencyKey);
     return await this.db.runTransaction(async (transaction) => {
       const snap = await transaction.get(docRef);
@@ -171,6 +171,7 @@ export class AafQueueRepository {
       transaction.update(docRef, {
         state: 'reviewing',
         outputHash: outputHash,
+        workerMetadata: metadata,
         leaseOwner: null,
         leaseExpiresAtUtc: null,
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),

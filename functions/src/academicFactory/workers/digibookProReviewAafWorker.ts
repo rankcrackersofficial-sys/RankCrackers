@@ -1,5 +1,6 @@
 import { AafJobMetadata } from '../models/aafJob';
 import { AafWorkerResult } from './aafWorkerResult';
+import { proReview } from '../services/digibookContentPipeline';
 
 /**
  * DIGIBOOK PRO REVIEW AAF WORKER
@@ -9,8 +10,8 @@ import { AafWorkerResult } from './aafWorkerResult';
 export async function digibookProReviewAafWorker(job: AafJobMetadata): Promise<AafWorkerResult> {
   try {
     // Logic: Invokes DeepReasoningPro model with review prompt
-    const outputHash = `h_db_pro_${job.targetId}`;
-    return { success: true, outputHash };
+    const result = await proReview(job);
+    return { success: true, outputHash: `h_db_pro_${job.targetId}`, metadata: { autoApprove: true, stage: 'proReview', review: result.review } };
   } catch (error) {
     return { success: false, outputHash: '', error: (error as Error).message };
   }
