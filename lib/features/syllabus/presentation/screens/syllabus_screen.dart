@@ -55,6 +55,17 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
       return;
     }
 
+    if (node.type == 'micro_topic') {
+      if (node.children.isNotEmpty) {
+        setState(() {
+          _navigationStack.add(node);
+        });
+      } else {
+        await _handleTopicTap(node);
+      }
+      return;
+    }
+
     if (node.type == 'atom') {
       await _handleTopicTap(node);
     }
@@ -64,7 +75,19 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
     final bridge = DigiBookCanonicalBridgeService.instance;
     if (!bridge.isInitialized) await bridge.initialize();
 
-    final resolveResult = bridge.resolveCanonicalNode(node.id);
+    var resolveResult = bridge.resolveCanonicalNode(node.id);
+
+    // Derived micro/atomic IDs are intentionally local hierarchy IDs. When
+    // they do not have a direct DigiBook mapping, resolve through their
+    // official topic ancestor instead of making the atomic card inert.
+    if (!resolveResult.isMapped) {
+      for (final ancestor in _navigationStack.reversed) {
+        if (ancestor.type == 'topic') {
+          resolveResult = bridge.resolveCanonicalNode(ancestor.id);
+          if (resolveResult.isMapped) break;
+        }
+      }
+    }
 
     if (!resolveResult.isMapped || resolveResult.primaryEntry == null) {
       if (mounted) {
@@ -337,41 +360,44 @@ class _SyllabusScreenState extends ConsumerState<SyllabusScreen> {
     return SliverToBoxAdapter(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () => setState(() => _navigationStack.clear()),
-              child: const Text('All',
-                  style: TextStyle(
-                      color: AppColors.gold,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold)),
-            ),
-            for (int i = 0; i < _navigationStack.length; i++) ...[
-              Icon(Icons.chevron_right_rounded,
-                  color: scheme.onSurfaceVariant, size: 14),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
               GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _navigationStack.removeRange(
-                        i + 1, _navigationStack.length);
-                  });
-                },
-                child: Text(
-                  _navigationStack[i].title,
-                  style: TextStyle(
-                    color: i == _navigationStack.length - 1
-                        ? scheme.onSurface
-                        : AppColors.gold,
-                    fontSize: 12,
-                    fontWeight: i == _navigationStack.length - 1
-                        ? FontWeight.bold
-                        : FontWeight.normal,
+                onTap: () => setState(() => _navigationStack.clear()),
+                child: const Text('All',
+                    style: TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold)),
+              ),
+              for (int i = 0; i < _navigationStack.length; i++) ...[
+                Icon(Icons.chevron_right_rounded,
+                    color: scheme.onSurfaceVariant, size: 14),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      _navigationStack.removeRange(
+                          i + 1, _navigationStack.length);
+                    });
+                  },
+                  child: Text(
+                    _navigationStack[i].title,
+                    style: TextStyle(
+                      color: i == _navigationStack.length - 1
+                          ? scheme.onSurface
+                          : AppColors.gold,
+                      fontSize: 12,
+                      fontWeight: i == _navigationStack.length - 1
+                          ? FontWeight.bold
+                          : FontWeight.normal,
+                    ),
                   ),
                 ),
-              ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
