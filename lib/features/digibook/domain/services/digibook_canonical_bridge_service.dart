@@ -200,6 +200,7 @@ class DigiBookCanonicalBridgeService {
         'keywords': unit.keywords,
         'atomicFactIds': unit.atomicTopicIds,
         'factSemantics': 'SOURCE_FACT_COMPLETE',
+        'assembly': unit.assembly,
       };
       return DigiBookAuthorityEntry(
         guId: guId,
@@ -217,7 +218,8 @@ class DigiBookCanonicalBridgeService {
         privateLessonAuthorityPath: '',
         digiBookAuthorityCommit: 'live_${unit.version}',
         factSemantics: 'SOURCE_FACT_COMPLETE',
-        assemblyStatus: 'VERIFIED_LIVE_UNIT',
+        assemblyStatus:
+            unit.assembly['assemblyStatus']?.toString() ?? 'VERIFIED_LIVE_UNIT',
       );
     }).toList();
     _canonicalMap.clear();

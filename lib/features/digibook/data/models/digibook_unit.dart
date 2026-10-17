@@ -28,6 +28,10 @@ class DigiBookUnit extends Equatable {
   final String status; // draft, under_review, verified, published
   final int version;
 
+  /// Source-bound pedagogy assembly metadata. This is intentionally separate
+  /// from lesson content so pending sections can never be mistaken for facts.
+  final Map<String, dynamic> assembly;
+
   const DigiBookUnit({
     required this.id,
     required this.atomicTopicId,
@@ -47,6 +51,7 @@ class DigiBookUnit extends Equatable {
     this.difficulty = 3,
     this.status = 'draft',
     this.version = 1,
+    this.assembly = const {},
   });
 
   Map<String, dynamic> toMap() {
@@ -69,6 +74,7 @@ class DigiBookUnit extends Equatable {
       'difficulty': difficulty,
       'status': status,
       'version': version,
+      'assembly': assembly,
     };
   }
 
@@ -97,6 +103,7 @@ class DigiBookUnit extends Equatable {
       difficulty: map['difficulty'] ?? 3,
       status: map['status'] ?? 'draft',
       version: map['version'] ?? 1,
+      assembly: Map<String, dynamic>.from(map['assembly'] ?? const {}),
     );
   }
 

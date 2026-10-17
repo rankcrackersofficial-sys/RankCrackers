@@ -810,6 +810,19 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
       separatorBuilder: (_, __) => const SizedBox(height: 10),
       itemBuilder: (context, index) {
         final unit = units[index];
+        final assembly = unit.assembly;
+        final pedagogy =
+            Map<String, dynamic>.from(assembly['pedagogy'] ?? const {});
+        final readiness =
+            Map<String, dynamic>.from(assembly['contentReadiness'] ?? const {});
+        final progression =
+            (pedagogy['progression'] as List<dynamic>? ?? const [])
+                .map((step) => step.toString())
+                .toList();
+        final available =
+            (readiness['availableSections'] as List<dynamic>? ?? const [])
+                .map((section) => section.toString())
+                .toList();
         return DarkCard(
           padding: const EdgeInsets.all(14),
           child: Column(
@@ -836,6 +849,30 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
                       color: AppColors.gold,
                       fontSize: 10,
                       fontWeight: FontWeight.w700)),
+              if (progression.isNotEmpty) ...[
+                const SizedBox(height: 10),
+                Text('Learning path',
+                    style: TextStyle(
+                        color: scheme.onSurface,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700)),
+                const SizedBox(height: 3),
+                Text(progression.join('  •  '),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: scheme.onSurfaceVariant,
+                        fontSize: 10,
+                        height: 1.35)),
+              ],
+              if (available.isNotEmpty) ...[
+                const SizedBox(height: 7),
+                Text('Verified sections: ${available.join(', ')}',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: AppColors.gold, fontSize: 10, height: 1.3)),
+              ],
             ],
           ),
         );
