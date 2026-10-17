@@ -8,7 +8,7 @@ Student projection: `student_mission_catalog/{sameMissionId}`
 
 Legacy mission IDs are historical/test/factory history unless an explicit current authority document binds them to a live Founder mission. Synthetic reports and preview bundles are not production evidence.
 
-Crucible cadence authority: `docs/CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT.md` (10:00 IST global clock, 98-day Endless Circle, joining Buffer Day, Micro/Macro/Major/Full assessment lanes and late-joiner gates).
+Crucible cadence authority: `docs/CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT_V2.md` (10:00 IST global clock, 105-day circle, 48-hour rebuild, Day-15 assessment junctions, four-circle projection, Micro/Macro/Major/Full lanes and late-joiner gates).
 
 See `docs/authority/CURRENT_AUTHORITY_INDEX.json` for machine-readable routing.
 

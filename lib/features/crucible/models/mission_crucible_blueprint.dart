@@ -96,15 +96,16 @@ class MissionCrucibleBlueprint extends Equatable {
   final String
       recruitmentId; // Student-visible cohort projection: e.g. 'jee_main_2027'
   final String blueprintVersion;
-  final int cycleLengthDays; // e.g. 98 for JEE Main 2027
+  final int cycleLengthDays; // mission-specific: 105 for SSC CGL V2
   final int phaseCount; // e.g. 7
   final int schedulesPerPhase; // e.g. 6
   final int hoursPerSchedule; // e.g. 48
   final int learningHoursPerSchedule; // e.g. 47
   final int microHoursPerSchedule; // e.g. 1
-  final int rebuildDurationHours; // e.g. 23
+  final int rebuildDurationHours; // 48 for the V2 105-day cadence
   final int macroDurationHours; // e.g. 2
-  final int recoveryDurationHours; // e.g. 23
+  final int
+      recoveryDurationHours; // post-test buffer until the next 10:00 cutover
   final SmartEntryBlueprint smartEntryBlueprint;
   final MicroPolicy microPolicy;
   final MacroPolicy macroPolicy;
@@ -178,16 +179,16 @@ class MissionCrucibleBlueprint extends Equatable {
       MissionCrucibleBlueprint(
     missionId: 'ssc_cgl',
     recruitmentId: 'ssc_cgl',
-    blueprintVersion: 'ssc-cgl-2026-endless-circle-v1',
-    cycleLengthDays: 98,
+    blueprintVersion: 'ssc-cgl-2026-endless-circle-v2',
+    cycleLengthDays: 105,
     phaseCount: 7,
     schedulesPerPhase: 6,
     hoursPerSchedule: 48,
     learningHoursPerSchedule: 47,
     microHoursPerSchedule: 1,
-    rebuildDurationHours: 46,
+    rebuildDurationHours: 48,
     macroDurationHours: 2,
-    recoveryDurationHours: 0,
+    recoveryDurationHours: 70,
     smartEntryBlueprint: SmartEntryBlueprint(
       domainIds: [
         'quantitative_aptitude',

@@ -236,11 +236,9 @@ class CrucibleClockEngine {
 
     final studyDuration =
         Duration(hours: bp.schedulesPerPhase * bp.hoursPerSchedule);
-    final rebuildStart = studyDuration; // Day 13 start (288 hours)
+    final rebuildStart = studyDuration; // Day 13 start (after six schedules)
     final macroStart = rebuildStart + Duration(hours: bp.rebuildDurationHours);
     final macroEnd = macroStart + Duration(hours: bp.macroDurationHours);
-    final phaseEnd = Duration(days: daysPerPhase);
-
     if (elapsedWithinPhase < rebuildStart) {
       final elapsedWithinSchedule =
           elapsedWithinPhase.inHours % bp.hoursPerSchedule;

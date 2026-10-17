@@ -1,11 +1,11 @@
 # RankCrackers Crucible — Endless Circle & Assessment Contract
 
-**Status:** CANONICAL / FROZEN PRODUCT CONTRACT  
+**Status:** SUPERSEDED / HISTORICAL CONTRACT  
 **Contract ID:** `RC-CRUCIBLE-ENDLESS-CIRCLE-V1`  
 **Effective date:** 17 October 2026  
 **Scope:** All missions unless a later, versioned mission blueprint explicitly overrides a parameter.
 
-This document is the final record of the Crucible and Test Arena discussions. Runtime code, Founder configuration and student UI must conform to this contract. A later change requires a new contract version; it must not be introduced as an ad-hoc schedule redesign.
+This document is retained for audit history only. It is superseded by [`CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT_V2.md`](CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT_V2.md), which is the active authority for runtime, Founder configuration and student UI.
 
 ## 1. Non-negotiable operating principle
 

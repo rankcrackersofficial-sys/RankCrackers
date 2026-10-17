@@ -15,12 +15,13 @@ import '../../../dashboard/presentation/providers/dashboard_provider.dart';
 import '../../core/crucible_clock_engine.dart';
 import '../../core/crucible_canonical_schedules.dart';
 import '../../models/crucible_protocol_state.dart';
+import '../../models/mission_crucible_blueprint.dart';
 import '../providers/crucible_state_provider.dart';
 import '../../../digibook/domain/services/digibook_canonical_bridge_service.dart';
 import '../../../digibook/domain/models/digibook_launch_args.dart';
 
 /// CRUCIBLE SCREEN
-/// Sovereign Student Panel for the 98-Day Continuous Learning Ring.
+/// Sovereign Student Panel for the mission-specific Continuous Learning Ring.
 /// Adheres strictly to the Universal Crucible Constitution and Academic Truth.
 class CrucibleScreen extends ConsumerStatefulWidget {
   const CrucibleScreen({super.key});
@@ -350,7 +351,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         : isMajor
             ? 'MAJOR TEST JUNCTION'
             : 'MACRO TEST JUNCTION';
-    final duration = isRebuild ? '46 hours' : '2 hours';
+    final duration = isRebuild ? '48 hours' : '2 hours';
     final message = isRebuild
         ? 'Repair weak atomic topics, revisit DigiBook lessons and consolidate the completed phase.'
         : '${isMajor ? 'Major' : 'Macro'} assessment is gated by verified questions and student eligibility.';
@@ -748,12 +749,16 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
       now: now,
     );
 
-    final currentPhase =
-        CrucibleCanonicalScheduleRegistry.getPhaseForCycleDay(currentCycleDay);
-    final isRebuild =
-        CrucibleCanonicalScheduleRegistry.isRebuildDay(currentCycleDay);
-    final isMacro =
-        CrucibleCanonicalScheduleRegistry.isMacroDay(currentCycleDay);
+    final missionBlueprint = MissionCrucibleBlueprintRegistry.getBlueprint(
+          protocolState.recruitmentId,
+        ) ??
+        MissionCrucibleBlueprint.jeeMain2027Blueprint;
+    final blockLength =
+        missionBlueprint.cycleLengthDays ~/ missionBlueprint.phaseCount;
+    final currentPhase = ((currentCycleDay - 1) ~/ blockLength) + 1;
+    final dayInBlock = ((currentCycleDay - 1) % blockLength) + 1;
+    final isRebuild = dayInBlock >= 13 && dayInBlock <= 14;
+    final isMacro = dayInBlock == 15;
 
     final activeSchedule =
         CrucibleCanonicalScheduleRegistry.getScheduleForCycleDay(
@@ -803,6 +808,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         currentCycleDay,
                         currentPhase,
                         orbitNumber,
+                        missionBlueprint.cycleLengthDays,
                         sessionUser?.examName ?? 'Mission',
                       ),
                       const SizedBox(height: 16),
@@ -812,6 +818,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                         activeSchedule: activeSchedule,
                         currentCycleDay: currentCycleDay,
                         currentPhase: currentPhase,
+                        cycleLengthDays: missionBlueprint.cycleLengthDays,
                         dayInScheduleLabel: dayInScheduleLabel,
                         isRebuild: isRebuild,
                         isMacro: isMacro,
@@ -823,11 +830,19 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       const SizedBox(height: 16),
 
                       // 🔱 4. UPCOMING MILESTONES (REBUILD & MACRO)
-                      _buildMilestonesCard(currentCycleDay, currentPhase),
+                      _buildMilestonesCard(
+                        currentCycleDay,
+                        currentPhase,
+                        missionBlueprint.cycleLengthDays,
+                      ),
                       const SizedBox(height: 16),
 
                       // 🔱 5. 98-DAY CONTINUOUS RING VISUALIZATION
-                      _build98DayRingCard(currentCycleDay, currentPhase),
+                      _build98DayRingCard(
+                        currentCycleDay,
+                        currentPhase,
+                        missionBlueprint.cycleLengthDays,
+                      ),
                       const SizedBox(height: 16),
 
                       // 🔱 6. ANCILLARY CALIBRATION & COMPETITION HOLDS
@@ -847,8 +862,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // ---------------------------------------------------------------------------
   // SECTION 1: COMPACT HEADER SECTION (<= 110dp)
   // ---------------------------------------------------------------------------
-  Widget _buildCompactHeader(
-      int currentCycleDay, int currentPhase, int orbitNumber, String examName) {
+  Widget _buildCompactHeader(int currentCycleDay, int currentPhase,
+      int orbitNumber, int cycleLengthDays, String examName) {
     final scheme = Theme.of(context).colorScheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -895,7 +910,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
         ),
         const SizedBox(height: 2),
         Text(
-          'DAY $currentCycleDay OF 98 • BLOCK $currentPhase OF 7 • CYCLE $orbitNumber',
+          'DAY $currentCycleDay OF $cycleLengthDays • BLOCK $currentPhase OF 7 • CYCLE $orbitNumber',
           style: AppTypography.label.copyWith(
             color: AppColors.gold,
             fontWeight: FontWeight.w600,
@@ -914,6 +929,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required CrucibleCanonicalSchedule? activeSchedule,
     required int currentCycleDay,
     required int currentPhase,
+    required int cycleLengthDays,
     required String dayInScheduleLabel,
     required bool isRebuild,
     required bool isMacro,
@@ -929,7 +945,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildTagChip('REBUILD WINDOW', AppColors.gold),
-                Text('Day $currentCycleDay of 98',
+                Text('Day $currentCycleDay of $cycleLengthDays',
                     style: AppTypography.subtitle),
               ],
             ),
@@ -978,7 +994,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _buildTagChip('MACRO CITADEL', AppColors.gold),
-                Text('Day $currentCycleDay of 98',
+                Text('Day $currentCycleDay of $cycleLengthDays',
                     style: AppTypography.subtitle),
               ],
             ),
@@ -1505,12 +1521,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   // ---------------------------------------------------------------------------
   // SECTION 4: UPCOMING MILESTONES (REBUILD & MACRO)
   // ---------------------------------------------------------------------------
-  Widget _buildMilestonesCard(int currentCycleDay, int currentPhase) {
+  Widget _buildMilestonesCard(
+      int currentCycleDay, int currentPhase, int cycleLengthDays) {
     final scheme = Theme.of(context).colorScheme;
-    final nextRebuildDay =
-        currentPhase * 14 - 1; // e.g. Day 13 for Phase 1, Day 27 for Phase 2...
-    final nextMacroDay =
-        currentPhase * 14; // e.g. Day 14 for Phase 1, Day 28 for Phase 2...
+    final daysPerBlock = cycleLengthDays ~/ 7;
+    final nextRebuildDay = currentPhase * daysPerBlock - 2;
+    final nextMacroDay = currentPhase * daysPerBlock;
 
     return DarkCard(
       padding: const EdgeInsets.all(18),
@@ -1593,10 +1609,12 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
   }
 
   // ---------------------------------------------------------------------------
-  // SECTION 5: 98-DAY CONTINUOUS RING VISUALIZATION
+  // SECTION 5: MISSION-SPECIFIC CONTINUOUS RING VISUALIZATION
   // ---------------------------------------------------------------------------
-  Widget _build98DayRingCard(int currentCycleDay, int currentPhase) {
+  Widget _build98DayRingCard(
+      int currentCycleDay, int currentPhase, int cycleLengthDays) {
     final scheme = Theme.of(context).colorScheme;
+    final blockLength = cycleLengthDays ~/ 7;
     return DarkCard(
       padding: const EdgeInsets.all(18),
       child: Column(
@@ -1605,8 +1623,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
-                '98-DAY CONTINUOUS RING',
+              Text(
+                '$cycleLengthDays-DAY CONTINUOUS RING',
                 style: TextStyle(
                   color: AppColors.gold,
                   fontSize: 10,
@@ -1661,7 +1679,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        '${(phaseNum - 1) * 14 + 1}-${phaseNum * 14}d',
+                        '${(phaseNum - 1) * blockLength + 1}-${phaseNum * blockLength}d',
                         style: TextStyle(
                           color: isCurrent
                               ? AppColors.gold
@@ -1677,7 +1695,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           ),
           const SizedBox(height: 10),
           Text(
-            'Continuous rotation: Day 98 advances back to Day 1 without syllabus loss.',
+            'Continuous rotation: Day $cycleLengthDays advances back to Day 1 without syllabus loss.',
             style: AppTypography.subtitle.copyWith(
               color: scheme.onSurfaceVariant,
               fontSize: 10,
