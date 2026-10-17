@@ -354,7 +354,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
             borderRadius: BorderRadius.circular(12),
             onTap: priorityNode == null
                 ? null
-                : () => context.push(AppRoutes.digibook, extra: priorityNode),
+                : () => context.go(AppRoutes.digibook, extra: priorityNode),
             child: DarkCard(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
               child: Row(

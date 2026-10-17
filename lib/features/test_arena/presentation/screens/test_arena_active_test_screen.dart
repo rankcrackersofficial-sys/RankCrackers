@@ -35,7 +35,8 @@ class TestArenaActiveTestScreen extends StatefulWidget {
   });
 
   @override
-  State<TestArenaActiveTestScreen> createState() => _TestArenaActiveTestScreenState();
+  State<TestArenaActiveTestScreen> createState() =>
+      _TestArenaActiveTestScreenState();
 }
 
 class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
@@ -57,7 +58,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
   void initState() {
     super.initState();
     _attempt = TestArenaEngine.initializeAttempt(
-      attemptId: 'ATT_${DateTime.now().millisecondsSinceEpoch}_${widget.uid.hashCode.abs()}',
+      attemptId:
+          'ATT_${DateTime.now().millisecondsSinceEpoch}_${widget.uid.hashCode.abs()}',
       uid: widget.uid,
       event: widget.event,
       paper: widget.paper,
@@ -170,7 +172,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Text(
           'Submit Assessment',
-          style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 17),
+          style: TextStyle(
+              color: _text, fontWeight: FontWeight.bold, fontSize: 17),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -181,27 +184,34 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
               style: TextStyle(color: _muted, fontSize: 13),
             ),
             SizedBox(height: 14),
-            _buildReviewStatRow('Total Questions', '${summary.totalQuestions}', _text),
-            _buildReviewStatRow('Answered', '${summary.answeredCount}', Color(0xFF4CAF50)),
-            _buildReviewStatRow('Unanswered', '${summary.unansweredCount}', _muted),
-            _buildReviewStatRow('Marked for Review', '${summary.markedForReviewCount}', AppColors.gold),
+            _buildReviewStatRow(
+                'Total Questions', '${summary.totalQuestions}', _text),
+            _buildReviewStatRow(
+                'Answered', '${summary.answeredCount}', Color(0xFF4CAF50)),
+            _buildReviewStatRow(
+                'Unanswered', '${summary.unansweredCount}', _muted),
+            _buildReviewStatRow('Marked for Review',
+                '${summary.markedForReviewCount}', AppColors.gold),
             SizedBox(height: 14),
             Text(
               'Once submitted, answers cannot be modified.',
-              style: TextStyle(color: _muted, fontSize: 11, fontStyle: FontStyle.italic),
+              style: TextStyle(
+                  color: _muted, fontSize: 11, fontStyle: FontStyle.italic),
             ),
           ],
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx),
-            child: Text('RETURN TO TEST', style: TextStyle(color: _muted, fontWeight: FontWeight.bold)),
+            child: Text('RETURN TO TEST',
+                style: TextStyle(color: _muted, fontWeight: FontWeight.bold)),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.gold,
               foregroundColor: _onPrimary,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)),
             ),
             onPressed: () {
               Navigator.pop(ctx);
@@ -214,7 +224,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
               });
               _computeAndShowResult();
             },
-            child: const Text('SUBMIT TEST', style: TextStyle(fontWeight: FontWeight.w800)),
+            child: const Text('SUBMIT TEST',
+                style: TextStyle(fontWeight: FontWeight.w800)),
           ),
         ],
       ),
@@ -258,7 +269,11 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                 children: [
                   Text(
                     'QUESTION PALETTE',
-                    style: TextStyle(color: AppColors.gold, fontSize: 13, fontWeight: FontWeight.bold, letterSpacing: 1.1),
+                    style: TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.1),
                   ),
                   IconButton(
                     icon: Icon(Icons.close_rounded, color: _muted),
@@ -328,12 +343,16 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                         decoration: BoxDecoration(
                           color: bg,
                           borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: border, width: isCur ? 2.0 : 1.0),
+                          border: Border.all(
+                              color: border, width: isCur ? 2.0 : 1.0),
                         ),
                         alignment: Alignment.center,
                         child: Text(
                           '${index + 1}',
-                          style: TextStyle(color: text, fontWeight: FontWeight.bold, fontSize: 13),
+                          style: TextStyle(
+                              color: text,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13),
                         ),
                       ),
                     );
@@ -380,33 +399,43 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     Row(
                       children: [
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 6, vertical: 2),
                           decoration: BoxDecoration(
                             color: AppColors.gold.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
                             widget.isFixtureMode ? 'STAGING' : 'TEST ARENA',
-                            style: TextStyle(color: AppColors.gold, fontSize: 9, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                color: AppColors.gold,
+                                fontSize: 9,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                         SizedBox(width: 8),
                         Text(
                           'Q ${_currentQuestionIndex + 1} of $totalQuestions',
-                          style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 13),
+                          style: TextStyle(
+                              color: _text,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13),
                         ),
                       ],
                     ),
                     // Authoritative Live Timer
                     Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
                         color: _remainingTime.inMinutes < 5
                             ? Colors.red.withValues(alpha: 0.2)
                             : _text.withValues(alpha: 0.06),
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(
-                          color: _remainingTime.inMinutes < 5 ? Colors.red : _muted,
+                          color: _remainingTime.inMinutes < 5
+                              ? Colors.red
+                              : _muted,
                         ),
                       ),
                       child: Row(
@@ -414,16 +443,22 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                           Icon(
                             Icons.timer_outlined,
                             size: 14,
-                            color: _remainingTime.inMinutes < 5 ? Colors.red : AppColors.gold,
+                            color: _remainingTime.inMinutes < 5
+                                ? Colors.red
+                                : AppColors.gold,
                           ),
                           SizedBox(width: 5),
                           Text(
                             '$hours:$minutes:$seconds',
                             style: TextStyle(
-                              color: _remainingTime.inMinutes < 5 ? Colors.red : _text,
+                              color: _remainingTime.inMinutes < 5
+                                  ? Colors.red
+                                  : _text,
                               fontWeight: FontWeight.w700,
                               fontSize: 12,
-                              fontFeatures: const [FontFeature.tabularFigures()],
+                              fontFeatures: const [
+                                FontFeature.tabularFigures()
+                              ],
                             ),
                           ),
                         ],
@@ -433,7 +468,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     Row(
                       children: [
                         IconButton(
-                          icon: Icon(Icons.grid_view_rounded, color: _muted, size: 20),
+                          icon: Icon(Icons.grid_view_rounded,
+                              color: _muted, size: 20),
                           onPressed: _openQuestionPalette,
                           tooltip: 'Question Palette',
                         ),
@@ -441,11 +477,15 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppColors.gold,
                             foregroundColor: _onPrimary,
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(6)),
                           ),
                           onPressed: _handleManualSubmit,
-                          child: const Text('SUBMIT', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 11)),
+                          child: const Text('SUBMIT',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w800, fontSize: 11)),
                         ),
                       ],
                     ),
@@ -467,17 +507,27 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                         children: [
                           Text(
                             currentQ.subject.toUpperCase(),
-                            style: TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.0),
+                            style: TextStyle(
+                                color: AppColors.gold,
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.0),
                           ),
                           Container(
-                            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 6, vertical: 2),
                             decoration: BoxDecoration(
                               color: _text.withValues(alpha: 0.05),
                               borderRadius: BorderRadius.circular(4),
                             ),
                             child: Text(
-                              currentQ.questionType == 'numerical' ? 'NUMERICAL VALUE' : 'SINGLE CHOICE',
-                              style: TextStyle(color: _muted, fontSize: 9, fontWeight: FontWeight.w600),
+                              currentQ.questionType == 'numerical'
+                                  ? 'NUMERICAL VALUE'
+                                  : 'SINGLE CHOICE',
+                              style: TextStyle(
+                                  color: _muted,
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w600),
                             ),
                           ),
                         ],
@@ -509,8 +559,12 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                               SizedBox(height: 8),
                               TextField(
                                 controller: _numericalController,
-                                keyboardType: TextInputType.numberWithOptions(decimal: true, signed: true),
-                                style: TextStyle(color: _text, fontSize: 18, fontWeight: FontWeight.bold),
+                                keyboardType: TextInputType.numberWithOptions(
+                                    decimal: true, signed: true),
+                                style: TextStyle(
+                                    color: _text,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
                                 decoration: InputDecoration(
                                   hintText: 'e.g. 4.5',
                                   hintStyle: TextStyle(color: _muted),
@@ -522,7 +576,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(8),
-                                    borderSide: const BorderSide(color: AppColors.gold),
+                                    borderSide:
+                                        const BorderSide(color: AppColors.gold),
                                   ),
                                 ),
                                 onChanged: _handleNumericalChange,
@@ -559,23 +614,34 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     OutlinedButton.icon(
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(
-                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
+                          color: (currentResp?.isMarkedForReview ?? false)
+                              ? AppColors.gold
+                              : _muted,
                         ),
-                        backgroundColor: (currentResp?.isMarkedForReview ?? false)
-                            ? AppColors.gold.withValues(alpha: 0.12)
-                            : Colors.transparent,
-                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        backgroundColor:
+                            (currentResp?.isMarkedForReview ?? false)
+                                ? AppColors.gold.withValues(alpha: 0.12)
+                                : Colors.transparent,
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
                       ),
                       icon: Icon(
-                        (currentResp?.isMarkedForReview ?? false) ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                        (currentResp?.isMarkedForReview ?? false)
+                            ? Icons.bookmark_rounded
+                            : Icons.bookmark_border_rounded,
                         size: 16,
-                        color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
+                        color: (currentResp?.isMarkedForReview ?? false)
+                            ? AppColors.gold
+                            : _muted,
                       ),
                       label: Text(
                         'REVIEW',
                         style: TextStyle(
-                          color: (currentResp?.isMarkedForReview ?? false) ? AppColors.gold : _muted,
+                          color: (currentResp?.isMarkedForReview ?? false)
+                              ? AppColors.gold
+                              : _muted,
                           fontSize: 11,
                           fontWeight: FontWeight.bold,
                         ),
@@ -588,7 +654,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     if (currentResp?.isAnswered ?? false) ...[
                       TextButton(
                         onPressed: _handleClearResponse,
-                        child: Text('Clear', style: TextStyle(color: _muted, fontSize: 11)),
+                        child: Text('Clear',
+                            style: TextStyle(color: _muted, fontSize: 11)),
                       ),
                       SizedBox(width: 8),
                     ],
@@ -611,13 +678,18 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: AppColors.gold,
                         foregroundColor: _onPrimary,
-                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 10),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
                       ),
                       icon: const Icon(Icons.chevron_right_rounded, size: 18),
                       label: Text(
-                        _currentQuestionIndex < totalQuestions - 1 ? 'NEXT' : 'SUMMARY',
-                        style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12),
+                        _currentQuestionIndex < totalQuestions - 1
+                            ? 'NEXT'
+                            : 'SUMMARY',
+                        style: const TextStyle(
+                            fontWeight: FontWeight.w800, fontSize: 12),
                       ),
                       onPressed: () {
                         if (_currentQuestionIndex < totalQuestions - 1) {
@@ -669,7 +741,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
               height: 28,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: isSelected ? AppColors.gold : _text.withValues(alpha: 0.06),
+                color:
+                    isSelected ? AppColors.gold : _text.withValues(alpha: 0.06),
               ),
               alignment: Alignment.center,
               child: Text(
@@ -719,7 +792,9 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(label, style: TextStyle(color: _muted, fontSize: 13)),
-          Text(value, style: TextStyle(color: color, fontWeight: FontWeight.bold, fontSize: 13)),
+          Text(value,
+              style: TextStyle(
+                  color: color, fontWeight: FontWeight.bold, fontSize: 13)),
         ],
       ),
     );
@@ -743,14 +818,18 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
                         color: AppColors.gold.withValues(alpha: 0.15),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
                         'ASSESSMENT COMPLETE',
-                        style: TextStyle(color: AppColors.gold, fontSize: 10, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            color: AppColors.gold,
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                     IconButton(
@@ -762,7 +841,8 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                 SizedBox(height: 12),
                 Text(
                   widget.paper.paperTitle,
-                  style: AppTypography.hero.copyWith(fontSize: 20, fontWeight: FontWeight.bold, color: _text),
+                  style: AppTypography.hero.copyWith(
+                      fontSize: 20, fontWeight: FontWeight.bold, color: _text),
                 ),
                 SizedBox(height: 4),
                 Text(
@@ -779,9 +859,16 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
-                          _buildScoreMetric('Score', '${res.totalScore} / ${res.maxScore}', AppColors.gold),
-                          _buildScoreMetric('Accuracy', '${res.accuracy}%', _text),
-                          _buildScoreMetric('Attempted', '${res.totalAttempted} / ${widget.paper.totalQuestions}', _muted),
+                          _buildScoreMetric(
+                              'Score',
+                              '${res.totalScore} / ${res.maxScore}',
+                              AppColors.gold),
+                          _buildScoreMetric(
+                              'Accuracy', '${res.accuracy}%', _text),
+                          _buildScoreMetric(
+                              'Attempted',
+                              '${res.totalAttempted} / ${widget.paper.totalQuestions}',
+                              _muted),
                         ],
                       ),
                     ],
@@ -792,7 +879,11 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                 // Subject Performance
                 const Text(
                   'SUBJECT BREAKDOWN',
-                  style: TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.1),
+                  style: TextStyle(
+                      color: AppColors.gold,
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.1),
                 ),
                 SizedBox(height: 8),
                 for (final subj in res.subjectScores.values) ...[
@@ -801,8 +892,15 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(subj.subject, style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 14)),
-                        Text('${subj.score} / ${subj.maxScore}', style: const TextStyle(color: AppColors.gold, fontWeight: FontWeight.bold)),
+                        Text(subj.subject,
+                            style: TextStyle(
+                                color: _text,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14)),
+                        Text('${subj.score} / ${subj.maxScore}',
+                            style: const TextStyle(
+                                color: AppColors.gold,
+                                fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -814,7 +912,11 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                 if (res.remediationTargets.isNotEmpty) ...[
                   const Text(
                     'CONCEPT REMEDIATION TARGETS',
-                    style: TextStyle(color: AppColors.gold, fontSize: 11, fontWeight: FontWeight.bold, letterSpacing: 1.1),
+                    style: TextStyle(
+                        color: AppColors.gold,
+                        fontSize: 11,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 1.1),
                   ),
                   const SizedBox(height: 8),
                   for (final rem in res.remediationTargets) ...[
@@ -822,34 +924,48 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       padding: const EdgeInsets.all(14),
                       child: Row(
                         children: [
-                          Icon(Icons.menu_book_rounded, color: AppColors.gold, size: 18),
+                          Icon(Icons.menu_book_rounded,
+                              color: AppColors.gold, size: 18),
                           SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text('Q${rem.questionNumber} • ${rem.subject}', style: TextStyle(color: _text, fontWeight: FontWeight.bold, fontSize: 13)),
+                                Text('Q${rem.questionNumber} • ${rem.subject}',
+                                    style: TextStyle(
+                                        color: _text,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 13)),
                                 Text(
-                                  rem.isContentAvailable ? 'DigiBook Lesson Available' : 'Remediation queued',
+                                  rem.isContentAvailable
+                                      ? 'DigiBook Lesson Available'
+                                      : 'Remediation queued',
                                   style: TextStyle(
-                                    color: rem.isContentAvailable ? Color(0xFF4CAF50) : _muted,
+                                    color: rem.isContentAvailable
+                                        ? Color(0xFF4CAF50)
+                                        : _muted,
                                     fontSize: 11,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          if (rem.isContentAvailable && rem.generationUnitId != null)
+                          if (rem.isContentAvailable &&
+                              rem.generationUnitId != null)
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: AppColors.gold,
                                 foregroundColor: _onPrimary,
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 10, vertical: 6),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(6)),
                               ),
                               onPressed: () {
-                                final bridge = DigiBookCanonicalBridgeService.instance;
-                                final entry = bridge.getEntryByGuId(rem.generationUnitId!);
+                                final bridge =
+                                    DigiBookCanonicalBridgeService.instance;
+                                final entry = bridge
+                                    .getEntryByGuId(rem.generationUnitId!);
                                 if (entry != null) {
                                   final args = DigiBookLaunchArgs(
                                     generationUnitId: entry.guId,
@@ -860,10 +976,13 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                                     factSemantics: entry.factSemantics,
                                     atomicFactIds: entry.atomicFactIds,
                                   );
-                                  context.push(AppRoutes.digibook, extra: args);
+                                  context.go(AppRoutes.digibook, extra: args);
                                 }
                               },
-                              child: const Text('REMEDY', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 10)),
+                              child: const Text('REMEDY',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 10)),
                             ),
                         ],
                       ),
@@ -881,10 +1000,12 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
                       backgroundColor: _muted,
                       foregroundColor: _text,
                       padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
                     ),
                     onPressed: () => context.pop(),
-                    child: const Text('CLOSE TEST ARENA', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: const Text('CLOSE TEST ARENA',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],
@@ -898,7 +1019,9 @@ class _TestArenaActiveTestScreenState extends State<TestArenaActiveTestScreen> {
   Widget _buildScoreMetric(String label, String value, Color color) {
     return Column(
       children: [
-        Text(value, style: TextStyle(color: color, fontSize: 18, fontWeight: FontWeight.bold)),
+        Text(value,
+            style: TextStyle(
+                color: color, fontSize: 18, fontWeight: FontWeight.bold)),
         SizedBox(height: 2),
         Text(label, style: TextStyle(color: _muted, fontSize: 11)),
       ],

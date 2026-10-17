@@ -303,7 +303,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                                       const SizedBox(width: 12),
                                       TextButton.icon(
                                         onPressed: () =>
-                                            context.push(AppRoutes.digibook),
+                                            context.go(AppRoutes.digibook),
                                         icon: const Icon(
                                             Icons.menu_book_rounded,
                                             size: 14),
@@ -507,7 +507,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     ? null
                     : () {
                         Navigator.of(sheetContext).pop();
-                        context.push(AppRoutes.digibook, extra: nodeId);
+                        context.go(AppRoutes.digibook, extra: nodeId);
                       },
                 icon: const Icon(Icons.menu_book_rounded, size: 17),
                 label: const Text('OPEN IN DIGIBOOK'),
