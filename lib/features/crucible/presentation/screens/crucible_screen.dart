@@ -30,10 +30,20 @@ class CrucibleScreen extends ConsumerStatefulWidget {
 }
 
 class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
+  final ScrollController _orbitScrollController = ScrollController();
+  final Map<int, GlobalKey> _orbitDayKeys = <int, GlobalKey>{};
+  int? _selectedOrbitDay;
+
   @override
   void initState() {
     super.initState();
     DigiBookCanonicalBridgeService.instance.initialize();
+  }
+
+  @override
+  void dispose() {
+    _orbitScrollController.dispose();
+    super.dispose();
   }
 
   @override
@@ -103,6 +113,8 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
     required List<Map<String, dynamic>> days,
   }) {
     final scheme = Theme.of(context).colorScheme;
+    final missionName =
+        sessionUser?.displayExamName ?? sessionUser?.examName ?? 'Mission';
     return Scaffold(
       backgroundColor: scheme.surface,
       body: TacticalNoirBackground(
@@ -120,7 +132,7 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(24, 16, 24, 8),
-                child: Text('SSC CGL STUDY ORBIT',
+                child: Text('$missionName STUDY ORBIT',
                     style: AppTypography.cardTitle.copyWith(
                         color: scheme.onSurface,
                         fontSize: 14,
@@ -129,15 +141,69 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
-                    'Source-bound SSC syllabus study schedule • assessments remain locked until question verification.',
+                    'Source-bound syllabus study schedule • every day interleaves new learning and spaced revision.',
                     style: AppTypography.body.copyWith(
                         color: scheme.onSurfaceVariant,
                         fontSize: 11,
                         height: 1.35)),
               ),
               const SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Row(children: [
+                  Text('JUMP TO DAY',
+                      style: TextStyle(
+                          color: scheme.onSurfaceVariant,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.8)),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: DropdownButtonFormField<int>(
+                      value: _selectedOrbitDay,
+                      isDense: true,
+                      dropdownColor: scheme.surfaceContainerHighest,
+                      decoration: InputDecoration(
+                        hintText: 'Select a study day',
+                        hintStyle: TextStyle(
+                            color: scheme.onSurfaceVariant, fontSize: 11),
+                        contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 8),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide: BorderSide(color: scheme.outline)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                            borderSide:
+                                const BorderSide(color: AppColors.gold)),
+                      ),
+                      items: days.map((day) {
+                        final dayNumber = (day['day'] as num?)?.toInt() ?? 0;
+                        return DropdownMenuItem<int>(
+                          value: dayNumber,
+                          child: Text('Day $dayNumber',
+                              style: TextStyle(
+                                  color: scheme.onSurface, fontSize: 11)),
+                        );
+                      }).toList(),
+                      onChanged: (value) {
+                        if (value == null) return;
+                        setState(() => _selectedOrbitDay = value);
+                        final target = _orbitDayKeys[value]?.currentContext;
+                        if (target != null) {
+                          Scrollable.ensureVisible(target,
+                              duration: const Duration(milliseconds: 350),
+                              curve: Curves.easeOut);
+                        }
+                      },
+                    ),
+                  ),
+                ]),
+              ),
+              const SizedBox(height: 8),
               Expanded(
                 child: ListView.builder(
+                  controller: _orbitScrollController,
                   padding: const EdgeInsets.fromLTRB(24, 8, 24, 100),
                   itemCount: days.length,
                   itemBuilder: (context, index) {
@@ -151,101 +217,110 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
                     final lanes = rawLanes is Map
                         ? Map<String, dynamic>.from(rawLanes)
                         : const <String, dynamic>{};
+                    final dayNumber =
+                        (day['day'] as num?)?.toInt() ?? index + 1;
                     return Padding(
+                      key: _orbitDayKeys.putIfAbsent(dayNumber, GlobalKey.new),
                       padding: const EdgeInsets.only(bottom: 8),
-                      child: DarkCard(
-                        padding: const EdgeInsets.all(14),
-                        child: Row(children: [
-                          Text('DAY ${day['day'] ?? index + 1}',
-                              style: AppTypography.cardTitle.copyWith(
-                                  color: AppColors.gold, fontSize: 12)),
-                          const SizedBox(width: 14),
-                          Expanded(
-                              child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                Text(subjects,
-                                    style: TextStyle(
-                                        color: scheme.onSurface,
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600)),
-                                const SizedBox(height: 3),
-                                Text(
-                                    '$count verified atomic study topics • Assessment pending verification',
-                                    style: TextStyle(
-                                        color: scheme.onSurfaceVariant,
-                                        fontSize: 10)),
-                                if (lanes.isNotEmpty) ...[
-                                  const SizedBox(height: 6),
-                                  Wrap(
-                                    spacing: 5,
-                                    runSpacing: 4,
-                                    children: lanes.entries.map((entry) {
-                                      final lane = entry.value is Map
-                                          ? Map<String, dynamic>.from(
-                                              entry.value as Map)
-                                          : const <String, dynamic>{};
-                                      final short =
-                                          entry.key == 'Quantitative Aptitude'
-                                              ? 'Quant'
-                                              : entry.key == 'General Awareness'
-                                                  ? 'GA'
-                                                  : entry.key;
-                                      return Container(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 6, vertical: 3),
-                                        decoration: BoxDecoration(
-                                          color: AppColors.gold
-                                              .withValues(alpha: 0.10),
-                                          borderRadius:
-                                              BorderRadius.circular(5),
-                                        ),
-                                        child: Text(
-                                          '$short ${lane['newCount'] ?? 0}N/${lane['revisionCount'] ?? 0}R',
-                                          style: const TextStyle(
-                                              color: AppColors.gold,
-                                              fontSize: 8.5,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      );
-                                    }).toList(),
-                                  ),
-                                ],
-                                const SizedBox(height: 8),
-                                Row(
-                                  children: [
-                                    TextButton.icon(
-                                      onPressed: () =>
-                                          context.push(AppRoutes.syllabus),
-                                      icon: const Icon(
-                                          Icons.account_tree_rounded,
-                                          size: 14),
-                                      label: const Text('SYLLABUS',
-                                          style: TextStyle(fontSize: 9)),
-                                      style: TextButton.styleFrom(
-                                          foregroundColor: AppColors.gold,
-                                          padding: EdgeInsets.zero,
-                                          minimumSize: const Size(0, 28)),
-                                    ),
-                                    const SizedBox(width: 12),
-                                    TextButton.icon(
-                                      onPressed: () =>
-                                          context.push(AppRoutes.digibook),
-                                      icon: const Icon(Icons.menu_book_rounded,
-                                          size: 14),
-                                      label: const Text('DIGIBOOK',
-                                          style: TextStyle(fontSize: 9)),
-                                      style: TextButton.styleFrom(
-                                          foregroundColor: AppColors.gold,
-                                          padding: EdgeInsets.zero,
-                                          minimumSize: const Size(0, 28)),
+                      child: InkWell(
+                        onTap: () => _showOrbitDayDetails(dayNumber, lanes),
+                        borderRadius: BorderRadius.circular(14),
+                        child: DarkCard(
+                          padding: const EdgeInsets.all(14),
+                          child: Row(children: [
+                            Text('DAY $dayNumber',
+                                style: AppTypography.cardTitle.copyWith(
+                                    color: AppColors.gold, fontSize: 12)),
+                            const SizedBox(width: 14),
+                            Expanded(
+                                child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                  Text(subjects,
+                                      style: TextStyle(
+                                          color: scheme.onSurface,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w600)),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                      '$count verified atomic study topics • Assessment pending verification',
+                                      style: TextStyle(
+                                          color: scheme.onSurfaceVariant,
+                                          fontSize: 10)),
+                                  if (lanes.isNotEmpty) ...[
+                                    const SizedBox(height: 6),
+                                    Wrap(
+                                      spacing: 5,
+                                      runSpacing: 4,
+                                      children: lanes.entries.map((entry) {
+                                        final lane = entry.value is Map
+                                            ? Map<String, dynamic>.from(
+                                                entry.value as Map)
+                                            : const <String, dynamic>{};
+                                        final short = entry.key ==
+                                                'Quantitative Aptitude'
+                                            ? 'Quant'
+                                            : entry.key == 'General Awareness'
+                                                ? 'GA'
+                                                : entry.key;
+                                        return Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 6, vertical: 3),
+                                          decoration: BoxDecoration(
+                                            color: AppColors.gold
+                                                .withValues(alpha: 0.10),
+                                            borderRadius:
+                                                BorderRadius.circular(5),
+                                          ),
+                                          child: Text(
+                                            '$short ${lane['newCount'] ?? 0}N/${lane['revisionCount'] ?? 0}R',
+                                            style: const TextStyle(
+                                                color: AppColors.gold,
+                                                fontSize: 8.5,
+                                                fontWeight: FontWeight.w600),
+                                          ),
+                                        );
+                                      }).toList(),
                                     ),
                                   ],
-                                ),
-                              ])),
-                          Icon(Icons.chevron_right_rounded,
-                              color: scheme.onSurfaceVariant),
-                        ]),
+                                  const SizedBox(height: 8),
+                                  Row(
+                                    children: [
+                                      TextButton.icon(
+                                        onPressed: () =>
+                                            context.push(AppRoutes.syllabus),
+                                        icon: const Icon(
+                                            Icons.account_tree_rounded,
+                                            size: 14),
+                                        label: const Text('SYLLABUS',
+                                            style: TextStyle(fontSize: 9)),
+                                        style: TextButton.styleFrom(
+                                            foregroundColor: AppColors.gold,
+                                            padding: EdgeInsets.zero,
+                                            minimumSize: const Size(0, 28)),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      TextButton.icon(
+                                        onPressed: () =>
+                                            context.push(AppRoutes.digibook),
+                                        icon: const Icon(
+                                            Icons.menu_book_rounded,
+                                            size: 14),
+                                        label: const Text('DIGIBOOK',
+                                            style: TextStyle(fontSize: 9)),
+                                        style: TextButton.styleFrom(
+                                            foregroundColor: AppColors.gold,
+                                            padding: EdgeInsets.zero,
+                                            minimumSize: const Size(0, 28)),
+                                      ),
+                                    ],
+                                  ),
+                                ])),
+                            Icon(Icons.chevron_right_rounded,
+                                color: scheme.onSurfaceVariant),
+                          ]),
+                        ),
                       ),
                     );
                   },
@@ -255,6 +330,120 @@ class _CrucibleScreenState extends ConsumerState<CrucibleScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  void _showOrbitDayDetails(int dayNumber, Map<String, dynamic> lanes) {
+    final scheme = Theme.of(context).colorScheme;
+    final order = const <String>[
+      'Quantitative Aptitude',
+      'Reasoning',
+      'General Awareness',
+      'English',
+    ];
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: scheme.surface,
+      builder: (sheetContext) => DraggableScrollableSheet(
+        expand: false,
+        initialChildSize: 0.72,
+        minChildSize: 0.35,
+        maxChildSize: 0.94,
+        builder: (context, controller) => SafeArea(
+          child: ListView(
+            controller: controller,
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 28),
+            children: [
+              Text('DAY $dayNumber STUDY MAP',
+                  style: AppTypography.cardTitle.copyWith(
+                      color: AppColors.gold, fontSize: 14, letterSpacing: 1)),
+              const SizedBox(height: 4),
+              Text('Tap a verified topic to open its DigiBook lesson.',
+                  style:
+                      TextStyle(color: scheme.onSurfaceVariant, fontSize: 11)),
+              const SizedBox(height: 14),
+              DarkCard(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                border:
+                    Border.all(color: AppColors.gold.withValues(alpha: 0.35)),
+                child: Row(children: [
+                  const Icon(Icons.auto_awesome_rounded,
+                      color: AppColors.gold, size: 18),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                        'Unlock deep study guidance, worked approach and revision intelligence for this day.',
+                        style:
+                            TextStyle(color: scheme.onSurface, fontSize: 10)),
+                  ),
+                  TextButton(
+                    onPressed: () => context.push(AppRoutes.eliteAccess),
+                    child: const Text('UNLOCK',
+                        style: TextStyle(color: AppColors.gold, fontSize: 9)),
+                  ),
+                ]),
+              ),
+              const SizedBox(height: 12),
+              ...order.where(lanes.containsKey).map((subject) {
+                final lane = Map<String, dynamic>.from(lanes[subject] as Map);
+                return _buildOrbitSubjectDetails(subject, lane, scheme);
+              }),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildOrbitSubjectDetails(
+      String subject, Map<String, dynamic> lane, ColorScheme scheme) {
+    final newItems = (lane['newItems'] as List?)
+            ?.whereType<Map>()
+            .map((item) => Map<String, dynamic>.from(item))
+            .toList() ??
+        const <Map<String, dynamic>>[];
+    final revisionItems = (lane['revisionItems'] as List?)
+            ?.whereType<Map>()
+            .map((item) => Map<String, dynamic>.from(item))
+            .toList() ??
+        const <Map<String, dynamic>>[];
+    final items = <Map<String, dynamic>>[...newItems, ...revisionItems];
+    return DarkCard(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.fromLTRB(12, 10, 8, 8),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(subject,
+            style: TextStyle(
+                color: scheme.onSurface,
+                fontSize: 12,
+                fontWeight: FontWeight.w700)),
+        Text('${newItems.length} new • ${revisionItems.length} revision',
+            style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 9)),
+        ...items.map((item) {
+          final nodeId = item['nodeId']?.toString();
+          return ListTile(
+            dense: true,
+            contentPadding: EdgeInsets.zero,
+            visualDensity: const VisualDensity(vertical: -3),
+            leading: const Icon(Icons.menu_book_rounded,
+                color: AppColors.gold, size: 17),
+            title: Text(item['title']?.toString() ?? 'Verified topic',
+                style: TextStyle(color: scheme.onSurface, fontSize: 11)),
+            subtitle: Text('${item['unit'] ?? ''} • ${item['topic'] ?? ''}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(color: scheme.onSurfaceVariant, fontSize: 9)),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded,
+                color: AppColors.gold, size: 12),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.push(AppRoutes.digibook, extra: nodeId);
+            },
+          );
+        }),
+      ]),
     );
   }
 

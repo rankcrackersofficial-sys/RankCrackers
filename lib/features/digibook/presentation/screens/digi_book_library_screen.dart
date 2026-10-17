@@ -28,7 +28,9 @@ import '../../domain/services/digibook_user_preferences_service.dart';
 /// - BOOKMARK_MUTATES_MASTERY = NO
 /// - READING_ACTION_IMPLIES_MASTERY_COUNT = 0
 class DigiBookLibraryScreen extends ConsumerStatefulWidget {
-  const DigiBookLibraryScreen({super.key});
+  final String? initialNodeId;
+
+  const DigiBookLibraryScreen({super.key, this.initialNodeId});
 
   @override
   ConsumerState<DigiBookLibraryScreen> createState() =>
@@ -48,6 +50,7 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
   String _activeTab = 'BROWSE'; // 'BROWSE', 'SAVED', 'RECENT'
   String _searchQuery = '';
   final Set<String> _expandedUnitIds = {};
+  bool _initialNodeOpened = false;
 
   @override
   void initState() {
@@ -328,6 +331,33 @@ class _DigiBookLibraryScreenState extends ConsumerState<DigiBookLibraryScreen> {
     if (bridge.isInitialized) {
       bridge.activateMission(sessionUser.examId);
       if (liveUnits.isNotEmpty) bridge.activateLiveUnits(liveUnits);
+    }
+    if (!_initialNodeOpened &&
+        widget.initialNodeId != null &&
+        bridge.isInitialized &&
+        allAtoms.isNotEmpty) {
+      MicroTopicNode? target;
+      for (final atom in allAtoms) {
+        if (atom.id == widget.initialNodeId ||
+            atom.canonicalKnowledgeNodeId == widget.initialNodeId ||
+            atom.canonicalTopicId == widget.initialNodeId) {
+          target = atom;
+          break;
+        }
+      }
+      if (target != null) {
+        _initialNodeOpened = true;
+        final node = SyllabusNode(
+          id: target.id,
+          title: target.title,
+          type: 'atom',
+          parentId: target.chapterId,
+          subjectId: target.subjectId,
+        );
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _openLessonByNode(node, bridge, allAtoms);
+        });
+      }
     }
     if (_selectedSubject.isEmpty && syllabusTree.isNotEmpty) {
       _selectedSubject = syllabusTree.first.title.toUpperCase();

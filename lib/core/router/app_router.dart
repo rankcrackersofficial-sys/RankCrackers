@@ -468,7 +468,10 @@ final GoRouter appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.digibook,
-              builder: (context, state) => const DigiBookLibraryScreen(),
+              builder: (context, state) => DigiBookLibraryScreen(
+                initialNodeId:
+                    state.extra is String ? state.extra as String : null,
+              ),
             ),
           ],
         ),

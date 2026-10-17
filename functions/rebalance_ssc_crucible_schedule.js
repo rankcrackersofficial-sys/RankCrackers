@@ -34,7 +34,15 @@ async function main() {
         (h.subject === 'English Comprehension' ? 'English' :
         (h.subject === 'GA' ? 'General Awareness' : null)));
       if (!subject || !lanes[subject]) continue;
-      lanes[subject].push({ id: a.id, title: a.title, subject, unit: h.unit, topic: h.topic, minutes: atomMinutes({ ...a, subject }) });
+      lanes[subject].push({
+        id: a.id,
+        nodeId: doc.id,
+        title: a.title,
+        subject,
+        unit: h.unit,
+        topic: h.topic,
+        minutes: atomMinutes({ ...a, subject }),
+      });
     }
   }
   if (SUBJECT_ORDER.some((s) => lanes[s].length === 0)) throw new Error('CRUCIBLE_LANE_EMPTY');
@@ -82,6 +90,9 @@ async function main() {
       newCount: entry.lanes[s].newAtoms.length,
       revisionCount: new Set(entry.lanes[s].revisionAtoms.map((a) => a.id)).size,
       plannedMinutes: entry.lanes[s].plannedMinutes,
+      newItems: entry.lanes[s].newAtoms.map(({ id, nodeId, title, subject, unit, topic }) => ({ id, nodeId, title, subject, unit, topic })),
+      revisionItems: [...new Map(entry.lanes[s].revisionAtoms.map((a) => [a.id, a])).values()]
+        .map(({ id, nodeId, title, subject, unit, topic }) => ({ id, nodeId, title, subject, unit, topic })),
     }]));
     batch.set(realm.collection('crucible_days').doc(`ssc_cgl_day_${String(entry.day).padStart(3, '0')}`), {
       missionId: MISSION, cycleKey: 'ssc_cgl_2026', day: entry.day, status: 'published', planType: 'pedagogical_interleaved_spaced_schedule',
