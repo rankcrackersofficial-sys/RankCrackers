@@ -1,5 +1,7 @@
 # Volume B — Student Experience
 
+> **CURRENT CADENCE AUTHORITY:** The final joining, assessment and Endless Circle contract is [`docs/CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT.md`](../CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT.md). This chapter remains the architectural and historical deep reference; where its older examples conflict with that contract, the versioned contract wins.
+
 ## Part 3 — Crucible Protocol, Continuous Learning Ring और Assessment Workflows
 
 ### Chapter scope और Overview

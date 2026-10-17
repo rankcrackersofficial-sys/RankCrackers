@@ -5,6 +5,8 @@
 **DATE:** 12 October 2026  
 **DOCUMENT ID:** RC-DOC-CRUCIBLE-98DAY-001  
 
+> **Final assessment and joining authority:** See [`CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT.md`](CRUCIBLE_ENDLESS_CIRCLE_ASSESSMENT_CONTRACT.md). That contract freezes the 10:00 IST clock, Buffer-Day rule, Micro/Macro/Major/Full lanes, late-joiner eligibility and Endless Circle behavior. Older informal cadence notes are superseded by that versioned contract.
+
 ---
 
 ## 1. CANONICAL CADENCE INVARIANT
